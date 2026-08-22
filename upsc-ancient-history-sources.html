@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ancient History - UPSC | GSI MANTRA</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:"Noto Sans Devanagari","Segoe UI",Arial,sans-serif;
+    background:#f4f6f8;
+    color:#222;
+    line-height:1.8;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#172554,#1e40af,#2563eb);
+    color:white;
+    padding:28px 20px;
+    text-align:center;
+}
+
+header h1{
+    margin:0;
+    font-size:32px;
+}
+
+header p{
+    margin:6px 0 0;
+    font-size:16px;
+}
+
+/* MAIN CONTAINER */
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:25px 15px;
+}
+
+/* SEARCH */
+
+.search-box{
+    background:white;
+    padding:18px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+    margin-bottom:20px;
+}
+
+#search{
+    width:100%;
+    padding:13px 15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+/* TOC */
+
+.toc{
+    background:#fff;
+    border-left:5px solid #2563eb;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:25px;
+}
+
+.toc h2{
+    margin-top:0;
+}
+
+.toc a{
+    display:block;
+    color:#1d4ed8;
+    text-decoration:none;
+    padding:5px 0;
+}
+
+.toc a:hover{
+    text-decoration:underline;
+}
+
+/* SECTIONS */
+
+.section{
+    background:white;
+    margin-bottom:22px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,.07);
+}
+
+.section h2{
+    color:#1e3a8a;
+    border-bottom:2px solid #dbeafe;
+    padding-bottom:8px;
+}
+
+.section h3{
+    color:#374151;
+    margin-top:22px;
+}
+
+/* IMPORTANT BOX */
+
+.important{
+    background:#fff7ed;
+    border-left:5px solid #f97316;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.prelims{
+    background:#eff6ff;
+    border-left:5px solid #2563eb;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.mains{
+    background:#f0fdf4;
+    border-left:5px solid #16a34a;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+/* TABLE */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:18px 0;
+}
+
+th,td{
+    border:1px solid #d1d5db;
+    padding:10px;
+    text-align:left;
+}
+
+th{
+    background:#e0e7ff;
+}
+
+/* TAGS */
+
+.tag{
+    display:inline-block;
+    background:#e0e7ff;
+    color:#1e3a8a;
+    padding:4px 9px;
+    border-radius:15px;
+    margin:3px;
+    font-size:13px;
+}
+
+/* BUTTONS */
+
+.buttons{
+    text-align:center;
+    margin:25px 0;
+}
+
+button{
+    border:none;
+    padding:11px 18px;
+    margin:5px;
+    border-radius:7px;
+    cursor:pointer;
+    background:#1d4ed8;
+    color:white;
+    font-size:15px;
+}
+
+button:hover{
+    background:#1e3a8a;
+}
+
+/* WATERMARK */
+
+.notes{
+    position:relative;
+}
+
+.notes::before{
+    content:"GSI MANTRA";
+    position:fixed;
+    top:45%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-30deg);
+    font-size:70px;
+    color:rgba(30,64,175,.035);
+    pointer-events:none;
+    z-index:0;
+}
+
+/* FOOTER */
+
+footer{
+    background:#172554;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+/* PRINT */
+
+@media print{
+
+    header,
+    .search-box,
+    .toc,
+    .buttons,
+    footer{
+        display:none;
+    }
+
+    body{
+        background:white;
+    }
+
+    .section{
+        box-shadow:none;
+        page-break-inside:avoid;
+    }
+
+    @page{
+        size:A4;
+        margin:15mm;
+    }
+
+    .notes::before{
+        color:rgba(30,64,175,.04);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    header h1{
+        font-size:25px;
+    }
+
+    .container{
+        padding:12px;
+    }
+
+    .section{
+        padding:17px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<header>
+
+<h1>Ancient History – UPSC</h1>
+
+<p>प्राचीन भारत का इतिहास | GSI MANTRA</p>
+
+</header>
+
+
+<div class="container">
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="search"
+placeholder="🔍 Topic खोजें – जैसे Ashoka, Gupta, Gandhara, Ajanta..."
+onkeyup="searchNotes()">
+
+</div>
+
+
+<div class="toc">
+
+<h2>📑 विषय-सूची</h2>
+
+<a href="#history">1. इतिहास क्या है?</a>
+<a href="#sources">2. इतिहास के स्रोत</a>
+<a href="#ashoka">3. अशोक के अभिलेख</a>
+<a href="#inscriptions">4. अन्य महत्वपूर्ण अभिलेख</a>
+<a href="#coins">5. सिक्के एवं मुद्राएँ</a>
+<a href="#architecture">6. भवन एवं स्मारक</a>
+<a href="#stoneage">7. पाषाण काल एवं मानव बस्तियाँ</a>
+<a href="#sculpture">8. मूर्तिकला</a>
+<a href="#painting">9. चित्रकला</a>
+<a href="#prelims">10. UPSC Prelims Focus</a>
+<a href="#mains">11. UPSC Mains Focus</a>
+
+</div>
+
+
+<div class="notes">
+
+
+<!-- HISTORY -->
+
+<section class="section" id="history">
+
+<h2>1. प्राचीन भारत का इतिहास – इतिहास क्या है?</h2>
+
+<p>
+सामान्य अर्थों में इतिहास का संबंध अतीत की घटनाओं, समाजों,
+संस्थाओं और मानव जीवन में हुए परिवर्तनों के अध्ययन से है।
+</p>
+
+<p>
+विशेष अर्थों में इतिहास केवल राजवंशों के उत्थान-पतन या युद्धों
+की कहानी नहीं है। यह विभिन्न कालखंडों में उत्पादन, सामाजिक
+संरचना, आर्थिक व्यवस्था, राजनीतिक संस्थाओं और सांस्कृतिक
+परिवर्तनों के अध्ययन के माध्यम से मानव जीवन के विकास को
+समझने का प्रयास है।
+</p>
+
+<div class="important">
+
+<strong>UPSC दृष्टिकोण:</strong><br>
+
+इतिहास का उद्देश्य केवल अतीत को जानना नहीं बल्कि अतीत के
+आधार पर वर्तमान को समझना और भविष्य के लिए बेहतर दृष्टिकोण
+विकसित करना भी है।
+
+</div>
+
+
+<h3>सभ्यता (Civilisation)</h3>
+
+<p>
+किसी निश्चित अवधि और भौगोलिक क्षेत्र में मानव समुदाय की
+भौतिक, तकनीकी, नगरीय और संस्थागत उपलब्धियों के समुच्चय को
+सभ्यता कहा जा सकता है।
+</p>
+
+
+<h3>संस्कृति (Culture)</h3>
+
+<p>
+संस्कृति में किसी समाज की विचारधारा, जीवन-पद्धति, खान-पान,
+पहनावा, परंपराएँ, धार्मिक विश्वास तथा कलात्मक अभिव्यक्तियाँ
+शामिल होती हैं। संस्कृति सामान्यतः अधिक व्यापक और दीर्घकालिक
+होती है।
+</p>
+
+</section>
+
+
+<!-- SOURCES -->
+
+<section class="section" id="sources">
+
+<h2>2. इतिहास के स्रोत</h2>
+
+<p>
+प्राचीन भारतीय इतिहास के पुनर्निर्माण में पुरातात्विक,
+साहित्यिक और विदेशी यात्रियों के विवरण महत्वपूर्ण स्रोत हैं।
+</p>
+
+
+<h3>पुरातात्विक स्रोत</h3>
+
+<ul>
+
+<li>अभिलेख</li>
+<li>सिक्के</li>
+<li>मूर्तियाँ</li>
+<li>भवन एवं स्मारक</li>
+<li>मृद्भाण्ड</li>
+<li>मुहरें</li>
+<li>गुफाएँ एवं शैलचित्र</li>
+
+</ul>
+
+
+<h3>अभिलेख (Inscriptions)</h3>
+
+<p>
+पत्थरों, स्तम्भों, धातुओं, गुफाओं तथा भवनों की दीवारों पर
+उत्कीर्ण लिखित सामग्री को अभिलेख कहा जाता है।
+</p>
+
+
+<div class="prelims">
+
+<strong>Prelims Fact:</strong><br>
+
+अभिलेखों का महत्व इसलिए अधिक है क्योंकि वे किसी विशिष्ट
+शासक, प्रशासन, धार्मिक नीति, दान, विजय तथा सामाजिक-आर्थिक
+स्थितियों के प्रत्यक्ष प्रमाण उपलब्ध करा सकते हैं।
+
+</div>
+
+
+<h3>मेसोपोटामियाई अभिलेख</h3>
+
+<p>
+मेसोपोटामिया के अभिलेखों में सिंधु क्षेत्र से संबंधित
+<strong>Meluhha</strong> जैसे नामों का उल्लेख मिलता है।
+इनसे भारत और मेसोपोटामिया के बीच प्राचीन व्यापारिक संबंधों
+का संकेत मिलता है।
+</p>
+
+<p>
+मेसोपोटामिया का विकास दजला (Tigris) और फरात (Euphrates)
+नदियों के बीच हुआ।
+</p>
+
+
+<h3>बोगजकोई अभिलेख</h3>
+
+<p>
+एशिया माइनर के बोगजकोई क्षेत्र से प्राप्त अभिलेख में
+<strong>इन्द्र, वरुण, मित्र और नासत्य</strong> जैसे देवताओं
+का उल्लेख मिलता है। यह प्राचीन इंडो-ईरानी सांस्कृतिक
+संबंधों के अध्ययन में महत्वपूर्ण है।
+</p>
+
+
+<h3>ईरानी अभिलेख</h3>
+
+<p>
+आकेमेनिड शासकों के अभिलेख उत्तर-पश्चिमी भारत और ईरानी
+साम्राज्य के संबंधों को समझने में उपयोगी हैं।
+डेरियस प्रथम के समय सिंधु क्षेत्र आकेमेनिड साम्राज्य के
+प्रभाव में आया।
+</p>
+
+</section>
+
+
+<!-- ASHOKA -->
+
+<section class="section" id="ashoka">
+
+<h2>3. अशोक के अभिलेख</h2>
+
+<p>
+अशोक के अभिलेख मौर्य प्रशासन, धम्म, सामाजिक नीति और
+राजकीय विचारधारा को समझने के प्रमुख स्रोत हैं।
+</p>
+
+
+<h3>भाषा और लिपि</h3>
+
+<table>
+
+<tr>
+<th>क्षेत्र/अभिलेख</th>
+<th>प्रमुख लिपि/भाषा</th>
+</tr>
+
+<tr>
+<td>अधिकांश क्षेत्र</td>
+<td>प्राकृत – ब्राह्मी</td>
+</tr>
+
+<tr>
+<td>शहबाजगढ़ी</td>
+<td>खरोष्ठी</td>
+</tr>
+
+<tr>
+<td>मानसेहरा</td>
+<td>खरोष्ठी</td>
+</tr>
+
+<tr>
+<td>कंधार क्षेत्र</td>
+<td>ग्रीक एवं आरमाइक</td>
+</tr>
+
+</table>
+
+
+<h3>अशोक के प्रमुख अभिलेख</h3>
+
+<ul>
+
+<li>वृहद शिलालेख</li>
+<li>वृहद स्तम्भ लेख</li>
+<li>लघु शिलालेख</li>
+<li>लघु स्तम्भ लेख</li>
+<li>गुहा अभिलेख</li>
+
+</ul>
+
+
+<h3>तेरहवाँ शिलालेख</h3>
+
+<p>
+अशोक के तेरहवें प्रमुख शिलालेख में कलिंग युद्ध के बाद
+अशोक के पश्चाताप तथा धम्म नीति की ओर उसके झुकाव का
+महत्वपूर्ण प्रमाण मिलता है। इसमें पड़ोसी क्षेत्रों तथा
+धम्म-विजय की अवधारणा का भी उल्लेख है।
+</p>
+
+
+<h3>छठा शिलालेख</h3>
+
+<p>
+इससे अशोक की प्रशासनिक दृष्टि तथा प्रजा के कल्याण के प्रति
+उसकी चिंता का संकेत मिलता है।
+</p>
+
+
+<h3>रुम्मिन्देई स्तम्भ लेख</h3>
+
+<p>
+लुम्बिनी से संबंधित यह अभिलेख बुद्ध के जन्मस्थान के रूप में
+उस स्थान के महत्व को प्रमाणित करता है।
+</p>
+
+
+<h3>सारनाथ सिंह शीर्ष</h3>
+
+<p>
+सारनाथ का चार सिंहों वाला स्तम्भ शीर्ष मौर्यकालीन
+राजकीय कला की उत्कृष्ट उपलब्धियों में माना जाता है।
+यही भारत के राजचिह्न का आधार है।
+</p>
+
+
+<div class="important">
+
+<strong>UPSC याद रखें:</strong><br>
+
+अशोक के अभिलेख = प्रशासन + धम्म + सामाजिक नीति +
+राजकीय विचारधारा + मौर्य साम्राज्य के अध्ययन का प्रमुख स्रोत।
+
+</div>
+
+</section>
+
+
+<!-- OTHER INSCRIPTIONS -->
+
+<section class="section" id="inscriptions">
+
+<h2>4. अन्य महत्वपूर्ण अभिलेख</h2>
+
+<table>
+
+<tr>
+<th>अभिलेख</th>
+<th>मुख्य जानकारी</th>
+</tr>
+
+<tr>
+<td>अयोध्या अभिलेख</td>
+<td>पुष्यमित्र शुंग एवं अश्वमेध यज्ञ से संबंधित जानकारी</td>
+</tr>
+
+<tr>
+<td>हेलियोडोरस स्तम्भ</td>
+<td>भागवत/वैष्णव परंपरा एवं इंडो-ग्रीक संबंध</td>
+</tr>
+
+<tr>
+<td>जूनागढ़ अभिलेख</td>
+<td>रुद्रदामन एवं सुदर्शन झील</td>
+</tr>
+
+<tr>
+<td>नानाघाट अभिलेख</td>
+<td>सातवाहन इतिहास</td>
+</tr>
+
+<tr>
+<td>हाथीगुम्फा अभिलेख</td>
+<td>खारवेल एवं कलिंग</td>
+</tr>
+
+<tr>
+<td>प्रयाग प्रशस्ति</td>
+<td>समुद्रगुप्त की विजय एवं उपलब्धियाँ</td>
+</tr>
+
+<tr>
+<td>महरौली लौह स्तम्भ</td>
+<td>गुप्तकालीन राजा की उपलब्धियों से संबंधित प्रमाण</td>
+</tr>
+
+<tr>
+<td>ऐहोल प्रशस्ति</td>
+<td>पुलकेशिन II और हर्ष के संघर्ष का विवरण</td>
+</tr>
+
+<tr>
+<td>मन्दसौर प्रशस्ति</td>
+<td>यशोधर्मन से संबंधित जानकारी</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- COINS -->
+
+<section class="section" id="coins">
+
+<h2>5. सिक्के एवं मुद्राएँ</h2>
+
+<p>
+सिक्कों से आर्थिक स्थिति, व्यापार, राजवंशों का कालक्रम,
+धार्मिक विश्वास, शासकों की उपाधियों और साम्राज्य की सीमा
+के बारे में महत्वपूर्ण जानकारी प्राप्त होती है।
+</p>
+
+
+<table>
+
+<tr>
+<th>काल</th>
+<th>महत्वपूर्ण तथ्य</th>
+</tr>
+
+<tr>
+<td>हड़प्पा</td>
+<td>मुहरें; व्यापारिक उपयोग की संभावना</td>
+</tr>
+
+<tr>
+<td>वैदिक</td>
+<td>निष्क और शतमान का उल्लेख</td>
+</tr>
+
+<tr>
+<td>छठी शताब्दी ई.पू.</td>
+<td>पंचमार्क/आहत सिक्कों का व्यापक प्रयोग</td>
+</tr>
+
+<tr>
+<td>मौर्य</td>
+<td>पण/कार्षापण एवं अन्य मुद्रा इकाइयाँ</td>
+</tr>
+
+<tr>
+<td>इंडो-ग्रीक</td>
+<td>राजा के चित्र वाले सिक्कों का विकास</td>
+</tr>
+
+<tr>
+<td>सातवाहन</td>
+<td>सीसे के सिक्के; जहाज वाले सिक्के</td>
+</tr>
+
+<tr>
+<td>कुषाण</td>
+<td>सोने के सिक्कों का महत्वपूर्ण विकास</td>
+</tr>
+
+<tr>
+<td>गुप्त</td>
+<td>स्वर्ण मुद्राओं की उत्कृष्ट परंपरा</td>
+</tr>
+
+</table>
+
+
+<h3>गुप्तकालीन सिक्के</h3>
+
+<ul>
+
+<li>चन्द्रगुप्त प्रथम – राजा-रानी प्रकार</li>
+<li>समुद्रगुप्त – वीणा वादन प्रकार</li>
+<li>चन्द्रगुप्त द्वितीय – विभिन्न विजय एवं धार्मिक प्रतीकों वाले सिक्के</li>
+<li>कुमारगुप्त – मयूर प्रकार</li>
+<li>स्कन्दगुप्त – विभिन्न पशु-प्रतीक वाले सिक्के</li>
+
+</ul>
+
+
+<div class="prelims">
+
+<strong>Prelims Focus:</strong><br>
+
+समुद्रगुप्त को सिक्कों पर वीणा बजाते हुए दिखाया गया है।
+यह उसकी संगीत संबंधी रुचि का महत्वपूर्ण प्रमाण है।
+
+</div>
+
+</section>
+
+
+<!-- ARCHITECTURE -->
+
+<section class="section" id="architecture">
+
+<h2>6. भवन एवं स्मारक</h2>
+
+
+<h3>बौद्ध स्थापत्य</h3>
+
+<table>
+
+<tr>
+<th>प्रकार</th>
+<th>अर्थ/उपयोग</th>
+</tr>
+
+<tr>
+<td>स्तूप</td>
+<td>पवित्र बौद्ध स्मारक</td>
+</tr>
+
+<tr>
+<td>विहार</td>
+<td>भिक्षुओं का निवास एवं बाद में शिक्षा केंद्र</td>
+</tr>
+
+<tr>
+<td>चैत्य</td>
+<td>बौद्ध पूजा/प्रार्थना गृह</td>
+</tr>
+
+</table>
+
+
+<h3>प्रमुख स्तूप</h3>
+
+<p>
+सांची, भरहुत, अमरावती आदि बौद्ध स्थापत्य के महत्वपूर्ण
+केंद्र हैं।
+</p>
+
+
+<h3>प्रमुख प्राचीन शिक्षा केंद्र</h3>
+
+<ul>
+
+<li>तक्षशिला</li>
+<li>नालंदा</li>
+<li>विक्रमशिला</li>
+<li>ओदन्तपुरी</li>
+<li>सोमापुरी</li>
+
+</ul>
+
+
+<h3>गुफाएँ</h3>
+
+<p>
+बाराबर की गुफाएँ मौर्यकालीन शैल वास्तुकला का महत्वपूर्ण
+उदाहरण हैं। इनका संबंध आजीवक संप्रदाय से भी रहा।
+</p>
+
+
+<h3>गुप्तकालीन मंदिर</h3>
+
+<ul>
+
+<li>देवगढ़ का दशावतार मंदिर</li>
+<li>भीतरगाँव मंदिर</li>
+<li>तिगवा मंदिर</li>
+<li>भूमरा मंदिर</li>
+<li>नचना-कुठार मंदिर</li>
+<li>उदयगिरी गुफा-मंदिर</li>
+
+</ul>
+
+</section>
+
+
+<!-- STONE AGE -->
+
+<section class="section" id="stoneage">
+
+<h2>7. मानव बस्तियाँ एवं पाषाण काल</h2>
+
+
+<h3>पुरापाषाण काल (Palaeolithic)</h3>
+
+<ul>
+
+<li>शिकार एवं खाद्य-संग्रह प्रमुख गतिविधियाँ</li>
+<li>घुमंतू जीवन</li>
+<li>पत्थर के औजार</li>
+<li>हैंडऐक्स, क्लीवर आदि</li>
+<li>आग का उपयोग मानव विकास में महत्वपूर्ण</li>
+
+</ul>
+
+
+<h3>नवपाषाण काल (Neolithic)</h3>
+
+<ul>
+
+<li>कृषि का विकास</li>
+<li>स्थायी निवास</li>
+<li>पशुपालन</li>
+<li>मृद्भाण्ड निर्माण</li>
+<li>औजारों में सुधार</li>
+</ul>
+
+
+<h3>प्रमुख कृषि साक्ष्य</h3>
+
+<table>
+
+<tr>
+<th>फसल</th>
+<th>प्रमुख स्थल</th>
+</tr>
+
+<tr>
+<td>गेहूँ</td>
+<td>मेहरगढ़</td>
+</tr>
+
+<tr>
+<td>चावल</td>
+<td>गंगा घाटी के नवपाषाण स्थलों से संबंधित साक्ष्य</td>
+</tr>
+
+</table>
+
+
+<h3>नगरीकरण</h3>
+
+<p>
+हड़प्पा सभ्यता को भारतीय उपमहाद्वीप में प्रथम नगरीकरण से
+जोड़ा जाता है। दूसरा नगरीकरण सामान्यतः गंगा घाटी में
+छठी शताब्दी ईसा पूर्व के आसपास महाजनपद काल के संदर्भ में
+समझा जाता है।
+</p>
+
+</section>
+
+
+<!-- SCULPTURE -->
+
+<section class="section" id="sculpture">
+
+<h2>8. मूर्तिकला</h2>
+
+
+<h3>हड़प्पाकालीन मूर्तिकला</h3>
+
+<p>
+हड़प्पा सभ्यता से कांस्य तथा पत्थर की उल्लेखनीय मूर्तियाँ
+प्राप्त हुई हैं।
+</p>
+
+<div class="important">
+
+<strong>प्रमुख उदाहरण:</strong><br>
+
+मोहनजोदड़ो की कांस्य नर्तकी तथा पुरोहित-सदृश प्रतिमा
+हड़प्पाकालीन कला की प्रसिद्ध कृतियाँ हैं।
+
+</div>
+
+
+<h3>मौर्यकालीन कला</h3>
+
+<p>
+मौर्यकाल में राजकीय कला विशेष रूप से अशोक के स्तम्भों और
+उनके पशु-शीर्षों में दिखाई देती है।
+</p>
+
+
+<h3>गांधार कला</h3>
+
+<ul>
+
+<li>उत्तर-पश्चिमी क्षेत्र में विकास</li>
+<li>यूनानी-हेलेनिस्टिक एवं बौद्ध तत्वों का समन्वय</li>
+<li>यथार्थवादी शैली</li>
+<li>बुद्ध की मानवाकार प्रतिमाओं का विकास</li>
+<li>ग्रे शिस्ट आदि पत्थरों का प्रयोग</li>
+
+</ul>
+
+
+<h3>मथुरा कला</h3>
+
+<ul>
+
+<li>भारतीय/देशी परंपरा से विकसित</li>
+<li>लाल बलुआ पत्थर का प्रयोग</li>
+<li>बौद्ध, जैन और ब्राह्मणical परंपराओं की मूर्तियाँ</li>
+<li>बुद्ध की मानवाकार प्रतिमाओं के विकास में महत्वपूर्ण</li>
+
+</ul>
+
+
+<table>
+
+<tr>
+<th>गांधार</th>
+<th>मथुरा</th>
+</tr>
+
+<tr>
+<td>हेलेनिस्टिक प्रभाव</td>
+<td>देशी भारतीय परंपरा</td>
+</tr>
+
+<tr>
+<td>ग्रे शिस्ट</td>
+<td>लाल बलुआ पत्थर</td>
+</tr>
+
+<tr>
+<td>यथार्थवादी प्रवृत्ति</td>
+<td>आदर्शवादी प्रवृत्ति</td>
+</tr>
+
+<tr>
+<td>मुख्यतः बौद्ध कला</td>
+<td>बौद्ध, जैन और ब्राह्मणical कला</td>
+</tr>
+
+</table>
+
+
+<h3>गुप्तकालीन मूर्तिकला</h3>
+
+<p>
+गुप्तकालीन मूर्तियों में आध्यात्मिक शांति, संतुलन और
+आदर्श सौंदर्य की विशेषता दिखाई देती है।
+</p>
+
+</section>
+
+
+<!-- PAINTING -->
+
+<section class="section" id="painting">
+
+<h2>9. चित्रकला</h2>
+
+
+<h3>भीमबेटका</h3>
+
+<p>
+भीमबेटका के शैलचित्र प्रागैतिहासिक मानव के जीवन, शिकार,
+पशुओं तथा सामाजिक गतिविधियों की जानकारी देते हैं।
+</p>
+
+
+<h3>हड़प्पाकालीन चित्रकला</h3>
+
+<p>
+मिट्टी के बर्तनों तथा मुहरों पर पशु-पक्षियों, ज्यामितीय
+आकृतियों और विभिन्न प्रतीकों का अंकन मिलता है।
+</p>
+
+
+<h3>अजंता की चित्रकला</h3>
+
+<p>
+अजंता की गुफाएँ महाराष्ट्र में स्थित हैं और भारतीय
+भित्तिचित्र कला की महान उपलब्धियों में गिनी जाती हैं।
+इनमें जातक कथाओं तथा बौद्ध विषयों का प्रमुख स्थान है।
+</p>
+
+
+<div class="important">
+
+<strong>अजंता के प्रमुख विषय:</strong>
+
+<ul>
+
+<li>पद्मपाणि अवलोकितेश्वर</li>
+<li>जातक कथाएँ</li>
+<li>बुद्ध के जीवन से संबंधित दृश्य</li>
+<li>राजकीय एवं सामाजिक जीवन के दृश्य</li>
+
+</ul>
+
+</div>
+
+
+<h3>बाघ की चित्रकला</h3>
+
+<p>
+बाघ की गुफाएँ मध्य प्रदेश में स्थित हैं। इनके चित्रों में
+धार्मिक विषयों के साथ-साथ सामाजिक और लौकिक जीवन के
+दृश्य भी दिखाई देते हैं।
+</p>
+
+
+<h4>प्रमुख चित्र-विषय</h4>
+
+<ul>
+
+<li>नृत्य सभा</li>
+<li>संगीत आयोजन</li>
+<li>उत्सव</li>
+<li>राजकीय जुलूस</li>
+<li>राजदरबार</li>
+<li>हाथियों से संबंधित दृश्य</li>
+<li>नर्तक एवं नर्तकियाँ</li>
+</ul>
+
+
+<div class="prelims">
+
+<strong>UPSC Prelims Fact:</strong><br>
+
+अजंता – महाराष्ट्र<br>
+बाघ – मध्य प्रदेश<br>
+भीमबेटका – मध्य प्रदेश
+
+</div>
+
+</section>
+
+
+<!-- PRELIMS -->
+
+<section class="section" id="prelims">
+
+<h2>10. UPSC Prelims Focus – Quick Revision</h2>
+
+<table>
+
+<tr>
+<th>विषय</th>
+<th>याद रखने योग्य तथ्य</th>
+</tr>
+
+<tr>
+<td>अशोक</td>
+<td>अभिलेखों से धम्म और प्रशासन की जानकारी</td>
+</tr>
+
+<tr>
+<td>सारनाथ</td>
+<td>चार सिंहों वाला स्तम्भ शीर्ष</td>
+</tr>
+
+<tr>
+<td>हेलियोडोरस</td>
+<td>बेसनगर स्तम्भ और भागवत परंपरा</td>
+</tr>
+
+<tr>
+<td>रुद्रदामन</td>
+<td>जूनागढ़ अभिलेख</td>
+</tr>
+
+<tr>
+<td>समुद्रगुप्त</td>
+<td>प्रयाग प्रशस्ति एवं वीणा प्रकार के सिक्के</td>
+</tr>
+
+<tr>
+<td>गांधार</td>
+<td>हेलेनिस्टिक प्रभाव</td>
+</tr>
+
+<tr>
+<td>मथुरा</td>
+<td>लाल बलुआ पत्थर एवं देशी परंपरा</td>
+</tr>
+
+<tr>
+<td>अजंता</td>
+<td>बौद्ध विषय एवं उत्कृष्ट भित्तिचित्र</td>
+</tr>
+
+<tr>
+<td>बाघ</td>
+<td>लौकिक/सामाजिक जीवन के चित्र</td>
+</tr>
+
+<tr>
+<td>भीमबेटका</td>
+<td>प्रागैतिहासिक शैलचित्र</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- MAINS -->
+
+<section class="section" id="mains">
+
+<h2>11. UPSC Mains Focus</h2>
+
+<div class="mains">
+
+<h3>प्रश्न 1</h3>
+
+<p>
+प्राचीन भारतीय इतिहास के पुनर्निर्माण में अभिलेखों और
+सिक्कों की भूमिका का विश्लेषण कीजिए।
+</p>
+
+
+<h3>प्रश्न 2</h3>
+
+<p>
+गांधार और मथुरा कला की प्रमुख विशेषताओं की तुलना कीजिए।
+</p>
+
+
+<h3>प्रश्न 3</h3>
+
+<p>
+अशोक के अभिलेख मौर्य प्रशासन और धम्म नीति को समझने में
+किस प्रकार सहायक हैं?
+</p>
+
+
+<h3>प्रश्न 4</h3>
+
+<p>
+प्राचीन भारत में कला के विकास में धार्मिक एवं लौकिक
+परंपराओं की भूमिका पर चर्चा कीजिए।
+</p>
+
+
+<h3>प्रश्न 5</h3>
+
+<p>
+अजंता और बाघ की चित्रकला भारतीय समाज एवं संस्कृति के
+अध्ययन के लिए महत्वपूर्ण स्रोत हैं। विवेचना कीजिए।
+</p>
+
+</div>
+
+</section>
+
+
+<!-- KEYWORDS -->
+
+<section class="section">
+
+<h2>🔑 Important Keywords</h2>
+
+<span class="tag">Ancient History</span>
+<span class="tag">UPSC</span>
+<span class="tag">Ashoka</span>
+<span class="tag">Mauryan Art</span>
+<span class="tag">Inscriptions</span>
+<span class="tag">Coins</span>
+<span class="tag">Gandhara Art</span>
+<span class="tag">Mathura Art</span>
+<span class="tag">Ajanta</span>
+<span class="tag">Bagh Caves</span>
+<span class="tag">Harappan Civilization</span>
+<span class="tag">Gupta Art</span>
+<span class="tag">Buddhist Architecture</span>
+<span class="tag">Prehistoric India</span>
+
+</section>
+
+
+<div class="buttons">
+
+<button onclick="window.print()">
+🖨️ Print / Save PDF
+</button>
+
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})">
+⬆️ Back to Top
+</button>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<footer>
+
+<strong>GSI MANTRA</strong><br>
+UPSC • SSC • UGC NET • NCERT • Current Affairs
+
+</footer>
+
+
+<script>
+
+function searchNotes(){
+
+    let input =
+    document.getElementById("search").value.toLowerCase();
+
+    let sections =
+    document.querySelectorAll(".section");
+
+    sections.forEach(function(section){
+
+        let text =
+        section.innerText.toLowerCase();
+
+        if(text.includes(input)){
+            section.style.display = "";
+        }
+        else{
+            section.style.display = "none";
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>

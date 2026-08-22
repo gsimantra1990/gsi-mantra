@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Class 9 Chapter 1 Test - GSI MANTRA</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:#f4f6f9;
+    color:#333;
+}
+
+.header{
+    background:#0b2265;
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.header h1{
+    margin:0;
+    font-size:34px;
+}
+
+.header h2{
+    margin:10px 0;
+    color:#ff9800;
+}
+
+.header p{
+    margin:5px 0;
+    font-size:16px;
+}
+
+.container{
+    max-width:900px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:35px 25px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.card h2{
+    color:#0b2265;
+    margin-top:0;
+}
+
+.card p{
+    font-size:17px;
+}
+
+.language-options{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.language-card{
+    width:300px;
+    padding:30px 20px;
+    border-radius:12px;
+    border:2px solid #e0e0e0;
+    background:#fafafa;
+    transition:0.3s;
+}
+
+.language-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 6px 18px rgba(0,0,0,0.12);
+}
+
+.language-card h3{
+    margin:0 0 10px;
+    color:#0b2265;
+    font-size:22px;
+}
+
+.language-card p{
+    color:#555;
+    font-size:15px;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:6px;
+    color:white;
+    font-weight:bold;
+    margin-top:12px;
+    transition:0.3s;
+}
+
+.btn-hindi{
+    background:#ff9800;
+}
+
+.btn-hindi:hover{
+    background:#e65100;
+}
+
+.btn-english{
+    background:#0b2265;
+}
+
+.btn-english:hover{
+    background:#1565c0;
+}
+
+.back{
+    display:inline-block;
+    margin-top:30px;
+    background:#607d8b;
+    color:white;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.footer{
+    margin-top:40px;
+    background:#0b2265;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.watermark{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-35deg);
+    font-size:70px;
+    font-weight:bold;
+    color:rgba(11,34,101,0.035);
+    pointer-events:none;
+    z-index:999;
+    white-space:nowrap;
+}
+
+@media(max-width:650px){
+
+    .header h1{
+        font-size:28px;
+    }
+
+    .language-card{
+        width:100%;
+    }
+
+    .card{
+        padding:25px 15px;
+    }
+}
+
+@media print{
+
+    .language-options,
+    .back{
+        display:none;
+    }
+
+    .watermark{
+        display:block;
+    }
+
+    @page{
+        size:A4;
+        margin:15mm;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="watermark">GSI MANTRA</div>
+
+<header class="header">
+
+    <h1>GSI MANTRA</h1>
+
+    <h2>Class 9 Social Science</h2>
+
+    <p>
+        Chapter 1 – Understanding Social Science
+    </p>
+
+    <p>
+        Chapter Test
+    </p>
+
+</header>
+
+
+<main class="container">
+
+<div class="card">
+
+    <h2>✍️ Chapter 1 Test</h2>
+
+    <p>
+        अपनी पसंद की भाषा में टेस्ट शुरू करें।
+    </p>
+
+    <p>
+        Select your preferred language to start the test.
+    </p>
+
+
+    <div class="language-options">
+
+
+        <!-- HINDI TEST -->
+
+        <div class="language-card">
+
+            <h3> हिंदी माध्यम</h3>
+
+            <p>
+                अध्याय 1 का 50 प्रश्नों वाला टेस्ट
+            </p>
+
+            <p>
+                MCQ • Multiple Correct • Arrangement
+                • Assertion-Reason • Matching
+            </p>
+
+            <a
+                href="class9-chapter1-test-hindi.html"
+                class="btn btn-hindi">
+                हिंदी टेस्ट शुरू करें
+            </a>
+
+        </div>
+
+
+        <!-- ENGLISH TEST -->
+
+        <div class="language-card">
+
+            <h3> English Medium</h3>
+
+            <p>
+                50 Questions Chapter 1 Test
+            </p>
+
+            <p>
+                MCQ • Multiple Correct • Arrangement
+                • Assertion-Reason • Matching
+            </p>
+
+            <a
+                href="class9-chapter1-test-english.html"
+                class="btn btn-english">
+                Start English Test
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <a href="class9.html" class="back">
+        ← Back to Class 9
+    </a>
+
+</div>
+
+</main>
+
+
+<footer class="footer">
+
+    <b>GSI MANTRA</b>
+
+    <br>
+
+    Class 9 Social Science | Chapter 1 Test
+
+</footer>
+
+</body>
+</html>

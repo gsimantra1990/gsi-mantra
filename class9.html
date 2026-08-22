@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Class 9 New NCERT Social Science - GSI MANTRA</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* ================= HEADER ================= */
+
+        .header-banner {
+            background: linear-gradient(135deg, #0b2265, #1565c0);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        .header-banner h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        .header-banner p {
+            margin: 12px 0 0;
+            font-size: 1.1rem;
+            color: #ff9800;
+            font-weight: bold;
+        }
+
+        .session {
+            margin-top: 8px;
+            font-size: 0.95rem;
+            color: #ffffff;
+        }
+
+        /* ================= NAVIGATION ================= */
+
+        .top-nav {
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 12px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .top-nav a {
+            text-decoration: none;
+            color: #0b2265;
+            font-weight: bold;
+            margin: 0 10px;
+            font-size: 0.95rem;
+        }
+
+        .top-nav a:hover {
+            color: #ff9800;
+        }
+
+        /* ================= CONTAINER ================= */
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* ================= INTRO ================= */
+
+        .intro-box {
+            background: white;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .intro-box h2 {
+            margin-top: 0;
+            color: #0b2265;
+        }
+
+        .intro-box p {
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        /* ================= SUBJECT CARD ================= */
+
+        .subject-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .card-title {
+            background: #0b2265;
+            color: white;
+            padding: 17px 20px;
+            margin: 0;
+            font-size: 1.35rem;
+        }
+
+        .card-title span {
+            color: #ff9800;
+        }
+
+        /* ================= CHAPTER LIST ================= */
+
+        .chapter-list {
+            padding: 10px 20px;
+        }
+
+        .chapter-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 17px 0;
+            border-bottom: 1px solid #eceff1;
+        }
+
+        .chapter-row:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-info {
+            flex: 1;
+        }
+
+        .chapter-number {
+            color: #ff9800;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .chapter-name {
+            margin-top: 4px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .chapter-name small {
+            display: block;
+            color: #777;
+            font-size: 0.82rem;
+            font-weight: normal;
+            margin-top: 3px;
+        }
+
+        /* ================= BUTTONS ================= */
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 9px 13px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .btn-notes {
+            background-color: #ff9800;
+            color: white;
+        }
+
+        .btn-notes:hover {
+            background-color: #e65100;
+            transform: translateY(-2px);
+        }
+
+        .btn-test {
+            background-color: #0b2265;
+            color: white;
+        }
+
+        .btn-test:hover {
+            background-color: #1565c0;
+            transform: translateY(-2px);
+        }
+
+        .btn-video {
+            background-color: #d32f2f;
+            color: white;
+        }
+
+        .btn-video:hover {
+            background-color: #b71c1c;
+            transform: translateY(-2px);
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #0b2265;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 40px;
+        }
+
+        footer h3 {
+            margin: 0 0 8px;
+            color: #ff9800;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 700px) {
+
+            .header-banner {
+                padding: 35px 15px;
+            }
+
+            .header-banner h1 {
+                font-size: 2rem;
+            }
+
+            .header-banner p {
+                font-size: 0.95rem;
+            }
+
+            .top-nav {
+                overflow-x: auto;
+                white-space: nowrap;
+                text-align: left;
+            }
+
+            .top-nav a {
+                margin: 0 7px;
+            }
+
+            .chapter-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .btn-group {
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .btn {
+                flex: 1;
+                text-align: center;
+                min-width: 85px;
+            }
+
+            .container {
+                padding: 0 12px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<div class="header-banner">
+
+    <h1>GSI MANTRA</h1>
+
+    <p>
+        Class 9 - New NCERT Social Science
+    </p>
+
+    <div class="session">
+        Academic Session 2026–27 | New Integrated Syllabus
+    </div>
+
+</div>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<div class="top-nav">
+
+    <a href="#intro">Home</a>
+
+    <a href="#geography">Geography</a>
+
+    <a href="#history">History</a>
+
+    <a href="#political-science">Political Science</a>
+
+    <a href="#economics">Economics</a>
+
+</div>
+
+
+<!-- ================= MAIN ================= -->
+
+<div class="container">
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="intro-box" id="intro">
+
+        <h2>📚 Class 9 Social Science – New NCERT</h2>
+
+        <p>
+            Welcome to GSI MANTRA. यहाँ Class 9 के नए NCERT
+            Integrated Social Science पाठ्यक्रम के chapter-wise
+            Notes, Test और Video Lessons उपलब्ध कराए जाएंगे।
+            यह पाठ्यक्रम 2026–27 के नए NCERT पाठ्यक्रम के अनुसार
+            तैयार किया गया है।
+        </p>
+
+    </div>
+
+
+    <!-- ================= CHAPTER 1 ================= -->
+
+    <div class="subject-card">
+
+    <a href="#intro-chapters" style="text-decoration: none; display: block;">
+        <h2 class="card-title" style="cursor: pointer;">
+            📖 Introduction <span>• परिचय</span>
+        </h2>
+    </a>
+
+    <div class="chapter-list" id="intro-chapters"> 
+
+            <div class="chapter-row">
+
+                <div class="chapter-info">
+
+                    <div class="chapter-number">
+                        CHAPTER 1
+                    </div>
+
+                    <div class="chapter-name">
+                        Understanding Social Science
+                        <small>सामाजिक विज्ञान की समझ</small>
+                    </div>
+
+                </div>
+
+                <div class="btn-group">
+
+                    <a href="chapter1-notes.html"
+                       class="btn btn-notes">
+                        📄 Notes
+                    </a>
+
+                    <a href="class9-chapter1-test.html"
+                       class="btn btn-test">
+                        ✍️ Test
+                    </a>
+
+                    <a href="#"
+                       class="btn btn-video">
+                        ▶ Video
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= GEOGRAPHY ================= -->
+
+    <div class="subject-card" id="geography">
+
+        <h2 class="card-title">
+            🌍 Geography <span>• भूगोल</span>
+        </h2>
+
+        <div class="chapter-list">
+
+
+            <!-- CHAPTER 2 -->
+
+            <div class="chapter-row">
+
+                <div class="chapter-info">
+
+                    <div class="chapter-number">
+                        CHAPTER 2
+                    </div>
+
+                    <div class="chapter-name">
+                        Shaping of the Earth's Surface
+                        <small>पृथ्वी की सतह का निर्माण</small>
+                    </div>
+
+                </div>
+
+                <div class="btn-group">
+
+                    <a href="chapter2-notes.html"
+                       class="btn btn-notes">
+                        📄 Notes
+                    </a>
+
+                    <a href="class9-chapter2-test.html"
+                       class="btn btn-test">
+                        ✍️ Test
+                    </a>
+
+                    <a href="#"
+                       class="btn btn-video">
+                        ▶ Video
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CHAPTER 3 -->
+
+            <div class="chapter-row">
+
+                <div class="chapter-info">
+
+                    <div class="chapter-number">
+                        CHAPTER 3
+                    </div>
+
+                    <div class="chapter-name">
+                        Atmosphere and Climate
+                        <small>वायुमंडल और जलवायु</small>
+                    </div>
+
+                </div>
+
+                <div class="btn-group">
+
+                    <a href="class9-chapter3-notes.html"
+                       class="btn btn-notes">
+                        📄 Notes
+                    </a>
+
+                    <a href="class9-chapter3-test.html"
+                       class="btn btn-test">
+                        ✍️ Test
+                    </a>
+
+                    <a href="#"
+                       class="btn btn-video">
+                        ▶ Video
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= HISTORY ================= -->
+
+    <div class="subject-card" id="history">
+
+        <h2 class="card-title">
+            🏛️ History <span>• इतिहास</span>
+        </h2>
+
+        <div class="chapter-list">
+
+
+            <!-- CHAPTER 4 -->
+
+            <div class="chapter-row">
+
+                <div class="chapter-info">
+
+                    <div class="chapter-number">
+                        CHAPTER 4
+                    </div>
+
+                    <div class="chapter-name">
+                        Early Humans and Beginning of Civilisation
+                        <small>आदिमानव और सभ्यता का आरंभ</small>
+                    </div>
+
+                </div>
+
+                <div class="btn-group">
+
+                    <a href="class9-chapter4-notes.html"
+                       class="btn btn-notes">
+                        📄 Notes
+                    </a>
+
+                    <a href="class9-chapter4-test.html"
+                       class="btn btn-test">
+                        ✍️ Test
+                    </a>
+
+                    <a href="#"
+                       class="btn btn-video">
+                        ▶ Video
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CHAPTER 5 -->
+
+            <div class="chapter-row">
+
+                <div class="chapter-info">
+
+                    <div class="chapter-number">
+                        CHAPTER 5
+                    </div>
+
+                    <div class="chapter-name">
+                        State and Society up to 1000 CE
+                        <small>1000 ईस्वी तक राज्य और समाज</small>
+                    </div>
+
+                </div>
+
+                <div class="btn-group">
+
+                    <a href="class9-chapter5-notes.html"
+                       class="btn btn-notes">
+                        📄 Notes
+                    </a>
+
+                    <a href="class9-chapter5-test.html"
+                       class="btn btn-test">
+                        ✍️ Test
+                    </a>
+
+                    <a href="#"
+                       class="btn btn-video">
+                        ▶ Video
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= POLITICAL SCIENCE ================= -->
+
+    <div class="subject-card" id="political-science">
+
+        <h2 class="card-title">
+            🏛️ Political Science <span>• राजनीति विज्ञान</span>
+        </h2>
+
+        <div class="chapter-list">
+
+
+            <!-- CHAPTER 6 -->
+
+            <div class="chapter-row">
+
+                <div class="chapter-info">
+
+                    <div class="chapter-number">
+                        CHAPTER 6
+                    </div>
+
+                    <div class="chapter-name">
+                        Democracy
+                        <small>लोकतंत्र</small>
+                    </div>
+
+                </div>
+
+                <div class="btn-group">
+
+                    <a href="class9-chapter6-notes.html"
+                       class="btn btn-notes">
+                        📄 Notes
+                    </a>
+
+                    <a href="class9-chapter6-test.html"
+                       class="btn btn-test">
+                        ✍️ Test
+                    </a>
+
+                    <a href="#"
+                       class="btn btn-video">
+                        ▶ Video
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CHAPTER 7 -->
+
+            <div class="chapter-row">
+
+                <div class="chapter-info">
+
+                    <div class="chapter-number">
+                        CHAPTER 7
+                    </div>
+
+                    <div class="chapter-name">
+                        Elections
+                        <small>निर्वाचन / चुनाव</small>
+                    </div>
+
+                </div>
+
+                <div class="btn-group">
+
+                    <a href="class9-chapter7-notes.html"
+                       class="btn btn-notes">
+                        📄 Notes
+                    </a>
+
+                    <a href="class9-chapter7-test.html"
+                       class="btn btn-test">
+                        ✍️ Test
+                    </a>
+
+                    <a href="#"
+                       class="btn btn-video">
+                        ▶ Video
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= ECONOMICS ================= -->
+
+    <div class="subject-card" id="economics">
+
+        <h2 class="card-title">
+            💰 Economics <span>• अर्थशास्त्र</span>
+        </h2>
+
+        <div class="chapter-list">
+
+
+            <!-- CHAPTER 8 -->
+
+            <div class="chapter-row">
+
+                <div class="chapter-info">
+
+                    <div class="chapter-number">
+                        CHAPTER 8
+                    </div>
+
+                    <div class="chapter-name">
+                        Building Blocks in Economics:
+                        The Problem of Choice
+
+                        <small>
+                            अर्थशास्त्र की आधारभूत अवधारणाएँ:
+                            चयन की समस्या
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="btn-group">
+
+                    <a href="class9-chapter8-notes.html"
+                       class="btn btn-notes">
+                        📄 Notes
+                    </a>
+
+                    <a href="class9-chapter8-test.html"
+                       class="btn btn-test">
+                        ✍️ Test
+                    </a>
+
+                    <a href="#"
+                       class="btn btn-video">
+                        ▶ Video
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CHAPTER 9 -->
+
+            <div class="chapter-row">
+
+                <div class="chapter-info">
+
+                    <div class="chapter-number">
+                        CHAPTER 9
+                    </div>
+
+                    <div class="chapter-name">
+                        The Price Puzzle:
+                        What Drives the Market
+
+                        <small>
+                            कीमत की पहेली:
+                            बाजार को क्या संचालित करता है?
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="btn-group">
+
+                    <a href="class9-chapter9-notes.html"
+                       class="btn btn-notes">
+                        📄 Notes
+                    </a>
+
+                    <a href="class9-chapter9-test.html"
+                       class="btn btn-test">
+                        ✍️ Test
+                    </a>
+
+                    <a href="#"
+                       class="btn btn-video">
+                        ▶ Video
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>GSI MANTRA</h3>
+
+    <p>
+        Class 9 New NCERT Social Science | 2026–27
+    </p>
+
+    <p>
+        Notes • MCQs • Tests • Video Lessons
+    </p>
+
+    <p>
+        © 2026 GSI MANTRA. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+</body>
+</html>

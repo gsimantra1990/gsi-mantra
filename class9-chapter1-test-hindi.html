@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Class 9 Chapter 1 Test - GSI MANTRA</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.6;
+}
+
+.header{
+    background:#0b2265;
+    color:white;
+    text-align:center;
+    padding:35px 15px;
+}
+
+.header h1{
+    margin:0;
+    font-size:32px;
+}
+
+.header h2{
+    margin:8px 0;
+    color:#ff9800;
+}
+
+.header p{
+    margin:5px 0;
+}
+
+.container{
+    max-width:1000px;
+    margin:25px auto;
+    padding:0 15px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    margin-bottom:22px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.info{
+    background:#eef4ff;
+    border-left:5px solid #0b2265;
+    padding:15px;
+    margin-bottom:20px;
+}
+
+.instructions{
+    background:#fff8e1;
+    border-left:5px solid #ff9800;
+    padding:15px;
+}
+
+.question{
+    background:white;
+    border:1px solid #ddd;
+    border-left:5px solid #1565c0;
+    border-radius:8px;
+    padding:18px;
+    margin:18px 0;
+}
+
+.question h3{
+    margin-top:0;
+    color:#0b2265;
+}
+
+.type{
+    display:inline-block;
+    background:#e8f1ff;
+    color:#0b2265;
+    padding:4px 10px;
+    border-radius:5px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.option{
+    display:block;
+    padding:7px;
+    margin:3px 0;
+    border-radius:5px;
+}
+
+.option:hover{
+    background:#f1f5f9;
+}
+
+input{
+    margin-right:8px;
+}
+
+.buttons{
+    text-align:center;
+    margin:30px 0;
+}
+
+button,
+.back{
+    border:none;
+    padding:12px 20px;
+    margin:5px;
+    border-radius:7px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    text-decoration:none;
+    display:inline-block;
+}
+
+.submit{
+    background:#0b2265;
+    color:white;
+}
+
+.print{
+    background:#ff9800;
+    color:white;
+}
+
+.back{
+    background:#607d8b;
+    color:white;
+}
+
+#result{
+    display:none;
+    background:#e8f5e9;
+    border-left:5px solid #2e7d32;
+    padding:20px;
+    margin:20px 0;
+    border-radius:8px;
+    text-align:center;
+}
+
+#answers{
+    display:none;
+    background:#fafafa;
+    border:1px solid #ddd;
+    padding:20px;
+    margin-top:20px;
+}
+
+.answer-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:8px;
+}
+
+.answer{
+    padding:8px;
+    background:#eef4ff;
+    border-radius:5px;
+    text-align:center;
+}
+
+.watermark{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-35deg);
+    font-size:70px;
+    font-weight:bold;
+    color:rgba(11,34,101,.06);
+    pointer-events:none;
+    z-index:999;
+    white-space:nowrap;
+}
+
+.footer{
+    background:#0b2265;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:650px){
+
+    .header h1{
+        font-size:26px;
+    }
+
+    .card{
+        padding:17px;
+    }
+
+    .answer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media print{
+
+    body{
+        background:white;
+    }
+
+    .header{
+        background:white !important;
+        color:black !important;
+        border-bottom:2px solid black;
+    }
+
+    .header h2{
+        color:black !important;
+    }
+
+    .buttons,
+    #result,
+    #answers{
+        display:none !important;
+    }
+
+    .question{
+        box-shadow:none;
+        break-inside:avoid;
+    }
+
+    .watermark{
+        display:block !important;
+        color:rgba(11,34,101,.08);
+        z-index:9999;
+    }
+
+    .footer{
+        background:white !important;
+        color:black !important;
+        border-top:1px solid #999;
+    }
+
+    @page{
+        size:A4;
+        margin:15mm;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="watermark">GSI MANTRA</div>
+
+<div class="header">
+    <h1>GSI MANTRA</h1>
+    <h2>कक्षा 9 सामाजिक विज्ञान</h2>
+    <p><b>अध्याय 1: सामाजिक विज्ञान की समझ</b></p>
+    <p>Hindi Medium | Chapter Test</p>
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<div class="info">
+<b>कुल प्रश्न:</b> 50 &nbsp; | &nbsp;
+<b>कुल अंक:</b> 50
+</div>
+
+<div class="instructions">
+<h3>📌 निर्देश</h3>
+<ol>
+<li>सभी 50 प्रश्नों को ध्यानपूर्वक पढ़कर उत्तर दें।</li>
+<li>सामान्य MCQ में एक सही उत्तर चुनें।</li>
+<li>Multiple Correct प्रश्नों में एक से अधिक उत्तर सही हो सकते हैं।</li>
+<li>कथन–कारण प्रश्नों में सही विकल्प चुनें।</li>
+<li>Arrangement और Matching में सही विकल्प चुनें।</li>
+</ol>
+</div>
+
+</div>
+
+
+<!-- Q1 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>1. सामाजिक विज्ञान मुख्य रूप से किसका अध्ययन करता है?</h3>
+<label class="option"><input type="radio" name="q1" value="A">A. केवल पृथ्वी की आंतरिक संरचना</label>
+<label class="option"><input type="radio" name="q1" value="B">B. मानव समाज और मानवीय गतिविधियाँ</label>
+<label class="option"><input type="radio" name="q1" value="C">C. केवल रासायनिक पदार्थ</label>
+<label class="option"><input type="radio" name="q1" value="D">D. केवल तारों का अध्ययन</label>
+</div>
+
+
+<!-- Q2 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>2. निम्नलिखित में से कौन सामाजिक विज्ञान की प्रमुख शाखा है?</h3>
+<label class="option"><input type="radio" name="q2" value="A">A. इतिहास</label>
+<label class="option"><input type="radio" name="q2" value="B">B. रसायन विज्ञान</label>
+<label class="option"><input type="radio" name="q2" value="C">C. भौतिकी</label>
+<label class="option"><input type="radio" name="q2" value="D">D. खगोल भौतिकी</label>
+</div>
+
+
+<!-- Q3 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>3. इतिहास मुख्य रूप से किसका अध्ययन करता है?</h3>
+<label class="option"><input type="radio" name="q3" value="A">A. भविष्य</label>
+<label class="option"><input type="radio" name="q3" value="B">B. मानव अतीत</label>
+<label class="option"><input type="radio" name="q3" value="C">C. केवल मौसम</label>
+<label class="option"><input type="radio" name="q3" value="D">D. केवल बाजार</label>
+</div>
+
+
+<!-- Q4 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>4. भूगोल मुख्य रूप से किस संबंध का अध्ययन करता है?</h3>
+<label class="option"><input type="radio" name="q4" value="A">A. मानव और पर्यावरण</label>
+<label class="option"><input type="radio" name="q4" value="B">B. केवल भाषा</label>
+<label class="option"><input type="radio" name="q4" value="C">C. केवल धर्म</label>
+<label class="option"><input type="radio" name="q4" value="D">D. केवल साहित्य</label>
+</div>
+
+
+<!-- Q5 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>5. राजनीतिक विज्ञान का प्रमुख विषय क्या है?</h3>
+<label class="option"><input type="radio" name="q5" value="A">A. सरकार और शासन</label>
+<label class="option"><input type="radio" name="q5" value="B">B. पौधों की संरचना</label>
+<label class="option"><input type="radio" name="q5" value="C">C. ग्रहों की गति</label>
+<label class="option"><input type="radio" name="q5" value="D">D. रासायनिक अभिक्रिया</label>
+</div>
+
+
+<!-- Q6 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>6. अर्थशास्त्र मुख्य रूप से किससे संबंधित है?</h3>
+<label class="option"><input type="radio" name="q6" value="A">A. संसाधनों और आर्थिक गतिविधियों से</label>
+<label class="option"><input type="radio" name="q6" value="B">B. केवल नदियों से</label>
+<label class="option"><input type="radio" name="q6" value="C">C. केवल प्राचीन शिलालेखों से</label>
+<label class="option"><input type="radio" name="q6" value="D">D. केवल मौसम से</label>
+</div>
+
+
+<!-- Q7 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>7. पंचमहाभूतों (Pañchamahābhūtas) में कितने तत्व बताए गए हैं?</h3>
+<label class="option"><input type="radio" name="q7" value="A">A. तीन</label>
+<label class="option"><input type="radio" name="q7" value="B">B. चार</label>
+<label class="option"><input type="radio" name="q7" value="C">C. पाँच</label>
+<label class="option"><input type="radio" name="q7" value="D">D. सात</label>
+</div>
+
+
+<!-- Q8 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>8. निम्नलिखित में से कौन पंचमहाभूत का हिस्सा है?</h3>
+<label class="option"><input type="radio" name="q8" value="A">A. पृथ्वी</label>
+<label class="option"><input type="radio" name="q8" value="B">B. बिजली</label>
+<label class="option"><input type="radio" name="q8" value="C">C. धातु</label>
+<label class="option"><input type="radio" name="q8" value="D">D. वनस्पति</label>
+</div>
+
+
+<!-- Q9 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>9. 'Vasudhaiva Kuṭumbakam' का सामान्य अर्थ क्या है?</h3>
+<label class="option"><input type="radio" name="q9" value="A">A. संसार एक परिवार है</label>
+<label class="option"><input type="radio" name="q9" value="B">B. पृथ्वी केवल मनुष्यों की है</label>
+<label class="option"><input type="radio" name="q9" value="C">C. प्रत्येक देश अलग है</label>
+<label class="option"><input type="radio" name="q9" value="D">D. केवल परिवार महत्वपूर्ण है</label>
+</div>
+
+
+<!-- Q10 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>10. Arthaśāstra किससे संबंधित महत्वपूर्ण प्राचीन ग्रंथ है?</h3>
+<label class="option"><input type="radio" name="q10" value="A">A. शासन और अर्थव्यवस्था</label>
+<label class="option"><input type="radio" name="q10" value="B">B. केवल खगोल विज्ञान</label>
+<label class="option"><input type="radio" name="q10" value="C">C. केवल संगीत</label>
+<label class="option"><input type="radio" name="q10" value="D">D. केवल चित्रकला</label>
+</div>
+
+
+<!-- Q11 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>11. Arthaśāstra का संबंध किस विद्वान से जोड़ा जाता है?</h3>
+<label class="option"><input type="radio" name="q11" value="A">A. कौटिल्य</label>
+<label class="option"><input type="radio" name="q11" value="B">B. आर्यभट्ट</label>
+<label class="option"><input type="radio" name="q11" value="C">C. चरक</label>
+<label class="option"><input type="radio" name="q11" value="D">D. कालिदास</label>
+</div>
+
+
+<!-- Q12 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>12. सामाजिक विज्ञान पढ़ने का एक महत्वपूर्ण उद्देश्य क्या है?</h3>
+<label class="option"><input type="radio" name="q12" value="A">A. समाज को समझना</label>
+<label class="option"><input type="radio" name="q12" value="B">B. केवल गणना करना</label>
+<label class="option"><input type="radio" name="q12" value="C">C. केवल प्रयोगशाला कार्य</label>
+<label class="option"><input type="radio" name="q12" value="D">D. केवल मशीन बनाना</label>
+</div>
+
+
+<!-- Q13 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>13. निम्न में से कौन इतिहास का स्रोत हो सकता है?</h3>
+<label class="option"><input type="radio" name="q13" value="A">A. सिक्के</label>
+<label class="option"><input type="radio" name="q13" value="B">B. केवल मौसम</label>
+<label class="option"><input type="radio" name="q13" value="C">C. केवल गणितीय सूत्र</label>
+<label class="option"><input type="radio" name="q13" value="D">D. केवल रासायनिक तत्व</label>
+</div>
+
+
+<!-- Q14 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>14. GIS का पूरा नाम क्या है?</h3>
+<label class="option"><input type="radio" name="q14" value="A">A. Geographic Information System</label>
+<label class="option"><input type="radio" name="q14" value="B">B. Global Indian Society</label>
+<label class="option"><input type="radio" name="q14" value="C">C. General Information Service</label>
+<label class="option"><input type="radio" name="q14" value="D">D. Geographic International Study</label>
+</div>
+
+
+<!-- Q15 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>15. सामाजिक विज्ञान में Evidence का क्या महत्व है?</h3>
+<label class="option"><input type="radio" name="q15" value="A">A. निष्कर्षों को आधार देने के लिए</label>
+<label class="option"><input type="radio" name="q15" value="B">B. केवल सजावट के लिए</label>
+<label class="option"><input type="radio" name="q15" value="C">C. केवल मनोरंजन के लिए</label>
+<label class="option"><input type="radio" name="q15" value="D">D. इसका कोई महत्व नहीं</label>
+</div>
+
+
+<!-- Q16 -->
+<div class="question">
+<span class="type">Multiple Correct</span>
+<h3>16. निम्न में से कौन सामाजिक विज्ञान की प्रमुख शाखाएँ हैं?</h3>
+<label class="option"><input type="checkbox" name="q16" value="A">A. इतिहास</label>
+<label class="option"><input type="checkbox" name="q16" value="B">B. भूगोल</label>
+<label class="option"><input type="checkbox" name="q16" value="C">C. राजनीतिक विज्ञान</label>
+<label class="option"><input type="checkbox" name="q16" value="D">D. अर्थशास्त्र</label>
+</div>
+
+
+<!-- Q17 -->
+<div class="question">
+<span class="type">Multiple Correct</span>
+<h3>17. पंचमहाभूतों में कौन-कौन से तत्व शामिल हैं?</h3>
+<label class="option"><input type="checkbox" name="q17" value="A">A. पृथ्वी</label>
+<label class="option"><input type="checkbox" name="q17" value="B">B. जल</label>
+<label class="option"><input type="checkbox" name="q17" value="C">C. अग्नि</label>
+<label class="option"><input type="checkbox" name="q17" value="D">D. वायु</label>
+<label class="option"><input type="checkbox" name="q17" value="E">E. आकाश</label>
+</div>
+
+
+<!-- Q18 -->
+<div class="question">
+<span class="type">Multiple Correct</span>
+<h3>18. सामाजिक विज्ञान के अध्ययन में किनका प्रयोग किया जा सकता है?</h3>
+<label class="option"><input type="checkbox" name="q18" value="A">A. Observation</label>
+<label class="option"><input type="checkbox" name="q18" value="B">B. Interviews</label>
+<label class="option"><input type="checkbox" name="q18" value="C">C. Surveys</label>
+<label class="option"><input type="checkbox" name="q18" value="D">D. Documents</label>
+</div>
+
+
+<!-- Q19 -->
+<div class="question">
+<span class="type">Multiple Correct</span>
+<h3>19. इतिहास के स्रोतों में क्या शामिल हो सकते हैं?</h3>
+<label class="option"><input type="checkbox" name="q19" value="A">A. अभिलेख</label>
+<label class="option"><input type="checkbox" name="q19" value="B">B. सिक्के</label>
+<label class="option"><input type="checkbox" name="q19" value="C">C. स्मारक</label>
+<label class="option"><input type="checkbox" name="q19" value="D">D> शिलालेख</label>
+</div>
+
+
+<!-- Q20 -->
+<div class="question">
+<span class="type">Multiple Correct</span>
+<h3>20. सामाजिक विज्ञान हमें किन बातों को समझने में मदद करता है?</h3>
+<label class="option"><input type="checkbox" name="q20" value="A">A. समाज</label>
+<label class="option"><input type="checkbox" name="q20" value="B">B. पर्यावरण</label>
+<label class="option"><input type="checkbox" name="q20" value="C">C. शासन</label>
+<label class="option"><input type="checkbox" name="q20" value="D">D. अर्थव्यवस्था</label>
+</div>
+
+
+<!-- Q21 -->
+<div class="question">
+<span class="type">Arrangement</span>
+<h3>21. मानव समाज के विकास का उपयुक्त क्रम चुनिए:</h3>
+<label class="option"><input type="radio" name="q21" value="A">A. कृषि → शिकार-संग्रह → स्थायी बस्तियाँ → नगर</label>
+<label class="option"><input type="radio" name="q21" value="B">B. शिकार-संग्रह → कृषि → स्थायी बस्तियाँ → नगर</label>
+<label class="option"><input type="radio" name="q21" value="C">C. नगर → कृषि → शिकार-संग्रह → स्थायी बस्तियाँ</label>
+<label class="option"><input type="radio" name="q21" value="D">D. कृषि → नगर → शिकार-संग्रह → स्थायी बस्तियाँ</label>
+</div>
+
+
+<!-- Q22 -->
+<div class="question">
+<span class="type">Arrangement</span>
+<h3>22. किसी सामाजिक घटना के अध्ययन की उपयुक्त प्रक्रिया कौन-सी है?</h3>
+<label class="option"><input type="radio" name="q22" value="A">A. निष्कर्ष → प्रश्न → साक्ष्य → विश्लेषण</label>
+<label class="option"><input type="radio" name="q22" value="B">B. प्रश्न → साक्ष्य/जानकारी → विश्लेषण → निष्कर्ष</label>
+<label class="option"><input type="radio" name="q22" value="C">C. निष्कर्ष → विश्लेषण → प्रश्न → साक्ष्य</label>
+<label class="option"><input type="radio" name="q22" value="D">D. साक्ष्य → निष्कर्ष → प्रश्न → विश्लेषण</label>
+</div>
+
+
+<!-- Q23 -->
+<div class="question">
+<span class="type">Arrangement</span>
+<h3>23. पंचमहाभूतों का सही क्रम चुनिए:</h3>
+<label class="option"><input type="radio" name="q23" value="A">A. पृथ्वी → जल → अग्नि → वायु → आकाश</label>
+<label class="option"><input type="radio" name="q23" value="B">B. जल → पृथ्वी → वायु → अग्नि → आकाश</label>
+<label class="option"><input type="radio" name="q23" value="C">C. अग्नि → जल → पृथ्वी → आकाश → वायु</label>
+<label class="option"><input type="radio" name="q23" value="D">D. वायु → अग्नि → जल → पृथ्वी → आकाश</label>
+</div>
+
+
+<!-- Q24 -->
+<div class="question">
+<span class="type">Arrangement</span>
+<h3>24. किसी ऐतिहासिक घटना को समझने का उपयुक्त क्रम कौन-सा है?</h3>
+<label class="option"><input type="radio" name="q24" value="A">A. स्रोत → जाँच → विश्लेषण → व्याख्या</label>
+<label class="option"><input type="radio" name="q24" value="B">B. व्याख्या → स्रोत → जाँच → विश्लेषण</label>
+<label class="option"><input type="radio" name="q24" value="C">C. विश्लेषण → व्याख्या → स्रोत → जाँच</label>
+<label class="option"><input type="radio" name="q24" value="D">D. जाँच → व्याख्या → स्रोत → विश्लेषण</label>
+</div>
+
+
+<!-- Q25 -->
+<div class="question">
+<span class="type">Arrangement</span>
+<h3>25. सामाजिक विज्ञान की चार प्रमुख disciplines का सही समूह कौन-सा है?</h3>
+<label class="option"><input type="radio" name="q25" value="A">A. इतिहास → भूगोल → राजनीतिक विज्ञान → अर्थशास्त्र</label>
+<label class="option"><input type="radio" name="q25" value="B">B. भौतिकी → रसायन → जीव विज्ञान → गणित</label>
+<label class="option"><input type="radio" name="q25" value="C">C. संगीत → कला → गणित → विज्ञान</label>
+<label class="option"><input type="radio" name="q25" value="D">D. साहित्य → जीव विज्ञान → रसायन → भौतिकी</label>
+</div>
+
+
+<!-- Q26 -->
+<div class="question">
+<span class="type">कथन–कारण</span>
+<h3>26. कथन (A): सामाजिक विज्ञान मानव समाज को समझने में सहायता करता है।<br>
+कारण (R): मानव समाज अनेक परस्पर जुड़े तत्त्वों से बना है।</h3>
+<label class="option"><input type="radio" name="q26" value="A">A. A और R दोनों सही हैं तथा R, A की सही व्याख्या है।</label>
+<label class="option"><input type="radio" name="q26" value="B">B. A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है।</label>
+<label class="option"><input type="radio" name="q26" value="C">C. A सही है, R गलत है।</label>
+<label class="option"><input type="radio" name="q26" value="D">D. A गलत है, R सही है।</label>
+</div>
+
+
+<!-- Q27 -->
+<div class="question">
+<span class="type">कथन–कारण</span>
+<h3>27. कथन (A): इतिहास के अध्ययन में स्रोत महत्वपूर्ण हैं।<br>
+कारण (R): स्रोत अतीत के बारे में प्रमाण प्रदान कर सकते हैं।</h3>
+<label class="option"><input type="radio" name="q27" value="A">A. A और R दोनों सही हैं तथा R, A की सही व्याख्या है।</label>
+<label class="option"><input type="radio" name="q27" value="B">B. A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है।</label>
+<label class="option"><input type="radio" name="q27" value="C">C. A सही है, R गलत है।</label>
+<label class="option"><input type="radio" name="q27" value="D">D. A गलत है, R सही है।</label>
+</div>
+
+
+<!-- Q28 -->
+<div class="question">
+<span class="type">कथन–कारण</span>
+<h3>28. कथन (A): भूगोल और अर्थशास्त्र एक-दूसरे से जुड़े हो सकते हैं।<br>
+कारण (R): प्राकृतिक संसाधन आर्थिक गतिविधियों को प्रभावित कर सकते हैं।</h3>
+<label class="option"><input type="radio" name="q28" value="A">A. A और R दोनों सही हैं तथा R, A की सही व्याख्या है।</label>
+<label class="option"><input type="radio" name="q28" value="B">B. A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है।</label>
+<label class="option"><input type="radio" name="q28" value="C">C. A सही है, R गलत है।</label>
+<label class="option"><input type="radio" name="q28" value="D">D. A गलत है, R सही है।</label>
+</div>
+
+
+<!-- Q29 -->
+<div class="question">
+<span class="type">कथन–कारण</span>
+<h3>29. कथन (A): Social Science में evidence का महत्व है।<br>
+कारण (R): Evidence किसी निष्कर्ष को अधिक विश्वसनीय बनाने में मदद कर सकता है।</h3>
+<label class="option"><input type="radio" name="q29" value="A">A. A और R दोनों सही हैं तथा R, A की सही व्याख्या है।</label>
+<label class="option"><input type="radio" name="q29" value="B">B. A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है।</label>
+<label class="option"><input type="radio" name="q29" value="C">C. A सही है, R गलत है।</label>
+<label class="option"><input type="radio" name="q29" value="D">D. A गलत है, R सही है।</label>
+</div>
+
+
+<!-- Q30 -->
+<div class="question">
+<span class="type">कथन–कारण</span>
+<h3>30. कथन (A): सामाजिक विज्ञान की शाखाएँ एक-दूसरे से पूरी तरह अलग हैं।<br>
+कारण (R): समाज की किसी घटना को समझने में कई disciplines की सहायता ली जा सकती है।</h3>
+<label class="option"><input type="radio" name="q30" value="A">A. A और R दोनों सही हैं तथा R, A की सही व्याख्या है।</label>
+<label class="option"><input type="radio" name="q30" value="B">B. A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है।</label>
+<label class="option"><input type="radio" name="q30" value="C">C. A सही है, R गलत है।</label>
+<label class="option"><input type="radio" name="q30" value="D">D. A गलत है, R सही है।</label>
+</div>
+
+
+<!-- Q31 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>31. 'Interdependence' का अर्थ क्या है?</h3>
+<label class="option"><input type="radio" name="q31" value="A">A. परस्पर निर्भरता</label>
+<label class="option"><input type="radio" name="q31" value="B">B. पूर्ण स्वतंत्रता</label>
+<label class="option"><input type="radio" name="q31" value="C">C. संघर्ष</label>
+<label class="option"><input type="radio" name="q31" value="D">D. अलगाव</label>
+</div>
+
+
+<!-- Q32 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>32. निम्न में से कौन Political Science का विषय है?</h3>
+<label class="option"><input type="radio" name="q32" value="A">A. नागरिकता</label>
+<label class="option"><input type="radio" name="q32" value="B">B. ज्वालामुखी</label>
+<label class="option"><input type="radio" name="q32" value="C">C. कोशिका</label>
+<label class="option"><input type="radio" name="q32" value="D">D. प्रकाश संश्लेषण</label>
+</div>
+
+
+<!-- Q33 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>33. सीमित संसाधन और असीमित इच्छाएँ किस discipline के प्रमुख विषय से जुड़ी हैं?</h3>
+<label class="option"><input type="radio" name="q33" value="A">A. अर्थशास्त्र</label>
+<label class="option"><input type="radio" name="q33" value="B">B. इतिहास</label>
+<label class="option"><input type="radio" name="q33" value="C">C. राजनीति विज्ञान</label>
+<label class="option"><input type="radio" name="q33" value="D">D. भूगोल</label>
+</div>
+
+
+<!-- Q34 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>34. निम्न में से कौन Geography का महत्वपूर्ण tool है?</h3>
+<label class="option"><input type="radio" name="q34" value="A">A. Map</label>
+<label class="option"><input type="radio" name="q34" value="B">B. केवल संविधान</label>
+<label class="option"><input type="radio" name="q34" value="C">C. केवल सिक्का</label>
+<label class="option"><input type="radio" name="q34" value="D">D. केवल कविता</label>
+</div>
+
+
+<!-- Q35 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>35. आधुनिक सामाजिक विज्ञान में Survey किसलिए उपयोगी है?</h3>
+<label class="option"><input type="radio" name="q35" value="A">A. लोगों से व्यवस्थित जानकारी लेने के लिए</label>
+<label class="option"><input type="radio" name="q35" value="B">B. केवल चित्र बनाने के लिए</label>
+<label class="option"><input type="radio" name="q35" value="C">C. केवल संगीत सीखने के लिए</label>
+<label class="option"><input type="radio" name="q35" value="D">D. केवल खेल के लिए</label>
+</div>
+
+
+<!-- Q36 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>36. Observation का अर्थ क्या है?</h3>
+<label class="option"><input type="radio" name="q36" value="A">A. ध्यानपूर्वक अवलोकन</label>
+<label class="option"><input type="radio" name="q36" value="B">B. अनुमान</label>
+<label class="option"><input type="radio" name="q36" value="C">C. कल्पना</label>
+<label class="option"><input type="radio" name="q36" value="D">D. अफवाह</label>
+</div>
+
+
+<!-- Q37 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>37. समाज में परिवर्तन को समझने के लिए समय के अध्ययन पर विशेष ध्यान कौन-सा discipline देता है?</h3>
+<label class="option"><input type="radio" name="q37" value="A">A. इतिहास</label>
+<label class="option"><input type="radio" name="q37" value="B">B. अर्थशास्त्र</label>
+<label class="option"><input type="radio" name="q37" value="C">C. भूगोल</label>
+<label class="option"><input type="radio" name="q37" value="D">D. राजनीति विज्ञान</label>
+</div>
+
+
+<!-- Q38 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>38. शासन व्यवस्था का अध्ययन मुख्य रूप से किस discipline से जुड़ा है?</h3>
+<label class="option"><input type="radio" name="q38" value="A">A. Political Science</label>
+<label class="option"><input type="radio" name="q38" value="B">B. Geography</label>
+<label class="option"><input type="radio" name="q38" value="C">C. Economics</label>
+<label class="option"><input type="radio" name="q38" value="D">D. History</label>
+</div>
+
+
+<!-- Q39 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>39. मानव और पर्यावरण के संबंध को समझने में कौन-सा discipline महत्वपूर्ण है?</h3>
+<label class="option"><input type="radio" name="q39" value="A">A. Geography</label>
+<label class="option"><input type="radio" name="q39" value="B">B. Political Science</label>
+<label class="option"><input type="radio" name="q39" value="C">C. Economics</label>
+<label class="option"><input type="radio" name="q39" value="D">D. History</label>
+</div>
+
+
+<!-- Q40 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>40. निम्न में से कौन Social Science की विशेषता है?</h3>
+<label class="option"><input type="radio" name="q40" value="A">A. मानव समाज का व्यवस्थित अध्ययन</label>
+<label class="option"><input type="radio" name="q40" value="B">B. केवल प्रयोगशाला में काम</label>
+<label class="option"><input type="radio" name="q40" value="C">C. केवल गणितीय गणना</label>
+<label class="option"><input type="radio" name="q40" value="D">D. केवल प्राकृतिक विज्ञान</label>
+</div>
+
+
+<!-- Q41 -->
+<div class="question">
+<span class="type">Matching</span>
+<h3>41. सही मिलान चुनिए:</h3>
+
+<p>
+I. History — 1. Government<br>
+II. Geography — 2. Past<br>
+III. Political Science — 3. Earth and Environment<br>
+IV. Economics — 4. Resources and economic activities
+</p>
+
+<label class="option"><input type="radio" name="q41" value="A">A. I-2, II-3, III-1, IV-4</label>
+<label class="option"><input type="radio" name="q41" value="B">B. I-1, II-2, III-3, IV-4</label>
+<label class="option"><input type="radio" name="q41" value="C">C. I-3, II-1, III-4, IV-2</label>
+<label class="option"><input type="radio" name="q41" value="D">D. I-4, II-3, III-2, IV-1</label>
+</div>
+
+
+<!-- Q42 -->
+<div class="question">
+<span class="type">Matching</span>
+<h3>42. पंचमहाभूतों का सही मिलान चुनिए:</h3>
+
+<p>
+I. पृथ्वी — 1. वायु<br>
+II. जल — 2. पृथ्वी<br>
+III. अग्नि — 3. जल<br>
+IV. वायु — 4. अग्नि
+</p>
+
+<label class="option"><input type="radio" name="q42" value="A">A. I-2, II-3, III-4, IV-1</label>
+<label class="option"><input type="radio" name="q42" value="B">B. I-1, II-2, III-3, IV-4</label>
+<label class="option"><input type="radio" name="q42" value="C">C. I-4, II-3, III-2, IV-1</label>
+<label class="option"><input type="radio" name="q42" value="D">D. I-3, II-4, III-1, IV-2</label>
+</div>
+
+
+<!-- Q43 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>43. Vasudhaiva Kuṭumbakam की भावना किस विचार पर बल देती है?</h3>
+<label class="option"><input type="radio" name="q43" value="A">A. मानव समाज की interconnectedness</label>
+<label class="option"><input type="radio" name="q43" value="B">B. समाज से अलगाव</label>
+<label class="option"><input type="radio" name="q43" value="C">C. केवल आर्थिक प्रतिस्पर्धा</label>
+<label class="option"><input type="radio" name="q43" value="D">D. केवल राजनीतिक संघर्ष</label>
+</div>
+
+
+<!-- Q44 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>44. Arthaśāstra में किस प्रकार के विषयों पर विचार मिलता है?</h3>
+<label class="option"><input type="radio" name="q44" value="A">A. शासन और प्रशासन</label>
+<label class="option"><input type="radio" name="q44" value="B">B. केवल मौसम</label>
+<label class="option"><input type="radio" name="q44" value="C">C. केवल संगीत</label>
+<label class="option"><input type="radio" name="q44" value="D">D. केवल खेल</label>
+</div>
+
+
+<!-- Q45 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>45. सामाजिक विज्ञान की विभिन्न शाखाओं को साथ पढ़ने का लाभ क्या है?</h3>
+<label class="option"><input type="radio" name="q45" value="A">A. किसी समस्या की व्यापक समझ मिलती है</label>
+<label class="option"><input type="radio" name="q45" value="B">B. विषय और कठिन हो जाता है</label>
+<label class="option"><input type="radio" name="q45" value="C">C. किसी विषय की आवश्यकता नहीं रहती</label>
+<label class="option"><input type="radio" name="q45" value="D">D. केवल इतिहास समझ आता है</label>
+</div>
+
+
+<!-- Q46 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>46. यदि किसी क्षेत्र में सूखा पड़ता है, तो उसका अध्ययन किन disciplines से किया जा सकता है?</h3>
+<label class="option"><input type="radio" name="q46" value="A">A. केवल इतिहास</label>
+<label class="option"><input type="radio" name="q46" value="B">B. केवल भूगोल</label>
+<label class="option"><input type="radio" name="q46" value="C">C. भूगोल, अर्थशास्त्र, राजनीति विज्ञान और इतिहास</label>
+<label class="option"><input type="radio" name="q46" value="D">D. केवल राजनीति विज्ञान</label>
+</div>
+
+
+<!-- Q47 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>47. सामाजिक विज्ञान में Critical Thinking क्यों महत्वपूर्ण है?</h3>
+<label class="option"><input type="radio" name="q47" value="A">A. जानकारी का विश्लेषण और मूल्यांकन करने के लिए</label>
+<label class="option"><input type="radio" name="q47" value="B">B. बिना सोचे विश्वास करने के लिए</label>
+<label class="option"><input type="radio" name="q47" value="C">C. केवल याद करने के लिए</label>
+<label class="option"><input type="radio" name="q47" value="D">D. केवल परीक्षा छोड़ने के लिए</label>
+</div>
+
+
+<!-- Q48 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>48. सामाजिक विज्ञान के अध्ययन का अच्छा तरीका कौन-सा है?</h3>
+<label class="option"><input type="radio" name="q48" value="A">A. प्रश्न पूछना और evidence की जाँच करना</label>
+<label class="option"><input type="radio" name="q48" value="B">B. अफवाह को तथ्य मान लेना</label>
+<label class="option"><input type="radio" name="q48" value="C">C. बिना प्रमाण निष्कर्ष निकालना</label>
+<label class="option"><input type="radio" name="q48" value="D">D. केवल अनुमान लगाना</label>
+</div>
+
+
+<!-- Q49 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>49. सामाजिक विज्ञान का अध्ययन हमें किस प्रकार का नागरिक बनने में सहायता कर सकता है?</h3>
+<label class="option"><input type="radio" name="q49" value="A">A. जागरूक और जिम्मेदार नागरिक</label>
+<label class="option"><input type="radio" name="q49" value="B">B. उदासीन नागरिक</label>
+<label class="option"><input type="radio" name="q49" value="C">C. असूचित नागरिक</label>
+<label class="option"><input type="radio" name="q49" value="D">D. समाज से अलग व्यक्ति</label>
+</div>
+
+
+<!-- Q50 -->
+<div class="question">
+<span class="type">MCQ</span>
+<h3>50. Chapter 1 का सबसे महत्वपूर्ण व्यापक विचार क्या है?</h3>
+<label class="option"><input type="radio" name="q50" value="A">A. समाज को समझने के लिए विभिन्न दृष्टिकोणों को जोड़ना</label>
+<label class="option"><input type="radio" name="q50" value="B">B. केवल इतिहास पढ़ना</label>
+<label class="option"><input type="radio" name="q50" value="C">C. केवल भूगोल पढ़ना</label>
+<label class="option"><input type="radio" name="q50" value="D">D. केवल अर्थशास्त्र पढ़ना</label>
+</div>
+
+
+<div id="result">
+<h2>🎯 आपका परिणाम</h2>
+<p id="score"></p>
+</div>
+
+
+<div class="buttons">
+
+<button class="submit" onclick="checkTest()">
+✅ Submit Test
+</button>
+
+<button class="print" onclick="window.print()">
+🖨️ Print / Save as PDF
+</button>
+
+<a href="class9.html" class="back">
+← Class 9
+</a>
+
+</div>
+
+
+<div class="card">
+
+<button class="submit" onclick="showAnswers()">
+🔑 Answer Key
+</button>
+
+<div id="answers">
+
+<h2>Answer Key</h2>
+
+<div class="answer-grid">
+
+<div class="answer">1-B</div>
+<div class="answer">2-A</div>
+<div class="answer">3-B</div>
+<div class="answer">4-A</div>
+<div class="answer">5-A</div>
+
+<div class="answer">6-A</div>
+<div class="answer">7-C</div>
+<div class="answer">8-A</div>
+<div class="answer">9-A</div>
+<div class="answer">10-A</div>
+
+<div class="answer">11-A</div>
+<div class="answer">12-A</div>
+<div class="answer">13-A</div>
+<div class="answer">14-A</div>
+<div class="answer">15-A</div>
+
+<div class="answer">16-A,B,C,D</div>
+<div class="answer">17-A,B,C,D,E</div>
+<div class="answer">18-A,B,C,D</div>
+<div class="answer">19-A,B,C,D</div>
+<div class="answer">20-A,B,C,D</div>
+
+<div class="answer">21-B</div>
+<div class="answer">22-B</div>
+<div class="answer">23-A</div>
+<div class="answer">24-A</div>
+<div class="answer">25-A</div>
+
+<div class="answer">26-A</div>
+<div class="answer">27-A</div>
+<div class="answer">28-A</div>
+<div class="answer">29-A</div>
+<div class="answer">30-D</div>
+
+<div class="answer">31-A</div>
+<div class="answer">32-A</div>
+<div class="answer">33-A</div>
+<div class="answer">34-A</div>
+<div class="answer">35-A</div>
+
+<div class="answer">36-A</div>
+<div class="answer">37-A</div>
+<div class="answer">38-A</div>
+<div class="answer">39-A</div>
+<div class="answer">40-A</div>
+
+<div class="answer">41-A</div>
+<div class="answer">42-A</div>
+<div class="answer">43-A</div>
+<div class="answer">44-A</div>
+<div class="answer">45-A</div>
+
+<div class="answer">46-C</div>
+<div class="answer">47-A</div>
+<div class="answer">48-A</div>
+<div class="answer">49-A</div>
+<div class="answer">50-A</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="footer">
+<b>GSI MANTRA</b><br>
+Class 9 Social Science – Chapter 1 Test<br>
+Hindi Medium
+</div>
+
+
+<script>
+
+const answers = {
+
+q1:"B",
+q2:"A",
+q3:"B",
+q4:"A",
+q5:"A",
+q6:"A",
+q7:"C",
+q8:"A",
+q9:"A",
+q10:"A",
+q11:"A",
+q12:"A",
+q13:"A",
+q14:"A",
+q15:"A",
+
+q16:["A","B","C","D"],
+q17:["A","B","C","D","E"],
+q18:["A","B","C","D"],
+q19:["A","B","C","D"],
+q20:["A","B","C","D"],
+
+q21:"B",
+q22:"B",
+q23:"A",
+q24:"A",
+q25:"A",
+
+q26:"A",
+q27:"A",
+q28:"A",
+q29:"A",
+q30:"D",
+
+q31:"A",
+q32:"A",
+q33:"A",
+q34:"A",
+q35:"A",
+q36:"A",
+q37:"A",
+q38:"A",
+q39:"A",
+q40:"A",
+
+q41:"A",
+q42:"A",
+q43:"A",
+q44:"A",
+q45:"A",
+q46:"C",
+q47:"A",
+q48:"A",
+q49:"A",
+q50:"A"
+
+};
+
+
+function checkTest(){
+
+let score=0;
+
+for(let i=1;i<=50;i++){
+
+let name="q"+i;
+
+if(Array.isArray(answers[name])){
+
+let selected=[];
+
+document.querySelectorAll(
+'input[name="'+name+'"]:checked'
+).forEach(function(el){
+selected.push(el.value);
+});
+
+let correct=answers[name];
+
+selected.sort();
+correct=[...correct].sort();
+
+if(
+selected.length===correct.length &&
+selected.every((v,index)=>v===correct[index])
+){
+score++;
+}
+
+}else{
+
+let selected=document.querySelector(
+'input[name="'+name+'"]:checked'
+);
+
+if(selected && selected.value===answers[name]){
+score++;
+}
+
+}
+
+}
+
+let percentage=(score/50)*100;
+
+document.getElementById("result").style.display="block";
+
+document.getElementById("score").innerHTML=
+"<b>आपका Score: "+score+" / 50</b><br>"+
+"Percentage: "+percentage.toFixed(2)+"%";
+
+window.scrollTo({
+top:document.getElementById("result").offsetTop-20,
+behavior:"smooth"
+});
+
+}
+
+
+function showAnswers(){
+
+let box=document.getElementById("answers");
+
+if(box.style.display==="block"){
+box.style.display="none";
+}else{
+box.style.display="block";
+}
+
+}
+
+</script>
+
+</body>
+</html>

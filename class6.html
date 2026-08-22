@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GSI MANTRA - Class 6</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    margin:0;
+    font-size:38px;
+}
+
+header p{
+    font-size:18px;
+    margin-top:10px;
+}
+
+/* NAVIGATION */
+
+nav{
+    background:#071d33;
+    padding:14px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+/* MAIN */
+
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.intro{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.intro h2{
+    color:#123c69;
+    font-size:30px;
+}
+
+.intro p{
+    color:#555;
+    font-size:17px;
+}
+
+/* SUBJECT CARDS */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px 25px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 9px 22px rgba(0,0,0,0.14);
+}
+
+.icon{
+    font-size:50px;
+}
+
+.card h3{
+    color:#123c69;
+    font-size:25px;
+    margin:15px 0 10px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.6;
+    min-height:60px;
+}
+
+.button{
+    display:inline-block;
+    background:#f28c00;
+    color:white;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:8px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.button:hover{
+    background:#d97700;
+}
+
+/* FEATURES */
+
+.features{
+    margin-top:50px;
+}
+
+.section-title{
+    text-align:center;
+    color:#123c69;
+    font-size:30px;
+    margin-bottom:30px;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:18px;
+}
+
+.feature{
+    background:white;
+    padding:22px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 3px 12px rgba(0,0,0,0.07);
+}
+
+.feature h3{
+    color:#123c69;
+}
+
+/* BACK BUTTON */
+
+.back{
+    text-align:center;
+    margin-top:45px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:50px;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    header h1{
+        font-size:30px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:6px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<h1>📚 GSI MANTRA</h1>
+
+<p>NCERT Class 6 • Social Science</p>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+<a href="history6.html">📖 History</a>
+<a href="geography6.html">🌍 Geography</a>
+<a href="civics6.html">🏛️ Civics</a>
+
+</nav>
+
+
+<!-- MAIN CONTENT -->
+
+<div class="container">
+
+<div class="intro">
+
+<h2>Welcome to Class 6</h2>
+
+<p>
+NCERT Social Science के लिए Chapter-wise Notes,
+MCQ, Important Questions, Videos और Study Material।
+</p>
+
+</div>
+
+
+<!-- SUBJECTS -->
+
+<h2 class="section-title">📚 Class 6 Subjects</h2>
+
+<div class="grid">
+
+
+<!-- HISTORY -->
+
+<div class="card">
+
+<div class="icon">📖</div>
+
+<h3>History</h3>
+
+<p>
+NCERT Class 6 History के Chapters,
+Notes, MCQ और Important Questions।
+</p>
+
+<a class="button" href="history6.html">
+Open History
+</a>
+
+</div>
+
+
+<!-- GEOGRAPHY -->
+
+<div class="card">
+
+<div class="icon">🌍</div>
+
+<h3>Geography</h3>
+
+<p>
+NCERT Class 6 Geography के Chapters,
+Maps, Notes और MCQ।
+</p>
+
+<a class="button" href="geography6.html">
+Open Geography
+</a>
+
+</div>
+
+
+<!-- CIVICS -->
+
+<div class="card">
+
+<div class="icon">🏛️</div>
+
+<h3>Civics / Polity</h3>
+
+<p>
+NCERT Class 6 Civics के Chapters,
+Notes, MCQ और Important Questions।
+</p>
+
+<a class="button" href="civics6.html">
+Open Civics
+</a>
+
+</div>
+
+</div>
+
+
+<!-- FEATURES -->
+
+<div class="features">
+
+<h2 class="section-title">🎯 Learning Resources</h2>
+
+<div class="feature-grid">
+
+<div class="feature">
+<h3>📝 MCQ</h3>
+<p>Chapter-wise Practice Tests</p>
+</div>
+
+<div class="feature">
+<h3>📌 Short Notes</h3>
+<p>Quick Revision Material</p>
+</div>
+
+<div class="feature">
+<h3>📚 Detailed Notes</h3>
+<p>Complete Chapter Notes</p>
+</div>
+
+<div class="feature">
+<h3>❓ Important Questions</h3>
+<p>Exam-oriented Questions</p>
+</div>
+
+<div class="feature">
+<h3>🎥 Video Lecture</h3>
+<p>GSI MANTRA YouTube Classes</p>
+</div>
+
+<div class="feature">
+<h3>📄 PDF</h3>
+<p>Downloadable Study Material</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- BACK -->
+
+<div class="back">
+
+<a class="button" href="index.html">
+← GSI MANTRA Home पर जाएँ
+</a>
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>GSI MANTRA</h2>
+
+<p>
+Competitive Education • NCERT • Social Science
+</p>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
+</footer>
+
+
+</body>
+</html>

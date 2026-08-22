@@ -1,0 +1,803 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GSI MANTRA | Competitive Education & NCERT</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:25px 20px;
+}
+
+.header-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+}
+.logo h1{
+    margin:0;
+    font-size:34px;
+}
+
+.logo p{
+    margin:5px 0 0;
+    font-size:15px;
+}
+
+.search{
+    background:white;
+    padding:10px 15px;
+    border-radius:25px;
+    width:280px;
+}
+
+.search input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+}
+
+/* NAVIGATION */
+
+nav{
+    background:#071d33;
+    padding:14px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#123c69,#1d5b91);
+    color:white;
+    text-align:center;
+    padding:65px 20px;
+}
+
+.hero h2{
+    font-size:40px;
+    margin:0 0 15px;
+}
+
+.hero p{
+    font-size:19px;
+    max-width:750px;
+    margin:auto;
+    line-height:1.7;
+}
+
+.hero-button{
+    display:inline-block;
+    margin-top:25px;
+    background:#f28c00;
+    color:white;
+    padding:13px 28px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.section-title{
+    text-align:center;
+    color:#123c69;
+    font-size:30px;
+    margin-bottom:30px;
+}
+
+/* CARDS */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px 20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.13);
+}
+
+.card-icon{
+    font-size:42px;
+}
+
+.card h3{
+    color:#123c69;
+    margin:12px 0;
+}
+
+.card p{
+    color:#666;
+    min-height:45px;
+}
+
+.button{
+    display:inline-block;
+    background:#f28c00;
+    color:white;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+.button:hover{
+    background:#d97700;
+}
+
+/* SPECIAL SECTION */
+
+.special{
+    background:white;
+    border-radius:18px;
+    padding:35px;
+    margin-top:45px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.special h2{
+    color:#123c69;
+    text-align:center;
+}
+
+/* ART OF SUCCESS */
+
+.success{
+    background:linear-gradient(135deg,#fff4d6,#ffe8a3);
+    border-radius:18px;
+    padding:40px 25px;
+    text-align:center;
+    margin-top:45px;
+}
+
+.success h2{
+    color:#8a5700;
+    font-size:30px;
+}
+
+.success p{
+    max-width:700px;
+    margin:15px auto;
+    line-height:1.7;
+}
+
+/* YOUTUBE */
+
+.youtube{
+    background:#fff;
+    margin-top:45px;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.youtube h2{
+    color:#c62828;
+}
+
+/* FOOTER */
+
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    margin-top:50px;
+}
+
+footer h2{
+    margin-top:0;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+.footer-links a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .header-content{
+        flex-direction:column;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    .hero h2{
+        font-size:30px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:6px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="header-content">
+<div class="logo">
+
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+
+<div>
+<h1>GSI MANTRA</h1>
+<p>Competitive Education & NCERT Learning Platform</p>
+</div>
+
+</div>
+
+
+<div class="search">
+<input type="text" placeholder="🔍 Search GSI MANTRA...">
+</div>
+
+</div>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#classes">Classes 6-12</a>
+<a href="#competitive">Competitive Exams</a>
+<a href="#subjects">Subjects</a>
+<a href="#resources">Study Resources</a>
+<a href="#current-affairs">Current Affairs</a>
+<a href="#success">The Art of Success</a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h2>Welcome to GSI MANTRA</h2>
+
+<p>
+NCERT Class 6-12, Social Science, Competitive Exams,
+MCQ, Notes, PDFs और बेहतर शिक्षा के लिए आपका अपना
+Educational Platform.
+</p>
+
+<a class="hero-button" href="#classes">
+Explore Learning
+</a>
+
+</section>
+
+
+<!-- CLASSES -->
+
+<div class="container" id="classes">
+
+<h2 class="section-title">📚 NCERT Classes 6-12</h2>
+
+<div class="grid">
+
+
+<div class="card">
+
+<div class="card-icon">📘</div>
+
+<h3>Class 6</h3>
+
+<p>History, Geography और Civics</p>
+
+<a class="button" href="class6.html">
+Open Class 6
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">📗</div>
+
+<h3>Class 7</h3>
+
+<p>NCERT Social Science</p>
+
+<a class="button" href="#">
+Open Class 7
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">📕</div>
+
+<h3>Class 8</h3>
+
+<p>NCERT Social Science</p>
+
+<a class="button" href="#">
+Open Class 8
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">📙</div>
+
+
+
+<h3>Class 9</h3>
+
+<p>NCERT Social Science</p>
+
+<a class="button" href="class9.html">
+Open Class 9
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">📔</div>
+
+<h3>Class 10</h3>
+
+<p>Board Exam & NCERT</p>
+
+<a class="button" href="#">
+Open Class 10
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">📚</div>
+
+<h3>Class 11</h3>
+
+<p>NCERT Social Science</p>
+
+<a class="button" href="#">
+Open Class 11
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🎓</div>
+
+<h3>Class 12</h3>
+
+<p>NCERT & Exam Preparation</p>
+
+<a class="button" href="#">
+Open Class 12
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- COMPETITIVE -->
+
+<div class="container" id="competitive">
+
+<h2 class="section-title">🎯 Competitive Exams</h2>
+
+<div class="grid">
+
+
+<div class="card">
+
+<div class="card-icon"><img src="upsc image.png" alt="UPSC Logo"></div>
+<style>
+.card-icon img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+</style>
+<h3>UPSC</h3>
+
+<p>UPSC Civil Services Preparation</p>
+
+<a class="button" href="upsc-syllabus.html">
+Open UPSC
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🏛️</div>
+
+<h3>BPSC</h3>
+
+<p>Bihar Public Service Commission</p>
+
+<a class="button" href="#">
+Open BPSC
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">📝</div>
+
+<h3>SSC</h3>
+
+<p>SSC Competitive Exams</p>
+
+<a class="button" href="#">
+Open SSC
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🎓</div>
+
+<h3>UGC NET</h3>
+
+<p>NET Examination Preparation</p>
+
+<a class="button" href="#">
+Open UGC NET
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SUBJECTS -->
+
+<div class="container" id="subjects">
+
+<h2 class="section-title">📖 Subjects</h2>
+
+<div class="grid">
+
+
+<div class="card">
+
+<div class="card-icon">📜</div>
+
+<h3>History</h3>
+
+<p>Ancient, Medieval, Modern & World History</p>
+
+<a class="button"href="upsc-history.html" >
+Open History
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🌍</div>
+
+<h3>Geography</h3>
+
+<p>Physical, Indian & World Geography</p>
+
+<a class="button" href="#">
+Open Geography
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🏛️</div>
+
+<h3>Polity / Civics</h3>
+
+<p>Indian Constitution, Government & Civics</p>
+
+<a class="button" href="#">
+Open Polity
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- RESOURCES -->
+
+<div class="container" id="resources">
+
+<h2 class="section-title">📚 Study Resources</h2>
+
+<div class="grid">
+
+
+<div class="card">
+
+<div class="card-icon">📝</div>
+
+<h3>MCQ</h3>
+
+<p>Practice Questions & Online Tests</p>
+
+<a class="button" href="#">
+Open MCQ
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">📌</div>
+
+<h3>Short Notes</h3>
+
+<p>Quick Revision Notes</p>
+
+<a class="button" href="#">
+Open Short Notes
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">📚</div>
+
+<h3>Detailed Notes</h3>
+
+<p>Chapter-wise Detailed Study Material</p>
+
+<a class="button" href="#">
+Open Notes
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">📄</div>
+
+<h3>PDF</h3>
+
+<p>Downloadable Study PDFs</p>
+
+<a class="button" href="#">
+Open PDFs
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">📦</div>
+
+<h3>Study Material</h3>
+
+<p>Complete Learning Resources</p>
+
+<a class="button" href="#">
+Open Study Material
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CURRENT AFFAIRS -->
+
+<div class="container" id="current-affairs">
+
+<div class="box">
+
+<h2>📰 Current Affairs</h2>
+
+<p>
+Daily Current Affairs • UPSC • BPSC • SSC • NET/JRF • TRE
+</p>
+
+<div class="highlight">
+
+<h3>📅 Daily Current Affairs</h3>
+
+<p>
+यहाँ प्रतिदिन महत्वपूर्ण राष्ट्रीय और अंतरराष्ट्रीय
+समसामयिक घटनाएँ, महत्वपूर्ण तथ्य और परीक्षा उपयोगी
+प्रश्न दिए जाएंगे।
+</p>
+
+<a href="current-affairs.html" class="button">
+📰 Current Affairs पढ़ें
+</a>
+
+</div>
+
+</div>
+
+</div>
+<!-- THE ART OF SUCCESS -->
+
+<div class="container" id="success">
+
+<div class="success">
+
+<h2>🌟 The Art of Success</h2>
+
+<p>
+Success केवल परीक्षा पास करने का नाम नहीं है।
+यह सही सोच, मेहनत, अनुशासन, Skills और लगातार सीखने
+की यात्रा है।
+</p>
+
+<a class="button" href="#">
+Explore The Art of Success
+</a>
+
+</div>
+
+</div>
+
+
+<!-- YOUTUBE -->
+
+<div class="container">
+
+<div class="youtube">
+
+<h2>▶️ GSI MANTRA YouTube</h2>
+
+<p>
+हमारे YouTube पर NCERT, Social Science,
+Competitive Exams और Educational Videos देखें।
+</p>
+
+<a class="button" href="#">
+Visit YouTube Channel
+</a>
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>GSI MANTRA</h2>
+
+<p>
+Competitive Education • NCERT • Social Science • Success
+</p>
+
+<div class="footer-links">
+
+<a href="#">Home</a>
+<a href="#classes">Classes</a>
+<a href="#competitive">Competitive Exams</a>
+<a href="#resources">Resources</a>
+
+</div>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
+</footer>
+
+
+</body>
+</html>
