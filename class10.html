@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Class 10 | GSI MANTRA | NCERT & Board Exam</title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-content="GSI MANTRA Class 10 NCERT and Board Exam Study Material. History, Geography, Political Science and Economics Notes, Tests and Videos.">
+<title>GSI MANTRA | Class 10</title>
+
 
 <style>
+
+/* =========================
+   BASIC
+========================= */
 
 *{
     box-sizing:border-box;
@@ -17,112 +23,63 @@ content="GSI MANTRA Class 10 NCERT and Board Exam Study Material. History, Geogr
 
 body{
     margin:0;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
     background:#f4f7fb;
     color:#222;
     line-height:1.6;
 }
 
-/* ================= HEADER ================= */
+
+/* =========================
+   HEADER
+========================= */
 
 header{
-    background:linear-gradient(135deg,#0b2948,#123c69);
+    background:linear-gradient(135deg,#0b2948,#1d5b91);
     color:white;
-    padding:28px 20px;
+    text-align:center;
+    padding:35px 20px;
 }
 
-.header-content{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:14px;
-}
-
-.logo img{
-    width:65px;
-    height:65px;
-    object-fit:contain;
-    background:white;
-    border-radius:8px;
-}
-
-.logo h1{
+header h1{
     margin:0;
-    font-size:32px;
+    font-size:38px;
 }
 
-.logo p{
-    margin:4px 0 0;
-    font-size:14px;
+header p{
+    margin:8px 0 0;
+    font-size:17px;
 }
 
-/* ================= SEARCH ================= */
 
-.search{
-    background:white;
-    padding:10px 15px;
-    border-radius:25px;
-    width:280px;
-}
-
-.search input{
-    width:100%;
-    border:none;
-    outline:none;
-    font-size:15px;
-}
-
-/* ================= NAV ================= */
+/* =========================
+   NAVIGATION
+========================= */
 
 nav{
     background:#071d33;
-    padding:14px;
+    padding:14px 10px;
     text-align:center;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:0 12px;
     font-weight:bold;
+    margin:0 12px;
 }
 
 nav a:hover{
     color:#ffb703;
 }
 
-/* ================= HERO ================= */
 
-.hero{
-    background:linear-gradient(135deg,#123c69,#1d5b91);
-    color:white;
-    text-align:center;
-    padding:55px 20px;
-}
-
-.hero h2{
-    margin:0;
-    font-size:40px;
-}
-
-.hero p{
-    max-width:750px;
-    margin:12px auto 0;
-    font-size:18px;
-}
-
-/* ================= CONTAINER ================= */
+/* =========================
+   MAIN CONTAINER
+========================= */
 
 .container{
-    max-width:1200px;
+    max-width:1100px;
     margin:auto;
     padding:40px 20px;
 }
@@ -134,320 +91,246 @@ nav a:hover{
     margin-bottom:30px;
 }
 
-/* ================= SUBJECT ================= */
 
-.subject{
-    background:white;
-    border-radius:18px;
-    margin-bottom:35px;
-    overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+/* =========================
+   CHAPTER GRID
+========================= */
+
+.chapter-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:22px;
 }
 
-.subject-header{
-    background:linear-gradient(135deg,#123c69,#1d5b91);
-    color:white;
-    padding:20px 25px;
-}
 
-.subject-header h2{
-    margin:0;
-    font-size:25px;
-}
-
-.subject-header p{
-    margin:4px 0 0;
-    opacity:.9;
-}
-
-/* ================= CHAPTER ================= */
+/* =========================
+   CHAPTER CARD
+========================= */
 
 .chapter{
-    padding:20px 25px;
-    border-bottom:1px solid #e5e7eb;
+    background:white;
+    border-radius:16px;
+    padding:25px 20px;
+
+    box-shadow:
+    0 5px 18px rgba(0,0,0,0.08);
+
+    transition:0.3s;
 }
 
-.chapter:last-child{
-    border-bottom:none;
+.chapter:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.12);
 }
+
+
+/* =========================
+   CHAPTER TITLE
+========================= */
 
 .chapter-title{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:15px;
+    margin-bottom:20px;
 }
 
 .chapter-title h3{
     margin:0;
     color:#123c69;
-    font-size:19px;
+    font-size:21px;
 }
 
 .chapter-number{
-    background:#e7f5ff;
+    display:inline-block;
+    margin-top:8px;
+
+    background:#e8f0f8;
     color:#123c69;
+
     padding:5px 10px;
-    border-radius:20px;
+    border-radius:6px;
+
     font-size:13px;
     font-weight:bold;
 }
 
-/* ================= BUTTONS ================= */
+
+/* =========================
+   BUTTONS
+========================= */
 
 .buttons{
-    display:flex;
-    flex-wrap:wrap;
-    gap:9px;
-    margin-top:14px;
-}
-
-.btn{
-    display:inline-block;
-    text-decoration:none;
-    padding:8px 15px;
-    border-radius:7px;
-    font-size:13px;
-    font-weight:bold;
-    transition:.2s;
-}
-
-.btn:hover{
-    transform:translateY(-2px);
-}
-
-.notes{
-    background:#1971c2;
-    color:white;
-}
-
-.test{
-    background:#2b8a3e;
-    color:white;
-}
-
-.video{
-    background:#c62828;
-    color:white;
-}
-
-.coming{
-    background:#e9ecef;
-    color:#666;
-    cursor:not-allowed;
-}
-
-/* ================= NOTES LANGUAGE ================= */
-
-.language-box{
-    margin-top:12px;
-    background:#f8f9fa;
-    border-left:4px solid #1971c2;
-    padding:12px 15px;
-    border-radius:7px;
-}
-
-.language-box strong{
-    color:#123c69;
-}
-
-.language-links{
-    margin-top:8px;
     display:flex;
     flex-wrap:wrap;
     gap:8px;
 }
 
-.language-links a{
+
+.btn{
+    display:inline-block;
+
+    padding:9px 13px;
+
+    border-radius:7px;
+
     text-decoration:none;
-    padding:7px 13px;
-    border-radius:6px;
-    font-size:13px;
+
+    font-size:14px;
+
     font-weight:bold;
+
+    transition:0.2s;
 }
 
-.hindi{
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+
+/* NOTES */
+
+.notes{
+    background:#e8f5e9;
+    color:#2e7d32;
+}
+
+
+/* TEST */
+
+.test{
     background:#fff3e0;
     color:#e65100;
 }
 
-.english{
-    background:#e3f2fd;
-    color:#1565c0;
+
+/* VIDEO */
+
+.video{
+    background:#ffebee;
+    color:#c62828;
 }
 
-/* ================= INFO ================= */
 
-.info{
-    background:white;
-    border-left:5px solid #f28c00;
-    padding:20px;
-    border-radius:10px;
-    margin-bottom:30px;
-    box-shadow:0 3px 12px rgba(0,0,0,.06);
-}
-
-/* ================= FOOTER ================= */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     background:#071d33;
     color:white;
-    text-align:center;
-    padding:35px 20px;
-    margin-top:30px;
-}
 
-footer h2{
-    margin:0 0 8px;
+    text-align:center;
+
+    padding:30px 20px;
+
+    margin-top:50px;
 }
 
 footer p{
     color:#cbd5e1;
 }
 
-/* ================= MOBILE ================= */
 
-@media(max-width:700px){
+/* =========================
+   MOBILE
+========================= */
 
-    .header-content{
-        flex-direction:column;
-        text-align:center;
-    }
+@media(max-width:600px){
 
-    .search{
-        width:100%;
-    }
-
-    .hero h2{
-        font-size:30px;
-    }
-
-    .chapter-title{
-        align-items:flex-start;
-        flex-direction:column;
+    header h1{
+        font-size:29px;
     }
 
     .container{
-        padding:30px 12px;
+        padding:30px 15px;
     }
 
-    .chapter{
-        padding:18px;
+    .chapter-grid{
+        grid-template-columns:1fr;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        text-align:center;
+        width:100%;
     }
 
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
-<div class="header-content">
-
-<div class="logo">
-
-<img src="gsi-logo.png" alt="GSI MANTRA Logo">
-
-<div>
-
-<h1>GSI MANTRA</h1>
+<h1>
+📚 GSI MANTRA
+</h1>
 
 <p>
-Class 10 • NCERT & Board Exam
+Class 10 • NCERT Social Science
 </p>
 
-</div>
-
-</div>
-
-
-<div class="search">
-
-<input
-type="text"
-placeholder="🔍 Search Class 10..."
->
-
-</div>
-
-</div>
+<p>
+Notes • Tests • Videos
+</p>
 
 </header>
 
 
-<!-- ================= NAVIGATION ================= -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
-<a href="index.html">🏠 Home</a>
+<a href="index.html">
+🏠 Home
+</a>
 
-<a href="#history">📜 History</a>
+<a href="class9.html">
+Class 9
+</a>
 
-<a href="#geography">🌍 Geography</a>
-
-<a href="#political-science">🏛️ Political Science</a>
-
-<a href="#economics">💰 Economics</a>
+<a href="class10.html">
+Class 10
+</a>
 
 </nav>
 
 
-<!-- ================= HERO ================= -->
-
-<section class="hero">
-
-<h2>📚 Class 10</h2>
-
-<p>
-NCERT • Board Exam • Notes • Tests • Videos
-</p>
-
-</section>
-
-
-<!-- ================= MAIN ================= -->
+<!-- =========================
+     MAIN
+========================= -->
 
 <div class="container">
 
 
-<div class="info">
-
-<strong>📌 Class 10 Study Material</strong>
-
-<p>
-यहाँ Class 10 के सभी प्रमुख विषयों के
-Chapter-wise Notes, Tests और Videos उपलब्ध होंगे।
-Notes को Hindi और English दोनों माध्यमों में
-अलग-अलग व्यवस्थित किया जाएगा।
-</p>
-
-</div>
+<h2 class="section-title">
+📖 Class 10 History
+</h2>
 
 
-<!-- ===================================================== -->
-<!-- HISTORY -->
-<!-- ===================================================== -->
-
-<section class="subject" id="history">
-
-<div class="subject-header">
-
-<h2>📜 History</h2>
-
-<p>
-India and the Contemporary World – II
-</p>
-
-</div>
+<div class="chapter-grid">
 
 
-<!-- CHAPTER 1 -->
+<!-- =========================
+     CHAPTER 1
+========================= -->
 
 <div class="chapter">
 
@@ -464,41 +347,32 @@ Chapter 1
 </div>
 
 
-<div class="language-box">
-
-<strong>📝 Notes Available:</strong>
-
-<div class="language-links">
-
-<a
-class="hindi"
-href="class10-chapter1-hindi-notes.html">
- Hindi Notes
-</a>
-
-<a
-class="english"
-href="class10-chapter1-english-notes.html">
- English Notes
-</a>
-
-</div>
-
-</div>
-
-
 <div class="buttons">
+
+<a
+class="btn notes"
+href="class10-chapter1-notes.html">
+
+📝 Notes
+
+</a>
+
 
 <a
 class="btn test"
 href="class10-chapter1-test.html">
+
 📝 Test
+
 </a>
+
 
 <a
 class="btn video"
 href="#">
+
 ▶️ Video
+
 </a>
 
 </div>
@@ -506,7 +380,10 @@ href="#">
 </div>
 
 
-<!-- CHAPTER 2 -->
+
+<!-- =========================
+     CHAPTER 2
+========================= -->
 
 <div class="chapter">
 
@@ -522,26 +399,44 @@ Chapter 2
 
 </div>
 
+
 <div class="buttons">
 
-<span class="btn coming">
-📝 Notes — Coming Soon
-</span>
+<a
+class="btn notes"
+href="class10-chapter2-notes.html">
 
-<span class="btn coming">
-📝 Test — Coming Soon
-</span>
+📝 Notes
 
-<span class="btn coming">
-▶️ Video — Coming Soon
-</span>
+</a>
+
+
+<a
+class="btn test"
+href="class10-chapter2-test.html">
+
+📝 Test
+
+</a>
+
+
+<a
+class="btn video"
+href="#">
+
+▶️ Video
+
+</a>
 
 </div>
 
 </div>
 
 
-<!-- CHAPTER 3 -->
+
+<!-- =========================
+     CHAPTER 3
+========================= -->
 
 <div class="chapter">
 
@@ -557,26 +452,44 @@ Chapter 3
 
 </div>
 
+
 <div class="buttons">
 
-<span class="btn coming">
-📝 Notes — Coming Soon
-</span>
+<a
+class="btn notes"
+href="class10-chapter3-notes.html">
 
-<span class="btn coming">
-📝 Test — Coming Soon
-</span>
+📝 Notes
 
-<span class="btn coming">
-▶️ Video — Coming Soon
-</span>
+</a>
+
+
+<a
+class="btn test"
+href="class10-chapter3-test.html">
+
+📝 Test
+
+</a>
+
+
+<a
+class="btn video"
+href="#">
+
+▶️ Video
+
+</a>
 
 </div>
 
 </div>
 
 
-<!-- CHAPTER 4 -->
+
+<!-- =========================
+     CHAPTER 4
+========================= -->
 
 <div class="chapter">
 
@@ -592,26 +505,44 @@ Chapter 4
 
 </div>
 
+
 <div class="buttons">
 
-<span class="btn coming">
-📝 Notes — Coming Soon
-</span>
+<a
+class="btn notes"
+href="class10-chapter4-notes.html">
 
-<span class="btn coming">
-📝 Test — Coming Soon
-</span>
+📝 Notes
 
-<span class="btn coming">
-▶️ Video — Coming Soon
-</span>
+</a>
+
+
+<a
+class="btn test"
+href="class10-chapter4-test.html">
+
+📝 Test
+
+</a>
+
+
+<a
+class="btn video"
+href="#">
+
+▶️ Video
+
+</a>
 
 </div>
 
 </div>
 
 
-<!-- CHAPTER 5 -->
+
+<!-- =========================
+     CHAPTER 5
+========================= -->
 
 <div class="chapter">
 
@@ -627,598 +558,66 @@ Chapter 5
 
 </div>
 
-<div class="buttons">
-
-<span class="btn coming">
-📝 Notes — Coming Soon
-</span>
-
-<span class="btn coming">
-📝 Test — Coming Soon
-</span>
-
-<span class="btn coming">
-▶️ Video — Coming Soon
-</span>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ===================================================== -->
-<!-- GEOGRAPHY -->
-<!-- ===================================================== -->
-
-<section class="subject" id="geography">
-
-<div class="subject-header">
-
-<h2>🌍 Geography</h2>
-
-<p>
-Contemporary India – II
-</p>
-
-</div>
-
-
-<div class="chapter">
-
-<div class="chapter-title">
-
-<h3>
-Resources and Development
-</h3>
-
-<span class="chapter-number">
-Chapter 1
-</span>
-
-</div>
 
 <div class="buttons">
 
-<span class="btn coming">
-📝 Notes — Coming Soon
-</span>
+<a
+class="btn notes"
+href="class10-chapter5-notes.html">
 
-<span class="btn coming">
-📝 Test — Coming Soon
-</span>
+📝 Notes
 
-<span class="btn coming">
-▶️ Video — Coming Soon
-</span>
-
-</div>
-
-</div>
+</a>
 
 
-<div class="chapter">
+<a
+class="btn test"
+href="class10-chapter5-test.html">
 
-<div class="chapter-title">
+📝 Test
 
-<h3>
-Forest and Wildlife Resources
-</h3>
+</a>
 
-<span class="chapter-number">
-Chapter 2
-</span>
 
-</div>
+<a
+class="btn video"
+href="#">
 
-<div class="buttons">
+▶️ Video
 
-<span class="btn coming">
-📝 Notes — Coming Soon
-</span>
-
-<span class="btn coming">
-📝 Test — Coming Soon
-</span>
-
-<span class="btn coming">
-▶️ Video — Coming Soon
-</span>
+</a>
 
 </div>
 
 </div>
 
 
-<div class="chapter">
-
-<div class="chapter-title">
-
-<h3>
-Water Resources
-</h3>
-
-<span class="chapter-number">
-Chapter 3
-</span>
-
-</div>
-
-<div class="buttons">
-
-<span class="btn coming">
-📝 Notes — Coming Soon
-</span>
-
-<span class="btn coming">
-📝 Test — Coming Soon
-</span>
-
-<span class="btn coming">
-▶️ Video — Coming Soon
-</span>
-
 </div>
 
 </div>
 
 
-<div class="chapter">
-
-<div class="chapter-title">
-
-<h3>
-Agriculture
-</h3>
-
-<span class="chapter-number">
-Chapter 4
-</span>
-
-</div>
-
-<div class="buttons">
-
-<span class="btn coming">
-📝 Notes — Coming Soon
-</span>
-
-<span class="btn coming">
-📝 Test — Coming Soon
-</span>
-
-<span class="btn coming">
-▶️ Video — Coming Soon
-</span>
-
-</div>
-
-</div>
-
-
-<div class="chapter">
-
-<div class="chapter-title">
-
-<h3>
-Minerals and Energy Resources
-</h3>
-
-<span class="chapter-number">
-Chapter 5
-</span>
-
-</div>
-
-<div class="buttons">
-
-<span class="btn coming">
-📝 Notes — Coming Soon
-</span>
-
-<span class="btn coming">
-📝 Test — Coming Soon
-</span>
-
-<span class="btn coming">
-▶️ Video — Coming Soon
-</span>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ===================================================== -->
-<!-- POLITICAL SCIENCE -->
-<!-- ===================================================== -->
-
-<section class="subject" id="political-science">
-
-<div class="subject-header">
-
-<h2>🏛️ Political Science</h2>
-
-<p>
-Democratic Politics – II
-</p>
-
-</div>
-
-
-<div class="chapter">
-
-<div class="chapter-title">
-
-<h3>
-Power Sharing
-</h3>
-
-<span class="chapter-number">
-Chapter 1
-</span>
-
-</div>
-
-<div class="buttons">
-
-<span class="btn coming">
-📝 Notes — Coming Soon
-</span>
-
-<span class="btn coming">
-📝 Test — Coming Soon
-</span>
-
-<span class="btn coming">
-▶️ Video — Coming Soon
-</span>
-
-</div>
-
-</div>
-
-
-<div class="chapter">
-
-<div class="chapter-title">
-
-<h3>
-Federalism
-</h3>
-
-<span class="chapter-number">
-Chapter 2
-</span>
-
-</div>
-
-<div class="buttons">
-
-<span class="btn coming">
-📝 Notes — Coming Soon
-</span>
-
-<span class="btn coming">
-📝 Test — Coming Soon
-</span>
-
-<span class="btn coming">
-▶️ Video — Coming Soon
-</span>
-
-</div>
-
-</div>
-
-
-<div class="chapter">
-
-<div class="chapter-title">
-
-<h3>
-Gender, Religion and Caste
-</h3>
-
-<span class="chapter-number">
-Chapter 3
-</span>
-
-</div>
-
-<div class="buttons">
-
-<span class="btn coming">
-📝 Notes — Coming Soon
-</span>
-
-<span class="btn coming">
-📝 Test — Coming Soon
-</span>
-
-<span class="btn coming">
-▶️ Video — Coming Soon
-</span>
-
-</div>
-
-</div>
-
-
-<div class="chapter">
-
-<div class="chapter-title">
-
-<h3>
-Political Parties
-</h3>
-
-<span class="chapter-number">
-Chapter 4
-</span>
-
-</div>
-
-<div class="buttons">
-
-<span class="btn coming">
-📝 Notes — Coming Soon
-</span>
-
-<span class="btn coming">
-📝 Test — Coming Soon
-</span>
-
-<span class="btn coming">
-▶️ Video — Coming Soon
-</span>
-
-</div>
-
-</div>
-
-
-<div class="chapter">
-
-<div class="chapter-title">
-
-<h3>
-Outcomes of Democracy
-</h3>
-
-<span class="chapter-number">
-Chapter 5
-</span>
-
-</div>
-
-<div class="buttons">
-
-<span class="btn coming">
-📝 Notes — Coming Soon
-</span>
-
-<span class="btn coming">
-📝 Test — Coming Soon
-</span>
-
-<span class="btn coming">
-▶️ Video — Coming Soon
-</span>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ===================================================== -->
-<!-- ECONOMICS -->
-<!-- ===================================================== -->
-
-<section class="subject" id="economics">
-
-<div class="subject-header">
-
-<h2>💰 Economics</h2>
-
-<p>
-Understanding Economic Development
-</p>
-
-</div>
-
-
-<div class="chapter">
-
-<div class="chapter-title">
-
-<h3>
-Development
-</h3>
-
-<span class="chapter-number">
-Chapter 1
-</span>
-
-</div>
-
-<div class="buttons">
-
-<span class="btn coming">
-📝 Notes — Coming Soon
-</span>
-
-<span class="btn coming">
-📝 Test — Coming Soon
-</span>
-
-<span class="btn coming">
-▶️ Video — Coming Soon
-</span>
-
-</div>
-
-</div>
-
-
-<div class="chapter">
-
-<div class="chapter-title">
-
-<h3>
-Sectors of the Indian Economy
-</h3>
-
-<span class="chapter-number">
-Chapter 2
-</span>
-
-</div>
-
-<div class="buttons">
-
-<span class="btn coming">
-📝 Notes — Coming Soon
-</span>
-
-<span class="btn coming">
-📝 Test — Coming Soon
-</span>
-
-<span class="btn coming">
-▶️ Video — Coming Soon
-</span>
-
-</div>
-
-</div>
-
-
-<div class="chapter">
-
-<div class="chapter-title">
-
-<h3>
-Money and Credit
-</h3>
-
-<span class="chapter-number">
-Chapter 3
-</span>
-
-</div>
-
-<div class="buttons">
-
-<span class="btn coming">
-📝 Notes — Coming Soon
-</span>
-
-<span class="btn coming">
-📝 Test — Coming Soon
-</span>
-
-<span class="btn coming">
-▶️ Video — Coming Soon
-</span>
-
-</div>
-
-</div>
-
-
-<div class="chapter">
-
-<div class="chapter-title">
-
-<h3>
-Globalisation and the Indian Economy
-</h3>
-
-<span class="chapter-number">
-Chapter 4
-</span>
-
-</div>
-
-<div class="buttons">
-
-<span class="btn coming">
-📝 Notes — Coming Soon
-</span>
-
-<span class="btn coming">
-📝 Test — Coming Soon
-</span>
-
-<span class="btn coming">
-▶️ Video — Coming Soon
-</span>
-
-</div>
-
-</div>
-
-
-<div class="chapter">
-
-<div class="chapter-title">
-
-<h3>
-Consumer Rights
-</h3>
-
-<span class="chapter-number">
-Chapter 5
-</span>
-
-</div>
-
-<div class="buttons">
-
-<span class="btn coming">
-📝 Notes — Coming Soon
-</span>
-
-<span class="btn coming">
-📝 Test — Coming Soon
-</span>
-
-<span class="btn coming">
-▶️ Video — Coming Soon
-</span>
-
-</div>
-
-</div>
-
-</section>
-
-
-</div>
-
-
-<!-- ================= FOOTER ================= -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-<h2>GSI MANTRA</h2>
+<h3>
+GSI MANTRA
+</h3>
 
 <p>
-Class 10 • NCERT • Board Exam • Notes • Tests • Videos
+NCERT • Board Exam • Notes • Tests • Videos
 </p>
 
 <p>
-© 2026 GSI MANTRA. All Rights Reserved.
+© 2026 GSI MANTRA
 </p>
 
 </footer>
 
 
 </body>
+
 </html>
