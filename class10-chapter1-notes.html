@@ -1,405 +1,359 @@
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Class 10 History Chapter 1 Notes | GSI MANTRA</title>
-
-<meta name="description"
-content="Class 10 History Chapter 1 The Rise of Nationalism in Europe Notes in Hindi and English. GSI MANTRA.">
+<title>Class 10 Chapter 1 Notes | GSI MANTRA</title>
 
 <style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#0b2948,#1d5b91);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    margin:0;
+    font-size:34px;
+}
+
+header p{
+    margin:8px 0 0;
+    font-size:17px;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* INTRO */
+
+.intro{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.intro h2{
+    color:#123c69;
+    margin-top:0;
+}
+
+.intro p{
+    color:#555;
+    line-height:1.7;
+}
+
+/* LANGUAGE CARDS */
+
+.language-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.language-card{
+    background:white;
+    padding:30px 25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.language-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.language-icon{
+    font-size:55px;
+}
+
+.language-card h2{
+    color:#123c69;
+    margin:12px 0;
+}
+
+.language-card p{
+    color:#666;
+    min-height:50px;
+    line-height:1.6;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:8px;
+    font-weight:bold;
+    color:white;
+    margin-top:10px;
+}
+
+.hindi{
+    background:#f28c00;
+}
+
+.english{
+    background:#123c69;
+}
+
+.btn:hover{
+    opacity:.9;
+}
+
+/* BACK */
+
+.back-section{
+    text-align:center;
+    margin-top:35px;
+}
+
+.back{
+    display:inline-block;
+    background:#071d33;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* WATERMARK */
+
+.watermark{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-25deg);
+    font-size:75px;
+    font-weight:bold;
+    color:rgba(18,60,105,.045);
+    pointer-events:none;
+    z-index:0;
+    white-space:nowrap;
+}
+
+/* FOOTER */
+
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:50px;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+/* MOBILE */
+
+@media(max-width:650px){
+
+    header h1{
+        font-size:27px;
     }
 
-    body {
-        font-family: Arial, "Noto Sans Devanagari", sans-serif;
-        background: #f4f7fb;
-        color: #222;
-        line-height: 1.6;
+    .container{
+        padding:25px 15px;
     }
 
-    /* =========================
-       WATERMARK
-    ========================== */
-
-    body::before {
-        content: "GSI MANTRA";
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(-30deg);
-        font-size: 70px;
-        font-weight: 700;
-        color: rgba(0, 0, 0, 0.035);
-        white-space: nowrap;
-        pointer-events: none;
-        z-index: 0;
+    .language-grid{
+        grid-template-columns:1fr;
     }
 
-    /* =========================
-       HEADER
-    ========================== */
-
-    .header {
-        background: linear-gradient(135deg, #123c69, #0b7285);
-        color: white;
-        padding: 25px 15px;
-        text-align: center;
-        position: relative;
-        z-index: 1;
+    .watermark{
+        font-size:48px;
     }
 
-    .logo {
-        font-size: 30px;
-        font-weight: 800;
-        letter-spacing: 1px;
-    }
+}
 
-    .tagline {
-        margin-top: 5px;
-        font-size: 14px;
-        opacity: 0.9;
-    }
-
-    /* =========================
-       MAIN CONTAINER
-    ========================== */
-
-    .container {
-        max-width: 950px;
-        margin: 30px auto;
-        padding: 0 15px;
-        position: relative;
-        z-index: 1;
-    }
-
-    .chapter-card {
-        background: white;
-        border-radius: 18px;
-        padding: 30px 25px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-        text-align: center;
-    }
-
-    .chapter-number {
-        display: inline-block;
-        background: #e7f5ff;
-        color: #0b7285;
-        padding: 7px 18px;
-        border-radius: 30px;
-        font-size: 14px;
-        font-weight: bold;
-        margin-bottom: 15px;
-    }
-
-    h1 {
-        font-size: 30px;
-        color: #123c69;
-        margin-bottom: 10px;
-    }
-
-    .hindi-title {
-        font-size: 20px;
-        color: #555;
-        margin-bottom: 25px;
-    }
-
-    .description {
-        max-width: 700px;
-        margin: auto;
-        color: #666;
-        font-size: 15px;
-    }
-
-    /* =========================
-       LANGUAGE OPTIONS
-    ========================== */
-
-    .language-title {
-        margin-top: 35px;
-        margin-bottom: 18px;
-        color: #333;
-        font-size: 21px;
-    }
-
-    .language-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        margin-top: 20px;
-    }
-
-    .language-card {
-        padding: 25px 20px;
-        border-radius: 15px;
-        text-decoration: none;
-        color: white;
-        transition: 0.25s ease;
-        box-shadow: 0 6px 15px rgba(0,0,0,0.12);
-    }
-
-    .language-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 22px rgba(0,0,0,0.18);
-    }
-
-    .hindi-card {
-        background: linear-gradient(135deg, #ff7b00, #e85d04);
-    }
-
-    .english-card {
-        background: linear-gradient(135deg, #1864ab, #1971c2);
-    }
-
-    .language-icon {
-        font-size: 38px;
-        margin-bottom: 8px;
-    }
-
-    .language-card h2 {
-        font-size: 22px;
-        margin-bottom: 6px;
-    }
-
-    .language-card p {
-        font-size: 14px;
-        opacity: 0.95;
-    }
-
-    /* =========================
-       FEATURES
-    ========================== */
-
-    .features {
-        margin-top: 35px;
-        text-align: left;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
-
-    .feature {
-        background: #f8f9fa;
-        padding: 13px 15px;
-        border-radius: 10px;
-        border-left: 4px solid #0b7285;
-        font-size: 14px;
-    }
-
-    /* =========================
-       BACK BUTTON
-    ========================== */
-
-    .back-button {
-        display: inline-block;
-        margin-top: 30px;
-        padding: 11px 22px;
-        background: #343a40;
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        font-size: 14px;
-    }
-
-    .back-button:hover {
-        background: #212529;
-    }
-
-    /* =========================
-       FOOTER
-    ========================== */
-
-    footer {
-        text-align: center;
-        margin-top: 35px;
-        padding: 20px 10px;
-        background: #123c69;
-        color: white;
-        font-size: 13px;
-        position: relative;
-        z-index: 1;
-    }
-
-    /* =========================
-       MOBILE
-    ========================== */
-
-    @media (max-width: 650px) {
-
-        .logo {
-            font-size: 25px;
-        }
-
-        h1 {
-            font-size: 23px;
-        }
-
-        .hindi-title {
-            font-size: 17px;
-        }
-
-        .language-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .features {
-            grid-template-columns: 1fr;
-        }
-
-        .chapter-card {
-            padding: 25px 17px;
-        }
-    }
-
-    /* =========================
-       PRINT SETTINGS
-    ========================== */
-
-    @media print {
-
-        @page {
-            size: A4;
-            margin: 15mm;
-        }
-
-        .header,
-        .back-button,
-        footer {
-            display: none !important;
-        }
-
-        body {
-            background: white;
-        }
-
-        body::before {
-            color: rgba(0,0,0,0.035);
-        }
-
-        .chapter-card {
-            box-shadow: none;
-            border: none;
-        }
-
-        .language-card {
-            box-shadow: none;
-            -webkit-print-color-adjust: exact;
-            print-color-adjust: exact;
-        }
-    }
 </style>
+
 </head>
 
 <body>
 
-<header class="header">
-    <div class="logo">GSI MANTRA</div>
-    <div class="tagline">
-        गुणवत्तापूर्ण शिक्षा • Notes • Tests • Learning
-    </div>
+<!-- WATERMARK -->
+
+<div class="watermark">
+GSI MANTRA
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+<h1>
+📚 Class 10 History
+</h1>
+
+<p>
+Chapter 1 — The Rise of Nationalism in Europe
+</p>
+
+<p>
+GSI MANTRA
+</p>
+
 </header>
 
-<main class="container">
 
-    <section class="chapter-card">
+<!-- MAIN -->
 
-        <div class="chapter-number">
-            CLASS 10 • HISTORY • CHAPTER 1
-        </div>
+<div class="container">
 
-        <h1>
-            The Rise of Nationalism in Europe
-        </h1>
 
-        <div class="hindi-title">
-            यूरोप में राष्ट्रवाद का उदय
-        </div>
+<!-- INTRO -->
 
-        <p class="description">
-            Class 10 History Chapter 1 के विस्तृत Notes।
-            अपनी सुविधा के अनुसार Hindi या English Notes चुनें।
-        </p>
+<div class="intro">
 
-        <h2 class="language-title">
-            📚 Select Your Notes Language
-        </h2>
+<h2>
+📖 Chapter 1 Notes
+</h2>
 
-        <div class="language-grid">
+<p>
+यूरोप में राष्ट्रवाद का उदय
+</p>
 
-            <!-- HINDI NOTES -->
-            <a href="class10-chapter1-hindi-notes.html"
-               class="language-card hindi-card">
+<p>
+नीचे अपनी सुविधा के अनुसार Hindi या English Notes चुनें।
+</p>
 
-                <div class="language-icon"></div>
+</div>
 
-                <h2>हिंदी Notes</h2>
 
-                <p>
-                    अध्याय के विस्तृत हिंदी Notes पढ़ें
-                </p>
+<!-- LANGUAGE OPTIONS -->
 
-            </a>
+<div class="language-grid">
 
-            <!-- ENGLISH NOTES -->
-            <a href="class10-chapter1-english-notes.html"
-               class="language-card english-card">
 
-                <div class="language-icon"></div>
+<!-- HINDI -->
 
-                <h2>English Notes</h2>
+<div class="language-card">
 
-                <p>
-                    Read detailed chapter notes in English
-                </p>
+<div class="language-icon">
 
-            </a>
+</div>
 
-        </div>
+<h2>
+हिंदी नोट्स
+</h2>
 
-        <div class="features">
+<p>
+अध्याय 1 के विस्तृत हिंदी Notes,
+महत्वपूर्ण घटनाएँ, तिथियाँ और परीक्षा उपयोगी सामग्री।
+</p>
 
-            <div class="feature">
-                📖 Detailed Chapter Notes
-            </div>
+<a
+class="btn hindi"
+href="class10-chapter1-hindi-notes.html">
 
-            <div class="feature">
-                ⚡ Quick Revision
-            </div>
+📝 हिंदी Notes खोलें
 
-            <div class="feature">
-                🔑 Important Terms
-            </div>
+</a>
 
-            <div class="feature">
-                ❓ Important Questions
-            </div>
+</div>
 
-            <div class="feature">
-                📝 Exam-Oriented Content
-            </div>
 
-            <div class="feature">
-                🖨️ Print / Save as PDF
-            </div>
+<!-- ENGLISH -->
 
-        </div>
+<div class="language-card">
 
-        <a href="index.html" class="back-button">
-            ← Back to Class 10
-        </a>
+<div class="language-icon">
 
-    </section>
+</div>
 
-</main>
+<h2>
+English Notes
+</h2>
+
+<p>
+Detailed English Notes with important events,
+dates, concepts and examination material.
+</p>
+
+<a
+class="btn english"
+href="class10-chapter1-english-notes.html">
+
+📝 Open English Notes
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<!-- BACK TO CLASS 10 -->
+
+<div class="back-section">
+
+<a
+class="back"
+href="class10.html">
+
+⬅️ Back to Class 10
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<!-- FOOTER -->
 
 <footer>
-    © 2026 GSI MANTRA • Class 10 History Notes
+
+<h3>
+GSI MANTRA
+</h3>
+
+<p>
+NCERT • History • Class 10 • Chapter 1
+</p>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
 </footer>
 
+
 </body>
+
 </html>
