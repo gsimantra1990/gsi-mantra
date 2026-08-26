@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>GSI MANTRA | Class 10 Social Science</title>
+<title>GSI MANTRA | Class 10 History</title>
 
 <style>
 
@@ -110,7 +110,7 @@ nav a:hover{
 
 .hero p{
     font-size:18px;
-    max-width:750px;
+    max-width:800px;
     margin:auto;
     line-height:1.7;
 }
@@ -136,76 +136,80 @@ nav a:hover{
     margin-bottom:30px;
 }
 
-/* SUBJECT GRID */
+/* CHAPTER CARD */
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
-}
-
-/* SUBJECT CARD */
-
-.card{
+.chapter-card{
     background:white;
-    padding:32px 25px;
-    border-radius:18px;
-    text-align:center;
-    box-shadow:0 5px 18px rgba(0,0,0,0.09);
+    margin-bottom:22px;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    border-left:6px solid #123c69;
     transition:0.3s;
-    border:1px solid #e8edf3;
 }
 
-.card:hover{
-    transform:translateY(-7px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.14);
+.chapter-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.13);
 }
 
-.card-icon{
-    font-size:55px;
-    margin-bottom:10px;
+.chapter-number{
+    color:#f28c00;
+    font-size:15px;
+    font-weight:bold;
 }
 
-.card h3{
+.chapter-card h3{
     color:#123c69;
-    font-size:25px;
-    margin:12px 0;
+    font-size:21px;
+    margin:8px 0 18px;
 }
 
-.card p{
-    color:#666;
-    line-height:1.6;
-    min-height:50px;
-}
+/* BUTTONS */
 
-/* BUTTON */
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
 
 .button{
     display:inline-block;
-    background:#f28c00;
-    color:white;
+    padding:10px 18px;
+    border-radius:7px;
     text-decoration:none;
-    padding:11px 25px;
-    border-radius:8px;
+    color:white;
     font-weight:bold;
-    margin-top:8px;
+    font-size:14px;
     transition:0.3s;
 }
 
+.notes{
+    background:#123c69;
+}
+
+.test{
+    background:#f28c00;
+}
+
+.video{
+    background:#c62828;
+}
+
 .button:hover{
-    background:#d97700;
-    transform:scale(1.03);
+    transform:scale(1.04);
+    opacity:.9;
 }
 
 /* INFO BOX */
 
 .info-box{
     background:white;
-    margin-top:45px;
     padding:30px;
+    margin-top:35px;
     border-radius:18px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.08);
     text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
 }
 
 .info-box h2{
@@ -258,12 +262,18 @@ footer p{
         font-size:29px;
     }
 
-    .grid{
-        grid-template-columns:1fr;
+    .chapter-card{
+        padding:20px;
     }
 
-    .card{
-        padding:28px 20px;
+    .chapter-card h3{
+        font-size:19px;
+    }
+
+    .button{
+        flex:1;
+        text-align:center;
+        min-width:90px;
     }
 
     nav a{
@@ -317,29 +327,13 @@ placeholder="🔍 Search GSI MANTRA..."
 
 <a href="index.html">Home</a>
 
-<a href="index.html#classes">
-Classes 6-12
-</a>
+<a href="class10.html">Class 10</a>
 
-<a href="index.html#competitive">
-Competitive Exams
-</a>
+<a href="index.html#classes">Classes 6-12</a>
 
-<a href="index.html#subjects">
-Subjects
-</a>
+<a href="index.html#competitive">Competitive Exams</a>
 
-<a href="index.html#resources">
-Study Resources
-</a>
-
-<a href="index.html#current-affairs">
-Current Affairs
-</a>
-
-<a href="index.html#success">
-The Art of Success
-</a>
+<a href="index.html#resources">Study Resources</a>
 
 </nav>
 
@@ -348,149 +342,196 @@ The Art of Success
 
 <section class="hero">
 
-<h2>📚 Class 10 Social Science</h2>
+<h2>📚 Class 10 History</h2>
 
 <p>
-NCERT Class 10 Social Science के सभी प्रमुख विषयों के
-Notes, Tests, Videos और Study Material यहाँ उपलब्ध होंगे।
+NCERT Class 10 History के Chapter-wise
+Notes, Tests और Videos
 </p>
 
 </section>
 
 
-<!-- SUBJECTS -->
+<!-- CHAPTERS -->
 
 <div class="container">
 
 <h2 class="section-title">
-📖 Select Your Subject
+📖 History Chapters
 </h2>
 
 <p class="section-subtitle">
-Class 10 के लिए अपना विषय चुनें
+Chapter चुनें और Notes, Test या Video खोलें
 </p>
 
 
-<div class="grid">
+<!-- CHAPTER 1 -->
 
+<div class="chapter-card">
 
-<!-- HISTORY -->
-
-<div class="card">
-
-<div class="card-icon">
-📚
+<div class="chapter-number">
+CHAPTER 01
 </div>
 
 <h3>
-History
+The Rise of Nationalism in Europe
 </h3>
 
-<p>
-Class 10 History के Chapter-wise
-Notes, Tests और Videos
-</p>
+<div class="buttons">
 
-<a class="button" href="class10-history.html">
-Open History
+<a class="button notes" href="class10-history-chapter1-notes.html">
+📖 Notes
+</a>
+
+<a class="button test" href="class10-history-chapter1-test.html">
+📝 Test
+</a>
+
+<a class="button video" href="#">
+▶️ Video
 </a>
 
 </div>
 
+</div>
 
-<!-- GEOGRAPHY -->
 
-<div class="card">
+<!-- CHAPTER 2 -->
 
-<div class="card-icon">
-🌍
+<div class="chapter-card">
+
+<div class="chapter-number">
+CHAPTER 02
 </div>
 
 <h3>
-Geography
+Nationalism in India
 </h3>
 
-<p>
-Class 10 Geography के Chapter-wise
-Notes, Tests और Videos
-</p>
+<div class="buttons">
 
-<a class="button" href="class10-geography.html">
-Open Geography
+<a class="button notes" href="class10-history-chapter2-notes.html">
+📖 Notes
+</a>
+
+<a class="button test" href="class10-history-chapter2-test.html">
+📝 Test
+</a>
+
+<a class="button video" href="#">
+▶️ Video
 </a>
 
 </div>
 
+</div>
 
-<!-- POLITICAL SCIENCE -->
 
-<div class="card">
+<!-- CHAPTER 3 -->
 
-<div class="card-icon">
-🏛️
+<div class="chapter-card">
+
+<div class="chapter-number">
+CHAPTER 03
 </div>
 
 <h3>
-Political Science
+The Making of a Global World
 </h3>
 
-<p>
-Class 10 Political Science के
-Chapter-wise Notes, Tests और Videos
-</p>
+<div class="buttons">
 
-<a class="button" href="class10-political-science.html">
-Open Political Science
+<a class="button notes" href="class10-history-chapter3-notes.html">
+📖 Notes
+</a>
+
+<a class="button test" href="class10-history-chapter3-test.html">
+📝 Test
+</a>
+
+<a class="button video" href="#">
+▶️ Video
 </a>
 
 </div>
 
+</div>
 
-<!-- ECONOMICS -->
 
-<div class="card">
+<!-- CHAPTER 4 -->
 
-<div class="card-icon">
-💰
+<div class="chapter-card">
+
+<div class="chapter-number">
+CHAPTER 04
 </div>
 
 <h3>
-Economics
+The Age of Industrialisation
 </h3>
 
-<p>
-Class 10 Economics के Chapter-wise
-Notes, Tests और Videos
-</p>
+<div class="buttons">
 
-<a class="button" href="class10-economics.html">
-Open Economics
+<a class="button notes" href="class10-history-chapter4-notes.html">
+📖 Notes
+</a>
+
+<a class="button test" href="class10-history-chapter4-test.html">
+📝 Test
+</a>
+
+<a class="button video" href="#">
+▶️ Video
 </a>
 
 </div>
 
+</div>
+
+
+<!-- CHAPTER 5 -->
+
+<div class="chapter-card">
+
+<div class="chapter-number">
+CHAPTER 05
+</div>
+
+<h3>
+Print Culture and the Modern World
+</h3>
+
+<div class="buttons">
+
+<a class="button notes" href="class10-history-chapter5-notes.html">
+📖 Notes
+</a>
+
+<a class="button test" href="class10-history-chapter5-test.html">
+📝 Test
+</a>
+
+<a class="button video" href="#">
+▶️ Video
+</a>
+
+</div>
 
 </div>
 
 
-<!-- INFORMATION BOX -->
+<!-- INFO -->
 
 <div class="info-box">
 
 <h2>
-🎯 Class 10 Study Material
+🎯 GSI MANTRA — Class 10 History
 </h2>
 
 <p>
-सबसे पहले अपना Subject चुनें। इसके बाद उस Subject के
-अलग-अलग Chapters में जाकर Notes, Test और Video
-का अध्ययन करें।
-</p>
-
-<p>
-<strong>GSI MANTRA</strong> का उद्देश्य विद्यार्थियों को
-NCERT और परीक्षा की तैयारी के लिए सरल एवं उपयोगी
-Study Material उपलब्ध कराना है।
+हर Chapter के लिए अलग-अलग Notes, Test और Video
+उपलब्ध कराए जा सकते हैं। जैसे-जैसे आप नई files upload
+करेंगे, इन्हीं buttons में उनके links जोड़ दिए जाएंगे।
 </p>
 
 </div>
@@ -502,31 +543,19 @@ Study Material उपलब्ध कराना है।
 
 <footer>
 
-<h2>
-GSI MANTRA
-</h2>
+<h2>GSI MANTRA</h2>
 
 <p>
-Class 10 • NCERT • Social Science • Study Material
+Class 10 History • NCERT • Notes • Tests • Videos
 </p>
 
 <div class="footer-links">
 
-<a href="index.html">
-Home
-</a>
+<a href="index.html">Home</a>
 
-<a href="index.html#classes">
-Classes
-</a>
+<a href="class10.html">Class 10</a>
 
-<a href="index.html#competitive">
-Competitive Exams
-</a>
-
-<a href="index.html#resources">
-Resources
-</a>
+<a href="index.html#resources">Resources</a>
 
 </div>
 

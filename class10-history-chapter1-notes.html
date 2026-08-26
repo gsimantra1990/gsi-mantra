@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GSI MANTRA | Class 10 History Chapter 1</title>
+
+<style>
+:root{
+    --bg:#f4f7fb;
+    --card:#ffffff;
+    --text:#263238;
+    --primary:#123c69;
+    --secondary:#16a085;
+    --accent:#f28c00;
+    --sidebar:#0b2948;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,"Noto Sans Devanagari",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.75;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:22px;
+    text-align:center;
+}
+
+header h1{
+    font-size:32px;
+    margin-bottom:5px;
+}
+
+header p{
+    font-size:15px;
+}
+
+/* LANGUAGE BUTTONS */
+
+.language-bar{
+    background:white;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.lang-btn,
+.pdf-btn{
+    border:none;
+    padding:10px 20px;
+    margin:4px;
+    border-radius:7px;
+    cursor:pointer;
+    font-weight:bold;
+    color:white;
+}
+
+.lang-btn{
+    background:#16a085;
+}
+
+.lang-btn.active{
+    background:#123c69;
+}
+
+.pdf-btn{
+    background:#e74c3c;
+}
+
+/* LAYOUT */
+
+.layout{
+    display:flex;
+    max-width:1400px;
+    margin:auto;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width:300px;
+    background:var(--sidebar);
+    color:white;
+    min-height:calc(100vh - 100px);
+    padding:25px 18px;
+    position:sticky;
+    top:70px;
+    height:calc(100vh - 70px);
+    overflow-y:auto;
+}
+
+.sidebar h2{
+    font-size:20px;
+    text-align:center;
+    margin-bottom:18px;
+    padding-bottom:12px;
+    border-bottom:2px solid #16a085;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:8px 5px;
+    font-size:14px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.sidebar a:hover{
+    background:#123c69;
+    padding-left:10px;
+}
+
+/* MAIN */
+
+.main{
+    flex:1;
+    padding:35px;
+    min-width:0;
+}
+
+.chapter-title{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.chapter-title h2{
+    color:var(--primary);
+    margin-bottom:8px;
+}
+
+/* CARDS */
+
+.card{
+    background:var(--card);
+    padding:28px;
+    margin-bottom:25px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    border-left:5px solid var(--secondary);
+}
+
+.card h2{
+    color:var(--primary);
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.card h3{
+    color:var(--secondary);
+    margin:18px 0 8px;
+}
+
+.card p{
+    margin-bottom:10px;
+}
+
+.card ul{
+    margin:8px 0 12px 25px;
+}
+
+.card li{
+    margin-bottom:5px;
+}
+
+/* IMPORTANT BOX */
+
+.highlight{
+    background:#eef8f5;
+    padding:18px;
+    border-radius:8px;
+    margin:15px 0;
+    border-left:4px solid var(--secondary);
+}
+
+/* TABLE */
+
+.table-wrap{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:10px;
+    text-align:left;
+}
+
+th{
+    background:#123c69;
+    color:white;
+}
+
+/* WATERMARK */
+
+#notes-area{
+    position:relative;
+}
+
+#notes-area::before{
+    content:"GSI MANTRA";
+    position:fixed;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%) rotate(-30deg);
+    font-size:70px;
+    color:rgba(18,60,105,.055);
+    font-weight:bold;
+    pointer-events:none;
+    z-index:0;
+}
+
+.card,
+.chapter-title{
+    position:relative;
+    z-index:1;
+}
+
+/* HIDE LANGUAGE */
+
+.lang-content{
+    display:none;
+}
+
+.lang-content.active{
+    display:block;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .layout{
+        display:block;
+    }
+
+    .sidebar{
+        width:100%;
+        height:auto;
+        position:relative;
+        top:0;
+    }
+
+    .main{
+        padding:15px;
+    }
+
+    header h1{
+        font-size:25px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    .card h2{
+        font-size:21px;
+    }
+}
+
+/* PRINT */
+
+@media print{
+
+    body{
+        background:white;
+    }
+
+    header,
+    .language-bar,
+    .sidebar{
+        display:none !important;
+    }
+
+    .main{
+        width:100%;
+        padding:0;
+        margin:0;
+    }
+
+    .chapter-title{
+        box-shadow:none;
+    }
+
+    .card{
+        box-shadow:none;
+        break-inside:avoid;
+        page-break-inside:avoid;
+        border-left:2px solid #123c69;
+    }
+
+    #notes-area::before{
+        position:fixed;
+        color:rgba(18,60,105,.06);
+    }
+
+    .lang-content{
+        display:none !important;
+    }
+
+    .lang-content.active{
+        display:block !important;
+    }
+
+    @page{
+        size:A4;
+        margin:15mm;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>GSI MANTRA</h1>
+    <p>Class 10 History • Chapter 1 • The Rise of Nationalism in Europe</p>
+</header>
+
+<div class="language-bar">
+
+    <button class="lang-btn active" onclick="showLanguage('hindi',this)">
+        🇮🇳 हिंदी Notes
+    </button>
+
+    <button class="lang-btn" onclick="showLanguage('english',this)">
+        🇬🇧 English Notes
+    </button>
+
+    <button class="pdf-btn" onclick="makePDF()">
+        📄 PDF बनाएं
+    </button>
+
+</div>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<h2>📚 अध्याय अनुक्रमणिका</h2>
+
+<a href="#sorrieu">1. फ्रेडरिक सॉर्यू की चित्र श्रृंखला</a>
+<a href="#nation">2. Nation-State और Nationalism</a>
+<a href="#french">3. फ्रांसीसी क्रांति का प्रभाव</a>
+<a href="#napoleon">4. नेपोलियन बोनापार्ट</a>
+<a href="#code">5. नेपोलियन कोड</a>
+<a href="#drawbacks">6. नेपोलियन की कमियाँ</a>
+<a href="#habsburg">7. हैब्सबर्ग साम्राज्य</a>
+<a href="#liberalism">8. उदारवाद</a>
+<a href="#conservatism">9. रूढ़िवाद</a>
+<a href="#vienna">10. वियना कांग्रेस</a>
+<a href="#mazzini">11. ज्यूसेपे मेत्सिनी और गुप्त संगठन</a>
+<a href="#greek">12. यूनानी स्वतंत्रता संघर्ष</a>
+<a href="#zollverein">13. जॉलवेराइन</a>
+<a href="#italy">14. इटली का एकीकरण</a>
+<a href="#germany">15. जर्मनी का एकीकरण</a>
+<a href="#britain">16. ब्रिटेन का राष्ट्र-निर्माण</a>
+<a href="#allegory">17. राष्ट्र के रूपक</a>
+<a href="#balkan">18. बाल्कन क्षेत्र</a>
+<a href="#revision">19. Quick Revision</a>
+
+</aside>
+
+<!-- MAIN -->
+
+<main class="main">
+
+<div id="notes-area">
+
+<!-- ================= HINDI ================= -->
+
+<div id="hindi" class="lang-content active">
+
+<div class="chapter-title">
+
+<h2>अध्याय 1 — यूरोप में राष्ट्रवाद का उदय</h2>
+
+<p>
+कक्षा 10 इतिहास के इस अध्याय में यूरोप में राष्ट्रवाद के विकास,
+फ्रांसीसी क्रांति, नेपोलियन, उदारवाद, रूढ़िवाद तथा इटली और जर्मनी
+के एकीकरण का अध्ययन किया जाता है।
+</p>
+
+</div>
+
+
+<!-- SORRIEU -->
+
+<div class="card" id="sorrieu">
+
+<h2>1. फ्रेडरिक सॉर्यू की चार चित्रों की श्रृंखला</h2>
+
+<p>
+1848 में फ्रांसीसी कलाकार <b>फ्रेडरिक सॉर्यू</b> ने चार चित्रों की
+एक श्रृंखला बनाई। इन चित्रों के माध्यम से उसने भविष्य के ऐसे विश्व
+की कल्पना की जिसमें लोकतांत्रिक और सामाजिक गणराज्य मौजूद हों।
+</p>
+
+<h3>चित्रों का मुख्य संदेश</h3>
+
+<ul>
+<li>स्वतंत्रता और लोकतंत्र की भावना।</li>
+<li>निरंकुश शासन के अंत की कल्पना।</li>
+<li>विभिन्न यूरोपीय राष्ट्रों को एक साथ दिखाया गया।</li>
+<li>लोगों को स्वतंत्रता की प्रतिमा की ओर जाते हुए दिखाया गया।</li>
+<li>टूटे हुए निरंकुश शासन के प्रतीक भी दिखाई देते हैं।</li>
+</ul>
+
+<div class="highlight">
+<b>परीक्षा के लिए:</b> फ्रेडरिक सॉर्यू ने 1848 में राष्ट्रवाद और
+लोकतंत्र पर आधारित भविष्य की कल्पना को चार चित्रों की श्रृंखला
+के माध्यम से प्रस्तुत किया।
+</div>
+
+</div>
+
+
+<!-- NATION STATE -->
+
+<div class="card" id="nation">
+
+<h2>2. Nation-State और Nationalism</h2>
+
+<h3>Nation-State क्या है?</h3>
+
+<p>
+राष्ट्र-राज्य वह राज्य है जिसमें अधिकांश नागरिक स्वयं को एक साझा
+राष्ट्र की पहचान से जोड़ते हैं और राजनीतिक सत्ता एक संगठित राज्य
+के रूप में कार्य करती है।
+</p>
+
+<h3>Nationalism क्या है?</h3>
+
+<p>
+राष्ट्रवाद ऐसी भावना है जिसमें लोग साझा इतिहास, संस्कृति, भाषा,
+क्षेत्र और राजनीतिक आकांक्षाओं के आधार पर स्वयं को एक राष्ट्र के
+रूप में पहचानते हैं।
+</p>
+
+</div>
+
+
+<!-- FRENCH REVOLUTION -->
+
+<div class="card" id="french">
+
+<h2>3. फ्रांसीसी क्रांति और राष्ट्रवाद की शुरुआत</h2>
+
+<span class="highlight"><b>वर्ष — 1789</b></span>
+
+<p>
+1789 की फ्रांसीसी क्रांति ने यूरोप में आधुनिक राष्ट्रवाद के विकास
+को बहुत प्रभावित किया।
+</p>
+
+<h3>मुख्य परिवर्तन</h3>
+
+<ul>
+<li>संप्रभुता राजा से हटकर नागरिकों में निहित हुई।</li>
+<li>La Patrie अर्थात पितृभूमि की भावना विकसित हुई।</li>
+<li>Le Citoyen अर्थात नागरिक की अवधारणा मजबूत हुई।</li>
+<li>नया फ्रांसीसी तिरंगा अपनाया गया।</li>
+<li>National Assembly की स्थापना हुई।</li>
+<li>आंतरिक सीमा शुल्क समाप्त किए गए।</li>
+<li>एक समान कानून और प्रशासन की दिशा में कदम उठाए गए।</li>
+</ul>
+
+</div>
+
+
+<!-- NAPOLEON -->
+
+<div class="card" id="napoleon">
+
+<h2>4. नेपोलियन बोनापार्ट</h2>
+
+<p>
+<b>नेपोलियन बोनापार्ट</b> एक प्रसिद्ध फ्रांसीसी सैन्य नेता था।
+1804 में उसने स्वयं को फ्रांस का सम्राट घोषित किया।
+</p>
+
+<h3>नेपोलियन के सुधार</h3>
+
+<ul>
+<li>प्रशासन को अधिक व्यवस्थित किया।</li>
+<li>सामंती विशेषाधिकारों को कमजोर किया।</li>
+<li>कानून के समक्ष समानता को बढ़ावा दिया।</li>
+<li>संपत्ति के अधिकार को सुरक्षा दी।</li>
+<li>व्यापार और प्रशासन में एकरूपता लाई।</li>
+</ul>
+
+</div>
+
+
+<!-- CODE -->
+
+<div class="card" id="code">
+
+<h2>5. नेपोलियन कोड — 1804</h2>
+
+<p>
+1804 की <b>Napoleonic Code / Civil Code</b> ने अनेक कानूनी सुधार
+लागू किए।
+</p>
+
+<ul>
+<li>कानून के समक्ष समानता।</li>
+<li>जन्म आधारित विशेषाधिकारों का अंत।</li>
+<li>संपत्ति के अधिकार की सुरक्षा।</li>
+<li>सामंती व्यवस्था को कमजोर करना।</li>
+<li>प्रशासन में समानता और व्यवस्थित कानून।</li>
+</ul>
+
+</div>
+
+
+<!-- DRAWBACK -->
+
+<div class="card" id="drawbacks">
+
+<h2>6. नेपोलियन की कमियाँ</h2>
+
+<ul>
+<li>अनेक क्षेत्रों में फ्रांसीसी नियंत्रण स्थापित किया गया।</li>
+<li>करों का बोझ बढ़ा।</li>
+<li>सेंसरशिप लागू की गई।</li>
+<li>सेना के लिए जबरन भर्ती की गई।</li>
+<li>फ्रांसीसी साम्राज्यवादी विस्तार से दूसरे देशों में विरोध बढ़ा।</li>
+</ul>
+
+<div class="highlight">
+नेपोलियन के प्रशासनिक सुधार शुरू में लोकप्रिय हुए, लेकिन उसके
+साम्राज्यवादी विस्तार और दमनकारी नीतियों ने उसके प्रति विरोध
+उत्पन्न किया।
+</div>
+
+</div>
+
+
+<!-- HABSBURG -->
+
+<div class="card" id="habsburg">
+
+<h2>7. हैब्सबर्ग साम्राज्य</h2>
+
+<p>
+हैब्सबर्ग साम्राज्य मध्य और पूर्वी यूरोप का एक विशाल बहुराष्ट्रीय
+साम्राज्य था। इसमें अनेक भाषाएँ बोलने वाले और विभिन्न जातीय समूह
+रहते थे।
+</p>
+
+<h3>मुख्य विशेषताएँ</h3>
+
+<ul>
+<li>ऑस्ट्रियाई हैब्सबर्ग शासकों का प्रभुत्व।</li>
+<li>जर्मन, हंगेरियन, इटालियन, चेक, क्रोएट आदि समूह।</li>
+<li>भाषाई और सांस्कृतिक विविधता।</li>
+<li>राष्ट्रवादी आंदोलनों के कारण साम्राज्य पर दबाव बढ़ा।</li>
+</ul>
+
+</div>
+
+
+<!-- LIBERALISM -->
+
+<div class="card" id="liberalism">
+
+<h2>8. उदारवाद (Liberalism)</h2>
+
+<h3>उदारवाद का अर्थ</h3>
+
+<p>
+उदारवाद व्यक्ति की स्वतंत्रता, कानून के समक्ष समानता और प्रतिनिधि
+सरकार का समर्थन करने वाली विचारधारा थी।
+</p>
+
+<h3>राजनीतिक माँगें</h3>
+
+<ul>
+<li>व्यक्ति की स्वतंत्रता।</li>
+<li>कानून के समक्ष समानता।</li>
+<li>संविधान की स्थापना।</li>
+<li>प्रतिनिधि सरकार।</li>
+<li>निरंकुश शासन का विरोध।</li>
+<li>विशेषाधिकारों का अंत।</li>
+</ul>
+
+<h3>आर्थिक माँगें</h3>
+
+<ul>
+<li>मुक्त बाजार।</li>
+<li>वस्तुओं की आवाजाही पर बाधाओं में कमी।</li>
+<li>पूंजी के मुक्त आवागमन की मांग।</li>
+<li>आंतरिक व्यापारिक शुल्कों को समाप्त करना।</li>
+</ul>
+
+<div class="highlight">
+<b>महत्वपूर्ण:</b> उस समय उदारवाद का अर्थ सभी लोगों के लिए
+सार्वभौमिक मताधिकार नहीं था। महिलाओं और संपत्ति-विहीन पुरुषों को
+कई स्थानों पर राजनीतिक अधिकार नहीं मिले थे।
+</div>
+
+</div>
+
+
+<!-- CONSERVATIVES -->
+
+<div class="card" id="conservatism">
+
+<h2>9. रूढ़िवाद (Conservatism)</h2>
+
+<p>
+रूढ़िवादी लोग पारंपरिक संस्थाओं और सामाजिक व्यवस्था को बनाए रखने
+के पक्षधर थे।
+</p>
+
+<ul>
+<li>राजशाही की रक्षा।</li>
+<li>चर्च और पारंपरिक संस्थाओं का संरक्षण।</li>
+<li>सामाजिक व्यवस्था में अचानक बदलाव का विरोध।</li>
+<li>क्रांतिकारी विचारों से सावधानी।</li>
+</ul>
+
+</div>
+
+
+<!-- VIENNA -->
+
+<div class="card" id="vienna">
+
+<h2>10. वियना कांग्रेस — 1815</h2>
+
+<p>
+नेपोलियन की हार के बाद 1815 में यूरोप की राजनीतिक व्यवस्था को
+पुनर्गठित करने के लिए वियना में सम्मेलन आयोजित किया गया।
+</p>
+
+<h3>मुख्य व्यक्ति</h3>
+
+<p>
+ऑस्ट्रिया के चांसलर <b>ड्यूक क्लेमेंस वॉन मैटरनिख</b> ने इसमें
+महत्वपूर्ण भूमिका निभाई।
+</p>
+
+<h3>मुख्य उद्देश्य</h3>
+
+<ul>
+<li>यूरोप में पुरानी राजशाहियों को पुनर्स्थापित करना।</li>
+<li>फ्रांस की शक्ति को सीमित करना।</li>
+<li>शक्ति-संतुलन बनाए रखना।</li>
+<li>क्रांतिकारी और राष्ट्रवादी आंदोलनों को नियंत्रित करना।</li>
+</ul>
+
+</div>
+
+
+<!-- MAZZINI -->
+
+<div class="card" id="mazzini">
+
+<h2>11. ज्यूसेपे मेत्सिनी और गुप्त संगठन</h2>
+
+<p>
+<b>ज्यूसेपे मेत्सिनी</b> इटली के प्रसिद्ध राष्ट्रवादी और क्रांतिकारी
+थे।
+</p>
+
+<h3>उनके संगठन</h3>
+
+<ul>
+<li>Young Italy</li>
+<li>Young Europe</li>
+</ul>
+
+<p>
+मेत्सिनी एक एकीकृत और स्वतंत्र इटली की स्थापना चाहते थे।
+</p>
+
+</div>
+
+
+<!-- GREEK -->
+
+<div class="card" id="greek">
+
+<h2>12. यूनानी स्वतंत्रता संघर्ष</h2>
+
+<p>
+यूनान लंबे समय तक ऑटोमन साम्राज्य के अधीन था। 1821 में यूनानियों
+ने स्वतंत्रता के लिए संघर्ष शुरू किया।
+</p>
+
+<h3>यूरोप का समर्थन</h3>
+
+<ul>
+<li>यूरोपीय बुद्धिजीवियों ने यूनानी स्वतंत्रता का समर्थन किया।</li>
+<li>कवियों और कलाकारों ने यूनानी संस्कृति के प्रति सहानुभूति दिखाई।</li>
+<li>ब्रिटेन, फ्रांस और रूस ने बाद में सैन्य हस्तक्षेप किया।</li>
+</ul>
+
+<h3>परिणाम</h3>
+
+<p>
+1832 की <b>कुस्तुनतुनिया की संधि (Treaty of Constantinople)</b>
+के द्वारा यूनान को स्वतंत्र राज्य के रूप में मान्यता मिली।
+</p>
+
+</div>
+
+
+<!-- ZOLLVEREIN -->
+
+<div class="card" id="zollverein">
+
+<h2>13. जॉलवेराइन (Zollverein)</h2>
+
+<span class="highlight"><b>स्थापना — 1834</b></span>
+
+<p>
+जॉलवेराइन जर्मन राज्यों के बीच बनाया गया एक सीमा-शुल्क संघ था,
+जिसकी पहल प्रशा ने की।
+</p>
+
+<h3>महत्व</h3>
+
+<ul>
+<li>आंतरिक सीमा शुल्क कम किए गए।</li>
+<li>व्यापार आसान हुआ।</li>
+<li>आर्थिक एकीकरण बढ़ा।</li>
+<li>जर्मन राष्ट्रवाद को मजबूत आधार मिला।</li>
+<li>प्रशा का प्रभाव बढ़ा।</li>
+</ul>
+
+</div>
+
+
+<!-- ITALY -->
+
+<div class="card" id="italy">
+
+<h2>14. इटली का एकीकरण</h2>
+
+<p>
+19वीं शताब्दी के मध्य तक इटली अनेक राज्यों में विभाजित था।
+ऑस्ट्रिया का कई क्षेत्रों पर प्रभाव था।
+</p>
+
+<h3>प्रमुख व्यक्तित्व</h3>
+
+<table>
+<tr>
+<th>व्यक्ति</th>
+<th>भूमिका</th>
+</tr>
+
+<tr>
+<td>ज्यूसेपे मेत्सिनी</td>
+<td>राष्ट्रवादी विचारक और Young Italy के संस्थापक</td>
+</tr>
+
+<tr>
+<td>काउंट कैमिलो डी कैवूर</td>
+<td>सार्डिनिया-पीडमोंट के प्रधानमंत्री और कूटनीतिक नेता</td>
+</tr>
+
+<tr>
+<td>ज्यूसेपे गैरीबाल्डी</td>
+<td>सैन्य नेता; Red Shirts के नेतृत्व में दक्षिणी इटली में अभियान</td>
+</tr>
+
+<tr>
+<td>विक्टर इमैनुएल II</td>
+<td>सार्डिनिया-पीडमोंट का राजा; बाद में एकीकृत इटली का राजा</td>
+</tr>
+</table>
+
+<h3>एकीकरण की प्रक्रिया</h3>
+
+<ul>
+<li>सार्डिनिया-पीडमोंट ने नेतृत्व किया।</li>
+<li>कैवूर ने फ्रांस के साथ कूटनीतिक सहयोग किया।</li>
+<li>1859 में ऑस्ट्रिया के विरुद्ध युद्ध में महत्वपूर्ण सफलता मिली।</li>
+<li>गैरीबाल्डी ने 1860 में सिसिली और नेपल्स पर कब्जा किया।</li>
+<li>इन क्षेत्रों को विक्टर इमैनुएल II के नेतृत्व से जोड़ा गया।</li>
+<li>1861 में इटली का राज्य घोषित किया गया।</li>
+<li>1866 में वेनेशिया इटली में शामिल हुआ।</li>
+<li>1870 में रोम के शामिल होने के साथ एकीकरण पूरा हुआ।</li>
+</ul>
+
+<div class="highlight">
+<b>याद रखें:</b> मेत्सिनी — विचार और राष्ट्रवाद,
+कैवूर — कूटनीति, गैरीबाल्डी — सैन्य अभियान,
+विक्टर इमैनुएल II — राजकीय नेतृत्व।
+</div>
+
+</div>
+
+
+<!-- GERMANY -->
+
+<div class="card" id="germany">
+
+<h2>15. जर्मनी का एकीकरण</h2>
+
+<p>
+जर्मनी 19वीं शताब्दी में अनेक छोटे-बड़े राज्यों में विभाजित था।
+प्रशा ने जर्मन एकीकरण में नेतृत्व किया।
+</p>
+
+<h3>ओटो वॉन बिस्मार्क</h3>
+
+<p>
+<b>ओटो वॉन बिस्मार्क</b> प्रशा का प्रमुख नेता और चांसलर था।
+उसने सैन्य शक्ति और कूटनीति के माध्यम से जर्मनी के एकीकरण को आगे
+बढ़ाया।
+</p>
+
+<h3>एकीकरण के प्रमुख युद्ध</h3>
+
+<table>
+<tr>
+<th>युद्ध</th>
+<th>मुख्य परिणाम</th>
+</tr>
+
+<tr>
+<td>1864 — डेनमार्क के विरुद्ध</td>
+<td>श्लेसविग और होल्स्टीन पर नियंत्रण</td>
+</tr>
+
+<tr>
+<td>1866 — ऑस्ट्रिया के विरुद्ध</td>
+<td>प्रशा की शक्ति मजबूत हुई</td>
+</tr>
+
+<tr>
+<td>1870–71 — फ्रांस के विरुद्ध</td>
+<td>जर्मन राज्यों का राष्ट्रवादी एकीकरण मजबूत हुआ</td>
+</tr>
+</table>
+
+<h3>जर्मन साम्राज्य की स्थापना</h3>
+
+<p>
+जनवरी 1871 में वर्साय के महल के दर्पण कक्ष में प्रशा के राजा
+<b>विलियम प्रथम</b> को जर्मन सम्राट घोषित किया गया।
+इस प्रकार जर्मन एकीकरण की प्रक्रिया निर्णायक रूप से पूरी हुई।
+</p>
+
+<div class="highlight">
+<b>याद रखें:</b> जर्मनी का एकीकरण = प्रशा + बिस्मार्क +
+सैन्य शक्ति + कूटनीति + युद्ध।
+</div>
+
+</div>
+
+
+<!-- BRITAIN -->
+
+<div class="card" id="britain">
+
+<h2>16. ब्रिटेन का राष्ट्र-निर्माण</h2>
+
+<p>
+ब्रिटेन का राष्ट्र-निर्माण जर्मनी और इटली की तरह किसी एक युद्ध से
+नहीं हुआ। यह लंबे समय तक चलने वाली राजनीतिक प्रक्रिया थी।
+</p>
+
+<h3>महत्वपूर्ण घटनाएँ</h3>
+
+<ul>
+<li>इंग्लैंड ने ब्रिटिश राष्ट्र-निर्माण में प्रमुख भूमिका निभाई।</li>
+<li>1707 के Act of Union द्वारा इंग्लैंड और स्कॉटलैंड का राजनीतिक संघ हुआ।</li>
+<li>1801 में आयरलैंड को यूनाइटेड किंगडम में शामिल किया गया।</li>
+<li>अंग्रेजी संस्कृति और संस्थाओं का प्रभाव बढ़ा।</li>
+<li>स्कॉटिश और आयरिश पहचान को कई स्तरों पर दबाव का सामना करना पड़ा।</li>
+</ul>
+
+</div>
+
+
+<!-- ALLEGORY -->
+
+<div class="card" id="allegory">
+
+<h2>17. राष्ट्र के रूपक (Allegory)</h2>
+
+<p>
+राष्ट्र को अक्सर एक महिला आकृति के रूप में चित्रित किया गया।
+यह राष्ट्र की अमूर्त भावना को एक दृश्य रूप देने का तरीका था।
+</p>
+
+<h3>फ्रांस — Marianne</h3>
+
+<p>
+फ्रांस में <b>Marianne</b> स्वतंत्रता और गणराज्य का प्रतीक बनी।
+</p>
+
+<h3>जर्मनी — Germania</h3>
+
+<p>
+जर्मनी में <b>Germania</b> राष्ट्र की प्रतीकात्मक महिला आकृति थी।
+उसके हाथ में तलवार, मुकुट आदि प्रतीक राष्ट्र की शक्ति और एकता
+को दर्शाते थे।
+</p>
+
+</div>
+
+
+<!-- BALKAN -->
+
+<div class="card" id="balkan">
+
+<h2>18. बाल्कन क्षेत्र और संघर्ष</h2>
+
+<p>
+बाल्कन क्षेत्र यूरोप के दक्षिण-पूर्वी भाग में स्थित था। यहाँ अनेक
+जातीय और भाषाई समूह रहते थे।
+</p>
+
+<h3>बाल्कन में संघर्ष के कारण</h3>
+
+<ul>
+<li>ऑटोमन साम्राज्य की शक्ति में गिरावट।</li>
+<li>विभिन्न राष्ट्रवादी आंदोलनों का उदय।</li>
+<li>सर्ब, बुल्गार, यूनानी, रोमानियाई आदि समूहों की राष्ट्रीय आकांक्षाएँ।</li>
+<li>विभिन्न यूरोपीय शक्तियों की राजनीतिक प्रतिस्पर्धा।</li>
+<li>क्षेत्रीय नियंत्रण और साम्राज्यवादी हित।</li>
+</ul>
+
+<div class="highlight">
+बाल्कन क्षेत्र में राष्ट्रवाद, साम्राज्यवाद और महान शक्तियों की
+प्रतिस्पर्धा ने तनाव को बढ़ाया।
+</div>
+
+</div>
+
+
+<!-- REVISION -->
+
+<div class="card" id="revision">
+
+<h2>19. Quick Revision — परीक्षा से पहले</h2>
+
+<table>
+<tr>
+<th>विषय</th>
+<th>मुख्य तथ्य</th>
+</tr>
+
+<tr>
+<td>फ्रेडरिक सॉर्यू</td>
+<td>1848 — चार चित्रों की श्रृंखला</td>
+</tr>
+
+<tr>
+<td>फ्रांसीसी क्रांति</td>
+<td>1789</td>
+</tr>
+
+<tr>
+<td>नेपोलियन कोड</td>
+<td>1804</td>
+</tr>
+
+<tr>
+<td>वियना कांग्रेस</td>
+<td>1815</td>
+</tr>
+
+<tr>
+<td>यूनानी स्वतंत्रता</td>
+<td>1821 से संघर्ष; 1832 में मान्यता</td>
+</tr>
+
+<tr>
+<td>जॉलवेराइन</td>
+<td>1834 — जर्मन सीमा-शुल्क संघ</td>
+</tr>
+
+<tr>
+<td>इटली</td>
+<td>1861 — इटली का राज्य; 1870 — रोम का विलय</td>
+</tr>
+
+<tr>
+<td>जर्मनी</td>
+<td>1871 — जर्मन साम्राज्य की स्थापना</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+
+<!-- ================= ENGLISH ================= -->
+
+<div id="english" class="lang-content">
+
+<div class="chapter-title">
+
+<h2>Chapter 1 — The Rise of Nationalism in Europe</h2>
+
+<p>
+This chapter explains the development of nationalism in Europe,
+the French Revolution, Napoleon, liberalism, conservatism and the
+unification of Italy, Germany and Britain.
+</p>
+
+</div>
+
+
+<div class="card" id="en-sorrieu">
+
+<h2>1. Frederick Sorrieu and the Four Prints</h2>
+
+<p>
+In 1848, the French artist <b>Frederick Sorrieu</b> prepared a series
+of four prints imagining a future world made up of democratic and
+social republics.
+</p>
+
+<h3>Main Ideas</h3>
+
+<ul>
+<li>Freedom and democracy.</li>
+<li>End of authoritarian rule.</li>
+<li>National identities of European peoples.</li>
+<li>A vision of democratic nations.</li>
+<li>People moving towards the statue of Liberty.</li>
+</ul>
+
+</div>
+
+
+<div class="card" id="en-nation">
+
+<h2>2. Nation-State and Nationalism</h2>
+
+<h3>Nation-State</h3>
+
+<p>
+A nation-state is a state in which people develop a shared national
+identity and political unity.
+</p>
+
+<h3>Nationalism</h3>
+
+<p>
+Nationalism is a feeling of collective identity based on common
+history, culture, language, territory and political aspirations.
+</p>
+
+</div>
+
+
+<div class="card" id="en-french">
+
+<h2>3. Impact of the French Revolution</h2>
+
+<p>
+The French Revolution of 1789 played a major role in the development
+of modern nationalism.
+</p>
+
+<ul>
+<li>Sovereignty shifted from the monarch to the citizens.</li>
+<li>The ideas of La Patrie and Le Citoyen became important.</li>
+<li>The French tricolour became a national symbol.</li>
+<li>The National Assembly represented the nation.</li>
+<li>Internal customs duties were removed.</li>
+<li>Administrative and legal uniformity was promoted.</li>
+</ul>
+
+</div>
+
+
+<div class="card" id="en-napoleon">
+
+<h2>4. Napoleon Bonaparte</h2>
+
+<p>
+Napoleon Bonaparte was a famous French military leader who became
+Emperor of France in 1804.
+</p>
+
+<h3>Major Reforms</h3>
+
+<ul>
+<li>Administrative reforms.</li>
+<li>Reduction of feudal privileges.</li>
+<li>Equality before law.</li>
+<li>Protection of property rights.</li>
+<li>Administrative uniformity.</li>
+</ul>
+
+</div>
+
+
+<div class="card" id="en-code">
+
+<h2>5. Napoleonic Code — 1804</h2>
+
+<p>
+The Civil Code of 1804 introduced important legal reforms.
+</p>
+
+<ul>
+<li>Equality before law.</li>
+<li>Abolition of privileges based on birth.</li>
+<li>Protection of property rights.</li>
+<li>Reduction of feudal restrictions.</li>
+<li>Uniform legal administration.</li>
+</ul>
+
+</div>
+
+
+<div class="card" id="en-drawbacks">
+
+<h2>6. Drawbacks of Napoleon's Rule</h2>
+
+<ul>
+<li>Heavy taxation.</li>
+<li>Censorship.</li>
+<li>Forced military recruitment.</li>
+<li>Expansion of French control.</li>
+<li>Growing opposition to French imperialism.</li>
+</ul>
+
+</div>
+
+
+<div class="card" id="en-habsburg">
+
+<h2>7. The Habsburg Empire</h2>
+
+<p>
+The Habsburg Empire was a large multinational empire in Central and
+Eastern Europe.
+</p>
+
+<ul>
+<li>Ruled by the Austrian Habsburg dynasty.</li>
+<li>Contained many ethnic and linguistic communities.</li>
+<li>Included Germans, Hungarians, Italians, Czechs, Croats and others.</li>
+<li>Nationalist movements created pressure on the empire.</li>
+</ul>
+
+</div>
+
+
+<div class="card" id="en-liberalism">
+
+<h2>8. Liberalism</h2>
+
+<h3>Meaning</h3>
+
+<p>
+Liberalism stood for individual freedom, equality before law and
+representative government.
+</p>
+
+<h3>Political Demands</h3>
+
+<ul>
+<li>Individual freedom.</li>
+<li>Equality before law.</li>
+<li>Constitutional government.</li>
+<li>Representative government.</li>
+<li>End of absolutism and privileges.</li>
+</ul>
+
+<h3>Economic Demands</h3>
+
+<ul>
+<li>Free markets.</li>
+<li>Free movement of goods.</li>
+<li>Free movement of capital.</li>
+<li>Removal of internal trade barriers.</li>
+</ul>
+
+</div>
+
+
+<div class="card" id="en-conservatism">
+
+<h2>9. Conservatism</h2>
+
+<p>
+Conservatives wanted to preserve traditional institutions and
+social arrangements.
+</p>
+
+<ul>
+<li>Support for monarchy.</li>
+<li>Protection of traditional institutions.</li>
+<li>Opposition to sudden revolutionary changes.</li>
+<li>Preference for gradual change.</li>
+</ul>
+
+</div>
+
+
+<div class="card" id="en-vienna">
+
+<h2>10. Congress of Vienna — 1815</h2>
+
+<p>
+After Napoleon's defeat, European powers met at Vienna in 1815 to
+reorganise Europe.
+</p>
+
+<h3>Important Leader</h3>
+
+<p>
+The Austrian Chancellor <b>Duke Clemens von Metternich</b> played a
+major role.
+</p>
+
+<h3>Main Objectives</h3>
+
+<ul>
+<li>Restore traditional monarchies.</li>
+<li>Limit French expansion.</li>
+<li>Maintain a balance of power.</li>
+<li>Suppress revolutionary and nationalist movements.</li>
+</ul>
+
+</div>
+
+
+<div class="card" id="en-mazzini">
+
+<h2>11. Giuseppe Mazzini and Secret Societies</h2>
+
+<p>
+<b>Giuseppe Mazzini</b> was an Italian revolutionary and nationalist.
+He believed in a united and independent Italy.
+</p>
+
+<ul>
+<li>Young Italy</li>
+<li>Young Europe</li>
+</ul>
+
+</div>
+
+
+<div class="card" id="en-greek">
+
+<h2>12. Greek War of Independence</h2>
+
+<p>
+Greece had been under Ottoman rule for a long period. The Greek
+struggle for independence began in 1821.
+</p>
+
+<h3>European Support</h3>
+
+<ul>
+<li>European intellectuals supported Greek nationalism.</li>
+<li>Poets and artists admired ancient Greek culture.</li>
+<li>Britain, France and Russia eventually intervened.</li>
+</ul>
+
+<p>
+The <b>Treaty of Constantinople of 1832</b> recognised Greece as an
+independent state.
+</p>
+
+</div>
+
+
+<div class="card" id="en-zollverein">
+
+<h2>13. Zollverein</h2>
+
+<p>
+The Zollverein was a customs union initiated by Prussia in 1834.
+</p>
+
+<ul>
+<li>Reduced internal customs barriers.</li>
+<li>Promoted trade.</li>
+<li>Encouraged economic integration.</li>
+<li>Strengthened German nationalism.</li>
+<li>Increased Prussian influence.</li>
+</ul>
+
+</div>
+
+
+<div class="card" id="en-italy">
+
+<h2>14. Unification of Italy</h2>
+
+<p>
+Before unification, Italy was divided into several states and
+Austria controlled or influenced several areas.
+</p>
+
+<table>
+<tr>
+<th>Person</th>
+<th>Role</th>
+</tr>
+
+<tr>
+<td>Giuseppe Mazzini</td>
+<td>Nationalist thinker and founder of Young Italy</td>
+</tr>
+
+<tr>
+<td>Cavour</td>
+<td>Prime Minister of Sardinia-Piedmont and diplomatic leader</td>
+</tr>
+
+<tr>
+<td>Giuseppe Garibaldi</td>
+<td>Military leader of the Red Shirts</td>
+</tr>
+
+<tr>
+<td>Victor Emmanuel II</td>
+<td>King of Sardinia-Piedmont and later King of unified Italy</td>
+</tr>
+
+</table>
+
+<h3>Process</h3>
+
+<ul>
+<li>Sardinia-Piedmont provided political leadership.</li>
+<li>Cavour used diplomacy and alliances.</li>
+<li>War against Austria helped expand the northern kingdom.</li>
+<li>Garibaldi captured Sicily and Naples in 1860.</li>
+<li>Victor Emmanuel II became the king of unified Italy.</li>
+<li>The Kingdom of Italy was proclaimed in 1861.</li>
+<li>Venetia joined Italy in 1866.</li>
+<li>Rome joined Italy in 1870.</li>
+</ul>
+
+</div>
+
+
+<div class="card" id="en-germany">
+
+<h2>15. Unification of Germany</h2>
+
+<p>
+Germany was divided into many states. Prussia became the leading
+force behind German unification.
+</p>
+
+<h3>Otto von Bismarck</h3>
+
+<p>
+<b>Otto von Bismarck</b>, the Prussian Chancellor, used military
+power and diplomacy to achieve German unification.
+</p>
+
+<table>
+<tr>
+<th>War</th>
+<th>Result</th>
+</tr>
+
+<tr>
+<td>1864 — Denmark</td>
+<td>Prussia and Austria gained control of Schleswig and Holstein.</td>
+</tr>
+
+<tr>
+<td>1866 — Austria</td>
+<td>Prussian dominance over German affairs increased.</td>
+</tr>
+
+<tr>
+<td>1870–71 — France</td>
+<td>German states rallied around Prussia.</td>
+</tr>
+
+</table>
+
+<h3>German Empire</h3>
+
+<p>
+In January 1871, King William I of Prussia was proclaimed German
+Emperor at the Palace of Versailles. This marked the decisive
+completion of German unification.
+</p>
+
+</div>
+
+
+<div class="card" id="en-britain">
+
+<h2>16. Nation Building in Britain</h2>
+
+<p>
+Britain was formed through a long political process rather than
+through one single revolutionary movement.
+</p>
+
+<ul>
+<li>England played the leading role.</li>
+<li>The Act of Union of 1707 united England and Scotland politically.</li>
+<li>Ireland was incorporated into the United Kingdom in 1801.</li>
+<li>English institutions and culture became dominant.</li>
+<li>Scottish and Irish identities faced political and cultural pressure.</li>
+</ul>
+
+</div>
+
+
+<div class="card" id="en-allegory">
+
+<h2>17. Allegories of the Nation</h2>
+
+<h3>Marianne</h3>
+
+<p>
+Marianne represented the French Republic and the ideals of liberty
+and the nation.
+</p>
+
+<h3>Germania</h3>
+
+<p>
+Germania represented the German nation. Symbols such as the sword
+and crown represented strength, unity and national identity.
+</p>
+
+</div>
+
+
+<div class="card" id="en-balkan">
+
+<h2>18. The Balkan Region and Conflicts</h2>
+
+<p>
+The Balkans were located in south-eastern Europe and contained many
+ethnic and linguistic communities.
+</p>
+
+<h3>Causes of Conflict</h3>
+
+<ul>
+<li>Decline of the Ottoman Empire.</li>
+<li>Growth of nationalist movements.</li>
+<li>Competing national claims.</li>
+<li>Intervention of European powers.</li>
+<li>Imperialist ambitions and territorial competition.</li>
+</ul>
+
+</div>
+
+
+<div class="card" id="en-revision">
+
+<h2>19. Quick Revision</h2>
+
+<table>
+<tr>
+<th>Topic</th>
+<th>Key Fact</th>
+</tr>
+
+<tr>
+<td>Frederick Sorrieu</td>
+<td>1848 — Four Prints</td>
+</tr>
+
+<tr>
+<td>French Revolution</td>
+<td>1789</td>
+</tr>
+
+<tr>
+<td>Napoleonic Code</td>
+<td>1804</td>
+</tr>
+
+<tr>
+<td>Congress of Vienna</td>
+<td>1815</td>
+</tr>
+
+<tr>
+<td>Greek Independence</td>
+<td>1821 struggle; 1832 recognition</td>
+</tr>
+
+<tr>
+<td>Zollverein</td>
+<td>1834</td>
+</tr>
+
+<tr>
+<td>Italy</td>
+<td>Kingdom proclaimed in 1861; Rome joined in 1870</td>
+</tr>
+
+<tr>
+<td>Germany</td>
+<td>German Empire proclaimed in 1871</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+
+<script>
+
+/* LANGUAGE SWITCH */
+
+function showLanguage(language,button){
+
+    document.querySelectorAll(".lang-content").forEach(function(section){
+        section.classList.remove("active");
+    });
+
+    document.getElementById(language).classList.add("active");
+
+    document.querySelectorAll(".lang-btn").forEach(function(btn){
+        btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+}
+
+
+/* PDF */
+
+function makePDF(){
+
+    window.print();
+
+}
+
+</script>
+
+</body>
+</html>
