@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GSI MANTRA | Class 10 History Chapter 2</title>
+
+<style>
+:root{
+--bg:#f4f7fb;
+--text:#263238;
+--card:#ffffff;
+--primary:#1565c0;
+--dark:#0b2948;
+--orange:#f28c00;
+--green:#16865c;
+--red:#c62828;
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,"Noto Sans Devanagari",sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.7;
+}
+
+/* WATERMARK */
+
+body::before{
+content:"GSI MANTRA";
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%) rotate(-30deg);
+font-size:75px;
+font-weight:bold;
+color:rgba(21,101,192,0.035);
+pointer-events:none;
+z-index:0;
+}
+
+/* HEADER */
+
+header{
+background:linear-gradient(135deg,#0b2948,#1565c0);
+color:white;
+padding:22px;
+}
+
+.header-content{
+max-width:1400px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.logo img{
+width:65px;
+height:65px;
+object-fit:contain;
+background:white;
+border-radius:8px;
+}
+
+.logo h1{
+font-size:30px;
+}
+
+.logo p{
+font-size:14px;
+margin-top:3px;
+}
+
+.tools{
+display:flex;
+align-items:center;
+gap:8px;
+flex-wrap:wrap;
+}
+
+.search{
+width:240px;
+padding:11px 15px;
+border:none;
+border-radius:25px;
+outline:none;
+font-size:15px;
+}
+
+.lang-btn,
+.pdf-top{
+border:none;
+padding:10px 15px;
+border-radius:7px;
+cursor:pointer;
+font-weight:bold;
+background:var(--orange);
+color:white;
+}
+
+.lang-btn:hover,
+.pdf-top:hover{
+background:#d97700;
+}
+
+/* LAYOUT */
+
+.layout{
+display:flex;
+max-width:1450px;
+margin:auto;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:310px;
+background:#102a43;
+color:white;
+height:calc(100vh - 109px);
+position:sticky;
+top:0;
+overflow-y:auto;
+padding:22px 18px;
+z-index:2;
+}
+
+.sidebar h2{
+font-size:20px;
+border-bottom:2px solid var(--orange);
+padding-bottom:12px;
+margin-bottom:15px;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar li{
+margin:5px 0;
+}
+
+.sidebar a{
+display:block;
+color:white;
+text-decoration:none;
+font-size:14px;
+padding:6px 7px;
+border-radius:5px;
+line-height:1.5;
+}
+
+.sidebar a:hover{
+background:#17466e;
+color:#ffd166;
+}
+
+/* MAIN */
+
+.main{
+flex:1;
+padding:35px;
+min-width:0;
+position:relative;
+z-index:1;
+}
+
+.title-box{
+background:white;
+padding:30px;
+border-radius:15px;
+margin-bottom:25px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+border-top:5px solid var(--primary);
+}
+
+.title-box h2{
+font-size:32px;
+color:var(--dark);
+margin-bottom:8px;
+}
+
+.title-box p{
+margin-bottom:5px;
+}
+
+/* CARDS */
+
+.card{
+background:var(--card);
+padding:25px;
+border-radius:12px;
+margin-bottom:22px;
+box-shadow:0 4px 12px rgba(0,0,0,.07);
+border-left:5px solid var(--primary);
+}
+
+.card h3{
+font-size:22px;
+color:var(--primary);
+margin-bottom:12px;
+}
+
+.card h4{
+color:#37474f;
+margin:16px 0 7px;
+}
+
+.card p{
+margin-bottom:10px;
+}
+
+.card ul,
+.card ol{
+margin-left:25px;
+margin-bottom:10px;
+}
+
+.badge{
+display:inline-block;
+background:#e3f2fd;
+color:#1565c0;
+padding:4px 9px;
+border-radius:5px;
+font-size:12px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.important{
+background:#fff8e1;
+border-left:5px solid #ffb300;
+padding:17px;
+border-radius:7px;
+margin:15px 0;
+}
+
+.green-box{
+background:#e8f5e9;
+border-left:5px solid var(--green);
+padding:17px;
+border-radius:7px;
+margin:15px 0;
+}
+
+.red-box{
+background:#ffebee;
+border-left:5px solid var(--red);
+padding:17px;
+border-radius:7px;
+margin:15px 0;
+}
+
+/* TABLE */
+
+.table-wrap{
+overflow-x:auto;
+margin-top:12px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,td{
+border:1px solid #d5d5d5;
+padding:10px;
+vertical-align:top;
+}
+
+th{
+background:#e3f2fd;
+color:#0d47a1;
+}
+
+/* LANGUAGE */
+
+#english{
+display:none;
+}
+
+/* PDF */
+
+.pdf-section{
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+margin-top:30px;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.pdf-section h2{
+color:#c62828;
+margin-bottom:8px;
+}
+
+.save-btn{
+border:none;
+background:#d32f2f;
+color:white;
+padding:13px 25px;
+border-radius:7px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+margin-top:12px;
+}
+
+.save-btn:hover{
+background:#b71c1c;
+}
+
+/* FOOTER */
+
+footer{
+background:#071d33;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:40px;
+}
+
+footer p{
+color:#cbd5e1;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+.header-content{
+flex-direction:column;
+align-items:stretch;
+}
+
+.tools{
+justify-content:center;
+}
+
+.search{
+width:100%;
+}
+
+.layout{
+flex-direction:column;
+}
+
+.sidebar{
+width:100%;
+height:auto;
+position:relative;
+}
+
+.main{
+padding:18px;
+}
+
+.title-box h2{
+font-size:25px;
+}
+
+}
+
+/* PRINT */
+
+@media print{
+
+@page{
+size:A4;
+margin:15mm;
+}
+
+body{
+background:white;
+font-size:12pt;
+}
+
+body::before{
+color:rgba(21,101,192,0.035);
+}
+
+header,
+.sidebar,
+.pdf-section,
+footer,
+.tools{
+display:none !important;
+}
+
+.layout{
+display:block;
+}
+
+.main{
+width:100%;
+padding:0;
+}
+
+.title-box{
+box-shadow:none;
+}
+
+.card{
+box-shadow:none;
+break-inside:avoid;
+page-break-inside:avoid;
+}
+
+#english{
+display:none !important;
+}
+
+#hindi{
+display:block !important;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+<div class="header-content">
+
+<div class="logo">
+
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+
+<div>
+<h1>GSI MANTRA</h1>
+<p>Class 10 History • Chapter 2 • Nationalism in India</p>
+</div>
+
+</div>
+
+<div class="tools">
+
+<input
+type="text"
+id="search"
+class="search"
+placeholder="🔍 Topic Search...">
+
+<button class="lang-btn" onclick="showHindi()">
+हिंदी
+</button>
+
+<button class="lang-btn" onclick="showEnglish()">
+English
+</button>
+
+</div>
+
+</div>
+</header>
+
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<h2>📚 अध्याय अनुक्रमणिका</h2>
+
+<ul>
+
+<li><a href="#topic1">1. गांधीजी का दक्षिण अफ्रीका से आगमन</a></li>
+
+<li><a href="#topic2">2. प्रथम विश्व युद्ध</a></li>
+
+<li><a href="#topic3">3. प्रथम विश्व युद्ध का भारत पर प्रभाव</a></li>
+
+<li><a href="#topic4">4. सत्याग्रह का अर्थ</a></li>
+
+<li><a href="#topic5">5. चंपारण सत्याग्रह</a></li>
+
+<li><a href="#topic6">6. खेड़ा सत्याग्रह</a></li>
+
+<li><a href="#topic7">7. अहमदाबाद मिल हड़ताल</a></li>
+
+<li><a href="#topic8">8. रॉलेट सत्याग्रह</a></li>
+
+<li><a href="#topic9">9. रॉलेट एक्ट</a></li>
+
+<li><a href="#topic10">10. जलियांवाला बाग हत्याकांड</a></li>
+
+<li><a href="#topic11">11. असहयोग आंदोलन</a></li>
+
+<li><a href="#topic12">12. नगरों में आंदोलन</a></li>
+
+<li><a href="#topic13">13. गाँव और देहात में आंदोलन</a></li>
+
+<li><a href="#topic14">14. असहयोग आंदोलन की वापसी</a></li>
+
+<li><a href="#topic15">15. स्वराज पार्टी</a></li>
+
+<li><a href="#topic16">16. साइमन कमीशन</a></li>
+
+<li><a href="#topic17">17. सविनय अवज्ञा आंदोलन</a></li>
+
+<li><a href="#topic18">18. दांडी मार्च</a></li>
+
+<li><a href="#topic19">19. गांधी-इरविन समझौता</a></li>
+
+<li><a href="#topic20">20. डॉ. बी. आर. अंबेडकर</a></li>
+
+<li><a href="#topic21">21. गांधी-अंबेडकर पूना समझौता</a></li>
+
+<li><a href="#topic22">22. 1935 का भारत शासन अधिनियम</a></li>
+
+<li><a href="#topic23">23. 1937 के प्रांतीय चुनाव</a></li>
+
+<li><a href="#topic24">24. 1942 भारत छोड़ो आंदोलन</a></li>
+
+<li><a href="#topic25">25. क्रिप्स मिशन</a></li>
+
+<li><a href="#topic26">26. कैबिनेट मिशन</a></li>
+
+<li><a href="#topic27">27. Allegory / रूपक</a></li>
+
+<li><a href="#topic28">28. भारत माता की छवि</a></li>
+
+<li><a href="#topic29">29. तिरंगे का निर्माण</a></li>
+
+<li><a href="#topic30">30. सामूहिक अपनत्व की भावना</a></li>
+
+</ul>
+
+</aside>
+
+
+<!-- MAIN CONTENT -->
+
+<main class="main">
+
+<div class="title-box">
+
+<h2> भारत में राष्ट्रवाद</h2>
+
+<p><strong>Class 10 History – Chapter 2</strong></p>
+
+<p>
+यह नोट्स भारत में राष्ट्रवाद के विकास, गांधीजी के नेतृत्व,
+सत्याग्रह, राष्ट्रीय आंदोलनों, विभिन्न सामाजिक समूहों की
+भागीदारी तथा राष्ट्रीय प्रतीकों का विस्तृत अध्ययन प्रस्तुत करता है।
+</p>
+
+</div>
+
+
+<!-- ================= HINDI ================= -->
+
+<section id="hindi">
+
+
+<div class="card" id="topic1">
+
+<span class="badge">1915</span>
+
+<h3>1. गांधीजी का दक्षिण अफ्रीका से भारत आगमन</h3>
+
+<p>
+महात्मा गांधी जनवरी 1915 में दक्षिण अफ्रीका से भारत लौटे।
+दक्षिण अफ्रीका में उन्होंने नस्लीय भेदभाव और अन्याय के विरुद्ध
+सत्याग्रह की पद्धति का प्रयोग किया था।
+</p>
+
+<p>
+भारत लौटने के बाद उन्होंने भारतीय किसानों, मजदूरों और आम
+लोगों की समस्याओं को समझने का प्रयास किया और धीरे-धीरे
+भारतीय राष्ट्रीय आंदोलन के प्रमुख नेता बन गए।
+</p>
+
+</div>
+
+
+<div class="card" id="topic2">
+
+<span class="badge">1914–1918</span>
+
+<h3>2. प्रथम विश्व युद्ध</h3>
+
+<p>
+प्रथम विश्व युद्ध 1914 से 1918 तक चला। ब्रिटिश साम्राज्य
+इस युद्ध में शामिल था और भारत से भी सैनिकों तथा आर्थिक
+संसाधनों की सहायता ली गई।
+</p>
+
+</div>
+
+
+<div class="card" id="topic3">
+
+<h3>3. प्रथम विश्व युद्ध का भारत पर प्रभाव</h3>
+
+<ul>
+
+<li>रक्षा व्यय में भारी वृद्धि हुई।</li>
+
+<li>सरकार ने युद्ध खर्च पूरा करने के लिए कर बढ़ाए।</li>
+
+<li>वस्तुओं की कीमतें तेजी से बढ़ीं।</li>
+
+<li>ग्रामीण क्षेत्रों में सैनिकों की जबरन भर्ती की गई।</li>
+
+<li>फसल खराब होने और खाद्य संकट से परेशानी बढ़ी।</li>
+
+<li>1918–19 और 1920–21 में फसल खराब होने से आर्थिक कठिनाई बढ़ी।</li>
+
+<li>युद्ध के बाद बेरोजगारी और आर्थिक समस्याएँ बढ़ीं।</li>
+
+</ul>
+
+</div>
+
+
+<div class="card" id="topic4">
+
+<h3>4. सत्याग्रह का अर्थ</h3>
+
+<p>
+सत्याग्रह गांधीजी द्वारा विकसित अहिंसक संघर्ष की पद्धति थी।
+इसमें सत्य और अहिंसा के माध्यम से अन्याय का विरोध किया जाता है।
+</p>
+
+<div class="green-box">
+
+<strong>मुख्य विचार:</strong>
+
+<p>
+सत्याग्रही हिंसा का सहारा नहीं लेता बल्कि स्वयं कष्ट सहकर
+अन्यायपूर्ण व्यवस्था का विरोध करता है।
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card" id="topic5">
+
+<span class="badge">1917</span>
+
+<h3>5. चंपारण सत्याग्रह</h3>
+
+<p>
+चंपारण बिहार का एक महत्वपूर्ण क्षेत्र था। यहाँ किसानों को
+नील की खेती करने के लिए मजबूर किया जाता था।
+</p>
+
+<p>
+गांधीजी ने किसानों की समस्याओं को समझा और उनके पक्ष में
+सत्याग्रह किया। यह भारत में गांधीजी का पहला प्रमुख सत्याग्रह था।
+</p>
+
+<div class="important">
+
+<strong>महत्व:</strong>
+
+<p>
+चंपारण सत्याग्रह ने गांधीजी को भारतीय किसानों के बीच
+एक लोकप्रिय नेता के रूप में स्थापित किया।
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card" id="topic6">
+
+<span class="badge">1918</span>
+
+<h3>6. खेड़ा सत्याग्रह</h3>
+
+<p>
+गुजरात के खेड़ा जिले में फसल खराब होने के बावजूद किसानों से
+राजस्व वसूला जा रहा था।
+</p>
+
+<p>
+गांधीजी ने किसानों को राजस्व में राहत दिलाने के लिए सत्याग्रह
+का नेतृत्व किया।
+</p>
+
+</div>
+
+
+<div class="card" id="topic7">
+
+<span class="badge">1918</span>
+
+<h3>7. अहमदाबाद मिल हड़ताल</h3>
+
+<p>
+अहमदाबाद के कपड़ा मिल मजदूरों और मालिकों के बीच वेतन को लेकर
+विवाद हुआ। गांधीजी ने मजदूरों के पक्ष में उपवास और सत्याग्रह
+का सहारा लिया।
+</p>
+
+</div>
+
+
+<div class="card" id="topic8">
+
+<span class="badge">1919</span>
+
+<h3>8. रॉलेट सत्याग्रह</h3>
+
+<p>
+रॉलेट एक्ट के विरोध में गांधीजी ने देशव्यापी सत्याग्रह का
+आह्वान किया। 6 अप्रैल 1919 को हड़ताल और विरोध प्रदर्शन हुए।
+</p>
+
+<p>
+इस आंदोलन ने पहली बार देश के विभिन्न हिस्सों के लोगों को
+एक बड़े राजनीतिक विरोध से जोड़ा।
+</p>
+
+</div>
+
+
+<div class="card" id="topic9">
+
+<h3>9. रॉलेट एक्ट</h3>
+
+<p>
+1919 में ब्रिटिश सरकार ने रॉलेट एक्ट पारित किया। इसके तहत
+सरकार को राजनीतिक गतिविधियों को दबाने और लोगों को बिना
+मुकदमे के हिरासत में रखने की शक्ति मिली।
+</p>
+
+<div class="red-box">
+
+<strong>रॉलेट एक्ट को भारतीयों ने काला कानून माना।</strong>
+
+</div>
+
+</div>
+
+
+<div class="card" id="topic10">
+
+<span class="badge">13 अप्रैल 1919</span>
+
+<h3>10. जलियांवाला बाग हत्याकांड</h3>
+
+<p>
+अमृतसर के जलियांवाला बाग में बैसाखी के अवसर पर बड़ी संख्या
+में लोग एकत्रित हुए थे। जनरल डायर ने वहाँ उपस्थित भीड़ पर
+गोली चलाने का आदेश दिया।
+</p>
+
+<p>
+इस घटना में बड़ी संख्या में लोग मारे गए और घायल हुए।
+जलियांवाला बाग हत्याकांड ने भारतीय जनता में ब्रिटिश शासन
+के प्रति गहरा आक्रोश पैदा किया।
+</p>
+
+</div>
+
+
+<div class="card" id="topic11">
+
+<span class="badge">1920–1922</span>
+
+<h3>11. असहयोग आंदोलन</h3>
+
+<p>
+गांधीजी ने 1920 में असहयोग आंदोलन शुरू किया। इसका आधार
+यह विचार था कि ब्रिटिश शासन भारतीयों के सहयोग के बिना
+चल नहीं सकता।
+</p>
+
+<h4>मुख्य कार्यक्रम</h4>
+
+<ul>
+
+<li>सरकारी स्कूल और कॉलेजों का बहिष्कार</li>
+
+<li>सरकारी उपाधियों का त्याग</li>
+
+<li>कानूनी संस्थाओं का बहिष्कार</li>
+
+<li>विदेशी वस्तुओं का बहिष्कार</li>
+
+<li>खादी और स्वदेशी को बढ़ावा</li>
+
+</ul>
+
+</div>
+
+
+<div class="card" id="topic12">
+
+<h3>12. नगरों में असहयोग आंदोलन</h3>
+
+<p>
+शहरों में विद्यार्थियों ने सरकारी शिक्षण संस्थानों का
+बहिष्कार किया। शिक्षकों और वकीलों ने भी कई स्थानों पर
+सरकारी संस्थाओं का बहिष्कार किया।
+</p>
+
+<p>
+विदेशी कपड़ों का बहिष्कार किया गया और स्वदेशी वस्तुओं को
+बढ़ावा दिया गया।
+</p>
+
+</div>
+
+
+<div class="card" id="topic13">
+
+<h3>13. गाँव और देहात में आंदोलन</h3>
+
+<p>
+ग्रामीण क्षेत्रों में राष्ट्रीय आंदोलन स्थानीय किसान और
+आदिवासी समस्याओं से जुड़ गया।
+</p>
+
+<p>
+अवध में किसानों ने ऊँचे लगान और बेगार जैसी समस्याओं का
+विरोध किया। बाबा रामचंद्र किसान आंदोलन से जुड़े प्रमुख नेता थे।
+</p>
+
+<p>
+आंध्र प्रदेश के गुडेम पहाड़ियों में आदिवासी लोगों ने
+वन कानूनों और औपनिवेशिक नियंत्रण का विरोध किया।
+</p>
+
+</div>
+
+
+<div class="card" id="topic14">
+
+<span class="badge">1922</span>
+
+<h3>14. असहयोग आंदोलन की वापसी</h3>
+
+<p>
+चौरी-चौरा की घटना में प्रदर्शन हिंसक हो गया और पुलिसकर्मियों
+की मृत्यु हुई।
+</p>
+
+<p>
+गांधीजी अहिंसा के सिद्धांत के कारण आंदोलन को फरवरी 1922
+में वापस लेने का निर्णय लिया।
+</p>
+
+</div>
+
+
+<div class="card" id="topic15">
+
+<span class="badge">1923</span>
+
+<h3>15. स्वराज पार्टी</h3>
+
+<p>
+असहयोग आंदोलन की वापसी के बाद कांग्रेस के कुछ नेताओं ने
+विधान परिषदों में प्रवेश करके ब्रिटिश सरकार की नीतियों का
+विरोध करने की रणनीति अपनाई।
+</p>
+
+<p>
+सी. आर. दास और मोतीलाल नेहरू ने 1923 में स्वराज पार्टी
+की स्थापना की।
+</p>
+
+</div>
+
+
+<div class="card" id="topic16">
+
+<span class="badge">1928</span>
+
+<h3>16. साइमन कमीशन</h3>
+
+<p>
+ब्रिटिश सरकार ने भारत में संवैधानिक सुधारों की समीक्षा के लिए
+साइमन कमीशन भेजा। इसमें कोई भी भारतीय सदस्य नहीं था।
+</p>
+
+<div class="important">
+
+<strong>नारा:</strong>
+<p>“Simon Go Back”</p>
+
+</div>
+
+<p>
+देशभर में साइमन कमीशन का विरोध हुआ।
+</p>
+
+</div>
+
+
+<div class="card" id="topic17">
+
+<span class="badge">1930</span>
+
+<h3>17. सविनय अवज्ञा आंदोलन</h3>
+
+<p>
+सविनय अवज्ञा आंदोलन में लोगों ने अन्यायपूर्ण औपनिवेशिक
+कानूनों का शांतिपूर्ण ढंग से उल्लंघन किया।
+</p>
+
+<p>
+नमक कानून को तोड़ना इस आंदोलन का प्रमुख प्रतीक बना।
+</p>
+
+</div>
+
+
+<div class="card" id="topic18">
+
+<span class="badge">12 मार्च – 6 अप्रैल 1930</span>
+
+<h3>18. दांडी मार्च / नमक मार्च</h3>
+
+<p>
+गांधीजी ने 12 मार्च 1930 को साबरमती आश्रम से दांडी के लिए
+पैदल यात्रा शुरू की। 6 अप्रैल को दांडी पहुँचकर उन्होंने
+नमक कानून तोड़ा।
+</p>
+
+<p>
+नमक ऐसा पदार्थ था जिसका उपयोग अमीर और गरीब दोनों करते थे।
+इसलिए नमक कानून का विरोध व्यापक जनभागीदारी का प्रतीक बन गया।
+</p>
+
+</div>
+
+
+<div class="card" id="topic19">
+
+<span class="badge">1931</span>
+
+<h3>19. गांधी-इरविन समझौता</h3>
+
+<p>
+गांधीजी और वायसराय लॉर्ड इरविन के बीच 1931 में समझौता हुआ।
+गांधीजी ने सविनय अवज्ञा आंदोलन को अस्थायी रूप से स्थगित किया
+और द्वितीय गोलमेज सम्मेलन में भाग लेने के लिए लंदन गए।
+</p>
+
+</div>
+
+
+<div class="card" id="topic20">
+
+<h3>20. डॉ. बी. आर. अंबेडकर और दलित अधिकार</h3>
+
+<p>
+डॉ. भीमराव अंबेडकर दलितों के सामाजिक और राजनीतिक अधिकारों
+के प्रमुख नेता थे। वे दलितों के लिए राजनीतिक प्रतिनिधित्व
+और सामाजिक समानता की मांग करते थे।
+</p>
+
+<p>
+उन्होंने दलित समुदाय को संगठित किया और अस्पृश्यता के विरुद्ध
+आवाज उठाई।
+</p>
+
+</div>
+
+
+<div class="card" id="topic21">
+
+<span class="badge">1932</span>
+
+<h3>21. गांधी-अंबेडकर समझौता – पूना पैक्ट</h3>
+
+<p>
+दलितों के राजनीतिक प्रतिनिधित्व के प्रश्न पर गांधीजी और
+डॉ. अंबेडकर के बीच मतभेद हुआ।
+</p>
+
+<p>
+1932 में पूना पैक्ट के माध्यम से संयुक्त निर्वाचन क्षेत्र
+के अंतर्गत दलितों के लिए विधानसभाओं में आरक्षित सीटों की
+व्यवस्था स्वीकार की गई।
+</p>
+
+</div>
+
+
+<div class="card" id="topic22">
+
+<span class="badge">1935</span>
+
+<h3>22. 1935 का भारत शासन अधिनियम</h3>
+
+<p>
+Government of India Act 1935 ने प्रांतीय स्वायत्तता का
+विस्तार किया और प्रांतीय स्तर पर निर्वाचित सरकारों के लिए
+व्यवस्था को आगे बढ़ाया।
+</p>
+
+</div>
+
+
+<div class="card" id="topic23">
+
+<span class="badge">1937</span>
+
+<h3>23. 1937 के प्रांतीय चुनाव</h3>
+
+<p>
+1937 में प्रांतीय विधानसभाओं के चुनाव हुए। भारतीय राष्ट्रीय
+कांग्रेस ने कई प्रांतों में सरकार बनाई।
+</p>
+
+<p>
+इससे भारतीय नेताओं को प्रशासन चलाने का अनुभव प्राप्त हुआ।
+</p>
+
+</div>
+
+
+<div class="card" id="topic24">
+
+<span class="badge">8 अगस्त 1942</span>
+
+<h3>24. भारत छोड़ो आंदोलन</h3>
+
+<p>
+अगस्त 1942 में अखिल भारतीय कांग्रेस समिति ने भारत छोड़ो
+आंदोलन का प्रस्ताव पारित किया।
+</p>
+
+<div class="important">
+
+<strong>प्रमुख नारा:</strong>
+
+<p>“करो या मरो”</p>
+
+</div>
+
+<p>
+गांधीजी ने ब्रिटिश शासन को भारत से समाप्त करने की मांग
+की। आंदोलन के बाद ब्रिटिश सरकार ने अनेक राष्ट्रीय नेताओं
+को गिरफ्तार कर लिया।
+</p>
+
+</div>
+
+
+<div class="card" id="topic25">
+
+<span class="badge">1942</span>
+
+<h3>25. क्रिप्स मिशन</h3>
+
+<p>
+द्वितीय विश्व युद्ध के दौरान ब्रिटिश सरकार ने भारतीय नेताओं
+का सहयोग प्राप्त करने के लिए सर स्टैफर्ड क्रिप्स के नेतृत्व
+में एक मिशन भारत भेजा।
+</p>
+
+<p>
+क्रिप्स प्रस्तावों में युद्ध के बाद भारत को डोमिनियन स्टेटस
+देने का प्रस्ताव था, लेकिन कांग्रेस और अन्य नेताओं ने
+प्रस्तावों को स्वीकार नहीं किया।
+</p>
+
+</div>
+
+
+<div class="card" id="topic26">
+
+<span class="badge">1946</span>
+
+<h3>26. कैबिनेट मिशन</h3>
+
+<p>
+1946 में ब्रिटिश सरकार ने भारत के संवैधानिक भविष्य पर
+भारतीय नेताओं से बातचीत करने के लिए कैबिनेट मिशन भेजा।
+</p>
+
+<p>
+मिशन में ब्रिटिश सरकार के तीन प्रमुख मंत्री शामिल थे।
+इसका उद्देश्य सत्ता हस्तांतरण और संविधान निर्माण के
+लिए योजना तैयार करना था।
+</p>
+
+</div>
+
+
+<div class="card" id="topic27">
+
+<h3>27. Allegory / रूपक क्या है?</h3>
+
+<p>
+रूपक में किसी अमूर्त विचार, जैसे राष्ट्र या स्वतंत्रता,
+को किसी मानव आकृति या प्रतीक के रूप में प्रस्तुत किया जाता है।
+</p>
+
+<p>
+यूरोप में राष्ट्रों को महिला आकृतियों के रूप में प्रस्तुत
+किया गया था। इसी प्रकार भारत को भी भारत माता के रूप में
+चित्रित किया गया।
+</p>
+
+</div>
+
+
+<div class="card" id="topic28">
+
+<h3>28. भारत माता की छवि</h3>
+
+<p>
+भारत माता की छवि ने भारतीय राष्ट्रवाद को एक सांस्कृतिक
+और भावनात्मक रूप दिया।
+</p>
+
+<p>
+अबनिंद्रनाथ टैगोर ने 1905 में भारत माता की प्रसिद्ध छवि
+बनाई। इस चित्र में भारत माता को एक शांत, आध्यात्मिक और
+मातृरूप में दिखाया गया।
+</p>
+
+</div>
+
+
+<div class="card" id="topic29">
+
+<h3>29. तिरंगे का निर्माण और राष्ट्रीय ध्वज</h3>
+
+<p>
+राष्ट्रीय आंदोलन के दौरान झंडा एकता और स्वतंत्रता का
+महत्वपूर्ण प्रतीक बना।
+</p>
+
+<p>
+1931 में तिरंगे को कांग्रेस के राष्ट्रीय ध्वज के रूप में
+स्वीकार किया गया। इसमें केसरिया, सफेद और हरे रंग के साथ
+चरखा था।
+</p>
+
+<p>
+बाद में स्वतंत्र भारत के राष्ट्रीय ध्वज में चरखे के स्थान
+पर अशोक चक्र को अपनाया गया।
+</p>
+
+</div>
+
+
+<div class="card" id="topic30">
+
+<h3>30. सामूहिक अपनत्व की भावना</h3>
+
+<p>
+राष्ट्रीयता केवल राजनीतिक आंदोलनों से नहीं बनी। भारत के
+लोगों में साझा पहचान विकसित करने के लिए इतिहास, लोकगीत,
+लोककथाएँ, प्रतीक, झंडे और भारत माता जैसी छवियों का उपयोग
+किया गया।
+</p>
+
+<h4>मुख्य साधन</h4>
+
+<ul>
+
+<li>भारत माता की छवि</li>
+
+<li>राष्ट्रीय ध्वज</li>
+
+<li>लोकगीत और लोककथाएँ</li>
+
+<li>भारतीय इतिहास की पुनर्व्याख्या</li>
+
+<li>साझी सांस्कृतिक परंपराएँ</li>
+
+</ul>
+
+</div>
+
+
+<!-- QUICK REVISION TABLE -->
+
+<div class="card">
+
+<h3>📌 Quick Revision – महत्वपूर्ण घटनाएँ</h3>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>वर्ष</th>
+<th>घटना</th>
+</tr>
+
+<tr>
+<td>1915</td>
+<td>गांधीजी का भारत आगमन</td>
+</tr>
+
+<tr>
+<td>1917</td>
+<td>चंपारण सत्याग्रह</td>
+</tr>
+
+<tr>
+<td>1918</td>
+<td>खेड़ा सत्याग्रह और अहमदाबाद मिल हड़ताल</td>
+</tr>
+
+<tr>
+<td>1919</td>
+<td>रॉलेट एक्ट और जलियांवाला बाग हत्याकांड</td>
+</tr>
+
+<tr>
+<td>1920–22</td>
+<td>असहयोग आंदोलन</td>
+</tr>
+
+<tr>
+<td>1923</td>
+<td>स्वराज पार्टी</td>
+</tr>
+
+<tr>
+<td>1928</td>
+<td>साइमन कमीशन का विरोध</td>
+</tr>
+
+<tr>
+<td>1930</td>
+<td>दांडी मार्च और सविनय अवज्ञा आंदोलन</td>
+</tr>
+
+<tr>
+<td>1931</td>
+<td>गांधी-इरविन समझौता</td>
+</tr>
+
+<tr>
+<td>1932</td>
+<td>पूना पैक्ट</td>
+</tr>
+
+<tr>
+<td>1935</td>
+<td>भारत शासन अधिनियम</td>
+</tr>
+
+<tr>
+<td>1937</td>
+<td>प्रांतीय चुनाव</td>
+</tr>
+
+<tr>
+<td>1942</td>
+<td>क्रिप्स मिशन और भारत छोड़ो आंदोलन</td>
+</tr>
+
+<tr>
+<td>1946</td>
+<td>कैबिनेट मिशन</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= ENGLISH ================= -->
+
+<section id="english">
+
+
+<div class="card">
+
+<h3>1. Gandhi's Arrival from South Africa</h3>
+
+<p>
+Mahatma Gandhi returned to India from South Africa in January
+1915. In South Africa he had developed and used the method
+of Satyagraha against racial discrimination and injustice.
+</p>
+
+<p>
+After returning to India, Gandhi travelled widely and studied
+the problems of peasants, workers and ordinary people.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>2. The First World War</h3>
+
+<p>
+The First World War lasted from 1914 to 1918. India, as part
+of the British Empire, contributed soldiers and economic
+resources to the British war effort.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>3. Impact of the First World War on India</h3>
+
+<ul>
+
+<li>Defence expenditure increased greatly.</li>
+
+<li>Taxes were increased to finance the war.</li>
+
+<li>Prices of goods increased sharply.</li>
+
+<li>Forced recruitment affected rural areas.</li>
+
+<li>Crop failures created food shortages.</li>
+
+<li>Economic difficulties increased after the war.</li>
+
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h3>4. Meaning of Satyagraha</h3>
+
+<p>
+Satyagraha was Gandhi's method of non-violent resistance.
+It was based on truth and non-violence.
+</p>
+
+<p>
+A Satyagrahi accepted suffering rather than using violence
+against the opponent.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>5. Champaran Satyagraha – 1917</h3>
+
+<p>
+In Champaran, Bihar, peasants were forced to cultivate indigo.
+Gandhi supported the peasants and launched a Satyagraha.
+</p>
+
+<p>
+It became one of Gandhi's first major Satyagrahas in India.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>6. Kheda Satyagraha – 1918</h3>
+
+<p>
+In Kheda, Gujarat, crop failure created severe hardship,
+but peasants were still expected to pay revenue.
+Gandhi supported their demand for revenue relief.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>7. Ahmedabad Mill Strike – 1918</h3>
+
+<p>
+Gandhi supported textile mill workers in Ahmedabad during
+a dispute over wages. He used fasting and Satyagraha.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>8. Rowlatt Satyagraha</h3>
+
+<p>
+Gandhi called for a nationwide Satyagraha against the
+Rowlatt Act. 6 April 1919 was observed as a day of
+hartal and protest.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>9. Rowlatt Act – 1919</h3>
+
+<p>
+The Rowlatt Act gave the colonial government extensive
+powers to repress political activities and detain people
+without trial.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>10. Jallianwala Bagh Massacre</h3>
+
+<p>
+On 13 April 1919, General Dyer ordered troops to fire on
+a crowd gathered at Jallianwala Bagh in Amritsar.
+</p>
+
+<p>
+The incident created widespread anger against British rule.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>11. Non-Cooperation Movement – 1920–1922</h3>
+
+<p>
+Gandhi launched the Non-Cooperation Movement in 1920.
+People were encouraged to withdraw cooperation from
+British institutions.
+</p>
+
+<ul>
+
+<li>Boycott of government schools and colleges</li>
+
+<li>Boycott of courts</li>
+
+<li>Surrender of titles</li>
+
+<li>Boycott of foreign goods</li>
+
+<li>Promotion of khadi and swadeshi</li>
+
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h3>12. Movement in Towns</h3>
+
+<p>
+Students, teachers, lawyers and other urban groups participated
+in the movement. Foreign cloth was boycotted and Indian
+products were promoted.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>13. Movement in the Countryside</h3>
+
+<p>
+In rural areas, nationalism became connected with local
+peasant and tribal struggles.
+</p>
+
+<p>
+In Awadh, peasants opposed high rents and begar. Baba
+Ramchandra was an important leader of the peasant movement.
+</p>
+
+<p>
+In the Gudem Hills, tribal people resisted colonial forest
+laws and restrictions.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>14. Withdrawal of Non-Cooperation Movement</h3>
+
+<p>
+After the violent Chauri Chaura incident, Gandhi withdrew
+the Non-Cooperation Movement in February 1922 because he
+remained committed to non-violence.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>15. Swaraj Party – 1923</h3>
+
+<p>
+C. R. Das and Motilal Nehru formed the Swaraj Party in 1923.
+They wanted to enter legislative councils and oppose colonial
+policies from within the councils.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>16. Simon Commission</h3>
+
+<p>
+The Simon Commission was sent to India to review constitutional
+reforms. It had no Indian member.
+</p>
+
+<p>
+It was widely opposed with the slogan:
+<strong>Simon Go Back.</strong>
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>17. Civil Disobedience Movement</h3>
+
+<p>
+The Civil Disobedience Movement began in 1930. People were
+encouraged to peacefully violate unjust colonial laws.
+The salt law became a major target.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>18. Dandi March / Salt March</h3>
+
+<p>
+Gandhi began the Salt March from Sabarmati Ashram on
+12 March 1930 and reached Dandi on 6 April 1930.
+He broke the colonial salt law by making salt.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>19. Gandhi-Irwin Pact – 1931</h3>
+
+<p>
+The Gandhi-Irwin Pact was signed in 1931. Gandhi agreed to
+suspend the Civil Disobedience Movement and participate in
+the Second Round Table Conference.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>20. Dr B. R. Ambedkar</h3>
+
+<p>
+Dr B. R. Ambedkar was a major leader of the Dalits. He fought
+for social equality, political representation and the rights
+of oppressed communities.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>21. Gandhi-Ambedkar Agreement – Poona Pact</h3>
+
+<p>
+The Poona Pact of 1932 provided reserved seats for the
+Depressed Classes within a system of joint electorates.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>22. Government of India Act, 1935</h3>
+
+<p>
+The Government of India Act 1935 expanded provincial autonomy
+and provided a framework for elected provincial governments.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>23. Provincial Elections – 1937</h3>
+
+<p>
+Provincial elections were held in 1937. The Indian National
+Congress formed governments in several provinces.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>24. Quit India Movement – 1942</h3>
+
+<p>
+The Quit India Movement was launched in August 1942.
+Gandhi gave the famous call of <strong>“Do or Die.”</strong>
+</p>
+
+<p>
+The British government arrested many national leaders after
+the movement began.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>25. Cripps Mission – 1942</h3>
+
+<p>
+The British government sent the Cripps Mission under
+Sir Stafford Cripps to seek Indian cooperation during
+the Second World War.
+</p>
+
+<p>
+Its proposals were not accepted by the major Indian political
+groups.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>26. Cabinet Mission – 1946</h3>
+
+<p>
+The Cabinet Mission came to India in 1946 to discuss the
+transfer of power and the constitutional future of India.
+It proposed a framework for constitution-making and
+government formation.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>27. Allegory</h3>
+
+<p>
+An allegory represents an abstract idea through a human
+figure or symbol. Nations were often represented through
+female figures.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>28. Image of Bharat Mata</h3>
+
+<p>
+The image of Bharat Mata became an important symbol of
+Indian nationalism. Abanindranath Tagore painted the famous
+image of Bharat Mata in 1905.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>29. Making of the Tricolour</h3>
+
+<p>
+The national flag became an important symbol of unity and
+freedom during the national movement.
+</p>
+
+<p>
+In 1931, the tricolour with the spinning wheel was adopted
+as the Congress flag. After independence, the Ashoka Chakra
+replaced the spinning wheel on the national flag.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>30. Sense of Collective Belonging</h3>
+
+<p>
+Nationalism developed through shared history, folklore,
+songs, symbols, flags and images such as Bharat Mata.
+These created a sense of collective belonging among Indians.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>📌 Quick Revision – Important Events</h3>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Year</th>
+<th>Event</th>
+</tr>
+
+<tr>
+<td>1915</td>
+<td>Gandhi returned to India</td>
+</tr>
+
+<tr>
+<td>1917</td>
+<td>Champaran Satyagraha</td>
+</tr>
+
+<tr>
+<td>1918</td>
+<td>Kheda Satyagraha and Ahmedabad Mill Strike</td>
+</tr>
+
+<tr>
+<td>1919</td>
+<td>Rowlatt Act and Jallianwala Bagh</td>
+</tr>
+
+<tr>
+<td>1920–22</td>
+<td>Non-Cooperation Movement</td>
+</tr>
+
+<tr>
+<td>1923</td>
+<td>Swaraj Party</td>
+</tr>
+
+<tr>
+<td>1928</td>
+<td>Simon Commission</td>
+</tr>
+
+<tr>
+<td>1930</td>
+<td>Dandi March and Civil Disobedience Movement</td>
+</tr>
+
+<tr>
+<td>1931</td>
+<td>Gandhi-Irwin Pact</td>
+</tr>
+
+<tr>
+<td>1932</td>
+<td>Poona Pact</td>
+</tr>
+
+<tr>
+<td>1935</td>
+<td>Government of India Act</td>
+</tr>
+
+<tr>
+<td>1937</td>
+<td>Provincial Elections</td>
+</tr>
+
+<tr>
+<td>1942</td>
+<td>Cripps Mission and Quit India Movement</td>
+</tr>
+
+<tr>
+<td>1946</td>
+<td>Cabinet Mission</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SAVE PDF -->
+
+<div class="pdf-section">
+
+<h2>📄 Chapter 2 – Save as PDF</h2>
+
+<p>
+नीचे दिए गए बटन पर क्लिक करके इस Notes को PDF के रूप में
+Save कर सकते हैं।
+</p>
+
+<button class="save-btn" onclick="window.print()">
+📥 Save as PDF
+</button>
+
+</div>
+
+</main>
+
+</div>
+
+
+<footer>
+
+<h2>GSI MANTRA</h2>
+
+<p>
+Class 10 History • Nationalism in India
+</p>
+
+<p>
+NCERT • Notes • Education • GSI MANTRA
+</p>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+/* LANGUAGE SWITCH */
+
+function showHindi(){
+
+document.getElementById("hindi").style.display="block";
+
+document.getElementById("english").style.display="none";
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+
+function showEnglish(){
+
+document.getElementById("hindi").style.display="none";
+
+document.getElementById("english").style.display="block";
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+
+/* SEARCH */
+
+document.getElementById("search").addEventListener("keyup",function(){
+
+let value=this.value.toLowerCase();
+
+let activeSection=
+document.getElementById("hindi").style.display !== "none"
+?
+document.getElementById("hindi")
+:
+document.getElementById("english");
+
+let cards=activeSection.querySelectorAll(".card");
+
+cards.forEach(function(card){
+
+let text=card.innerText.toLowerCase();
+
+if(text.includes(value)){
+card.style.display="";
+}else{
+card.style.display="none";
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>

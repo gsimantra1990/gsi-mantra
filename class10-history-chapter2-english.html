@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GSI MANTRA | Class 10 History Chapter 2 | Nationalism in India</title>
+
+<style>
+:root{
+    --bg:#f4f7f6;
+    --text:#263238;
+    --card:#ffffff;
+    --primary:#147d70;
+    --accent:#e74c3c;
+    --dark:#263238;
+    --light:#ffffff;
+    --gold:#f39c12;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    display:flex;
+    line-height:1.7;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width:300px;
+    background:var(--dark);
+    color:white;
+    height:100vh;
+    position:fixed;
+    left:0;
+    top:0;
+    overflow-y:auto;
+    padding:22px 18px;
+}
+
+.sidebar h2{
+    font-size:21px;
+    color:white;
+    padding-bottom:12px;
+    margin-bottom:18px;
+    border-bottom:2px solid var(--primary);
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    margin:8px 0;
+}
+
+.sidebar a{
+    color:#e8eeee;
+    text-decoration:none;
+    font-size:14px;
+    display:block;
+    padding:5px 7px;
+    border-radius:5px;
+    transition:.2s;
+}
+
+.sidebar a:hover{
+    background:var(--primary);
+    color:white;
+    padding-left:12px;
+}
+
+/* MAIN */
+
+.main{
+    margin-left:300px;
+    width:calc(100% - 300px);
+    padding:35px;
+}
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.search{
+    width:65%;
+    padding:12px 15px;
+    border:1px solid #ccc;
+    border-radius:7px;
+    font-size:15px;
+    outline:none;
+}
+
+.top-btn{
+    border:none;
+    background:var(--primary);
+    color:white;
+    padding:11px 18px;
+    border-radius:7px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.chapter-title{
+    background:linear-gradient(135deg,#0e6251,#148f77);
+    color:white;
+    padding:35px 30px;
+    border-radius:12px;
+    margin-bottom:28px;
+}
+
+.chapter-title h1{
+    font-size:34px;
+    margin-bottom:8px;
+}
+
+.chapter-title p{
+    font-size:16px;
+    opacity:.95;
+}
+
+/* CARDS */
+
+.card{
+    background:var(--card);
+    padding:26px;
+    margin-bottom:23px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    border-left:5px solid var(--primary);
+}
+
+.card h2{
+    color:var(--primary);
+    font-size:23px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#34495e;
+    margin:17px 0 8px;
+}
+
+.card p{
+    margin-bottom:10px;
+}
+
+.card ul,
+.card ol{
+    margin:10px 0 10px 25px;
+}
+
+.card li{
+    margin:6px 0;
+}
+
+.badge{
+    display:inline-block;
+    background:#e8f8f5;
+    color:#147d70;
+    padding:3px 9px;
+    border-radius:5px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.highlight{
+    background:#fff8e1;
+    border-left:4px solid var(--gold);
+    padding:15px;
+    margin:15px 0;
+    border-radius:5px;
+}
+
+.important{
+    background:#fdecea;
+    border-left:4px solid var(--accent);
+    padding:15px;
+    margin:15px 0;
+    border-radius:5px;
+}
+
+.term{
+    font-weight:bold;
+    color:#c0392b;
+}
+
+/* TABLE */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+    background:white;
+}
+
+th,td{
+    border:1px solid #ddd;
+    padding:11px;
+    text-align:left;
+    vertical-align:top;
+}
+
+th{
+    background:#e8f8f5;
+    color:#145a50;
+}
+
+/* PDF */
+
+.pdf-section{
+    text-align:center;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    margin-top:30px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.pdf-btn{
+    background:#e67e22;
+    color:white;
+    border:none;
+    padding:13px 25px;
+    border-radius:7px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.pdf-btn:hover{
+    background:#ca6f1e;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    margin-top:35px;
+    padding:25px;
+    background:var(--dark);
+    color:white;
+    border-radius:10px;
+}
+
+footer p{
+    color:#d5dddd;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    body{
+        display:block;
+    }
+
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+        max-height:400px;
+    }
+
+    .main{
+        margin-left:0;
+        width:100%;
+        padding:20px;
+    }
+
+    .topbar{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    .chapter-title h1{
+        font-size:27px;
+    }
+}
+
+/* PRINT */
+
+@media print{
+
+    body{
+        display:block;
+        background:white;
+        color:#000;
+    }
+
+    .sidebar,
+    .topbar,
+    .pdf-section{
+        display:none !important;
+    }
+
+    .main{
+        margin:0;
+        width:100%;
+        padding:0;
+    }
+
+    .chapter-title{
+        background:white;
+        color:black;
+        border:2px solid #333;
+    }
+
+    .card{
+        box-shadow:none;
+        break-inside:avoid;
+        border:1px solid #ddd;
+        margin-bottom:15px;
+    }
+
+    footer{
+        background:white;
+        color:black;
+        border-top:1px solid #333;
+    }
+
+    footer p{
+        color:black;
+    }
+
+    a{
+        color:black;
+        text-decoration:none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<h2>Chapter Index</h2>
+
+<ul>
+<li><a href="#intro">1. Introduction</a></li>
+<li><a href="#gandhi-south-africa">2. Gandhi's Arrival from South Africa</a></li>
+<li><a href="#world-war">3. First World War and Its Impact</a></li>
+<li><a href="#satyagraha">4. Meaning of Satyagraha</a></li>
+<li><a href="#champaran">5. Champaran Satyagraha</a></li>
+<li><a href="#kheda">6. Kheda Satyagraha</a></li>
+<li><a href="#rowlatt">7. Rowlatt Act and Rowlatt Satyagraha</a></li>
+<li><a href="#jallianwala">8. Jallianwala Bagh Massacre</a></li>
+<li><a href="#noncooperation">9. Non-Cooperation Movement</a></li>
+<li><a href="#town-country">10. Movement in Towns and Countryside</a></li>
+<li><a href="#swaraj">11. Swaraj Party</a></li>
+<li><a href="#simon">12. Simon Commission</a></li>
+<li><a href="#civil">13. Civil Disobedience Movement</a></li>
+<li><a href="#dandi">14. Dandi March and Salt Law</a></li>
+<li><a href="#gandhi-irwin">15. Gandhi-Irwin Pact</a></li>
+<li><a href="#ambedkar">16. Gandhi and Dr B.R. Ambedkar</a></li>
+<li><a href="#1935">17. Government of India Act, 1935</a></li>
+<li><a href="#elections">18. Elections and Congress Ministries</a></li>
+<li><a href="#quit-india">19. Quit India Movement, 1942</a></li>
+<li><a href="#cripps">20. Cripps Mission</a></li>
+<li><a href="#cabinet">21. Cabinet Mission</a></li>
+<li><a href="#allegory">22. Allegory and National Symbols</a></li>
+<li><a href="#bharat-mata">23. Bharat Mata</a></li>
+<li><a href="#flag">24. Making of the National Flag</a></li>
+<li><a href="#social-groups">25. Participation of Different Social Groups</a></li>
+<li><a href="#limits">26. Limits of the Movement</a></li>
+<li><a href="#revision">27. Quick Revision</a></li>
+</ul>
+
+</aside>
+
+
+<!-- MAIN -->
+
+<main class="main">
+
+<div class="topbar">
+
+<input
+type="text"
+id="search"
+class="search"
+placeholder="Search this chapter..."
+onkeyup="searchNotes()">
+
+<button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+Back to Top
+</button>
+
+</div>
+
+
+<!-- TITLE -->
+
+<section class="chapter-title">
+
+<h1> Nationalism in India</h1>
+
+<p>
+Class 10 History – Chapter 2 | Complete English Notes
+</p>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="card" id="intro">
+
+<h2>1. Introduction</h2>
+
+<p>
+The growth of nationalism in India was closely connected with the struggle against colonial rule.
+During the twentieth century, different social groups participated in the national movement in different ways.
+Mahatma Gandhi played a central role in transforming Indian nationalism into a mass movement.
+</p>
+
+<p>
+The national movement included several important struggles such as the Champaran Satyagraha,
+Kheda Satyagraha, Rowlatt Satyagraha, Non-Cooperation Movement and Civil Disobedience Movement.
+</p>
+
+</section>
+
+
+<!-- GANDHI -->
+
+<section class="card" id="gandhi-south-africa">
+
+<h2>2. Gandhi's Arrival from South Africa</h2>
+
+<span class="badge">January 1915</span>
+
+<p>
+Mahatma Gandhi returned to India from South Africa in January 1915.
+He had spent many years in South Africa, where he developed the method of Satyagraha
+to oppose racial discrimination and injustice.
+</p>
+
+<p>
+After returning to India, Gandhi travelled widely and came into contact with peasants,
+workers and ordinary people. He gradually became an important leader of the Indian national movement.
+</p>
+
+<div class="highlight">
+<strong>Key Point:</strong>
+Gandhi brought the experience of Satyagraha from South Africa and adapted it to the Indian struggle against colonial rule.
+</div>
+
+</section>
+
+
+<!-- WORLD WAR -->
+
+<section class="card" id="world-war">
+
+<h2>3. First World War and Its Impact on India</h2>
+
+<span class="badge">1914–1918</span>
+
+<p>
+The First World War created a new economic and political situation in India.
+The British government increased defence expenditure and raised taxes to finance the war.
+</p>
+
+<h3>Major Effects</h3>
+
+<ul>
+<li>Defence expenditure increased considerably.</li>
+<li>Taxes and customs duties were increased.</li>
+<li>Prices of essential goods increased sharply.</li>
+<li>Villagers were forced to supply soldiers.</li>
+<li>Forced recruitment created widespread anger.</li>
+<li>Crops failed in several areas.</li>
+<li>The influenza epidemic caused enormous loss of life.</li>
+</ul>
+
+<div class="important">
+The hardships caused by the First World War created an atmosphere of widespread resentment against colonial rule.
+</div>
+
+</section>
+
+
+<!-- SATYAGRAHA -->
+
+<section class="card" id="satyagraha">
+
+<h2>4. Meaning of Satyagraha</h2>
+
+<p>
+The word <span class="term">Satyagraha</span> means the force of truth or insistence on truth.
+Gandhi believed that a person could oppose injustice through non-violence.
+</p>
+
+<h3>Main Principles</h3>
+
+<ul>
+<li>Truth</li>
+<li>Non-violence</li>
+<li>Peaceful resistance</li>
+<li>Self-sacrifice</li>
+<li>Moral force</li>
+</ul>
+
+<p>
+According to Gandhi, Satyagraha was not simply a weapon of the weak.
+It was a method through which people could resist injustice without using physical violence.
+</p>
+
+</section>
+
+
+<!-- CHAMPARAN -->
+
+<section class="card" id="champaran">
+
+<h2>5. Champaran Satyagraha</h2>
+
+<span class="badge">1917</span>
+
+<p>
+Champaran in Bihar became the site of Gandhi's first major Satyagraha movement in India.
+Peasants were forced by European planters to cultivate indigo under the oppressive
+<span class="term">Tinkathia system</span>.
+</p>
+
+<p>
+Gandhi visited Champaran, investigated the problems of peasants and supported their struggle.
+The government eventually accepted several demands of the peasants.
+</p>
+
+<div class="highlight">
+<strong>Importance:</strong>
+The Champaran movement established Gandhi as a significant leader of the Indian national movement.
+</div>
+
+</section>
+
+
+<!-- KHEDA -->
+
+<section class="card" id="kheda">
+
+<h2>6. Kheda Satyagraha</h2>
+
+<span class="badge">1918</span>
+
+<p>
+In the Kheda district of Gujarat, crop failure and poor harvests created severe difficulties for peasants.
+The peasants demanded suspension of revenue collection because they were unable to pay land revenue.
+</p>
+
+<p>
+Gandhi, Sardar Vallabhbhai Patel and other leaders supported the peasants.
+The movement demonstrated the power of peaceful collective resistance.
+</p>
+
+</section>
+
+
+<!-- ROWLATT -->
+
+<section class="card" id="rowlatt">
+
+<h2>7. Rowlatt Act and Rowlatt Satyagraha</h2>
+
+<span class="badge">1919</span>
+
+<p>
+The British government passed the <span class="term">Rowlatt Act in 1919</span>.
+The Act gave the government enormous powers to repress political activities and detain political prisoners without trial.
+</p>
+
+<p>
+Gandhi organised a nationwide Satyagraha against the Rowlatt Act.
+A hartal was organised on 6 April 1919.
+</p>
+
+<div class="important">
+The Rowlatt Satyagraha became one of the first major nationwide struggles led by Gandhi.
+</div>
+
+</section>
+
+
+<!-- JALLIANWALA -->
+
+<section class="card" id="jallianwala">
+
+<h2>8. Jallianwala Bagh Massacre</h2>
+
+<span class="badge">13 April 1919</span>
+
+<p>
+On 13 April 1919, a large crowd gathered at Jallianwala Bagh in Amritsar.
+Many people had assembled to celebrate Baisakhi and protest against the arrest of local leaders.
+</p>
+
+<p>
+General Reginald Dyer ordered troops to fire on the unarmed crowd.
+Hundreds of people were killed and many more were injured.
+</p>
+
+<p>
+The massacre created widespread anger throughout India and further strengthened opposition to British rule.
+</p>
+
+</section>
+
+
+<!-- NON COOPERATION -->
+
+<section class="card" id="noncooperation">
+
+<h2>9. Non-Cooperation Movement</h2>
+
+<span class="badge">1920–1922</span>
+
+<p>
+Gandhi proposed that Indians should refuse to cooperate with British rule.
+The movement was adopted by the Indian National Congress in 1920.
+</p>
+
+<h3>Programme</h3>
+
+<ul>
+<li>Surrender of government titles.</li>
+<li>Boycott of government schools and colleges.</li>
+<li>Boycott of courts.</li>
+<li>Boycott of foreign cloth.</li>
+<li>Promotion of khadi and indigenous goods.</li>
+<li>Participation in peaceful national activities.</li>
+</ul>
+
+<h3>Withdrawal of the Movement</h3>
+
+<p>
+The movement was withdrawn in February 1922 after the violent incident at
+<span class="term">Chauri Chaura</span>, where a crowd attacked and burned a police station.
+Gandhi believed that the movement had become violent and therefore stopped it.
+</p>
+
+</section>
+
+
+<!-- TOWN COUNTRY -->
+
+<section class="card" id="town-country">
+
+<h2>10. Movement in Towns and Countryside</h2>
+
+<h3>Movement in Towns</h3>
+
+<p>
+In towns, the movement was supported by students, teachers, lawyers and middle-class groups.
+Foreign cloth was boycotted and people participated in demonstrations and strikes.
+</p>
+
+<h3>Peasants in Awadh</h3>
+
+<p>
+In Awadh, peasants were led by Baba Ramchandra.
+They opposed high rents, illegal dues and forced labour.
+</p>
+
+<h3>Tribal Peasants</h3>
+
+<p>
+In the Gudem Hills of Andhra Pradesh, tribal people resisted restrictions imposed by the colonial forest laws.
+Alluri Sitaram Raju became an important leader of the tribal movement.
+</p>
+
+<h3>Plantation Workers</h3>
+
+<p>
+Plantation workers in Assam wanted freedom to move freely and return to their villages.
+Many workers left plantations during the Non-Cooperation Movement.
+</p>
+
+</section>
+
+
+<!-- SWARAJ PARTY -->
+
+<section class="card" id="swaraj">
+
+<h2>11. Swaraj Party</h2>
+
+<span class="badge">1923</span>
+
+<p>
+After the withdrawal of the Non-Cooperation Movement, some leaders wanted to enter legislative councils
+and oppose colonial policies from inside the institutions.
+</p>
+
+<p>
+C.R. Das and Motilal Nehru formed the <span class="term">Swaraj Party</span> in 1923.
+They aimed to challenge colonial rule through council politics.
+</p>
+
+</section>
+
+
+<!-- SIMON -->
+
+<section class="card" id="simon">
+
+<h2>12. Simon Commission</h2>
+
+<span class="badge">1928</span>
+
+<p>
+The British government appointed the Simon Commission to examine constitutional reforms in India.
+The commission had no Indian member.
+</p>
+
+<p>
+Indians protested against it with the slogan:
+<strong>“Simon Go Back!”</strong>
+</p>
+
+<p>
+Lala Lajpat Rai was injured during a protest against the Simon Commission and later died from his injuries.
+</p>
+
+</section>
+
+
+<!-- CIVIL DISOBEDIENCE -->
+
+<section class="card" id="civil">
+
+<h2>13. Civil Disobedience Movement</h2>
+
+<span class="badge">1930</span>
+
+<p>
+The Civil Disobedience Movement began with the decision to break unjust colonial laws.
+Gandhi selected the salt law as an important symbol because salt was used by rich and poor alike.
+</p>
+
+<h3>Main Features</h3>
+
+<ul>
+<li>Violation of the salt law.</li>
+<li>Boycott of foreign cloth.</li>
+<li>Refusal to pay certain taxes.</li>
+<li>Resignation from government posts in some areas.</li>
+<li>Peaceful demonstrations and picketing.</li>
+</ul>
+
+</section>
+
+
+<!-- DANDI -->
+
+<section class="card" id="dandi">
+
+<h2>14. Dandi March and the Salt Law</h2>
+
+<span class="badge">12 March – 6 April 1930</span>
+
+<p>
+Gandhi began the historic Salt March from Sabarmati Ashram to Dandi on 12 March 1930.
+He was accompanied by a group of selected volunteers.
+</p>
+
+<p>
+On 6 April 1930, Gandhi reached Dandi and broke the salt law by producing salt from seawater.
+</p>
+
+<div class="highlight">
+<strong>Importance:</strong>
+The Salt March became a powerful symbol of resistance against British colonial rule.
+</div>
+
+</section>
+
+
+<!-- GANDHI IRWIN -->
+
+<section class="card" id="gandhi-irwin">
+
+<h2>15. Gandhi-Irwin Pact</h2>
+
+<span class="badge">1931</span>
+
+<p>
+The Gandhi-Irwin Pact was signed in March 1931 between Mahatma Gandhi and Lord Irwin.
+Gandhi agreed to suspend the Civil Disobedience Movement and participate in the Second Round Table Conference in London.
+</p>
+
+<p>
+The government agreed to release many political prisoners and allow peaceful picketing.
+</p>
+
+</section>
+
+
+<!-- AMBEDKAR -->
+
+<section class="card" id="ambedkar">
+
+<h2>16. Gandhi and Dr B.R. Ambedkar</h2>
+
+<p>
+Dr B.R. Ambedkar strongly represented the political and social interests of the oppressed castes,
+who were then described as the Depressed Classes.
+</p>
+
+<p>
+The British Communal Award of 1932 provided separate electorates for the Depressed Classes.
+Gandhi opposed separate electorates and began a fast in prison.
+</p>
+
+<p>
+Gandhi and Dr B.R. Ambedkar eventually reached an agreement known as the
+<span class="term">Poona Pact of 1932</span>.
+</p>
+
+<div class="highlight">
+The Poona Pact provided reserved seats for the Depressed Classes in provincial and central legislative bodies,
+while retaining a common electorate.
+</div>
+
+</section>
+
+
+<!-- 1935 -->
+
+<section class="card" id="1935">
+
+<h2>17. Government of India Act, 1935</h2>
+
+<span class="badge">1935</span>
+
+<p>
+The Government of India Act of 1935 introduced provincial autonomy and expanded the system of representative government.
+It became an important constitutional development before independence.
+</p>
+
+</section>
+
+
+<!-- ELECTIONS -->
+
+<section class="card" id="elections">
+
+<h2>18. Elections and Congress Ministries</h2>
+
+<span class="badge">1937</span>
+
+<p>
+Provincial elections were held in 1937 under the Government of India Act.
+The Indian National Congress performed well and formed ministries in several provinces.
+</p>
+
+<p>
+The experience of provincial government gave Indian leaders practical experience of administration.
+</p>
+
+</section>
+
+
+<!-- QUIT INDIA -->
+
+<section class="card" id="quit-india">
+
+<h2>19. Quit India Movement</h2>
+
+<span class="badge">1942</span>
+
+<p>
+The Quit India Movement was launched by the Indian National Congress in August 1942.
+The movement demanded an immediate end to British rule in India.
+</p>
+
+<p>
+Gandhi gave the famous call of <strong>“Do or Die”</strong>.
+Major Congress leaders were arrested soon after the movement began.
+</p>
+
+<p>
+Despite severe repression, the movement spread across many parts of India.
+Students, workers, peasants and ordinary people participated in different ways.
+</p>
+
+</section>
+
+
+<!-- CRIPPS -->
+
+<section class="card" id="cripps">
+
+<h2>20. Cripps Mission</h2>
+
+<span class="badge">1942</span>
+
+<p>
+The British government sent the Cripps Mission to India in March 1942 under the leadership of
+Sir Stafford Cripps.
+</p>
+
+<p>
+The mission proposed constitutional arrangements after the Second World War.
+However, the proposal did not satisfy the major Indian political groups and was rejected.
+</p>
+
+</section>
+
+
+<!-- CABINET -->
+
+<section class="card" id="cabinet">
+
+<h2>21. Cabinet Mission</h2>
+
+<span class="badge">1946</span>
+
+<p>
+The British government sent the Cabinet Mission to India in 1946 to discuss the transfer of power
+and constitutional arrangements.
+</p>
+
+<p>
+The mission included three British Cabinet members:
+</p>
+
+<ul>
+<li>Lord Pethick-Lawrence</li>
+<li>Sir Stafford Cripps</li>
+<li>A.V. Alexander</li>
+</ul>
+
+<p>
+The Cabinet Mission proposed a federal structure with a Union dealing mainly with defence,
+foreign affairs and communications.
+</p>
+
+</section>
+
+
+<!-- ALLEGORY -->
+
+<section class="card" id="allegory">
+
+<h2>22. Allegory and National Symbols</h2>
+
+<p>
+An <span class="term">allegory</span> is a representation of an abstract idea through a person, object or symbolic figure.
+During the nineteenth and twentieth centuries, artists represented nations as female figures.
+</p>
+
+<p>
+These figures helped people imagine the nation as a mother or a symbolic female personality.
+</p>
+
+<h3>Examples</h3>
+
+<ul>
+<li>France was represented by Marianne.</li>
+<li>Germany was represented by Germania.</li>
+<li>India was represented by Bharat Mata.</li>
+</ul>
+
+</section>
+
+
+<!-- BHARAT MATA -->
+
+<section class="card" id="bharat-mata">
+
+<h2>23. Bharat Mata</h2>
+
+<p>
+The image of Bharat Mata became an important symbol of Indian nationalism.
+Abanindranath Tagore painted a famous image of Bharat Mata in 1905.
+</p>
+
+<p>
+Bharat Mata was represented as a calm and spiritual female figure.
+She was shown holding objects associated with learning, religious faith and prosperity.
+</p>
+
+<div class="highlight">
+Bharat Mata became a visual representation of the nation and helped create a sense of collective identity.
+</div>
+
+</section>
+
+
+<!-- FLAG -->
+
+<section class="card" id="flag">
+
+<h2>24. Making of the National Flag</h2>
+
+<p>
+The national flag became an important symbol of Indian nationalism.
+During the national movement, different designs of flags were used.
+</p>
+
+<p>
+The tricolour with the spinning wheel or <strong>Charkha</strong> became associated with the Gandhian movement.
+The Charkha represented self-help, self-reliance and resistance to foreign goods.
+</p>
+
+<p>
+After independence, the design of the national flag was modified and the
+<span class="term">Ashoka Chakra</span> replaced the spinning wheel.
+</p>
+
+<table>
+
+<tr>
+<th>Colour</th>
+<th>Meaning / Association</th>
+</tr>
+
+<tr>
+<td>Saffron</td>
+<td>Courage and sacrifice</td>
+</tr>
+
+<tr>
+<td>White</td>
+<td>Peace and truth</td>
+</tr>
+
+<tr>
+<td>Green</td>
+<td>Growth and prosperity</td>
+</tr>
+
+<tr>
+<td>Ashoka Chakra</td>
+<td>Law, justice and continuous progress</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- SOCIAL GROUPS -->
+
+<section class="card" id="social-groups">
+
+<h2>25. Participation of Different Social Groups</h2>
+
+<p>
+The national movement brought together different groups, but their reasons for participating
+were not always identical.
+</p>
+
+<table>
+
+<tr>
+<th>Social Group</th>
+<th>Main Concerns</th>
+</tr>
+
+<tr>
+<td>Rich Peasants</td>
+<td>Reduction of revenue demands and relief from economic pressure.</td>
+</tr>
+
+<tr>
+<td>Poor Peasants</td>
+<td>Reduction of rent and relief from landlords and moneylenders.</td>
+</tr>
+
+<tr>
+<td>Business Classes</td>
+<td>Protection from foreign competition and favourable economic policies.</td>
+</tr>
+
+<tr>
+<td>Industrial Workers</td>
+<td>Better wages, working conditions and support for national causes.</td>
+</tr>
+
+<tr>
+<td>Women</td>
+<td>Participation in marches, demonstrations, picketing and nationalist activities.</td>
+</tr>
+
+<tr>
+<td>Tribal Communities</td>
+<td>Resistance to restrictions imposed by colonial forest policies.</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- LIMITS -->
+
+<section class="card" id="limits">
+
+<h2>26. Limits of the National Movement</h2>
+
+<p>
+Although the national movement involved many social groups, all groups did not always have
+the same understanding of freedom and independence.
+</p>
+
+<p>
+Different communities sometimes had different political and economic interests.
+The Congress attempted to unite these groups under the larger goal of ending colonial rule,
+but conflicts and differences remained.
+</p>
+
+</section>
+
+
+<!-- QUICK REVISION -->
+
+<section class="card" id="revision">
+
+<h2>27. Quick Revision</h2>
+
+<table>
+
+<tr>
+<th>Event</th>
+<th>Year</th>
+</tr>
+
+<tr>
+<td>Gandhi returned to India</td>
+<td>1915</td>
+</tr>
+
+<tr>
+<td>Champaran Satyagraha</td>
+<td>1917</td>
+</tr>
+
+<tr>
+<td>Kheda Satyagraha</td>
+<td>1918</td>
+</tr>
+
+<tr>
+<td>Rowlatt Act</td>
+<td>1919</td>
+</tr>
+
+<tr>
+<td>Jallianwala Bagh Massacre</td>
+<td>1919</td>
+</tr>
+
+<tr>
+<td>Non-Cooperation Movement</td>
+<td>1920–1922</td>
+</tr>
+
+<tr>
+<td>Swaraj Party</td>
+<td>1923</td>
+</tr>
+
+<tr>
+<td>Simon Commission</td>
+<td>1928</td>
+</tr>
+
+<tr>
+<td>Civil Disobedience Movement</td>
+<td>1930</td>
+</tr>
+
+<tr>
+<td>Dandi March</td>
+<td>1930</td>
+</tr>
+
+<tr>
+<td>Gandhi-Irwin Pact</td>
+<td>1931</td>
+</tr>
+
+<tr>
+<td>Poona Pact</td>
+<td>1932</td>
+</tr>
+
+<tr>
+<td>Government of India Act</td>
+<td>1935</td>
+</tr>
+
+<tr>
+<td>Provincial Elections</td>
+<td>1937</td>
+</tr>
+
+<tr>
+<td>Quit India Movement</td>
+<td>1942</td>
+</tr>
+
+<tr>
+<td>Cripps Mission</td>
+<td>1942</td>
+</tr>
+
+<tr>
+<td>Cabinet Mission</td>
+<td>1946</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- PDF -->
+
+<div class="pdf-section">
+
+<h2>Save These Notes as PDF</h2>
+
+<p style="margin:10px 0 18px;">
+Use the button below to save the complete chapter as a PDF.
+</p>
+
+<button class="pdf-btn" onclick="savePDF()">
+📄 Save as PDF
+</button>
+
+</div>
+
+
+<footer>
+
+<h2>GSI MANTRA</h2>
+
+<p>
+Class 10 History • Nationalism in India • Complete English Notes
+</p>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
+</footer>
+
+</main>
+
+
+<script>
+
+/* SEARCH */
+
+function searchNotes(){
+
+    let input =
+    document.getElementById("search").value.toLowerCase();
+
+    let cards =
+    document.querySelectorAll(".card");
+
+    cards.forEach(function(card){
+
+        let text =
+        card.innerText.toLowerCase();
+
+        if(text.includes(input)){
+            card.style.display="";
+        }else{
+            card.style.display="none";
+        }
+
+    });
+
+}
+
+
+/* SAVE PDF */
+
+function savePDF(){
+
+    window.print();
+
+}
+
+</script>
+
+</body>
+</html>
