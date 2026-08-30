@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Current Affairs | GSI MANTRA</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,"Noto Sans Devanagari",sans-serif;
+background:#f4f7fb;
+color:#222;
+line-height:1.6;
+}
+
+/* HEADER */
+
+.header{
+background:linear-gradient(135deg,#063970,#0b63b6,#159447);
+color:white;
+text-align:center;
+padding:30px 15px;
+}
+
+.logo{
+font-size:21px;
+font-weight:bold;
+}
+
+.header h1{
+font-size:32px;
+margin:5px 0;
+}
+
+/* NAV */
+
+.nav{
+background:white;
+padding:12px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,.12);
+}
+
+.nav a{
+display:inline-block;
+text-decoration:none;
+color:#063970;
+background:#eef5ff;
+padding:8px 13px;
+margin:4px;
+border-radius:20px;
+font-size:13px;
+font-weight:bold;
+}
+
+/* CONTAINER */
+
+.container{
+width:95%;
+max-width:1200px;
+margin:25px auto;
+}
+
+/* NOTICE */
+
+.notice{
+background:#fff8e6;
+border-left:5px solid #f39c12;
+padding:15px;
+border-radius:8px;
+margin-bottom:25px;
+}
+
+/* TITLE */
+
+.section-title{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin:28px 0 15px;
+border-bottom:2px solid #ddd;
+padding-bottom:8px;
+}
+
+.section-title h2{
+color:#063970;
+font-size:24px;
+}
+
+/* DAILY CARD */
+
+.daily-box{
+background:white;
+padding:20px;
+border-radius:12px;
+margin-bottom:18px;
+box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.date-title{
+background:linear-gradient(90deg,#063970,#0b63b6);
+color:white;
+padding:13px;
+border-radius:8px;
+margin-bottom:12px;
+}
+
+.topic-list{
+display:flex;
+flex-wrap:wrap;
+gap:7px;
+margin:12px 0;
+}
+
+.topic{
+background:#eef5ff;
+color:#063970;
+padding:5px 10px;
+border-radius:15px;
+font-size:12px;
+font-weight:bold;
+}
+
+/* BUTTON */
+
+.buttons{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-top:15px;
+}
+
+.btn{
+display:inline-block;
+text-decoration:none;
+color:white;
+padding:9px 14px;
+border-radius:6px;
+font-size:13px;
+font-weight:bold;
+}
+
+.blue{
+background:#0b63b6;
+}
+
+.green{
+background:#159447;
+}
+
+.red{
+background:#d93025;
+}
+
+.orange{
+background:#f57c00;
+}
+
+/* MONTHLY */
+
+.month-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.month-card{
+background:white;
+padding:20px;
+text-align:center;
+border-radius:12px;
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.month-card h3{
+color:#063970;
+margin:8px 0;
+}
+
+.month-card p{
+font-size:13px;
+color:#666;
+margin-bottom:10px;
+}
+
+/* SUBJECT */
+
+.category-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.category-card{
+background:white;
+padding:18px;
+border-radius:10px;
+border-top:4px solid #0b63b6;
+box-shadow:0 3px 10px rgba(0,0,0,.07);
+}
+
+.category-card h3{
+color:#063970;
+margin-bottom:5px;
+}
+
+.category-card p{
+font-size:13px;
+color:#666;
+}
+
+/* EXAM */
+
+.exam-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:12px;
+}
+
+.exam-card{
+background:white;
+padding:18px;
+text-align:center;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,.07);
+}
+
+.exam-card h3{
+color:#063970;
+}
+
+/* QUIZ */
+
+.quiz-box{
+background:linear-gradient(135deg,#063970,#0b63b6);
+color:white;
+padding:25px;
+border-radius:12px;
+text-align:center;
+}
+
+/* SPECIAL */
+
+.special{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
+
+.special-card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,.07);
+}
+
+.special-card h3{
+color:#063970;
+margin-bottom:10px;
+}
+
+.special-card a{
+color:#0b63b6;
+text-decoration:none;
+}
+
+/* FOOTER */
+
+.footer{
+background:#063970;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
+.footer p{
+font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.month-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.category-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.exam-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.header h1{
+font-size:25px;
+}
+
+.month-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.category-grid{
+grid-template-columns:1fr;
+}
+
+.exam-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.special{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header class="header">
+
+<div class="logo">
+📚 GSI MANTRA
+</div>
+
+<h1>
+Current Affairs
+</h1>
+
+<p>
+Daily • Monthly • Subject Wise • Exam Wise • Quiz
+</p>
+
+</header>
+
+
+<!-- NAV -->
+
+<nav class="nav">
+
+<a href="#daily">
+📰 Daily
+</a>
+
+<a href="#monthly">
+📚 Monthly
+</a>
+
+<a href="#subject">
+📌 Subject Wise
+</a>
+
+<a href="#exam">
+🎯 Exam Wise
+</a>
+
+<a href="#quiz">
+📝 Quiz
+</a>
+
+<a href="#special">
+⭐ Special
+</a>
+
+</nav>
+
+
+<div class="container">
+
+
+<!-- NOTICE -->
+
+<div class="notice">
+
+<strong>📢 महत्वपूर्ण सूचना:</strong>
+
+GSI MANTRA पर Daily Current Affairs को
+नियमित रूप से अपडेट किया जाएगा।
+
+</div>
+
+
+<!-- DAILY -->
+
+<div class="section-title" id="daily">
+
+<h2>
+📰 Daily Current Affairs
+</h2>
+
+</div>
+
+
+<!-- 31 AUGUST -->
+
+<div class="daily-box">
+
+<div class="date-title">
+
+<h3>
+📅 31 August 2026
+</h3>
+
+</div>
+
+<p>
+31 अगस्त 2026 के महत्वपूर्ण राष्ट्रीय,
+अंतरराष्ट्रीय, अर्थव्यवस्था, विज्ञान,
+पर्यावरण और बिहार करेंट अफेयर।
+</p>
+
+
+<div class="topic-list">
+
+<span class="topic"> National</span>
+
+<span class="topic">🌎 International</span>
+
+<span class="topic">💰 Economy</span>
+
+<span class="topic">🔬 Science</span>
+
+<span class="topic">🌱 Environment</span>
+
+<span class="topic">🏆 Awards</span>
+
+<span class="topic">👤 Appointments</span>
+
+<span class="topic">🏅 Sports</span>
+
+<span class="topic"> Bihar</span>
+
+</div>
+
+
+<div class="buttons">
+
+<a
+href="daily-current-affairs.html"
+class="btn blue">
+
+📖 Read Current Affairs
+
+</a>
+
+<a
+href="daily-current-affairs.html#quiz"
+class="btn green">
+
+📝 Daily Quiz
+
+</a>
+
+<a href="#" class="btn red">
+📥 PDF
+</a>
+
+<a href="#" class="btn orange">
+🎥 Video
+</a>
+
+</div>
+
+</div>
+
+
+<!-- आगे की तारीखें यहीं जोड़ें -->
+
+<!--
+
+<div class="daily-box">
+
+<div class="date-title">
+<h3>📅 01 September 2026</h3>
+</div>
+
+<p>
+01 September 2026 का Current Affairs
+</p>
+
+<div class="buttons">
+
+<a
+href="daily-current-affairs/01-september-2026.html"
+class="btn blue">
+
+📖 Read
+
+</a>
+
+<a
+href="daily-current-affairs/01-september-2026.html#quiz"
+class="btn green">
+
+📝 Quiz
+
+</a>
+
+</div>
+
+</div>
+
+-->
+
+
+<!-- MONTHLY -->
+
+<div class="section-title" id="monthly">
+
+<h2>
+📚 Monthly Current Affairs
+</h2>
+
+</div>
+
+
+<div class="month-grid">
+
+
+<div class="month-card">
+
+<h3>January 2026</h3>
+
+<p>Monthly Current Affairs</p>
+
+<a href="#" class="btn blue">
+Open
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>February 2026</h3>
+
+<p>Monthly Current Affairs</p>
+
+<a href="#" class="btn blue">
+Open
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>March 2026</h3>
+
+<p>Monthly Current Affairs</p>
+
+<a href="#" class="btn blue">
+Open
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>April 2026</h3>
+
+<p>Monthly Current Affairs</p>
+
+<a href="#" class="btn blue">
+Open
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>May 2026</h3>
+
+<p>Monthly Current Affairs</p>
+
+<a href="#" class="btn blue">
+Open
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>June 2026</h3>
+
+<p>Monthly Current Affairs</p>
+
+<a href="#" class="btn blue">
+Open
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>July 2026</h3>
+
+<p>Monthly Current Affairs</p>
+
+<a href="#" class="btn blue">
+Open
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>August 2026</h3>
+
+<p>Monthly Current Affairs</p>
+
+<a href="#" class="btn blue">
+Open
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>September 2026</h3>
+
+<p>Monthly Current Affairs</p>
+
+<a href="#" class="btn blue">
+Open
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>October 2026</h3>
+
+<p>Monthly Current Affairs</p>
+
+<a href="#" class="btn blue">
+Open
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>November 2026</h3>
+
+<p>Monthly Current Affairs</p>
+
+<a href="#" class="btn blue">
+Open
+</a>
+
+</div>
+
+
+<div class="month-card">
+
+<h3>December 2026</h3>
+
+<p>Monthly Current Affairs</p>
+
+<a href="#" class="btn blue">
+Open
+</a>
+
+</div>
+
+</div>
+
+
+<!-- SUBJECT -->
+
+<div class="section-title" id="subject">
+
+<h2>
+📌 Subject Wise Current Affairs
+</h2>
+
+</div>
+
+
+<div class="category-grid">
+
+
+<div class="category-card">
+
+<h3> National</h3>
+
+<p>
+राष्ट्रीय घटनाएँ एवं सरकारी निर्णय
+</p>
+
+</div>
+
+
+<div class="category-card">
+
+<h3>🌎 International</h3>
+
+<p>
+अंतरराष्ट्रीय घटनाक्रम एवं कूटनीति
+</p>
+
+</div>
+
+
+<div class="category-card">
+
+<h3>💰 Economy</h3>
+
+<p>
+अर्थव्यवस्था एवं बैंकिंग
+</p>
+
+</div>
+
+
+<div class="category-card">
+
+<h3>🔬 Science</h3>
+
+<p>
+विज्ञान एवं तकनीक
+</p>
+
+</div>
+
+
+<div class="category-card">
+
+<h3>🌱 Environment</h3>
+
+<p>
+पर्यावरण एवं जलवायु
+</p>
+
+</div>
+
+
+<div class="category-card">
+
+<h3>🏆 Awards</h3>
+
+<p>
+पुरस्कार एवं सम्मान
+</p>
+
+</div>
+
+
+<div class="category-card">
+
+<h3>👤 Appointments</h3>
+
+<p>
+महत्वपूर्ण नियुक्तियाँ
+</p>
+
+</div>
+
+
+<div class="category-card">
+
+<h3>🏅 Sports</h3>
+
+<p>
+खेल जगत
+</p>
+
+</div>
+
+</div>
+
+
+<!-- EXAM -->
+
+<div class="section-title" id="exam">
+
+<h2>
+🎯 Exam Wise Current Affairs
+</h2>
+
+</div>
+
+
+<div class="exam-grid">
+
+
+<div class="exam-card">
+<h3>UPSC</h3>
+</div>
+
+
+<div class="exam-card">
+<h3>BPSC</h3>
+</div>
+
+
+<div class="exam-card">
+<h3>SSC</h3>
+</div>
+
+
+<div class="exam-card">
+<h3>UGC NET</h3>
+</div>
+
+
+<div class="exam-card">
+<h3>Railway</h3>
+</div>
+
+</div>
+
+
+<!-- QUIZ -->
+
+<div class="section-title" id="quiz">
+
+<h2>
+📝 Current Affairs Quiz
+</h2>
+
+</div>
+
+
+<div class="quiz-box">
+
+<h2>
+🔥 Daily Current Affairs Quiz
+</h2>
+
+<p>
+आज के Current Affairs पर आधारित MCQ Test
+</p>
+
+<a
+href="daily-current-affairs.html#quiz"
+class="btn green">
+
+Start Quiz →
+
+</a>
+
+</div>
+
+
+<!-- SPECIAL -->
+
+<div class="section-title" id="special">
+
+<h2>
+⭐ Special Current Affairs
+</h2>
+
+</div>
+
+
+<div class="special">
+
+
+<div class="special-card">
+
+<h3>
+📊 Reports & Index
+</h3>
+
+<ul>
+
+<li>
+<a href="#">Important Reports</a>
+</li>
+
+<li>
+<a href="#">Important Index</a>
+</li>
+
+<li>
+<a href="#">Rankings</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="special-card">
+
+<h3>
+📅 Important Days
+</h3>
+
+<ul>
+
+<li>
+<a href="#">National Days</a>
+</li>
+
+<li>
+<a href="#">International Days</a>
+</li>
+
+<li>
+<a href="#">Themes</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="special-card">
+
+<h3>
+ Bihar Special
+</h3>
+
+<ul>
+
+<li>
+<a href="#">Bihar Current Affairs</a>
+</li>
+
+<li>
+<a href="#">Bihar Schemes</a>
+</li>
+
+<li>
+<a href="#">Bihar MCQ</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<h3>
+GSI MANTRA
+</h3>
+
+<p>
+NCERT • UPSC • BPSC • SSC • UGC NET • Current Affairs
+</p>
+
+<p>
+© 2026 GSI MANTRA
+</p>
+
+</footer>
+
+
+</body>
+</html>
