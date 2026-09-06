@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GSI MANTRA | Daily MCQ Test</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f3f6fa;
+    color:#222;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:22px 15px;
+}
+
+.header{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:65px;
+    height:65px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+    padding:3px;
+}
+
+.logo-text h1{
+    margin:0;
+    font-size:30px;
+}
+
+.logo-text p{
+    margin:5px 0 0;
+    font-size:14px;
+}
+
+/* ================= NAV ================= */
+
+nav{
+    background:#071d33;
+    text-align:center;
+    padding:13px 10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+/* ================= PAGE ================= */
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:25px 15px;
+}
+
+/* ================= TITLE ================= */
+
+.page-title{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    margin-bottom:25px;
+}
+
+.page-title h2{
+    color:#123c69;
+    margin:0 0 10px;
+    font-size:30px;
+}
+
+.page-title p{
+    margin:7px 0;
+    color:#555;
+}
+
+/* ================= TEST INFO ================= */
+
+.test-info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:12px;
+    margin-bottom:25px;
+}
+
+.info-box{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,.06);
+}
+
+.info-box strong{
+    display:block;
+    color:#123c69;
+    font-size:18px;
+    margin-bottom:5px;
+}
+
+/* ================= QUESTION ================= */
+
+.question{
+    background:white;
+    margin-bottom:22px;
+    padding:25px;
+    border-radius:14px;
+    box-shadow:0 4px 14px rgba(0,0,0,.07);
+    position:relative;
+    overflow:hidden;
+}
+
+.question::after{
+    content:"GSI MANTRA";
+    position:absolute;
+    right:15px;
+    bottom:10px;
+    font-size:30px;
+    font-weight:bold;
+    color:rgba(18,60,105,.035);
+    transform:rotate(-15deg);
+    pointer-events:none;
+}
+
+.question-number{
+    color:#c62828;
+    font-weight:bold;
+    font-size:17px;
+    margin-bottom:12px;
+}
+
+.question-text{
+    font-size:18px;
+    font-weight:bold;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+.option{
+    display:block;
+    padding:12px 14px;
+    margin:9px 0;
+    background:#f7f9fc;
+    border:1px solid #dce3eb;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.option:hover{
+    background:#edf4fb;
+    border-color:#123c69;
+}
+
+.option input{
+    margin-right:10px;
+}
+
+/* ================= SUBMIT ================= */
+
+.submit-area{
+    text-align:center;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.submit-btn{
+    border:none;
+    background:#f28c00;
+    color:white;
+    padding:14px 35px;
+    font-size:18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.submit-btn:hover{
+    background:#d97700;
+}
+
+/* ================= RESULT ================= */
+
+#result{
+    display:none;
+    margin-top:25px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.score{
+    font-size:38px;
+    font-weight:bold;
+    color:#123c69;
+}
+
+.result-message{
+    font-size:19px;
+    margin:10px 0 20px;
+}
+
+.result-buttons button{
+    border:none;
+    padding:11px 20px;
+    margin:5px;
+    border-radius:7px;
+    cursor:pointer;
+    font-weight:bold;
+    color:white;
+}
+
+.print-btn{
+    background:#123c69;
+}
+
+.reload-btn{
+    background:#2e7d32;
+}
+
+/* ================= ANSWER ================= */
+
+.answer{
+    display:none;
+    margin-top:15px;
+    padding:15px;
+    border-radius:8px;
+    background:#eef7ee;
+    border-left:5px solid #2e7d32;
+    line-height:1.6;
+}
+
+.wrong{
+    background:#fff0f0;
+    border-left-color:#c62828;
+}
+
+/* ================= PDF NOTICE ================= */
+
+.pdf-box{
+    margin-top:30px;
+    background:linear-gradient(135deg,#fff7df,#fff0bd);
+    padding:25px;
+    border-radius:14px;
+    text-align:center;
+}
+
+.pdf-box h3{
+    color:#8a5700;
+}
+
+.pdf-box p{
+    line-height:1.6;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+    margin-top:40px;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+    .header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .logo-text h1{
+        font-size:26px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:6px;
+    }
+
+    .page-title h2{
+        font-size:25px;
+    }
+
+    .question{
+        padding:18px;
+    }
+
+    .question-text{
+        font-size:16px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="header">
+
+<div class="logo">
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+</div>
+
+<div class="logo-text">
+<h1>GSI MANTRA</h1>
+<p>Competitive Education • NCERT • UPSC • BPSC • SSC • UGC NET</p>
+</div>
+
+</div>
+
+</header>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+<a href="mcq.html">📝 MCQ</a>
+<a href="current-affairs.html">📰 Current Affairs</a>
+<a href="class10.html">📚 Class 10</a>
+
+</nav>
+
+
+<!-- ================= MAIN ================= -->
+
+<div class="container">
+
+<div class="page-title">
+
+<h2>📝 Daily Advanced MCQ Test</h2>
+
+<p><strong>Topic:</strong> Satyagraha & Nationalism in India</p>
+
+<p>UPSC • BPSC • SSC • UGC NET • Competitive Exams</p>
+
+</div>
+
+
+<!-- TEST INFORMATION -->
+
+<div class="test-info">
+
+<div class="info-box">
+<strong>📅 Date</strong>
+06 September 2026
+</div>
+
+<div class="info-box">
+<strong>📝 Questions</strong>
+8 MCQs
+</div>
+
+<div class="info-box">
+<strong>🎯 Level</strong>
+Advanced
+</div>
+
+<div class="info-box">
+<strong>⏱️ Mode</strong>
+Online Test
+</div>
+
+</div>
+
+
+<!-- ================= QUESTION 1 ================= -->
+
+<div class="question">
+
+<div class="question-number">Q1. Satyagraha</div>
+
+<div class="question-text">
+
+In the context of Mahatma Gandhi's quote on Satyagraha (Source A),
+how is Satyagraha fundamentally distinguished from 'passive resistance'?
+
+</div>
+
+<label class="option">
+<input type="radio" name="q1" value="A">
+(A) Passive resistance permits physical force under all conditions,
+whereas Satyagraha makes violence mandatory.
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="B">
+(B) Passive resistance is considered a weapon of the weak lacking intense
+activity, whereas Satyagraha is an intensely active, pure soul-force.
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="C">
+(C) Passive resistance deals exclusively with economic reforms, while
+Satyagraha focuses solely on global geopolitics.
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="D">
+(D) There is no conceptual difference; both terms are interchangeable
+strategic labels.
+</label>
+
+<div class="answer" id="a1">
+<strong>Correct Answer: (B)</strong><br>
+Gandhi regarded Satyagraha as an active force based on truth and
+non-violence, rather than merely a method of passive opposition.
+</div>
+
+</div>
+
+
+<!-- ================= QUESTION 2 ================= -->
+
+<div class="question">
+
+<div class="question-number">Q2. Chronology</div>
+
+<div class="question-text">
+
+Arrange the following historical events in their correct chronological sequence:
+
+<br><br>
+
+1. Satyagraha movement among cotton mill workers in Ahmedabad.<br>
+2. Peasants' struggle against the oppressive plantation system in Champaran.<br>
+3. Satyagraha in support of the peasants of the Kheda district.
+
+</div>
+
+<label class="option">
+<input type="radio" name="q2" value="A">
+(A) 1 — 2 — 3
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="B">
+(B) 2 — 1 — 3
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="C">
+(C) 2 — 3 — 1
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="D">
+(D) 3 — 2 — 1
+</label>
+
+<div class="answer" id="a2">
+<strong>Correct Answer: (C)</strong><br>
+Champaran Satyagraha – 1917 → Kheda Satyagraha – 1918 →
+Ahmedabad Mill Strike – 1918.
+</div>
+
+</div>
+
+
+<!-- ================= QUESTION 3 ================= -->
+
+<div class="question">
+
+<div class="question-number">Q3. Kheda Satyagraha</div>
+
+<div class="question-text">
+
+Which of the following factors primarily drove the peasants of Kheda
+(Gujarat) to demand a relaxation in revenue collection in 1918?
+
+<br><br>
+
+1. A sudden and severe industrial recession in urban centres.<br>
+2. Widespread crop failure in the agricultural sector.<br>
+3. The outbreak of a devastating plague epidemic in the region.
+
+<br><br>
+
+Select the correct answer using the code given below:
+
+</div>
+
+<label class="option">
+<input type="radio" name="q3" value="A">
+(A) 1 and 2 only
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="B">
+(B) 2 and 3 only
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="C">
+(C) 1 and 3 only
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="D">
+(D) 1, 2, and 3
+</label>
+
+<div class="answer" id="a3">
+<strong>Correct Answer: (B)</strong><br>
+Kheda peasants faced crop failure and the impact of plague.
+The industrial recession was not the primary cause of the Kheda
+revenue issue.
+</div>
+
+</div>
+
+
+<!-- ================= QUESTION 4 ================= -->
+
+<div class="question">
+
+<div class="question-number">Q4. Satyagrahi Methodology</div>
+
+<div class="question-text">
+
+What is the core operational methodology of a true Satyagrahi when
+confronting an oppressor?
+
+</div>
+
+<label class="option">
+<input type="radio" name="q4" value="A">
+(A) Eliminating the oppressor physically to establish immediate justice.
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="B">
+(B) Appealing to the conscience of the oppressor to see the truth,
+rather than forcing them to accept it through violence.
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="C">
+(C) Commencing underground violent resistance to completely cripple
+the administrative machinery.
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="D">
+(D) Restricting the agitation purely to institutional and legal
+litigations in courts.
+</label>
+
+<div class="answer" id="a4">
+<strong>Correct Answer: (B)</strong><br>
+Satyagraha seeks to transform the relationship between the opponent
+and the Satyagrahi through truth, non-violence and moral persuasion.
+</div>
+
+</div>
+
+
+<!-- ================= QUESTION 5 ================= -->
+
+<div class="question">
+
+<div class="question-number">Q5. Growth of Nationalism</div>
+
+<div class="question-text">
+
+Consider the following statements regarding the growth of Nationalism:
+
+<br><br>
+
+(1) In Europe, nationalism was closely connected to the formation of
+nation-states.
+
+<br><br>
+
+(2) In colonies like India, the growth of nationalism was intimately
+connected to the anti-colonial movement.
+
+<br><br>
+
+Which of the statements given above is/are correct?
+
+</div>
+
+<label class="option">
+<input type="radio" name="q5" value="A">
+(A) Only 1
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="B">
+(B) Only 2
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="C">
+(C) Both 1 and 2
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="D">
+(D) Neither 1 nor 2
+</label>
+
+<div class="answer" id="a5">
+<strong>Correct Answer: (C)</strong><br>
+Both statements correctly describe important aspects of nationalism
+in Europe and colonial India.
+</div>
+
+</div>
+
+
+<!-- ================= QUESTION 6 ================= -->
+
+<div class="question">
+
+<div class="question-number">Q6. Assertion & Reason</div>
+
+<div class="question-text">
+
+<strong>Assertion (A):</strong> In India, different social groups
+responded to the call of nationalism with unified goals and identical
+experiences.
+
+<br><br>
+
+<strong>Reason (R):</strong> The shared oppression under colonial rule
+provided a common bond that tied many different groups together.
+
+<br><br>
+
+Choose the correct option:
+
+</div>
+
+<label class="option">
+<input type="radio" name="q6" value="A">
+(A) Both (A) and (R) are true and (R) is the correct explanation of (A)
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="B">
+(B) Both (A) and (R) are true but (R) is not the correct explanation of (A)
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="C">
+(C) (A) is true but (R) is false
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="D">
+(D) (A) is false but (R) is true
+</label>
+
+<div class="answer" id="a6">
+<strong>Correct Answer: (D)</strong><br>
+The Assertion is false because different social groups did not have
+identical experiences or identical goals. The Reason is true because
+colonial oppression created a broad common bond.
+</div>
+
+</div>
+
+
+<!-- ================= QUESTION 7 ================= -->
+
+<div class="question">
+
+<div class="question-number">Q7. Economic Impact of World War I</div>
+
+<div class="question-text">
+
+Which of the following economic changes happened in India due to
+World War I?
+
+<br><br>
+
+1. Income tax was introduced.<br>
+2. Customs duties were lowered to help poor people.<br>
+3. Prices of daily items doubled between 1913 and 1918.
+
+<br><br>
+
+Choose the correct option:
+
+</div>
+
+<label class="option">
+<input type="radio" name="q7" value="A">
+(A) Only 1 and 2
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="B">
+(B) Only 2 and 3
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="C">
+(C) Only 1 and 3
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="D">
+(D) All 1, 2, and 3
+</label>
+
+<div class="answer" id="a7">
+<strong>Correct Answer: (C)</strong><br>
+The war led to increased taxes, including income tax, and prices
+of essential goods approximately doubled between 1913 and 1918.
+The statement about lowering customs duties is incorrect.
+</div>
+
+</div>
+
+
+<!-- ================= QUESTION 8 ================= -->
+
+<div class="question">
+
+<div class="question-number">Q8. Assertion & Reason</div>
+
+<div class="question-text">
+
+<strong>Assertion (A):</strong> There was widespread anger in the
+villages of India during World War I.
+
+<br><br>
+
+<strong>Reason (R):</strong> The British colonial government forced
+village youths to join the army and fight the war.
+
+<br><br>
+
+Choose the correct option:
+
+</div>
+
+<label class="option">
+<input type="radio" name="q8" value="A">
+(A) Both (A) and (R) are true and (R) is the correct explanation of (A)
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="B">
+(B) Both (A) and (R) are true but (R) is NOT the correct explanation of (A)
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="C">
+(C) (A) is true but (R) is false
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="D">
+(D) (A) is false but (R) is true
+</label>
+
+<div class="answer" id="a8">
+<strong>Correct Answer: (A)</strong><br>
+Wartime forced recruitment created serious resentment in rural areas,
+contributing to widespread anger during World War I.
+</div>
+
+</div>
+
+
+<!-- ================= SUBMIT ================= -->
+
+<div class="submit-area">
+
+<h2>🎯 Test Complete करें</h2>
+
+<p>सभी प्रश्नों के उत्तर चुनने के बाद नीचे दिए गए बटन पर क्लिक करें।</p>
+
+<button class="submit-btn" onclick="submitTest()">
+✅ Submit Test
+</button>
+
+</div>
+
+
+<!-- ================= RESULT ================= -->
+
+<div id="result">
+
+<h2>📊 Your Result</h2>
+
+<div class="score" id="score">
+0 / 8
+</div>
+
+<div class="result-message" id="message"></div>
+
+<div class="result-buttons">
+
+<button class="print-btn" onclick="window.print()">
+🖨️ Print / Save PDF
+</button>
+
+<button class="reload-btn" onclick="location.reload()">
+🔄 Retake Test
+</button>
+
+</div>
+
+</div>
+
+
+<!-- ================= PDF ================= -->
+
+<div class="pdf-box">
+
+<h3>📄 PDF Study Material</h3>
+
+<p>
+इस MCQ Test का PDF भी यहाँ उपलब्ध कराया जा सकता है।
+PDF डाउनलोड करने के लिए नीचे दिए गए button में अपनी
+PDF file का नाम डालें।
+</p>
+
+<a href="satyagraha-nationalism-mcq.pdf"
+class="submit-btn"
+style="display:inline-block;text-decoration:none;">
+📥 Download MCQ PDF
+</a>
+
+</div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h2>GSI MANTRA</h2>
+
+<p>
+Competitive Education • NCERT • UPSC • BPSC • SSC • UGC NET
+</p>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function submitTest(){
+
+    const answers = {
+        q1:"B",
+        q2:"C",
+        q3:"B",
+        q4:"B",
+        q5:"C",
+        q6:"D",
+        q7:"C",
+        q8:"A"
+    };
+
+    let score = 0;
+
+    for(let i=1;i<=8;i++){
+
+        const selected =
+        document.querySelector('input[name="q'+i+'"]:checked');
+
+        const answerBox =
+        document.getElementById("a"+i);
+
+        if(selected){
+
+            if(selected.value === answers["q"+i]){
+                score++;
+                answerBox.classList.remove("wrong");
+            }else{
+                answerBox.classList.add("wrong");
+            }
+
+        }else{
+            answerBox.classList.add("wrong");
+        }
+
+        answerBox.style.display="block";
+    }
+
+    document.getElementById("score").innerHTML =
+        score + " / 8";
+
+    let message="";
+
+    if(score===8){
+        message="🏆 Excellent! आपकी तैयारी बहुत शानदार है।";
+    }
+    else if(score>=6){
+        message="👏 Very Good! आपकी तैयारी अच्छी है।";
+    }
+    else if(score>=4){
+        message="👍 Good! थोड़ा और revision करें।";
+    }
+    else{
+        message="📚 अधिक अभ्यास और revision की आवश्यकता है।";
+    }
+
+    document.getElementById("message").innerHTML=message;
+
+    document.getElementById("result").style.display="block";
+
+    window.scrollTo({
+        top:document.getElementById("result").offsetTop-20,
+        behavior:"smooth"
+    });
+
+}
+
+</script>
+
+
+</body>
+</html>
