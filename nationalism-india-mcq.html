@@ -1,0 +1,832 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nationalism in India - MCQ Test | GSI MANTRA</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f8;
+    color:#222;
+    line-height:1.65;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    background:linear-gradient(135deg,#172554,#1e40af,#2563eb);
+    color:white;
+    text-align:center;
+    padding:28px 15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+.header h1{
+    font-size:32px;
+    margin-bottom:5px;
+    letter-spacing:1px;
+}
+
+.header h2{
+    font-size:22px;
+    font-weight:500;
+}
+
+.header p{
+    margin-top:8px;
+    font-size:14px;
+    opacity:.95;
+}
+
+/* ================= MAIN ================= */
+
+.container{
+    width:92%;
+    max-width:1000px;
+    margin:25px auto;
+}
+
+/* ================= TITLE ================= */
+
+.test-title{
+    background:white;
+    border-radius:14px;
+    padding:22px;
+    text-align:center;
+    margin-bottom:20px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.test-title h2{
+    color:#172554;
+    margin-bottom:7px;
+}
+
+.test-title p{
+    color:#555;
+}
+
+/* ================= QUESTION CARD ================= */
+
+.question{
+    position:relative;
+    background:white;
+    padding:24px;
+    margin-bottom:22px;
+    border-radius:14px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+    overflow:hidden;
+}
+
+/* ================= WATERMARK ================= */
+
+.question::after{
+    content:"GSI MANTRA";
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-25deg);
+    font-size:42px;
+    font-weight:bold;
+    letter-spacing:4px;
+    color:rgba(30,64,175,.055);
+    white-space:nowrap;
+    pointer-events:none;
+    z-index:0;
+}
+
+.question > *{
+    position:relative;
+    z-index:1;
+}
+
+.q-number{
+    display:inline-block;
+    background:#172554;
+    color:white;
+    padding:5px 13px;
+    border-radius:20px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+.question-text{
+    font-size:17px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.source{
+    font-style:italic;
+    color:#555;
+    font-weight:normal;
+    margin-bottom:12px;
+}
+
+/* ================= OPTIONS ================= */
+
+.options{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.option{
+    border:1px solid #d7dce3;
+    border-radius:9px;
+    padding:11px 14px;
+    cursor:pointer;
+    background:#fafafa;
+    transition:.2s;
+}
+
+.option:hover{
+    background:#eef4ff;
+    border-color:#2563eb;
+}
+
+.option input{
+    margin-right:9px;
+    transform:scale(1.1);
+}
+
+/* ================= RESULT ================= */
+
+.result{
+    display:none;
+    text-align:center;
+    background:white;
+    border-radius:14px;
+    padding:28px;
+    margin:25px 0;
+    box-shadow:0 3px 15px rgba(0,0,0,.1);
+}
+
+.result h2{
+    color:#172554;
+    margin-bottom:10px;
+}
+
+.score{
+    font-size:30px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+/* ================= BUTTON ================= */
+
+.submit-btn{
+    display:block;
+    width:100%;
+    border:none;
+    background:linear-gradient(135deg,#172554,#2563eb);
+    color:white;
+    padding:15px;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:25px;
+}
+
+.submit-btn:hover{
+    opacity:.9;
+}
+
+/* ================= ANSWER REVIEW ================= */
+
+.review{
+    margin-top:20px;
+    text-align:left;
+}
+
+.review-item{
+    padding:12px;
+    margin:8px 0;
+    border-radius:8px;
+    background:#f5f5f5;
+}
+
+.correct{
+    border-left:5px solid #15803d;
+}
+
+.wrong{
+    border-left:5px solid #dc2626;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    margin-top:40px;
+    background:#172554;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+}
+
+.footer strong{
+    font-size:18px;
+}
+
+.footer p{
+    margin-top:5px;
+    font-size:13px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+    .header h1{
+        font-size:25px;
+    }
+
+    .header h2{
+        font-size:18px;
+    }
+
+    .container{
+        width:95%;
+    }
+
+    .question{
+        padding:18px;
+    }
+
+    .question-text{
+        font-size:16px;
+    }
+
+    .question::after{
+        font-size:30px;
+    }
+
+    .option{
+        font-size:14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="header">
+    <h1>GSI MANTRA</h1>
+    <h2>Nationalism in India</h2>
+    <p>MCQ Test • UPSC • BPSC • SSC • UGC NET • Competitive Exams</p>
+</header>
+
+
+<div class="container">
+
+    <div class="test-title">
+        <h2>Advanced MCQ Test</h2>
+        <p>Chapter: Nationalism in India</p>
+        <p><strong>Total Questions: 8</strong> | Choose the correct answer.</p>
+    </div>
+
+
+<form id="quizForm">
+
+<!-- ================= Q1 ================= -->
+
+<div class="question">
+
+<span class="q-number">Q1</span>
+
+<div class="question-text">
+In the context of Mahatma Gandhi's quote on Satyagraha
+<span class="source">(Source A)</span>,
+how is Satyagraha fundamentally distinguished from 'passive resistance'?
+</div>
+
+<div class="options">
+
+<label class="option">
+<input type="radio" name="q1" value="A">
+(A) Passive resistance permits physical force under all conditions, whereas Satyagraha makes violence mandatory.
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="B">
+(B) Passive resistance is considered a weapon of the weak lacking intense activity, whereas Satyagraha is an intensely active, pure soul-force.
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="C">
+(C) Passive resistance deals exclusively with economic reforms, while Satyagraha focuses solely on global geopolitics.
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="D">
+(D) There is no conceptual difference; both terms are interchangeable strategic labels.
+</label>
+
+</div>
+</div>
+
+
+<!-- ================= Q2 ================= -->
+
+<div class="question">
+
+<span class="q-number">Q2</span>
+
+<div class="question-text">
+Arrange the following historical events in their correct chronological sequence.
+</div>
+
+<div class="question-text">
+1. Satyagraha movement among cotton mill workers in Ahmedabad.<br>
+2. Peasants' struggle against the oppressive plantation system in Champaran.<br>
+3. Satyagraha in support of the peasants of the Kheda district.
+</div>
+
+<div class="question-text">
+<strong>Options:</strong>
+</div>
+
+<div class="options">
+
+<label class="option">
+<input type="radio" name="q2" value="A">
+(A) 1 — 2 — 3
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="B">
+(B) 2 — 1 — 3
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="C">
+(C) 2 — 3 — 1
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="D">
+(D) 3 — 2 — 1
+</label>
+
+</div>
+</div>
+
+
+<!-- ================= Q3 ================= -->
+
+<div class="question">
+
+<span class="q-number">Q3</span>
+
+<div class="question-text">
+Which of the following factors primarily drove the peasants of Kheda (Gujarat)
+to demand a relaxation in revenue collection in 1918?
+</div>
+
+<div class="question-text">
+1. A sudden and severe industrial recession in urban centres.<br>
+2. Widespread crop failure in the agricultural sector.<br>
+3. The outbreak of a devastating plague epidemic in the region.
+</div>
+
+<div class="question-text">
+<strong>Select the correct answer using the code given below:</strong>
+</div>
+
+<div class="options">
+
+<label class="option">
+<input type="radio" name="q3" value="A">
+(A) 1 and 2 only
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="B">
+(B) 2 and 3 only
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="C">
+(C) 1 and 3 only
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="D">
+(D) 1, 2, and 3
+</label>
+
+</div>
+</div>
+
+
+<!-- ================= Q4 ================= -->
+
+<div class="question">
+
+<span class="q-number">Q4</span>
+
+<div class="question-text">
+What is the core operational methodology of a true Satyagrahi when confronting an oppressor?
+</div>
+
+<div class="options">
+
+<label class="option">
+<input type="radio" name="q4" value="A">
+(A) Eliminating the oppressor physically to establish immediate justice.
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="B">
+(B) Appealing to the conscience of the oppressor to see the truth, rather than forcing them to accept it through violence.
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="C">
+(C) Commencing underground violent resistance to completely cripple the administrative machinery.
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="D">
+(D) Restricting the agitation purely to institutional and legal litigations in courts.
+</label>
+
+</div>
+</div>
+
+
+<!-- ================= Q5 ================= -->
+
+<div class="question">
+
+<span class="q-number">Q5</span>
+
+<div class="question-text">
+Consider the following statements regarding the growth of Nationalism:
+</div>
+
+<div class="question-text">
+(1) In Europe, nationalism was closely connected to the formation of nation-states.<br><br>
+(2) In colonies like India, the growth of nationalism was intimately connected to the anti-colonial movement.
+</div>
+
+<div class="question-text">
+<strong>Which of the statements given above is / are correct?</strong>
+</div>
+
+<div class="options">
+
+<label class="option">
+<input type="radio" name="q5" value="A">
+(A) Only 1
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="B">
+(B) Only 2
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="C">
+(C) Both 1 and 2
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="D">
+(D) Neither 1 nor 2
+</label>
+
+</div>
+</div>
+
+
+<!-- ================= Q6 ================= -->
+
+<div class="question">
+
+<span class="q-number">Q6</span>
+
+<div class="question-text">
+<strong>Assertion (A):</strong>
+In India, different social groups responded to the call of nationalism with unified goals and identical experiences.
+</div>
+
+<div class="question-text">
+<strong>Reason (R):</strong>
+The shared oppression under colonial rule provided a common bond that tied many different groups together.
+</div>
+
+<div class="question-text">
+<strong>Choose the correct option:</strong>
+</div>
+
+<div class="options">
+
+<label class="option">
+<input type="radio" name="q6" value="A">
+(A) Both (A) and (R) are true and (R) is the correct explanation of (A)
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="B">
+(B) Both (A) and (R) are true but (R) is not the correct explanation of (A)
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="C">
+(C) (A) is true but (R) is false
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="D">
+(D) (A) is false but (R) is true
+</label>
+
+</div>
+</div>
+
+
+<!-- ================= Q7 ================= -->
+
+<div class="question">
+
+<span class="q-number">Q7</span>
+
+<div class="question-text">
+Which of the following economic changes happened in India due to World War I?
+</div>
+
+<div class="question-text">
+1. Income tax was introduced.<br>
+2. Customs duties were lowered to help poor people.<br>
+3. Prices of daily items doubled between 1913 and 1918.
+</div>
+
+<div class="question-text">
+<strong>Choose the correct option:</strong>
+</div>
+
+<div class="options">
+
+<label class="option">
+<input type="radio" name="q7" value="A">
+(A) Only 1 and 2
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="B">
+(B) Only 2 and 3
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="C">
+(C) Only 1 and 3
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="D">
+(D) All 1, 2, and 3
+</label>
+
+</div>
+</div>
+
+
+<!-- ================= Q8 ================= -->
+
+<div class="question">
+
+<span class="q-number">Q8</span>
+
+<div class="question-text">
+<strong>Assertion (A):</strong>
+There was widespread anger in the villages of India during World War I.
+</div>
+
+<div class="question-text">
+<strong>Reason (R):</strong>
+The British colonial government forced village youths to join the army and fight the war.
+</div>
+
+<div class="question-text">
+<strong>Choose the correct option:</strong>
+</div>
+
+<div class="options">
+
+<label class="option">
+<input type="radio" name="q8" value="A">
+(A) Both (A) and (R) are true and (R) is the correct explanation of (A)
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="B">
+(B) Both (A) and (R) are true but (R) is NOT the correct explanation of (A)
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="C">
+(C) (A) is true but (R) is false
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="D">
+(D) (A) is false but (R) is true
+</label>
+
+</div>
+</div>
+
+
+<button type="button" class="submit-btn" onclick="checkAnswers()">
+SUBMIT TEST
+</button>
+
+</form>
+
+
+<!-- ================= RESULT ================= -->
+
+<div class="result" id="result">
+
+<h2>Test Result</h2>
+
+<div class="score" id="score"></div>
+
+<p id="message"></p>
+
+<div class="review" id="review"></div>
+
+</div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+<strong>GSI MANTRA</strong>
+
+<p>
+UPSC • BPSC • SSC • UGC NET • Competitive Exams
+</p>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+/* ================= CORRECT ANSWERS ================= */
+
+const answers = {
+
+    q1: "B",
+    q2: "B",
+    q3: "B",
+    q4: "B",
+    q5: "C",
+    q6: "D",
+    q7: "C",
+    q8: "A"
+
+};
+
+
+/* ================= CHECK ANSWERS ================= */
+
+function checkAnswers(){
+
+    let score = 0;
+    let answered = 0;
+
+    const total = Object.keys(answers).length;
+
+    let reviewHTML = "";
+
+    for(let q in answers){
+
+        const selected =
+            document.querySelector('input[name="' + q + '"]:checked');
+
+        const questionNumber =
+            q.replace("q","");
+
+        if(selected){
+
+            answered++;
+
+            if(selected.value === answers[q]){
+
+                score++;
+
+                reviewHTML += `
+                <div class="review-item correct">
+                    <strong>Q${questionNumber} ✓ Correct</strong>
+                    <br>
+                    Your Answer: ${selected.value}
+                </div>
+                `;
+
+            }else{
+
+                reviewHTML += `
+                <div class="review-item wrong">
+                    <strong>Q${questionNumber} ✗ Incorrect</strong>
+                    <br>
+                    Your Answer: ${selected.value}
+                    <br>
+                    Correct Answer: ${answers[q]}
+                </div>
+                `;
+            }
+
+        }else{
+
+            reviewHTML += `
+            <div class="review-item wrong">
+                <strong>Q${questionNumber} — Not Attempted</strong>
+                <br>
+                Correct Answer: ${answers[q]}
+            </div>
+            `;
+
+        }
+
+    }
+
+
+    const percentage =
+        ((score / total) * 100).toFixed(1);
+
+
+    document.getElementById("score").innerHTML =
+        score + " / " + total +
+        " (" + percentage + "%)";
+
+
+    let message = "";
+
+    if(percentage >= 80){
+
+        message = "Excellent Performance! Keep it up.";
+
+    }else if(percentage >= 60){
+
+        message = "Good Performance. Revise the weak areas.";
+
+    }else if(percentage >= 40){
+
+        message = "Average Performance. More revision is required.";
+
+    }else{
+
+        message = "Keep Practising. Revise the chapter thoroughly.";
+
+    }
+
+
+    document.getElementById("message").innerHTML =
+        message +
+        "<br><br>Attempted: " +
+        answered +
+        " / " +
+        total;
+
+
+    document.getElementById("review").innerHTML =
+        reviewHTML;
+
+
+    document.getElementById("result").style.display =
+        "block";
+
+
+    document.getElementById("result").scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
+```
