@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Advanced MCQ Test on Print Culture and the Modern World | GSI MANTRA | UPSC BPSC SSC UGC NET">
+
+<title>Print Culture and the Modern World - MCQ | GSI MANTRA</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,"Noto Sans Devanagari",sans-serif;
+    background:#f4f7fb;
+    color:#172033;
+    line-height:1.7;
+}
+
+/* HEADER */
+
+.header{
+    background:linear-gradient(135deg,#111827,#1e3a8a,#0f766e);
+    color:white;
+    text-align:center;
+    padding:38px 15px 30px;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:900;
+}
+
+.header h1{
+    font-size:27px;
+    margin:8px 0;
+}
+
+.header p{
+    margin:5px 0;
+    font-size:14px;
+}
+
+.badges span{
+    display:inline-block;
+    padding:5px 12px;
+    margin:4px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.4);
+    background:rgba(255,255,255,.12);
+    font-size:12px;
+    font-weight:bold;
+}
+
+/* NAV */
+
+.nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:white;
+    text-align:center;
+    padding:10px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.nav a{
+    color:#173b8f;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:bold;
+    margin:3px 7px;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:1000px;
+    margin:25px auto;
+    padding:0 15px;
+}
+
+/* NOTICE */
+
+.notice{
+    background:#fff8d8;
+    border-left:6px solid #eab308;
+    padding:15px 18px;
+    border-radius:9px;
+    margin-bottom:20px;
+}
+
+/* TEST CARD */
+
+.question{
+    background:white;
+    border:1px solid #dbe3ee;
+    border-radius:12px;
+    padding:20px;
+    margin:20px 0;
+    box-shadow:0 4px 12px rgba(15,23,42,.06);
+}
+
+.question h2{
+    color:#991b1b;
+    font-size:18px;
+    margin-top:0;
+}
+
+.option{
+    display:block;
+    background:#f8fafc;
+    border:1px solid #dbe3ee;
+    padding:11px 13px;
+    margin:9px 0;
+    border-radius:7px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.option:hover{
+    background:#eef4ff;
+    border-color:#2563eb;
+}
+
+.option input{
+    margin-right:9px;
+}
+
+/* BUTTON */
+
+.submit-area{
+    text-align:center;
+    margin:35px 0;
+}
+
+.submit-btn{
+    background:linear-gradient(135deg,#b91c1c,#ef4444);
+    color:white;
+    border:none;
+    padding:14px 30px;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:800;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(185,28,28,.25);
+}
+
+.submit-btn:hover{
+    transform:translateY(-2px);
+}
+
+/* RESULT */
+
+#result{
+    display:none;
+    background:#ecfdf5;
+    border:2px solid #059669;
+    border-radius:12px;
+    padding:20px;
+    margin:25px 0;
+    text-align:center;
+}
+
+.score{
+    font-size:28px;
+    font-weight:900;
+    color:#065f46;
+}
+
+/* EXPLANATION */
+
+.explanation{
+    display:none;
+    margin-top:15px;
+    padding:14px;
+    background:#f0fdf4;
+    border-left:5px solid #16a34a;
+    border-radius:6px;
+}
+
+.wrong{
+    background:#fff1f2;
+    border-left-color:#dc2626;
+}
+
+/* CORRECT / WRONG */
+
+.correct-answer{
+    background:#dcfce7 !important;
+    border-color:#16a34a !important;
+}
+
+.wrong-answer{
+    background:#fee2e2 !important;
+    border-color:#dc2626 !important;
+}
+
+/* WATERMARK */
+
+.watermark{
+    position:fixed;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%) rotate(-25deg);
+    width:310px;
+    height:310px;
+    border:7px solid rgba(30,64,175,.055);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:rgba(30,64,175,.055);
+    font-size:40px;
+    font-weight:900;
+    z-index:-1;
+    pointer-events:none;
+}
+
+.watermark-inner{
+    border:2px solid rgba(30,64,175,.055);
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:40px;
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:28px 15px;
+}
+
+/* MOBILE */
+
+@media(max-width:650px){
+
+    .logo{
+        font-size:27px;
+    }
+
+    .header h1{
+        font-size:21px;
+    }
+
+    .question{
+        padding:15px;
+    }
+
+    .question h2{
+        font-size:16px;
+    }
+
+    .option{
+        font-size:14px;
+    }
+
+    .watermark{
+        width:250px;
+        height:250px;
+        font-size:30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- WATERMARK -->
+
+<div class="watermark">
+    <div class="watermark-inner">
+        GSI<br>MANTRA
+    </div>
+</div>
+
+<!-- HEADER -->
+
+<header class="header">
+
+<div class="logo">📚 GSI MANTRA</div>
+
+<h1>Print Culture and the Modern World</h1>
+
+<p><strong>Advanced MCQ Test — 7 September 2026</strong></p>
+
+<p>
+UPSC • BPSC • SSC • UGC NET • State PCS
+</p>
+
+<div class="badges">
+<span>Advanced Level</span>
+<span>History</span>
+<span>5 MCQs</span>
+<span>Prelims</span>
+</div>
+
+</header>
+
+<!-- NAV -->
+
+<nav class="nav">
+<a href="index.html">🏠 Home</a>
+<a href="#test">📝 MCQ Test</a>
+<a href="#result">📊 Result</a>
+</nav>
+
+<main class="container">
+
+<div class="notice">
+
+<b>📌 Important Instruction:</b><br>
+
+सभी प्रश्नों को ध्यानपूर्वक पढ़ें। प्रत्येक प्रश्न में केवल
+एक सही उत्तर है। सभी प्रश्नों का उत्तर देने के बाद
+<strong>Submit Test</strong> बटन दबाएँ।
+
+</div>
+
+<section id="test">
+
+<!-- QUESTION 1 -->
+
+<div class="question" data-answer="3">
+
+<h2>Q1. How did the physical and material properties of early Chinese paper directly dictate the structural evolution of the traditional Chinese "accordion book"?</h2>
+
+<label class="option">
+<input type="radio" name="q1" value="1">
+1. It necessitated gluing multiple heavy parchment sheets together to create a rigid surface capable of absorbing thick, oil-based block-printing inks.
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="2">
+2. It required binding individual loose-leaf sheets with heavy leather spines to protect fragile calligraphy strokes from moisture.
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="3">
+3. Because the thin, porous paper could only be printed effectively on one side, the sheets had to be folded accordion-style and stitched or bound at the edge.
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="4">
+4. It forced publishers to develop metallic movable types that could pierce through multiple layers of paper simultaneously.
+</label>
+
+<div class="explanation">
+<strong>✅ Correct Answer: 3</strong><br><br>
+
+Thin, porous Chinese paper was generally not suited to effective
+double-sided printing. Therefore, sheets were folded in an
+accordion-like manner and bound at the edge to create the traditional
+book structure.
+
+<br><br>
+
+Woodblock printing was the dominant technology in this phase.
+Metal movable type was not the reason for the development of the
+accordion format. Heavy parchment and leather-spine binding were
+not characteristic features of this traditional Chinese book form.
+</div>
+
+</div>
+
+
+<!-- QUESTION 2 -->
+
+<div class="question" data-answer="1">
+
+<h2>Q2. What was the primary socioeconomic and administrative catalyst behind the massive surge in the volume of printed texts in 16th-century China?</h2>
+
+<label class="option">
+<input type="radio" name="q2" value="1">
+1. The exponential growth in the number of candidates preparing for the civil service examinations, which exponentially increased the demand for standardized textbooks.
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="2">
+2. The widespread commercial deregulation that allowed private merchant syndicates to monopolize religious and philosophical publishing.
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="3">
+3. Imperial decrees mandating the immediate destruction of handwritten manuscripts in favor of mass-produced woodblock scrolls.
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="4">
+4. The introduction of European mechanical printing presses via the Silk Road, which lowered production costs across all provinces.
+</label>
+
+<div class="explanation">
+<strong>✅ Correct Answer: 1</strong><br><br>
+
+The expansion of the civil service examination system created a
+huge demand for textbooks, reference works and examination-preparation
+materials.
+
+<br><br>
+
+The European mechanical press did not drive this 16th-century
+Chinese printing expansion. Printed and handwritten texts also
+continued to coexist.
+</div>
+
+</div>
+
+
+<!-- QUESTION 3 -->
+
+<div class="question" data-answer="4">
+
+<h2>Q3. How did the diversification of print culture in 17th-century China reflect a broader structural shift in urban society away from the rigid administrative monopoly of scholar-officials?</h2>
+
+<label class="option">
+<input type="radio" name="q3" value="1">
+1. Print was restricted exclusively to imperial edicts, prohibiting any private commercial circulation of literature.
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="2">
+2. Rural agrarian manuals completely replaced classical Confucian texts as the primary focus of urban publishing houses.
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="3">
+3. Foreign maritime trade logs became the only legally sanctioned reading material for the urban populace.
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="4">
+4. Print media expanded from official administrative texts into commercial data for merchants and leisure-oriented fiction and drama for the broader urban public.
+</label>
+
+<div class="explanation">
+<strong>✅ Correct Answer: 4</strong><br><br>
+
+17th-century urban prosperity expanded the market for printed
+material. Print was increasingly used for business and trade
+information as well as popular novels, drama and entertainment.
+
+<br><br>
+
+Thus, print culture moved beyond the narrow sphere of official
+administrative and scholarly texts and reached a much wider urban
+reading public.
+</div>
+
+</div>
+
+
+<!-- QUESTION 4 -->
+
+<div class="question" data-answer="2">
+
+<h2>Q4. What does the proliferation of published poetry, plays, and memoirs by elite women, officials' wives, and courtesans in 17th-century China reveal about the shifting boundaries of print culture?</h2>
+
+<label class="option">
+<input type="radio" name="q4" value="1">
+1. Female authorship was strictly supervised and anonymized by state censors to prevent any subversion of traditional patriarchal histories.
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="2">
+2. The commercial expansion of urban print culture created new public spaces and literary channels that enabled diverse female voices to record personal experiences and artistic creations.
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="3">
+3. Women were restricted solely to transcribing Buddhist sutras, with secular publishing remaining an exclusively male-dominated domain.
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="4">
+4. Literacy among women was legally mandated by the imperial court to improve household record-keeping and tax compliance.
+</label>
+
+<div class="explanation">
+<strong>✅ Correct Answer: 2</strong><br><br>
+
+The growth of commercial urban printing created new literary
+opportunities. Elite women, officials' wives and courtesans could
+participate in literary culture through poetry, drama and memoirs.
+
+<br><br>
+
+This indicates that print culture was not limited exclusively to
+official male scholarship and religious literature.
+</div>
+
+</div>
+
+
+<!-- QUESTION 5 -->
+
+<div class="question" data-answer="3">
+
+<h2>Q5. Which combination of factors catalyzed the transition from traditional Chinese hand-printed woodblocks to Western-style mechanical printing presses in 19th-century Shanghai?</h2>
+
+<label class="option">
+<input type="radio" name="q5" value="1">
+1. The complete extinction of skilled traditional woodblock artisans due to an empire-wide ban on hand-carved calligraphy.
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="2">
+2. Direct military intervention by neighboring East Asian nations forcing the immediate dismantling of traditional Chinese print shops.
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="3">
+3. The establishment of Western colonial/treaty outposts and the subsequent rise of Western-style schools that demanded fast, volume-heavy modern textbooks and periodicals.
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="4">
+4. A sudden scarcity of pear-wood blocks throughout the Yangtze Delta region, rendering woodblock carving physically impossible.
+</label>
+
+<div class="explanation">
+<strong>✅ Correct Answer: 3</strong><br><br>
+
+In 19th-century Shanghai, Western presence and treaty-port
+institutions contributed to the introduction and expansion of
+mechanical printing.
+
+<br><br>
+
+The growth of Western-style education, newspapers and modern
+periodicals created a demand for faster and larger-scale printing.
+The transition was therefore connected with new educational,
+commercial and colonial influences rather than the extinction of
+traditional artisans or a shortage of pear-wood blocks.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SUBMIT -->
+
+<div class="submit-area">
+
+<button class="submit-btn" onclick="checkTest()">
+📊 Submit Test
+</button>
+
+</div>
+
+
+<!-- RESULT -->
+
+<div id="result">
+
+<div class="score" id="score"></div>
+
+<p id="message"></p>
+
+</div>
+
+
+</main>
+
+
+<footer>
+
+<b style="font-size:21px;">📚 GSI MANTRA</b>
+
+<br><br>
+
+UPSC • BPSC • SSC • UGC NET • State PCS
+
+<br>
+
+Advanced History MCQ
+
+<br><br>
+
+<span style="color:#cbd5e1;">
+Print Culture and the Modern World
+</span>
+
+</footer>
+
+
+<script>
+
+function checkTest(){
+
+    let total = 5;
+    let score = 0;
+
+    for(let i=1;i<=total;i++){
+
+        let question = document.querySelector(
+            '.question[data-answer="' +
+            document.querySelectorAll('.question')[i-1].dataset.answer +
+            '"]'
+        );
+
+    }
+
+    let questions = document.querySelectorAll(".question");
+
+    questions.forEach(function(question,index){
+
+        let correct = question.dataset.answer;
+
+        let selected = question.querySelector(
+            'input[name="q'+(index+1)+'"]:checked'
+        );
+
+        let options = question.querySelectorAll(".option");
+
+        options.forEach(function(option){
+
+            option.classList.remove(
+                "correct-answer",
+                "wrong-answer"
+            );
+
+        });
+
+        let correctInput = question.querySelector(
+            'input[value="'+correct+'"]'
+        );
+
+        if(correctInput){
+            correctInput.parentElement.classList.add(
+                "correct-answer"
+            );
+        }
+
+        if(selected){
+
+            if(selected.value === correct){
+
+                score++;
+
+            }else{
+
+                selected.parentElement.classList.add(
+                    "wrong-answer"
+                );
+
+            }
+
+        }
+
+        let explanation = question.querySelector(".explanation");
+
+        explanation.style.display = "block";
+
+    });
+
+
+    let result = document.getElementById("result");
+    let scoreBox = document.getElementById("score");
+    let message = document.getElementById("message");
+
+    result.style.display = "block";
+
+    scoreBox.innerHTML =
+        "Your Score: " + score + " / " + total;
+
+    if(score === 5){
+
+        message.innerHTML =
+        "🏆 Excellent! Outstanding performance.";
+
+    }else if(score >= 4){
+
+        message.innerHTML =
+        "🌟 Very Good! Keep preparing at this level.";
+
+    }else if(score >= 3){
+
+        message.innerHTML =
+        "👍 Good attempt. Revise the topic once again.";
+
+    }else{
+
+        message.innerHTML =
+        "📚 Keep practicing. Revision will improve your score.";
+
+    }
+
+    result.scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
