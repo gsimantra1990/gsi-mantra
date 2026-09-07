@@ -1,0 +1,823 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GSI MANTRA | Daily MCQ Test - 07 September 2026</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f3f6fa;
+    color:#222;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:20px;
+}
+
+.header-content{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:65px;
+    height:65px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+    padding:4px;
+}
+
+.logo-text h1{
+    margin:0;
+    font-size:30px;
+}
+
+.logo-text p{
+    margin:5px 0 0;
+    font-size:14px;
+}
+
+/* ================= NAV ================= */
+
+nav{
+    background:#071d33;
+    text-align:center;
+    padding:12px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+/* ================= PAGE ================= */
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:30px 15px;
+}
+
+/* ================= TITLE ================= */
+
+.page-title{
+    background:white;
+    text-align:center;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    margin-bottom:25px;
+}
+
+.page-title h2{
+    margin:0;
+    color:#123c69;
+    font-size:30px;
+}
+
+.page-title p{
+    margin:8px 0 0;
+    color:#666;
+}
+
+/* ================= NOTICE ================= */
+
+.notice{
+    background:#fff4d6;
+    border-left:5px solid #f28c00;
+    padding:18px;
+    border-radius:8px;
+    margin-bottom:25px;
+    line-height:1.7;
+}
+
+/* ================= WATERMARK ================= */
+
+.mcq-area{
+    position:relative;
+    overflow:hidden;
+}
+
+.mcq-area::before{
+    content:"GSI MANTRA";
+    position:absolute;
+    top:45%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-25deg);
+    font-size:75px;
+    font-weight:bold;
+    color:rgba(18,60,105,0.055);
+    white-space:nowrap;
+    pointer-events:none;
+    z-index:0;
+}
+
+.question{
+    position:relative;
+    z-index:1;
+}
+
+/* ================= QUESTION ================= */
+
+.question{
+    background:white;
+    margin-bottom:22px;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+    border-left:5px solid #123c69;
+}
+
+.question h3{
+    color:#123c69;
+    margin-top:0;
+    line-height:1.6;
+}
+
+.question-text{
+    font-size:17px;
+    font-weight:600;
+    line-height:1.7;
+}
+
+.options{
+    margin-top:15px;
+}
+
+.option{
+    display:block;
+    background:#f7f9fc;
+    border:1px solid #dce3eb;
+    padding:12px 15px;
+    margin:9px 0;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.2s;
+    line-height:1.5;
+}
+
+.option:hover{
+    background:#eef4fa;
+    border-color:#123c69;
+}
+
+.option input{
+    margin-right:10px;
+}
+
+/* ================= EXPLANATION ================= */
+
+.answer{
+    display:none;
+    margin-top:15px;
+    background:#e9f8ee;
+    border-left:4px solid #198754;
+    padding:14px;
+    border-radius:6px;
+    color:#145c2e;
+    line-height:1.7;
+}
+
+.answer strong{
+    color:#0b6b35;
+}
+
+/* ================= BUTTON ================= */
+
+.button-area{
+    text-align:center;
+    margin:30px 0;
+}
+
+.submit-btn,
+.pdf-btn{
+    border:none;
+    padding:13px 25px;
+    border-radius:8px;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    margin:6px;
+}
+
+.submit-btn{
+    background:#123c69;
+}
+
+.submit-btn:hover{
+    background:#0b2948;
+}
+
+.pdf-btn{
+    background:#f28c00;
+}
+
+.pdf-btn:hover{
+    background:#d97700;
+}
+
+/* ================= RESULT ================= */
+
+#result{
+    display:none;
+    background:#eaf5ff;
+    border:2px solid #123c69;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    margin:25px 0;
+}
+
+#result h2{
+    color:#123c69;
+    margin-top:0;
+    background:none;
+}
+
+.score{
+    font-size:30px;
+    font-weight:bold;
+    color:#123c69;
+}
+
+#message{
+    font-size:17px;
+    font-weight:bold;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+    margin-top:40px;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+/* ================= PRINT ================= */
+
+@media print{
+
+    nav,
+    .submit-btn,
+    .pdf-btn,
+    .button-area,
+    #result{
+        display:none !important;
+    }
+
+    body{
+        background:white;
+    }
+
+    .container{
+        max-width:100%;
+    }
+
+    .question{
+        box-shadow:none;
+        border:1px solid #ddd;
+        page-break-inside:avoid;
+    }
+
+    .answer{
+        display:block !important;
+    }
+
+    footer{
+        margin-top:20px;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+    .header-content{
+        justify-content:center;
+    }
+
+    .logo-text h1{
+        font-size:24px;
+    }
+
+    .page-title h2{
+        font-size:24px;
+    }
+
+    .question{
+        padding:18px;
+    }
+
+    .question-text{
+        font-size:16px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:5px;
+        font-size:14px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="header-content">
+
+<div class="logo">
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+</div>
+
+<div class="logo-text">
+<h1>GSI MANTRA</h1>
+<p>Competitive Education • NCERT • UPSC • BPSC • SSC • UGC NET</p>
+</div>
+
+</div>
+
+</header>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+<a href="mcq-07-september-2026.html">📝 MCQ</a>
+<a href="current-affairs.html">📰 Current Affairs</a>
+
+</nav>
+
+
+<!-- ================= MAIN ================= -->
+
+<div class="container">
+
+<div class="page-title">
+
+<h2>📝 Daily Advanced MCQ Test</h2>
+
+<p>
+Print Culture and the Modern World
+</p>
+
+<p>
+📅 07 September 2026
+</p>
+
+<p>
+UPSC • BPSC • SSC • UGC NET • Competitive Exams
+</p>
+
+</div>
+
+
+<div class="notice">
+
+<strong>📢 Important Notice:</strong><br>
+
+पहले सभी प्रश्न ध्यानपूर्वक हल करें और उसके बाद
+<strong>Submit Test</strong> पर क्लिक करें।
+Submit करने के बाद आपका Score और सभी सही उत्तरों की
+Explanation दिखाई जाएगी।
+
+</div>
+
+
+<div class="mcq-area">
+
+
+<!-- ================= Q1 ================= -->
+
+<div class="question">
+
+<h3>
+Q1. How did the physical and material properties of early Chinese paper directly dictate the structural evolution of the traditional Chinese "accordion book"?
+</h3>
+
+<div class="options">
+
+<label class="option">
+<input type="radio" name="q1" value="A">
+(A) It necessitated gluing multiple heavy parchment sheets together to create a rigid surface capable of absorbing thick, oil-based block-printing inks.
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="B">
+(B) It required binding individual loose-leaf sheets with heavy leather spines to protect fragile calligraphy strokes from moisture.
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="C">
+(C) Because the thin, porous paper could only be printed effectively on one side, the sheets had to be folded accordion-style and stitched or bound at the edge.
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="D">
+(D) It forced publishers to develop metallic movable types that could pierce through multiple layers of paper simultaneously.
+</label>
+
+</div>
+
+<div class="answer">
+<strong>✅ Correct Answer: C</strong><br><br>
+
+Thin, porous Chinese paper prevented effective double-sided printing,
+prompting craftsmen to fold the sheets accordion-style and stitch them
+along the edge.
+
+Woodblock printing was standard during this phase, and metal movable
+type was not the reason for the accordion fold.
+
+Leather spines were not a characteristic feature of this traditional
+Chinese book-binding structure.
+
+Chinese books used traditional porous and thin paper rather than heavy
+parchment or oil-based inks.
+</div>
+
+</div>
+
+
+<!-- ================= Q2 ================= -->
+
+<div class="question">
+
+<h3>
+Q2. What was the primary socioeconomic and administrative catalyst behind the massive surge in the volume of printed texts in 16th-century China?
+</h3>
+
+<div class="options">
+
+<label class="option">
+<input type="radio" name="q2" value="A">
+(A) The exponential growth in the number of candidates preparing for the civil service examinations, which exponentially increased the demand for standardized textbooks.
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="B">
+(B) The widespread commercial deregulation that allowed private merchant syndicates to monopolize religious and philosophical publishing.
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="C">
+(C) Imperial decrees mandating the immediate destruction of handwritten manuscripts in favor of mass-produced woodblock scrolls.
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="D">
+(D) The introduction of European mechanical printing presses via the Silk Road, which lowered production costs across all provinces.
+</label>
+
+</div>
+
+<div class="answer">
+<strong>✅ Correct Answer: A</strong><br><br>
+
+The expansion of the civil service examination system created a huge
+demand for examination-oriented texts, textbooks and study materials.
+
+European mechanical printing presses arrived much later and were not
+the primary reason for the 16th-century expansion of Chinese printing.
+
+There was also no general imperial order requiring the destruction of
+handwritten manuscripts.
+</div>
+
+</div>
+
+
+<!-- ================= Q3 ================= -->
+
+<div class="question">
+
+<h3>
+Q3. How did the diversification of print culture in 17th-century China reflect a broader structural shift in urban society away from the rigid administrative monopoly of scholar-officials?
+</h3>
+
+<div class="options">
+
+<label class="option">
+<input type="radio" name="q3" value="A">
+(A) Print was restricted exclusively to imperial edicts, prohibiting any private commercial circulation of literature.
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="B">
+(B) Rural agrarian manuals completely replaced classical Confucian texts as the primary focus of urban publishing houses.
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="C">
+(C) Foreign maritime trade logs became the only legally sanctioned reading material for the urban populace.
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="D">
+(D) Print media expanded from official administrative texts into commercial data for merchants and leisure-oriented fiction and drama for the broader urban public.
+</label>
+
+</div>
+
+<div class="answer">
+<strong>✅ Correct Answer: D</strong><br><br>
+
+17th-century urban prosperity encouraged print to serve diverse needs.
+Printed material increasingly included commercial information, trade
+guides, popular novels, fiction, drama and other forms of entertainment.
+
+Thus, print culture expanded beyond official and administrative purposes
+into commercial and leisure-oriented spheres.
+</div>
+
+</div>
+
+
+<!-- ================= Q4 ================= -->
+
+<div class="question">
+
+<h3>
+Q4. What does the proliferation of published poetry, plays, and memoirs by elite women, officials' wives, and courtesans in 17th-century China reveal about the shifting boundaries of print culture?
+</h3>
+
+<div class="options">
+
+<label class="option">
+<input type="radio" name="q4" value="A">
+(A) Female authorship was strictly supervised and anonymized by state censors to prevent any subversion of traditional patriarchal histories.
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="B">
+(B) The commercial expansion of urban print culture created new public spaces and literary channels that enabled diverse female voices to record personal experiences and artistic creations.
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="C">
+(C) Women were restricted solely to transcribing Buddhist sutras, with secular publishing remaining an exclusively male-dominated domain.
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="D">
+(D) Literacy among women was legally mandated by the imperial court to improve household record-keeping and tax compliance.
+</label>
+
+</div>
+
+<div class="answer">
+<strong>✅ Correct Answer: B</strong><br><br>
+
+The expansion of urban print culture created new literary and commercial
+spaces. Elite women, officials' wives and courtesans could participate
+in literary culture through poetry, drama, memoirs and other writings.
+
+This demonstrates that print culture was becoming more diverse and was
+not limited exclusively to male official or religious writers.
+</div>
+
+</div>
+
+
+<!-- ================= Q5 ================= -->
+
+<div class="question">
+
+<h3>
+Q5. Which combination of factors catalyzed the transition from traditional Chinese hand-printed woodblocks to Western-style mechanical printing presses in 19th-century Shanghai?
+</h3>
+
+<div class="options">
+
+<label class="option">
+<input type="radio" name="q5" value="A">
+(A) The complete extinction of skilled traditional woodblock artisans due to an empire-wide ban on hand-carved calligraphy.
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="B">
+(B) Direct military intervention by neighboring East Asian nations forcing the immediate dismantling of traditional Chinese print shops.
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="C">
+(C) The establishment of Western colonial/treaty outposts and the subsequent rise of Western-style schools that demanded fast, volume-heavy modern textbooks and periodicals.
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="D">
+(D) A sudden scarcity of pear-wood blocks throughout the Yangtze Delta region, rendering woodblock carving physically impossible.
+</label>
+
+</div>
+
+<div class="answer">
+<strong>✅ Correct Answer: C</strong><br><br>
+
+Shanghai became an important centre for Western-style mechanical
+printing because of increasing Western presence, treaty-port networks,
+modern education and the growing demand for newspapers, textbooks and
+other printed material.
+
+The transition was therefore driven by technological, commercial and
+educational changes rather than the disappearance of traditional
+artisans or a shortage of pear-wood blocks.
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- ================= RESULT ================= -->
+
+<div id="result">
+
+<h2>🎯 Your Test Result</h2>
+
+<div class="score" id="score"></div>
+
+<p id="message"></p>
+
+</div>
+
+
+<!-- ================= BUTTONS ================= -->
+
+<div class="button-area">
+
+<button class="submit-btn" onclick="checkTest()">
+✅ Submit Test
+</button>
+
+<button class="pdf-btn" onclick="downloadPDF()">
+📥 Download / Save PDF
+</button>
+
+</div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h2>GSI MANTRA</h2>
+
+<p>
+Competitive Education • NCERT • Social Science • UPSC • BPSC • SSC • UGC NET
+</p>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+/* ================= ANSWERS ================= */
+
+const answers = {
+
+    q1:"C",
+    q2:"A",
+    q3:"D",
+    q4:"B",
+    q5:"C"
+
+};
+
+
+/* ================= CHECK TEST ================= */
+
+function checkTest(){
+
+    let score = 0;
+
+    let total = Object.keys(answers).length;
+
+    for(let q in answers){
+
+        let selected = document.querySelector(
+            'input[name="' + q + '"]:checked'
+        );
+
+        if(selected && selected.value === answers[q]){
+            score++;
+        }
+
+    }
+
+    document.getElementById("result").style.display = "block";
+
+    document.getElementById("score").innerHTML =
+        score + " / " + total;
+
+    let percentage = (score / total) * 100;
+
+    let message = "";
+
+    if(percentage === 100){
+
+        message = "🏆 Excellent! Perfect Score!";
+
+    }
+    else if(percentage >= 80){
+
+        message = "👏 Excellent performance! Keep it up.";
+
+    }
+    else if(percentage >= 60){
+
+        message = "👍 Good attempt. Revise the topic once.";
+
+    }
+    else if(percentage >= 40){
+
+        message = "📖 Average performance. More revision is needed.";
+
+    }
+    else{
+
+        message = "📚 Keep practising. You can improve!";
+
+    }
+
+    document.getElementById("message").innerHTML = message;
+
+
+    /* Show explanations */
+
+    document.querySelectorAll(".answer").forEach(function(item){
+
+        item.style.display = "block";
+
+    });
+
+
+    window.scrollTo({
+
+        top:document.getElementById("result").offsetTop - 20,
+
+        behavior:"smooth"
+
+    });
+
+}
+
+
+/* ================= PDF ================= */
+
+function downloadPDF(){
+
+    window.print();
+
+}
+
+</script>
+
+</body>
+</html>
+```
