@@ -2,19 +2,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Daily Advanced MCQ | GSI MANTRA</title>
+<title>Daily Advanced SST MCQs | GSI MANTRA</title>
 
 <meta name="description"
-content="GSI MANTRA Daily Advanced SST MCQs for UPSC, BPSC, SSC, UGC NET, State PCS and CBSE.">
+content="Daily Advanced SST MCQs for History, Geography, Political Science and Economics by GSI MANTRA.">
 
 <style>
 
 /* =====================================================
-   GSI MANTRA — DAILY ADVANCED SST MCQ
-   PREMIUM RESPONSIVE DESIGN
+   GSI MANTRA
+   DAILY ADVANCED SST MCQ
 ===================================================== */
 
 *{
@@ -27,19 +28,21 @@ html{
 
 body{
     margin:0;
-    font-family:Arial, "Noto Sans", sans-serif;
+    font-family:Arial,"Noto Sans",sans-serif;
     background:#f3f6fa;
     color:#1d2733;
     line-height:1.6;
 }
 
-/* ================= HEADER ================= */
+/* =====================================================
+   HEADER
+===================================================== */
 
 .header{
     background:linear-gradient(135deg,#042d5c,#075ca8,#159447);
     color:white;
-    padding:32px 15px;
     text-align:center;
+    padding:34px 15px;
     position:relative;
     overflow:hidden;
 }
@@ -47,31 +50,33 @@ body{
 .header:after{
     content:"GSI MANTRA";
     position:absolute;
+    right:-15px;
+    bottom:-25px;
     font-size:100px;
     font-weight:900;
     opacity:.05;
-    right:-15px;
-    bottom:-25px;
     pointer-events:none;
 }
 
 .logo{
     font-size:32px;
-    font-weight:800;
+    font-weight:900;
     letter-spacing:1px;
 }
 
 .header h1{
-    margin:8px 0 4px;
     font-size:29px;
+    margin:8px 0 5px;
 }
 
 .header p{
-    margin:5px 0 16px;
+    margin:5px 0 18px;
     opacity:.95;
 }
 
-/* BADGES */
+/* =====================================================
+   BADGES
+===================================================== */
 
 .badges{
     display:flex;
@@ -81,33 +86,133 @@ body{
 }
 
 .badges span{
-    background:rgba(255,255,255,.15);
-    border:1px solid rgba(255,255,255,.3);
     padding:7px 13px;
     border-radius:20px;
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.3);
     font-size:13px;
 }
 
-/* ================= MAIN ================= */
+/* =====================================================
+   MAIN
+===================================================== */
 
 .container{
-    width:min(950px,94%);
+    width:min(1000px,94%);
     margin:28px auto;
 }
 
-/* ================= DATE ================= */
+/* =====================================================
+   SUBJECT NAVIGATION
+===================================================== */
 
-.date-card{
+.subject-title{
+    text-align:center;
+    margin-bottom:18px;
+}
+
+.subject-title h2{
+    color:#063970;
+    margin-bottom:5px;
+}
+
+.subject-title p{
+    color:#687684;
+}
+
+/* SUBJECT GRID */
+
+.subject-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.subject-card{
+    background:white;
+    border-radius:16px;
+    padding:22px 12px;
+    text-align:center;
+    cursor:pointer;
+    border:2px solid transparent;
+    box-shadow:0 6px 22px rgba(0,0,0,.07);
+    transition:.25s;
+}
+
+.subject-card:hover{
+    transform:translateY(-4px);
+    border-color:#0b63b6;
+    box-shadow:0 10px 28px rgba(11,99,182,.15);
+}
+
+.subject-icon{
+    font-size:36px;
+    margin-bottom:8px;
+}
+
+.subject-name{
+    font-size:17px;
+    font-weight:800;
+    color:#063970;
+}
+
+.subject-sub{
+    font-size:12px;
+    color:#71808f;
+    margin-top:4px;
+}
+
+/* =====================================================
+   SUBJECT SECTIONS
+===================================================== */
+
+.subject-section{
+    display:none;
+}
+
+.subject-section.active{
+    display:block;
+}
+
+/* =====================================================
+   SECTION HEADING
+===================================================== */
+
+.section-heading{
     background:white;
     border-radius:16px;
     padding:20px;
     margin-bottom:20px;
-    box-shadow:0 5px 22px rgba(0,0,0,.07);
     border-left:6px solid #0b63b6;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.section-heading h2{
+    margin:0;
+    color:#063970;
+}
+
+.section-heading p{
+    margin:5px 0 0;
+    color:#657383;
+}
+
+/* =====================================================
+   DATE
+===================================================== */
+
+.date-card{
+    background:white;
+    border-radius:15px;
+    padding:18px 20px;
+    margin-bottom:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+    border-left:6px solid #159447;
 }
 
 .date{
-    font-size:22px;
+    font-size:21px;
     font-weight:800;
     color:#063970;
 }
@@ -115,10 +220,11 @@ body{
 .category{
     color:#657383;
     margin-top:5px;
-    font-size:15px;
 }
 
-/* ================= MCQ CARD ================= */
+/* =====================================================
+   MCQ CARD
+===================================================== */
 
 .mcq-card{
     background:white;
@@ -136,7 +242,7 @@ body{
     border-radius:20px;
     font-size:14px;
     font-weight:bold;
-    margin-bottom:16px;
+    margin-bottom:15px;
 }
 
 .subject-tag{
@@ -157,7 +263,9 @@ body{
     margin-bottom:22px;
 }
 
-/* ================= OPTIONS ================= */
+/* =====================================================
+   OPTIONS
+===================================================== */
 
 .option{
     display:block;
@@ -190,7 +298,9 @@ body{
     background:#fdeaea;
 }
 
-/* ================= SUBMIT ================= */
+/* =====================================================
+   BUTTON
+===================================================== */
 
 .submit-btn{
     display:block;
@@ -204,15 +314,15 @@ body{
     font-size:17px;
     font-weight:bold;
     cursor:pointer;
-    transition:.2s;
 }
 
 .submit-btn:hover{
-    transform:translateY(-1px);
     box-shadow:0 5px 15px rgba(11,99,182,.25);
 }
 
-/* ================= EXPLANATION ================= */
+/* =====================================================
+   ANSWER
+===================================================== */
 
 .answer-box{
     display:none;
@@ -234,8 +344,6 @@ body{
     line-height:1.75;
 }
 
-/* ================= EXAM POINT ================= */
-
 .exam-point{
     margin-top:20px;
     padding:18px;
@@ -248,43 +356,21 @@ body{
     color:#8a6200;
 }
 
-/* ================= SCORE ================= */
-
-.score-box{
-    display:none;
-    background:white;
-    border-radius:18px;
-    padding:25px;
-    margin:25px 0;
-    text-align:center;
-    box-shadow:0 7px 25px rgba(0,0,0,.09);
-    border-top:6px solid #159447;
-}
-
-.score-number{
-    font-size:36px;
-    font-weight:900;
-    color:#063970;
-}
-
-.score-message{
-    font-size:18px;
-    font-weight:bold;
-}
-
-/* ================= PREVIOUS ================= */
+/* =====================================================
+   PREVIOUS MCQS
+===================================================== */
 
 .previous{
-    margin-top:25px;
     background:white;
     border-radius:16px;
     padding:24px;
+    margin-top:25px;
     box-shadow:0 5px 20px rgba(0,0,0,.07);
 }
 
 .previous h2{
-    margin-top:0;
     color:#063970;
+    margin-top:0;
 }
 
 .previous-item{
@@ -298,21 +384,25 @@ body{
 }
 
 .previous-item a{
-    text-decoration:none;
     color:#0b63b6;
+    text-decoration:none;
     font-weight:bold;
 }
 
-/* ================= INFO ================= */
+/* =====================================================
+   INFO
+===================================================== */
 
 .info{
     margin-top:22px;
+    padding:20px;
     background:#eaf3ff;
     border-radius:12px;
-    padding:20px;
 }
 
-/* ================= FOOTER ================= */
+/* =====================================================
+   FOOTER
+===================================================== */
 
 .footer{
     margin-top:40px;
@@ -326,7 +416,9 @@ body{
     font-size:21px;
 }
 
-/* ================= WATERMARK ================= */
+/* =====================================================
+   WATERMARK
+===================================================== */
 
 .watermark{
     position:fixed;
@@ -340,16 +432,22 @@ body{
     z-index:999;
 }
 
-/* ================= MOBILE ================= */
+/* =====================================================
+   MOBILE
+===================================================== */
 
-@media(max-width:600px){
+@media(max-width:700px){
+
+    .subject-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
     .logo{
         font-size:27px;
     }
 
     .header h1{
-        font-size:22px;
+        font-size:23px;
     }
 
     .mcq-card{
@@ -360,21 +458,24 @@ body{
         font-size:18px;
     }
 
-    .option{
-        padding:13px;
+}
+
+@media(max-width:430px){
+
+    .subject-grid{
+        gap:10px;
+    }
+
+    .subject-card{
+        padding:18px 8px;
+    }
+
+    .subject-icon{
+        font-size:30px;
+    }
+
+    .subject-name{
         font-size:15px;
-    }
-
-    .subject-tag{
-        display:block;
-        width:max-content;
-        margin:8px 0 15px;
-    }
-
-    .previous-item{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:7px;
     }
 
 }
@@ -392,20 +493,26 @@ body{
 
 <header class="header">
 
-    <div class="logo">📚 GSI MANTRA</div>
+    <div class="logo">
+        📚 GSI MANTRA
+    </div>
 
-    <h1>Daily Advanced MCQs</h1>
+    <h1>
+        Daily Advanced MCQs
+    </h1>
 
     <p>
         Social Science (SST) • Online Test • Exam Practice
     </p>
 
     <div class="badges">
+
         <span>🔥 Daily Practice</span>
         <span>🎯 Exam Oriented</span>
         <span>📖 NCERT Based</span>
         <span>🧠 Conceptual</span>
         <span>🏆 Advanced Level</span>
+
     </div>
 
 </header>
@@ -415,167 +522,500 @@ body{
 
 
 <!-- =====================================================
+     SUBJECT SELECTION
+===================================================== -->
+
+<div class="subject-title">
+
+    <h2>
+        📚 Select Subject
+    </h2>
+
+    <p>
+        Social Science — Daily Advanced MCQs
+    </p>
+
+</div>
+
+
+<div class="subject-grid">
+
+
+    <div class="subject-card"
+         onclick="showSubject('history')">
+
+        <div class="subject-icon">
+            📘
+        </div>
+
+        <div class="subject-name">
+            History
+        </div>
+
+        <div class="subject-sub">
+            इतिहास
+        </div>
+
+    </div>
+
+
+    <div class="subject-card"
+         onclick="showSubject('geography')">
+
+        <div class="subject-icon">
+            🌍
+        </div>
+
+        <div class="subject-name">
+            Geography
+        </div>
+
+        <div class="subject-sub">
+            भूगोल
+        </div>
+
+    </div>
+
+
+    <div class="subject-card"
+         onclick="showSubject('political')">
+
+        <div class="subject-icon">
+            🏛️
+        </div>
+
+        <div class="subject-name">
+            Political Science
+        </div>
+
+        <div class="subject-sub">
+            नागरिक शास्त्र
+        </div>
+
+    </div>
+
+
+    <div class="subject-card"
+         onclick="showSubject('economics')">
+
+        <div class="subject-icon">
+            💰
+        </div>
+
+        <div class="subject-name">
+            Economics
+        </div>
+
+        <div class="subject-sub">
+            अर्थशास्त्र
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
      =====================================================
      
      ⭐⭐⭐ DAILY CONTENT — EDIT ONLY THIS PART ⭐⭐⭐
      
-     आगे से रोज केवल नीचे के MCQ DATA को बदलना है।
+     रोज नया MCQ इसी CONTENT AREA में जोड़ें।
      
-     DATE
-     SUBJECT
-     QUESTION
-     OPTIONS
-     CORRECT ANSWER
-     EXPLANATION
-     EXAM POINT
+     पुराने MCQs को DELETE न करें।
      
-     बाकी पूरे HTML को बिल्कुल न छेड़ें।
+     नया MCQ पुराने MCQ के ऊपर या नीचे ADD किया जा सकता है।
      
      =====================================================
 ===================================================== -->
 
 
-<div class="date-card">
+<!-- =====================================================
+     HISTORY
+===================================================== -->
 
-    <div class="date">
-        📅 10 September 2026
-    </div>
-
-    <div class="category">
-        Social Science (SST) → History → Nationalism in India
-    </div>
-
-</div>
+<section id="history" class="subject-section active">
 
 
-<!-- ================= MCQ 01 ================= -->
+    <div class="section-heading">
 
-<div class="mcq-card" data-answer="C">
+        <h2>
+            📘 History — Daily Advanced MCQs
+        </h2>
 
-    <div>
-        <span class="mcq-number">
-            📝 DAILY ADVANCED MCQ – 01
-        </span>
-
-        <span class="subject-tag">
-            History
-        </span>
-    </div>
-
-
-    <div class="question">
-
-        What did Mahatma Gandhi mean when he described
-        <em>Satyagraha</em> as “active resistance” rather than
-        “passive resistance”?
+        <p>
+            Nationalism in India • Modern Indian History
+        </p>
 
     </div>
 
 
-    <label class="option">
-        <input type="radio" name="q1" value="A">
-        <strong>A.</strong>
-        Satyagraha involved using physical force to defeat
-        the opponent and destroy his political authority.
-    </label>
+    <!-- DATE -->
 
+    <div class="date-card">
 
-    <label class="option">
-        <input type="radio" name="q1" value="B">
-        <strong>B.</strong>
-        Satyagraha meant passively tolerating injustice without
-        actively participating in political movements.
-    </label>
-
-
-    <label class="option">
-        <input type="radio" name="q1" value="C">
-        <strong>C.</strong>
-        Satyagraha was an active moral and non-violent struggle
-        against injustice, based on truth and soul-force, aimed
-        at transforming the opponent rather than destroying him.
-    </label>
-
-
-    <label class="option">
-        <input type="radio" name="q1" value="D">
-        <strong>D.</strong>
-        Satyagraha primarily meant avoiding armed conflict while
-        restricting the struggle to the boycott of government
-        institutions.
-    </label>
-
-
-    <button class="submit-btn" onclick="checkSingleAnswer(this)">
-        ✅ Check Answer
-    </button>
-
-
-    <div class="answer-box">
-
-        <div class="answer-title">
-            ✅ Correct Answer: C
+        <div class="date">
+            📅 10 September 2026
         </div>
 
-        <div class="explanation">
+        <div class="category">
+            Jallianwala Bagh & Non-Cooperation Movement
+        </div>
 
-            Gandhi rejected the idea that Satyagraha was merely
-            <strong>passive resistance</strong>. A Satyagrahi actively
-            resisted injustice, but without physical violence or hatred.
+    </div>
+
+
+    <!-- MCQ -->
+
+    <div class="mcq-card" data-answer="A">
+
+        <div>
+
+            <span class="mcq-number">
+                📝 DAILY ADVANCED MCQ – 01
+            </span>
+
+            <span class="subject-tag">
+                History
+            </span>
+
+        </div>
+
+
+        <div class="question">
+
+            With reference to the events following the Jallianwala Bagh
+            incident and the beginning of the Non-Cooperation-Khilafat
+            Movement, consider the following statements:
 
             <br><br>
 
-            The struggle was based on
-            <strong>truth, soul-force, love and non-violence</strong>.
-            Its purpose was not to inflict pain or destroy the adversary,
-            but to appeal to the opponent's conscience and bring about
-            change through moral force.
-
-        </div>
-
-
-        <div class="exam-point">
-
-            <strong>🎯 EXAM POINT</strong>
+            <strong>1.</strong> General Dyer ordered firing at Jallianwala
+            Bagh with the stated intention of creating terror and awe
+            among the satyagrahis.
 
             <br><br>
 
-            Satyagraha =
-            <strong>
-            Active Resistance + Truth + Soul-force +
-            Non-violence + No ill-will
-            </strong>
+            <strong>2.</strong> Mahatma Gandhi called off the Rowlatt
+            Satyagraha after violence spread in different parts of
+            the country.
+
+            <br><br>
+
+            <strong>3.</strong> Gandhi considered the Khilafat issue as
+            an opportunity to bring Hindus and Muslims closer and build
+            a broader-based national movement.
+
+            <br><br>
+
+            <strong>4.</strong> The Non-Cooperation programme adopted at
+            Nagpur in December 1920 immediately began with a full-scale
+            civil disobedience campaign.
+
+            <br><br>
+
+            Which of the statements given above are correct?
+
+        </div>
+
+
+        <!-- OPTIONS -->
+
+        <label class="option">
+
+            <input type="radio" name="history-q1" value="A">
+
+            <strong>A.</strong>
+            1, 2 and 3 only
+
+        </label>
+
+
+        <label class="option">
+
+            <input type="radio" name="history-q1" value="B">
+
+            <strong>B.</strong>
+            1 and 4 only
+
+        </label>
+
+
+        <label class="option">
+
+            <input type="radio" name="history-q1" value="C">
+
+            <strong>C.</strong>
+            2 and 3 only
+
+        </label>
+
+
+        <label class="option">
+
+            <input type="radio" name="history-q1" value="D">
+
+            <strong>D.</strong>
+            1, 2, 3 and 4
+
+        </label>
+
+
+        <button class="submit-btn"
+                onclick="checkSingleAnswer(this)">
+
+            ✅ Check Answer
+
+        </button>
+
+
+        <!-- ANSWER -->
+
+        <div class="answer-box">
+
+            <div class="answer-title">
+
+                ✅ Correct Answer: A — 1, 2 and 3 only
+
+            </div>
+
+
+            <div class="explanation">
+
+                <strong>Statement 1 — Correct:</strong>
+
+                <br>
+
+                General Dyer ordered firing on the crowd gathered at
+                Jallianwala Bagh. He later stated that his objective
+                was to produce a “moral effect” and create a feeling
+                of terror and awe among the satyagrahis.
+
+                <br><br>
+
+
+                <strong>Statement 2 — Correct:</strong>
+
+                <br>
+
+                As violence spread following the Jallianwala Bagh
+                incident and the government responded with brutal
+                repression, Mahatma Gandhi called off the Rowlatt
+                Satyagraha.
+
+                <br><br>
+
+
+                <strong>Statement 3 — Correct:</strong>
+
+                <br>
+
+                Gandhi wanted to launch a more broad-based national
+                movement. He believed that this could not be achieved
+                without bringing Hindus and Muslims closer. He therefore
+                saw the Khilafat issue as an opportunity to bring Muslims
+                into a unified national movement.
+
+                <br><br>
+
+
+                <strong>Statement 4 — Incorrect:</strong>
+
+                <br>
+
+                The Non-Cooperation programme was planned in stages.
+                It initially included the surrender of government-awarded
+                titles and the boycott of civil services, army, police,
+                courts, legislative councils, schools and foreign goods.
+
+                <br><br>
+
+                Full civil disobedience was proposed as a later stage
+                if the government responded with repression.
+
+            </div>
+
+
+            <div class="exam-point">
+
+                <strong>
+                    🎯 EXAM POINT
+                </strong>
+
+                <br><br>
+
+                Jallianwala Bagh
+                →
+                Withdrawal of Rowlatt Satyagraha
+                →
+                Khilafat Issue
+                →
+                Hindu-Muslim Unity
+                →
+                Non-Cooperation Movement
+
+                <br><br>
+
+                📌 The Non-Cooperation Movement was planned
+                in stages; full civil disobedience was not
+                the immediate first step.
+
+            </div>
 
         </div>
 
     </div>
 
-</div>
+
+    <!-- =================================================
+         FUTURE HISTORY MCQs
+         
+         यहाँ अगला History MCQ ADD करें।
+    ================================================= -->
+
+
+
+</section>
 
 
 <!-- =====================================================
-     ⭐ END DAILY CONTENT
+     GEOGRAPHY
 ===================================================== -->
+
+<section id="geography" class="subject-section">
+
+    <div class="section-heading">
+
+        <h2>
+            🌍 Geography — Daily Advanced MCQs
+        </h2>
+
+        <p>
+            Resources • Agriculture • Industries • Environment
+        </p>
+
+    </div>
+
+
+    <div class="date-card">
+
+        <div class="date">
+            📅 Coming Soon
+        </div>
+
+        <div class="category">
+            Geography Daily MCQs
+        </div>
+
+    </div>
+
+
+    <div class="mcq-card">
+
+        <div class="question">
+
+            🌍 Geography Daily Advanced MCQs will be added here.
+
+        </div>
+
+    </div>
+
+</section>
 
 
 <!-- =====================================================
-     SCORE
+     POLITICAL SCIENCE
 ===================================================== -->
 
-<div class="score-box" id="scoreBox">
+<section id="political" class="subject-section">
 
-    <div>
-        🏆 Your Result
+    <div class="section-heading">
+
+        <h2>
+            🏛️ Political Science — Daily Advanced MCQs
+        </h2>
+
+        <p>
+            Power Sharing • Federalism • Democracy • Political Institutions
+        </p>
+
     </div>
 
-    <div class="score-number" id="scoreNumber">
-        0 / 1
+
+    <div class="date-card">
+
+        <div class="date">
+            📅 Coming Soon
+        </div>
+
+        <div class="category">
+            Political Science Daily MCQs
+        </div>
+
     </div>
 
-    <div class="score-message" id="scoreMessage">
+
+    <div class="mcq-card">
+
+        <div class="question">
+
+            🏛️ Political Science Daily Advanced MCQs will be added here.
+
+        </div>
+
     </div>
 
-</div>
+</section>
+
+
+<!-- =====================================================
+     ECONOMICS
+===================================================== -->
+
+<section id="economics" class="subject-section">
+
+    <div class="section-heading">
+
+        <h2>
+            💰 Economics — Daily Advanced MCQs
+        </h2>
+
+        <p>
+            Development • Sectors • Money & Credit • Globalisation
+        </p>
+
+    </div>
+
+
+    <div class="date-card">
+
+        <div class="date">
+            📅 Coming Soon
+        </div>
+
+        <div class="category">
+            Economics Daily MCQs
+        </div>
+
+    </div>
+
+
+    <div class="mcq-card">
+
+        <div class="question">
+
+            💰 Economics Daily Advanced MCQs will be added here.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     END DAILY CONTENT
+===================================================== -->
 
 
 <!-- =====================================================
@@ -584,20 +1024,34 @@ body{
 
 <div class="previous">
 
-    <h2>📚 Previous Daily MCQs</h2>
+    <h2>
+        📚 Previous Daily MCQs
+    </h2>
+
 
     <div class="previous-item">
-        <span>📅 07 September 2026</span>
+
+        <span>
+            📅 07 September 2026
+        </span>
+
         <a href="mcq-2026-09-07.html">
-            Open MCQ →
+            Open →
         </a>
+
     </div>
 
+
     <div class="previous-item">
-        <span>📅 06 September 2026</span>
+
+        <span>
+            📅 06 September 2026
+        </span>
+
         <a href="mcq-2026-09-06.html">
-            Open MCQ →
+            Open →
         </a>
+
     </div>
 
 </div>
@@ -609,7 +1063,9 @@ body{
 
 <div class="info">
 
-    <strong>📌 About GSI MANTRA Daily Advanced MCQs</strong>
+    <strong>
+        📌 About GSI MANTRA Daily Advanced SST MCQs
+    </strong>
 
     <br><br>
 
@@ -619,8 +1075,7 @@ body{
 
     <br><br>
 
-    Questions cover all major areas of
-    <strong>Social Science (SST)</strong>:
+    The platform covers all four major Social Science subjects:
 
     <br><br>
 
@@ -628,11 +1083,6 @@ body{
     🌍 Geography &nbsp; • &nbsp;
     🏛️ Political Science &nbsp; • &nbsp;
     💰 Economics
-
-    <br><br>
-
-    The questions focus on NCERT concepts, analytical thinking,
-    factual understanding and examination-oriented preparation.
 
 </div>
 
@@ -646,7 +1096,9 @@ body{
 
 <footer class="footer">
 
-    <strong>GSI MANTRA</strong>
+    <strong>
+        GSI MANTRA
+    </strong>
 
     <br><br>
 
@@ -675,17 +1127,55 @@ body{
 <script>
 
 /* =====================================================
-   SINGLE MCQ CHECK
+   SUBJECT SWITCHER
+===================================================== */
+
+function showSubject(subject){
+
+    const sections =
+        document.querySelectorAll(".subject-section");
+
+    sections.forEach(function(section){
+
+        section.classList.remove("active");
+
+    });
+
+
+    const selected =
+        document.getElementById(subject);
+
+    if(selected){
+
+        selected.classList.add("active");
+
+        selected.scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
+
+    }
+
+}
+
+
+/* =====================================================
+   MCQ ANSWER CHECKER
 ===================================================== */
 
 function checkSingleAnswer(button){
 
-    const card = button.closest(".mcq-card");
+    const card =
+        button.closest(".mcq-card");
 
-    const correctAnswer = card.dataset.answer;
+    const correctAnswer =
+        card.dataset.answer;
 
     const selected =
-        card.querySelector('input[type="radio"]:checked');
+        card.querySelector(
+            'input[type="radio"]:checked'
+        );
+
 
     const answerBox =
         card.querySelector(".answer-box");
@@ -697,14 +1187,18 @@ function checkSingleAnswer(button){
     if(!selected){
 
         alert("⚠️ Please select an option first.");
+
         return;
+
     }
 
 
-    /* Prevent changing after submission */
+    /* Prevent multiple submissions */
 
     button.disabled = true;
+
     button.style.opacity = "0.7";
+
     button.innerText = "Answer Checked";
 
 
@@ -716,12 +1210,19 @@ function checkSingleAnswer(button){
             option.querySelector("input");
 
         if(input.value === correctAnswer){
+
             option.classList.add("correct");
+
         }
 
-        if(input.checked && input.value !== correctAnswer){
+
+        if(input.checked &&
+           input.value !== correctAnswer){
+
             option.classList.add("wrong");
+
         }
+
 
         input.disabled = true;
 
@@ -730,15 +1231,16 @@ function checkSingleAnswer(button){
 
     /* Show explanation */
 
-    answerBox.style.display = "block";
+    if(answerBox){
 
+        answerBox.style.display = "block";
 
-    /* Scroll */
+        answerBox.scrollIntoView({
+            behavior:"smooth",
+            block:"nearest"
+        });
 
-    answerBox.scrollIntoView({
-        behavior:"smooth",
-        block:"nearest"
-    });
+    }
 
 }
 
