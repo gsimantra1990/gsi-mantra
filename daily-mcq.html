@@ -7,14 +7,15 @@
 
 <title>Daily Advanced MCQ | GSI MANTRA</title>
 
-<meta name="description" content="GSI MANTRA Daily Advanced MCQs for UPSC, BPSC, SSC, UGC NET, State PCS and CBSE.">
+<meta name="description"
+content="GSI MANTRA Daily Advanced SST MCQs for UPSC, BPSC, SSC, UGC NET, State PCS and CBSE.">
 
 <style>
 
-/* =========================
-   GSI MANTRA DAILY MCQ
-   PREMIUM DESIGN
-========================= */
+/* =====================================================
+   GSI MANTRA — DAILY ADVANCED SST MCQ
+   PREMIUM RESPONSIVE DESIGN
+===================================================== */
 
 *{
     box-sizing:border-box;
@@ -29,14 +30,15 @@ body{
     font-family:Arial, "Noto Sans", sans-serif;
     background:#f3f6fa;
     color:#1d2733;
+    line-height:1.6;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 .header{
     background:linear-gradient(135deg,#042d5c,#075ca8,#159447);
     color:white;
-    padding:30px 15px;
+    padding:32px 15px;
     text-align:center;
     position:relative;
     overflow:hidden;
@@ -45,11 +47,12 @@ body{
 .header:after{
     content:"GSI MANTRA";
     position:absolute;
-    font-size:90px;
-    font-weight:bold;
-    opacity:.06;
-    right:-20px;
+    font-size:100px;
+    font-weight:900;
+    opacity:.05;
+    right:-15px;
     bottom:-25px;
+    pointer-events:none;
 }
 
 .logo{
@@ -59,12 +62,12 @@ body{
 }
 
 .header h1{
-    margin:10px 0 5px;
-    font-size:27px;
+    margin:8px 0 4px;
+    font-size:29px;
 }
 
 .header p{
-    margin:5px 0 15px;
+    margin:5px 0 16px;
     opacity:.95;
 }
 
@@ -78,80 +81,93 @@ body{
 }
 
 .badges span{
-    background:rgba(255,255,255,.16);
+    background:rgba(255,255,255,.15);
     border:1px solid rgba(255,255,255,.3);
-    padding:7px 12px;
+    padding:7px 13px;
     border-radius:20px;
     font-size:13px;
 }
 
-/* CONTAINER */
+/* ================= MAIN ================= */
 
 .container{
     width:min(950px,94%);
-    margin:25px auto;
+    margin:28px auto;
 }
 
-/* DATE */
+/* ================= DATE ================= */
 
 .date-card{
     background:white;
-    border-radius:15px;
-    padding:18px 20px;
+    border-radius:16px;
+    padding:20px;
     margin-bottom:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,.07);
+    box-shadow:0 5px 22px rgba(0,0,0,.07);
     border-left:6px solid #0b63b6;
 }
 
 .date{
-    font-size:21px;
-    font-weight:bold;
+    font-size:22px;
+    font-weight:800;
     color:#063970;
 }
 
 .category{
     color:#657383;
     margin-top:5px;
+    font-size:15px;
 }
 
-/* MCQ CARD */
+/* ================= MCQ CARD ================= */
 
 .mcq-card{
     background:white;
     border-radius:18px;
     padding:28px;
-    box-shadow:0 8px 30px rgba(0,0,0,.09);
+    margin-bottom:22px;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
 }
 
 .mcq-number{
     display:inline-block;
     background:#063970;
     color:white;
-    padding:7px 13px;
+    padding:7px 14px;
     border-radius:20px;
     font-size:14px;
-    margin-bottom:15px;
+    font-weight:bold;
+    margin-bottom:16px;
+}
+
+.subject-tag{
+    display:inline-block;
+    margin-left:7px;
+    padding:6px 12px;
+    border-radius:18px;
+    background:#eaf3ff;
+    color:#075ca8;
+    font-size:13px;
+    font-weight:bold;
 }
 
 .question{
-    font-size:21px;
-    line-height:1.65;
+    font-size:20px;
+    line-height:1.7;
     font-weight:700;
     margin-bottom:22px;
 }
 
-/* OPTIONS */
+/* ================= OPTIONS ================= */
 
 .option{
     display:block;
-    padding:16px;
-    margin:12px 0;
+    padding:15px 16px;
+    margin:11px 0;
     border:2px solid #e1e7ef;
     border-radius:12px;
     background:#fafcff;
     cursor:pointer;
     transition:.25s;
-    line-height:1.5;
 }
 
 .option:hover{
@@ -164,7 +180,17 @@ body{
     transform:scale(1.15);
 }
 
-/* BUTTON */
+.option.correct{
+    border-color:#159447;
+    background:#e8f8ed;
+}
+
+.option.wrong{
+    border-color:#d93025;
+    background:#fdeaea;
+}
+
+/* ================= SUBMIT ================= */
 
 .submit-btn{
     display:block;
@@ -186,18 +212,7 @@ body{
     box-shadow:0 5px 15px rgba(11,99,182,.25);
 }
 
-/* RESULT */
-
-.result{
-    display:none;
-    margin-top:20px;
-    padding:17px;
-    border-radius:12px;
-    font-weight:bold;
-    text-align:center;
-}
-
-/* ANSWER */
+/* ================= EXPLANATION ================= */
 
 .answer-box{
     display:none;
@@ -215,11 +230,11 @@ body{
 }
 
 .explanation{
-    line-height:1.75;
     margin-top:10px;
+    line-height:1.75;
 }
 
-/* EXAM POINT */
+/* ================= EXAM POINT ================= */
 
 .exam-point{
     margin-top:20px;
@@ -227,14 +242,37 @@ body{
     background:#fff8e5;
     border-left:6px solid #e2a400;
     border-radius:10px;
-    line-height:1.6;
 }
 
 .exam-point strong{
     color:#8a6200;
 }
 
-/* PREVIOUS MCQ */
+/* ================= SCORE ================= */
+
+.score-box{
+    display:none;
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    margin:25px 0;
+    text-align:center;
+    box-shadow:0 7px 25px rgba(0,0,0,.09);
+    border-top:6px solid #159447;
+}
+
+.score-number{
+    font-size:36px;
+    font-weight:900;
+    color:#063970;
+}
+
+.score-message{
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* ================= PREVIOUS ================= */
 
 .previous{
     margin-top:25px;
@@ -265,31 +303,30 @@ body{
     font-weight:bold;
 }
 
-/* INFO */
+/* ================= INFO ================= */
 
 .info{
-    margin-top:20px;
+    margin-top:22px;
     background:#eaf3ff;
     border-radius:12px;
-    padding:18px;
-    line-height:1.6;
+    padding:20px;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 .footer{
     margin-top:40px;
-    padding:30px 15px;
+    padding:32px 15px;
     text-align:center;
     background:#062e57;
     color:white;
 }
 
 .footer strong{
-    font-size:20px;
+    font-size:21px;
 }
 
-/* WATERMARK */
+/* ================= WATERMARK ================= */
 
 .watermark{
     position:fixed;
@@ -303,7 +340,7 @@ body{
     z-index:999;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 @media(max-width:600px){
 
@@ -328,6 +365,12 @@ body{
         font-size:15px;
     }
 
+    .subject-tag{
+        display:block;
+        width:max-content;
+        margin:8px 0 15px;
+    }
+
     .previous-item{
         flex-direction:column;
         align-items:flex-start;
@@ -339,11 +382,13 @@ body{
 </style>
 </head>
 
+
 <body>
 
-<!-- =========================
+
+<!-- =====================================================
      HEADER
-========================= -->
+===================================================== -->
 
 <header class="header">
 
@@ -352,7 +397,7 @@ body{
     <h1>Daily Advanced MCQs</h1>
 
     <p>
-        UPSC • BPSC • SSC • UGC NET • State PCS • CBSE
+        Social Science (SST) • Online Test • Exam Practice
     </p>
 
     <div class="badges">
@@ -360,6 +405,7 @@ body{
         <span>🎯 Exam Oriented</span>
         <span>📖 NCERT Based</span>
         <span>🧠 Conceptual</span>
+        <span>🏆 Advanced Level</span>
     </div>
 
 </header>
@@ -367,12 +413,27 @@ body{
 
 <div class="container">
 
-<!-- =========================
-     CONTENT DATA
+
+<!-- =====================================================
+     =====================================================
      
-     आगे रोज केवल इसी हिस्से
-     को बदलना है।
-========================= -->
+     ⭐⭐⭐ DAILY CONTENT — EDIT ONLY THIS PART ⭐⭐⭐
+     
+     आगे से रोज केवल नीचे के MCQ DATA को बदलना है।
+     
+     DATE
+     SUBJECT
+     QUESTION
+     OPTIONS
+     CORRECT ANSWER
+     EXPLANATION
+     EXAM POINT
+     
+     बाकी पूरे HTML को बिल्कुल न छेड़ें।
+     
+     =====================================================
+===================================================== -->
+
 
 <div class="date-card">
 
@@ -381,21 +442,26 @@ body{
     </div>
 
     <div class="category">
-        History → Nationalism in India → Satyagraha
+        Social Science (SST) → History → Nationalism in India
     </div>
 
 </div>
 
 
-<!-- =========================
-     MCQ
-========================= -->
+<!-- ================= MCQ 01 ================= -->
 
-<div class="mcq-card">
+<div class="mcq-card" data-answer="C">
 
-    <div class="mcq-number">
-        📝 DAILY ADVANCED MCQ – 01
+    <div>
+        <span class="mcq-number">
+            📝 DAILY ADVANCED MCQ – 01
+        </span>
+
+        <span class="subject-tag">
+            History
+        </span>
     </div>
+
 
     <div class="question">
 
@@ -407,7 +473,7 @@ body{
 
 
     <label class="option">
-        <input type="radio" name="answer" value="A">
+        <input type="radio" name="q1" value="A">
         <strong>A.</strong>
         Satyagraha involved using physical force to defeat
         the opponent and destroy his political authority.
@@ -415,7 +481,7 @@ body{
 
 
     <label class="option">
-        <input type="radio" name="answer" value="B">
+        <input type="radio" name="q1" value="B">
         <strong>B.</strong>
         Satyagraha meant passively tolerating injustice without
         actively participating in political movements.
@@ -423,7 +489,7 @@ body{
 
 
     <label class="option">
-        <input type="radio" name="answer" value="C">
+        <input type="radio" name="q1" value="C">
         <strong>C.</strong>
         Satyagraha was an active moral and non-violent struggle
         against injustice, based on truth and soul-force, aimed
@@ -432,7 +498,7 @@ body{
 
 
     <label class="option">
-        <input type="radio" name="answer" value="D">
+        <input type="radio" name="q1" value="D">
         <strong>D.</strong>
         Satyagraha primarily meant avoiding armed conflict while
         restricting the struggle to the boycott of government
@@ -440,19 +506,12 @@ body{
     </label>
 
 
-    <button class="submit-btn" onclick="checkAnswer()">
-        ✅ Submit Answer
+    <button class="submit-btn" onclick="checkSingleAnswer(this)">
+        ✅ Check Answer
     </button>
 
 
-    <!-- RESULT -->
-
-    <div class="result" id="result"></div>
-
-
-    <!-- ANSWER -->
-
-    <div class="answer-box" id="answerBox">
+    <div class="answer-box">
 
         <div class="answer-title">
             ✅ Correct Answer: C
@@ -494,9 +553,34 @@ body{
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
+     ⭐ END DAILY CONTENT
+===================================================== -->
+
+
+<!-- =====================================================
+     SCORE
+===================================================== -->
+
+<div class="score-box" id="scoreBox">
+
+    <div>
+        🏆 Your Result
+    </div>
+
+    <div class="score-number" id="scoreNumber">
+        0 / 1
+    </div>
+
+    <div class="score-message" id="scoreMessage">
+    </div>
+
+</div>
+
+
+<!-- =====================================================
      PREVIOUS MCQs
-========================= -->
+===================================================== -->
 
 <div class="previous">
 
@@ -504,39 +588,61 @@ body{
 
     <div class="previous-item">
         <span>📅 07 September 2026</span>
-        <a href="mcq-2026-09-07.html">Open MCQ →</a>
+        <a href="mcq-2026-09-07.html">
+            Open MCQ →
+        </a>
     </div>
 
     <div class="previous-item">
         <span>📅 06 September 2026</span>
-        <a href="mcq-2026-09-06.html">Open MCQ →</a>
+        <a href="mcq-2026-09-06.html">
+            Open MCQ →
+        </a>
     </div>
 
 </div>
 
 
-<!-- =========================
-     WEBSITE INFO
-========================= -->
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
 <div class="info">
 
-    <strong>📌 About GSI MANTRA Daily MCQs</strong>
+    <strong>📌 About GSI MANTRA Daily Advanced MCQs</strong>
 
     <br><br>
 
-    Daily Advanced MCQs are designed for students preparing for
-    UPSC, BPSC, SSC, UGC NET, State PCS and CBSE examinations.
+    GSI MANTRA Daily Advanced MCQs are designed for students
+    preparing for UPSC, BPSC, SSC, UGC NET, State PCS and CBSE
+    examinations.
 
-    Questions focus on conceptual understanding, NCERT-based facts,
-    analytical thinking and examination-oriented preparation.
+    <br><br>
+
+    Questions cover all major areas of
+    <strong>Social Science (SST)</strong>:
+
+    <br><br>
+
+    📘 History &nbsp; • &nbsp;
+    🌍 Geography &nbsp; • &nbsp;
+    🏛️ Political Science &nbsp; • &nbsp;
+    💰 Economics
+
+    <br><br>
+
+    The questions focus on NCERT concepts, analytical thinking,
+    factual understanding and examination-oriented preparation.
 
 </div>
 
+
 </div>
 
 
-<!-- FOOTER -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer class="footer">
 
@@ -562,60 +668,72 @@ body{
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      JAVASCRIPT
-========================= -->
+===================================================== -->
 
 <script>
 
-function checkAnswer(){
+/* =====================================================
+   SINGLE MCQ CHECK
+===================================================== */
+
+function checkSingleAnswer(button){
+
+    const card = button.closest(".mcq-card");
+
+    const correctAnswer = card.dataset.answer;
 
     const selected =
-        document.querySelector('input[name="answer"]:checked');
-
-    const result =
-        document.getElementById("result");
+        card.querySelector('input[type="radio"]:checked');
 
     const answerBox =
-        document.getElementById("answerBox");
+        card.querySelector(".answer-box");
+
+    const options =
+        card.querySelectorAll(".option");
 
 
     if(!selected){
 
-        result.style.display = "block";
-        result.style.background = "#fff3cd";
-        result.style.color = "#856404";
-
-        result.innerHTML =
-            "⚠️ Please select an option first.";
-
+        alert("⚠️ Please select an option first.");
         return;
     }
 
 
+    /* Prevent changing after submission */
+
+    button.disabled = true;
+    button.style.opacity = "0.7";
+    button.innerText = "Answer Checked";
+
+
+    /* Highlight options */
+
+    options.forEach(function(option){
+
+        const input =
+            option.querySelector("input");
+
+        if(input.value === correctAnswer){
+            option.classList.add("correct");
+        }
+
+        if(input.checked && input.value !== correctAnswer){
+            option.classList.add("wrong");
+        }
+
+        input.disabled = true;
+
+    });
+
+
+    /* Show explanation */
+
     answerBox.style.display = "block";
 
 
-    if(selected.value === "C"){
-
-        result.style.display = "block";
-        result.style.background = "#dff5e5";
-        result.style.color = "#08752f";
-
-        result.innerHTML =
-            "🎉 Correct Answer! Excellent work.";
-
-    }else{
-
-        result.style.display = "block";
-        result.style.background = "#fde2e2";
-        result.style.color = "#b42318";
-
-        result.innerHTML =
-            "❌ Incorrect Answer. The correct answer is C.";
-
-    }
-
+    /* Scroll */
 
     answerBox.scrollIntoView({
         behavior:"smooth",
@@ -625,6 +743,7 @@ function checkAnswer(){
 }
 
 </script>
+
 
 </body>
 </html>
