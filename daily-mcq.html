@@ -1,0 +1,631 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Daily Advanced MCQ | GSI MANTRA</title>
+
+<meta name="description" content="GSI MANTRA Daily Advanced MCQs for UPSC, BPSC, SSC, UGC NET, State PCS and CBSE.">
+
+<style>
+
+/* =========================
+   GSI MANTRA DAILY MCQ
+   PREMIUM DESIGN
+========================= */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial, "Noto Sans", sans-serif;
+    background:#f3f6fa;
+    color:#1d2733;
+}
+
+/* HEADER */
+
+.header{
+    background:linear-gradient(135deg,#042d5c,#075ca8,#159447);
+    color:white;
+    padding:30px 15px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.header:after{
+    content:"GSI MANTRA";
+    position:absolute;
+    font-size:90px;
+    font-weight:bold;
+    opacity:.06;
+    right:-20px;
+    bottom:-25px;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.header h1{
+    margin:10px 0 5px;
+    font-size:27px;
+}
+
+.header p{
+    margin:5px 0 15px;
+    opacity:.95;
+}
+
+/* BADGES */
+
+.badges{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.badges span{
+    background:rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.3);
+    padding:7px 12px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+/* CONTAINER */
+
+.container{
+    width:min(950px,94%);
+    margin:25px auto;
+}
+
+/* DATE */
+
+.date-card{
+    background:white;
+    border-radius:15px;
+    padding:18px 20px;
+    margin-bottom:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+    border-left:6px solid #0b63b6;
+}
+
+.date{
+    font-size:21px;
+    font-weight:bold;
+    color:#063970;
+}
+
+.category{
+    color:#657383;
+    margin-top:5px;
+}
+
+/* MCQ CARD */
+
+.mcq-card{
+    background:white;
+    border-radius:18px;
+    padding:28px;
+    box-shadow:0 8px 30px rgba(0,0,0,.09);
+}
+
+.mcq-number{
+    display:inline-block;
+    background:#063970;
+    color:white;
+    padding:7px 13px;
+    border-radius:20px;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.question{
+    font-size:21px;
+    line-height:1.65;
+    font-weight:700;
+    margin-bottom:22px;
+}
+
+/* OPTIONS */
+
+.option{
+    display:block;
+    padding:16px;
+    margin:12px 0;
+    border:2px solid #e1e7ef;
+    border-radius:12px;
+    background:#fafcff;
+    cursor:pointer;
+    transition:.25s;
+    line-height:1.5;
+}
+
+.option:hover{
+    border-color:#0b63b6;
+    background:#f0f7ff;
+}
+
+.option input{
+    margin-right:10px;
+    transform:scale(1.15);
+}
+
+/* BUTTON */
+
+.submit-btn{
+    display:block;
+    width:100%;
+    margin-top:22px;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(135deg,#063970,#0b63b6);
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.submit-btn:hover{
+    transform:translateY(-1px);
+    box-shadow:0 5px 15px rgba(11,99,182,.25);
+}
+
+/* RESULT */
+
+.result{
+    display:none;
+    margin-top:20px;
+    padding:17px;
+    border-radius:12px;
+    font-weight:bold;
+    text-align:center;
+}
+
+/* ANSWER */
+
+.answer-box{
+    display:none;
+    margin-top:22px;
+    padding:22px;
+    background:#effaf2;
+    border-left:6px solid #159447;
+    border-radius:12px;
+}
+
+.answer-title{
+    color:#08752f;
+    font-size:19px;
+    font-weight:bold;
+}
+
+.explanation{
+    line-height:1.75;
+    margin-top:10px;
+}
+
+/* EXAM POINT */
+
+.exam-point{
+    margin-top:20px;
+    padding:18px;
+    background:#fff8e5;
+    border-left:6px solid #e2a400;
+    border-radius:10px;
+    line-height:1.6;
+}
+
+.exam-point strong{
+    color:#8a6200;
+}
+
+/* PREVIOUS MCQ */
+
+.previous{
+    margin-top:25px;
+    background:white;
+    border-radius:16px;
+    padding:24px;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.previous h2{
+    margin-top:0;
+    color:#063970;
+}
+
+.previous-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:13px;
+    margin:9px 0;
+    border:1px solid #e1e7ef;
+    border-radius:9px;
+}
+
+.previous-item a{
+    text-decoration:none;
+    color:#0b63b6;
+    font-weight:bold;
+}
+
+/* INFO */
+
+.info{
+    margin-top:20px;
+    background:#eaf3ff;
+    border-radius:12px;
+    padding:18px;
+    line-height:1.6;
+}
+
+/* FOOTER */
+
+.footer{
+    margin-top:40px;
+    padding:30px 15px;
+    text-align:center;
+    background:#062e57;
+    color:white;
+}
+
+.footer strong{
+    font-size:20px;
+}
+
+/* WATERMARK */
+
+.watermark{
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    font-size:18px;
+    font-weight:bold;
+    color:#063970;
+    opacity:.10;
+    pointer-events:none;
+    z-index:999;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .logo{
+        font-size:27px;
+    }
+
+    .header h1{
+        font-size:22px;
+    }
+
+    .mcq-card{
+        padding:19px;
+    }
+
+    .question{
+        font-size:18px;
+    }
+
+    .option{
+        padding:13px;
+        font-size:15px;
+    }
+
+    .previous-item{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:7px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <div class="logo">📚 GSI MANTRA</div>
+
+    <h1>Daily Advanced MCQs</h1>
+
+    <p>
+        UPSC • BPSC • SSC • UGC NET • State PCS • CBSE
+    </p>
+
+    <div class="badges">
+        <span>🔥 Daily Practice</span>
+        <span>🎯 Exam Oriented</span>
+        <span>📖 NCERT Based</span>
+        <span>🧠 Conceptual</span>
+    </div>
+
+</header>
+
+
+<div class="container">
+
+<!-- =========================
+     CONTENT DATA
+     
+     आगे रोज केवल इसी हिस्से
+     को बदलना है।
+========================= -->
+
+<div class="date-card">
+
+    <div class="date">
+        📅 10 September 2026
+    </div>
+
+    <div class="category">
+        History → Nationalism in India → Satyagraha
+    </div>
+
+</div>
+
+
+<!-- =========================
+     MCQ
+========================= -->
+
+<div class="mcq-card">
+
+    <div class="mcq-number">
+        📝 DAILY ADVANCED MCQ – 01
+    </div>
+
+    <div class="question">
+
+        What did Mahatma Gandhi mean when he described
+        <em>Satyagraha</em> as “active resistance” rather than
+        “passive resistance”?
+
+    </div>
+
+
+    <label class="option">
+        <input type="radio" name="answer" value="A">
+        <strong>A.</strong>
+        Satyagraha involved using physical force to defeat
+        the opponent and destroy his political authority.
+    </label>
+
+
+    <label class="option">
+        <input type="radio" name="answer" value="B">
+        <strong>B.</strong>
+        Satyagraha meant passively tolerating injustice without
+        actively participating in political movements.
+    </label>
+
+
+    <label class="option">
+        <input type="radio" name="answer" value="C">
+        <strong>C.</strong>
+        Satyagraha was an active moral and non-violent struggle
+        against injustice, based on truth and soul-force, aimed
+        at transforming the opponent rather than destroying him.
+    </label>
+
+
+    <label class="option">
+        <input type="radio" name="answer" value="D">
+        <strong>D.</strong>
+        Satyagraha primarily meant avoiding armed conflict while
+        restricting the struggle to the boycott of government
+        institutions.
+    </label>
+
+
+    <button class="submit-btn" onclick="checkAnswer()">
+        ✅ Submit Answer
+    </button>
+
+
+    <!-- RESULT -->
+
+    <div class="result" id="result"></div>
+
+
+    <!-- ANSWER -->
+
+    <div class="answer-box" id="answerBox">
+
+        <div class="answer-title">
+            ✅ Correct Answer: C
+        </div>
+
+        <div class="explanation">
+
+            Gandhi rejected the idea that Satyagraha was merely
+            <strong>passive resistance</strong>. A Satyagrahi actively
+            resisted injustice, but without physical violence or hatred.
+
+            <br><br>
+
+            The struggle was based on
+            <strong>truth, soul-force, love and non-violence</strong>.
+            Its purpose was not to inflict pain or destroy the adversary,
+            but to appeal to the opponent's conscience and bring about
+            change through moral force.
+
+        </div>
+
+
+        <div class="exam-point">
+
+            <strong>🎯 EXAM POINT</strong>
+
+            <br><br>
+
+            Satyagraha =
+            <strong>
+            Active Resistance + Truth + Soul-force +
+            Non-violence + No ill-will
+            </strong>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     PREVIOUS MCQs
+========================= -->
+
+<div class="previous">
+
+    <h2>📚 Previous Daily MCQs</h2>
+
+    <div class="previous-item">
+        <span>📅 07 September 2026</span>
+        <a href="mcq-2026-09-07.html">Open MCQ →</a>
+    </div>
+
+    <div class="previous-item">
+        <span>📅 06 September 2026</span>
+        <a href="mcq-2026-09-06.html">Open MCQ →</a>
+    </div>
+
+</div>
+
+
+<!-- =========================
+     WEBSITE INFO
+========================= -->
+
+<div class="info">
+
+    <strong>📌 About GSI MANTRA Daily MCQs</strong>
+
+    <br><br>
+
+    Daily Advanced MCQs are designed for students preparing for
+    UPSC, BPSC, SSC, UGC NET, State PCS and CBSE examinations.
+
+    Questions focus on conceptual understanding, NCERT-based facts,
+    analytical thinking and examination-oriented preparation.
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <strong>GSI MANTRA</strong>
+
+    <br><br>
+
+    Competitive Education & NCERT
+
+    <br>
+
+    UPSC • BPSC • SSC • UGC NET • State PCS • CBSE
+
+    <br><br>
+
+    © 2026 GSI MANTRA. All Rights Reserved.
+
+</footer>
+
+
+<div class="watermark">
+    GSI MANTRA
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+function checkAnswer(){
+
+    const selected =
+        document.querySelector('input[name="answer"]:checked');
+
+    const result =
+        document.getElementById("result");
+
+    const answerBox =
+        document.getElementById("answerBox");
+
+
+    if(!selected){
+
+        result.style.display = "block";
+        result.style.background = "#fff3cd";
+        result.style.color = "#856404";
+
+        result.innerHTML =
+            "⚠️ Please select an option first.";
+
+        return;
+    }
+
+
+    answerBox.style.display = "block";
+
+
+    if(selected.value === "C"){
+
+        result.style.display = "block";
+        result.style.background = "#dff5e5";
+        result.style.color = "#08752f";
+
+        result.innerHTML =
+            "🎉 Correct Answer! Excellent work.";
+
+    }else{
+
+        result.style.display = "block";
+        result.style.background = "#fde2e2";
+        result.style.color = "#b42318";
+
+        result.innerHTML =
+            "❌ Incorrect Answer. The correct answer is C.";
+
+    }
+
+
+    answerBox.scrollIntoView({
+        behavior:"smooth",
+        block:"nearest"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
+```
