@@ -1,21 +1,25 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Daily Advanced SST MCQs | GSI MANTRA</title>
 
 <meta name="description"
-content="Daily Advanced SST MCQs for History, Geography, Political Science and Economics by GSI MANTRA.">
+content="GSI MANTRA Daily Advanced SST MCQs for Class 9, Class 10, UPSC, BPSC, SSC, State PCS, UGC NET and CBSE. History, Geography, Political Science and Economics.">
+
+<meta name="keywords"
+content="GSI MANTRA, Daily MCQ, SST MCQ, History MCQ, Class 9 History MCQ, Harappan Civilisation, Vedic Civilisation, Nationalism in India, UPSC, BPSC, SSC, CBSE">
 
 <style>
 
 /* =====================================================
-   GSI MANTRA
-   DAILY ADVANCED SST MCQ
+   GSI MANTRA PREMIUM DAILY MCQ
 ===================================================== */
 
 *{
@@ -29,458 +33,905 @@ html{
 body{
     margin:0;
     font-family:Arial,"Noto Sans",sans-serif;
-    background:#f3f6fa;
-    color:#1d2733;
-    line-height:1.6;
+    background:
+        linear-gradient(180deg,#eef5fb 0%,#f8fbff 45%,#eef4f9 100%);
+    color:#182433;
+    line-height:1.65;
 }
+
 
 /* =====================================================
    HEADER
 ===================================================== */
 
 .header{
-    background:linear-gradient(135deg,#042d5c,#075ca8,#159447);
+
+    background:
+    linear-gradient(135deg,
+    #031f42,
+    #075ca8 55%,
+    #159447);
+
     color:white;
     text-align:center;
-    padding:34px 15px;
+
+    padding:38px 15px 32px;
+
     position:relative;
     overflow:hidden;
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.18);
+}
+
+.header:before{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.07);
+
+    top:-120px;
+    left:-80px;
 }
 
 .header:after{
+
     content:"GSI MANTRA";
+
     position:absolute;
-    right:-15px;
+
+    right:-20px;
     bottom:-25px;
-    font-size:100px;
+
+    font-size:95px;
     font-weight:900;
+
     opacity:.05;
+
     pointer-events:none;
 }
 
 .logo{
+
     font-size:32px;
     font-weight:900;
+
     letter-spacing:1px;
+
+    position:relative;
+    z-index:2;
 }
 
 .header h1{
-    font-size:29px;
+
+    font-size:30px;
+
     margin:8px 0 5px;
+
+    position:relative;
+    z-index:2;
 }
 
 .header p{
-    margin:5px 0 18px;
+
+    margin:5px auto 20px;
+
+    max-width:700px;
+
     opacity:.95;
+
+    position:relative;
+    z-index:2;
 }
+
 
 /* =====================================================
    BADGES
 ===================================================== */
 
 .badges{
+
     display:flex;
+
     justify-content:center;
+
     flex-wrap:wrap;
+
     gap:8px;
+
+    position:relative;
+    z-index:2;
 }
 
 .badges span{
+
     padding:7px 13px;
-    border-radius:20px;
-    background:rgba(255,255,255,.15);
-    border:1px solid rgba(255,255,255,.3);
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.13);
+
+    border:1px solid rgba(255,255,255,.28);
+
     font-size:13px;
+
+    backdrop-filter:blur(5px);
 }
 
+
 /* =====================================================
-   MAIN
+   MAIN CONTAINER
 ===================================================== */
 
 .container{
-    width:min(1000px,94%);
-    margin:28px auto;
+
+    width:min(1050px,94%);
+
+    margin:30px auto;
 }
+
+
+/* =====================================================
+   WELCOME CARD
+===================================================== */
+
+.welcome{
+
+    background:white;
+
+    padding:24px;
+
+    border-radius:20px;
+
+    margin-bottom:25px;
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.07);
+
+    border-left:6px solid #075ca8;
+
+    text-align:center;
+}
+
+.welcome h2{
+
+    margin:0;
+
+    color:#063970;
+
+}
+
+.welcome p{
+
+    margin:8px 0 0;
+
+    color:#637384;
+}
+
 
 /* =====================================================
    SUBJECT NAVIGATION
 ===================================================== */
 
 .subject-title{
+
     text-align:center;
-    margin-bottom:18px;
+
+    margin:28px 0 18px;
 }
 
 .subject-title h2{
+
     color:#063970;
+
     margin-bottom:5px;
 }
 
 .subject-title p{
-    color:#687684;
+
+    color:#6c7b89;
+
+    margin-top:0;
 }
 
-/* SUBJECT GRID */
 
 .subject-grid{
+
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
+
+    grid-template-columns:
+    repeat(6,1fr);
+
+    gap:12px;
+
     margin-bottom:30px;
 }
 
+
 .subject-card{
+
     background:white;
-    border-radius:16px;
-    padding:22px 12px;
+
+    border-radius:17px;
+
+    padding:18px 8px;
+
     text-align:center;
+
     cursor:pointer;
+
     border:2px solid transparent;
-    box-shadow:0 6px 22px rgba(0,0,0,.07);
+
+    box-shadow:
+    0 6px 22px rgba(0,0,0,.07);
+
     transition:.25s;
 }
 
 .subject-card:hover{
-    transform:translateY(-4px);
+
+    transform:translateY(-5px);
+
     border-color:#0b63b6;
-    box-shadow:0 10px 28px rgba(11,99,182,.15);
+
+    box-shadow:
+    0 12px 30px rgba(11,99,182,.16);
+}
+
+.subject-card.active{
+
+    border-color:#159447;
+
+    background:#f0fff5;
 }
 
 .subject-icon{
-    font-size:36px;
-    margin-bottom:8px;
+
+    font-size:31px;
+
+    margin-bottom:5px;
 }
 
 .subject-name{
-    font-size:17px;
+
+    font-size:15px;
+
     font-weight:800;
+
     color:#063970;
 }
 
 .subject-sub{
-    font-size:12px;
+
+    font-size:11px;
+
     color:#71808f;
-    margin-top:4px;
 }
 
+
 /* =====================================================
-   SUBJECT SECTIONS
+   SUBJECT SECTION
 ===================================================== */
 
 .subject-section{
+
     display:none;
 }
 
 .subject-section.active{
+
     display:block;
+
+    animation:
+    fadeIn .35s ease;
 }
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
 
 /* =====================================================
    SECTION HEADING
 ===================================================== */
 
 .section-heading{
+
     background:white;
-    border-radius:16px;
-    padding:20px;
+
+    border-radius:18px;
+
+    padding:22px;
+
     margin-bottom:20px;
+
     border-left:6px solid #0b63b6;
-    box-shadow:0 5px 20px rgba(0,0,0,.07);
+
+    box-shadow:
+    0 6px 24px rgba(0,0,0,.07);
 }
 
 .section-heading h2{
+
     margin:0;
+
     color:#063970;
 }
 
 .section-heading p{
+
     margin:5px 0 0;
-    color:#657383;
+
+    color:#667685;
 }
 
+
 /* =====================================================
-   DATE
+   DATE CARD
 ===================================================== */
 
 .date-card{
-    background:white;
-    border-radius:15px;
+
+    background:
+    linear-gradient(135deg,#ffffff,#f2f8ff);
+
+    border-radius:16px;
+
     padding:18px 20px;
+
     margin-bottom:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,.07);
+
+    box-shadow:
+    0 6px 22px rgba(0,0,0,.06);
+
     border-left:6px solid #159447;
 }
 
 .date{
-    font-size:21px;
+
+    font-size:20px;
+
     font-weight:800;
+
     color:#063970;
 }
 
 .category{
+
     color:#657383;
-    margin-top:5px;
+
+    margin-top:4px;
+
+    font-size:14px;
 }
+
 
 /* =====================================================
    MCQ CARD
 ===================================================== */
 
 .mcq-card{
+
     background:white;
-    border-radius:18px;
-    padding:28px;
-    margin-bottom:22px;
-    box-shadow:0 8px 30px rgba(0,0,0,.08);
+
+    border-radius:20px;
+
+    padding:26px;
+
+    margin-bottom:25px;
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.08);
+
+    border:1px solid #e7edf4;
+
+    position:relative;
+
+    overflow:hidden;
 }
 
-.mcq-number{
-    display:inline-block;
-    background:#063970;
-    color:white;
-    padding:7px 14px;
-    border-radius:20px;
-    font-size:14px;
-    font-weight:bold;
+.mcq-card:before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+
+    background:
+    linear-gradient(90deg,
+    #063970,
+    #075ca8,
+    #159447);
+}
+
+
+/* =====================================================
+   MCQ HEADER
+===================================================== */
+
+.mcq-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
     margin-bottom:15px;
 }
 
-.subject-tag{
+.mcq-number{
+
     display:inline-block;
-    margin-left:7px;
-    padding:6px 12px;
-    border-radius:18px;
-    background:#eaf3ff;
-    color:#075ca8;
+
+    background:#063970;
+
+    color:white;
+
+    padding:7px 14px;
+
+    border-radius:20px;
+
     font-size:13px;
+
     font-weight:bold;
 }
 
-.question{
-    font-size:20px;
-    line-height:1.7;
-    font-weight:700;
-    margin-bottom:22px;
+.subject-tag{
+
+    display:inline-block;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    background:#eaf3ff;
+
+    color:#075ca8;
+
+    font-size:12px;
+
+    font-weight:bold;
 }
+
+
+/* =====================================================
+   QUESTION
+===================================================== */
+
+.question{
+
+    font-size:19px;
+
+    line-height:1.75;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+    color:#182433;
+}
+
 
 /* =====================================================
    OPTIONS
 ===================================================== */
 
 .option{
+
     display:block;
-    padding:15px 16px;
-    margin:11px 0;
+
+    padding:14px 15px;
+
+    margin:10px 0;
+
     border:2px solid #e1e7ef;
+
     border-radius:12px;
+
     background:#fafcff;
+
     cursor:pointer;
-    transition:.25s;
+
+    transition:.22s;
 }
 
 .option:hover{
+
     border-color:#0b63b6;
+
     background:#f0f7ff;
+
+    transform:translateX(2px);
 }
 
 .option input{
+
     margin-right:10px;
+
     transform:scale(1.15);
 }
 
 .option.correct{
+
     border-color:#159447;
+
     background:#e8f8ed;
+
 }
 
 .option.wrong{
+
     border-color:#d93025;
+
     background:#fdeaea;
 }
 
+
 /* =====================================================
-   BUTTON
+   CHECK BUTTON
 ===================================================== */
 
 .submit-btn{
+
     display:block;
+
     width:100%;
-    margin-top:22px;
-    padding:15px;
+
+    margin-top:20px;
+
+    padding:14px;
+
     border:none;
-    border-radius:10px;
-    background:linear-gradient(135deg,#063970,#0b63b6);
+
+    border-radius:11px;
+
+    background:
+    linear-gradient(135deg,
+    #063970,
+    #075ca8,
+    #159447);
+
     color:white;
-    font-size:17px;
+
+    font-size:16px;
+
     font-weight:bold;
+
     cursor:pointer;
+
+    box-shadow:
+    0 6px 18px rgba(7,92,168,.20);
+
+    transition:.25s;
 }
 
 .submit-btn:hover{
-    box-shadow:0 5px 15px rgba(11,99,182,.25);
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 9px 24px rgba(7,92,168,.28);
 }
 
+
 /* =====================================================
-   ANSWER
+   ANSWER BOX
 ===================================================== */
 
 .answer-box{
+
     display:none;
+
     margin-top:22px;
-    padding:22px;
+
+    padding:21px;
+
     background:#effaf2;
+
     border-left:6px solid #159447;
-    border-radius:12px;
+
+    border-radius:13px;
+
+    animation:
+    answerIn .3s ease;
+}
+
+@keyframes answerIn{
+
+    from{
+        opacity:0;
+        transform:translateY(8px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 .answer-title{
+
     color:#08752f;
-    font-size:19px;
+
+    font-size:18px;
+
     font-weight:bold;
+
+    margin-bottom:10px;
 }
 
 .explanation{
-    margin-top:10px;
-    line-height:1.75;
+
+    line-height:1.8;
 }
 
 .exam-point{
-    margin-top:20px;
-    padding:18px;
+
+    margin-top:18px;
+
+    padding:17px;
+
     background:#fff8e5;
+
     border-left:6px solid #e2a400;
+
     border-radius:10px;
 }
 
 .exam-point strong{
+
     color:#8a6200;
 }
 
+
 /* =====================================================
-   PREVIOUS MCQS
+   RESULT
+===================================================== */
+
+.result-box{
+
+    display:none;
+
+    margin:25px 0;
+
+    padding:28px;
+
+    background:white;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    border:2px solid #075ca8;
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.10);
+}
+
+.result-box h2{
+
+    color:#063970;
+
+    margin-top:0;
+}
+
+.score-big{
+
+    font-size:42px;
+
+    font-weight:900;
+
+    color:#075ca8;
+}
+
+.result-message{
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    color:#159447;
+}
+
+
+/* =====================================================
+   PREVIOUS
 ===================================================== */
 
 .previous{
+
     background:white;
-    border-radius:16px;
+
+    border-radius:18px;
+
     padding:24px;
-    margin-top:25px;
-    box-shadow:0 5px 20px rgba(0,0,0,.07);
+
+    margin-top:30px;
+
+    box-shadow:
+    0 6px 24px rgba(0,0,0,.07);
 }
 
 .previous h2{
+
     color:#063970;
+
     margin-top:0;
 }
 
 .previous-item{
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
+
+    gap:10px;
+
     padding:13px;
+
     margin:9px 0;
+
     border:1px solid #e1e7ef;
-    border-radius:9px;
+
+    border-radius:10px;
 }
 
 .previous-item a{
+
     color:#0b63b6;
+
     text-decoration:none;
+
     font-weight:bold;
 }
+
 
 /* =====================================================
    INFO
 ===================================================== */
 
 .info{
-    margin-top:22px;
-    padding:20px;
+
+    margin-top:25px;
+
+    padding:22px;
+
     background:#eaf3ff;
-    border-radius:12px;
+
+    border-radius:14px;
+
+    border:1px solid #d8e8fa;
 }
+
 
 /* =====================================================
    FOOTER
 ===================================================== */
 
 .footer{
+
     margin-top:40px;
-    padding:32px 15px;
+
+    padding:35px 15px;
+
     text-align:center;
+
     background:#062e57;
+
     color:white;
 }
 
 .footer strong{
-    font-size:21px;
+
+    font-size:22px;
 }
+
 
 /* =====================================================
    WATERMARK
 ===================================================== */
 
 .watermark{
+
     position:fixed;
+
     right:10px;
     bottom:10px;
-    font-size:18px;
+
+    font-size:17px;
+
     font-weight:bold;
+
     color:#063970;
-    opacity:.10;
+
+    opacity:.09;
+
     pointer-events:none;
+
     z-index:999;
 }
+
 
 /* =====================================================
    MOBILE
 ===================================================== */
 
-@media(max-width:700px){
+@media(max-width:800px){
 
     .subject-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
 
-    .logo{
-        font-size:27px;
-    }
-
-    .header h1{
-        font-size:23px;
-    }
-
-    .mcq-card{
-        padding:19px;
-    }
-
-    .question{
-        font-size:18px;
+        grid-template-columns:
+        repeat(3,1fr);
     }
 
 }
 
-@media(max-width:430px){
+@media(max-width:600px){
 
     .subject-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
         gap:10px;
     }
 
-    .subject-card{
-        padding:18px 8px;
+    .logo{
+
+        font-size:27px;
     }
 
-    .subject-icon{
-        font-size:30px;
+    .header h1{
+
+        font-size:24px;
     }
 
-    .subject-name{
-        font-size:15px;
+    .mcq-card{
+
+        padding:19px;
+    }
+
+    .question{
+
+        font-size:17px;
+    }
+
+    .score-big{
+
+        font-size:35px;
     }
 
 }
 
 </style>
+
 </head>
 
 
@@ -493,27 +944,31 @@ body{
 
 <header class="header">
 
-    <div class="logo">
-        📚 GSI MANTRA
-    </div>
+<div class="logo">
+📚 GSI MANTRA
+</div>
 
-    <h1>
-        Daily Advanced MCQs
-    </h1>
+<h1>
+Daily Advanced SST MCQs
+</h1>
 
-    <p>
-        Social Science (SST) • Online Test • Exam Practice
-    </p>
+<p>
+NCERT Based • Conceptual • Statement Based • Exam Oriented
+</p>
 
-    <div class="badges">
+<div class="badges">
 
-        <span>🔥 Daily Practice</span>
-        <span>🎯 Exam Oriented</span>
-        <span>📖 NCERT Based</span>
-        <span>🧠 Conceptual</span>
-        <span>🏆 Advanced Level</span>
+<span>🔥 Daily Practice</span>
 
-    </div>
+<span>🎯 Advanced Level</span>
+
+<span>📖 NCERT Based</span>
+
+<span>🧠 Conceptual</span>
+
+<span>🏆 Exam Oriented</span>
+
+</div>
 
 </header>
 
@@ -522,18 +977,36 @@ body{
 
 
 <!-- =====================================================
+     WELCOME
+===================================================== -->
+
+<div class="welcome">
+
+<h2>
+🎯 GSI MANTRA Daily MCQ Test
+</h2>
+
+<p>
+Test your preparation with carefully designed Social Science
+questions for school examinations and competitive examinations.
+</p>
+
+</div>
+
+
+<!-- =====================================================
      SUBJECT SELECTION
 ===================================================== -->
 
 <div class="subject-title">
 
-    <h2>
-        📚 Select Subject
-    </h2>
+<h2>
+📚 Select Your Subject
+</h2>
 
-    <p>
-        Social Science — Daily Advanced MCQs
-    </p>
+<p>
+Choose a subject and start your advanced practice
+</p>
 
 </div>
 
@@ -541,1349 +1014,1051 @@ body{
 <div class="subject-grid">
 
 
-    <div class="subject-card"
-         onclick="showSubject('history')">
+<div class="subject-card active"
+onclick="showSubject('history',this)">
 
-        <div class="subject-icon">
-            📘
-        </div>
+<div class="subject-icon">📘</div>
 
-        <div class="subject-name">
-            History
-        </div>
+<div class="subject-name">
+History
+</div>
 
-        <div class="subject-sub">
-            इतिहास
-        </div>
-
-    </div>
-
-
-    <div class="subject-card"
-         onclick="showSubject('geography')">
-
-        <div class="subject-icon">
-            🌍
-        </div>
-
-        <div class="subject-name">
-            Geography
-        </div>
-
-        <div class="subject-sub">
-            भूगोल
-        </div>
-
-    </div>
-
-
-    <div class="subject-card"
-         onclick="showSubject('political')">
-
-        <div class="subject-icon">
-            🏛️
-        </div>
-
-        <div class="subject-name">
-            Political Science
-        </div>
-
-        <div class="subject-sub">
-            नागरिक शास्त्र
-        </div>
-
-    </div>
-
-
-    <div class="subject-card"
-         onclick="showSubject('economics')">
-
-        <div class="subject-icon">
-            💰
-        </div>
-
-        <div class="subject-name">
-            Economics
-        </div>
-
-        <div class="subject-sub">
-            अर्थशास्त्र
-        </div>
-
-    </div>
+<div class="subject-sub">
+इतिहास
+</div>
 
 </div>
 
 
-<!-- =====================================================
-     =====================================================
-     
-     ⭐⭐⭐ DAILY CONTENT — EDIT ONLY THIS PART ⭐⭐⭐
-     
-     रोज नया MCQ इसी CONTENT AREA में जोड़ें।
-     
-     पुराने MCQs को DELETE न करें।
-     
-     नया MCQ पुराने MCQ के ऊपर या नीचे ADD किया जा सकता है।
-     
-     =====================================================
-===================================================== -->
+<div class="subject-card"
+onclick="showSubject('harappan',this)">
+
+<div class="subject-icon">🏺</div>
+
+<div class="subject-name">
+Harappan
+</div>
+
+<div class="subject-sub">
+हड़प्पा सभ्यता
+</div>
+
+</div>
+
+
+<div class="subject-card"
+onclick="showSubject('vedic',this)">
+
+<div class="subject-icon">🕉️</div>
+
+<div class="subject-name">
+Vedic
+</div>
+
+<div class="subject-sub">
+वैदिक सभ्यता
+</div>
+
+</div>
+
+
+<div class="subject-card"
+onclick="showSubject('geography',this)">
+
+<div class="subject-icon">🌍</div>
+
+<div class="subject-name">
+Geography
+</div>
+
+<div class="subject-sub">
+भूगोल
+</div>
+
+</div>
+
+
+<div class="subject-card"
+onclick="showSubject('political',this)">
+
+<div class="subject-icon">🏛️</div>
+
+<div class="subject-name">
+Political Science
+</div>
+
+<div class="subject-sub">
+नागरिक शास्त्र
+</div>
+
+</div>
+
+
+<div class="subject-card"
+onclick="showSubject('economics',this)">
+
+<div class="subject-icon">💰</div>
+
+<div class="subject-name">
+Economics
+</div>
+
+<div class="subject-sub">
+अर्थशास्त्र
+</div>
+
+</div>
+
+</div>
 
 
 <!-- =====================================================
      HISTORY
 ===================================================== -->
-<!-- =========================================================
-     GSI MANTRA – CLASS 10 NATIONALISM IN INDIA
-     DAILY MCQ CONTENT
-     EDIT ONLY THIS SECTION FOR FUTURE MCQs
-========================================================= -->
 
-<section class="mcq-section">
+<section id="history"
+class="subject-section active">
 
-<h2>📘 Class 10 History – Nationalism in India</h2>
+<div class="section-heading">
 
-<p class="subtitle">
-25 Advanced MCQs | NCERT Based | UPSC • BPSC • SSC • State PCS • CBSE
+<h2>
+📘 History — Nationalism in India
+</h2>
+
+<p>
+Class 10 • NCERT • Advanced Conceptual MCQs
 </p>
 
-<form id="mcqForm">
+</div>
 
-<!-- QUESTION 1 -->
+
+<div class="date-card">
+
+<div class="date">
+📅 10 September 2026
+</div>
+
+<div class="category">
+Jallianwala Bagh • Rowlatt Satyagraha • Non-Cooperation Movement
+</div>
+
+</div>
+
+
+<!-- MCQ 1 -->
+
+<div class="mcq-card"
+data-answer="A">
+
+<div class="mcq-top">
+
+<span class="mcq-number">
+📝 MCQ 01
+</span>
+
+<span class="subject-tag">
+History
+</span>
+
+</div>
+
+
 <div class="question">
-<h3>Q1. Which of the following was a major impact of the First World War on India?</h3>
 
-<label><input type="radio" name="q1" value="A"> A. Reduction in taxes</label>
-<label><input type="radio" name="q1" value="B"> B. Increase in defence expenditure and the burden of new taxes</label>
-<label><input type="radio" name="q1" value="C"> C. Immediate decline in agricultural prices</label>
-<label><input type="radio" name="q1" value="D"> D. Complete destruction of Indian industries</label>
+With reference to the events following the Jallianwala Bagh
+incident and the beginning of the Non-Cooperation-Khilafat
+Movement, consider the following statements:
 
-<div class="explanation" id="exp1">
-<strong>Correct Answer: B</strong>
-<p>
-The First World War created a huge increase in defence expenditure.
-To meet this expenditure, the British government increased taxes and
-imposed additional economic burdens on the Indian people. Prices of
-essential goods also increased considerably during the war.
-</p>
-</div>
-</div>
+<br><br>
 
+<strong>1.</strong> General Dyer ordered firing at Jallianwala
+Bagh with the intention of creating terror and awe.
 
-<!-- QUESTION 2 -->
-<div class="question">
-<h3>Q2. During the First World War, forced recruitment of soldiers mainly affected which region?</h3>
+<br><br>
 
-<label><input type="radio" name="q2" value="A"> A. Bengal</label>
-<label><input type="radio" name="q2" value="B"> B. Punjab</label>
-<label><input type="radio" name="q2" value="C"> C. Madras</label>
-<label><input type="radio" name="q2" value="D"> D. Assam</label>
+<strong>2.</strong> Gandhi called off the Rowlatt Satyagraha
+after violence spread in different parts of the country.
 
-<div class="explanation" id="exp2">
-<strong>Correct Answer: B</strong>
-<p>
-During the First World War, the British government imposed forced
-recruitment in rural areas. Punjab was one of the regions where
-villagers faced considerable pressure to provide soldiers for the
-British army.
-</p>
-</div>
+<br><br>
+
+<strong>3.</strong> Gandhi considered the Khilafat issue an
+opportunity to bring Hindus and Muslims closer.
+
+<br><br>
+
+<strong>4.</strong> Non-Cooperation immediately began with
+full-scale civil disobedience.
+
+<br><br>
+
+Which of the statements given above are correct?
+
 </div>
 
 
-<!-- QUESTION 3 -->
-<div class="question">
-<h3>Q3. What was the basic idea behind Mahatma Gandhi's concept of Satyagraha?</h3>
+<label class="option">
+<input type="radio" name="history1" value="A">
+<strong>A.</strong> 1, 2 and 3 only
+</label>
 
-<label><input type="radio" name="q3" value="A"> A. Violent revolution to overthrow the government</label>
-<label><input type="radio" name="q3" value="B"> B. Resistance to injustice through truth and non-violence</label>
-<label><input type="radio" name="q3" value="C"> C. Dependence only on constitutional reforms</label>
-<label><input type="radio" name="q3" value="D"> D. Complete boycott of all foreign goods</label>
+<label class="option">
+<input type="radio" name="history1" value="B">
+<strong>B.</strong> 1 and 4 only
+</label>
 
-<div class="explanation" id="exp3">
-<strong>Correct Answer: B</strong>
-<p>
-Satyagraha was based on the power of truth and non-violence.
-Gandhi believed that if the cause was just, people could resist
-oppression without using physical force. The aim was to appeal to
-the conscience of the oppressor.
-</p>
-</div>
-</div>
+<label class="option">
+<input type="radio" name="history1" value="C">
+<strong>C.</strong> 2 and 3 only
+</label>
 
+<label class="option">
+<input type="radio" name="history1" value="D">
+<strong>D.</strong> 1, 2, 3 and 4
+</label>
 
-<!-- QUESTION 4 -->
-<div class="question">
-<h3>Q4. According to Gandhi, what was an essential quality of a Satyagrahi?</h3>
 
-<label><input type="radio" name="q4" value="A"> A. Military training</label>
-<label><input type="radio" name="q4" value="B"> B. Physical strength</label>
-<label><input type="radio" name="q4" value="C"> C. Faith in truth and non-violence</label>
-<label><input type="radio" name="q4" value="D"> D. Administrative experience</label>
+<button class="submit-btn"
+onclick="checkSingleAnswer(this)">
 
-<div class="explanation" id="exp4">
-<strong>Correct Answer: C</strong>
-<p>
-A Satyagrahi was expected to follow truth and non-violence.
-Gandhi considered moral courage more important than physical force.
-A Satyagrahi should peacefully resist injustice without hatred or
-violence.
-</p>
-</div>
-</div>
+✅ Check Answer
 
-
-<!-- QUESTION 5 -->
-<div class="question">
-<h3>Q5. The Champaran Satyagraha was mainly related to which issue?</h3>
-
-<label><input type="radio" name="q5" value="A"> A. Low wages of workers</label>
-<label><input type="radio" name="q5" value="B"> B. Indigo cultivation</label>
-<label><input type="radio" name="q5" value="C"> C. Increase in land revenue</label>
-<label><input type="radio" name="q5" value="D"> D. Textile mill workers' strike</label>
-
-<div class="explanation" id="exp5">
-<strong>Correct Answer: B</strong>
-<p>
-The Champaran Satyagraha of 1917 was associated with indigo
-cultivation. Peasants were forced to cultivate indigo under the
-Tinkathia system. Gandhi intervened and supported the peasants
-against this exploitation.
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 6 -->
-<div class="question">
-<h3>Q6. Under which system were peasants in Champaran forced to cultivate indigo?</h3>
-
-<label><input type="radio" name="q6" value="A"> A. Ryotwari System</label>
-<label><input type="radio" name="q6" value="B"> B. Tinkathia System</label>
-<label><input type="radio" name="q6" value="C"> C. Mahalwari System</label>
-<label><input type="radio" name="q6" value="D"> D. Permanent Settlement</label>
-
-<div class="explanation" id="exp6">
-<strong>Correct Answer: B</strong>
-<p>
-Under the Tinkathia system, peasants in Champaran were compelled
-to cultivate indigo on a portion of their land. Gandhi's intervention
-helped expose the exploitative nature of this arrangement.
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 7 -->
-<div class="question">
-<h3>Q7. What was the main cause of the Kheda Satyagraha?</h3>
-
-<label><input type="radio" name="q7" value="A"> A. Forced cultivation of indigo</label>
-<label><input type="radio" name="q7" value="B"> B. Low wages of textile workers</label>
-<label><input type="radio" name="q7" value="C"> C. Demand for land revenue despite crop failure</label>
-<label><input type="radio" name="q7" value="D"> D. Introduction of the Rowlatt Act</label>
-
-<div class="explanation" id="exp7">
-<strong>Correct Answer: C</strong>
-<p>
-The Kheda district of Gujarat suffered from crop failure and poor
-harvests. Despite this situation, the government demanded full
-land revenue. Gandhi and local leaders supported the peasants in
-their demand for revenue relief.
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 8 -->
-<div class="question">
-<h3>Q8. What was the principal demand of the peasants during the Kheda Satyagraha?</h3>
-
-<label><input type="radio" name="q8" value="A"> A. Abolition of indigo cultivation</label>
-<label><input type="radio" name="q8" value="B"> B. Relief from revenue collection</label>
-<label><input type="radio" name="q8" value="C"> C. Ban on foreign goods</label>
-<label><input type="radio" name="q8" value="D"> D. Increase in workers' wages</label>
-
-<div class="explanation" id="exp8">
-<strong>Correct Answer: B</strong>
-<p>
-The peasants of Kheda demanded suspension or relief from land revenue
-because crop failure had made it difficult for them to pay the
-government's demand.
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 9 -->
-<div class="question">
-<h3>Q9. The Ahmedabad Mill Strike was mainly associated with:</h3>
-
-<label><input type="radio" name="q9" value="A"> A. A conflict between peasants and zamindars</label>
-<label><input type="radio" name="q9" value="B"> B. A dispute between mill workers and mill owners over wages</label>
-<label><input type="radio" name="q9" value="C"> C. A conflict between British officials and Indian traders</label>
-<label><input type="radio" name="q9" value="D"> D. Opposition to indigo cultivation</label>
-
-<div class="explanation" id="exp9">
-<strong>Correct Answer: B</strong>
-<p>
-The Ahmedabad Mill Strike of 1918 involved textile workers who
-demanded a higher wage. Gandhi supported the workers and used
-Satyagraha, including a hunger strike, to press for a settlement.
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 10 -->
-<div class="question">
-<h3>Q10. Which method did Gandhi use during the Ahmedabad Mill Strike?</h3>
-
-<label><input type="radio" name="q10" value="A"> A. Armed struggle</label>
-<label><input type="radio" name="q10" value="B"> B. Hunger strike</label>
-<label><input type="radio" name="q10" value="C"> C. Non-payment of land revenue</label>
-<label><input type="radio" name="q10" value="D"> D. Jail Bharo movement</label>
-
-<div class="explanation" id="exp10">
-<strong>Correct Answer: B</strong>
-<p>
-During the Ahmedabad Mill Strike, Gandhi undertook a hunger strike
-to support the workers and encourage them to remain firm in their
-demand. It was an example of his method of non-violent struggle.
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 11 -->
-<div class="question">
-<h3>Q11. What was one of the most controversial features of the Rowlatt Act?</h3>
-
-<label><input type="radio" name="q11" value="A"> A. It granted voting rights to Indians</label>
-<label><input type="radio" name="q11" value="B"> B. It allowed detention without trial</label>
-<label><input type="radio" name="q11" value="C"> C. It abolished land revenue</label>
-<label><input type="radio" name="q11" value="D"> D. It provided complete freedom of the press</label>
-
-<div class="explanation" id="exp11">
-<strong>Correct Answer: B</strong>
-<p>
-The Rowlatt Act gave the government extensive powers to repress
-political activities. Suspects could be arrested and detained
-without a normal trial. Gandhi strongly opposed this repressive
-law.
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 12 -->
-<div class="question">
-<h3>Q12. Gandhi launched which movement against the Rowlatt Act?</h3>
-
-<label><input type="radio" name="q12" value="A"> A. Non-Cooperation Movement</label>
-<label><input type="radio" name="q12" value="B"> B. Rowlatt Satyagraha</label>
-<label><input type="radio" name="q12" value="C"> C. Quit India Movement</label>
-<label><input type="radio" name="q12" value="D"> D. Civil Disobedience Movement</label>
-
-<div class="explanation" id="exp12">
-<strong>Correct Answer: B</strong>
-<p>
-Gandhi organised a nationwide Satyagraha against the Rowlatt Act
-in 1919. A hartal was organised on 6 April 1919 as part of the
-protest against the repressive legislation.
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 13 -->
-<div class="question">
-<h3>Q13. Which statement about the Rowlatt Satyagraha is correct?</h3>
-
-<label><input type="radio" name="q13" value="A"> A. It was limited only to peasants</label>
-<label><input type="radio" name="q13" value="B"> B. It involved protest through Satyagraha and hartals</label>
-<label><input type="radio" name="q13" value="C"> C. It was led only by revolutionary groups</label>
-<label><input type="radio" name="q13" value="D"> D. Its objective was to establish the Swaraj Party</label>
-
-<div class="explanation" id="exp13">
-<strong>Correct Answer: B</strong>
-<p>
-The Rowlatt Satyagraha was a mass protest against the Rowlatt Act.
-Hartals, demonstrations and peaceful resistance were important
-features of the movement.
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 14 -->
-<div class="question">
-<h3>Q14. The Non-Cooperation Movement was formally launched in:</h3>
-
-<label><input type="radio" name="q14" value="A"> A. 1917</label>
-<label><input type="radio" name="q14" value="B"> B. 1919</label>
-<label><input type="radio" name="q14" value="C"> C. 1920</label>
-<label><input type="radio" name="q14" value="D"> D. 1922</label>
-
-<div class="explanation" id="exp14">
-<strong>Correct Answer: C</strong>
-<p>
-The Non-Cooperation Movement was adopted by the Congress in 1920.
-It was linked with the Khilafat issue and the demand for Swaraj.
-The movement encouraged people to withdraw cooperation from
-colonial institutions.
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 15 -->
-<div class="question">
-<h3>Q15. Which of the following was a programme of the Non-Cooperation Movement?</h3>
-
-<label><input type="radio" name="q15" value="A"> A. Boycott of government schools and colleges</label>
-<label><input type="radio" name="q15" value="B"> B. Encouragement of recruitment into the British army</label>
-<label><input type="radio" name="q15" value="C"> C. Promotion of foreign goods</label>
-<label><input type="radio" name="q15" value="D"> D. Support for higher taxes</label>
-
-<div class="explanation" id="exp15">
-<strong>Correct Answer: A</strong>
-<p>
-The Non-Cooperation Movement encouraged people to boycott
-government schools, colleges, courts and other colonial institutions.
-The use of khadi and the boycott of foreign cloth were also
-important parts of the movement.
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 16 -->
-<div class="question">
-<h3>Q16. The meaning of the term 'Swaraj' was:</h3>
-
-<label><input type="radio" name="q16" value="A"> A. Exactly the same for all social groups</label>
-<label><input type="radio" name="q16" value="B"> B. Different for different social groups</label>
-<label><input type="radio" name="q16" value="C"> C. Limited only to political independence</label>
-<label><input type="radio" name="q16" value="D"> D. Limited only to economic reforms</label>
-
-<div class="explanation" id="exp16">
-<strong>Correct Answer: B</strong>
-<p>
-Different social groups interpreted the idea of Swaraj in different
-ways. For some it meant freedom from colonial rule, while for
-peasants, workers, tribals and business groups it could also involve
-their specific social and economic demands.
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 17 -->
-<div class="question">
-<h3>Q17. What was the immediate reason for the withdrawal of the Non-Cooperation Movement?</h3>
-
-<label><input type="radio" name="q17" value="A"> A. Jallianwala Bagh massacre</label>
-<label><input type="radio" name="q17" value="B"> B. Simon Commission</label>
-<label><input type="radio" name="q17" value="C"> C. Chauri Chaura incident</label>
-<label><input type="radio" name="q17" value="D"> D. Rowlatt Act</label>
-
-<div class="explanation" id="exp17">
-<strong>Correct Answer: C</strong>
-<p>
-At Chauri Chaura in February 1922, a violent clash took place in
-which a police station was set on fire and policemen were killed.
-Gandhi believed that the movement had become violent and therefore
-withdrew the Non-Cooperation Movement.
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 18 -->
-<div class="question">
-<h3>Q18. Why was the Swaraj Party formed?</h3>
-
-<label><input type="radio" name="q18" value="A"> A. To launch an armed revolution</label>
-<label><input type="radio" name="q18" value="B"> B. To enter legislative councils and oppose colonial rule from within</label>
-<label><input type="radio" name="q18" value="C"> C. To support the British government</label>
-<label><input type="radio" name="q18" value="D"> D. To establish a separate state for peasants</label>
-
-<div class="explanation" id="exp18">
-<strong>Correct Answer: B</strong>
-<p>
-The Swaraj Party was formed in 1923 by leaders such as C. R. Das
-and Motilal Nehru. They wanted to enter the legislative councils
-and use them to obstruct colonial policies and expose the limitations
-of colonial government from within.
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 19 -->
-<div class="question">
-<h3>Q19. Who were among the important leaders associated with the Swaraj Party?</h3>
-
-<label><input type="radio" name="q19" value="A"> A. C. R. Das and Motilal Nehru</label>
-<label><input type="radio" name="q19" value="B"> B. Bhagat Singh and Chandrashekhar Azad</label>
-<label><input type="radio" name="q19" value="C"> C. Gandhi and Sardar Patel</label>
-<label><input type="radio" name="q19" value="D"> D. Jawaharlal Nehru and Subhas Chandra Bose</label>
-
-<div class="explanation" id="exp19">
-<strong>Correct Answer: A</strong>
-<p>
-C. R. Das and Motilal Nehru were the leading founders of the
-Swaraj Party in 1923. They believed that entering the legislative
-councils could be used as a political strategy against colonial rule.
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 20 -->
-<div class="question">
-<h3>Q20. What was the main strategy of the Swarajists?</h3>
-
-<label><input type="radio" name="q20" value="A"> A. Complete boycott of legislative councils</label>
-<label><input type="radio" name="q20" value="B"> B. Enter the councils and obstruct colonial government policies from within</label>
-<label><input type="radio" name="q20" value="C"> C. Military cooperation with the British</label>
-<label><input type="radio" name="q20" value="D"> D. Limiting political activities to rural areas</label>
-
-<div class="explanation" id="exp20">
-<strong>Correct Answer: B</strong>
-<p>
-The Swarajists wanted to enter the legislative councils and use
-their presence to oppose colonial policies, disrupt government
-functioning and demonstrate that the councils were not truly
-representative institutions.
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 21 -->
-<div class="question">
-<h3>Q21. The Simon Commission came to India in:</h3>
-
-<label><input type="radio" name="q21" value="A"> A. 1919</label>
-<label><input type="radio" name="q21" value="B"> B. 1920</label>
-<label><input type="radio" name="q21" value="C"> C. 1927</label>
-<label><input type="radio" name="q21" value="D"> D. 1928</label>
-
-<div class="explanation" id="exp21">
-<strong>Correct Answer: D</strong>
-<p>
-The Simon Commission arrived in India in 1928. It had been
-appointed by the British government to review constitutional
-arrangements, but its complete absence of Indian members led to
-widespread opposition.
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 22 -->
-<div class="question">
-<h3>Q22. Why was the Simon Commission widely opposed in India?</h3>
-
-<label><input type="radio" name="q22" value="A"> A. It had no Indian member</label>
-<label><input type="radio" name="q22" value="B"> B. It rejected the demand for complete independence</label>
-<label><input type="radio" name="q22" value="C"> C. It imposed a new tax on peasants</label>
-<label><input type="radio" name="q22" value="D"> D. It introduced the Rowlatt Act</label>
-
-<div class="explanation" id="exp22">
-<strong>Correct Answer: A</strong>
-<p>
-The Simon Commission consisted entirely of British members.
-Indians strongly opposed the idea that a commission examining
-India's constitutional future should have no Indian representative.
-The famous slogan was "Simon Go Back".
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 23 -->
-<div class="question">
-<h3>Q23. Which slogan became famous during the protest against the Simon Commission?</h3>
-
-<label><input type="radio" name="q23" value="A"> A. Do or Die</label>
-<label><input type="radio" name="q23" value="B"> B. Simon Go Back</label>
-<label><input type="radio" name="q23" value="C"> C. Vande Mataram</label>
-<label><input type="radio" name="q23" value="D"> D. Jai Hind</label>
-
-<div class="explanation" id="exp23">
-<strong>Correct Answer: B</strong>
-<p>
-"Simon Go Back" became the popular slogan of the nationwide
-protests against the Simon Commission. Indians objected to the
-absence of any Indian member in the commission.
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 24 -->
-<div class="question">
-<h3>Q24. Arrange the following events in the correct chronological order:</h3>
-
-<p>
-1. Champaran Satyagraha<br>
-2. Kheda Satyagraha<br>
-3. Ahmedabad Mill Strike<br>
-4. Rowlatt Satyagraha
-</p>
-
-<label><input type="radio" name="q24" value="A"> A. 1 → 2 → 3 → 4</label>
-<label><input type="radio" name="q24" value="B"> B. 2 → 1 → 3 → 4</label>
-<label><input type="radio" name="q24" value="C"> C. 3 → 1 → 2 → 4</label>
-<label><input type="radio" name="q24" value="D"> D. 1 → 3 → 2 → 4</label>
-
-<div class="explanation" id="exp24">
-<strong>Correct Answer: A</strong>
-<p>
-The correct chronological order is:
-Champaran Satyagraha (1917) → Kheda Satyagraha (1918) →
-Ahmedabad Mill Strike (1918) → Rowlatt Satyagraha (1919).
-This sequence is important for understanding the development of
-Gandhi's early movements in India.
-</p>
-</div>
-</div>
-
-
-<!-- QUESTION 25 -->
-<div class="question">
-<h3>Q25. Which of the following pairs is correctly matched?</h3>
-
-<label><input type="radio" name="q25" value="A"> A. Champaran — Mill workers</label>
-<label><input type="radio" name="q25" value="B"> B. Kheda — Revenue relief after crop failure</label>
-<label><input type="radio" name="q25" value="C"> C. Ahmedabad — Indigo cultivation</label>
-<label><input type="radio" name="q25" value="D"> D. Rowlatt Act — Formation of Swaraj Party</label>
-
-<div class="explanation" id="exp25">
-<strong>Correct Answer: B</strong>
-<p>
-Kheda Satyagraha was associated with the demand for revenue
-relief after crop failure. Champaran was associated with indigo
-cultivation, Ahmedabad with mill workers, and the Swaraj Party
-was formed later in 1923.
-</p>
-</div>
-</div>
-
-
-<button type="button" class="submit-btn" onclick="checkTest()">
-📝 Submit Test
 </button>
 
-</form>
 
-<div id="result"></div>
+<div class="answer-box">
+
+<div class="answer-title">
+✅ Correct Answer: A — 1, 2 and 3 only
+</div>
+
+<div class="explanation">
+
+Statement 1 is correct because General Dyer ordered
+firing at Jallianwala Bagh and later justified his action
+as producing a moral effect.
+
+<br><br>
+
+Statement 2 is correct. Gandhi called off the Rowlatt
+Satyagraha after violence spread in several areas.
+
+<br><br>
+
+Statement 3 is correct. Gandhi saw the Khilafat issue as
+an opportunity for Hindu-Muslim unity.
+
+<br><br>
+
+Statement 4 is incorrect. Non-Cooperation was planned
+in stages. Full civil disobedience was not the immediate
+first step.
+
+</div>
+
+<div class="exam-point">
+
+<strong>🎯 EXAM POINT</strong>
+
+<br><br>
+
+Jallianwala Bagh
+→ Rowlatt Satyagraha withdrawn
+→ Khilafat Issue
+→ Hindu-Muslim Unity
+→ Non-Cooperation
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MCQ 2 -->
+
+<div class="mcq-card"
+data-answer="A">
+
+<div class="mcq-top">
+
+<span class="mcq-number">
+📝 MCQ 02
+</span>
+
+<span class="subject-tag">
+History
+</span>
+
+</div>
+
+
+<div class="question">
+
+With reference to the Non-Cooperation Movement in towns,
+consider the following statements:
+
+<br><br>
+
+<strong>1.</strong> The movement initially received significant
+participation from the urban middle classes.
+
+<br><br>
+
+<strong>2.</strong> The Justice Party in Madras supported the
+boycott of council elections.
+
+<br><br>
+
+<strong>3.</strong> The boycott of foreign cloth contributed to
+a decline in imports between 1921 and 1922.
+
+<br><br>
+
+<strong>4.</strong> The movement gradually slowed partly
+because khadi was often more expensive than mill cloth.
+
+<br><br>
+
+Which of the statements are correct?
+
+</div>
+
+
+<label class="option">
+<input type="radio" name="history2" value="A">
+<strong>A.</strong> 1, 3 and 4 only
+</label>
+
+<label class="option">
+<input type="radio" name="history2" value="B">
+<strong>B.</strong> 1 and 2 only
+</label>
+
+<label class="option">
+<input type="radio" name="history2" value="C">
+<strong>C.</strong> 2, 3 and 4 only
+</label>
+
+<label class="option">
+<input type="radio" name="history2" value="D">
+<strong>D.</strong> 1, 2, 3 and 4
+</label>
+
+
+<button class="submit-btn"
+onclick="checkSingleAnswer(this)">
+
+✅ Check Answer
+
+</button>
+
+
+<div class="answer-box">
+
+<div class="answer-title">
+
+✅ Correct Answer: A — 1, 3 and 4 only
+
+</div>
+
+<div class="explanation">
+
+The urban middle classes initially participated actively.
+Students left government schools and colleges, teachers
+resigned and lawyers gave up legal practices.
+
+<br><br>
+
+The Justice Party did not support the boycott of council
+elections. It believed that participation could help it gain
+political power.
+
+<br><br>
+
+Foreign cloth imports declined substantially during the
+movement. Khadi was often expensive compared with
+mass-produced mill cloth, which created difficulties for
+poorer sections.
+
+</div>
+
+<div class="exam-point">
+
+<strong>🎯 EXAM POINT</strong>
+
+Students → Schools boycott
+
+<br>
+
+Teachers → Resignation
+
+<br>
+
+Lawyers → Legal practice boycott
+
+<br>
+
+Foreign cloth → Boycott
+
+<br>
+
+Khadi → Symbol of nationalism
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<script>
+<!-- =====================================================
+     HARAPPAN
+===================================================== -->
 
-const answers = {
-q1:"B",
-q2:"B",
-q3:"B",
-q4:"C",
-q5:"B",
-q6:"B",
-q7:"C",
-q8:"B",
-q9:"B",
-q10:"B",
-q11:"B",
-q12:"B",
-q13:"B",
-q14:"C",
-q15:"A",
-q16:"B",
-q17:"C",
-q18:"B",
-q19:"A",
-q20:"B",
-q21:"D",
-q22:"A",
-q23:"B",
-q24:"A",
-q25:"B"
-};
+<section id="harappan"
+class="subject-section">
 
-function checkTest(){
+<div class="section-heading">
 
-let score = 0;
-let attempted = 0;
+<h2>
+🏺 Harappan Civilisation
+</h2>
 
-for(let i=1;i<=25;i++){
+<p>
+Ancient Indian History • Class 9/Competitive Level
+</p>
 
-let selected = document.querySelector(
-'input[name="q'+i+'"]:checked'
-);
+</div>
 
-if(selected){
-
-attempted++;
-
-if(selected.value === answers["q"+i]){
-score++;
-}
-
-document.getElementById("exp"+i).style.display="block";
-
-}else{
-
-document.getElementById("exp"+i).style.display="none";
-
-}
-
-}
-
-let percentage = Math.round((score/25)*100);
-
-document.getElementById("result").innerHTML =
-
-"<div class='result-box'>" +
-
-"<h2>🎯 Test Result</h2>" +
-
-"<p><strong>Score:</strong> "
-+ score + " / 25</p>" +
-
-"<p><strong>Attempted:</strong> "
-+ attempted + " / 25</p>" +
-
-"<p><strong>Percentage:</strong> "
-+ percentage + "%</p>" +
-
-"<p>Scroll down to review the correct answers and explanations.</p>" +
-
-"</div>";
-
-window.scrollTo({
-top: document.getElementById("result").offsetTop - 20,
-behavior:"smooth"
-});
-
-}
-
-</script>
-
-
-<style>
-
-.mcq-section{
-max-width:900px;
-margin:30px auto;
-padding:20px;
-font-family:Arial,sans-serif;
-}
-
-.mcq-section h2{
-text-align:center;
-color:#063b6d;
-font-size:30px;
-}
-
-.subtitle{
-text-align:center;
-font-weight:bold;
-color:#555;
-margin-bottom:25px;
-}
-
-.question{
-background:#ffffff;
-border-radius:14px;
-padding:22px;
-margin-bottom:22px;
-box-shadow:0 4px 15px rgba(0,0,0,0.10);
-border-left:5px solid #075ca8;
-}
-
-.question h3{
-color:#123c69;
-line-height:1.5;
-}
-
-.question label{
-display:block;
-padding:12px;
-margin:8px 0;
-background:#f5f8fb;
-border-radius:8px;
-cursor:pointer;
-transition:0.2s;
-}
-
-.question label:hover{
-background:#e8f2fb;
-}
-
-.question input{
-margin-right:10px;
-}
-
-.explanation{
-display:none;
-margin-top:18px;
-padding:16px;
-background:#eef8f0;
-border-left:5px solid #159447;
-border-radius:8px;
-line-height:1.7;
-}
-
-.explanation strong{
-color:#087b35;
-font-size:17px;
-}
-
-.submit-btn{
-display:block;
-width:100%;
-padding:16px;
-border:none;
-border-radius:10px;
-background:linear-gradient(135deg,#042d5c,#075ca8,#159447);
-color:white;
-font-size:19px;
-font-weight:bold;
-cursor:pointer;
-margin-top:30px;
-}
-
-.submit-btn:hover{
-opacity:0.92;
-}
-
-.result-box{
-margin-top:30px;
-padding:25px;
-background:#eef5ff;
-border-radius:14px;
-text-align:center;
-border:2px solid #075ca8;
-}
-
-.result-box h2{
-color:#075ca8;
-}
-
-@media(max-width:600px){
-
-.mcq-section{
-padding:10px;
-}
-
-.mcq-section h2{
-font-size:24px;
-}
-
-.question{
-padding:16px;
-}
-
-.question h3{
-font-size:18px;
-}
-
-.question label{
-font-size:15px;
-padding:10px;
-}
-
-}
-
-</style>
-<section id="history" class="subject-section active">
-
-
-    <div class="section-heading">
-
-        <h2>
-            📘 History — Daily Advanced MCQs
-        </h2>
-
-        <p>
-            Nationalism in India • Modern Indian History
-        </p>
-
-    </div>
-
-
-    <!-- DATE -->
-
-    <div class="date-card">
-
-        <div class="date">
-            📅 10 September 2026
-        </div>
-
-        <div class="category">
-            Jallianwala Bagh & Non-Cooperation Movement
-        </div>
-
-    </div>
-
-
-    <!-- MCQ -->
-
-    <div class="mcq-card" data-answer="A">
-
-        <div>
-
-            <span class="mcq-number">
-                📝 DAILY ADVANCED MCQ – 01
-            </span>
-
-            <span class="subject-tag">
-                History
-            </span>
-
-        </div>
-
-
-        <div class="question">
-
-            With reference to the events following the Jallianwala Bagh
-            incident and the beginning of the Non-Cooperation-Khilafat
-            Movement, consider the following statements:
-
-            <br><br>
-
-            <strong>1.</strong> General Dyer ordered firing at Jallianwala
-            Bagh with the stated intention of creating terror and awe
-            among the satyagrahis.
-
-            <br><br>
-
-            <strong>2.</strong> Mahatma Gandhi called off the Rowlatt
-            Satyagraha after violence spread in different parts of
-            the country.
-
-            <br><br>
-
-            <strong>3.</strong> Gandhi considered the Khilafat issue as
-            an opportunity to bring Hindus and Muslims closer and build
-            a broader-based national movement.
-
-            <br><br>
-
-            <strong>4.</strong> The Non-Cooperation programme adopted at
-            Nagpur in December 1920 immediately began with a full-scale
-            civil disobedience campaign.
-
-            <br><br>
-
-            Which of the statements given above are correct?
-
-        </div>
-
-
-        <!-- OPTIONS -->
-
-        <label class="option">
-
-            <input type="radio" name="history-q1" value="A">
-
-            <strong>A.</strong>
-            1, 2 and 3 only
-
-        </label>
-
-
-        <label class="option">
-
-            <input type="radio" name="history-q1" value="B">
-
-            <strong>B.</strong>
-            1 and 4 only
-
-        </label>
-
-
-        <label class="option">
-
-            <input type="radio" name="history-q1" value="C">
-
-            <strong>C.</strong>
-            2 and 3 only
-
-        </label>
-
-
-        <label class="option">
-
-            <input type="radio" name="history-q1" value="D">
-
-            <strong>D.</strong>
-            1, 2, 3 and 4
-
-        </label>
-
-
-        <button class="submit-btn"
-                onclick="checkSingleAnswer(this)">
-
-            ✅ Check Answer
-
-        </button>
-
-
-        <!-- ANSWER -->
-
-        <div class="answer-box">
-
-            <div class="answer-title">
-
-                ✅ Correct Answer: A — 1, 2 and 3 only
-
-            </div>
-
-
-            <div class="explanation">
-
-                <strong>Statement 1 — Correct:</strong>
-
-                <br>
-
-                General Dyer ordered firing on the crowd gathered at
-                Jallianwala Bagh. He later stated that his objective
-                was to produce a “moral effect” and create a feeling
-                of terror and awe among the satyagrahis.
-
-                <br><br>
-
-
-                <strong>Statement 2 — Correct:</strong>
-
-                <br>
-
-                As violence spread following the Jallianwala Bagh
-                incident and the government responded with brutal
-                repression, Mahatma Gandhi called off the Rowlatt
-                Satyagraha.
-
-                <br><br>
-
-
-                <strong>Statement 3 — Correct:</strong>
-
-                <br>
-
-                Gandhi wanted to launch a more broad-based national
-                movement. He believed that this could not be achieved
-                without bringing Hindus and Muslims closer. He therefore
-                saw the Khilafat issue as an opportunity to bring Muslims
-                into a unified national movement.
-
-                <br><br>
-
-
-                <strong>Statement 4 — Incorrect:</strong>
-
-                <br>
-
-                The Non-Cooperation programme was planned in stages.
-                It initially included the surrender of government-awarded
-                titles and the boycott of civil services, army, police,
-                courts, legislative councils, schools and foreign goods.
-
-                <br><br>
-
-                Full civil disobedience was proposed as a later stage
-                if the government responded with repression.
-
-            </div>
-
-
-            <div class="exam-point">
-
-                <strong>
-                    🎯 EXAM POINT
-                </strong>
-
-                <br><br>
-
-                Jallianwala Bagh
-                →
-                Withdrawal of Rowlatt Satyagraha
-                →
-                Khilafat Issue
-                →
-                Hindu-Muslim Unity
-                →
-                Non-Cooperation Movement
-
-                <br><br>
-
-                📌 The Non-Cooperation Movement was planned
-                in stages; full civil disobedience was not
-                the immediate first step.
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- =================================================
-         FUTURE HISTORY MCQs
-         
-         यहाँ अगला History MCQ ADD करें।
-    ================================================= -->
-```html
-<!-- =================================================
-     HISTORY MCQ – 02
-     THE MOVEMENT IN THE TOWNS
-================================================= -->
 
 <div class="date-card">
 
-    <div class="date">
-        📅 10 September 2026
-    </div>
+<div class="date">
+📅 Daily Advanced Practice
+</div>
 
-    <div class="category">
-        History → Nationalism in India → Non-Cooperation Movement → The Movement in the Towns
-    </div>
+<div class="category">
+Town Planning • Economy • Technology • Society
+</div>
 
 </div>
 
 
-<div class="mcq-card" data-answer="A">
+<!-- H1 -->
 
-    <div>
+<div class="mcq-card"
+data-answer="B">
 
-        <span class="mcq-number">
-            📝 DAILY ADVANCED MCQ – 02
-        </span>
+<div class="mcq-top">
 
-        <span class="subject-tag">
-            History
-        </span>
+<span class="mcq-number">
+🏺 MCQ 01
+</span>
 
-    </div>
-
-
-    <div class="question">
-
-        With reference to the Non-Cooperation Movement in the towns,
-        consider the following statements:
-
-        <br><br>
-
-        <strong>1.</strong> The movement initially received significant
-        participation from the urban middle classes.
-
-        <br><br>
-
-        <strong>2.</strong> The Justice Party in Madras supported the
-        boycott of council elections.
-
-        <br><br>
-
-        <strong>3.</strong> The boycott of foreign cloth contributed to
-        a significant decline in its imports between 1921 and 1922.
-
-        <br><br>
-
-        <strong>4.</strong> The movement in the cities gradually slowed
-        partly because khadi was often more expensive than
-        mass-produced mill cloth.
-
-        <br><br>
-
-        Which of the statements given above are correct?
-
-    </div>
-
-
-    <!-- ================= OPTIONS ================= -->
-
-    <label class="option">
-
-        <input type="radio" name="history-q2" value="A">
-
-        <strong>A.</strong>
-        1, 3 and 4 only
-
-    </label>
-
-
-    <label class="option">
-
-        <input type="radio" name="history-q2" value="B">
-
-        <strong>B.</strong>
-        1 and 2 only
-
-    </label>
-
-
-    <label class="option">
-
-        <input type="radio" name="history-q2" value="C">
-
-        <strong>C.</strong>
-        2, 3 and 4 only
-
-    </label>
-
-
-    <label class="option">
-
-        <input type="radio" name="history-q2" value="D">
-
-        <strong>D.</strong>
-        1, 2, 3 and 4
-
-    </label>
-
-
-    <!-- ================= CHECK ANSWER ================= -->
-
-    <button class="submit-btn"
-            onclick="checkSingleAnswer(this)">
-
-        ✅ Check Answer
-
-    </button>
-
-
-    <!-- ================= ANSWER ================= -->
-
-    <div class="answer-box">
-
-        <div class="answer-title">
-
-            ✅ Correct Answer: A — 1, 3 and 4 only
-
-        </div>
-
-
-        <div class="explanation">
-
-            <strong>Statement 1 — Correct:</strong>
-
-            <br>
-
-            The Non-Cooperation Movement in the towns initially
-            attracted substantial participation from the
-            <strong>middle classes</strong>. Students left government
-            schools and colleges, teachers and headmasters resigned,
-            and lawyers gave up their legal practices.
-
-            <br><br>
-
-
-            <strong>Statement 2 — Incorrect:</strong>
-
-            <br>
-
-            The Justice Party in Madras did
-            <strong>not</strong> support the boycott of council elections.
-            It was a non-Brahman party and believed that entering the
-            councils could provide an opportunity for gaining political
-            power, which was generally dominated by Brahmans.
-
-            <br><br>
-
-
-            <strong>Statement 3 — Correct:</strong>
-
-            <br>
-
-            The boycott of foreign goods had a major economic impact.
-            The import of foreign cloth was reduced by half between
-            <strong>1921 and 1922</strong>, with its value falling from
-            approximately <strong>Rs 102 crore to Rs 57 crore</strong>.
-
-            <br><br>
-
-
-            <strong>Statement 4 — Correct:</strong>
-
-            <br>
-
-            The movement gradually slowed in the cities partly because
-            <strong>khadi was often more expensive</strong> than
-            mass-produced mill cloth. Poor people therefore found it
-            difficult to continue boycotting cheaper mill-made cloth.
-
-        </div>
-
-
-        <!-- ================= EXAM POINT ================= -->
-
-        <div class="exam-point">
-
-            <strong>
-                🎯 EXAM POINT
-            </strong>
-
-            <br><br>
-
-            <strong>
-                Non-Cooperation in Towns:
-            </strong>
-
-            <br><br>
-
-            Students → Schools/Colleges Boycott
-            <br>
-            Teachers → Resignation
-            <br>
-            Lawyers → Legal Practice Boycott
-            <br>
-            Merchants → Foreign Goods Boycott
-            <br>
-            People → Foreign Cloth Boycott
-            <br>
-            Liquor Shops → Picketing
-
-            <br><br>
-
-            📌 <strong>Key Fact:</strong>
-
-            Import of foreign cloth:
-
-            <strong>
-                Rs 102 crore (1921)
-                ↓
-                Rs 57 crore (1922)
-            </strong>
-
-            <br><br>
-
-            📌 <strong>Why did the urban movement slow down?</strong>
-
-            <br>
-
-            Khadi was often expensive and the boycott of
-            British institutions also created practical difficulties
-            because suitable alternatives were not immediately available.
-
-        </div>
-
-    </div>
+<span class="subject-tag">
+Harappan
+</span>
 
 </div>
 
 
-<!-- =================================================
-     END HISTORY MCQ – 02
-================================================= -->
-```
+<div class="question">
+
+Which of the following features most strongly indicates
+the highly organised nature of Harappan urban planning?
+
+</div>
 
 
+<label class="option">
+<input type="radio" name="harappan1" value="A">
+<strong>A.</strong> Large number of temples
+</label>
+
+<label class="option">
+<input type="radio" name="harappan1" value="B">
+<strong>B.</strong> Planned streets and sophisticated drainage system
+</label>
+
+<label class="option">
+<input type="radio" name="harappan1" value="C">
+<strong>C.</strong> Extensive use of iron
+</label>
+
+<label class="option">
+<input type="radio" name="harappan1" value="D">
+<strong>D.</strong> Presence of large stone pyramids
+</label>
+
+
+<button class="submit-btn"
+onclick="checkSingleAnswer(this)">
+✅ Check Answer
+</button>
+
+
+<div class="answer-box">
+
+<div class="answer-title">
+✅ Correct Answer: B
+</div>
+
+<div class="explanation">
+
+Harappan cities were characterised by planned streets,
+standardised brick sizes and an advanced drainage system.
+The drainage network is one of the strongest indicators of
+their organised urban life.
+
+</div>
+
+<div class="exam-point">
+
+<strong>🎯 EXAM POINT</strong>
+
+Harappan Civilisation is particularly known for:
+
+<br><br>
+
+✔ Planned cities
+
+<br>
+✔ Drainage system
+
+<br>
+✔ Standardised bricks
+
+<br>
+✔ Craft production
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- H2 -->
+
+<div class="mcq-card"
+data-answer="C">
+
+<div class="mcq-top">
+
+<span class="mcq-number">
+🏺 MCQ 02
+</span>
+
+<span class="subject-tag">
+Harappan
+</span>
+
+</div>
+
+
+<div class="question">
+
+Consider the following pairs:
+
+<br><br>
+
+1. Harappa — Ravi River
+
+<br>
+2. Mohenjodaro — Indus River
+
+<br>
+3. Lothal — Gujarat
+
+<br>
+4. Kalibangan — Rajasthan
+
+<br><br>
+
+Which of the pairs given above are correctly matched?
+
+</div>
+
+
+<label class="option">
+<input type="radio" name="harappan2" value="A">
+<strong>A.</strong> 1 and 2 only
+</label>
+
+<label class="option">
+<input type="radio" name="harappan2" value="B">
+<strong>B.</strong> 1, 2 and 3 only
+</label>
+
+<label class="option">
+<input type="radio" name="harappan2" value="C">
+<strong>C.</strong> 1, 2, 3 and 4
+</label>
+
+<label class="option">
+<input type="radio" name="harappan2" value="D">
+<strong>D.</strong> 2 and 4 only
+</label>
+
+
+<button class="submit-btn"
+onclick="checkSingleAnswer(this)">
+✅ Check Answer
+</button>
+
+
+<div class="answer-box">
+
+<div class="answer-title">
+✅ Correct Answer: C — All four
+</div>
+
+<div class="explanation">
+
+Harappa was located near the Ravi,
+Mohenjodaro near the Indus,
+Lothal in Gujarat and
+Kalibangan in present-day Rajasthan.
+
+</div>
+
+<div class="exam-point">
+
+<strong>🎯 EXAM POINT</strong>
+
+Harappa → Ravi
+
+<br>
+Mohenjodaro → Indus
+
+<br>
+Lothal → Gujarat
+
+<br>
+Kalibangan → Rajasthan
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- H3 -->
+
+<div class="mcq-card"
+data-answer="A">
+
+<div class="mcq-top">
+
+<span class="mcq-number">
+🏺 MCQ 03
+</span>
+
+<span class="subject-tag">
+Harappan
+</span>
+
+</div>
+
+
+<div class="question">
+
+Which one of the following statements about Harappan
+script is correct?
+
+</div>
+
+
+<label class="option">
+<input type="radio" name="harappan3" value="A">
+<strong>A.</strong> It has not yet been conclusively deciphered
+</label>
+
+<label class="option">
+<input type="radio" name="harappan3" value="B">
+<strong>B.</strong> It was written only in Sanskrit
+</label>
+
+<label class="option">
+<input type="radio" name="harappan3" value="C">
+<strong>C.</strong> It was completely deciphered by Ashoka
+</label>
+
+<label class="option">
+<input type="radio" name="harappan3" value="D">
+<strong>D.</strong> It was written exclusively on paper
+</label>
+
+
+<button class="submit-btn"
+onclick="checkSingleAnswer(this)">
+✅ Check Answer
+</button>
+
+
+<div class="answer-box">
+
+<div class="answer-title">
+✅ Correct Answer: A
+</div>
+
+<div class="explanation">
+
+The Harappan script has been found on seals, pottery and
+other objects, but it has not yet been conclusively deciphered.
+Therefore, many aspects of Harappan political and social life
+remain subjects of scholarly interpretation.
+
+</div>
+
+<div class="exam-point">
+
+<strong>🎯 EXAM POINT</strong>
+
+📌 Harappan script = Undeciphered
+
+<br>
+
+📌 Seals are important archaeological sources.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     VEDIC
+===================================================== -->
+
+<section id="vedic"
+class="subject-section">
+
+<div class="section-heading">
+
+<h2>
+🕉️ Vedic Civilisation
+</h2>
+
+<p>
+Early Vedic • Later Vedic • Society • Economy • Polity
+</p>
+
+</div>
+
+
+<div class="date-card">
+
+<div class="date">
+📅 Daily Advanced Practice
+</div>
+
+<div class="category">
+Rigveda • Society • Economy • Political Institutions
+</div>
+
+</div>
+
+
+<!-- V1 -->
+
+<div class="mcq-card"
+data-answer="B">
+
+<div class="mcq-top">
+
+<span class="mcq-number">
+🕉️ MCQ 01
+</span>
+
+<span class="subject-tag">
+Vedic Civilisation
+</span>
+
+</div>
+
+
+<div class="question">
+
+Which of the following is considered the earliest
+Vedic text and an important source for understanding
+the Early Vedic period?
+
+</div>
+
+
+<label class="option">
+<input type="radio" name="vedic1" value="A">
+<strong>A.</strong> Arthashastra
+</label>
+
+<label class="option">
+<input type="radio" name="vedic1" value="B">
+<strong>B.</strong> Rigveda
+</label>
+
+<label class="option">
+<input type="radio" name="vedic1" value="C">
+<strong>C.</strong> Rajatarangini
+</label>
+
+<label class="option">
+<input type="radio" name="vedic1" value="D">
+<strong>D.</strong> Indica
+</label>
+
+
+<button class="submit-btn"
+onclick="checkSingleAnswer(this)">
+✅ Check Answer
+</button>
+
+
+<div class="answer-box">
+
+<div class="answer-title">
+✅ Correct Answer: B — Rigveda
+</div>
+
+<div class="explanation">
+
+The Rigveda is the earliest of the four Vedas and is a major
+source for understanding the Early Vedic period. It contains
+hymns dedicated to various deities and provides information
+about society, polity, economy and religious practices.
+
+</div>
+
+<div class="exam-point">
+
+<strong>🎯 EXAM POINT</strong>
+
+Rigveda → Earliest Veda
+
+<br>
+
+Rigvedic society → Primarily pastoral
+
+<br>
+
+Important political institutions → Sabha and Samiti
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- V2 -->
+
+<div class="mcq-card"
+data-answer="C">
+
+<div class="mcq-top">
+
+<span class="mcq-number">
+🕉️ MCQ 02
+</span>
+
+<span class="subject-tag">
+Vedic Civilisation
+</span>
+
+</div>
+
+
+<div class="question">
+
+Consider the following statements regarding the Early Vedic
+economy:
+
+<br><br>
+
+<strong>1.</strong> Cattle were an important measure of wealth.
+
+<br><br>
+
+<strong>2.</strong> Pastoralism played an important role.
+
+<br><br>
+
+<strong>3.</strong> Iron technology dominated the economy.
+
+<br><br>
+
+Which of the statements given above are correct?
+
+</div>
+
+
+<label class="option">
+<input type="radio" name="vedic2" value="A">
+<strong>A.</strong> 1 only
+</label>
+
+<label class="option">
+<input type="radio" name="vedic2" value="B">
+<strong>B.</strong> 1 and 3 only
+</label>
+
+<label class="option">
+<input type="radio" name="vedic2" value="C">
+<strong>C.</strong> 1 and 2 only
+</label>
+
+<label class="option">
+<input type="radio" name="vedic2" value="D">
+<strong>D.</strong> 1, 2 and 3
+</label>
+
+
+<button class="submit-btn"
+onclick="checkSingleAnswer(this)">
+✅ Check Answer
+</button>
+
+
+<div class="answer-box">
+
+<div class="answer-title">
+✅ Correct Answer: C — 1 and 2 only
+</div>
+
+<div class="explanation">
+
+Cattle were an important form of wealth in the Early Vedic
+society. Pastoralism was also important.
+
+The statement regarding iron is incorrect because widespread
+iron technology belongs to a later phase and should not be
+used to characterise the Early Vedic economy.
+
+</div>
+
+<div class="exam-point">
+
+<strong>🎯 EXAM POINT</strong>
+
+Early Vedic Economy:
+
+<br><br>
+
+🐄 Cattle wealth
+
+<br>
+🐎 Pastoral activities
+
+<br>
+🌾 Agriculture gradually gained importance
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- V3 -->
+
+<div class="mcq-card"
+data-answer="A">
+
+<div class="mcq-top">
+
+<span class="mcq-number">
+🕉️ MCQ 03
+</span>
+
+<span class="subject-tag">
+Vedic Civilisation
+</span>
+
+</div>
+
+
+<div class="question">
+
+Which pair correctly represents important political
+assemblies of the Early Vedic period?
+
+</div>
+
+
+<label class="option">
+<input type="radio" name="vedic3" value="A">
+<strong>A.</strong> Sabha and Samiti
+</label>
+
+<label class="option">
+<input type="radio" name="vedic3" value="B">
+<strong>B.</strong> Sabha and Sangam
+</label>
+
+<label class="option">
+<input type="radio" name="vedic3" value="C">
+<strong>C.</strong> Samiti and Sabha-Parishad
+</label>
+
+<label class="option">
+<input type="radio" name="vedic3" value="D">
+<strong>D.</strong> Gana and Sangha only
+</label>
+
+
+<button class="submit-btn"
+onclick="checkSingleAnswer(this)">
+✅ Check Answer
+</button>
+
+
+<div class="answer-box">
+
+<div class="answer-title">
+✅ Correct Answer: A — Sabha and Samiti
+</div>
+
+<div class="explanation">
+
+Sabha and Samiti were important assemblies associated with
+Early Vedic political life. They indicate that political
+decision-making was not entirely concentrated in the hands
+of the ruler.
+
+</div>
+
+<div class="exam-point">
+
+<strong>🎯 EXAM POINT</strong>
+
+Early Vedic polity:
+
+<br><br>
+
+👑 Rajan
+
+<br>
+🏛️ Sabha
+
+<br>
+🏛️ Samiti
+
+<br><br>
+
+These institutions are important for understanding the
+political structure of the Early Vedic period.
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -1892,43 +2067,94 @@ padding:10px;
      GEOGRAPHY
 ===================================================== -->
 
-<section id="geography" class="subject-section">
+<section id="geography"
+class="subject-section">
 
-    <div class="section-heading">
+<div class="section-heading">
 
-        <h2>
-            🌍 Geography — Daily Advanced MCQs
-        </h2>
+<h2>
+🌍 Geography — Advanced MCQs
+</h2>
 
-        <p>
-            Resources • Agriculture • Industries • Environment
-        </p>
+<p>
+Resources • Agriculture • Climate • Environment
+</p>
 
-    </div>
-
-
-    <div class="date-card">
-
-        <div class="date">
-            📅 Coming Soon
-        </div>
-
-        <div class="category">
-            Geography Daily MCQs
-        </div>
-
-    </div>
+</div>
 
 
-    <div class="mcq-card">
+<div class="mcq-card"
+data-answer="B">
 
-        <div class="question">
+<div class="mcq-top">
 
-            🌍 Geography Daily Advanced MCQs will be added here.
+<span class="mcq-number">
+🌍 MCQ 01
+</span>
 
-        </div>
+<span class="subject-tag">
+Geography
+</span>
 
-    </div>
+</div>
+
+<div class="question">
+
+Which factor is most directly responsible for the variation
+in climate across different parts of India?
+
+</div>
+
+<label class="option">
+<input type="radio" name="geo1" value="A">
+<strong>A.</strong> Only soil type
+</label>
+
+<label class="option">
+<input type="radio" name="geo1" value="B">
+<strong>B.</strong> Latitude, altitude, relief and monsoon circulation
+</label>
+
+<label class="option">
+<input type="radio" name="geo1" value="C">
+<strong>C.</strong> Only population density
+</label>
+
+<label class="option">
+<input type="radio" name="geo1" value="D">
+<strong>D.</strong> Only mineral resources
+</label>
+
+<button class="submit-btn"
+onclick="checkSingleAnswer(this)">
+✅ Check Answer
+</button>
+
+<div class="answer-box">
+
+<div class="answer-title">
+✅ Correct Answer: B
+</div>
+
+<div class="explanation">
+
+India's climatic variation is influenced by several
+geographical factors including latitude, altitude,
+relief features and the monsoon system.
+
+</div>
+
+<div class="exam-point">
+
+<strong>🎯 EXAM POINT</strong>
+
+Indian climate = Latitude + Altitude + Relief + Monsoon
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -1937,43 +2163,95 @@ padding:10px;
      POLITICAL SCIENCE
 ===================================================== -->
 
-<section id="political" class="subject-section">
+<section id="political"
+class="subject-section">
 
-    <div class="section-heading">
+<div class="section-heading">
 
-        <h2>
-            🏛️ Political Science — Daily Advanced MCQs
-        </h2>
+<h2>
+🏛️ Political Science — Advanced MCQs
+</h2>
 
-        <p>
-            Power Sharing • Federalism • Democracy • Political Institutions
-        </p>
+<p>
+Democracy • Constitution • Power Sharing • Federalism
+</p>
 
-    </div>
-
-
-    <div class="date-card">
-
-        <div class="date">
-            📅 Coming Soon
-        </div>
-
-        <div class="category">
-            Political Science Daily MCQs
-        </div>
-
-    </div>
+</div>
 
 
-    <div class="mcq-card">
+<div class="mcq-card"
+data-answer="C">
 
-        <div class="question">
+<div class="mcq-top">
 
-            🏛️ Political Science Daily Advanced MCQs will be added here.
+<span class="mcq-number">
+🏛️ MCQ 01
+</span>
 
-        </div>
+<span class="subject-tag">
+Political Science
+</span>
 
-    </div>
+</div>
+
+<div class="question">
+
+Which of the following best explains why power sharing
+is considered desirable in a democracy?
+
+</div>
+
+<label class="option">
+<input type="radio" name="pol1" value="A">
+<strong>A.</strong> It eliminates all political differences
+</label>
+
+<label class="option">
+<input type="radio" name="pol1" value="B">
+<strong>B.</strong> It ensures that one group permanently controls power
+</label>
+
+<label class="option">
+<input type="radio" name="pol1" value="C">
+<strong>C.</strong> It reduces the possibility of conflict and promotes stability
+</label>
+
+<label class="option">
+<input type="radio" name="pol1" value="D">
+<strong>D.</strong> It removes the need for elections
+</label>
+
+<button class="submit-btn"
+onclick="checkSingleAnswer(this)">
+✅ Check Answer
+</button>
+
+<div class="answer-box">
+
+<div class="answer-title">
+✅ Correct Answer: C
+</div>
+
+<div class="explanation">
+
+Power sharing reduces the possibility of conflict among
+different social groups and strengthens political stability.
+It is also a basic spirit of democratic participation.
+
+</div>
+
+<div class="exam-point">
+
+<strong>🎯 EXAM POINT</strong>
+
+Power sharing → Conflict reduction → Political stability
+→ Stronger democracy
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -1982,50 +2260,135 @@ padding:10px;
      ECONOMICS
 ===================================================== -->
 
-<section id="economics" class="subject-section">
+<section id="economics"
+class="subject-section">
 
-    <div class="section-heading">
+<div class="section-heading">
 
-        <h2>
-            💰 Economics — Daily Advanced MCQs
-        </h2>
+<h2>
+💰 Economics — Advanced MCQs
+</h2>
 
-        <p>
-            Development • Sectors • Money & Credit • Globalisation
-        </p>
+<p>
+Development • Sectors • Money • Credit • Globalisation
+</p>
 
-    </div>
-
-
-    <div class="date-card">
-
-        <div class="date">
-            📅 Coming Soon
-        </div>
-
-        <div class="category">
-            Economics Daily MCQs
-        </div>
-
-    </div>
+</div>
 
 
-    <div class="mcq-card">
+<div class="mcq-card"
+data-answer="D">
 
-        <div class="question">
+<div class="mcq-top">
 
-            💰 Economics Daily Advanced MCQs will be added here.
+<span class="mcq-number">
+💰 MCQ 01
+</span>
 
-        </div>
+<span class="subject-tag">
+Economics
+</span>
 
-    </div>
+</div>
+
+<div class="question">
+
+Which of the following is the best example of a situation
+where income alone may not adequately measure development?
+
+</div>
+
+<label class="option">
+<input type="radio" name="eco1" value="A">
+<strong>A.</strong> Two people have exactly the same income
+</label>
+
+<label class="option">
+<input type="radio" name="eco1" value="B">
+<strong>B.</strong> A person earns money from a business
+</label>
+
+<label class="option">
+<input type="radio" name="eco1" value="C">
+<strong>C.</strong> A person receives salary every month
+</label>
+
+<label class="option">
+<input type="radio" name="eco1" value="D">
+<strong>D.</strong> People have similar income but very different access to health and education
+</label>
+
+<button class="submit-btn"
+onclick="checkSingleAnswer(this)">
+✅ Check Answer
+</button>
+
+<div class="answer-box">
+
+<div class="answer-title">
+✅ Correct Answer: D
+</div>
+
+<div class="explanation">
+
+Development is a multidimensional concept. Income is important,
+but health, education, security, equality and access to public
+facilities also influence the quality of life.
+
+</div>
+
+<div class="exam-point">
+
+<strong>🎯 EXAM POINT</strong>
+
+Development ≠ Income alone.
+
+<br><br>
+
+Important indicators include:
+
+✔ Income
+
+✔ Health
+
+✔ Education
+
+✔ Equality
+
+✔ Public facilities
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
 <!-- =====================================================
-     END DAILY CONTENT
+     TEST RESULT
 ===================================================== -->
+
+<div id="result"
+class="result-box">
+
+<h2>
+🏆 Your Test Result
+</h2>
+
+<div class="score-big"
+id="score">
+0 / 0
+</div>
+
+<p id="percentage"></p>
+
+<p class="result-message"
+id="message">
+</p>
+
+</div>
 
 
 <!-- =====================================================
@@ -2034,35 +2397,35 @@ padding:10px;
 
 <div class="previous">
 
-    <h2>
-        📚 Previous Daily MCQs
-    </h2>
+<h2>
+📚 Previous Daily MCQs
+</h2>
 
 
-    <div class="previous-item">
+<div class="previous-item">
 
-        <span>
-            📅 07 September 2026
-        </span>
+<span>
+📅 07 September 2026
+</span>
 
-        <a href="mcq-2026-09-07.html">
-            Open →
-        </a>
+<a href="mcq-2026-09-07.html">
+Open →
+</a>
 
-    </div>
+</div>
 
 
-    <div class="previous-item">
+<div class="previous-item">
 
-        <span>
-            📅 06 September 2026
-        </span>
+<span>
+📅 06 September 2026
+</span>
 
-        <a href="mcq-2026-09-06.html">
-            Open →
-        </a>
+<a href="mcq-2026-09-06.html">
+Open →
+</a>
 
-    </div>
+</div>
 
 </div>
 
@@ -2073,26 +2436,38 @@ padding:10px;
 
 <div class="info">
 
-    <strong>
-        📌 About GSI MANTRA Daily Advanced SST MCQs
-    </strong>
+<strong>
+📌 About GSI MANTRA Daily Advanced SST MCQs
+</strong>
 
-    <br><br>
+<br><br>
 
-    GSI MANTRA Daily Advanced MCQs are designed for students
-    preparing for UPSC, BPSC, SSC, UGC NET, State PCS and CBSE
-    examinations.
+GSI MANTRA Daily Advanced MCQs are designed for students
+preparing for CBSE, SSC, BPSC, UPSC, State PCS, UGC NET
+and other competitive examinations.
 
-    <br><br>
+<br><br>
 
-    The platform covers all four major Social Science subjects:
+The questions focus on:
 
-    <br><br>
+<br><br>
 
-    📘 History &nbsp; • &nbsp;
-    🌍 Geography &nbsp; • &nbsp;
-    🏛️ Political Science &nbsp; • &nbsp;
-    💰 Economics
+🧠 Conceptual Understanding
+
+<br>
+📖 NCERT-Based Knowledge
+
+<br>
+🎯 Statement-Based Questions
+
+<br>
+🔢 Chronology
+
+<br>
+⚖️ Assertion & Reasoning
+
+<br>
+🏆 Examination-Oriented Facts
 
 </div>
 
@@ -2106,33 +2481,29 @@ padding:10px;
 
 <footer class="footer">
 
-    <strong>
-        GSI MANTRA
-    </strong>
+<strong>
+GSI MANTRA
+</strong>
 
-    <br><br>
+<br><br>
 
-    Competitive Education & NCERT
+Competitive Education & NCERT
 
-    <br>
+<br>
 
-    UPSC • BPSC • SSC • UGC NET • State PCS • CBSE
+UPSC • BPSC • SSC • UGC NET • State PCS • CBSE
 
-    <br><br>
+<br><br>
 
-    © 2026 GSI MANTRA. All Rights Reserved.
+© 2026 GSI MANTRA. All Rights Reserved.
 
 </footer>
 
 
 <div class="watermark">
-    GSI MANTRA
+GSI MANTRA
 </div>
 
-
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
 
 <script>
 
@@ -2140,7 +2511,7 @@ padding:10px;
    SUBJECT SWITCHER
 ===================================================== */
 
-function showSubject(subject){
+function showSubject(subject,card){
 
     const sections =
         document.querySelectorAll(".subject-section");
@@ -2152,16 +2523,36 @@ function showSubject(subject){
     });
 
 
+    const cards =
+        document.querySelectorAll(".subject-card");
+
+    cards.forEach(function(item){
+
+        item.classList.remove("active");
+
+    });
+
+
     const selected =
         document.getElementById(subject);
+
 
     if(selected){
 
         selected.classList.add("active");
 
+        if(card){
+
+            card.classList.add("active");
+
+        }
+
         selected.scrollIntoView({
+
             behavior:"smooth",
+
             block:"start"
+
         });
 
     }
@@ -2170,7 +2561,7 @@ function showSubject(subject){
 
 
 /* =====================================================
-   MCQ ANSWER CHECKER
+   SINGLE MCQ CHECKER
 ===================================================== */
 
 function checkSingleAnswer(button){
@@ -2178,17 +2569,20 @@ function checkSingleAnswer(button){
     const card =
         button.closest(".mcq-card");
 
+
     const correctAnswer =
         card.dataset.answer;
 
+
     const selected =
         card.querySelector(
-            'input[type="radio"]:checked'
+        'input[type="radio"]:checked'
         );
 
 
     const answerBox =
         card.querySelector(".answer-box");
+
 
     const options =
         card.querySelectorAll(".option");
@@ -2196,28 +2590,26 @@ function checkSingleAnswer(button){
 
     if(!selected){
 
-        alert("⚠️ Please select an option first.");
+        alert(
+        "⚠️ Please select an option first."
+        );
 
         return;
 
     }
 
 
-    /* Prevent multiple submissions */
+    button.disabled=true;
 
-    button.disabled = true;
+    button.innerText=
+    "✅ Answer Checked";
 
-    button.style.opacity = "0.7";
-
-    button.innerText = "Answer Checked";
-
-
-    /* Highlight options */
 
     options.forEach(function(option){
 
         const input =
             option.querySelector("input");
+
 
         if(input.value === correctAnswer){
 
@@ -2234,21 +2626,135 @@ function checkSingleAnswer(button){
         }
 
 
-        input.disabled = true;
+        input.disabled=true;
 
     });
 
 
-    /* Show explanation */
-
     if(answerBox){
 
-        answerBox.style.display = "block";
+        answerBox.style.display="block";
 
-        answerBox.scrollIntoView({
-            behavior:"smooth",
-            block:"nearest"
-        });
+        setTimeout(function(){
+
+            answerBox.scrollIntoView({
+
+                behavior:"smooth",
+
+                block:"nearest"
+
+            });
+
+        },100);
+
+    }
+
+
+    updateScore();
+
+}
+
+
+/* =====================================================
+   SCORE CALCULATOR
+===================================================== */
+
+function updateScore(){
+
+    const cards =
+        document.querySelectorAll(
+        ".mcq-card[data-answer]"
+        );
+
+
+    let total=0;
+
+    let correct=0;
+
+
+    cards.forEach(function(card){
+
+        const selected =
+            card.querySelector(
+            'input[type="radio"]:checked'
+            );
+
+
+        if(selected){
+
+            total++;
+
+            if(selected.value ===
+               card.dataset.answer){
+
+                correct++;
+
+            }
+
+        }
+
+    });
+
+
+    const result =
+        document.getElementById("result");
+
+
+    if(total > 0){
+
+        result.style.display="block";
+
+        document.getElementById("score")
+        .innerText =
+        correct + " / " + total;
+
+
+        let percentage =
+        Math.round(
+        (correct/total)*100
+        );
+
+
+        document.getElementById("percentage")
+        .innerText =
+        "📊 Accuracy: " +
+        percentage + "%";
+
+
+        let message="";
+
+
+        if(percentage >= 90){
+
+            message=
+            "🏆 Excellent! Your preparation is at an advanced level.";
+
+        }
+
+        else if(percentage >= 75){
+
+            message=
+            "🎯 Very Good! Keep practising to reach the top level.";
+
+        }
+
+        else if(percentage >= 50){
+
+            message=
+            "📚 Good attempt! Revise the concepts and try again.";
+
+        }
+
+        else{
+
+            message=
+            "💪 Keep learning! Strong concepts come with regular practice.";
+
+        }
+
+
+        document.getElementById("message")
+        .innerText=message;
 
     }
 
@@ -2258,5 +2764,5 @@ function checkSingleAnswer(button){
 
 
 </body>
+
 </html>
-```
