@@ -1,0 +1,1191 @@
+```html
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Practice Set 4 | The Rise of Nationalism in Europe | GSI MANTRA</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:25px 20px;
+}
+
+.header-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:34px;
+}
+
+.logo p{
+    margin:5px 0 0;
+    font-size:15px;
+}
+
+nav{
+    background:#071d33;
+    padding:14px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{color:#ffb703}
+
+.hero{
+    background:linear-gradient(135deg,#123c69,#1d5b91);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.hero h2{
+    margin:0 0 10px;
+    font-size:34px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:35px 20px;
+}
+
+.test-info{
+    background:white;
+    border-radius:16px;
+    padding:22px;
+    margin-bottom:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    text-align:center;
+    line-height:1.8;
+}
+
+.test-info strong{color:#123c69}
+
+.question-card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:22px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    border-left:5px solid #123c69;
+}
+
+.question-number{
+    color:#f28c00;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.question{
+    font-size:17px;
+    font-weight:bold;
+    line-height:1.7;
+    margin-bottom:16px;
+}
+
+.options label{
+    display:block;
+    background:#f7f9fc;
+    border:1px solid #d9e1ea;
+    padding:12px 15px;
+    border-radius:8px;
+    margin:9px 0;
+    cursor:pointer;
+}
+
+.options label:hover{
+    background:#eef4fa;
+    border-color:#123c69;
+}
+
+.options input{
+    margin-right:10px;
+}
+
+.type-label{
+    display:inline-block;
+    background:#123c69;
+    color:white;
+    padding:5px 10px;
+    border-radius:5px;
+    font-size:12px;
+    margin-bottom:12px;
+}
+
+.passage{
+    background:#f4f7fb;
+    border-left:4px solid #f28c00;
+    padding:18px;
+    margin-bottom:18px;
+    line-height:1.8;
+    border-radius:8px;
+}
+
+.submit-area{
+    text-align:center;
+    margin:35px 0;
+}
+
+.submit-btn{
+    background:#f28c00;
+    color:white;
+    border:none;
+    padding:14px 35px;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.submit-btn:hover{background:#d97700}
+
+.result{
+    display:none;
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    margin:30px 0;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+.result h2{color:#123c69}
+
+.score{
+    font-size:30px;
+    font-weight:bold;
+    color:#f28c00;
+    margin:15px 0;
+}
+
+.explanation-section{
+    display:none;
+    margin-top:35px;
+}
+
+.explanation-title{
+    background:#123c69;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.explanation{
+    background:white;
+    padding:20px;
+    margin-bottom:15px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,.07);
+    border-left:4px solid #159447;
+    line-height:1.7;
+}
+
+.correct-answer{
+    color:#159447;
+    font-weight:bold;
+}
+
+.exam-point{
+    background:#fff8e8;
+    border-left:4px solid #f28c00;
+    padding:12px;
+    margin-top:12px;
+    border-radius:6px;
+}
+
+.back{
+    text-align:center;
+    margin:35px 0;
+}
+
+.back a{
+    display:inline-block;
+    background:#123c69;
+    color:white;
+    text-decoration:none;
+    padding:11px 22px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    margin-top:50px;
+}
+
+footer p{color:#cbd5e1}
+
+@media(max-width:700px){
+    .header-content{flex-direction:column}
+    .logo h1{font-size:28px}
+    .hero h2{font-size:27px}
+    .question-card{padding:20px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="header-content">
+<div class="logo">
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+<div>
+<h1>GSI MANTRA</h1>
+<p>Competitive Education & NCERT Learning Platform</p>
+</div>
+</div>
+</div>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="class10.html">Class 10</a>
+<a href="class10-history.html">History</a>
+<a href="class10-history-chapter1-practice.html">Practice Sets</a>
+</nav>
+
+<section class="hero">
+<h2>The Rise of Nationalism in Europe</h2>
+<p>Practice Set 4 — Hindi Medium | Advanced Level</p>
+</section>
+
+<div class="container">
+
+<div class="test-info">
+<strong>Class:</strong> 10 &nbsp; | &nbsp;
+<strong>Subject:</strong> History &nbsp; | &nbsp;
+<strong>Chapter:</strong> The Rise of Nationalism in Europe
+<br>
+<strong>Total Questions:</strong> 30 &nbsp; | &nbsp;
+<strong>Marks:</strong> 30 &nbsp; | &nbsp;
+<strong>Level:</strong> Advanced | NCERT + Board + Competitive
+</div>
+
+<form id="testForm">
+
+<!-- Q1 -->
+<div class="question-card">
+<div class="type-label">Advanced MCQ</div>
+<div class="question-number">Question 1</div>
+<div class="question">
+1815 के बाद यूरोप में रूढ़िवादी व्यवस्था की स्थापना का सबसे उपयुक्त उद्देश्य क्या था?
+</div>
+<div class="options">
+<label><input type="radio" name="q1" value="A"> A. केवल औद्योगिक विकास को बढ़ावा देना</label>
+<label><input type="radio" name="q1" value="B"> B. नेपोलियन के बाद पुरानी राजशाहियों और सामाजिक व्यवस्था को पुनर्स्थापित करना</label>
+<label><input type="radio" name="q1" value="C"> C. सभी यूरोपीय राज्यों में गणतंत्र स्थापित करना</label>
+<label><input type="radio" name="q1" value="D"> D. राष्ट्रवादी आंदोलनों को प्रोत्साहित करना</label>
+</div>
+</div>
+
+<!-- Q2 -->
+<div class="question-card">
+<div class="type-label">Advanced MCQ</div>
+<div class="question-number">Question 2</div>
+<div class="question">
+निम्नलिखित में से कौन-सा कथन 19वीं सदी के उदारवाद की प्रकृति को सबसे बेहतर व्यक्त करता है?
+</div>
+<div class="options">
+<label><input type="radio" name="q2" value="A"> A. सभी वयस्कों के लिए तत्काल सार्वभौमिक मताधिकार</label>
+<label><input type="radio" name="q2" value="B"> B. व्यक्ति की स्वतंत्रता, कानून के समक्ष समानता और प्रतिनिधि सरकार</label>
+<label><input type="radio" name="q2" value="C"> C. राजशाही और सामंती विशेषाधिकारों की रक्षा</label>
+<label><input type="radio" name="q2" value="D"> D. केवल धार्मिक स्वतंत्रता</label>
+</div>
+</div>
+
+<!-- Q3 -->
+<div class="question-card">
+<div class="type-label">Advanced MCQ</div>
+<div class="question-number">Question 3</div>
+<div class="question">
+जॉलवेराइन को जर्मन राष्ट्रवाद के विकास से जोड़ने का सबसे उचित कारण क्या था?
+</div>
+<div class="options">
+<label><input type="radio" name="q3" value="A"> A. इसने जर्मन राज्यों को सैन्य रूप से एक कर दिया</label>
+<label><input type="radio" name="q3" value="B"> B. इसने आर्थिक बाधाएँ कम कर आर्थिक एकीकरण को बढ़ावा दिया</label>
+<label><input type="radio" name="q3" value="C"> C. इसने फ्रांस को जर्मनी से बाहर कर दिया</label>
+<label><input type="radio" name="q3" value="D"> D. इसने ऑस्ट्रिया को जर्मन संघ से समाप्त कर दिया</label>
+</div>
+</div>
+
+<!-- Q4 -->
+<div class="question-card">
+<div class="type-label">Advanced MCQ</div>
+<div class="question-number">Question 4</div>
+<div class="question">
+माज़िनी के राष्ट्रवाद और बिस्मार्क के राष्ट्रवाद में प्रमुख अंतर क्या था?
+</div>
+<div class="options">
+<label><input type="radio" name="q4" value="A"> A. माज़िनी गणतांत्रिक राष्ट्रवाद के समर्थक थे, जबकि बिस्मार्क ने राज्य शक्ति और युद्ध का उपयोग किया</label>
+<label><input type="radio" name="q4" value="B"> B. दोनों राजशाही के पूर्ण समर्थक थे</label>
+<label><input type="radio" name="q4" value="C"> C. माज़िनी जर्मनी और बिस्मार्क इटली से संबंधित थे</label>
+<label><input type="radio" name="q4" value="D"> D. दोनों ने राष्ट्रवाद का विरोध किया</label>
+</div>
+</div>
+
+<!-- Q5 -->
+<div class="question-card">
+<div class="type-label">Advanced MCQ</div>
+<div class="question-number">Question 5</div>
+<div class="question">
+फ्रैंकफर्ट संसद की विफलता से कौन-सा निष्कर्ष सबसे उचित निकलता है?
+</div>
+<div class="options">
+<label><input type="radio" name="q5" value="A"> A. उदारवादी राष्ट्रवाद पूरी तरह समाप्त हो गया</label>
+<label><input type="radio" name="q5" value="B"> B. केवल सांस्कृतिक राष्ट्रवाद ही संभव था</label>
+<label><input type="radio" name="q5" value="C"> C. राजशाही और सैन्य शक्ति अभी भी राजनीतिक एकीकरण में अत्यंत प्रभावशाली थीं</label>
+<label><input type="radio" name="q5" value="D"> D. जर्मन जनता राष्ट्रवाद के विरोध में थी</label>
+</div>
+</div>
+
+<!-- Q6 -->
+<div class="question-card">
+<div class="type-label">Advanced MCQ</div>
+<div class="question-number">Question 6</div>
+<div class="question">
+नेपोलियन के सुधारों का यूरोप में दोहरा प्रभाव किस प्रकार समझा जा सकता है?
+</div>
+<div class="options">
+<label><input type="radio" name="q6" value="A"> A. उन्होंने केवल सामंतवाद को मजबूत किया</label>
+<label><input type="radio" name="q6" value="B"> B. उन्होंने प्रशासनिक-कानूनी सुधारों को फैलाया, लेकिन साथ ही फ्रांसीसी प्रभुत्व के विरुद्ध राष्ट्रवादी प्रतिक्रिया भी पैदा की</label>
+<label><input type="radio" name="q6" value="C"> C. उन्होंने राष्ट्रवाद को पूरी तरह समाप्त कर दिया</label>
+<label><input type="radio" name="q6" value="D"> D. उन्होंने यूरोप में कोई राजनीतिक परिवर्तन नहीं किया</label>
+</div>
+</div>
+
+<!-- Q7 -->
+<div class="question-card">
+<div class="type-label">Advanced MCQ</div>
+<div class="question-number">Question 7</div>
+<div class="question">
+निम्नलिखित में से किस स्थिति ने बाल्कन को यूरोपीय संघर्ष का संवेदनशील क्षेत्र बनाया?
+</div>
+<div class="options">
+<label><input type="radio" name="q7" value="A"> A. राष्ट्रवादी आकांक्षाएँ और साम्राज्यवादी प्रतिद्वंद्विता</label>
+<label><input type="radio" name="q7" value="B"> B. केवल औद्योगिक क्रांति</label>
+<label><input type="radio" name="q7" value="C"> C. केवल धार्मिक सुधार</label>
+<label><input type="radio" name="q7" value="D"> D. राजनीतिक स्थिरता</label>
+</div>
+</div>
+
+<!-- Q8 -->
+<div class="question-card">
+<div class="type-label">Advanced MCQ</div>
+<div class="question-number">Question 8</div>
+<div class="question">
+'राष्ट्र' की कल्पना को मूर्त रूप देने के लिए मैरिएन और जर्मानिया जैसी महिला आकृतियों का प्रयोग क्यों किया गया?
+</div>
+<div class="options">
+<label><input type="radio" name="q8" value="A"> A. महिलाओं को राजनीतिक अधिकार देने के लिए</label>
+<label><input type="radio" name="q8" value="B"> B. अमूर्त राष्ट्र को एक दृश्य और मानवीय पहचान देने के लिए</label>
+<label><input type="radio" name="q8" value="C"> C. राजशाही को मजबूत करने के लिए</label>
+<label><input type="radio" name="q8" value="D"> D. औद्योगिक उत्पादन बढ़ाने के लिए</label>
+</div>
+</div>
+
+<!-- Q9 -->
+<div class="question-card">
+<div class="type-label">Advanced MCQ</div>
+<div class="question-number">Question 9</div>
+<div class="question">
+जर्मन एकीकरण में बिस्मार्क की रणनीति को किस अवधारणा से सबसे अधिक जोड़ा जाता है?
+</div>
+<div class="options">
+<label><input type="radio" name="q9" value="A"> A. केवल शांतिपूर्ण जनमत संग्रह</label>
+<label><input type="radio" name="q9" value="B"> B. राजनय, सैन्य शक्ति और युद्ध का संयोजन</label>
+<label><input type="radio" name="q9" value="C"> C. केवल धार्मिक सुधार</label>
+<label><input type="radio" name="q9" value="D"> D. औपनिवेशिक विस्तार</label>
+</div>
+</div>
+
+<!-- Q10 -->
+<div class="question-card">
+<div class="type-label">Advanced MCQ</div>
+<div class="question-number">Question 10</div>
+<div class="question">
+इटली के एकीकरण में सार्डिनिया-पीडमोंट की भूमिका को सबसे सही कैसे समझा जा सकता है?
+</div>
+<div class="options">
+<label><input type="radio" name="q10" value="A"> A. उसने केवल सांस्कृतिक आंदोलन चलाया</label>
+<label><input type="radio" name="q10" value="B"> B. उसने राजनीतिक और सैन्य नेतृत्व प्रदान किया</label>
+<label><input type="radio" name="q10" value="C"> C. उसने ऑस्ट्रिया के साथ स्थायी गठबंधन किया</label>
+<label><input type="radio" name="q10" value="D"> D. उसने एकीकरण का विरोध किया</label>
+</div>
+</div>
+
+<!-- Q11 Matching -->
+<div class="question-card">
+<div class="type-label">Matching</div>
+<div class="question-number">Question 11</div>
+<div class="question">
+सही मिलान कीजिए:
+<br><br>
+1. माज़िनी — A. जर्मन एकीकरण<br>
+2. बिस्मार्क — B. यंग इटली<br>
+3. मेटरनिख — C. रूढ़िवादी व्यवस्था<br>
+4. गैरीबाल्डी — D. दक्षिणी इटली का अभियान
+</div>
+<div class="options">
+<label><input type="radio" name="q11" value="A"> A. 1-B, 2-A, 3-C, 4-D</label>
+<label><input type="radio" name="q11" value="B"> B. 1-A, 2-B, 3-D, 4-C</label>
+<label><input type="radio" name="q11" value="C"> C. 1-C, 2-D, 3-A, 4-B</label>
+<label><input type="radio" name="q11" value="D"> D. 1-D, 2-C, 3-B, 4-A</label>
+</div>
+</div>
+
+<!-- Q12 Matching -->
+<div class="question-card">
+<div class="type-label">Matching</div>
+<div class="question-number">Question 12</div>
+<div class="question">
+सही मिलान कीजिए:
+<br><br>
+1. फ्रांस — A. जर्मानिया<br>
+2. जर्मनी — B. मैरिएन<br>
+3. ब्रिटेन — C. यूनियन जैक<br>
+4. इटली — D. त्रिवर्ण ध्वज
+</div>
+<div class="options">
+<label><input type="radio" name="q12" value="A"> A. 1-B, 2-A, 3-C, 4-D</label>
+<label><input type="radio" name="q12" value="B"> B. 1-A, 2-B, 3-D, 4-C</label>
+<label><input type="radio" name="q12" value="C"> C. 1-C, 2-D, 3-A, 4-B</label>
+<label><input type="radio" name="q12" value="D"> D. 1-D, 2-C, 3-B, 4-A</label>
+</div>
+</div>
+
+<!-- Q13 Matching -->
+<div class="question-card">
+<div class="type-label">Matching</div>
+<div class="question-number">Question 13</div>
+<div class="question">
+सही मिलान कीजिए:
+<br><br>
+1. 1815 — A. फ्रैंकफर्ट संसद<br>
+2. 1834 — B. वियना कांग्रेस<br>
+3. 1848 — C. जॉलवेराइन<br>
+4. 1871 — D. जर्मन साम्राज्य की घोषणा
+</div>
+<div class="options">
+<label><input type="radio" name="q13" value="A"> A. 1-B, 2-C, 3-A, 4-D</label>
+<label><input type="radio" name="q13" value="B"> B. 1-C, 2-B, 3-D, 4-A</label>
+<label><input type="radio" name="q13" value="C"> C. 1-A, 2-D, 3-C, 4-B</label>
+<label><input type="radio" name="q13" value="D"> D. 1-D, 2-A, 3-B, 4-C</label>
+</div>
+</div>
+
+<!-- Q14 Matching -->
+<div class="question-card">
+<div class="type-label">Matching</div>
+<div class="question-number">Question 14</div>
+<div class="question">
+व्यक्ति और संबंधित भूमिका का सही मिलान कीजिए:
+<br><br>
+1. कावूर — A. इटली का प्रधानमंत्री<br>
+2. विक्टर इमैनुएल II — B. सार्डिनिया-पीडमोंट का शासक<br>
+3. गैरीबाल्डी — C. स्वयंसेवी सेनानायक<br>
+4. माज़िनी — D. राष्ट्रवादी विचारक
+</div>
+<div class="options">
+<label><input type="radio" name="q14" value="A"> A. 1-A, 2-B, 3-C, 4-D</label>
+<label><input type="radio" name="q14" value="B"> B. 1-B, 2-A, 3-D, 4-C</label>
+<label><input type="radio" name="q14" value="C"> C. 1-C, 2-D, 3-A, 4-B</label>
+<label><input type="radio" name="q14" value="D"> D. 1-D, 2-C, 3-B, 4-A</label>
+</div>
+</div>
+
+<!-- Q15 Arrangement -->
+<div class="question-card">
+<div class="type-label">Arrangement</div>
+<div class="question-number">Question 15</div>
+<div class="question">
+निम्नलिखित घटनाओं को कालानुक्रमिक क्रम में व्यवस्थित कीजिए:
+<br><br>
+1. वियना कांग्रेस<br>
+2. जॉलवेराइन<br>
+3. फ्रैंकफर्ट संसद<br>
+4. जर्मनी का एकीकरण
+</div>
+<div class="options">
+<label><input type="radio" name="q15" value="A"> A. 1-2-3-4</label>
+<label><input type="radio" name="q15" value="B"> B. 2-1-3-4</label>
+<label><input type="radio" name="q15" value="C"> C. 1-3-2-4</label>
+<label><input type="radio" name="q15" value="D"> D. 3-1-2-4</label>
+</div>
+</div>
+
+<!-- Q16 Arrangement -->
+<div class="question-card">
+<div class="type-label">Arrangement</div>
+<div class="question-number">Question 16</div>
+<div class="question">
+इटली के एकीकरण से संबंधित घटनाओं का सही क्रम चुनिए:
+<br><br>
+1. गैरीबाल्डी का सिसिली अभियान<br>
+2. दक्षिणी इटली का विलय<br>
+3. वेनेशिया का विलय<br>
+4. रोम का विलय
+</div>
+<div class="options">
+<label><input type="radio" name="q16" value="A"> A. 1-2-3-4</label>
+<label><input type="radio" name="q16" value="B"> B. 3-1-2-4</label>
+<label><input type="radio" name="q16" value="C"> C. 1-3-2-4</label>
+<label><input type="radio" name="q16" value="D"> D. 2-1-3-4</label>
+</div>
+</div>
+
+<!-- Q17 Arrangement -->
+<div class="question-card">
+<div class="type-label">Arrangement</div>
+<div class="question-number">Question 17</div>
+<div class="question">
+निम्नलिखित घटनाओं का सही क्रम चुनिए:
+<br><br>
+1. नेपोलियन का उदय<br>
+2. वियना कांग्रेस<br>
+3. 1848 की क्रांतियाँ<br>
+4. जर्मन साम्राज्य की स्थापना
+</div>
+<div class="options">
+<label><input type="radio" name="q17" value="A"> A. 1-2-3-4</label>
+<label><input type="radio" name="q17" value="B"> B. 2-1-3-4</label>
+<label><input type="radio" name="q17" value="C"> C. 1-3-2-4</label>
+<label><input type="radio" name="q17" value="D"> D. 3-1-2-4</label>
+</div>
+</div>
+
+<!-- Q18 Arrangement -->
+<div class="question-card">
+<div class="type-label">Arrangement</div>
+<div class="question-number">Question 18</div>
+<div class="question">
+जर्मन एकीकरण की प्रमुख घटनाओं को सही क्रम में रखिए:
+<br><br>
+1. डेनमार्क के विरुद्ध युद्ध<br>
+2. ऑस्ट्रिया के विरुद्ध युद्ध<br>
+3. फ्रांस के विरुद्ध युद्ध<br>
+4. जर्मन साम्राज्य की घोषणा
+</div>
+<div class="options">
+<label><input type="radio" name="q18" value="A"> A. 1-2-3-4</label>
+<label><input type="radio" name="q18" value="B"> B. 2-1-3-4</label>
+<label><input type="radio" name="q18" value="C"> C. 1-3-2-4</label>
+<label><input type="radio" name="q18" value="D"> D. 3-1-2-4</label>
+</div>
+</div>
+
+<!-- Q19 Passage -->
+<div class="question-card">
+<div class="type-label">Passage-Based</div>
+<div class="question-number">Question 19</div>
+
+<div class="passage">
+19वीं सदी के यूरोप में राष्ट्रवाद केवल राजनीतिक विचार नहीं था।
+भाषा, लोकगीत, लोककथाएँ और सांस्कृतिक परंपराएँ भी लोगों को
+एक साझा पहचान से जोड़ने लगीं। रोमांटिक विचारकों ने लोक संस्कृति
+को राष्ट्र की आत्मा के रूप में प्रस्तुत किया।
+</div>
+
+<div class="question">
+Passage के आधार पर राष्ट्रवाद के सांस्कृतिक आयाम का सबसे उचित निष्कर्ष क्या है?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q19" value="A"> A. राष्ट्रवाद केवल सैन्य शक्ति पर आधारित था</label>
+<label><input type="radio" name="q19" value="B"> B. सांस्कृतिक समानताओं ने साझा राष्ट्रीय पहचान बनाने में सहायता की</label>
+<label><input type="radio" name="q19" value="C"> C. लोक संस्कृति राष्ट्रवाद के विरुद्ध थी</label>
+<label><input type="radio" name="q19" value="D"> D. राष्ट्रवाद का भाषा से कोई संबंध नहीं था</label>
+</div>
+</div>
+
+<!-- Q20 Passage -->
+<div class="question-card">
+<div class="type-label">Passage-Based</div>
+<div class="question-number">Question 20</div>
+
+<div class="passage">
+फ्रैंकफर्ट संसद में विभिन्न जर्मन क्षेत्रों के प्रतिनिधियों ने
+एक संयुक्त जर्मन राष्ट्र के लिए संविधान बनाने का प्रयास किया।
+उन्होंने प्रशा के राजा को ताज की पेशकश की, लेकिन उसने इसे
+स्वीकार नहीं किया। अंततः संसद की योजना सफल नहीं हो सकी।
+</div>
+
+<div class="question">
+Passage से कौन-सा निष्कर्ष निकलता है?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q20" value="A"> A. राष्ट्रवादी विचारों और राजकीय शक्ति के बीच तनाव था</label>
+<label><input type="radio" name="q20" value="B"> B. जर्मन राज्यों में राष्ट्रवाद अनुपस्थित था</label>
+<label><input type="radio" name="q20" value="C"> C. प्रशा ने संसद का पूरा समर्थन किया</label>
+<label><input type="radio" name="q20" value="D"> D. संविधान कभी प्रस्तावित नहीं हुआ</label>
+</div>
+</div>
+
+<!-- Q21 Passage -->
+<div class="question-card">
+<div class="type-label">Passage-Based</div>
+<div class="question-number">Question 21</div>
+
+<div class="passage">
+जॉलवेराइन ने अनेक जर्मन राज्यों के बीच व्यापारिक बाधाओं को कम
+किया। इससे आर्थिक गतिविधियों में वृद्धि हुई और लोगों को यह
+अनुभव होने लगा कि विभिन्न राज्यों के बीच आर्थिक एकता संभव है।
+</div>
+
+<div class="question">
+Passage के आधार पर जॉलवेराइन का राष्ट्रवाद पर अप्रत्यक्ष प्रभाव क्या था?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q21" value="A"> A. आर्थिक एकीकरण ने राजनीतिक एकता की भावना को मजबूत किया</label>
+<label><input type="radio" name="q21" value="B"> B. इसने जर्मन राज्यों को राजनीतिक रूप से विभाजित किया</label>
+<label><input type="radio" name="q21" value="C"> C. इसने केवल ऑस्ट्रिया को लाभ दिया</label>
+<label><input type="radio" name="q21" value="D"> D. इसने व्यापार को पूरी तरह समाप्त कर दिया</label>
+</div>
+</div>
+
+<!-- Q22 Passage -->
+<div class="question-card">
+<div class="type-label">Passage-Based</div>
+<div class="question-number">Question 22</div>
+
+<div class="passage">
+बाल्कन में ऑटोमन साम्राज्य के कमजोर होने के साथ विभिन्न
+समुदायों ने स्वतंत्र राष्ट्र-राज्यों की मांग की। दूसरी ओर,
+यूरोप की बड़ी शक्तियाँ इस क्षेत्र में अपना प्रभाव बढ़ाना चाहती थीं।
+</div>
+
+<div class="question">
+इस Passage में वर्णित स्थिति किस व्यापक ऐतिहासिक प्रक्रिया को दर्शाती है?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q22" value="A"> A. राष्ट्रवाद और साम्राज्यवाद के बीच संघर्ष</label>
+<label><input type="radio" name="q22" value="B"> B. औद्योगिक क्रांति का अंत</label>
+<label><input type="radio" name="q22" value="C"> C. सामंतवाद का पुनर्जन्म</label>
+<label><input type="radio" name="q22" value="D"> D. धार्मिक एकता की स्थापना</label>
+</div>
+</div>
+
+<!-- Q23 Assertion Reason -->
+<div class="question-card">
+<div class="type-label">Assertion–Reason</div>
+<div class="question-number">Question 23</div>
+
+<div class="question">
+<strong>Assertion (A):</strong> वियना कांग्रेस ने यूरोप में रूढ़िवादी व्यवस्था को मजबूत किया।<br><br>
+<strong>Reason (R):</strong> कांग्रेस का उद्देश्य पुरानी राजशाहियों को पुनर्स्थापित करना और क्रांतिकारी परिवर्तनों को नियंत्रित करना था।
+</div>
+
+<div class="options">
+<label><input type="radio" name="q23" value="A"> A. A और R दोनों सही हैं तथा R, A की सही व्याख्या है।</label>
+<label><input type="radio" name="q23" value="B"> B. A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है।</label>
+<label><input type="radio" name="q23" value="C"> C. A सही है, लेकिन R गलत है।</label>
+<label><input type="radio" name="q23" value="D"> D. A गलत है, लेकिन R सही है।</label>
+</div>
+</div>
+
+<!-- Q24 Assertion -->
+<div class="question-card">
+<div class="type-label">Assertion–Reason</div>
+<div class="question-number">Question 24</div>
+
+<div class="question">
+<strong>Assertion (A):</strong> जर्मन एकीकरण में बिस्मार्क की भूमिका निर्णायक थी।<br><br>
+<strong>Reason (R):</strong> उन्होंने प्रशा की सैन्य शक्ति और कूटनीति का उपयोग करके एकीकरण की प्रक्रिया को आगे बढ़ाया।
+</div>
+
+<div class="options">
+<label><input type="radio" name="q24" value="A"> A. A और R दोनों सही हैं तथा R, A की सही व्याख्या है।</label>
+<label><input type="radio" name="q24" value="B"> B. A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है।</label>
+<label><input type="radio" name="q24" value="C"> C. A सही है, लेकिन R गलत है।</label>
+<label><input type="radio" name="q24" value="D"> D. A गलत है, लेकिन R सही है।</label>
+</div>
+</div>
+
+<!-- Q25 Assertion -->
+<div class="question-card">
+<div class="type-label">Assertion–Reason</div>
+<div class="question-number">Question 25</div>
+
+<div class="question">
+<strong>Assertion (A):</strong> 19वीं सदी का उदारवाद और लोकतंत्र पूरी तरह समान अवधारणाएँ नहीं थीं।<br><br>
+<strong>Reason (R):</strong> उस समय कई उदारवादी केवल संपत्ति रखने वाले पुरुषों के राजनीतिक अधिकारों का समर्थन करते थे।
+</div>
+
+<div class="options">
+<label><input type="radio" name="q25" value="A"> A. A और R दोनों सही हैं तथा R, A की सही व्याख्या है।</label>
+<label><input type="radio" name="q25" value="B"> B. A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है।</label>
+<label><input type="radio" name="q25" value="C"> C. A सही है, लेकिन R गलत है।</label>
+<label><input type="radio" name="q25" value="D"> D. A गलत है, लेकिन R सही है।</label>
+</div>
+</div>
+
+<!-- Q26 Assertion -->
+<div class="question-card">
+<div class="type-label">Assertion–Reason</div>
+<div class="question-number">Question 26</div>
+
+<div class="question">
+<strong>Assertion (A):</strong> बाल्कन में राष्ट्रवाद तनाव का कारण बना।<br><br>
+<strong>Reason (R):</strong> विभिन्न समुदाय स्वतंत्र राष्ट्र बनाना चाहते थे और यूरोपीय शक्तियाँ भी क्षेत्र में प्रभाव बढ़ाना चाहती थीं।
+</div>
+
+<div class="options">
+<label><input type="radio" name="q26" value="A"> A. A और R दोनों सही हैं तथा R, A की सही व्याख्या है।</label>
+<label><input type="radio" name="q26" value="B"> B. A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है।</label>
+<label><input type="radio" name="q26" value="C"> C. A सही है, लेकिन R गलत है।</label>
+<label><input type="radio" name="q26" value="D"> D. A गलत है, लेकिन R सही है।</label>
+</div>
+</div>
+
+<!-- Q27 -->
+<div class="question-card">
+<div class="type-label">Advanced MCQ</div>
+<div class="question-number">Question 27</div>
+
+<div class="question">
+निम्नलिखित में से कौन-सा संयोजन राष्ट्रवाद के राजनीतिक और सांस्कृतिक दोनों पक्षों को सही ढंग से दर्शाता है?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q27" value="A"> A. संविधान + लोक संस्कृति</label>
+<label><input type="radio" name="q27" value="B"> B. केवल सैन्य शक्ति</label>
+<label><input type="radio" name="q27" value="C"> C. केवल औद्योगिक उत्पादन</label>
+<label><input type="radio" name="q27" value="D"> D. केवल धार्मिक संस्थाएँ</label>
+</div>
+</div>
+
+<!-- Q28 -->
+<div class="question-card">
+<div class="type-label">Advanced MCQ</div>
+<div class="question-number">Question 28</div>
+
+<div class="question">
+यदि किसी आंदोलन का उद्देश्य साझा भाषा, संस्कृति और राजनीतिक एकता के आधार पर एक स्वतंत्र राज्य बनाना हो, तो वह किस विचारधारा से सबसे अधिक संबंधित होगा?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q28" value="A"> A. राष्ट्रवाद</label>
+<label><input type="radio" name="q28" value="B"> B. रूढ़िवाद</label>
+<label><input type="radio" name="q28" value="C"> C. सामंतवाद</label>
+<label><input type="radio" name="q28" value="D"> D. निरंकुशवाद</label>
+</div>
+</div>
+
+<!-- Q29 -->
+<div class="question-card">
+<div class="type-label">Advanced MCQ</div>
+<div class="question-number">Question 29</div>
+
+<div class="question">
+जर्मनी और इटली के एकीकरण की तुलना में कौन-सा कथन सबसे उपयुक्त है?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q29" value="A"> A. दोनों में केवल जनविद्रोह निर्णायक था</label>
+<label><input type="radio" name="q29" value="B"> B. दोनों में राज्य शक्ति, कूटनीति और युद्ध ने अलग-अलग रूपों में महत्वपूर्ण भूमिका निभाई</label>
+<label><input type="radio" name="q29" value="C"> C. दोनों एकीकरण पूरी तरह शांतिपूर्ण थे</label>
+<label><input type="radio" name="q29" value="D"> D. दोनों में कोई राजनीतिक नेतृत्व नहीं था</label>
+</div>
+</div>
+
+<!-- Q30 -->
+<div class="question-card">
+<div class="type-label">Advanced MCQ</div>
+<div class="question-number">Question 30</div>
+
+<div class="question">
+निम्नलिखित में से कौन-सा कथन 'राष्ट्र-राज्य' के उदय की प्रक्रिया को सबसे व्यापक रूप से समझाता है?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q30" value="A"> A. केवल एक राजा के अधीन कई राज्यों का होना</label>
+<label><input type="radio" name="q30" value="B"> B. साझा पहचान, राजनीतिक एकीकरण, संस्थागत परिवर्तन और राष्ट्रीय संप्रभुता का विकास</label>
+<label><input type="radio" name="q30" value="C"> C. केवल आर्थिक विकास</label>
+<label><input type="radio" name="q30" value="D"> D. केवल सैन्य विजय</label>
+</div>
+</div>
+
+<div class="submit-area">
+<button type="button" class="submit-btn" onclick="submitTest()">
+Submit Test
+</button>
+</div>
+
+</form>
+
+<div class="result" id="result">
+<h2>Test Result</h2>
+<div class="score" id="score"></div>
+<p id="resultText"></p>
+</div>
+
+<div class="explanation-section" id="explanations">
+<h2 class="explanation-title">Answers & Explanations</h2>
+<div id="explanationContent"></div>
+</div>
+
+<div class="back">
+<a href="class10-history-chapter1-practice.html">
+Back to Practice Sets
+</a>
+</div>
+
+</div>
+
+<footer>
+<h2>GSI MANTRA</h2>
+<p>Class 10 History • NCERT • Practice Tests • Notes • Videos</p>
+<p>© 2026 GSI MANTRA. All Rights Reserved.</p>
+</footer>
+
+<script>
+
+const answers = {
+
+q1:"B",
+q2:"B",
+q3:"B",
+q4:"A",
+q5:"C",
+q6:"B",
+q7:"A",
+q8:"B",
+q9:"B",
+q10:"B",
+q11:"A",
+q12:"A",
+q13:"A",
+q14:"A",
+q15:"A",
+q16:"A",
+q17:"A",
+q18:"A",
+q19:"B",
+q20:"A",
+q21:"A",
+q22:"A",
+q23:"A",
+q24:"A",
+q25:"A",
+q26:"A",
+q27:"A",
+q28:"A",
+q29:"B",
+q30:"B"
+
+};
+
+const explanations = {
+
+q1:{
+answer:"B",
+text:"1815 की वियना कांग्रेस का उद्देश्य नेपोलियन के बाद यूरोप में पुरानी राजशाहियों और पारंपरिक व्यवस्था को पुनर्स्थापित करना था। यह रूढ़िवादी राजनीतिक व्यवस्था का प्रमुख चरण था।",
+point:"Exam Point: Congress of Vienna = Restoration + Conservative Order."
+},
+
+q2:{
+answer:"B",
+text:"19वीं सदी के उदारवाद का अर्थ व्यक्तिगत स्वतंत्रता, कानून के समक्ष समानता और प्रतिनिधि सरकार से था। हालांकि उस समय उदारवाद का राजनीतिक अधिकार सभी वयस्कों तक समान रूप से विस्तृत नहीं था।",
+point:"Exam Point: Liberalism did not initially mean universal adult franchise."
+},
+
+q3:{
+answer:"B",
+text:"जॉलवेराइन ने जर्मन राज्यों के बीच सीमा शुल्क की बाधाओं को कम किया। इससे आर्थिक एकीकरण और परस्पर निर्भरता बढ़ी, जिसने राजनीतिक एकीकरण के लिए अनुकूल वातावरण बनाया।",
+point:"Exam Point: Economic integration helped create a sense of national unity."
+},
+
+q4:{
+answer:"A",
+text:"माज़िनी युवा राष्ट्रवादी और गणतांत्रिक विचारों के समर्थक थे। इसके विपरीत बिस्मार्क ने प्रशा की राज्य शक्ति, कूटनीति और युद्धों के माध्यम से जर्मन एकीकरण को आगे बढ़ाया।",
+point:"Exam Point: Mazzini = Republican Nationalism; Bismarck = State-led Unification."
+},
+
+q5:{
+answer:"C",
+text:"फ्रैंकफर्ट संसद ने संवैधानिक तरीके से जर्मन एकीकरण का प्रयास किया, लेकिन प्रशा के राजा द्वारा ताज अस्वीकार किए जाने सहित कई कारणों से यह सफल नहीं हुआ। बाद में राज्य शक्ति और सैन्य नेतृत्व निर्णायक बने।",
+point:"Exam Point: German unification ultimately proceeded under Prussian leadership."
+},
+
+q6:{
+answer:"B",
+text:"नेपोलियन ने अनेक क्षेत्रों में प्रशासनिक और कानूनी सुधार लागू किए तथा सामंती विशेषाधिकारों को कमजोर किया। लेकिन फ्रांसीसी प्रभुत्व ने कई क्षेत्रों में विरोध और राष्ट्रवादी भावना को भी जन्म दिया।",
+point:"Exam Point: Napoleonic rule had both reformist and imperial dimensions."
+},
+
+q7:{
+answer:"A",
+text:"बाल्कन में अनेक समुदायों की राष्ट्रवादी आकांक्षाएँ बढ़ रही थीं। साथ ही ऑटोमन साम्राज्य के कमजोर होने से यूरोप की बड़ी शक्तियाँ इस क्षेत्र में अपना प्रभाव बढ़ाना चाहती थीं।",
+point:"Exam Point: Balkan nationalism + Great Power rivalry = major source of tension."
+},
+
+q8:{
+answer:"B",
+text:"राष्ट्र एक अमूर्त राजनीतिक अवधारणा था। मैरिएन और जर्मानिया जैसी महिला आकृतियों ने राष्ट्र को एक दृश्य, मानवीय और भावनात्मक पहचान प्रदान की।",
+point:"Exam Point: National allegories personified the nation."
+},
+
+q9:{
+answer:"B",
+text:"बिस्मार्क ने प्रशा की सैन्य शक्ति और कूटनीति का प्रयोग करते हुए डेनमार्क, ऑस्ट्रिया और फ्रांस के विरुद्ध युद्धों के माध्यम से जर्मन एकीकरण को आगे बढ़ाया।",
+point:"Exam Point: Bismarck's policy combined diplomacy and military power."
+},
+
+q10:{
+answer:"B",
+text:"सार्डिनिया-पीडमोंट ने इटली के राजनीतिक एकीकरण में नेतृत्व किया। कावूर की कूटनीति और विक्टर इमैनुएल II की राजकीय भूमिका महत्वपूर्ण थी।",
+point:"Exam Point: Sardinia-Piedmont was the leading state in Italian unification."
+},
+
+q11:{
+answer:"A",
+text:"माज़िनी यंग इटली से, बिस्मार्क जर्मन एकीकरण से, मेटरनिख रूढ़िवादी व्यवस्था से और गैरीबाल्डी दक्षिणी इटली के अभियान से जुड़े थे।",
+point:"Exam Point: Know the distinct roles of major nationalist leaders."
+},
+
+q12:{
+answer:"A",
+text:"फ्रांस की राष्ट्रवादी प्रतीकात्मक आकृति मैरिएन, जर्मनी की जर्मानिया, ब्रिटेन का यूनियन जैक और इटली का त्रिवर्ण ध्वज राष्ट्र की पहचान से जुड़े प्रतीक थे।",
+point:"Exam Point: National symbols helped construct collective identity."
+},
+
+q13:{
+answer:"A",
+text:"वियना कांग्रेस 1815, जॉलवेराइन 1834, फ्रैंकफर्ट संसद 1848 और जर्मन साम्राज्य की स्थापना 1871 में हुई।",
+point:"Exam Point: 1815 → 1834 → 1848 → 1871."
+},
+
+q14:{
+answer:"A",
+text:"कावूर सार्डिनिया-पीडमोंट के प्रधानमंत्री थे, विक्टर इमैनुएल II उसके शासक थे, गैरीबाल्डी स्वयंसेवी सेनानायक थे और माज़िनी राष्ट्रवादी विचारक थे।",
+point:"Exam Point: Cavour = diplomacy; Garibaldi = popular military action."
+},
+
+q15:{
+answer:"A",
+text:"वियना कांग्रेस 1815 में, जॉलवेराइन 1834 में, फ्रैंकफर्ट संसद 1848 में और जर्मन एकीकरण 1871 में हुआ।",
+point:"Exam Point: Chronology is important for board and competitive exams."
+},
+
+q16:{
+answer:"A",
+text:"1860 में गैरीबाल्डी ने सिसिली में अभियान चलाया और दक्षिणी इटली पर नियंत्रण स्थापित किया। वेनेशिया 1866 में और रोम 1870 में इटली में शामिल हुआ।",
+point:"Exam Point: Italy's territorial unification progressed in stages."
+},
+
+q17:{
+answer:"A",
+text:"नेपोलियन का उदय पहले हुआ, उसके बाद 1815 में वियना कांग्रेस, 1848 में क्रांतियाँ और 1871 में जर्मन साम्राज्य की स्थापना हुई।",
+point:"Exam Point: 1815 Vienna settlement followed the Napoleonic era."
+},
+
+q18:{
+answer:"A",
+text:"बिस्मार्क के नेतृत्व में प्रशा ने पहले डेनमार्क, फिर ऑस्ट्रिया और अंततः फ्रांस के विरुद्ध युद्ध किया। 1871 में जर्मन साम्राज्य की घोषणा हुई।",
+point:"Exam Point: Three wars were central to German unification."
+},
+
+q19:{
+answer:"B",
+text:"राष्ट्रवाद ने केवल राजनीतिक संस्थाओं को नहीं बल्कि भाषा, लोकगीत, लोककथाओं और सांस्कृतिक परंपराओं को भी साझा राष्ट्रीय पहचान के आधार के रूप में महत्व दिया।",
+point:"Exam Point: Romanticism and folk culture strengthened nationalism."
+},
+
+q20:{
+answer:"A",
+text:"फ्रैंकफर्ट संसद दिखाती है कि उदारवादी राष्ट्रवादी प्रतिनिधियों की संवैधानिक योजना और राजकीय शक्ति के बीच तनाव मौजूद था।",
+point:"Exam Point: Liberal nationalism faced resistance from monarchies and ruling elites."
+},
+
+q21:{
+answer:"A",
+text:"जॉलवेराइन ने आर्थिक एकीकरण को बढ़ाया। इससे लोगों को अलग-अलग जर्मन राज्यों के बावजूद साझा आर्थिक हितों का अनुभव हुआ, जिसने राष्ट्रीय एकता की भावना को मजबूत किया।",
+point:"Exam Point: Economic integration can encourage political nationalism."
+},
+
+q22:{
+answer:"A",
+text:"बाल्कन में राष्ट्रवादी आंदोलनों और यूरोपीय साम्राज्यवादी प्रतिद्वंद्विता ने एक-दूसरे को प्रभावित किया। यही कारण था कि यह क्षेत्र तनाव का केंद्र बन गया।",
+point:"Exam Point: Nationalism and imperialism interacted strongly in the Balkans."
+},
+
+q23:{
+answer:"A",
+text:"वियना कांग्रेस ने पुराने राजवंशों की पुनर्स्थापना और क्रांतिकारी परिवर्तनों को रोकने की कोशिश की। इसलिए Assertion और Reason दोनों सही हैं और Reason Assertion की उचित व्याख्या है।",
+point:"Exam Point: Metternich represented post-1815 conservatism."
+},
+
+q24:{
+answer:"A",
+text:"बिस्मार्क ने प्रशा की सैन्य शक्ति, कूटनीति और युद्धों का उपयोग करके जर्मन राज्यों को एकीकृत किया। इसलिए Reason Assertion की सही व्याख्या करता है।",
+point:"Exam Point: Prussia's power was the foundation of Bismarck's unification policy."
+},
+
+q25:{
+answer:"A",
+text:"19वीं सदी के उदारवाद का अर्थ आधुनिक अर्थों में सार्वभौमिक लोकतंत्र नहीं था। अनेक उदारवादी राजनीतिक अधिकारों को संपत्ति रखने वाले पुरुषों तक सीमित रखते थे।",
+point:"Exam Point: Liberalism and democracy were related but not identical."
+},
+
+q26:{
+answer:"A",
+text:"बाल्कन में स्वतंत्र राष्ट्र-राज्यों की मांग और बड़ी यूरोपीय शक्तियों की साम्राज्यवादी महत्वाकांक्षाएँ एक साथ मौजूद थीं। इसलिए Reason Assertion की सही व्याख्या है।",
+point:"Exam Point: Balkan nationalism became entangled with Great Power politics."
+},
+
+q27:{
+answer:"A",
+text:"संविधान और राजनीतिक संस्थाएँ राष्ट्रवाद के राजनीतिक पक्ष को दर्शाती हैं, जबकि लोक संस्कृति साझा पहचान के सांस्कृतिक पक्ष को मजबूत करती है।",
+point:"Exam Point: Nationalism developed through both political and cultural processes."
+},
+
+q28:{
+answer:"A",
+text:"साझा भाषा, संस्कृति और राजनीतिक एकता के आधार पर स्वतंत्र राज्य की मांग राष्ट्रवाद की मूल विशेषताओं में से एक है।",
+point:"Exam Point: Nationalism links shared identity with political sovereignty."
+},
+
+q29:{
+answer:"B",
+text:"जर्मनी और इटली दोनों में राजनीतिक नेतृत्व, राज्य शक्ति, कूटनीति और युद्धों की भूमिका रही, हालांकि दोनों की परिस्थितियाँ और रणनीतियाँ अलग थीं।",
+point:"Exam Point: German and Italian unification followed different but interconnected paths."
+},
+
+q30:{
+answer:"B",
+text:"राष्ट्र-राज्य का उदय केवल सैन्य विजय या आर्थिक विकास का परिणाम नहीं था। साझा राष्ट्रीय पहचान, राजनीतिक एकीकरण, संस्थागत परिवर्तन और राष्ट्रीय संप्रभुता सभी महत्वपूर्ण तत्व थे।",
+point:"Exam Point: Nation-state formation was a multidimensional historical process."
+}
+
+};
+
+function submitTest(){
+
+    let score=0;
+    let answered=0;
+
+    for(let i=1;i<=30;i++){
+
+        const selected=document.querySelector(
+            'input[name="q'+i+'"]:checked'
+        );
+
+        if(selected){
+
+            answered++;
+
+            if(selected.value===answers["q"+i]){
+                score++;
+            }
+        }
+    }
+
+    const wrong=answered-score;
+    const unanswered=30-answered;
+    const percentage=((score/30)*100).toFixed(2);
+
+    document.getElementById("result").style.display="block";
+
+    document.getElementById("score").innerHTML=
+        score+" / 30";
+
+    document.getElementById("resultText").innerHTML=
+        "Answered: "+answered+
+        " &nbsp; | &nbsp; Correct: "+score+
+        " &nbsp; | &nbsp; Wrong: "+wrong+
+        " &nbsp; | &nbsp; Unanswered: "+unanswered+
+        " &nbsp; | &nbsp; Percentage: "+percentage+"%";
+
+    document.getElementById("explanations").style.display="block";
+
+    let html="";
+
+    for(let i=1;i<=30;i++){
+
+        const item=explanations["q"+i];
+
+        html+=`
+        <div class="explanation">
+
+            <strong>Question ${i}</strong>
+
+            <p class="correct-answer">
+            Correct Answer: ${item.answer}
+            </p>
+
+            <p>
+            ${item.text}
+            </p>
+
+            <div class="exam-point">
+            <strong>${item.point}</strong>
+            </div>
+
+        </div>
+        `;
+    }
+
+    document.getElementById("explanationContent").innerHTML=html;
+
+    window.scrollTo({
+        top:document.getElementById("result").offsetTop-20,
+        behavior:"smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
+```
