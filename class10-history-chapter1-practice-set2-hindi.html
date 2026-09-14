@@ -1,0 +1,1073 @@
+```html
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Practice Set 2 | The Rise of Nationalism in Europe | GSI MANTRA</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f4f7fb;
+color:#222;
+}
+
+header{
+background:linear-gradient(135deg,#0b2948,#123c69);
+color:white;
+padding:25px 20px;
+}
+
+.header-content{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo img{
+width:70px;
+height:70px;
+object-fit:contain;
+background:white;
+border-radius:8px;
+}
+
+.logo h1{
+margin:0;
+font-size:34px;
+}
+
+.logo p{
+margin:5px 0 0;
+font-size:15px;
+}
+
+nav{
+background:#071d33;
+padding:14px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 12px;
+font-weight:bold;
+}
+
+nav a:hover{color:#ffb703}
+
+.hero{
+background:linear-gradient(135deg,#123c69,#1d5b91);
+color:white;
+text-align:center;
+padding:45px 20px;
+}
+
+.hero h2{
+margin:0 0 10px;
+font-size:34px;
+}
+
+.hero p{
+margin:8px 0;
+font-size:17px;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:35px 20px;
+}
+
+.test-info{
+background:white;
+border-radius:16px;
+padding:22px;
+margin-bottom:25px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.test-info strong{color:#123c69}
+
+.question-card{
+background:white;
+border-radius:15px;
+padding:25px;
+margin-bottom:22px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+border-left:5px solid #123c69;
+}
+
+.question-number{
+color:#f28c00;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.question{
+font-size:17px;
+font-weight:bold;
+line-height:1.7;
+margin-bottom:16px;
+}
+
+.options label{
+display:block;
+background:#f7f9fc;
+border:1px solid #d9e1ea;
+padding:12px 15px;
+border-radius:8px;
+margin:9px 0;
+cursor:pointer;
+}
+
+.options label:hover{
+background:#eef4fa;
+border-color:#123c69;
+}
+
+.options input{margin-right:10px}
+
+.type-label{
+display:inline-block;
+background:#123c69;
+color:white;
+padding:5px 10px;
+border-radius:5px;
+font-size:12px;
+margin-bottom:12px;
+}
+
+.passage{
+background:#f4f7fb;
+border-left:4px solid #f28c00;
+padding:18px;
+margin-bottom:18px;
+line-height:1.8;
+border-radius:8px;
+}
+
+.submit-area{
+text-align:center;
+margin:35px 0;
+}
+
+.submit-btn{
+background:#f28c00;
+color:white;
+border:none;
+padding:14px 35px;
+border-radius:8px;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.result{
+display:none;
+background:white;
+padding:30px;
+border-radius:16px;
+margin:30px 0;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+text-align:center;
+}
+
+.result h2{color:#123c69}
+
+.score{
+font-size:30px;
+font-weight:bold;
+color:#f28c00;
+margin:15px 0;
+}
+
+.explanation-section{
+display:none;
+margin-top:35px;
+}
+
+.explanation-title{
+background:#123c69;
+color:white;
+padding:15px;
+border-radius:8px;
+text-align:center;
+margin-bottom:20px;
+}
+
+.explanation{
+background:white;
+padding:20px;
+margin-bottom:15px;
+border-radius:12px;
+box-shadow:0 3px 12px rgba(0,0,0,.07);
+border-left:4px solid #159447;
+}
+
+.correct-answer{
+color:#159447;
+font-weight:bold;
+}
+
+.exam-point{
+background:#fff8e8;
+border-left:4px solid #f28c00;
+padding:12px;
+margin-top:12px;
+border-radius:6px;
+}
+
+.back{
+text-align:center;
+margin:35px 0;
+}
+
+.back a{
+display:inline-block;
+background:#123c69;
+color:white;
+text-decoration:none;
+padding:11px 22px;
+border-radius:7px;
+font-weight:bold;
+}
+
+footer{
+background:#071d33;
+color:white;
+text-align:center;
+padding:35px 20px;
+margin-top:50px;
+}
+
+footer p{color:#cbd5e1}
+
+@media(max-width:700px){
+.header-content{flex-direction:column}
+.logo h1{font-size:28px}
+.hero h2{font-size:27px}
+.question-card{padding:20px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="header-content">
+<div class="logo">
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+<div>
+<h1>GSI MANTRA</h1>
+<p>Competitive Education & NCERT Learning Platform</p>
+</div>
+</div>
+</div>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="class10.html">Class 10</a>
+<a href="class10-history.html">History</a>
+<a href="class10-history-chapter1-practice.html">Practice Sets</a>
+</nav>
+
+<section class="hero">
+<h2>The Rise of Nationalism in Europe</h2>
+<p>Practice Set 2 — Hindi Medium</p>
+</section>
+
+<div class="container">
+
+<div class="test-info">
+<strong>Class:</strong> 10 &nbsp; | &nbsp;
+<strong>Subject:</strong> History &nbsp; | &nbsp;
+<strong>Chapter:</strong> The Rise of Nationalism in Europe
+<br><br>
+<strong>Total Questions:</strong> 30 &nbsp; | &nbsp;
+<strong>Marks:</strong> 30 &nbsp; | &nbsp;
+<strong>Level:</strong> NCERT + Board + Competitive
+</div>
+
+<form id="testForm">
+
+<!-- Q1 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 1</div>
+<div class="question">फ्रांसीसी क्रांति ने यूरोप में किस विचार को सबसे अधिक प्रोत्साहित किया?</div>
+<div class="options">
+<label><input type="radio" name="q1" value="A">A. निरंकुशता</label>
+<label><input type="radio" name="q1" value="B">B. राष्ट्र और नागरिकता की भावना</label>
+<label><input type="radio" name="q1" value="C">C. सामंतवाद</label>
+<label><input type="radio" name="q1" value="D">D. राजाओं की दैवी शक्ति</label>
+</div>
+</div>
+
+<!-- Q2 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 2</div>
+<div class="question">1789 से पहले फ्रांस में सत्ता का केंद्र मुख्यतः किसके हाथ में था?</div>
+<div class="options">
+<label><input type="radio" name="q2" value="A">A. राजा</label>
+<label><input type="radio" name="q2" value="B">B. किसान</label>
+<label><input type="radio" name="q2" value="C">C. मजदूर</label>
+<label><input type="radio" name="q2" value="D">D. व्यापारी संघ</label>
+</div>
+</div>
+
+<!-- Q3 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 3</div>
+<div class="question">फ्रांसीसी क्रांति के बाद प्रशासनिक व्यवस्था को अधिक समान बनाने के लिए क्या किया गया?</div>
+<div class="options">
+<label><input type="radio" name="q3" value="A">A. सभी नागरिकों के लिए समान कानून का विचार</label>
+<label><input type="radio" name="q3" value="B">B. सामंती विशेषाधिकार बढ़ाए गए</label>
+<label><input type="radio" name="q3" value="C">C. चर्च की शक्ति बढ़ाई गई</label>
+<label><input type="radio" name="q3" value="D">D. राजशाही को मजबूत किया गया</label>
+</div>
+</div>
+
+<!-- Q4 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 4</div>
+<div class="question">नेपोलियन कोड किस वर्ष लागू किया गया?</div>
+<div class="options">
+<label><input type="radio" name="q4" value="A">A. 1789</label>
+<label><input type="radio" name="q4" value="B">B. 1799</label>
+<label><input type="radio" name="q4" value="C">C. 1804</label>
+<label><input type="radio" name="q4" value="D">D. 1815</label>
+</div>
+</div>
+
+<!-- Q5 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 5</div>
+<div class="question">नेपोलियन कोड ने किस सिद्धांत को बढ़ावा दिया?</div>
+<div class="options">
+<label><input type="radio" name="q5" value="A">A. कानून के समक्ष समानता</label>
+<label><input type="radio" name="q5" value="B">B. जन्म आधारित विशेषाधिकार</label>
+<label><input type="radio" name="q5" value="C">C. सामंती कर</label>
+<label><input type="radio" name="q5" value="D">D. राजाओं की सर्वोच्चता</label>
+</div>
+</div>
+
+<!-- Q6 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 6</div>
+<div class="question">उदारवाद शब्द किस लैटिन शब्द से संबंधित माना जाता है?</div>
+<div class="options">
+<label><input type="radio" name="q6" value="A">A. Liber</label>
+<label><input type="radio" name="q6" value="B">B. Rex</label>
+<label><input type="radio" name="q6" value="C">C. Nation</label>
+<label><input type="radio" name="q6" value="D">D. Imperium</label>
+</div>
+</div>
+
+<!-- Q7 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 7</div>
+<div class="question">19वीं सदी के यूरोप में उदारवाद का आर्थिक पक्ष किससे जुड़ा था?</div>
+<div class="options">
+<label><input type="radio" name="q7" value="A">A. बाजार की स्वतंत्रता</label>
+<label><input type="radio" name="q7" value="B">B. व्यापार पर पूर्ण प्रतिबंध</label>
+<label><input type="radio" name="q7" value="C">C. सामंती कर व्यवस्था</label>
+<label><input type="radio" name="q7" value="D">D. राज्य के पूर्ण व्यापार नियंत्रण</label>
+</div>
+</div>
+
+<!-- Q8 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 8</div>
+<div class="question">रूढ़िवादियों के अनुसार परिवर्तन किस प्रकार होना चाहिए?</div>
+<div class="options">
+<label><input type="radio" name="q8" value="A">A. बिना किसी विचार के तुरंत</label>
+<label><input type="radio" name="q8" value="B">B. धीरे-धीरे और परंपराओं को ध्यान में रखकर</label>
+<label><input type="radio" name="q8" value="C">C. केवल सैन्य शक्ति से</label>
+<label><input type="radio" name="q8" value="D">D. केवल किसानों के द्वारा</label>
+</div>
+</div>
+
+<!-- Q9 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 9</div>
+<div class="question">1815 की वियना व्यवस्था का एक प्रमुख लक्ष्य क्या था?</div>
+<div class="options">
+<label><input type="radio" name="q9" value="A">A. यूरोप में शक्ति संतुलन बनाए रखना</label>
+<label><input type="radio" name="q9" value="B">B. सभी राजतंत्र समाप्त करना</label>
+<label><input type="radio" name="q9" value="C">C. समाजवादी राज्य बनाना</label>
+<label><input type="radio" name="q9" value="D">D. औपनिवेशिक शासन समाप्त करना</label>
+</div>
+</div>
+
+<!-- Q10 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 10</div>
+<div class="question">मेटरनिख किस राजनीतिक विचारधारा के प्रमुख समर्थक थे?</div>
+<div class="options">
+<label><input type="radio" name="q10" value="A">A. रूढ़िवाद</label>
+<label><input type="radio" name="q10" value="B">B. समाजवाद</label>
+<label><input type="radio" name="q10" value="C">C. साम्यवाद</label>
+<label><input type="radio" name="q10" value="D">D. अराजकतावाद</label>
+</div>
+</div>
+
+<!-- Q11 -->
+<div class="question-card">
+<div class="type-label">Matching</div>
+<div class="question-number">Question 11</div>
+<div class="question">
+सही मिलान कीजिए:
+<br><br>
+1. नेपोलियन — A. 1815<br>
+2. वियना कांग्रेस — B. 1804<br>
+3. जर्मनी का एकीकरण — C. 1871
+</div>
+<div class="options">
+<label><input type="radio" name="q11" value="A">A. 1-B, 2-A, 3-C</label>
+<label><input type="radio" name="q11" value="B">B. 1-A, 2-C, 3-B</label>
+<label><input type="radio" name="q11" value="C">C. 1-C, 2-B, 3-A</label>
+<label><input type="radio" name="q11" value="D">D. 1-B, 2-C, 3-A</label>
+</div>
+</div>
+
+<!-- Q12 -->
+<div class="question-card">
+<div class="type-label">Matching</div>
+<div class="question-number">Question 12</div>
+<div class="question">
+सही मिलान कीजिए:
+<br><br>
+1. मैरिएन — A. जर्मनी<br>
+2. जर्मानिया — B. फ्रांस<br>
+3. जॉलवेराइन — C. सीमा शुल्क संघ
+</div>
+<div class="options">
+<label><input type="radio" name="q12" value="A">A. 1-B, 2-A, 3-C</label>
+<label><input type="radio" name="q12" value="B">B. 1-A, 2-B, 3-C</label>
+<label><input type="radio" name="q12" value="C">C. 1-C, 2-A, 3-B</label>
+<label><input type="radio" name="q12" value="D">D. 1-B, 2-C, 3-A</label>
+</div>
+</div>
+
+<!-- Q13 -->
+<div class="question-card">
+<div class="type-label">Arrangement</div>
+<div class="question-number">Question 13</div>
+<div class="question">
+निम्न घटनाओं को कालानुक्रमिक क्रम में लगाइए:
+<br><br>
+1. फ्रांसीसी क्रांति<br>
+2. नेपोलियन कोड<br>
+3. वियना कांग्रेस<br>
+4. जर्मन एकीकरण
+</div>
+<div class="options">
+<label><input type="radio" name="q13" value="A">A. 1-2-3-4</label>
+<label><input type="radio" name="q13" value="B">B. 2-1-3-4</label>
+<label><input type="radio" name="q13" value="C">C. 1-3-2-4</label>
+<label><input type="radio" name="q13" value="D">D. 4-3-2-1</label>
+</div>
+</div>
+
+<!-- Q14 -->
+<div class="question-card">
+<div class="type-label">Arrangement</div>
+<div class="question-number">Question 14</div>
+<div class="question">
+जर्मनी के एकीकरण से संबंधित घटनाओं को सही क्रम में लगाइए:
+<br><br>
+1. डेनमार्क के विरुद्ध युद्ध<br>
+2. ऑस्ट्रिया के विरुद्ध युद्ध<br>
+3. फ्रांस के विरुद्ध युद्ध<br>
+4. जर्मन साम्राज्य की घोषणा
+</div>
+<div class="options">
+<label><input type="radio" name="q14" value="A">A. 1-2-3-4</label>
+<label><input type="radio" name="q14" value="B">B. 2-1-3-4</label>
+<label><input type="radio" name="q14" value="C">C. 1-3-2-4</label>
+<label><input type="radio" name="q14" value="D">D. 3-2-1-4</label>
+</div>
+</div>
+
+<!-- Q15 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 15</div>
+<div class="question">जॉलवेराइन में किस राज्य ने महत्वपूर्ण नेतृत्व दिया?</div>
+<div class="options">
+<label><input type="radio" name="q15" value="A">A. प्रशा</label>
+<label><input type="radio" name="q15" value="B">B. फ्रांस</label>
+<label><input type="radio" name="q15" value="C">C. रूस</label>
+<label><input type="radio" name="q15" value="D">D. ऑस्ट्रिया</label>
+</div>
+</div>
+
+<!-- Q16 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 16</div>
+<div class="question">माज़िनी किस प्रकार का इटली चाहते थे?</div>
+<div class="options">
+<label><input type="radio" name="q16" value="A">A. विभाजित इटली</label>
+<label><input type="radio" name="q16" value="B">B. एकीकृत गणतांत्रिक इटली</label>
+<label><input type="radio" name="q16" value="C">C. केवल ऑस्ट्रिया के अधीन इटली</label>
+<label><input type="radio" name="q16" value="D">D. सामंती इटली</label>
+</div>
+</div>
+
+<!-- Q17 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 17</div>
+<div class="question">कावूर किस राज्य के प्रमुख मंत्री थे?</div>
+<div class="options">
+<label><input type="radio" name="q17" value="A">A. सार्डिनिया-पीडमोंट</label>
+<label><input type="radio" name="q17" value="B">B. प्रशा</label>
+<label><input type="radio" name="q17" value="C">C. फ्रांस</label>
+<label><input type="radio" name="q17" value="D">D. ऑस्ट्रिया</label>
+</div>
+</div>
+
+<!-- Q18 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 18</div>
+<div class="question">गैरीबाल्डी ने किस प्रसिद्ध स्वयंसेवी सेना का नेतृत्व किया?</div>
+<div class="options">
+<label><input type="radio" name="q18" value="A">A. Red Shirts</label>
+<label><input type="radio" name="q18" value="B">B. Black Shirts</label>
+<label><input type="radio" name="q18" value="C">C. Blue Guards</label>
+<label><input type="radio" name="q18" value="D">D. White Army</label>
+</div>
+</div>
+
+<!-- Q19 -->
+<div class="question-card">
+<div class="type-label">Passage-Based</div>
+<div class="question-number">Question 19</div>
+<div class="passage">
+फ्रांसीसी क्रांति ने यह विचार मजबूत किया कि किसी देश की संप्रभुता
+किसी राजा के बजाय नागरिकों में निहित होनी चाहिए। नागरिकों को
+समान अधिकार और राष्ट्र के प्रति साझा पहचान की भावना दी गई।
+</div>
+<div class="question">Passage के अनुसार संप्रभुता का नया आधार क्या बना?</div>
+<div class="options">
+<label><input type="radio" name="q19" value="A">A. नागरिक</label>
+<label><input type="radio" name="q19" value="B">B. राजा</label>
+<label><input type="radio" name="q19" value="C">C. सामंत</label>
+<label><input type="radio" name="q19" value="D">D. चर्च</label>
+</div>
+</div>
+
+<!-- Q20 -->
+<div class="question-card">
+<div class="type-label">Passage-Based</div>
+<div class="question-number">Question 20</div>
+<div class="passage">
+यूरोप में कई क्षेत्रों में अलग-अलग राजनीतिक इकाइयाँ मौजूद थीं।
+राष्ट्रवादी विचारकों ने भाषा, संस्कृति और साझा इतिहास के आधार पर
+एकीकृत राष्ट्र की कल्पना की।
+</div>
+<div class="question">राष्ट्रवादी विचारकों का प्रमुख लक्ष्य क्या था?</div>
+<div class="options">
+<label><input type="radio" name="q20" value="A">A. राष्ट्रीय एकता</label>
+<label><input type="radio" name="q20" value="B">B. सामंती विभाजन</label>
+<label><input type="radio" name="q20" value="C">C. राजशाही विस्तार</label>
+<label><input type="radio" name="q20" value="D">D. धार्मिक युद्ध</label>
+</div>
+</div>
+
+<!-- Q21 -->
+<div class="question-card">
+<div class="type-label">Passage-Based</div>
+<div class="question-number">Question 21</div>
+<div class="passage">
+जर्मन क्षेत्रों में आर्थिक बाधाएँ व्यापार के विकास में रुकावट थीं।
+जॉलवेराइन ने अनेक जर्मन राज्यों के बीच सीमा शुल्क कम किए और
+आर्थिक एकीकरण को बढ़ावा दिया।
+</div>
+<div class="question">जॉलवेराइन का मुख्य आर्थिक परिणाम क्या था?</div>
+<div class="options">
+<label><input type="radio" name="q21" value="A">A. आर्थिक एकीकरण</label>
+<label><input type="radio" name="q21" value="B">B. व्यापार का पूर्ण अंत</label>
+<label><input type="radio" name="q21" value="C">C. कृषि का अंत</label>
+<label><input type="radio" name="q21" value="D">D. राजशाही का अंत</label>
+</div>
+</div>
+
+<!-- Q22 -->
+<div class="question-card">
+<div class="type-label">Assertion–Reason</div>
+<div class="question-number">Question 22</div>
+<div class="question">
+<strong>Assertion (A):</strong> जॉलवेराइन ने जर्मन राज्यों के आर्थिक एकीकरण में सहायता की।<br><br>
+<strong>Reason (R):</strong> इसने अनेक आंतरिक सीमा शुल्क बाधाओं को कम किया।
+</div>
+<div class="options">
+<label><input type="radio" name="q22" value="A">A. A और R दोनों सही हैं तथा R, A की सही व्याख्या है।</label>
+<label><input type="radio" name="q22" value="B">B. A और R दोनों सही हैं, लेकिन R सही व्याख्या नहीं है।</label>
+<label><input type="radio" name="q22" value="C">C. A सही है, लेकिन R गलत है।</label>
+<label><input type="radio" name="q22" value="D">D. A गलत है, लेकिन R सही है।</label>
+</div>
+</div>
+
+<!-- Q23 -->
+<div class="question-card">
+<div class="type-label">Assertion–Reason</div>
+<div class="question-number">Question 23</div>
+<div class="question">
+<strong>Assertion (A):</strong> मेटरनिख राष्ट्रवादी आंदोलनों के विरोधी थे।<br><br>
+<strong>Reason (R):</strong> वे यूरोप में पुरानी राजशाही और रूढ़िवादी व्यवस्था बनाए रखना चाहते थे।
+</div>
+<div class="options">
+<label><input type="radio" name="q23" value="A">A. A और R दोनों सही हैं तथा R, A की सही व्याख्या है।</label>
+<label><input type="radio" name="q23" value="B">B. A और R दोनों सही हैं, लेकिन R सही व्याख्या नहीं है।</label>
+<label><input type="radio" name="q23" value="C">C. A सही है, लेकिन R गलत है।</label>
+<label><input type="radio" name="q23" value="D">D. A गलत है, लेकिन R सही है।</label>
+</div>
+</div>
+
+<!-- Q24 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 24</div>
+<div class="question">फ्रांस में मैरिएन की छवि किन मूल्यों का प्रतीक थी?</div>
+<div class="options">
+<label><input type="radio" name="q24" value="A">A. स्वतंत्रता और गणतंत्र</label>
+<label><input type="radio" name="q24" value="B">B. राजशाही और सामंतवाद</label>
+<label><input type="radio" name="q24" value="C">C. साम्राज्यवाद</label>
+<label><input type="radio" name="q24" value="D">D. सैन्यवाद</label>
+</div>
+</div>
+
+<!-- Q25 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 25</div>
+<div class="question">जर्मानिया के मुकुट में ओक के पत्ते किसका प्रतीक माने जाते थे?</div>
+<div class="options">
+<label><input type="radio" name="q25" value="A">A. वीरता</label>
+<label><input type="radio" name="q25" value="B">B. व्यापार</label>
+<label><input type="radio" name="q25" value="C">C. कृषि</label>
+<label><input type="radio" name="q25" value="D">D. धर्म</label>
+</div>
+</div>
+
+<!-- Q26 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 26</div>
+<div class="question">बाल्कन क्षेत्र में कौन-सा साम्राज्य धीरे-धीरे कमजोर हो रहा था?</div>
+<div class="options">
+<label><input type="radio" name="q26" value="A">A. ऑटोमन साम्राज्य</label>
+<label><input type="radio" name="q26" value="B">B. ब्रिटिश साम्राज्य</label>
+<label><input type="radio" name="q26" value="C">C. फ्रांसीसी साम्राज्य</label>
+<label><input type="radio" name="q26" value="D">D. स्पेनिश साम्राज्य</label>
+</div>
+</div>
+
+<!-- Q27 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 27</div>
+<div class="question">बाल्कन क्षेत्र में राष्ट्रवादी तनाव को किसने और बढ़ाया?</div>
+<div class="options">
+<label><input type="radio" name="q27" value="A">A. यूरोपीय शक्तियों की प्रतिद्वंद्विता</label>
+<label><input type="radio" name="q27" value="B">B. व्यापार की पूर्ण समाप्ति</label>
+<label><input type="radio" name="q27" value="C">C. औद्योगिक उत्पादन का अंत</label>
+<label><input type="radio" name="q27" value="D">D. शिक्षा का अभाव</label>
+</div>
+</div>
+
+<!-- Q28 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 28</div>
+<div class="question">ब्रिटेन में राष्ट्र-राज्य का निर्माण किस प्रकार हुआ?</div>
+<div class="options">
+<label><input type="radio" name="q28" value="A">A. लंबी राजनीतिक प्रक्रिया और संसदीय अधिनियमों के माध्यम से</label>
+<label><input type="radio" name="q28" value="B">B. केवल एक युद्ध से</label>
+<label><input type="radio" name="q28" value="C">C. केवल धार्मिक सुधार से</label>
+<label><input type="radio" name="q28" value="D">D. केवल आर्थिक मंदी से</label>
+</div>
+</div>
+
+<!-- Q29 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 29</div>
+<div class="question">ब्रिटेन के निर्माण में इंग्लैंड के साथ किन क्षेत्रों का राजनीतिक एकीकरण हुआ?</div>
+<div class="options">
+<label><input type="radio" name="q29" value="A">A. स्कॉटलैंड और आयरलैंड</label>
+<label><input type="radio" name="q29" value="B">B. स्पेन और पुर्तगाल</label>
+<label><input type="radio" name="q29" value="C">C. फ्रांस और बेल्जियम</label>
+<label><input type="radio" name="q29" value="D">D. इटली और जर्मनी</label>
+</div>
+</div>
+
+<!-- Q30 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 30</div>
+<div class="question">राष्ट्रवाद के विकास में राष्ट्रीय प्रतीकों का मुख्य उद्देश्य क्या था?</div>
+<div class="options">
+<label><input type="radio" name="q30" value="A">A. साझा राष्ट्रीय पहचान को मजबूत करना</label>
+<label><input type="radio" name="q30" value="B">B. व्यापार रोकना</label>
+<label><input type="radio" name="q30" value="C">C. सामंती व्यवस्था स्थापित करना</label>
+<label><input type="radio" name="q30" value="D">D. राजाओं की शक्ति बढ़ाना</label>
+</div>
+</div>
+
+<div class="submit-area">
+<button type="button" class="submit-btn" onclick="submitTest()">
+Submit Test
+</button>
+</div>
+
+</form>
+
+<div class="result" id="result">
+<h2>Test Result</h2>
+<div class="score" id="score"></div>
+<p id="resultText"></p>
+</div>
+
+<div class="explanation-section" id="explanations">
+<h2 class="explanation-title">Answers & Explanations</h2>
+<div id="explanationContent"></div>
+</div>
+
+<div class="back">
+<a href="class10-history-chapter1-practice.html">
+Back to Practice Sets
+</a>
+</div>
+
+</div>
+
+<footer>
+<h2>GSI MANTRA</h2>
+<p>Class 10 History • NCERT • Practice Tests • Notes • Videos</p>
+<p>© 2026 GSI MANTRA. All Rights Reserved.</p>
+</footer>
+
+<script>
+
+const answers={
+q1:"B",
+q2:"A",
+q3:"A",
+q4:"C",
+q5:"A",
+q6:"A",
+q7:"A",
+q8:"B",
+q9:"A",
+q10:"A",
+q11:"A",
+q12:"A",
+q13:"A",
+q14:"A",
+q15:"A",
+q16:"B",
+q17:"A",
+q18:"A",
+q19:"A",
+q20:"A",
+q21:"A",
+q22:"A",
+q23:"A",
+q24:"A",
+q25:"A",
+q26:"A",
+q27:"A",
+q28:"A",
+q29:"A",
+q30:"A"
+};
+
+const explanations={
+
+q1:{
+answer:"B",
+text:"फ्रांसीसी क्रांति ने स्वतंत्रता, समानता और नागरिकता जैसे विचारों को बढ़ावा दिया तथा राष्ट्र की अवधारणा को मजबूत किया।",
+point:"Exam Point: French Revolution promoted liberty, equality and the idea of the nation."
+},
+
+q2:{
+answer:"A",
+text:"1789 से पहले फ्रांस में निरंकुश राजशाही थी और राजा के पास व्यापक राजनीतिक शक्ति थी।",
+point:"Exam Point: France was an absolute monarchy before the French Revolution."
+},
+
+q3:{
+answer:"A",
+text:"क्रांति के बाद कानून के समक्ष समानता और नागरिक अधिकारों की अवधारणा को महत्व मिला।",
+point:"Exam Point: Equality before law was a key revolutionary principle."
+},
+
+q4:{
+answer:"C",
+text:"नेपोलियन कोड या Civil Code 1804 में लागू किया गया।",
+point:"Exam Point: Napoleonic Code was introduced in 1804."
+},
+
+q5:{
+answer:"A",
+text:"नेपोलियन कोड ने कानून के समक्ष समानता और संपत्ति के अधिकार जैसे सिद्धांतों को मजबूत किया।",
+point:"Exam Point: Napoleonic Code abolished many privileges based on birth."
+},
+
+q6:{
+answer:"A",
+text:"Liberal शब्द लैटिन के Liber शब्द से संबंधित है, जिसका अर्थ स्वतंत्रता से जुड़ा है।",
+point:"Exam Point: Liberalism is associated with the idea of freedom."
+},
+
+q7:{
+answer:"A",
+text:"आर्थिक उदारवाद स्वतंत्र बाजार, वस्तुओं और पूंजी की आवाजाही तथा व्यापारिक बाधाओं को कम करने का समर्थक था।",
+point:"Exam Point: Economic liberalism supported free markets."
+},
+
+q8:{
+answer:"B",
+text:"रूढ़िवादी पूरी तरह परिवर्तन के विरोधी नहीं थे। वे चाहते थे कि परिवर्तन धीरे-धीरे और पुरानी परंपराओं को ध्यान में रखकर हो।",
+point:"Exam Point: Conservatism favoured gradual change while preserving traditional institutions."
+},
+
+q9:{
+answer:"A",
+text:"वियना व्यवस्था का एक महत्वपूर्ण उद्देश्य यूरोप में शक्ति-संतुलन स्थापित करना था ताकि किसी एक शक्ति का प्रभुत्व न हो।",
+point:"Exam Point: Balance of power was an important aim of the Vienna settlement."
+},
+
+q10:{
+answer:"A",
+text:"मेटरनिख रूढ़िवादी व्यवस्था के प्रमुख समर्थक थे और वे राष्ट्रवादी तथा उदारवादी आंदोलनों से चिंतित थे।",
+point:"Exam Point: Metternich was a leading conservative statesman."
+},
+
+q11:{
+answer:"A",
+text:"नेपोलियन कोड 1804, वियना कांग्रेस 1815 और जर्मनी का एकीकरण 1871 से संबंधित है।",
+point:"Exam Point: 1804 → 1815 → 1871."
+},
+
+q12:{
+answer:"A",
+text:"मैरिएन फ्रांस का, जर्मानिया जर्मनी का और जॉलवेराइन जर्मन राज्यों का सीमा शुल्क संघ था।",
+point:"Exam Point: Marianne = France; Germania = Germany; Zollverein = Customs Union."
+},
+
+q13:{
+answer:"A",
+text:"फ्रांसीसी क्रांति 1789, नेपोलियन कोड 1804, वियना कांग्रेस 1815 और जर्मन एकीकरण 1871 में हुआ।",
+point:"Exam Point: 1789 → 1804 → 1815 → 1871."
+},
+
+q14:{
+answer:"A",
+text:"बिस्मार्क के नेतृत्व में डेनमार्क, ऑस्ट्रिया और फ्रांस के विरुद्ध युद्धों के बाद 1871 में जर्मन साम्राज्य की घोषणा हुई।",
+point:"Exam Point: German unification was completed in 1871."
+},
+
+q15:{
+answer:"A",
+text:"प्रशा ने जॉलवेराइन में नेतृत्व किया और इस आर्थिक एकीकरण ने बाद में जर्मन राजनीतिक एकीकरण के लिए आधार तैयार किया।",
+point:"Exam Point: Prussia played the leading role in the Zollverein."
+},
+
+q16:{
+answer:"B",
+text:"माज़िनी एकीकृत और गणतांत्रिक इटली की कल्पना करते थे।",
+point:"Exam Point: Mazzini advocated a united republican Italy."
+},
+
+q17:{
+answer:"A",
+text:"काउंट कैमिलो डी कावूर सार्डिनिया-पीडमोंट के प्रमुख मंत्री थे और उन्होंने कूटनीति तथा युद्ध के माध्यम से इटली के एकीकरण में योगदान दिया।",
+point:"Exam Point: Cavour was the chief minister of Sardinia-Piedmont."
+},
+
+q18:{
+answer:"A",
+text:"गैरीबाल्डी ने लाल कमीजधारी स्वयंसेवकों यानी Red Shirts के साथ दक्षिणी इटली में अभियान चलाया।",
+point:"Exam Point: Garibaldi's volunteers were known as Red Shirts."
+},
+
+q19:{
+answer:"A",
+text:"फ्रांसीसी क्रांति ने राजनीतिक संप्रभुता का आधार राजा से हटाकर नागरिकों और राष्ट्र की अवधारणा से जोड़ा।",
+point:"Exam Point: Popular sovereignty became a key revolutionary idea."
+},
+
+q20:{
+answer:"A",
+text:"राष्ट्रवादी विचारकों ने विभाजित क्षेत्रों को साझा भाषा, संस्कृति और इतिहास के आधार पर एक राष्ट्र के रूप में संगठित करने की कल्पना की।",
+point:"Exam Point: Nationalism encouraged the idea of national unity."
+},
+
+q21:{
+answer:"A",
+text:"जॉलवेराइन ने सीमा शुल्क बाधाओं को कम किया और विभिन्न जर्मन राज्यों के बीच व्यापार तथा आर्थिक एकीकरण को बढ़ावा दिया।",
+point:"Exam Point: Zollverein strengthened economic unity."
+},
+
+q22:{
+answer:"A",
+text:"दोनों कथन सही हैं और सीमा शुल्क बाधाओं को कम करना ही आर्थिक एकीकरण को बढ़ावा देने का प्रमुख कारण था।",
+point:"Exam Point: Zollverein removed many internal customs barriers."
+},
+
+q23:{
+answer:"A",
+text:"मेटरनिख रूढ़िवादी व्यवस्था के समर्थक थे और पुरानी राजशाहियों तथा परंपरागत संस्थाओं की रक्षा करना चाहते थे।",
+point:"Exam Point: Metternich opposed liberal and nationalist movements."
+},
+
+q24:{
+answer:"A",
+text:"मैरिएन फ्रांस में स्वतंत्रता, गणतंत्र और राष्ट्र की प्रतीकात्मक महिला आकृति थी।",
+point:"Exam Point: Marianne symbolised the French nation."
+},
+
+q25:{
+answer:"A",
+text:"जर्मानिया की छवि में ओक के पत्तों का मुकुट वीरता और शक्ति का प्रतीक माना जाता था।",
+point:"Exam Point: Germania symbolised the German nation."
+},
+
+q26:{
+answer:"A",
+text:"बाल्कन क्षेत्र में ऑटोमन साम्राज्य का प्रभाव कमजोर हो रहा था, जिससे विभिन्न राष्ट्रवादी समूहों और यूरोपीय शक्तियों के बीच संघर्ष बढ़ा।",
+point:"Exam Point: Decline of the Ottoman Empire intensified Balkan tensions."
+},
+
+q27:{
+answer:"A",
+text:"राष्ट्रवादी भावनाओं के साथ रूस, ऑस्ट्रिया-हंगरी और अन्य यूरोपीय शक्तियों की प्रतिद्वंद्विता ने बाल्कन को संघर्ष का क्षेत्र बना दिया।",
+point:"Exam Point: Nationalism and imperial rivalry created tension in the Balkans."
+},
+
+q28:{
+answer:"A",
+text:"ब्रिटेन में राष्ट्र-राज्य का निर्माण एक लंबी राजनीतिक प्रक्रिया के माध्यम से हुआ जिसमें संसद और राजनीतिक अधिनियमों की महत्वपूर्ण भूमिका रही।",
+point:"Exam Point: Britain was formed through a long process of political integration."
+},
+
+q29:{
+answer:"A",
+text:"इंग्लैंड और स्कॉटलैंड के राजनीतिक एकीकरण तथा बाद में आयरलैंड के साथ संघ ने ब्रिटिश राष्ट्र-राज्य के निर्माण में भूमिका निभाई।",
+point:"Exam Point: The Act of Union united England and Scotland; later Ireland was incorporated into the United Kingdom."
+},
+
+q30:{
+answer:"A",
+text:"राष्ट्रीय प्रतीक अमूर्त राष्ट्र को एक दृश्य और भावनात्मक पहचान देते थे तथा लोगों में साझा राष्ट्रीय भावना को मजबूत करते थे।",
+point:"Exam Point: National symbols helped create a common sense of identity."
+}
+
+};
+
+function submitTest(){
+
+let score=0;
+let answered=0;
+
+for(let i=1;i<=30;i++){
+
+const selected=document.querySelector(
+'input[name="q'+i+'"]:checked'
+);
+
+if(selected){
+answered++;
+
+if(selected.value===answers["q"+i]){
+score++;
+}
+}
+}
+
+const wrong=answered-score;
+const percentage=((score/30)*100).toFixed(2);
+
+document.getElementById("result").style.display="block";
+
+document.getElementById("score").innerHTML=
+score+" / 30";
+
+document.getElementById("resultText").innerHTML=
+"Answered: "+answered+
+" &nbsp; | &nbsp; Correct: "+score+
+" &nbsp; | &nbsp; Wrong: "+wrong+
+" &nbsp; | &nbsp; Percentage: "+percentage+"%";
+
+document.getElementById("explanations").style.display="block";
+
+let html="";
+
+for(let i=1;i<=30;i++){
+
+const item=explanations["q"+i];
+
+html+=`
+<div class="explanation">
+
+<strong>Question ${i}</strong>
+
+<p class="correct-answer">
+Correct Answer: ${item.answer}
+</p>
+
+<p>${item.text}</p>
+
+<div class="exam-point">
+<strong>${item.point}</strong>
+</div>
+
+</div>
+`;
+}
+
+document.getElementById("explanationContent").innerHTML=html;
+
+window.scrollTo({
+top:document.getElementById("result").offsetTop-20,
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>
+```
