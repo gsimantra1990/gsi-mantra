@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Practice Sets | The Rise of Nationalism in Europe | GSI MANTRA</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:25px 20px;
+}
+
+.header-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:34px;
+}
+
+.logo p{
+    margin:5px 0 0;
+    font-size:15px;
+}
+
+.search{
+    background:white;
+    padding:10px 15px;
+    border-radius:25px;
+    width:280px;
+}
+
+.search input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+}
+
+/* NAV */
+
+nav{
+    background:#071d33;
+    padding:14px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#123c69,#1d5b91);
+    color:white;
+    text-align:center;
+    padding:55px 20px;
+}
+
+.hero h2{
+    font-size:36px;
+    margin:0 0 12px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:850px;
+    margin:auto;
+    line-height:1.7;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.section-title{
+    text-align:center;
+    color:#123c69;
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:35px;
+    line-height:1.7;
+}
+
+/* MEDIUM SECTION */
+
+.medium-section{
+    background:white;
+    padding:30px;
+    margin-bottom:30px;
+    border-radius:18px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.medium-title{
+    text-align:center;
+    color:#123c69;
+    font-size:25px;
+    margin-top:0;
+    margin-bottom:25px;
+}
+
+/* SET GRID */
+
+.set-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:16px;
+}
+
+.set-card{
+    background:#f8fafc;
+    border:1px solid #dbe4ee;
+    border-radius:14px;
+    padding:22px 15px;
+    text-align:center;
+    transition:.3s;
+}
+
+.set-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 7px 18px rgba(0,0,0,.10);
+}
+
+.set-number{
+    font-size:20px;
+    font-weight:bold;
+    color:#123c69;
+    margin-bottom:8px;
+}
+
+.questions{
+    color:#666;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.start-button{
+    display:inline-block;
+    background:#f28c00;
+    color:white;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+.start-button:hover{
+    background:#d97700;
+}
+
+/* INFORMATION BOX */
+
+.info-box{
+    background:linear-gradient(135deg,#fff8e8,#ffffff);
+    border:1px solid #f0d28c;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    margin-top:35px;
+}
+
+.info-box h2{
+    color:#8a5700;
+    margin-top:0;
+}
+
+.info-box p{
+    color:#555;
+    line-height:1.8;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.feature{
+    background:white;
+    padding:18px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,.06);
+}
+
+.feature strong{
+    display:block;
+    color:#123c69;
+    margin-bottom:6px;
+}
+
+/* BACK BUTTON */
+
+.back{
+    text-align:center;
+    margin-top:30px;
+}
+
+.back a{
+    display:inline-block;
+    background:#123c69;
+    color:white;
+    text-decoration:none;
+    padding:11px 22px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    margin-top:50px;
+}
+
+footer h2{
+    margin-top:0;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+.footer-links a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .header-content{
+        flex-direction:column;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    .hero h2{
+        font-size:28px;
+    }
+
+    .medium-section{
+        padding:20px 15px;
+    }
+
+    .set-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:6px;
+    }
+
+}
+
+@media(max-width:430px){
+
+    .set-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="header-content">
+
+<div class="logo">
+
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+
+<div>
+<h1>GSI MANTRA</h1>
+<p>Competitive Education & NCERT Learning Platform</p>
+</div>
+
+</div>
+
+<div class="search">
+
+<input
+type="text"
+placeholder="🔍 Search GSI MANTRA..."
+>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="class10.html">Class 10</a>
+
+<a href="class10-history.html">History</a>
+
+<a href="class10-history-chapter1-notes.html">Notes</a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h2>The Rise of Nationalism in Europe</h2>
+
+<p>
+Class 10 History | Chapter 1 | Practice Tests
+</p>
+
+</section>
+
+
+<!-- MAIN -->
+
+<div class="container">
+
+<h2 class="section-title">
+Practice Sets
+</h2>
+
+<p class="section-subtitle">
+NCERT Based • Board Exam • Conceptual • Competitive Exam Oriented
+<br>
+प्रत्येक Practice Set में 30 Questions होंगे।
+</p>
+
+
+<!-- HINDI MEDIUM -->
+
+<div class="medium-section">
+
+<h2 class="medium-title">
+Hindi Medium
+</h2>
+
+<div class="set-grid">
+
+
+<!-- SET 1 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 1
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set1-hindi.html">
+Start Test
+</a>
+
+</div>
+
+
+<!-- SET 2 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 2
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set2-hindi.html">
+Start Test
+</a>
+
+</div>
+
+
+<!-- SET 3 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 3
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set3-hindi.html">
+Start Test
+</a>
+
+</div>
+
+
+<!-- SET 4 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 4
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set4-hindi.html">
+Start Test
+</a>
+
+</div>
+
+
+<!-- SET 5 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 5
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set5-hindi.html">
+Start Test
+</a>
+
+</div>
+
+
+<!-- SET 6 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 6
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set6-hindi.html">
+Start Test
+</a>
+
+</div>
+
+
+<!-- SET 7 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 7
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set7-hindi.html">
+Start Test
+</a>
+
+</div>
+
+
+<!-- SET 8 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 8
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set8-hindi.html">
+Start Test
+</a>
+
+</div>
+
+
+<!-- SET 9 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 9
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set9-hindi.html">
+Start Test
+</a>
+
+</div>
+
+
+<!-- SET 10 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 10
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set10-hindi.html">
+Start Test
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ENGLISH MEDIUM -->
+
+<div class="medium-section">
+
+<h2 class="medium-title">
+English Medium
+</h2>
+
+<div class="set-grid">
+
+
+<!-- SET 1 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 1
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set1-english.html">
+Start Test
+</a>
+
+</div>
+
+
+<!-- SET 2 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 2
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set2-english.html">
+Start Test
+</a>
+
+</div>
+
+
+<!-- SET 3 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 3
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set3-english.html">
+Start Test
+</a>
+
+</div>
+
+
+<!-- SET 4 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 4
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set4-english.html">
+Start Test
+</a>
+
+</div>
+
+
+<!-- SET 5 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 5
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set5-english.html">
+Start Test
+</a>
+
+</div>
+
+
+<!-- SET 6 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 6
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set6-english.html">
+Start Test
+</a>
+
+</div>
+
+
+<!-- SET 7 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 7
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set7-english.html">
+Start Test
+</a>
+
+</div>
+
+
+<!-- SET 8 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 8
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set8-english.html">
+Start Test
+</a>
+
+</div>
+
+
+<!-- SET 9 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 9
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set9-english.html">
+Start Test
+</a>
+
+</div>
+
+
+<!-- SET 10 -->
+
+<div class="set-card">
+
+<div class="set-number">
+Practice Set 10
+</div>
+
+<div class="questions">
+30 Questions
+</div>
+
+<a class="start-button"
+href="class10-history-chapter1-practice-set10-english.html">
+Start Test
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- TEST INFORMATION -->
+
+<div class="info-box">
+
+<h2>
+Practice Set Pattern
+</h2>
+
+<p>
+हर Practice Set में कुल 30 Questions होंगे।
+Questions को अलग-अलग प्रकार में रखा जाएगा ताकि
+Practice अधिक उपयोगी और परीक्षा-उन्मुख हो।
+</p>
+
+<div class="features">
+
+<div class="feature">
+<strong>MCQ</strong>
+Conceptual & NCERT Based
+</div>
+
+<div class="feature">
+<strong>Matching</strong>
+Match the Following
+</div>
+
+<div class="feature">
+<strong>Arrangement</strong>
+Chronological Order
+</div>
+
+<div class="feature">
+<strong>Passage-Based</strong>
+Comprehension Based
+</div>
+
+<div class="feature">
+<strong>Assertion–Reason</strong>
+Analytical Questions
+</div>
+
+<div class="feature">
+<strong>Explanation</strong>
+हर प्रश्न का Explanation
+</div>
+
+</div>
+
+</div>
+
+
+<!-- BACK -->
+
+<div class="back">
+
+<a href="class10-history.html">
+Back to Class 10 History
+</a>
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>GSI MANTRA</h2>
+
+<p>
+Class 10 History • NCERT • Practice Tests • Notes • Videos
+</p>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+
+<a href="class10.html">Class 10</a>
+
+<a href="class10-history.html">History</a>
+
+</div>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
