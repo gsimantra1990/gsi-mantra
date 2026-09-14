@@ -1,0 +1,1959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Practice Set 5 Advanced Level | The Rise of Nationalism in Europe | GSI MANTRA</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:25px 20px;
+}
+
+.header-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:34px;
+}
+
+.logo p{
+    margin:5px 0 0;
+    font-size:15px;
+}
+
+nav{
+    background:#071d33;
+    padding:14px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+.hero{
+    background:linear-gradient(135deg,#123c69,#1d5b91);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.hero h2{
+    margin:0 0 10px;
+    font-size:34px;
+}
+
+.hero p{
+    margin:8px 0;
+    font-size:18px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:35px 20px;
+}
+
+.test-info{
+    background:white;
+    border-radius:16px;
+    padding:22px;
+    margin-bottom:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.test-info strong{
+    color:#123c69;
+}
+
+.question-card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:22px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    border-left:5px solid #123c69;
+}
+
+.question-number{
+    color:#f28c00;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.question{
+    font-size:17px;
+    font-weight:bold;
+    line-height:1.7;
+    margin-bottom:16px;
+}
+
+.options label{
+    display:block;
+    background:#f7f9fc;
+    border:1px solid #d9e1ea;
+    padding:12px 15px;
+    border-radius:8px;
+    margin:9px 0;
+    cursor:pointer;
+}
+
+.options label:hover{
+    background:#eef4fa;
+    border-color:#123c69;
+}
+
+.options input{
+    margin-right:10px;
+}
+
+.type-label{
+    display:inline-block;
+    background:#123c69;
+    color:white;
+    padding:5px 10px;
+    border-radius:5px;
+    font-size:12px;
+    margin-bottom:12px;
+}
+
+.passage{
+    background:#f4f7fb;
+    border-left:4px solid #f28c00;
+    padding:18px;
+    margin-bottom:18px;
+    line-height:1.8;
+    border-radius:8px;
+}
+
+.submit-area{
+    text-align:center;
+    margin:35px 0;
+}
+
+.submit-btn{
+    background:#f28c00;
+    color:white;
+    border:none;
+    padding:14px 35px;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+    background:#d97700;
+}
+
+.result{
+    display:none;
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    margin:30px 0;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+.result h2{
+    color:#123c69;
+}
+
+.score{
+    font-size:30px;
+    font-weight:bold;
+    color:#f28c00;
+    margin:15px 0;
+}
+
+.explanation-section{
+    display:none;
+    margin-top:35px;
+}
+
+.explanation-title{
+    background:#123c69;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.explanation{
+    background:white;
+    padding:20px;
+    margin-bottom:15px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,.07);
+    border-left:4px solid #159447;
+    line-height:1.7;
+}
+
+.correct-answer{
+    color:#159447;
+    font-weight:bold;
+}
+
+.exam-point{
+    background:#fff8e8;
+    border-left:4px solid #f28c00;
+    padding:12px;
+    margin-top:12px;
+    border-radius:6px;
+}
+
+.back{
+    text-align:center;
+    margin:35px 0;
+}
+
+.back a{
+    display:inline-block;
+    background:#123c69;
+    color:white;
+    text-decoration:none;
+    padding:11px 22px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    margin-top:50px;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+@media(max-width:700px){
+
+    .logo h1{
+        font-size:28px;
+    }
+
+    .hero h2{
+        font-size:27px;
+    }
+
+    .question-card{
+        padding:20px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="header-content">
+
+<div class="logo">
+
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+
+<div>
+<h1>GSI MANTRA</h1>
+<p>Competitive Education & NCERT Learning Platform</p>
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="class10.html">Class 10</a>
+
+<a href="class10-history.html">History</a>
+
+<a href="class10-history-chapter1-practice.html">Practice Sets</a>
+
+</nav>
+
+
+<section class="hero">
+
+<h2>The Rise of Nationalism in Europe</h2>
+
+<p>Practice Set 5 — Advanced Level — English Medium</p>
+
+</section>
+
+
+<div class="container">
+
+
+<div class="test-info">
+
+<strong>Class:</strong> 10 &nbsp; | &nbsp;
+
+<strong>Subject:</strong> History &nbsp; | &nbsp;
+
+<strong>Chapter:</strong> The Rise of Nationalism in Europe
+
+<br><br>
+
+<strong>Total Questions:</strong> 30 &nbsp; | &nbsp;
+
+<strong>Marks:</strong> 30 &nbsp; | &nbsp;
+
+<strong>Level:</strong> Advanced
+
+</div>
+
+
+<form id="testForm">
+
+
+<!-- Q1 -->
+
+<div class="question-card">
+
+<div class="type-label">MCQ</div>
+
+<div class="question-number">Question 1</div>
+
+<div class="question">
+Which of the following best explains the political meaning of liberalism in nineteenth-century Europe?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q1" value="A">
+A. Rule by hereditary monarchs without constitutional limits
+</label>
+
+<label>
+<input type="radio" name="q1" value="B">
+B. Individual freedom, equality before law and representative government
+</label>
+
+<label>
+<input type="radio" name="q1" value="C">
+C. Restoration of feudal privileges
+</label>
+
+<label>
+<input type="radio" name="q1" value="D">
+D. Complete rejection of private property
+</label>
+
+</div>
+</div>
+
+
+<!-- Q2 -->
+
+<div class="question-card">
+
+<div class="type-label">MCQ</div>
+
+<div class="question-number">Question 2</div>
+
+<div class="question">
+Why did the Frankfurt Parliament ultimately fail to create a unified German nation-state?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q2" value="A">
+A. It was rejected by the German middle class
+</label>
+
+<label>
+<input type="radio" name="q2" value="B">
+B. It had no support from any intellectuals
+</label>
+
+<label>
+<input type="radio" name="q2" value="C">
+C. The Prussian king rejected the crown offered by the elected representatives
+</label>
+
+<label>
+<input type="radio" name="q2" value="D">
+D. Austria immediately joined the proposed federation
+</label>
+
+</div>
+</div>
+
+
+<!-- Q3 -->
+
+<div class="question-card">
+
+<div class="type-label">MCQ</div>
+
+<div class="question-number">Question 3</div>
+
+<div class="question">
+Consider the following statements about the Congress of Vienna (1815):
+<br><br>
+1. It aimed to restore conservative order.<br>
+2. It sought to undo many changes introduced by Napoleon.<br>
+3. It established universal adult suffrage across Europe.
+<br><br>
+Which is correct?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q3" value="A">
+A. 1 and 2 only
+</label>
+
+<label>
+<input type="radio" name="q3" value="B">
+B. 2 and 3 only
+</label>
+
+<label>
+<input type="radio" name="q3" value="C">
+C. 1 and 3 only
+</label>
+
+<label>
+<input type="radio" name="q3" value="D">
+D. 1, 2 and 3
+</label>
+
+</div>
+</div>
+
+
+<!-- Q4 -->
+
+<div class="question-card">
+
+<div class="type-label">MCQ</div>
+
+<div class="question-number">Question 4</div>
+
+<div class="question">
+Which factor most directly helped create an economic basis for German national unity before political unification?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q4" value="A">
+A. Zollverein
+</label>
+
+<label>
+<input type="radio" name="q4" value="B">
+B. Treaty of Versailles
+</label>
+
+<label>
+<input type="radio" name="q4" value="C">
+C. Holy Alliance
+</label>
+
+<label>
+<input type="radio" name="q4" value="D">
+D. Carbonari
+</label>
+
+</div>
+</div>
+
+
+<!-- Q5 -->
+
+<div class="question-card">
+
+<div class="type-label">MCQ</div>
+
+<div class="question-number">Question 5</div>
+
+<div class="question">
+The term "nation-state" most accurately refers to a state in which:
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q5" value="A">
+A. The ruler owns all land
+</label>
+
+<label>
+<input type="radio" name="q5" value="B">
+B. A common national identity is linked with a sovereign political territory
+</label>
+
+<label>
+<input type="radio" name="q5" value="C">
+C. Only nobles possess citizenship
+</label>
+
+<label>
+<input type="radio" name="q5" value="D">
+D. Religion determines political membership
+</label>
+
+</div>
+</div>
+
+
+<!-- Q6 -->
+
+<div class="question-card">
+
+<div class="type-label">MCQ</div>
+
+<div class="question-number">Question 6</div>
+
+<div class="question">
+Which combination correctly identifies the principal roles of Cavour, Garibaldi and Victor Emmanuel II in Italian unification?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q6" value="A">
+A. Revolutionary leader, Austrian ruler, French emperor
+</label>
+
+<label>
+<input type="radio" name="q6" value="B">
+B. Diplomat-politician, military volunteer leader, Sardinian king
+</label>
+
+<label>
+<input type="radio" name="q6" value="C">
+C. Pope, German chancellor, French republican
+</label>
+
+<label>
+<input type="radio" name="q6" value="D">
+D. Military commander, poet, Austrian minister
+</label>
+
+</div>
+</div>
+
+
+<!-- Q7 -->
+
+<div class="question-card">
+
+<div class="type-label">MCQ</div>
+
+<div class="question-number">Question 7</div>
+
+<div class="question">
+Why did Mazzini oppose the idea of a purely dynastic unification of Italy?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q7" value="A">
+A. He supported Austrian rule
+</label>
+
+<label>
+<input type="radio" name="q7" value="B">
+B. He believed Italy should remain divided
+</label>
+
+<label>
+<input type="radio" name="q7" value="C">
+C. He envisioned a united Italy based on popular and national sovereignty
+</label>
+
+<label>
+<input type="radio" name="q7" value="D">
+D. He wanted Italy to become a British colony
+</label>
+
+</div>
+</div>
+
+
+<!-- Q8 -->
+
+<div class="question-card">
+
+<div class="type-label">Arrangement</div>
+
+<div class="question-number">Question 8</div>
+
+<div class="question">
+Arrange the following major developments in German nationalism in the correct chronological order:
+<br><br>
+1. Congress of Vienna<br>
+2. Zollverein<br>
+3. Frankfurt Parliament<br>
+4. German Empire
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q8" value="A">
+A. 1-2-3-4
+</label>
+
+<label>
+<input type="radio" name="q8" value="B">
+B. 2-1-3-4
+</label>
+
+<label>
+<input type="radio" name="q8" value="C">
+C. 1-3-2-4
+</label>
+
+<label>
+<input type="radio" name="q8" value="D">
+D. 3-2-1-4
+</label>
+
+</div>
+</div>
+
+
+<!-- Q9 -->
+
+<div class="question-card">
+
+<div class="type-label">MCQ</div>
+
+<div class="question-number">Question 9</div>
+
+<div class="question">
+Bismarck's policy of "blood and iron" primarily referred to:
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q9" value="A">
+A. Peaceful constitutional reform only
+</label>
+
+<label>
+<input type="radio" name="q9" value="B">
+B. The use of military power and strong diplomacy to achieve political objectives
+</label>
+
+<label>
+<input type="radio" name="q9" value="C">
+C. Religious reform
+</label>
+
+<label>
+<input type="radio" name="q9" value="D">
+D. Economic boycott of Britain
+</label>
+
+</div>
+</div>
+
+
+<!-- Q10 -->
+
+<div class="question-card">
+
+<div class="type-label">MCQ</div>
+
+<div class="question-number">Question 10</div>
+
+<div class="question">
+Which event completed the political unification of Germany in 1871?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q10" value="A">
+A. Proclamation of the German Empire at Versailles
+</label>
+
+<label>
+<input type="radio" name="q10" value="B">
+B. Formation of Young Italy
+</label>
+
+<label>
+<input type="radio" name="q10" value="C">
+C. Congress of Vienna
+</label>
+
+<label>
+<input type="radio" name="q10" value="D">
+D. Frankfurt Parliament
+</label>
+
+</div>
+</div>
+
+
+<!-- Q11 -->
+
+<div class="question-card">
+
+<div class="type-label">Matching</div>
+
+<div class="question-number">Question 11</div>
+
+<div class="question">
+Match the personalities with their associated roles:
+<br><br>
+1. Mazzini<br>
+2. Bismarck<br>
+3. Garibaldi<br>
+4. Metternich
+<br><br>
+
+A. Young Italy<br>
+B. German unification<br>
+C. Italian military campaign<br>
+D. Conservative order
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q11" value="A">
+A. 1-A, 2-B, 3-C, 4-D
+</label>
+
+<label>
+<input type="radio" name="q11" value="B">
+B. 1-B, 2-A, 3-D, 4-C
+</label>
+
+<label>
+<input type="radio" name="q11" value="C">
+C. 1-C, 2-D, 3-A, 4-B
+</label>
+
+<label>
+<input type="radio" name="q11" value="D">
+D. 1-D, 2-C, 3-B, 4-A
+</label>
+
+</div>
+</div>
+
+
+<!-- Q12 -->
+
+<div class="question-card">
+
+<div class="type-label">Matching</div>
+
+<div class="question-number">Question 12</div>
+
+<div class="question">
+Match the symbol with the idea or nation:
+<br><br>
+1. Marianne<br>
+2. Germania<br>
+3. Broken chains<br>
+4. Crown of oak leaves
+<br><br>
+
+A. France<br>
+B. Germany<br>
+C. Freedom<br>
+D. Heroism
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q12" value="A">
+A. 1-A, 2-B, 3-C, 4-D
+</label>
+
+<label>
+<input type="radio" name="q12" value="B">
+B. 1-B, 2-A, 3-D, 4-C
+</label>
+
+<label>
+<input type="radio" name="q12" value="C">
+C. 1-C, 2-D, 3-A, 4-B
+</label>
+
+<label>
+<input type="radio" name="q12" value="D">
+D. 1-D, 2-C, 3-B, 4-A
+</label>
+
+</div>
+</div>
+
+
+<!-- Q13 -->
+
+<div class="question-card">
+
+<div class="type-label">Arrangement</div>
+
+<div class="question-number">Question 13</div>
+
+<div class="question">
+Arrange the following events chronologically:
+<br><br>
+1. Congress of Vienna<br>
+2. July Revolution in France<br>
+3. Frankfurt Parliament<br>
+4. German Empire
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q13" value="A">
+A. 1-2-3-4
+</label>
+
+<label>
+<input type="radio" name="q13" value="B">
+B. 2-1-3-4
+</label>
+
+<label>
+<input type="radio" name="q13" value="C">
+C. 1-3-2-4
+</label>
+
+<label>
+<input type="radio" name="q13" value="D">
+D. 3-2-1-4
+</label>
+
+</div>
+</div>
+
+
+<!-- Q14 -->
+
+<div class="question-card">
+
+<div class="type-label">Arrangement</div>
+
+<div class="question-number">Question 14</div>
+
+<div class="question">
+Arrange the following developments in Italian unification:
+<br><br>
+1. Young Italy<br>
+2. Revolutions of 1848<br>
+3. Kingdom of Italy proclaimed<br>
+4. Rome annexed
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q14" value="A">
+A. 1-2-3-4
+</label>
+
+<label>
+<input type="radio" name="q14" value="B">
+B. 2-1-3-4
+</label>
+
+<label>
+<input type="radio" name="q14" value="C">
+C. 1-3-2-4
+</label>
+
+<label>
+<input type="radio" name="q14" value="D">
+D. 2-3-1-4
+</label>
+
+</div>
+</div>
+
+
+<!-- Q15 -->
+
+<div class="question-card">
+
+<div class="type-label">MCQ</div>
+
+<div class="question-number">Question 15</div>
+
+<div class="question">
+Which statement best describes the relationship between nationalism and imperialism in the Balkans?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q15" value="A">
+A. Nationalism completely disappeared because of imperialism
+</label>
+
+<label>
+<input type="radio" name="q15" value="B">
+B. Nationalist aspirations and rivalry among European powers increased tensions
+</label>
+
+<label>
+<input type="radio" name="q15" value="C">
+C. Imperialism had no connection with Balkan politics
+</label>
+
+<label>
+<input type="radio" name="q15" value="D">
+D. The Balkans became politically united peacefully
+</label>
+
+</div>
+</div>
+
+
+<!-- Q16 -->
+
+<div class="question-card">
+
+<div class="type-label">MCQ</div>
+
+<div class="question-number">Question 16</div>
+
+<div class="question">
+Why were women active participants in many liberal-national movements but denied equal political rights?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q16" value="A">
+A. Political citizenship was generally restricted by gender and property qualifications
+</label>
+
+<label>
+<input type="radio" name="q16" value="B">
+B. Women opposed all nationalist ideas
+</label>
+
+<label>
+<input type="radio" name="q16" value="C">
+C. Women had no role in public life
+</label>
+
+<label>
+<input type="radio" name="q16" value="D">
+D. Constitutions automatically gave women voting rights
+</label>
+
+</div>
+</div>
+
+
+<!-- Q17 -->
+
+<div class="question-card">
+
+<div class="type-label">MCQ</div>
+
+<div class="question-number">Question 17</div>
+
+<div class="question">
+Which statement about the Act of Union of 1707 is most relevant to the formation of Great Britain?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q17" value="A">
+A. It united England and Scotland into Great Britain
+</label>
+
+<label>
+<input type="radio" name="q17" value="B">
+B. It united France and Britain
+</label>
+
+<label>
+<input type="radio" name="q17" value="C">
+C. It dissolved the British Parliament
+</label>
+
+<label>
+<input type="radio" name="q17" value="D">
+D. It created the German Empire
+</label>
+
+</div>
+</div>
+
+
+<!-- Q18 -->
+
+<div class="question-card">
+
+<div class="type-label">MCQ</div>
+
+<div class="question-number">Question 18</div>
+
+<div class="question">
+How did the idea of a common British identity develop?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q18" value="A">
+A. Through symbols such as the Union Jack, English language and political institutions
+</label>
+
+<label>
+<input type="radio" name="q18" value="B">
+B. Only through military conquest in Germany
+</label>
+
+<label>
+<input type="radio" name="q18" value="C">
+C. Through the Congress of Vienna alone
+</label>
+
+<label>
+<input type="radio" name="q18" value="D">
+D. By abolishing the English Parliament
+</label>
+
+</div>
+</div>
+
+
+<!-- Q19 -->
+
+<div class="question-card">
+
+<div class="type-label">MCQ</div>
+
+<div class="question-number">Question 19</div>
+
+<div class="question">
+Which statement best describes the role of Romanticism in nationalism?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q19" value="A">
+A. It promoted only industrial capitalism
+</label>
+
+<label>
+<input type="radio" name="q19" value="B">
+B. It emphasised emotion, folklore, cultural heritage and shared traditions
+</label>
+
+<label>
+<input type="radio" name="q19" value="C">
+C. It rejected language as a national marker
+</label>
+
+<label>
+<input type="radio" name="q19" value="D">
+D. It supported colonial administration
+</label>
+
+</div>
+</div>
+
+
+<!-- Q20 -->
+
+<div class="question-card">
+
+<div class="type-label">Passage-Based</div>
+
+<div class="question-number">Question 20</div>
+
+<div class="passage">
+
+The 1830s were years of great economic hardship in Europe.
+Population growth, unemployment and competition from machine-made
+goods created difficulties. In several regions, peasants and workers
+suffered from rising prices and unemployment.
+
+</div>
+
+<div class="question">
+What was one important consequence of these conditions?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q20" value="A">
+A. They contributed to social unrest and revolutionary movements
+</label>
+
+<label>
+<input type="radio" name="q20" value="B">
+B. They ended all political conflicts
+</label>
+
+<label>
+<input type="radio" name="q20" value="C">
+C. They strengthened feudal privileges everywhere
+</label>
+
+<label>
+<input type="radio" name="q20" value="D">
+D. They immediately created unified nation-states
+</label>
+
+</div>
+</div>
+
+
+<!-- Q21 -->
+
+<div class="question-card">
+
+<div class="type-label">Passage-Based</div>
+
+<div class="question-number">Question 21</div>
+
+<div class="passage">
+
+In 1848, educated middle-class professionals, businessmen and prosperous
+artisans demanded constitutionalism and national unification. At the same
+time, workers and peasants often had their own economic demands.
+
+</div>
+
+<div class="question">
+What does this reveal about nineteenth-century nationalist movements?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q21" value="A">
+A. All social groups had identical interests
+</label>
+
+<label>
+<input type="radio" name="q21" value="B">
+B. Nationalist movements could contain different and sometimes conflicting social interests
+</label>
+
+<label>
+<input type="radio" name="q21" value="C">
+C. Workers rejected every form of political change
+</label>
+
+<label>
+<input type="radio" name="q21" value="D">
+D. Nationalism was limited to monarchs
+</label>
+
+</div>
+</div>
+
+
+<!-- Q22 -->
+
+<div class="question-card">
+
+<div class="type-label">Passage-Based</div>
+
+<div class="question-number">Question 22</div>
+
+<div class="passage">
+
+The Frankfurt Parliament was convened in the Church of St Paul.
+Representatives were elected to draft a constitution for a united Germany.
+The assembly offered the crown to the Prussian king, who rejected it.
+
+</div>
+
+<div class="question">
+What was a major weakness of the Frankfurt Parliament?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q22" value="A">
+A. It lacked sufficient support from existing monarchies and military power
+</label>
+
+<label>
+<input type="radio" name="q22" value="B">
+B. It had no educated members
+</label>
+
+<label>
+<input type="radio" name="q22" value="C">
+C. It opposed German unity
+</label>
+
+<label>
+<input type="radio" name="q22" value="D">
+D. It rejected a constitution
+</label>
+
+</div>
+</div>
+
+
+<!-- Q23 -->
+
+<div class="question-card">
+
+<div class="type-label">Assertion–Reason</div>
+
+<div class="question-number">Question 23</div>
+
+<div class="question">
+
+<strong>Assertion (A):</strong>
+The Zollverein strengthened the idea of German economic unity.
+
+<br><br>
+
+<strong>Reason (R):</strong>
+It removed many customs barriers between German states.
+
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q23" value="A">
+A. Both A and R are true, and R correctly explains A
+</label>
+
+<label>
+<input type="radio" name="q23" value="B">
+B. Both A and R are true, but R does not correctly explain A
+</label>
+
+<label>
+<input type="radio" name="q23" value="C">
+C. A is true, but R is false
+</label>
+
+<label>
+<input type="radio" name="q23" value="D">
+D. A is false, but R is true
+</label>
+
+</div>
+</div>
+
+
+<!-- Q24 -->
+
+<div class="question-card">
+
+<div class="type-label">Assertion–Reason</div>
+
+<div class="question-number">Question 24</div>
+
+<div class="question">
+
+<strong>Assertion (A):</strong>
+The Congress of Vienna followed a conservative political approach.
+
+<br><br>
+
+<strong>Reason (R):</strong>
+European rulers wanted to restore monarchies and prevent revolutionary change.
+
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q24" value="A">
+A. Both A and R are true, and R correctly explains A
+</label>
+
+<label>
+<input type="radio" name="q24" value="B">
+B. Both A and R are true, but R does not correctly explain A
+</label>
+
+<label>
+<input type="radio" name="q24" value="C">
+C. A is true, but R is false
+</label>
+
+<label>
+<input type="radio" name="q24" value="D">
+D. A is false, but R is true
+</label>
+
+</div>
+</div>
+
+
+<!-- Q25 -->
+
+<div class="question-card">
+
+<div class="type-label">Assertion–Reason</div>
+
+<div class="question-number">Question 25</div>
+
+<div class="question">
+
+<strong>Assertion (A):</strong>
+Mazzini supported a united Italy.
+
+<br><br>
+
+<strong>Reason (R):</strong>
+He founded Young Italy to promote nationalist ideas among Italians.
+
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q25" value="A">
+A. Both A and R are true, and R correctly explains A
+</label>
+
+<label>
+<input type="radio" name="q25" value="B">
+B. Both A and R are true, but R does not correctly explain A
+</label>
+
+<label>
+<input type="radio" name="q25" value="C">
+C. A is true, but R is false
+</label>
+
+<label>
+<input type="radio" name="q25" value="D">
+D. A is false, but R is true
+</label>
+
+</div>
+</div>
+
+
+<!-- Q26 -->
+
+<div class="question-card">
+
+<div class="type-label">MCQ</div>
+
+<div class="question-number">Question 26</div>
+
+<div class="question">
+Which is the best distinction between a liberal-nationalist and a conservative in nineteenth-century Europe?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q26" value="A">
+A. Liberal-nationalists generally sought constitutional rights and national unity, while conservatives defended traditional institutions
+</label>
+
+<label>
+<input type="radio" name="q26" value="B">
+B. Liberal-nationalists always supported absolute monarchy
+</label>
+
+<label>
+<input type="radio" name="q26" value="C">
+C. Conservatives always demanded universal suffrage
+</label>
+
+<label>
+<input type="radio" name="q26" value="D">
+D. There was no difference between them
+</label>
+
+</div>
+</div>
+
+
+<!-- Q27 -->
+
+<div class="question-card">
+
+<div class="type-label">MCQ</div>
+
+<div class="question-number">Question 27</div>
+
+<div class="question">
+Why did the Frankfurt Parliament's attempt at German unification remain historically significant despite its failure?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q27" value="A">
+A. It demonstrated an attempt to create a nation through elected representation and constitutional principles
+</label>
+
+<label>
+<input type="radio" name="q27" value="B">
+B. It restored feudalism
+</label>
+
+<label>
+<input type="radio" name="q27" value="C">
+C. It abolished all monarchies
+</label>
+
+<label>
+<input type="radio" name="q27" value="D">
+D. It created the German Empire immediately
+</label>
+
+</div>
+</div>
+
+
+<!-- Q28 -->
+
+<div class="question-card">
+
+<div class="type-label">MCQ</div>
+
+<div class="question-number">Question 28</div>
+
+<div class="question">
+Which development most directly transformed nationalism from an elite political idea into a broader cultural force?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q28" value="A">
+A. Use of folk songs, legends, language and national symbols
+</label>
+
+<label>
+<input type="radio" name="q28" value="B">
+B. Abolition of all schools
+</label>
+
+<label>
+<input type="radio" name="q28" value="C">
+C. Expansion of feudal privileges
+</label>
+
+<label>
+<input type="radio" name="q28" value="D">
+D. Removal of printing presses
+</label>
+
+</div>
+</div>
+
+
+<!-- Q29 -->
+
+<div class="question-card">
+
+<div class="type-label">MCQ</div>
+
+<div class="question-number">Question 29</div>
+
+<div class="question">
+Which of the following correctly explains the role of culture in the development of nationalism?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q29" value="A">
+A. Cultural traditions helped people imagine themselves as members of a shared community
+</label>
+
+<label>
+<input type="radio" name="q29" value="B">
+B. Culture had no relationship with national identity
+</label>
+
+<label>
+<input type="radio" name="q29" value="C">
+C. Only military victories created national identity
+</label>
+
+<label>
+<input type="radio" name="q29" value="D">
+D. Nationalism required the complete rejection of local traditions
+</label>
+
+</div>
+</div>
+
+
+<!-- Q30 -->
+
+<div class="question-card">
+
+<div class="type-label">MCQ</div>
+
+<div class="question-number">Question 30</div>
+
+<div class="question">
+Which statement best captures the long-term significance of nineteenth-century nationalist movements in Europe?
+</div>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q30" value="A">
+A. They reshaped political boundaries and encouraged the emergence of modern nation-states
+</label>
+
+<label>
+<input type="radio" name="q30" value="B">
+B. They ended all wars in Europe
+</label>
+
+<label>
+<input type="radio" name="q30" value="C">
+C. They permanently restored the old dynastic order
+</label>
+
+<label>
+<input type="radio" name="q30" value="D">
+D. They eliminated cultural identities
+</label>
+
+</div>
+</div>
+
+
+<div class="submit-area">
+
+<button type="button" class="submit-btn" onclick="submitTest()">
+Submit Test
+</button>
+
+</div>
+
+</form>
+
+
+<div class="result" id="result">
+
+<h2>Test Result</h2>
+
+<div class="score" id="score"></div>
+
+<p id="resultText"></p>
+
+</div>
+
+
+<div class="explanation-section" id="explanations">
+
+<h2 class="explanation-title">
+Answers & Detailed Explanations
+</h2>
+
+<div id="explanationContent"></div>
+
+</div>
+
+
+<div class="back">
+
+<a href="class10-history-chapter1-practice.html">
+Back to Practice Sets
+</a>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<h2>GSI MANTRA</h2>
+
+<p>
+Class 10 History • NCERT • Practice Tests • Notes • Videos
+</p>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+const answers = {
+
+q1:"B",
+q2:"C",
+q3:"A",
+q4:"A",
+q5:"B",
+q6:"B",
+q7:"C",
+q8:"A",
+q9:"B",
+q10:"A",
+q11:"A",
+q12:"A",
+q13:"A",
+q14:"A",
+q15:"B",
+q16:"A",
+q17:"A",
+q18:"A",
+q19:"B",
+q20:"A",
+q21:"B",
+q22:"A",
+q23:"A",
+q24:"A",
+q25:"A",
+q26:"A",
+q27:"A",
+q28:"A",
+q29:"A",
+q30:"A"
+
+};
+
+
+const explanations = {
+
+q1:{
+answer:"B",
+text:"Liberalism in nineteenth-century Europe was associated with individual freedom, equality before law and representative government. It challenged arbitrary and hereditary privileges.",
+point:"Liberalism = individual freedom + equality before law + representative government."
+},
+
+q2:{
+answer:"C",
+text:"The Frankfurt Parliament offered the German crown to the Prussian king Friedrich Wilhelm IV. He rejected the crown because he would not accept a crown from an elected assembly.",
+point:"Frankfurt Parliament failed mainly because it lacked the political and military power to enforce its constitutional programme."
+},
+
+q3:{
+answer:"A",
+text:"The Congress of Vienna aimed to restore conservative political order and reverse many changes introduced by Napoleon. It did not establish universal adult suffrage.",
+point:"Congress of Vienna = Restoration + Conservative order + Balance of Power."
+},
+
+q4:{
+answer:"A",
+text:"The Zollverein was a customs union among German states. By removing many internal trade barriers, it promoted economic integration before political unification.",
+point:"Zollverein was an important economic foundation of German unity."
+},
+
+q5:{
+answer:"B",
+text:"A nation-state combines political sovereignty with a population that develops a common national identity. The nineteenth century saw the growth of such states in Europe.",
+point:"Nation-state = political sovereignty linked with national identity."
+},
+
+q6:{
+answer:"B",
+text:"Cavour was a diplomat and political leader of Sardinia-Piedmont, Garibaldi led military campaigns, and Victor Emmanuel II was the king who became the first king of unified Italy.",
+point:"Cavour + Garibaldi + Victor Emmanuel II were central to Italian unification."
+},
+
+q7:{
+answer:"C",
+text:"Mazzini believed that Italy should become a united nation based on popular sovereignty. He opposed a purely dynastic approach to nation-building.",
+point:"Mazzini advocated a united Italy based on popular and national sovereignty."
+},
+
+q8:{
+answer:"A",
+text:"The Congress of Vienna was held in 1815, the Zollverein was formed in 1834, the Frankfurt Parliament met in 1848, and the German Empire was proclaimed in 1871.",
+point:"Chronology: 1815 → 1834 → 1848 → 1871."
+},
+
+q9:{
+answer:"B",
+text:"Bismarck used military strength together with strategic diplomacy to achieve the political unification of Germany. His policy became associated with the phrase 'blood and iron'.",
+point:"Bismarck used war and diplomacy to achieve German unification."
+},
+
+q10:{
+answer:"A",
+text:"The German Empire was proclaimed at Versailles in January 1871 after Prussia's victory over France.",
+point:"German unification was completed in 1871."
+},
+
+q11:{
+answer:"A",
+text:"Mazzini founded Young Italy, Bismarck led German unification, Garibaldi played a major military role in Italian unification, and Metternich represented conservative politics.",
+point:"Remember: Mazzini–Young Italy; Bismarck–Germany; Garibaldi–Italy; Metternich–Conservatism."
+},
+
+q12:{
+answer:"A",
+text:"Marianne represented the French nation, Germania represented the German nation, broken chains symbolised freedom, and the crown of oak leaves symbolised heroism.",
+point:"National symbols helped create and communicate national identity."
+},
+
+q13:{
+answer:"A",
+text:"The correct chronology is Congress of Vienna in 1815, July Revolution in 1830, Frankfurt Parliament in 1848 and German Empire in 1871.",
+point:"1815 → 1830 → 1848 → 1871."
+},
+
+q14:{
+answer:"A",
+text:"Young Italy was founded in 1831, revolutions occurred in 1848, the Kingdom of Italy was proclaimed in 1861, and Rome was annexed in 1870.",
+point:"Italian unification: 1831 → 1848 → 1861 → 1870."
+},
+
+q15:{
+answer:"B",
+text:"As the Ottoman Empire weakened, different Balkan nationalities demanded independence while European powers competed for influence. This combination increased tensions.",
+point:"Balkans = nationalism + weakening Ottoman Empire + imperial rivalry."
+},
+
+q16:{
+answer:"A",
+text:"Women participated actively in demonstrations, political associations and nationalist movements, but most nineteenth-century political systems denied them formal political rights.",
+point:"Political participation and political citizenship were not the same for women."
+},
+
+q17:{
+answer:"A",
+text:"The Act of Union of 1707 united England and Scotland into Great Britain. This was an important stage in the construction of the British nation-state.",
+point:"1707 Act of Union = England + Scotland → Great Britain."
+},
+
+q18:{
+answer:"A",
+text:"British national identity developed through symbols such as the Union Jack, English language, political institutions and the increasing dominance of England.",
+point:"National identities can be constructed through political institutions and cultural symbols."
+},
+
+q19:{
+answer:"B",
+text:"Romanticism emphasised emotions, folklore, folk songs, poetry, language and cultural traditions. These helped create a sense of shared national heritage.",
+point:"Romanticism strengthened nationalism through culture and emotion."
+},
+
+q20:{
+answer:"A",
+text:"Economic hardship, unemployment, rising prices and competition from machine-made goods contributed to social unrest and revolutionary movements.",
+point:"Economic crisis was an important background to the revolutionary movements of the 1830s and 1840s."
+},
+
+q21:{
+answer:"B",
+text:"Different social groups participated in nationalist movements, but their economic and political interests could differ. Middle-class groups often demanded constitutional reforms while workers and peasants also raised economic demands.",
+point:"Nationalist movements often united different classes temporarily despite differing interests."
+},
+
+q22:{
+answer:"A",
+text:"The Frankfurt Parliament had constitutional legitimacy but lacked sufficient military and political power to overcome the resistance of existing monarchies.",
+point:"Political legitimacy alone was not enough; power remained with established rulers and armies."
+},
+
+q23:{
+answer:"A",
+text:"The Zollverein removed many customs barriers between German states. This increased trade and economic interaction, thereby strengthening the idea of economic unity.",
+point:"Economic integration helped prepare the ground for political integration."
+},
+
+q24:{
+answer:"A",
+text:"The Congress of Vienna was conservative because European rulers sought to restore monarchies and prevent revolutionary changes from spreading.",
+point:"Conservatism after 1815 aimed at restoration and political stability."
+},
+
+q25:{
+answer:"A",
+text:"Mazzini supported a united Italy and founded Young Italy to spread nationalist ideas and mobilise Italians around the goal of national unity.",
+point:"Young Italy was founded by Giuseppe Mazzini in 1831."
+},
+
+q26:{
+answer:"A",
+text:"Liberal-nationalists generally supported constitutional rights, civil freedoms and national unity, whereas conservatives generally defended traditional institutions and monarchies.",
+point:"Liberalism and conservatism represented contrasting political approaches in nineteenth-century Europe."
+},
+
+q27:{
+answer:"A",
+text:"The Frankfurt Parliament was significant because it represented an attempt to create a unified Germany through elected representatives and constitutional principles.",
+point:"The Frankfurt Parliament was an important experiment in constitutional nation-building."
+},
+
+q28:{
+answer:"A",
+text:"Folk songs, legends, language and national symbols made nationalism accessible as a cultural idea and helped ordinary people imagine a shared national community.",
+point:"Culture transformed nationalism into a wider social and emotional force."
+},
+
+q29:{
+answer:"A",
+text:"Cultural traditions, language, folklore and shared memories helped people imagine themselves as members of a common community.",
+point:"Shared culture is an important element in the construction of national identity."
+},
+
+q30:{
+answer:"A",
+text:"Nineteenth-century nationalist movements reshaped Europe's political map and contributed to the emergence and consolidation of modern nation-states.",
+point:"Nationalism was one of the major forces behind the political transformation of nineteenth-century Europe."
+}
+
+};
+
+
+function submitTest(){
+
+    let score = 0;
+    let answered = 0;
+
+    for(let i=1;i<=30;i++){
+
+        const selected =
+        document.querySelector('input[name="q'+i+'"]:checked');
+
+        if(selected){
+
+            answered++;
+
+            if(selected.value === answers["q"+i]){
+                score++;
+            }
+
+        }
+
+    }
+
+    const wrong = answered - score;
+    const unanswered = 30 - answered;
+    const percentage = ((score/30)*100).toFixed(2);
+
+    document.getElementById("result").style.display="block";
+
+    document.getElementById("score").innerHTML =
+    score + " / 30";
+
+    document.getElementById("resultText").innerHTML =
+    "Answered: " + answered +
+    " &nbsp; | &nbsp; Correct: " + score +
+    " &nbsp; | &nbsp; Wrong: " + wrong +
+    " &nbsp; | &nbsp; Unanswered: " + unanswered +
+    " &nbsp; | &nbsp; Percentage: " + percentage + "%";
+
+    document.getElementById("explanations").style.display="block";
+
+    let html="";
+
+    for(let i=1;i<=30;i++){
+
+        const item=explanations["q"+i];
+
+        html += `
+        <div class="explanation">
+
+            <strong>Question ${i}</strong>
+
+            <p class="correct-answer">
+            Correct Answer: ${item.answer}
+            </p>
+
+            <p>
+            ${item.text}
+            </p>
+
+            <div class="exam-point">
+            <strong>${item.point}</strong>
+            </div>
+
+        </div>
+        `;
+
+    }
+
+    document.getElementById("explanationContent").innerHTML=html;
+
+    window.scrollTo({
+        top:document.getElementById("result").offsetTop-20,
+        behavior:"smooth"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
