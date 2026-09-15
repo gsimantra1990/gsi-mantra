@@ -1,0 +1,1155 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Practice Set 2 | The Rise of Nationalism in Europe | GSI MANTRA</title>
+
+<style>
+*{box-sizing:border-box;}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:25px 20px;
+}
+
+.header-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:34px;
+}
+
+.logo p{
+    margin:5px 0 0;
+    font-size:15px;
+}
+
+nav{
+    background:#071d33;
+    padding:14px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+.hero{
+    background:linear-gradient(135deg,#123c69,#1d5b91);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.hero h2{
+    margin:0 0 10px;
+    font-size:34px;
+}
+
+.hero p{
+    font-size:17px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:35px 20px;
+}
+
+.test-info{
+    background:white;
+    border-radius:16px;
+    padding:22px;
+    margin-bottom:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    text-align:center;
+    line-height:1.8;
+}
+
+.test-info strong{
+    color:#123c69;
+}
+
+.question-card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:22px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    border-left:5px solid #123c69;
+}
+
+.question-number{
+    color:#f28c00;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.question{
+    font-size:17px;
+    font-weight:bold;
+    line-height:1.7;
+    margin-bottom:16px;
+}
+
+.options label{
+    display:block;
+    background:#f7f9fc;
+    border:1px solid #d9e1ea;
+    padding:12px 15px;
+    border-radius:8px;
+    margin:9px 0;
+    cursor:pointer;
+}
+
+.options label:hover{
+    background:#eef4fa;
+    border-color:#123c69;
+}
+
+.options input{
+    margin-right:10px;
+}
+
+.type-label{
+    display:inline-block;
+    background:#123c69;
+    color:white;
+    padding:5px 10px;
+    border-radius:5px;
+    font-size:12px;
+    margin-bottom:12px;
+}
+
+.passage{
+    background:#f4f7fb;
+    border-left:4px solid #f28c00;
+    padding:18px;
+    margin-bottom:18px;
+    line-height:1.8;
+    border-radius:8px;
+}
+
+.submit-area{
+    text-align:center;
+    margin:35px 0;
+}
+
+.submit-btn{
+    background:#f28c00;
+    color:white;
+    border:none;
+    padding:14px 35px;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+    background:#d97700;
+}
+
+.result{
+    display:none;
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    margin:30px 0;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+.result h2{
+    color:#123c69;
+}
+
+.score{
+    font-size:30px;
+    font-weight:bold;
+    color:#f28c00;
+    margin:15px 0;
+}
+
+.explanation-section{
+    display:none;
+    margin-top:35px;
+}
+
+.explanation-title{
+    background:#123c69;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.explanation{
+    background:white;
+    padding:20px;
+    margin-bottom:15px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,.07);
+    border-left:4px solid #159447;
+    line-height:1.7;
+}
+
+.correct-answer{
+    color:#159447;
+    font-weight:bold;
+}
+
+.exam-point{
+    background:#fff8e8;
+    border-left:4px solid #f28c00;
+    padding:12px;
+    margin-top:12px;
+    border-radius:6px;
+}
+
+.back{
+    text-align:center;
+    margin:35px 0;
+}
+
+.back a{
+    display:inline-block;
+    background:#123c69;
+    color:white;
+    text-decoration:none;
+    padding:11px 22px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    margin-top:50px;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+@media(max-width:700px){
+    .header-content{
+        flex-direction:column;
+    }
+
+    .logo h1{
+        font-size:28px;
+    }
+
+    .hero h2{
+        font-size:27px;
+    }
+
+    .question-card{
+        padding:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="header-content">
+<div class="logo">
+
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+
+<div>
+<h1>GSI MANTRA</h1>
+<p>Competitive Education & NCERT Learning Platform</p>
+</div>
+
+</div>
+</div>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="class10.html">Class 10</a>
+<a href="class10-history.html">History</a>
+<a href="class10-history-chapter1-practice.html">Practice Sets</a>
+</nav>
+
+<section class="hero">
+<h2>The Rise of Nationalism in Europe</h2>
+<p>Practice Set 2 — English Medium</p>
+</section>
+
+<div class="container">
+
+<div class="test-info">
+<strong>Class:</strong> 10 &nbsp; | &nbsp;
+<strong>Subject:</strong> History &nbsp; | &nbsp;
+<strong>Chapter:</strong> The Rise of Nationalism in Europe
+<br>
+<strong>Total Questions:</strong> 30 &nbsp; | &nbsp;
+<strong>Marks:</strong> 30 &nbsp; | &nbsp;
+<strong>Level:</strong> NCERT + Board + Competitive
+</div>
+
+<form id="testForm">
+
+<!-- Q1 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 1</div>
+<div class="question">
+What did liberalism stand for in the economic sphere in nineteenth-century Europe?
+</div>
+<div class="options">
+<label><input type="radio" name="q1" value="A"> A. State control over all trade</label>
+<label><input type="radio" name="q1" value="B"> B. Freedom of markets and removal of restrictions on the movement of goods</label>
+<label><input type="radio" name="q1" value="C"> C. Complete abolition of private property</label>
+<label><input type="radio" name="q1" value="D"> D. Control of industries by monarchs</label>
+</div>
+</div>
+
+<!-- Q2 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 2</div>
+<div class="question">
+Which treaty recognised the new boundaries of Europe after the Napoleonic wars?
+</div>
+<div class="options">
+<label><input type="radio" name="q2" value="A"> A. Treaty of Vienna</label>
+<label><input type="radio" name="q2" value="B"> B. Treaty of Versailles</label>
+<label><input type="radio" name="q2" value="C"> C. Treaty of Paris</label>
+<label><input type="radio" name="q2" value="D"> D. Treaty of Frankfurt</label>
+</div>
+</div>
+
+<!-- Q3 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 3</div>
+<div class="question">
+Who among the following was a conservative political philosopher?
+</div>
+<div class="options">
+<label><input type="radio" name="q3" value="A"> A. Giuseppe Mazzini</label>
+<label><input type="radio" name="q3" value="B"> B. John Locke</label>
+<label><input type="radio" name="q3" value="C"> C. Edmund Burke</label>
+<label><input type="radio" name="q3" value="D"> D. Giuseppe Garibaldi</label>
+</div>
+</div>
+
+<!-- Q4 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 4</div>
+<div class="question">
+What was the main aim of the Treaty of Vienna of 1815?
+</div>
+<div class="options">
+<label><input type="radio" name="q4" value="A"> A. To establish democratic republics</label>
+<label><input type="radio" name="q4" value="B"> B. To restore conservative order in Europe</label>
+<label><input type="radio" name="q4" value="C"> C. To create a European parliament</label>
+<label><input type="radio" name="q4" value="D"> D. To abolish all monarchies</label>
+</div>
+</div>
+
+<!-- Q5 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 5</div>
+<div class="question">
+Which kingdom took the lead in the Italian unification movement?
+</div>
+<div class="options">
+<label><input type="radio" name="q5" value="A"> A. Kingdom of Naples</label>
+<label><input type="radio" name="q5" value="B"> B. Sardinia-Piedmont</label>
+<label><input type="radio" name="q5" value="C"> C. Kingdom of Prussia</label>
+<label><input type="radio" name="q5" value="D"> D. Papal States</label>
+</div>
+</div>
+
+<!-- Q6 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 6</div>
+<div class="question">
+Who was the Chief Minister of Sardinia-Piedmont who led the movement for Italian unification?
+</div>
+<div class="options">
+<label><input type="radio" name="q6" value="A"> A. Count Cavour</label>
+<label><input type="radio" name="q6" value="B"> B. Otto von Bismarck</label>
+<label><input type="radio" name="q6" value="C"> C. Metternich</label>
+<label><input type="radio" name="q6" value="D"> D. Louis Philippe</label>
+</div>
+</div>
+
+<!-- Q7 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 7</div>
+<div class="question">
+Which political organisation was founded by Giuseppe Mazzini?
+</div>
+<div class="options">
+<label><input type="radio" name="q7" value="A"> A. Young Europe</label>
+<label><input type="radio" name="q7" value="B"> B. Young Italy</label>
+<label><input type="radio" name="q7" value="C"> C. Carbonari</label>
+<label><input type="radio" name="q7" value="D"> D. Red Shirts</label>
+</div>
+</div>
+
+<!-- Q8 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 8</div>
+<div class="question">
+Who became the first king of unified Italy?
+</div>
+<div class="options">
+<label><input type="radio" name="q8" value="A"> A. Victor Emmanuel II</label>
+<label><input type="radio" name="q8" value="B"> B. Garibaldi</label>
+<label><input type="radio" name="q8" value="C"> C. Mazzini</label>
+<label><input type="radio" name="q8" value="D"> D. Cavour</label>
+</div>
+</div>
+
+<!-- Q9 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 9</div>
+<div class="question">
+Which war helped Prussia defeat France and complete the process of German unification?
+</div>
+<div class="options">
+<label><input type="radio" name="q9" value="A"> A. Austro-Prussian War</label>
+<label><input type="radio" name="q9" value="B"> B. Franco-Prussian War</label>
+<label><input type="radio" name="q9" value="C"> C. Crimean War</label>
+<label><input type="radio" name="q9" value="D"> D. Seven Years' War</label>
+</div>
+</div>
+
+<!-- Q10 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 10</div>
+<div class="question">
+In which year was the German Empire proclaimed?
+</div>
+<div class="options">
+<label><input type="radio" name="q10" value="A"> A. 1848</label>
+<label><input type="radio" name="q10" value="B"> B. 1861</label>
+<label><input type="radio" name="q10" value="C"> C. 1871</label>
+<label><input type="radio" name="q10" value="D"> D. 1885</label>
+</div>
+</div>
+
+<!-- Q11 -->
+<div class="question-card">
+<div class="type-label">Matching</div>
+<div class="question-number">Question 11</div>
+<div class="question">
+Match the following correctly:<br><br>
+1. Cavour — A. Germany<br>
+2. Bismarck — B. Italy<br>
+3. Mazzini — C. Young Italy
+</div>
+<div class="options">
+<label><input type="radio" name="q11" value="A"> A. 1-B, 2-A, 3-C</label>
+<label><input type="radio" name="q11" value="B"> B. 1-A, 2-B, 3-C</label>
+<label><input type="radio" name="q11" value="C"> C. 1-C, 2-B, 3-A</label>
+<label><input type="radio" name="q11" value="D"> D. 1-B, 2-C, 3-A</label>
+</div>
+</div>
+
+<!-- Q12 -->
+<div class="question-card">
+<div class="type-label">Matching</div>
+<div class="question-number">Question 12</div>
+<div class="question">
+Match the symbols with the nations:<br><br>
+1. Marianne — A. Germany<br>
+2. Germania — B. France<br>
+3. Oak leaves — C. Heroism and bravery
+</div>
+<div class="options">
+<label><input type="radio" name="q12" value="A"> A. 1-B, 2-A, 3-C</label>
+<label><input type="radio" name="q12" value="B"> B. 1-A, 2-B, 3-C</label>
+<label><input type="radio" name="q12" value="C"> C. 1-C, 2-A, 3-B</label>
+<label><input type="radio" name="q12" value="D"> D. 1-B, 2-C, 3-A</label>
+</div>
+</div>
+
+<!-- Q13 -->
+<div class="question-card">
+<div class="type-label">Arrangement</div>
+<div class="question-number">Question 13</div>
+<div class="question">
+Arrange the following events in chronological order:<br><br>
+1. Congress of Vienna<br>
+2. Formation of Zollverein<br>
+3. Frankfurt Parliament<br>
+4. Unification of Germany
+</div>
+<div class="options">
+<label><input type="radio" name="q13" value="A"> A. 1-2-3-4</label>
+<label><input type="radio" name="q13" value="B"> B. 2-1-3-4</label>
+<label><input type="radio" name="q13" value="C"> C. 1-3-2-4</label>
+<label><input type="radio" name="q13" value="D"> D. 3-2-1-4</label>
+</div>
+</div>
+
+<!-- Q14 -->
+<div class="question-card">
+<div class="type-label">Arrangement</div>
+<div class="question-number">Question 14</div>
+<div class="question">
+Arrange the following stages of Italian unification in the correct order:<br><br>
+1. Garibaldi's campaign in southern Italy<br>
+2. Victor Emmanuel II became king of Sardinia-Piedmont<br>
+3. Italy was declared a kingdom
+</div>
+<div class="options">
+<label><input type="radio" name="q14" value="A"> A. 2-1-3</label>
+<label><input type="radio" name="q14" value="B"> B. 1-2-3</label>
+<label><input type="radio" name="q14" value="C"> C. 3-1-2</label>
+<label><input type="radio" name="q14" value="D"> D. 2-3-1</label>
+</div>
+</div>
+
+<!-- Q15 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 15</div>
+<div class="question">
+Which group formed the majority of the Frankfurt Parliament?
+</div>
+<div class="options">
+<label><input type="radio" name="q15" value="A"> A. Peasants</label>
+<label><input type="radio" name="q15" value="B"> B. Artisans</label>
+<label><input type="radio" name="q15" value="C"> C. Middle-class professionals</label>
+<label><input type="radio" name="q15" value="D"> D. Soldiers</label>
+</div>
+</div>
+
+<!-- Q16 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 16</div>
+<div class="question">
+Where did the Frankfurt Parliament meet?
+</div>
+<div class="options">
+<label><input type="radio" name="q16" value="A"> A. St. Paul's Church</label>
+<label><input type="radio" name="q16" value="B"> B. Berlin Palace</label>
+<label><input type="radio" name="q16" value="C"> C. Versailles Palace</label>
+<label><input type="radio" name="q16" value="D"> D. Vienna Hall</label>
+</div>
+</div>
+
+<!-- Q17 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 17</div>
+<div class="question">
+Why did the Frankfurt Parliament fail to achieve German unification?
+</div>
+<div class="options">
+<label><input type="radio" name="q17" value="A"> A. The peasants opposed it</label>
+<label><input type="radio" name="q17" value="B"> B. The Prussian king rejected the crown offered by the Parliament</label>
+<label><input type="radio" name="q17" value="C"> C. France supported it</label>
+<label><input type="radio" name="q17" value="D"> D. Austria immediately joined it</label>
+</div>
+</div>
+
+<!-- Q18 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 18</div>
+<div class="question">
+What did the female allegory of Germany come to be known as?
+</div>
+<div class="options">
+<label><input type="radio" name="q18" value="A"> A. Marianne</label>
+<label><input type="radio" name="q18" value="B"> B. Germania</label>
+<label><input type="radio" name="q18" value="C"> C. Liberty</label>
+<label><input type="radio" name="q18" value="D"> D. Europa</label>
+</div>
+</div>
+
+<!-- Q19 -->
+<div class="question-card">
+<div class="type-label">Passage-Based</div>
+<div class="question-number">Question 19</div>
+
+<div class="passage">
+The Napoleonic Code introduced equality before the law, abolished privileges based on birth in many territories and simplified administrative systems. However, Napoleon also imposed political control over conquered regions.
+</div>
+
+<div class="question">
+Which principle of the Napoleonic Code was related to equality?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q19" value="A"> A. Equality before the law</label>
+<label><input type="radio" name="q19" value="B"> B. Hereditary privilege</label>
+<label><input type="radio" name="q19" value="C"> C. Absolute monarchy</label>
+<label><input type="radio" name="q19" value="D"> D. Censorship of all trade</label>
+</div>
+</div>
+
+<!-- Q20 -->
+<div class="question-card">
+<div class="type-label">Passage-Based</div>
+<div class="question-number">Question 20</div>
+
+<div class="passage">
+The Zollverein was formed in 1834 at the initiative of Prussia. It removed tariff barriers between many German states and encouraged economic cooperation.
+</div>
+
+<div class="question">
+What was the major purpose of the Zollverein?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q20" value="A"> A. To promote economic integration</label>
+<label><input type="radio" name="q20" value="B"> B. To create a military alliance with France</label>
+<label><input type="radio" name="q20" value="C"> C. To restore feudalism</label>
+<label><input type="radio" name="q20" value="D"> D. To divide Germany further</label>
+</div>
+</div>
+
+<!-- Q21 -->
+<div class="question-card">
+<div class="type-label">Passage-Based</div>
+<div class="question-number">Question 21</div>
+
+<div class="passage">
+In many parts of Europe, nationalists used language, folklore, music and local traditions to develop a sense of shared identity. Romantic artists and poets helped spread these ideas.
+</div>
+
+<div class="question">
+Which factor helped create a shared national identity according to the passage?
+</div>
+
+<div class="options">
+<label><input type="radio" name="q21" value="A"> A. Folklore and traditions</label>
+<label><input type="radio" name="q21" value="B"> B. Military taxation only</label>
+<label><input type="radio" name="q21" value="C"> C. Colonial expansion only</label>
+<label><input type="radio" name="q21" value="D"> D. Royal privileges</label>
+</div>
+</div>
+
+<!-- Q22 -->
+<div class="question-card">
+<div class="type-label">Assertion–Reason</div>
+<div class="question-number">Question 22</div>
+
+<div class="question">
+<strong>Assertion (A):</strong> The Zollverein strengthened economic nationalism in the German states.<br><br>
+<strong>Reason (R):</strong> It removed many internal customs barriers and promoted trade.
+</div>
+
+<div class="options">
+<label><input type="radio" name="q22" value="A"> A. Both A and R are true, and R is the correct explanation of A.</label>
+<label><input type="radio" name="q22" value="B"> B. Both A and R are true, but R is not the correct explanation of A.</label>
+<label><input type="radio" name="q22" value="C"> C. A is true, but R is false.</label>
+<label><input type="radio" name="q22" value="D"> D. A is false, but R is true.</label>
+</div>
+</div>
+
+<!-- Q23 -->
+<div class="question-card">
+<div class="type-label">Assertion–Reason</div>
+<div class="question-number">Question 23</div>
+
+<div class="question">
+<strong>Assertion (A):</strong> Romanticism contributed to the growth of nationalism in Europe.<br><br>
+<strong>Reason (R):</strong> Romantic artists and thinkers emphasised emotion, culture and shared heritage.
+</div>
+
+<div class="options">
+<label><input type="radio" name="q23" value="A"> A. Both A and R are true, and R is the correct explanation of A.</label>
+<label><input type="radio" name="q23" value="B"> B. Both A and R are true, but R is not the correct explanation of A.</label>
+<label><input type="radio" name="q23" value="C"> C. A is true, but R is false.</label>
+<label><input type="radio" name="q23" value="D"> D. A is false, but R is true.</label>
+</div>
+</div>
+
+<!-- Q24 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 24</div>
+<div class="question">
+What was one important feature of the conservative order established after 1815?
+</div>
+<div class="options">
+<label><input type="radio" name="q24" value="A"> A. Restoration of monarchies</label>
+<label><input type="radio" name="q24" value="B"> B. Universal adult franchise</label>
+<label><input type="radio" name="q24" value="C"> C. Abolition of all empires</label>
+<label><input type="radio" name="q24" value="D"> D. Immediate establishment of republics</label>
+</div>
+</div>
+
+<!-- Q25 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 25</div>
+<div class="question">
+Which event is associated with the Greek struggle for independence?
+</div>
+<div class="options">
+<label><input type="radio" name="q25" value="A"> A. Greek War of Independence</label>
+<label><input type="radio" name="q25" value="B"> B. Franco-Prussian War</label>
+<label><input type="radio" name="q25" value="C"> C. Crimean War</label>
+<label><input type="radio" name="q25" value="D"> D. Seven Years' War</label>
+</div>
+</div>
+
+<!-- Q26 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 26</div>
+<div class="question">
+Why was the Greek struggle for independence supported by many Europeans?
+</div>
+<div class="options">
+<label><input type="radio" name="q26" value="A"> A. Due to sympathy for Greek culture and history</label>
+<label><input type="radio" name="q26" value="B"> B. Because Greece wanted to join France</label>
+<label><input type="radio" name="q26" value="C"> C. Because the Ottoman Empire supported it</label>
+<label><input type="radio" name="q26" value="D"> D. Because nationalism had disappeared</label>
+</div>
+</div>
+
+<!-- Q27 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 27</div>
+<div class="question">
+What was the main objective of nationalist movements in the Balkans?
+</div>
+<div class="options">
+<label><input type="radio" name="q27" value="A"> A. To achieve independence or create their own nation-states</label>
+<label><input type="radio" name="q27" value="B"> B. To strengthen Ottoman control</label>
+<label><input type="radio" name="q27" value="C"> C. To abolish national identities</label>
+<label><input type="radio" name="q27" value="D"> D. To establish a single European monarchy</label>
+</div>
+</div>
+
+<!-- Q28 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 28</div>
+<div class="question">
+Which empire controlled a large part of the Balkan region before its decline?
+</div>
+<div class="options">
+<label><input type="radio" name="q28" value="A"> A. Ottoman Empire</label>
+<label><input type="radio" name="q28" value="B"> B. German Empire</label>
+<label><input type="radio" name="q28" value="C"> C. British Empire</label>
+<label><input type="radio" name="q28" value="D"> D. Russian Empire</label>
+</div>
+</div>
+
+<!-- Q29 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 29</div>
+<div class="question">
+Which statement best describes nationalism in nineteenth-century Europe?
+</div>
+<div class="options">
+<label><input type="radio" name="q29" value="A"> A. It promoted the idea of a shared national identity and political unity.</label>
+<label><input type="radio" name="q29" value="B"> B. It supported only feudal privileges.</label>
+<label><input type="radio" name="q29" value="C"> C. It rejected all cultural identities.</label>
+<label><input type="radio" name="q29" value="D"> D. It aimed to strengthen every existing empire.</label>
+</div>
+</div>
+
+<!-- Q30 -->
+<div class="question-card">
+<div class="type-label">MCQ</div>
+<div class="question-number">Question 30</div>
+<div class="question">
+Which combination correctly represents the major forces involved in German unification?
+</div>
+<div class="options">
+<label><input type="radio" name="q30" value="A"> A. Prussia, Bismarck and military power</label>
+<label><input type="radio" name="q30" value="B"> B. France, Mazzini and the Papal States</label>
+<label><input type="radio" name="q30" value="C"> C. Austria, Garibaldi and Sardinia</label>
+<label><input type="radio" name="q30" value="D"> D. Britain, Cavour and Naples</label>
+</div>
+</div>
+
+<div class="submit-area">
+<button type="button" class="submit-btn" onclick="submitTest()">
+Submit Test
+</button>
+</div>
+
+</form>
+
+<div class="result" id="result">
+<h2>Test Result</h2>
+<div class="score" id="score"></div>
+<p id="resultText"></p>
+</div>
+
+<div class="explanation-section" id="explanations">
+<h2 class="explanation-title">Answers & Explanations</h2>
+<div id="explanationContent"></div>
+</div>
+
+<div class="back">
+<a href="class10-history-chapter1-practice.html">
+Back to Practice Sets
+</a>
+</div>
+
+</div>
+
+<footer>
+<h2>GSI MANTRA</h2>
+<p>Class 10 History • NCERT • Practice Tests • Notes • Videos</p>
+<p>© 2026 GSI MANTRA. All Rights Reserved.</p>
+</footer>
+
+<script>
+
+const answers = {
+q1:"B",
+q2:"A",
+q3:"C",
+q4:"B",
+q5:"B",
+q6:"A",
+q7:"B",
+q8:"A",
+q9:"B",
+q10:"C",
+q11:"A",
+q12:"A",
+q13:"A",
+q14:"A",
+q15:"C",
+q16:"A",
+q17:"B",
+q18:"B",
+q19:"A",
+q20:"A",
+q21:"A",
+q22:"A",
+q23:"A",
+q24:"A",
+q25:"A",
+q26:"A",
+q27:"A",
+q28:"A",
+q29:"A",
+q30:"A"
+};
+
+const explanations = {
+
+q1:{
+answer:"B",
+text:"In the economic sphere, liberalism supported freedom of markets and the removal of restrictions on the movement of goods and capital.",
+point:"Exam Point: Economic liberalism supported free markets."
+},
+
+q2:{
+answer:"A",
+text:"The Congress of Vienna of 1815 redrew the political map of Europe after the defeat of Napoleon and aimed to establish a conservative order.",
+point:"Exam Point: The Congress of Vienna was held in 1815."
+},
+
+q3:{
+answer:"C",
+text:"Edmund Burke was a major conservative thinker who criticised the radical changes associated with the French Revolution.",
+point:"Exam Point: Edmund Burke is associated with conservative thought."
+},
+
+q4:{
+answer:"B",
+text:"The Treaty of Vienna aimed to restore the monarchies that had been overthrown during the Napoleonic period and establish a conservative order.",
+point:"Exam Point: Restoration of monarchies was a key aim of Vienna."
+},
+
+q5:{
+answer:"B",
+text:"Sardinia-Piedmont, under the leadership of Victor Emmanuel II and Cavour, took the initiative in the Italian unification process.",
+point:"Exam Point: Sardinia-Piedmont led Italian unification."
+},
+
+q6:{
+answer:"A",
+text:"Count Camillo de Cavour was the Chief Minister of Sardinia-Piedmont and played a crucial diplomatic and political role in Italian unification.",
+point:"Exam Point: Cavour was the chief minister of Sardinia-Piedmont."
+},
+
+q7:{
+answer:"B",
+text:"Giuseppe Mazzini founded Young Italy in 1831. He wanted to create a united and independent Italy.",
+point:"Exam Point: Young Italy was founded by Mazzini."
+},
+
+q8:{
+answer:"A",
+text:"Victor Emmanuel II became the first king of unified Italy in 1861.",
+point:"Exam Point: Victor Emmanuel II became the first king of unified Italy."
+},
+
+q9:{
+answer:"B",
+text:"The Franco-Prussian War of 1870–71 ended with a Prussian victory and helped complete German unification.",
+point:"Exam Point: Franco-Prussian War was the final major war of German unification."
+},
+
+q10:{
+answer:"C",
+text:"The German Empire was proclaimed in January 1871 at the Palace of Versailles.",
+point:"Exam Point: German Empire was proclaimed in 1871."
+},
+
+q11:{
+answer:"A",
+text:"Cavour is associated with Italian unification, Bismarck with German unification and Mazzini with Young Italy.",
+point:"Exam Point: Cavour → Italy, Bismarck → Germany, Mazzini → Young Italy."
+},
+
+q12:{
+answer:"A",
+text:"Marianne represented the French nation, Germania represented the German nation, while oak leaves symbolised heroism and bravery.",
+point:"Exam Point: Marianne = France; Germania = Germany."
+},
+
+q13:{
+answer:"A",
+text:"The correct sequence is Congress of Vienna (1815), Zollverein (1834), Frankfurt Parliament (1848), and German unification (1871).",
+point:"Exam Point: 1815 → 1834 → 1848 → 1871."
+},
+
+q14:{
+answer:"A",
+text:"Victor Emmanuel II became king of Sardinia-Piedmont in 1849, Garibaldi campaigned in southern Italy in 1860, and Italy was declared a kingdom in 1861.",
+point:"Exam Point: 1849 → 1860 → 1861."
+},
+
+q15:{
+answer:"C",
+text:"The Frankfurt Parliament was largely composed of middle-class professionals, including lawyers, teachers and other educated groups.",
+point:"Exam Point: The educated middle class played an important role in the Frankfurt Parliament."
+},
+
+q16:{
+answer:"A",
+text:"The Frankfurt Parliament convened in St. Paul's Church in Frankfurt in 1848.",
+point:"Exam Point: Frankfurt Parliament → St. Paul's Church."
+},
+
+q17:{
+answer:"B",
+text:"The Parliament offered the crown of a united Germany to the Prussian king Frederick William IV, but he rejected it because it came from an elected assembly.",
+point:"Exam Point: Frederick William IV rejected the crown offered by the Frankfurt Parliament."
+},
+
+q18:{
+answer:"B",
+text:"Germania was the female allegory representing the German nation.",
+point:"Exam Point: Germania = German nation."
+},
+
+q19:{
+answer:"A",
+text:"The Napoleonic Code established equality before the law and abolished many privileges based on birth.",
+point:"Exam Point: Equality before law was a major feature of the Napoleonic Code."
+},
+
+q20:{
+answer:"A",
+text:"The Zollverein removed tariff barriers between participating German states and promoted economic integration.",
+point:"Exam Point: Zollverein = German customs union."
+},
+
+q21:{
+answer:"A",
+text:"Folklore, language, music and local traditions helped people develop a sense of common cultural identity.",
+point:"Exam Point: Folk culture contributed to the growth of nationalism."
+},
+
+q22:{
+answer:"A",
+text:"Both statements are correct. By removing internal customs barriers, the Zollverein promoted trade and strengthened economic unity.",
+point:"Exam Point: Economic unity helped strengthen national consciousness."
+},
+
+q23:{
+answer:"A",
+text:"Romanticism emphasised emotions, cultural heritage, folk traditions and shared history, which helped create a sense of national identity.",
+point:"Exam Point: Romanticism supported cultural nationalism."
+},
+
+q24:{
+answer:"A",
+text:"After 1815, conservative rulers attempted to restore traditional monarchies and institutions that had been challenged during the revolutionary period.",
+point:"Exam Point: Conservatism supported traditional institutions and monarchies."
+},
+
+q25:{
+answer:"A",
+text:"The Greek War of Independence began in 1821 against Ottoman rule and became an important nationalist struggle in Europe.",
+point:"Exam Point: Greek struggle for independence began in 1821."
+},
+
+q26:{
+answer:"A",
+text:"Many Europeans admired ancient Greek civilisation and culture. Philhellenism helped generate support for the Greek struggle.",
+point:"Exam Point: Philhellenism means love or admiration for Greek culture."
+},
+
+q27:{
+answer:"A",
+text:"Nationalist groups in the Balkans wanted independence from imperial rule or wanted to establish their own nation-states.",
+point:"Exam Point: Balkan nationalism challenged imperial control."
+},
+
+q28:{
+answer:"A",
+text:"The Ottoman Empire controlled a large part of the Balkan region, but its decline encouraged nationalist movements and rivalry among European powers.",
+point:"Exam Point: Decline of the Ottoman Empire increased tensions in the Balkans."
+},
+
+q29:{
+answer:"A",
+text:"Nineteenth-century nationalism promoted the idea that people sharing a common identity should form a political nation.",
+point:"Exam Point: Nationalism linked shared identity with political unity."
+},
+
+q30:{
+answer:"A",
+text:"Prussia, under Otto von Bismarck, used its strong military and administration to lead the German unification process.",
+point:"Exam Point: Prussia + Bismarck + military power were central to German unification."
+}
+
+};
+
+function submitTest(){
+
+    let score = 0;
+    let answered = 0;
+
+    for(let i=1;i<=30;i++){
+
+        const selected =
+        document.querySelector('input[name="q'+i+'"]:checked');
+
+        if(selected){
+
+            answered++;
+
+            if(selected.value === answers["q"+i]){
+                score++;
+            }
+        }
+    }
+
+    const wrong = answered - score;
+    const unanswered = 30 - answered;
+    const percentage = ((score/30)*100).toFixed(2);
+
+    document.getElementById("result").style.display="block";
+
+    document.getElementById("score").innerHTML =
+    score + " / 30";
+
+    document.getElementById("resultText").innerHTML =
+    "Answered: " + answered +
+    " &nbsp; | &nbsp; Correct: " + score +
+    " &nbsp; | &nbsp; Wrong: " + wrong +
+    " &nbsp; | &nbsp; Unanswered: " + unanswered +
+    " &nbsp; | &nbsp; Percentage: " + percentage + "%";
+
+    document.getElementById("explanations").style.display="block";
+
+    let html="";
+
+    for(let i=1;i<=30;i++){
+
+        const item=explanations["q"+i];
+
+        html += `
+        <div class="explanation">
+
+            <strong>Question ${i}</strong>
+
+            <p class="correct-answer">
+            Correct Answer: ${item.answer}
+            </p>
+
+            <p>
+            ${item.text}
+            </p>
+
+            <div class="exam-point">
+            <strong>${item.point}</strong>
+            </div>
+
+        </div>
+        `;
+    }
+
+    document.getElementById("explanationContent").innerHTML=html;
+
+    window.scrollTo({
+        top:document.getElementById("result").offsetTop-20,
+        behavior:"smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
+```
