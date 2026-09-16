@@ -1,0 +1,572 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Class 10 History Chapter 2 Practice Sets | GSI MANTRA</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:25px 20px;
+}
+
+.header-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:34px;
+}
+
+.logo p{
+    margin:5px 0 0;
+    font-size:15px;
+}
+
+.search{
+    background:white;
+    padding:10px 15px;
+    border-radius:25px;
+    width:280px;
+}
+
+.search input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+}
+
+/* NAVIGATION */
+
+nav{
+    background:#071d33;
+    padding:14px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#123c69,#1d5b91);
+    color:white;
+    text-align:center;
+    padding:55px 20px;
+}
+
+.hero h2{
+    font-size:36px;
+    margin:0 0 12px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:800px;
+    margin:8px auto;
+    line-height:1.7;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.section-title{
+    text-align:center;
+    color:#123c69;
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:35px;
+}
+
+/* MEDIUM SECTION */
+
+.medium-section{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    margin-bottom:30px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.medium-title{
+    text-align:center;
+    color:#123c69;
+    font-size:25px;
+    margin-top:0;
+    margin-bottom:25px;
+    border-bottom:2px solid #e5e7eb;
+    padding-bottom:15px;
+}
+
+/* PRACTICE GRID */
+
+.practice-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:15px;
+}
+
+.practice-card{
+    background:#f8fafc;
+    border:1px solid #dce4ec;
+    border-radius:12px;
+    padding:18px 12px;
+    text-align:center;
+    transition:.3s;
+}
+
+.practice-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 7px 18px rgba(0,0,0,.10);
+    border-color:#123c69;
+}
+
+.practice-number{
+    color:#f28c00;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.practice-card h3{
+    color:#123c69;
+    margin:5px 0 14px;
+    font-size:18px;
+}
+
+/* BUTTON */
+
+.practice-button{
+    display:inline-block;
+    background:#123c69;
+    color:white;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:7px;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.practice-button:hover{
+    background:#f28c00;
+}
+
+/* INFO BOX */
+
+.info-box{
+    background:linear-gradient(135deg,#fff8e8,#fff1c7);
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    margin-top:35px;
+}
+
+.info-box h2{
+    color:#8a5700;
+    margin-top:0;
+}
+
+.info-box p{
+    line-height:1.7;
+    color:#555;
+}
+
+/* FOOTER */
+
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    margin-top:50px;
+}
+
+footer h2{
+    margin-top:0;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+.footer-links a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .header-content{
+        flex-direction:column;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    .hero h2{
+        font-size:28px;
+    }
+
+    .medium-section{
+        padding:20px 15px;
+    }
+
+    .practice-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    nav a{
+        display:inline-block;
+        margin:6px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="header-content">
+
+<div class="logo">
+
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+
+<div>
+
+<h1>GSI MANTRA</h1>
+
+<p>Competitive Education & NCERT Learning Platform</p>
+
+</div>
+
+</div>
+
+<div class="search">
+
+<input
+type="text"
+placeholder="Search GSI MANTRA..."
+>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="class10.html">Class 10</a>
+
+<a href="class10-history.html">History</a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h2>Class 10 History — Chapter 2</h2>
+
+<p>
+Nationalism in India
+</p>
+
+<p>
+5 Hindi Medium + 5 English Medium Practice Sets
+</p>
+
+</section>
+
+
+<!-- MAIN -->
+
+<div class="container">
+
+<h2 class="section-title">
+Practice Sets
+</h2>
+
+<p class="section-subtitle">
+Class 10 History • Chapter 2 • Nationalism in India
+</p>
+
+
+<!-- HINDI MEDIUM -->
+
+<div class="medium-section">
+
+<h2 class="medium-title">
+Hindi Medium
+</h2>
+
+<div class="practice-grid">
+
+
+<div class="practice-card">
+<div class="practice-number">PRACTICE SET 01</div>
+<h3>Practice Set 1</h3>
+
+<a class="practice-button"
+href="class10-history-chapter2-practice-set1-hindi.html">
+Open Set 1
+</a>
+
+</div>
+
+
+<div class="practice-card">
+<div class="practice-number">PRACTICE SET 02</div>
+<h3>Practice Set 2</h3>
+
+<a class="practice-button"
+href="class10-history-chapter2-practice-set2-hindi.html">
+Open Set 2
+</a>
+
+</div>
+
+
+<div class="practice-card">
+<div class="practice-number">PRACTICE SET 03</div>
+<h3>Practice Set 3</h3>
+
+<a class="practice-button"
+href="class10-history-chapter2-practice-set3-hindi.html">
+Open Set 3
+</a>
+
+</div>
+
+
+<div class="practice-card">
+<div class="practice-number">PRACTICE SET 04</div>
+<h3>Practice Set 4</h3>
+
+<a class="practice-button"
+href="class10-history-chapter2-practice-set4-hindi.html">
+Open Set 4
+</a>
+
+</div>
+
+
+<div class="practice-card">
+<div class="practice-number">PRACTICE SET 05</div>
+<h3>Practice Set 5</h3>
+
+<a class="practice-button"
+href="class10-history-chapter2-practice-set5-hindi.html">
+Open Set 5
+</a>
+
+</div>
+
+
+</div>
+</div>
+
+
+<!-- ENGLISH MEDIUM -->
+
+<div class="medium-section">
+
+<h2 class="medium-title">
+English Medium
+</h2>
+
+<div class="practice-grid">
+
+
+<div class="practice-card">
+<div class="practice-number">PRACTICE SET 01</div>
+<h3>Practice Set 1</h3>
+
+<a class="practice-button"
+href="class10-history-chapter2-practice-set1-english.html">
+Open Set 1
+</a>
+
+</div>
+
+
+<div class="practice-card">
+<div class="practice-number">PRACTICE SET 02</div>
+<h3>Practice Set 2</h3>
+
+<a class="practice-button"
+href="class10-history-chapter2-practice-set2-english.html">
+Open Set 2
+</a>
+
+</div>
+
+
+<div class="practice-card">
+<div class="practice-number">PRACTICE SET 03</div>
+<h3>Practice Set 3</h3>
+
+<a class="practice-button"
+href="class10-history-chapter2-practice-set3-english.html">
+Open Set 3
+</a>
+
+</div>
+
+
+<div class="practice-card">
+<div class="practice-number">PRACTICE SET 04</div>
+<h3>Practice Set 4</h3>
+
+<a class="practice-button"
+href="class10-history-chapter2-practice-set4-english.html">
+Open Set 4
+</a>
+
+</div>
+
+
+<div class="practice-card">
+<div class="practice-number">PRACTICE SET 05</div>
+<h3>Practice Set 5</h3>
+
+<a class="practice-button"
+href="class10-history-chapter2-practice-set5-english.html">
+Open Set 5
+</a>
+
+</div>
+
+
+</div>
+</div>
+
+
+<!-- INFORMATION -->
+
+<div class="info-box">
+
+<h2>GSI MANTRA Practice Programme</h2>
+
+<p>
+Each Practice Set will contain 30 carefully designed
+questions based on Class 10 History Chapter 2:
+<strong>Nationalism in India</strong>.
+</p>
+
+<p>
+Questions will include MCQs, Matching, Chronological
+Arrangement and Passage-Based Questions.
+</p>
+
+<p>
+Every question will include options, correct answer,
+detailed explanation and exam-oriented points.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>GSI MANTRA</h2>
+
+<p>
+Class 10 History • Nationalism in India • Practice Sets
+</p>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+<a href="class10.html">Class 10</a>
+<a href="class10-history.html">History</a>
+
+</div>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
+```
