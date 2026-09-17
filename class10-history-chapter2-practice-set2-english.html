@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Practice Set 2 | Nationalism in India | GSI MANTRA</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:25px 20px;
+}
+
+.header-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:34px;
+}
+
+.logo p{
+    margin:5px 0 0;
+    font-size:15px;
+}
+
+.search{
+    background:white;
+    padding:10px 15px;
+    border-radius:25px;
+    width:280px;
+}
+
+.search input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+}
+
+nav{
+    background:#071d33;
+    padding:14px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+.hero{
+    background:linear-gradient(135deg,#123c69,#1d5b91);
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.hero h2{
+    font-size:36px;
+    margin:0 0 10px;
+}
+
+.hero p{
+    font-size:18px;
+    margin:8px 0;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:35px 20px;
+}
+
+.test-info{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.test-info strong{
+    color:#123c69;
+}
+
+.question{
+    background:white;
+    padding:24px;
+    margin-bottom:20px;
+    border-radius:15px;
+    box-shadow:0 4px 14px rgba(0,0,0,.08);
+    border-left:5px solid #123c69;
+}
+
+.question-type{
+    display:inline-block;
+    background:#eaf2fb;
+    color:#123c69;
+    padding:6px 10px;
+    border-radius:6px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.question h3{
+    margin:8px 0 16px;
+    color:#123c69;
+    font-size:18px;
+    line-height:1.5;
+}
+
+.option{
+    display:block;
+    background:#f8fafc;
+    padding:11px 13px;
+    margin:9px 0;
+    border-radius:8px;
+    border:1px solid #e1e7ef;
+    cursor:pointer;
+}
+
+.option:hover{
+    background:#eef5fb;
+}
+
+.option input{
+    margin-right:10px;
+}
+
+.passage{
+    background:#fff8e8;
+    border-left:5px solid #f28c00;
+    padding:18px;
+    border-radius:10px;
+    line-height:1.8;
+    margin:12px 0 18px;
+}
+
+.passage-title{
+    font-weight:bold;
+    color:#8a5700;
+    margin-bottom:8px;
+}
+
+.match-table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+.match-table th,
+.match-table td{
+    border:1px solid #d8dee7;
+    padding:10px;
+    text-align:left;
+}
+
+.match-table th{
+    background:#eaf2fb;
+    color:#123c69;
+}
+
+.submit-area{
+    text-align:center;
+    margin:35px 0;
+}
+
+.submit-btn{
+    background:#f28c00;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+    background:#d97700;
+}
+
+.result{
+    display:none;
+    background:linear-gradient(135deg,#e8f5e9,#f8fff9);
+    border:2px solid #4caf50;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    margin:30px 0;
+}
+
+.result h2{
+    color:#2e7d32;
+    margin-top:0;
+}
+
+.score{
+    font-size:32px;
+    font-weight:bold;
+    color:#123c69;
+}
+
+.explanation{
+    display:none;
+    background:#f8fafc;
+    border-left:5px solid #f28c00;
+    padding:18px;
+    margin-top:10px;
+    border-radius:8px;
+    line-height:1.7;
+}
+
+.explanation strong{
+    color:#123c69;
+}
+
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    margin-top:50px;
+}
+
+footer h2{
+    margin-top:0;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+.footer-links a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+@media(max-width:700px){
+
+    .header-content{
+        flex-direction:column;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    .hero h2{
+        font-size:28px;
+    }
+
+    .question{
+        padding:18px;
+    }
+
+    .match-table{
+        font-size:14px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:6px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="header-content">
+
+<div class="logo">
+
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+
+<div>
+<h1>GSI MANTRA</h1>
+<p>Competitive Education & NCERT Learning Platform</p>
+</div>
+
+</div>
+
+<div class="search">
+<input type="text" placeholder="Search GSI MANTRA...">
+</div>
+
+</div>
+
+</header>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="class10.html">Class 10</a>
+<a href="class10-history.html">History</a>
+<a href="class10-history-chapter2-practice.html">Practice Sets</a>
+
+</nav>
+
+
+<section class="hero">
+
+<h2>Nationalism in India</h2>
+
+<p>Practice Set 2 — English Medium</p>
+
+<p>Class 10 History • Chapter 2</p>
+
+</section>
+
+
+<div class="container">
+
+
+<div class="test-info">
+
+<p><strong>Class:</strong> 10</p>
+
+<p><strong>Subject:</strong> History</p>
+
+<p><strong>Chapter:</strong> Nationalism in India</p>
+
+<p><strong>Practice Set:</strong> 2</p>
+
+<p><strong>Total Questions:</strong> 30</p>
+
+<p><strong>Total Marks:</strong> 30</p>
+
+<p><strong>Level:</strong> NCERT + Board + Competitive</p>
+
+</div>
+
+
+<form id="quizForm">
+
+
+<!-- Q1 -->
+
+<div class="question">
+
+<div class="question-type">MCQ</div>
+
+<h3>1. Which condition created significant economic difficulties for many Indians during the First World War?</h3>
+
+<label class="option">
+<input type="radio" name="q1" value="B">
+A. Complete abolition of taxes
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="B">
+B. Rising prices, increased taxes and forced recruitment
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="B">
+C. Large fall in military expenditure
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="B">
+D. Free distribution of agricultural land
+</label>
+
+<div class="explanation" id="exp1">
+<strong>Correct Answer: B</strong><br>
+The First World War increased defence expenditure. Taxes were raised and prices of essential goods increased, creating hardship for ordinary people. Forced recruitment also affected several rural areas.
+<br><br>
+<strong>Exam Point:</strong> War-time economic hardship contributed to growing political dissatisfaction.
+</div>
+
+</div>
+
+
+<!-- Q2 -->
+
+<div class="question">
+
+<div class="question-type">MCQ</div>
+
+<h3>2. What did Mahatma Gandhi mean by Satyagraha?</h3>
+
+<label class="option">
+<input type="radio" name="q2" value="A">
+A. A method of using military power
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="B">
+B. A method of resisting injustice through truth and non-violence
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="C">
+C. A policy of accepting every government decision
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="D">
+D. A method based mainly on secret revolutionary activities
+</label>
+
+<div class="explanation" id="exp2">
+<strong>Correct Answer: B</strong><br>
+Satyagraha was based on the power of truth and non-violent resistance. Gandhi believed that a Satyagrahi should oppose injustice without hatred or physical violence.
+<br><br>
+<strong>Exam Point:</strong> Truth and non-violence were central principles of Gandhian Satyagraha.
+</div>
+
+</div>
+
+
+<!-- Q3 -->
+
+<div class="question">
+
+<div class="question-type">MCQ</div>
+
+<h3>3. Which event was associated with Gandhi's first major Satyagraha movement in India?</h3>
+
+<label class="option">
+<input type="radio" name="q3" value="A">
+A. Champaran Satyagraha
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="B">
+B. Simon Commission
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="C">
+C. Swaraj Party
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="D">
+D. Civil Disobedience Movement
+</label>
+
+<div class="explanation" id="exp3">
+<strong>Correct Answer: A</strong><br>
+The Champaran Satyagraha of 1917 was an important early application of Gandhi's Satyagraha method in India. It was connected with indigo cultivators.
+<br><br>
+<strong>Exam Point:</strong> Champaran Satyagraha — 1917.
+</div>
+
+</div>
+
+
+<!-- Q4 -->
+
+<div class="question">
+
+<div class="question-type">MCQ</div>
+
+<h3>4. Under the Tinkathia system, peasants of Champaran were required to:</h3>
+
+<label class="option">
+<input type="radio" name="q4" value="A">
+A. Grow wheat on one-third of their land
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="B">
+B. Grow indigo on a portion of their land
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="C">
+C. Pay no land revenue
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="D">
+D. Work only in textile mills
+</label>
+
+<div class="explanation" id="exp4">
+<strong>Correct Answer: B</strong><br>
+The Tinkathia arrangement forced peasants to cultivate indigo on a portion of their land. Gandhi supported the peasants in their struggle against this oppressive arrangement.
+<br><br>
+<strong>Exam Point:</strong> Champaran — Indigo cultivation — Tinkathia system.
+</div>
+
+</div>
+
+
+<!-- Q5 -->
+
+<div class="question">
+
+<div class="question-type">MCQ</div>
+
+<h3>5. The main issue behind the Kheda Satyagraha was:</h3>
+
+<label class="option">
+<input type="radio" name="q5" value="C">
+A. Indigo cultivation
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="C">
+B. Mill workers' wages
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="C">
+C. Revenue demand despite crop failure
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="C">
+D. Opposition to the Simon Commission
+</label>
+
+<div class="explanation" id="exp5">
+<strong>Correct Answer: C</strong><br>
+In Kheda, crop failure and poor harvests made it difficult for peasants to pay land revenue. Gandhi and other leaders supported their demand for revenue relief.
+<br><br>
+<strong>Exam Point:</strong> Kheda Satyagraha — 1918 — revenue relief.
+</div>
+
+</div>
+
+
+<!-- Q6 -->
+
+<div class="question">
+
+<div class="question-type">MCQ</div>
+
+<h3>6. During the Ahmedabad Mill Strike, Gandhi used which method to strengthen the workers' demand?</h3>
+
+<label class="option">
+<input type="radio" name="q6" value="B">
+A. Armed resistance
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="B">
+B. Hunger strike
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="B">
+C. Destruction of factories
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="B">
+D. Military recruitment
+</label>
+
+<div class="explanation" id="exp6">
+<strong>Correct Answer: B</strong><br>
+Gandhi undertook a fast during the Ahmedabad Mill Strike of 1918 in support of the workers' demand concerning wages.
+<br><br>
+<strong>Exam Point:</strong> Ahmedabad Mill Strike — workers and mill owners — 1918.
+</div>
+
+</div>
+
+
+<!-- Q7 -->
+
+<div class="question">
+
+<div class="question-type">ASSERTION–REASON</div>
+
+<h3>7. Assertion (A): Gandhi considered Satyagraha a form of non-violent resistance.</h3>
+
+<p><strong>Reason (R):</strong> Gandhi believed that truth and moral force could be used to oppose injustice without physically harming the opponent.</p>
+
+<label class="option">
+<input type="radio" name="q7" value="A">
+A. Both A and R are true, and R correctly explains A
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="B">
+B. Both A and R are true, but R does not explain A
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="C">
+C. A is true, but R is false
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="D">
+D. A is false, but R is true
+</label>
+
+<div class="explanation" id="exp7">
+<strong>Correct Answer: A</strong><br>
+Gandhian Satyagraha rested on truth, non-violence and moral courage. Therefore, the reason directly explains the assertion.
+<br><br>
+<strong>Exam Point:</strong> Satyagraha means insistence on truth through non-violent resistance.
+</div>
+
+</div>
+
+
+<!-- Q8 -->
+
+<div class="question">
+
+<div class="question-type">ASSERTION–REASON</div>
+
+<h3>8. Assertion (A): The Rowlatt Act was strongly opposed by Indian nationalists.</h3>
+
+<p><strong>Reason (R):</strong> The Act gave the colonial government extensive powers to repress political activities, including detention without trial in certain circumstances.</p>
+
+<label class="option">
+<input type="radio" name="q8" value="A">
+A. Both A and R are true, and R correctly explains A
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="B">
+B. Both A and R are true, but R does not explain A
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="C">
+C. A is true, but R is false
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="D">
+D. A is false, but R is true
+</label>
+
+<div class="explanation" id="exp8">
+<strong>Correct Answer: A</strong><br>
+The Rowlatt Act was viewed as repressive because it extended extraordinary powers against political activities. Gandhi launched a Satyagraha against it in 1919.
+<br><br>
+<strong>Exam Point:</strong> Rowlatt Act — 1919 — Rowlatt Satyagraha.
+</div>
+
+</div>
+
+
+<!-- Q9 -->
+
+<div class="question">
+
+<div class="question-type">MCQ</div>
+
+<h3>9. What was one important feature of the Rowlatt Satyagraha?</h3>
+
+<label class="option">
+<input type="radio" name="q9" value="B">
+A. It depended on armed rebellion
+</label>
+
+<label class="option">
+<input type="radio" name="q9" value="B">
+B. It involved hartals and non-violent protest
+</label>
+
+<label class="option">
+<input type="radio" name="q9" value="B">
+C. It supported the Rowlatt Act
+</label>
+
+<label class="option">
+<input type="radio" name="q9" value="B">
+D. It demanded higher taxes
+</label>
+
+<div class="explanation" id="exp9">
+<strong>Correct Answer: B</strong><br>
+The Rowlatt Satyagraha included hartals and non-violent protests against the repressive legislation.
+<br><br>
+<strong>Exam Point:</strong> Rowlatt Satyagraha was an early nationwide political mobilisation under Gandhi.
+</div>
+
+</div>
+
+
+<!-- Q10 -->
+
+<div class="question">
+
+<div class="question-type">MCQ</div>
+
+<h3>10. Which incident led Gandhi to reconsider the continuation of the Non-Cooperation Movement?</h3>
+
+<label class="option">
+<input type="radio" name="q10" value="C">
+A. Champaran Satyagraha
+</label>
+
+<label class="option">
+<input type="radio" name="q10" value="C">
+B. Simon Commission
+</label>
+
+<label class="option">
+<input type="radio" name="q10" value="C">
+C. Chauri Chaura incident
+</label>
+
+<label class="option">
+<input type="radio" name="q10" value="C">
+D. Ahmedabad Mill Strike
+</label>
+
+<div class="explanation" id="exp10">
+<strong>Correct Answer: C</strong><br>
+The violent incident at Chauri Chaura in February 1922 resulted in the death of policemen. Gandhi believed that the movement had become inconsistent with the principle of non-violence and withdrew it.
+<br><br>
+<strong>Exam Point:</strong> Non-Cooperation Movement was withdrawn in 1922 after Chauri Chaura.
+</div>
+
+</div>
+
+
+<!-- PASSAGE 1 -->
+
+<div class="question">
+
+<div class="question-type">PASSAGE-BASED</div>
+
+<div class="passage">
+
+<div class="passage-title">
+Read the passage carefully:
+</div>
+
+Gandhi's idea of Satyagraha was based on the belief that truth was a powerful force in the struggle against injustice. A Satyagrahi did not seek to defeat an opponent through physical force. Instead, the Satyagrahi accepted suffering, remained disciplined and attempted to appeal to the conscience of the opponent. Non-violence was not simply the absence of physical violence; it was connected with a broader ethical approach that rejected hatred and encouraged respect for human dignity. Gandhi believed that a just cause could be pursued through peaceful resistance, provided that participants remained committed to truth and self-discipline.
+
+</div>
+
+<h3>11. According to the passage, what was the central force in Satyagraha?</h3>
+
+<label class="option">
+<input type="radio" name="q11" value="C">
+A. Military strength
+</label>
+
+<label class="option">
+<input type="radio" name="q11" value="C">
+B. Economic pressure alone
+</label>
+
+<label class="option">
+<input type="radio" name="q11" value="C">
+C. Truth and moral force
+</label>
+
+<label class="option">
+<input type="radio" name="q11" value="C">
+D. Secret political organisations
+</label>
+
+<div class="explanation" id="exp11">
+<strong>Correct Answer: C</strong><br>
+The passage explains that Satyagraha was based on truth and moral force rather than physical power.
+<br><br>
+<strong>Exam Point:</strong> Truth was at the heart of Gandhi's Satyagraha philosophy.
+</div>
+
+</div>
+
+
+<!-- Q12 -->
+
+<div class="question">
+
+<div class="question-type">PASSAGE-BASED</div>
+
+<h3>12. What does the passage suggest about the role of suffering in Satyagraha?</h3>
+
+<label class="option">
+<input type="radio" name="q12" value="A">
+A. Suffering could demonstrate commitment to a just cause
+</label>
+
+<label class="option">
+<input type="radio" name="q12" value="A">
+B. Suffering was used to physically punish opponents
+</label>
+
+<label class="option">
+<input type="radio" name="q12" value="A">
+C. Suffering was completely avoided
+</label>
+
+<label class="option">
+<input type="radio" name="q12" value="A">
+D. Suffering had no connection with Satyagraha
+</label>
+
+<div class="explanation" id="exp12">
+<strong>Correct Answer: A</strong><br>
+The passage explains that the Satyagrahi accepted suffering as part of disciplined non-violent resistance rather than inflicting suffering on others.
+<br><br>
+<strong>Exam Point:</strong> Self-suffering was an important feature of Gandhian non-violent resistance.
+</div>
+
+</div>
+
+
+<!-- Q13 -->
+
+<div class="question">
+
+<div class="question-type">PASSAGE-BASED</div>
+
+<h3>13. Which principle is most closely connected with the ideology described in the passage?</h3>
+
+<label class="option">
+<input type="radio" name="q13" value="D">
+A. Revenge
+</label>
+
+<label class="option">
+<input type="radio" name="q13" value="D">
+B. Military expansion
+</label>
+
+<label class="option">
+<input type="radio" name="q13" value="D">
+C. Political violence
+</label>
+
+<label class="option">
+<input type="radio" name="q13" value="D">
+D. Non-violence combined with truth
+</label>
+
+<div class="explanation" id="exp13">
+<strong>Correct Answer: D</strong><br>
+The passage presents truth, non-violence, discipline and respect for human dignity as central elements of Satyagraha.
+<br><br>
+<strong>Exam Point:</strong> Gandhian ideology connected political resistance with ethical conduct.
+</div>
+
+</div>
+
+
+<!-- Q14 -->
+
+<div class="question">
+
+<div class="question-type">MCQ</div>
+
+<h3>14. Which movement was launched by Gandhi and the Indian National Congress against colonial rule in 1920?</h3>
+
+<label class="option">
+<input type="radio" name="q14" value="B">
+A. Civil Disobedience Movement
+</label>
+
+<label class="option">
+<input type="radio" name="q14" value="B">
+B. Non-Cooperation Movement
+</label>
+
+<label class="option">
+<input type="radio" name="q14" value="B">
+C. Quit India Movement
+</label>
+
+<label class="option">
+<input type="radio" name="q14" value="B">
+D. Individual Satyagraha
+</label>
+
+<div class="explanation" id="exp14">
+<strong>Correct Answer: B</strong><br>
+The Non-Cooperation Movement was adopted and launched in 1920 as a major programme against colonial rule.
+<br><br>
+<strong>Exam Point:</strong> Non-Cooperation Movement — 1920–1922.
+</div>
+
+</div>
+
+
+<!-- Q15 -->
+
+<div class="question">
+
+<div class="question-type">MCQ</div>
+
+<h3>15. Which of the following was encouraged during the Non-Cooperation Movement?</h3>
+
+<label class="option">
+<input type="radio" name="q15" value="A">
+A. Boycott of government institutions and foreign goods
+</label>
+
+<label class="option">
+<input type="radio" name="q15" value="A">
+B. Greater dependence on colonial institutions
+</label>
+
+<label class="option">
+<input type="radio" name="q15" value="A">
+C. Recruitment into the colonial army
+</label>
+
+<label class="option">
+<input type="radio" name="q15" value="A">
+D. Promotion of imported cloth
+</label>
+
+<div class="explanation" id="exp15">
+<strong>Correct Answer: A</strong><br>
+The movement encouraged people to withdraw cooperation from colonial institutions and boycott foreign goods, while promoting alternatives such as khadi.
+<br><br>
+<strong>Exam Point:</strong> Boycott and non-cooperation were major methods of the movement.
+</div>
+
+</div>
+
+
+<!-- Q16 -->
+
+<div class="question">
+
+<div class="question-type">MCQ</div>
+
+<h3>16. Why did some political leaders later form the Swaraj Party?</h3>
+
+<label class="option">
+<input type="radio" name="q16" value="B">
+A. To support British rule permanently
+</label>
+
+<label class="option">
+<input type="radio" name="q16" value="B">
+B. To enter legislative councils and challenge colonial policies from within
+</label>
+
+<label class="option">
+<input type="radio" name="q16" value="B">
+C. To end all political activity
+</label>
+
+<label class="option">
+<input type="radio" name="q16" value="B">
+D. To promote military recruitment
+</label>
+
+<div class="explanation" id="exp16">
+<strong>Correct Answer: B</strong><br>
+After the withdrawal of the Non-Cooperation Movement, leaders such as C. R. Das and Motilal Nehru proposed entering legislative councils to obstruct colonial policies from within.
+<br><br>
+<strong>Exam Point:</strong> Swaraj Party was formed in 1923.
+</div>
+
+</div>
+
+
+<!-- Q17 -->
+
+<div class="question">
+
+<div class="question-type">MATCHING</div>
+
+<h3>17. Match Column I with Column II:</h3>
+
+<table class="match-table">
+
+<tr>
+<th>Column I</th>
+<th>Column II</th>
+</tr>
+
+<tr>
+<td>A. Champaran</td>
+<td>1. Revenue relief</td>
+</tr>
+
+<tr>
+<td>B. Kheda</td>
+<td>2. Indigo cultivation</td>
+</tr>
+
+<tr>
+<td>C. Ahmedabad</td>
+<td>3. Mill workers' wage dispute</td>
+</tr>
+
+<tr>
+<td>D. Rowlatt Satyagraha</td>
+<td>4. Protest against repressive legislation</td>
+</tr>
+
+</table>
+
+<label class="option">
+<input type="radio" name="q17" value="A">
+A. A-2, B-1, C-3, D-4
+</label>
+
+<label class="option">
+<input type="radio" name="q17" value="A">
+B. A-1, B-2, C-4, D-3
+</label>
+
+<label class="option">
+<input type="radio" name="q17" value="A">
+C. A-3, B-4, C-1, D-2
+</label>
+
+<label class="option">
+<input type="radio" name="q17" value="A">
+D. A-4, B-3, C-2, D-1
+</label>
+
+<div class="explanation" id="exp17">
+<strong>Correct Answer: A</strong><br>
+Champaran was associated with indigo cultivation, Kheda with revenue relief, Ahmedabad with mill workers' wages, and the Rowlatt Satyagraha with opposition to repressive legislation.
+<br><br>
+<strong>Exam Point:</strong> Remember the four issues as: Champaran–Indigo, Kheda–Revenue, Ahmedabad–Wages, Rowlatt–Repressive law.
+</div>
+
+</div>
+
+
+<!-- Q18 -->
+
+<div class="question">
+
+<div class="question-type">MATCHING</div>
+
+<h3>18. Match the leader or event with the correct description:</h3>
+
+<table class="match-table">
+
+<tr>
+<th>Column I</th>
+<th>Column II</th>
+</tr>
+
+<tr>
+<td>A. C. R. Das</td>
+<td>1. Satyagraha</td>
+</tr>
+
+<tr>
+<td>B. Mahatma Gandhi</td>
+<td>2. Swaraj Party</td>
+</tr>
+
+<tr>
+<td>C. Simon Commission</td>
+<td>3. No Indian member</td>
+</tr>
+
+<tr>
+<td>D. Chauri Chaura</td>
+<td>4. Withdrawal of Non-Cooperation Movement</td>
+</tr>
+
+</table>
+
+<label class="option">
+<input type="radio" name="q18" value="C">
+A. A-1, B-2, C-4, D-3
+</label>
+
+<label class="option">
+<input type="radio" name="q18" value="C">
+B. A-3, B-4, C-2, D-1
+</label>
+
+<label class="option">
+<input type="radio" name="q18" value="C">
+C. A-2, B-1, C-3, D-4
+</label>
+
+<label class="option">
+<input type="radio" name="q18" value="C">
+D. A-4, B-3, C-1, D-2
+</label>
+
+<div class="explanation" id="exp18">
+<strong>Correct Answer: C</strong><br>
+C. R. Das was a major Swarajist leader; Gandhi was closely associated with Satyagraha; the Simon Commission had no Indian member; and Chauri Chaura led to the withdrawal of the Non-Cooperation Movement.
+<br><br>
+<strong>Exam Point:</strong> C. R. Das and Motilal Nehru were important Swaraj Party leaders.
+</div>
+
+</div>
+
+
+<!-- Q19 -->
+
+<div class="question">
+
+<div class="question-type">ARRANGEMENT</div>
+
+<h3>19. Arrange the following events in chronological order:</h3>
+
+<p>
+1. Champaran Satyagraha<br>
+2. Kheda Satyagraha<br>
+3. Rowlatt Satyagraha<br>
+4. Non-Cooperation Movement
+</p>
+
+<label class="option">
+<input type="radio" name="q19" value="A">
+A. 1 → 2 → 3 → 4
+</label>
+
+<label class="option">
+<input type="radio" name="q19" value="A">
+B. 2 → 1 → 3 → 4
+</label>
+
+<label class="option">
+<input type="radio" name="q19" value="A">
+C. 1 → 3 → 2 → 4
+</label>
+
+<label class="option">
+<input type="radio" name="q19" value="A">
+D. 3 → 1 → 2 → 4
+</label>
+
+<div class="explanation" id="exp19">
+<strong>Correct Answer: A</strong><br>
+Champaran — 1917; Kheda — 1918; Rowlatt Satyagraha — 1919; Non-Cooperation Movement — 1920.
+<br><br>
+<strong>Exam Point:</strong> 1917 → 1918 → 1919 → 1920.
+</div>
+
+</div>
+
+
+<!-- Q20 -->
+
+<div class="question">
+
+<div class="question-type">ARRANGEMENT</div>
+
+<h3>20. Arrange the following events in chronological order:</h3>
+
+<p>
+1. Non-Cooperation Movement<br>
+2. Formation of Swaraj Party<br>
+3. Simon Commission appointed<br>
+4. Simon Commission arrived in India
+</p>
+
+<label class="option">
+<input type="radio" name="q20" value="B">
+A. 1 → 2 → 4 → 3
+</label>
+
+<label class="option">
+<input type="radio" name="q20" value="B">
+B. 1 → 2 → 3 → 4
+</label>
+
+<label class="option">
+<input type="radio" name="q20" value="B">
+C. 2 → 1 → 3 → 4
+</label>
+
+<label class="option">
+<input type="radio" name="q20" value="B">
+D. 3 → 1 → 2 → 4
+</label>
+
+<div class="explanation" id="exp20">
+<strong>Correct Answer: B</strong><br>
+The Non-Cooperation Movement began in 1920, the Swaraj Party was formed in 1923, the Simon Commission was appointed in 1927 and arrived in India in 1928.
+<br><br>
+<strong>Exam Point:</strong> Appointment of Simon Commission — 1927; arrival in India — 1928.
+</div>
+
+</div>
+
+
+<!-- Q21 -->
+
+<div class="question">
+
+<div class="question-type">MCQ</div>
+
+<h3>21. Why was the Simon Commission opposed by Indians?</h3>
+
+<label class="option">
+<input type="radio" name="q21" value="A">
+A. It had no Indian member
+</label>
+
+<label class="option">
+<input type="radio" name="q21" value="A">
+B. It abolished all legislative councils
+</label>
+
+<label class="option">
+<input type="radio" name="q21" value="A">
+C. It ended all British administration
+</label>
+
+<label class="option">
+<input type="radio" name="q21" value="A">
+D. It introduced universal adult franchise immediately
+</label>
+
+<div class="explanation" id="exp21">
+<strong>Correct Answer: A</strong><br>
+The Simon Commission was composed entirely of British members. Its arrival in India in 1928 led to widespread protests.
+<br><br>
+<strong>Exam Point:</strong> The slogan "Simon Go Back" became associated with the protests.
+</div>
+
+</div>
+
+
+<!-- PASSAGE 2 -->
+
+<div class="question">
+
+<div class="question-type">PASSAGE-BASED</div>
+
+<div class="passage">
+
+<div class="passage-title">
+Read the passage carefully:
+</div>
+
+The Non-Cooperation Movement sought to weaken colonial rule by withdrawing cooperation from institutions associated with the colonial government. Students and teachers were encouraged to leave government educational institutions, lawyers were asked to give up legal practices, and people were encouraged to boycott foreign cloth. The movement also promoted the use of khadi and the idea of self-reliance. However, Gandhi emphasised that non-cooperation had to remain non-violent. When violence occurred at Chauri Chaura in 1922, Gandhi decided to withdraw the movement because he believed that political action without adherence to non-violence would violate its fundamental principles.
+
+</div>
+
+<h3>22. What was the basic strategy of the Non-Cooperation Movement?</h3>
+
+<label class="option">
+<input type="radio" name="q22" value="B">
+A. Cooperation with colonial institutions
+</label>
+
+<label class="option">
+<input type="radio" name="q22" value="B">
+B. Withdrawal of cooperation from colonial institutions
+</label>
+
+<label class="option">
+<input type="radio" name="q22" value="B">
+C. Armed occupation of government buildings
+</label>
+
+<label class="option">
+<input type="radio" name="q22" value="B">
+D. Support for foreign cloth
+</label>
+
+<div class="explanation" id="exp22">
+<strong>Correct Answer: B</strong><br>
+The passage describes non-cooperation as a strategy of withdrawing support from colonial institutions and practices.
+<br><br>
+<strong>Exam Point:</strong> Non-cooperation aimed to make colonial rule difficult by reducing public cooperation.
+</div>
+
+</div>
+
+
+<!-- Q23 -->
+
+<div class="question">
+
+<div class="question-type">PASSAGE-BASED</div>
+
+<h3>23. Why did Gandhi withdraw the Non-Cooperation Movement in 1922?</h3>
+
+<label class="option">
+<input type="radio" name="q23" value="D">
+A. The Simon Commission arrived
+</label>
+
+<label class="option">
+<input type="radio" name="q23" value="D">
+B. The Rowlatt Act was repealed
+</label>
+
+<label class="option">
+<input type="radio" name="q23" value="D">
+C. The Swaraj Party was formed
+</label>
+
+<label class="option">
+<input type="radio" name="q23" value="D">
+D. Violence occurred at Chauri Chaura
+</label>
+
+<div class="explanation" id="exp23">
+<strong>Correct Answer: D</strong><br>
+The violent incident at Chauri Chaura convinced Gandhi that the movement was not yet ready to continue while maintaining the required discipline of non-violence.
+<br><br>
+<strong>Exam Point:</strong> Chauri Chaura — February 1922 — withdrawal of Non-Cooperation.
+</div>
+
+</div>
+
+
+<!-- Q24 -->
+
+<div class="question">
+
+<div class="question-type">MCQ</div>
+
+<h3>24. Which group was particularly affected by the forced recruitment carried out during the First World War?</h3>
+
+<label class="option">
+<input type="radio" name="q24" value="B">
+A. Merchants of Bombay
+</label>
+
+<label class="option">
+<input type="radio" name="q24" value="B">
+B. Rural people in areas such as Punjab
+</label>
+
+<label class="option">
+<input type="radio" name="q24" value="B">
+C. Factory owners of Calcutta
+</label>
+
+<label class="option">
+<input type="radio" name="q24" value="B">
+D. European officials in Delhi
+</label>
+
+<div class="explanation" id="exp24">
+<strong>Correct Answer: B</strong><br>
+Forced recruitment during the war particularly affected rural communities, including areas of Punjab.
+<br><br>
+<strong>Exam Point:</strong> War-time recruitment added to rural hardship and dissatisfaction.
+</div>
+
+</div>
+
+
+<!-- Q25 -->
+
+<div class="question">
+
+<div class="question-type">MCQ</div>
+
+<h3>25. Which statement best describes the meaning of Swaraj in the context of the Nationalist Movement?</h3>
+
+<label class="option">
+<input type="radio" name="q25" value="C">
+A. It had exactly one meaning for every social group
+</label>
+
+<label class="option">
+<input type="radio" name="q25" value="C">
+B. It meant only economic development
+</label>
+
+<label class="option">
+<input type="radio" name="q25" value="C">
+C. Different social groups could understand and interpret it differently
+</label>
+
+<label class="option">
+<input type="radio" name="q25" value="C">
+D. It meant permanent cooperation with colonial rule
+</label>
+
+<div class="explanation" id="exp25">
+<strong>Correct Answer: C</strong><br>
+Different groups participating in the national movement attached different meanings and expectations to the idea of Swaraj.
+<br><br>
+<strong>Exam Point:</strong> Nationalism brought together groups with different social and economic interests.
+</div>
+
+</div>
+
+
+<!-- Q26 -->
+
+<div class="question">
+
+<div class="question-type">ASSERTION–REASON</div>
+
+<h3>26. Assertion (A): The Swarajists decided to enter legislative councils.</h3>
+
+<p><strong>Reason (R):</strong> They believed that colonial policies could be challenged and obstructed from within the councils.</p>
+
+<label class="option">
+<input type="radio" name="q26" value="A">
+A. Both A and R are true, and R correctly explains A
+</label>
+
+<label class="option">
+<input type="radio" name="q26" value="B">
+B. Both A and R are true, but R does not explain A
+</label>
+
+<label class="option">
+<input type="radio" name="q26" value="C">
+C. A is true, but R is false
+</label>
+
+<label class="option">
+<input type="radio" name="q26" value="D">
+D. A is false, but R is true
+</label>
+
+<div class="explanation" id="exp26">
+<strong>Correct Answer: A</strong><br>
+The Swarajists wanted to enter the councils in order to oppose colonial policies from within the legislative system.
+<br><br>
+<strong>Exam Point:</strong> Swarajist strategy — enter councils and obstruct colonial government policies.
+</div>
+
+</div>
+
+
+<!-- Q27 -->
+
+<div class="question">
+
+<div class="question-type">MCQ</div>
+
+<h3>27. Which pair is correctly matched?</h3>
+
+<label class="option">
+<input type="radio" name="q27" value="D">
+A. Champaran — Mill workers' strike
+</label>
+
+<label class="option">
+<input type="radio" name="q27" value="D">
+B. Kheda — Indigo cultivation
+</label>
+
+<label class="option">
+<input type="radio" name="q27" value="D">
+C. Ahmedabad — Revenue relief
+</label>
+
+<label class="option">
+<input type="radio" name="q27" value="D">
+D. Rowlatt Satyagraha — Opposition to repressive legislation
+</label>
+
+<div class="explanation" id="exp27">
+<strong>Correct Answer: D</strong><br>
+The Rowlatt Satyagraha was organised against the Rowlatt Act, which was considered a repressive piece of legislation.
+<br><br>
+<strong>Exam Point:</strong> Rowlatt Act → Rowlatt Satyagraha.
+</div>
+
+</div>
+
+
+<!-- Q28 -->
+
+<div class="question">
+
+<div class="question-type">ARRANGEMENT</div>
+
+<h3>28. Arrange the following in the correct chronological order:</h3>
+
+<p>
+1. Ahmedabad Mill Strike<br>
+2. Kheda Satyagraha<br>
+3. Champaran Satyagraha<br>
+4. Rowlatt Satyagraha
+</p>
+
+<label class="option">
+<input type="radio" name="q28" value="B">
+A. 3 → 2 → 1 → 4
+</label>
+
+<label class="option">
+<input type="radio" name="q28" value="B">
+B. 3 → 1 → 2 → 4
+</label>
+
+<label class="option">
+<input type="radio" name="q28" value="B">
+C. 2 → 3 → 1 → 4
+</label>
+
+<label class="option">
+<input type="radio" name="q28" value="B">
+D. 1 → 3 → 2 → 4
+</label>
+
+<div class="explanation" id="exp28">
+<strong>Correct Answer: B</strong><br>
+Champaran took place in 1917. Ahmedabad and Kheda were both major Gandhian struggles in 1918, with Ahmedabad preceding the Kheda campaign. Rowlatt Satyagraha followed in 1919.
+<br><br>
+<strong>Exam Point:</strong> Champaran 1917 → Ahmedabad 1918 → Kheda 1918 → Rowlatt 1919.
+</div>
+
+</div>
+
+
+<!-- Q29 -->
+
+<div class="question">
+
+<div class="question-type">PASSAGE-BASED</div>
+
+<div class="passage">
+
+<div class="passage-title">
+Read the passage carefully:
+</div>
+
+The growth of nationalism in India was not limited to one social group. Peasants, workers, business groups, students, women and many other sections participated in different phases of the national movement. Their reasons for joining could differ. Some groups were concerned with economic problems, others with political freedom, and some with local forms of oppression. The common idea of opposition to colonial rule could therefore bring together people who did not always have identical interests or expectations.
+
+</div>
+
+<h3>29. What does the passage indicate about Indian nationalism?</h3>
+
+<label class="option">
+<input type="radio" name="q29" value="C">
+A. Only one social group participated in it
+</label>
+
+<label class="option">
+<input type="radio" name="q29" value="C">
+B. All participants had exactly the same economic interests
+</label>
+
+<label class="option">
+<input type="radio" name="q29" value="C">
+C. Different groups could participate while having different interests
+</label>
+
+<label class="option">
+<input type="radio" name="q29" value="C">
+D. Economic issues had no role in nationalism
+</label>
+
+<div class="explanation" id="exp29">
+<strong>Correct Answer: C</strong><br>
+The passage highlights the diversity of participants and explains that different groups could join the national movement for different reasons.
+<br><br>
+<strong>Exam Point:</strong> Indian nationalism developed through the participation of diverse social groups.
+</div>
+
+</div>
+
+
+<!-- Q30 -->
+
+<div class="question">
+
+<div class="question-type">PASSAGE-BASED + CONCEPTUAL</div>
+
+<div class="passage">
+
+<div class="passage-title">
+Read the passage carefully:
+</div>
+
+Gandhian politics connected political struggle with ethical discipline. The objective was not simply to oppose an unjust authority, but to develop a form of resistance in which participants were expected to remain peaceful and disciplined. Truth, non-violence, self-control and willingness to face suffering were important elements of this approach. Gandhi's experiments in Champaran, Kheda and Ahmedabad demonstrated how this method could be applied to different kinds of local problems. Later, the same principles became part of wider national campaigns.
+
+</div>
+
+<h3>30. Which conclusion is most consistent with the passage?</h3>
+
+<label class="option">
+<input type="radio" name="q30" value="A">
+A. Gandhian politics linked resistance against injustice with moral discipline
+</label>
+
+<label class="option">
+<input type="radio" name="q30" value="A">
+B. Gandhi considered violence necessary for every political movement
+</label>
+
+<label class="option">
+<input type="radio" name="q30" value="A">
+C. Local issues had no connection with the national movement
+</label>
+
+<label class="option">
+<input type="radio" name="q30" value="A">
+D. Satyagraha depended only on economic pressure
+</label>
+
+<div class="explanation" id="exp30">
+<strong>Correct Answer: A</strong><br>
+The passage directly connects Gandhian resistance with truth, non-violence, self-control and willingness to face suffering. It also shows how local Satyagraha campaigns became important experiences for wider nationalist politics.
+<br><br>
+<strong>Exam Point:</strong> Gandhi's early Satyagraha experiments helped introduce a new style of mass political action based on non-violence and moral discipline.
+</div>
+
+</div>
+
+
+<div class="submit-area">
+
+<button type="button" class="submit-btn" onclick="submitTest()">
+Submit Test
+</button>
+
+</div>
+
+</form>
+
+
+<div class="result" id="result">
+
+<h2>Test Result</h2>
+
+<div class="score" id="score"></div>
+
+<p id="correct"></p>
+
+<p id="wrong"></p>
+
+<p id="percentage"></p>
+
+<p>
+Review the explanations below to understand your mistakes.
+</p>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+<h2>GSI MANTRA</h2>
+
+<p>
+Class 10 History • Nationalism in India • Practice Set 2
+</p>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+<a href="class10.html">Class 10</a>
+<a href="class10-history.html">History</a>
+<a href="class10-history-chapter2-practice.html">Practice Sets</a>
+
+</div>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+function submitTest(){
+
+const answers = {
+
+q1:"B",
+q2:"B",
+q3:"A",
+q4:"B",
+q5:"C",
+q6:"B",
+q7:"A",
+q8:"A",
+q9:"B",
+q10:"C",
+q11:"C",
+q12:"A",
+q13:"D",
+q14:"B",
+q15:"A",
+q16:"B",
+q17:"A",
+q18:"C",
+q19:"A",
+q20:"B",
+q21:"A",
+q22:"B",
+q23:"D",
+q24:"B",
+q25:"C",
+q26:"A",
+q27:"D",
+q28:"B",
+q29:"C",
+q30:"A"
+
+};
+
+let correct = 0;
+
+for(let i=1;i<=30;i++){
+
+let selected =
+document.querySelector(
+'input[name="q'+i+'"]:checked'
+);
+
+if(selected && selected.value === answers["q"+i]){
+correct++;
+}
+
+document.getElementById("exp"+i).style.display="block";
+
+}
+
+let wrong = 30 - correct;
+
+let percentage =
+((correct / 30) * 100).toFixed(2);
+
+document.getElementById("score").innerHTML =
+correct + " / 30";
+
+document.getElementById("correct").innerHTML =
+"<strong>Correct Answers:</strong> " + correct;
+
+document.getElementById("wrong").innerHTML =
+"<strong>Wrong / Unattempted:</strong> " + wrong;
+
+document.getElementById("percentage").innerHTML =
+"<strong>Percentage:</strong> " + percentage + "%";
+
+document.getElementById("result").style.display="block";
+
+window.scrollTo({
+top:document.getElementById("result").offsetTop - 20,
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>
