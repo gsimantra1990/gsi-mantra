@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Practice Set 3 | Nationalism in India | GSI MANTRA</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:25px 20px;
+}
+
+.header-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:34px;
+}
+
+.logo p{
+    margin:5px 0 0;
+    font-size:15px;
+}
+
+.search{
+    background:white;
+    padding:10px 15px;
+    border-radius:25px;
+    width:280px;
+}
+
+.search input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+}
+
+nav{
+    background:#071d33;
+    padding:14px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+.hero{
+    background:linear-gradient(135deg,#123c69,#1d5b91);
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.hero h2{
+    font-size:35px;
+    margin:0 0 10px;
+}
+
+.hero p{
+    font-size:18px;
+    margin:8px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:35px 20px;
+}
+
+.info{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    margin-bottom:25px;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:12px;
+}
+
+.info-item{
+    background:#f8fafc;
+    padding:15px;
+    text-align:center;
+    border-radius:10px;
+}
+
+.info-item strong{
+    display:block;
+    color:#123c69;
+    margin-bottom:5px;
+}
+
+.question{
+    background:white;
+    padding:24px;
+    margin-bottom:20px;
+    border-radius:15px;
+    box-shadow:0 4px 14px rgba(0,0,0,.07);
+    border-left:5px solid #123c69;
+}
+
+.question h3{
+    color:#123c69;
+    margin-top:0;
+}
+
+.type{
+    display:inline-block;
+    background:#f28c00;
+    color:white;
+    padding:5px 10px;
+    border-radius:15px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.option{
+    display:block;
+    padding:10px;
+    margin:7px 0;
+    background:#f8fafc;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.option:hover{
+    background:#eef4fa;
+}
+
+.option input{
+    margin-right:8px;
+}
+
+.passage{
+    background:#fff8e8;
+    border-left:4px solid #f28c00;
+    padding:18px;
+    margin:15px 0;
+    border-radius:10px;
+    line-height:1.7;
+}
+
+.submit-area{
+    text-align:center;
+    margin:35px 0;
+}
+
+button{
+    background:#123c69;
+    color:white;
+    border:none;
+    padding:14px 35px;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#f28c00;
+}
+
+#result{
+    display:none;
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.10);
+    margin-bottom:30px;
+}
+
+#result h2{
+    color:#123c69;
+}
+
+.explanation{
+    display:none;
+    background:#f1f7ff;
+    padding:15px;
+    margin-top:15px;
+    border-radius:10px;
+    line-height:1.7;
+}
+
+.correct{
+    border-left:5px solid green;
+}
+
+.wrong{
+    border-left:5px solid red;
+}
+
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    margin-top:40px;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+.footer-links a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+@media(max-width:700px){
+    .header-content{
+        flex-direction:column;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    .hero h2{
+        font-size:27px;
+    }
+
+    .container{
+        padding:25px 12px;
+    }
+
+    .question{
+        padding:18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="header-content">
+
+<div class="logo">
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+
+<div>
+<h1>GSI MANTRA</h1>
+<p>Competitive Education & NCERT Learning Platform</p>
+</div>
+</div>
+
+<div class="search">
+<input type="text" placeholder="Search GSI MANTRA...">
+</div>
+
+</div>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="class10.html">Class 10</a>
+<a href="class10-history.html">History</a>
+<a href="class10-history-chapter2-practice.html">Practice Sets</a>
+</nav>
+
+<section class="hero">
+<h2>Nationalism in India</h2>
+<p>Practice Set 3 — Advanced Level</p>
+<p>Class 10 History | English Medium</p>
+</section>
+
+<div class="container">
+
+<div class="info">
+<h2 style="text-align:center;color:#123c69;">
+Practice Test Information
+</h2>
+
+<div class="info-grid">
+
+<div class="info-item">
+<strong>Class</strong>
+10
+</div>
+
+<div class="info-item">
+<strong>Subject</strong>
+History
+</div>
+
+<div class="info-item">
+<strong>Chapter</strong>
+Nationalism in India
+</div>
+
+<div class="info-item">
+<strong>Questions</strong>
+30
+</div>
+
+<div class="info-item">
+<strong>Marks</strong>
+30
+</div>
+
+<div class="info-item">
+<strong>Level</strong>
+Advanced
+</div>
+
+</div>
+</div>
+
+<form id="quizForm">
+
+<!-- Q1 -->
+<div class="question" id="q1box">
+<span class="type">MCQ</span>
+<h3>1. Why did the First World War create economic difficulties for many Indians?</h3>
+
+<label class="option"><input type="radio" name="q1" value="A"> A. Agricultural production completely stopped</label>
+<label class="option"><input type="radio" name="q1" value="B"> B. Defence expenditure increased, taxes were raised and prices rose sharply</label>
+<label class="option"><input type="radio" name="q1" value="C"> C. British imports were completely banned</label>
+<label class="option"><input type="radio" name="q1" value="D"> D. Land revenue was abolished throughout India</label>
+
+<div class="explanation">
+<strong>Answer: B</strong><br>
+The war increased defence expenditure. The British government financed it through taxes and loans, while prices of essential goods increased considerably.
+</div>
+</div>
+
+<!-- Q2 -->
+<div class="question" id="q2box">
+<span class="type">MCQ</span>
+<h3>2. Which statement best explains the significance of Satyagraha in Gandhi's political philosophy?</h3>
+
+<label class="option"><input type="radio" name="q2" value="A"> A. It accepted violence when political goals were important</label>
+<label class="option"><input type="radio" name="q2" value="B"> B. It relied on physical force against unjust rulers</label>
+<label class="option"><input type="radio" name="q2" value="C"> C. It emphasised truth, non-violence and the power of moral resistance</label>
+<label class="option"><input type="radio" name="q2" value="D"> D. It rejected all forms of political protest</label>
+
+<div class="explanation">
+<strong>Answer: C</strong><br>
+Satyagraha was based on truth and non-violence. Gandhi believed that a Satyagrahi could oppose injustice without using physical violence.
+</div>
+</div>
+
+<!-- Q3 -->
+<div class="question" id="q3box">
+<span class="type">MCQ</span>
+<h3>3. The Champaran movement of 1917 was associated mainly with:</h3>
+
+<label class="option"><input type="radio" name="q3" value="A"> A. Indigo cultivators</label>
+<label class="option"><input type="radio" name="q3" value="B"> B. Textile workers</label>
+<label class="option"><input type="radio" name="q3" value="C"> C. Plantation workers in Assam</label>
+<label class="option"><input type="radio" name="q3" value="D"> D. Railway workers</label>
+
+<div class="explanation">
+<strong>Answer: A</strong><br>
+Gandhi's first major satyagraha in India was at Champaran in Bihar, where peasants were compelled to cultivate indigo under the tinkathia system.
+</div>
+</div>
+
+<!-- Q4 -->
+<div class="question" id="q4box">
+<span class="type">MCQ</span>
+<h3>4. What was the major issue behind the Kheda Satyagraha?</h3>
+
+<label class="option"><input type="radio" name="q4" value="A"> A. Demand for separate electorates</label>
+<label class="option"><input type="radio" name="q4" value="B"> B. Revenue collection despite crop failure</label>
+<label class="option"><input type="radio" name="q4" value="C"> C. Opposition to salt tax</label>
+<label class="option"><input type="radio" name="q4" value="D"> D. Indigo cultivation</label>
+
+<div class="explanation">
+<strong>Answer: B</strong><br>
+In Kheda, crop failure and plague affected peasants. They demanded relaxation in revenue collection.
+</div>
+</div>
+
+<!-- Q5 -->
+<div class="question" id="q5box">
+<span class="type">MCQ</span>
+<h3>5. Gandhi's Ahmedabad Mill Strike demonstrated which form of resistance?</h3>
+
+<label class="option"><input type="radio" name="q5" value="A"> A. Armed rebellion</label>
+<label class="option"><input type="radio" name="q5" value="B"> B. Hunger strike and non-violent pressure</label>
+<label class="option"><input type="radio" name="q5" value="C"> C. Boycott of legislative councils</label>
+<label class="option"><input type="radio" name="q5" value="D"> D. Tax refusal by peasants</label>
+
+<div class="explanation">
+<strong>Answer: B</strong><br>
+Gandhi supported mill workers in Ahmedabad and undertook a fast to put moral pressure during the wage dispute.
+</div>
+</div>
+
+<!-- Q6 -->
+<div class="question" id="q6box">
+<span class="type">MCQ</span>
+<h3>6. Why was the Rowlatt Act strongly opposed by Indian nationalists?</h3>
+
+<label class="option"><input type="radio" name="q6" value="A"> A. It introduced universal adult franchise</label>
+<label class="option"><input type="radio" name="q6" value="B"> B. It allowed detention without trial</label>
+<label class="option"><input type="radio" name="q6" value="C"> C. It abolished the salt tax</label>
+<label class="option"><input type="radio" name="q6" value="D"> D. It transferred power to Indian assemblies</label>
+
+<div class="explanation">
+<strong>Answer: B</strong><br>
+The Rowlatt Act gave the colonial government extensive powers to repress political activities, including detention without trial.
+</div>
+</div>
+
+<!-- Q7 -->
+<div class="question" id="q7box">
+<span class="type">MCQ</span>
+<h3>7. Which event led Gandhi to withdraw the Non-Cooperation Movement in 1922?</h3>
+
+<label class="option"><input type="radio" name="q7" value="A"> A. Jallianwala Bagh</label>
+<label class="option"><input type="radio" name="q7" value="B"> B. Chauri Chaura</label>
+<label class="option"><input type="radio" name="q7" value="C"> C. Dandi March</label>
+<label class="option"><input type="radio" name="q7" value="D"> D. Simon Commission</label>
+
+<div class="explanation">
+<strong>Answer: B</strong><br>
+The violent incident at Chauri Chaura in February 1922 led Gandhi to withdraw the movement because he believed the campaign was becoming violent.
+</div>
+</div>
+
+<!-- Q8 -->
+<div class="question" id="q8box">
+<span class="type">MCQ</span>
+<h3>8. Who was an important leader of the peasant movement in Awadh?</h3>
+
+<label class="option"><input type="radio" name="q8" value="A"> A. Baba Ramchandra</label>
+<label class="option"><input type="radio" name="q8" value="B"> B. C. R. Das</label>
+<label class="option"><input type="radio" name="q8" value="C"> C. Alluri Sitarama Raju</label>
+<label class="option"><input type="radio" name="q8" value="D"> D. Motilal Nehru</label>
+
+<div class="explanation">
+<strong>Answer: A</strong><br>
+Baba Ramchandra led the movement of peasants in Awadh. Peasants were unhappy with high rents, revenue demands and the practices of talukdars.
+</div>
+</div>
+
+<!-- Q9 -->
+<div class="question" id="q9box">
+<span class="type">MCQ</span>
+<h3>9. What was a major demand of the peasants in Awadh?</h3>
+
+<label class="option"><input type="radio" name="q9" value="A"> A. Higher rents</label>
+<label class="option"><input type="radio" name="q9" value="B"> B. Reduction of revenue and abolition of begar</label>
+<label class="option"><input type="radio" name="q9" value="C"> C. Expansion of talukdar powers</label>
+<label class="option"><input type="radio" name="q9" value="D"> D. Recruitment into the British army</label>
+
+<div class="explanation">
+<strong>Answer: B</strong><br>
+Peasants demanded reduction of revenue, abolition of begar and social boycott of oppressive landlords.
+</div>
+</div>
+
+<!-- Q10 -->
+<div class="question" id="q10box">
+<span class="type">MCQ</span>
+<h3>10. Why did the peasant movement in Awadh sometimes take a form different from Gandhi's idea of non-violent struggle?</h3>
+
+<label class="option"><input type="radio" name="q10" value="A"> A. Peasants had no grievances</label>
+<label class="option"><input type="radio" name="q10" value="B"> B. Local economic and social conflicts shaped their understanding of Swaraj</label>
+<label class="option"><input type="radio" name="q10" value="C"> C. Gandhi directly ordered violent action</label>
+<label class="option"><input type="radio" name="q10" value="D"> D. British officials controlled the peasant organisations</label>
+
+<div class="explanation">
+<strong>Answer: B</strong><br>
+Different social groups interpreted Swaraj according to their own local experiences and grievances. Therefore, their actions did not always exactly match the national leadership's programme.
+</div>
+</div>
+
+<!-- Q11 -->
+<div class="question" id="q11box">
+<span class="type">MCQ</span>
+<h3>11. Alluri Sitarama Raju became associated with tribal resistance in:</h3>
+
+<label class="option"><input type="radio" name="q11" value="A"> A. Punjab</label>
+<label class="option"><input type="radio" name="q11" value="B"> B. Awadh</label>
+<label class="option"><input type="radio" name="q11" value="C"> C. Andhra Pradesh</label>
+<label class="option"><input type="radio" name="q11" value="D"> D. Bengal</label>
+
+<div class="explanation">
+<strong>Answer: C</strong><br>
+Alluri Sitarama Raju led a tribal rebellion in the Gudem Hills region of present-day Andhra Pradesh.
+</div>
+</div>
+
+<!-- Q12 -->
+<div class="question" id="q12box">
+<span class="type">MCQ</span>
+<h3>12. Which colonial policy particularly affected tribal communities in the Gudem Hills?</h3>
+
+<label class="option"><input type="radio" name="q12" value="A"> A. Forest restrictions and interference with traditional livelihood</label>
+<label class="option"><input type="radio" name="q12" value="B"> B. Abolition of all forest laws</label>
+<label class="option"><input type="radio" name="q12" value="C"> C. Free distribution of forest land</label>
+<label class="option"><input type="radio" name="q12" value="D"> D. Complete exemption from taxes</label>
+
+<div class="explanation">
+<strong>Answer: A</strong><br>
+Forest regulations restricted shifting cultivation, grazing and access to forest resources, affecting tribal livelihoods.
+</div>
+</div>
+
+<!-- Q13 -->
+<div class="question" id="q13box">
+<span class="type">MCQ</span>
+<h3>13. Which statement about Alluri Sitarama Raju is most accurate?</h3>
+
+<label class="option"><input type="radio" name="q13" value="A"> A. He was a member of the Swaraj Party</label>
+<label class="option"><input type="radio" name="q13" value="B"> B. He led a tribal movement and supported armed resistance against colonial authority</label>
+<label class="option"><input type="radio" name="q13" value="C"> C. He led the Dandi March</label>
+<label class="option"><input type="radio" name="q13" value="D"> D. He founded the Indian National Congress</label>
+
+<div class="explanation">
+<strong>Answer: B</strong><br>
+Raju became a prominent leader of the Gudem rebellion. His approach included armed resistance, which differed from Gandhi's strict commitment to non-violence.
+</div>
+</div>
+
+<!-- Q14 -->
+<div class="question" id="q14box">
+<span class="type">MCQ</span>
+<h3>14. Plantation workers in Assam interpreted the idea of Swaraj mainly in relation to:</h3>
+
+<label class="option"><input type="radio" name="q14" value="A"> A. Freedom to leave plantations and return to their villages</label>
+<label class="option"><input type="radio" name="q14" value="B"> B. Expansion of British plantations</label>
+<label class="option"><input type="radio" name="q14" value="C"> C. Higher plantation taxes</label>
+<label class="option"><input type="radio" name="q14" value="D"> D. Recruitment into the colonial army</label>
+
+<div class="explanation">
+<strong>Answer: A</strong><br>
+Plantation workers were restricted by laws such as the Inland Emigration Act. For them, Swaraj could mean freedom to move and return to their home villages.
+</div>
+</div>
+
+<!-- Q15 -->
+<div class="question" id="q15box">
+<span class="type">MCQ</span>
+<h3>15. Why is the countryside important for understanding Indian nationalism?</h3>
+
+<label class="option"><input type="radio" name="q15" value="A"> A. Nationalism remained confined to cities</label>
+<label class="option"><input type="radio" name="q15" value="B"> B. Different rural groups connected nationalist ideas with their own economic and social struggles</label>
+<label class="option"><input type="radio" name="q15" value="C"> C. Rural people had no role in mass movements</label>
+<label class="option"><input type="radio" name="q15" value="D"> D. Only British officials participated in rural politics</label>
+
+<div class="explanation">
+<strong>Answer: B</strong><br>
+The spread of nationalism into the countryside took different forms because peasants, tribal groups and plantation workers connected national ideas with their own local grievances.
+</div>
+</div>
+
+<!-- Q16 -->
+<div class="question" id="q16box">
+<span class="type">MCQ</span>
+<h3>16. What was the significance of the Simon Commission's composition?</h3>
+
+<label class="option"><input type="radio" name="q16" value="A"> A. It contained only Indian members</label>
+<label class="option"><input type="radio" name="q16" value="B"> B. It had no Indian member, causing widespread opposition</label>
+<label class="option"><input type="radio" name="q16" value="C"> C. It was led by Mahatma Gandhi</label>
+<label class="option"><input type="radio" name="q16" value="D"> D. It was formed by the Swaraj Party</label>
+
+<div class="explanation">
+<strong>Answer: B</strong><br>
+The Simon Commission was appointed in 1927 and had no Indian member. Its arrival in India in 1928 led to widespread protests.
+</div>
+</div>
+
+<!-- Q17 -->
+<div class="question" id="q17box">
+<span class="type">MCQ</span>
+<h3>17. The Dandi March was directly connected with opposition to:</h3>
+
+<label class="option"><input type="radio" name="q17" value="A"> A. Forest laws</label>
+<label class="option"><input type="radio" name="q17" value="B"> B. Salt laws</label>
+<label class="option"><input type="radio" name="q17" value="C"> C. Indigo cultivation</label>
+<label class="option"><input type="radio" name="q17" value="D"> D. Press censorship only</label>
+
+<div class="explanation">
+<strong>Answer: B</strong><br>
+Gandhi chose the salt law as a symbol of colonial exploitation and began the Civil Disobedience Movement with the Dandi March in 1930.
+</div>
+</div>
+
+<!-- Q18 -->
+<div class="question" id="q18box">
+<span class="type">MCQ</span>
+<h3>18. What made salt an effective symbol for the Civil Disobedience Movement?</h3>
+
+<label class="option"><input type="radio" name="q18" value="A"> A. Salt was consumed only by rich people</label>
+<label class="option"><input type="radio" name="q18" value="B"> B. Salt was a basic necessity used by people across social groups</label>
+<label class="option"><input type="radio" name="q18" value="C"> C. Salt production was limited to Punjab</label>
+<label class="option"><input type="radio" name="q18" value="D"> D. Salt had no connection with colonial taxation</label>
+
+<div class="explanation">
+<strong>Answer: B</strong><br>
+Salt was a basic necessity. The tax and government monopoly on salt made it an issue that could connect people across different social and economic groups.
+</div>
+</div>
+
+<!-- Q19 -->
+<div class="question" id="q19box">
+<span class="type">ASSERTION-REASON</span>
+<h3>19. Assertion (A): Different social groups interpreted the idea of Swaraj differently.<br><br>
+Reason (R): Their economic, social and political experiences were not identical.</h3>
+
+<label class="option"><input type="radio" name="q19" value="A"> A. Both A and R are true, and R correctly explains A</label>
+<label class="option"><input type="radio" name="q19" value="B"> B. Both A and R are true, but R does not explain A</label>
+<label class="option"><input type="radio" name="q19" value="C"> C. A is true, but R is false</label>
+<label class="option"><input type="radio" name="q19" value="D"> D. A is false, but R is true</label>
+
+<div class="explanation">
+<strong>Answer: A</strong><br>
+Different communities experienced colonial rule differently. Therefore, the meaning they attached to Swaraj also varied.
+</div>
+</div>
+
+<!-- Q20 -->
+<div class="question" id="q20box">
+<span class="type">ASSERTION-REASON</span>
+<h3>20. Assertion (A): Gandhi withdrew the Non-Cooperation Movement after Chauri Chaura.<br><br>
+Reason (R): Gandhi believed that mass struggle had to remain consistent with non-violence.</h3>
+
+<label class="option"><input type="radio" name="q20" value="A"> A. Both A and R are true, and R correctly explains A</label>
+<label class="option"><input type="radio" name="q20" value="B"> B. Both A and R are true, but R does not explain A</label>
+<label class="option"><input type="radio" name="q20" value="C"> C. A is true, but R is false</label>
+<label class="option"><input type="radio" name="q20" value="D"> D. A is false, but R is true</label>
+
+<div class="explanation">
+<strong>Answer: A</strong><br>
+Gandhi considered non-violence fundamental to Satyagraha. The violence at Chauri Chaura convinced him that the movement needed to be withdrawn.
+</div>
+</div>
+
+<!-- Q21 PASSAGE -->
+<div class="question" id="q21box">
+<span class="type">PASSAGE-BASED</span>
+
+<div class="passage">
+<strong>Passage:</strong><br>
+In the countryside, nationalist ideas did not simply arrive as a ready-made political programme. 
+Peasants and tribal communities often connected the language of Swaraj with their immediate problems.
+In Awadh, peasants opposed high rents, revenue demands and the practices of talukdars. 
+In the Gudem Hills, tribal people were affected by restrictions on their traditional use of forests.
+These movements became connected with the wider national struggle, but their local demands remained important.
+</div>
+
+<h3>21. What central idea is best reflected in the passage?</h3>
+
+<label class="option"><input type="radio" name="q21" value="A"> A. Nationalism had exactly the same meaning for every social group</label>
+<label class="option"><input type="radio" name="q21" value="B"> B. Local grievances influenced how people understood nationalist ideas</label>
+<label class="option"><input type="radio" name="q21" value="C"> C. Rural people completely rejected nationalism</label>
+<label class="option"><input type="radio" name="q21" value="D"> D. Nationalism developed only through British institutions</label>
+
+<div class="explanation">
+<strong>Answer: B</strong><br>
+The passage shows that peasants and tribal communities connected nationalism with their own local experiences and grievances.
+</div>
+</div>
+
+<!-- Q22 PASSAGE -->
+<div class="question" id="q22box">
+<span class="type">PASSAGE-BASED</span>
+
+<div class="passage">
+<strong>Passage:</strong><br>
+Gandhi's Satyagraha was based on the belief that truth and non-violence could become instruments of political struggle.
+A Satyagrahi was expected to resist injustice without hatred and without using physical violence.
+The objective was not simply to defeat an opponent but to appeal to the moral conscience of the opponent and wider society.
+</div>
+
+<h3>22. According to the passage, what distinguishes Satyagraha from violent resistance?</h3>
+
+<label class="option"><input type="radio" name="q22" value="A"> A. Satyagraha avoided all forms of resistance</label>
+<label class="option"><input type="radio" name="q22" value="B"> B. Satyagraha combined resistance with truth and non-violence</label>
+<label class="option"><input type="radio" name="q22" value="C"> C. Satyagraha depended mainly on military power</label>
+<label class="option"><input type="radio" name="q22" value="D"> D. Satyagraha supported secret revolutionary organisations</label>
+
+<div class="explanation">
+<strong>Answer: B</strong><br>
+The passage describes Satyagraha as resistance to injustice through truth and non-violence.
+</div>
+</div>
+
+<!-- Q23 -->
+<div class="question" id="q23box">
+<span class="type">MATCHING</span>
+<h3>23. Match the following:</h3>
+
+<p>
+A. Baba Ramchandra<br>
+B. Alluri Sitarama Raju<br>
+C. Dandi March<br>
+D. Simon Commission
+</p>
+
+<p>
+1. Salt law<br>
+2. Awadh peasant movement<br>
+3. Gudem Hills tribal rebellion<br>
+4. No Indian member
+</p>
+
+<label class="option"><input type="radio" name="q23" value="A"> A. A-2, B-3, C-1, D-4</label>
+<label class="option"><input type="radio" name="q23" value="B"> B. A-3, B-2, C-4, D-1</label>
+<label class="option"><input type="radio" name="q23" value="C"> C. A-1, B-4, C-2, D-3</label>
+<label class="option"><input type="radio" name="q23" value="D"> D. A-4, B-1, C-3, D-2</label>
+
+<div class="explanation">
+<strong>Answer: A</strong><br>
+Baba Ramchandra — Awadh; Alluri Sitarama Raju — Gudem Hills; Dandi March — Salt Law; Simon Commission — No Indian member.
+</div>
+</div>
+
+<!-- Q24 -->
+<div class="question" id="q24box">
+<span class="type">CHRONOLOGICAL ARRANGEMENT</span>
+<h3>24. Arrange the following events chronologically:</h3>
+
+<p>
+1. Champaran Satyagraha<br>
+2. Rowlatt Satyagraha<br>
+3. Non-Cooperation Movement<br>
+4. Dandi March
+</p>
+
+<label class="option"><input type="radio" name="q24" value="A"> A. 1 → 2 → 3 → 4</label>
+<label class="option"><input type="radio" name="q24" value="B"> B. 2 → 1 → 3 → 4</label>
+<label class="option"><input type="radio" name="q24" value="C"> C. 1 → 3 → 2 → 4</label>
+<label class="option"><input type="radio" name="q24" value="D"> D. 3 → 1 → 2 → 4</label>
+
+<div class="explanation">
+<strong>Answer: A</strong><br>
+Champaran — 1917; Rowlatt Satyagraha — 1919; Non-Cooperation — 1920–22; Dandi March — 1930.
+</div>
+</div>
+
+<!-- Q25 -->
+<div class="question" id="q25box">
+<span class="type">CHRONOLOGICAL ARRANGEMENT</span>
+<h3>25. Arrange these events in the correct chronological order:</h3>
+
+<p>
+1. Formation of Swaraj Party<br>
+2. Arrival of Simon Commission in India<br>
+3. Dandi March<br>
+4. Chauri Chaura incident
+</p>
+
+<label class="option"><input type="radio" name="q25" value="A"> A. 1 → 4 → 2 → 3</label>
+<label class="option"><input type="radio" name="q25" value="B"> B. 4 → 1 → 2 → 3</label>
+<label class="option"><input type="radio" name="q25" value="C"> C. 1 → 2 → 4 → 3</label>
+<label class="option"><input type="radio" name="q25" value="D"> D. 2 → 1 → 4 → 3</label>
+
+<div class="explanation">
+<strong>Answer: A</strong><br>
+Swaraj Party — 1923; Chauri Chaura — 1922. Therefore, the correct sequence actually begins with Chauri Chaura. Hence the correct chronological order is 4 → 1 → 2 → 3. <strong>Correct option: B.</strong>
+</div>
+</div>
+
+<!-- Q26 -->
+<div class="question" id="q26box">
+<span class="type">MCQ</span>
+<h3>26. Which difference between Non-Cooperation and Civil Disobedience is most appropriate?</h3>
+
+<label class="option"><input type="radio" name="q26" value="A"> A. Civil Disobedience involved deliberately breaking selected colonial laws, while Non-Cooperation focused on withdrawal of cooperation</label>
+<label class="option"><input type="radio" name="q26" value="B"> B. Non-Cooperation was always violent</label>
+<label class="option"><input type="radio" name="q26" value="C"> C. Civil Disobedience was limited only to students</label>
+<label class="option"><input type="radio" name="q26" value="D"> D. There was no difference between the two movements</label>
+
+<div class="explanation">
+<strong>Answer: A</strong><br>
+Non-Cooperation involved withdrawing cooperation from colonial institutions. Civil Disobedience went further by openly violating selected colonial laws, such as the salt law.
+</div>
+</div>
+
+<!-- Q27 -->
+<div class="question" id="q27box">
+<span class="type">MCQ</span>
+<h3>27. Why did the participation of different social groups strengthen the mass character of nationalism?</h3>
+
+<label class="option"><input type="radio" name="q27" value="A"> A. It made nationalism completely uniform</label>
+<label class="option"><input type="radio" name="q27" value="B"> B. It brought diverse local and economic grievances into a wider anti-colonial struggle</label>
+<label class="option"><input type="radio" name="q27" value="C"> C. It eliminated all differences between communities</label>
+<label class="option"><input type="radio" name="q27" value="D"> D. It ended all peasant movements</label>
+
+<div class="explanation">
+<strong>Answer: B</strong><br>
+Mass nationalism expanded as different groups connected their own struggles with the broader movement against colonial rule.
+</div>
+</div>
+
+<!-- Q28 -->
+<div class="question" id="q28box">
+<span class="type">MCQ</span>
+<h3>28. Which of the following best explains why the Civil Disobedience Movement could not be understood only as a single uniform movement?</h3>
+
+<label class="option"><input type="radio" name="q28" value="A"> A. Different social groups joined with different expectations and demands</label>
+<label class="option"><input type="radio" name="q28" value="B"> B. Only British officials participated</label>
+<label class="option"><input type="radio" name="q28" value="C"> C. It occurred only in one city</label>
+<label class="option"><input type="radio" name="q28" value="D"> D. It had no connection with colonial laws</label>
+
+<div class="explanation">
+<strong>Answer: A</strong><br>
+Different groups participated for different reasons. Their expectations from Swaraj and their economic interests were not identical.
+</div>
+</div>
+
+<!-- Q29 -->
+<div class="question" id="q29box">
+<span class="type">ASSERTION-REASON</span>
+<h3>29. Assertion (A): The Dandi March became a powerful symbol of resistance.<br><br>
+Reason (R): The salt issue affected ordinary people and provided a simple way to challenge colonial authority.</h3>
+
+<label class="option"><input type="radio" name="q29" value="A"> A. Both A and R are true, and R correctly explains A</label>
+<label class="option"><input type="radio" name="q29" value="B"> B. Both A and R are true, but R does not explain A</label>
+<label class="option"><input type="radio" name="q29" value="C"> C. A is true, but R is false</label>
+<label class="option"><input type="radio" name="q29" value="D"> D. A is false, but R is true</label>
+
+<div class="explanation">
+<strong>Answer: A</strong><br>
+Salt was a basic necessity. Breaking the salt law therefore provided an accessible symbol of opposition to colonial rule.
+</div>
+</div>
+
+<!-- Q30 -->
+<div class="question" id="q30box">
+<span class="type">PASSAGE-BASED</span>
+
+<div class="passage">
+<strong>Passage:</strong><br>
+Indian nationalism grew through a combination of common political objectives and diverse local experiences.
+The idea of Swaraj could mean relief from oppressive landlords to one group, freedom from restrictive forest laws to another, 
+and freedom from plantation restrictions to another. At the national level, leaders attempted to bring these diverse struggles 
+into a broader movement against colonial rule. Yet these different expectations could also create tensions within the movement.
+</div>
+
+<h3>30. Which conclusion can be most logically drawn from the passage?</h3>
+
+<label class="option"><input type="radio" name="q30" value="A"> A. Nationalism completely removed all social and economic differences</label>
+<label class="option"><input type="radio" name="q30" value="B"> B. Indian nationalism combined a common anti-colonial struggle with different group-specific expectations</label>
+<label class="option"><input type="radio" name="q30" value="C"> C. Rural groups had no connection with nationalism</label>
+<label class="option"><input type="radio" name="q30" value="D"> D. Swaraj had only one meaning throughout India</label>
+
+<div class="explanation">
+<strong>Answer: B</strong><br>
+The passage highlights an important feature of Indian nationalism: different communities participated in a common anti-colonial struggle while interpreting Swaraj according to their own experiences.
+</div>
+</div>
+
+<div class="submit-area">
+<button type="button" onclick="submitTest()">Submit Test</button>
+</div>
+
+</form>
+
+<div id="result">
+<h2>Test Result</h2>
+<p id="score"></p>
+<p id="percentage"></p>
+<p id="message"></p>
+</div>
+
+</div>
+
+<footer>
+
+<h2>GSI MANTRA</h2>
+
+<p>
+Class 10 History • Nationalism in India • Practice Set 3
+</p>
+
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="class10.html">Class 10</a>
+<a href="class10-history.html">History</a>
+</div>
+
+<p>© 2026 GSI MANTRA. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+const answers = {
+q1:"B",
+q2:"C",
+q3:"A",
+q4:"B",
+q5:"B",
+q6:"B",
+q7:"B",
+q8:"A",
+q9:"B",
+q10:"B",
+q11:"C",
+q12:"A",
+q13:"B",
+q14:"A",
+q15:"B",
+q16:"B",
+q17:"B",
+q18:"B",
+q19:"A",
+q20:"A",
+q21:"B",
+q22:"B",
+q23:"A",
+q24:"A",
+q25:"B",
+q26:"A",
+q27:"B",
+q28:"A",
+q29:"A",
+q30:"B"
+};
+
+function submitTest(){
+
+    let score = 0;
+    let answered = 0;
+
+    for(let i=1;i<=30;i++){
+
+        const selected =
+        document.querySelector('input[name="q'+i+'"]:checked');
+
+        const box =
+        document.getElementById('q'+i+'box');
+
+        const explanation =
+        box.querySelector('.explanation');
+
+        box.classList.remove("correct","wrong");
+
+        if(selected){
+
+            answered++;
+
+            if(selected.value === answers["q"+i]){
+                score++;
+                box.classList.add("correct");
+            }else{
+                box.classList.add("wrong");
+            }
+        }
+
+        explanation.style.display="block";
+    }
+
+    const percentage =
+    ((score/30)*100).toFixed(2);
+
+    document.getElementById("result").style.display="block";
+
+    document.getElementById("score").innerHTML =
+    "<strong>Score:</strong> "+score+" / 30";
+
+    document.getElementById("percentage").innerHTML =
+    "<strong>Percentage:</strong> "+percentage+"%";
+
+    document.getElementById("message").innerHTML =
+    "<strong>Attempted:</strong> "+answered+" / 30";
+
+    document.getElementById("result").scrollIntoView({
+        behavior:"smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
