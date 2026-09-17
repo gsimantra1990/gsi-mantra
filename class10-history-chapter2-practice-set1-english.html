@@ -1,0 +1,1409 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Practice Set 1 | Nationalism in India | GSI MANTRA</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:25px 20px;
+}
+
+.header-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:34px;
+}
+
+.logo p{
+    margin:5px 0 0;
+    font-size:15px;
+}
+
+.search{
+    background:white;
+    padding:10px 15px;
+    border-radius:25px;
+    width:280px;
+}
+
+.search input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+}
+
+/* NAV */
+
+nav{
+    background:#071d33;
+    padding:14px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#123c69,#1d5b91);
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.hero h2{
+    font-size:36px;
+    margin:0 0 12px;
+}
+
+.hero p{
+    font-size:18px;
+    margin:8px auto;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:35px 20px;
+}
+
+/* TEST INFO */
+
+.test-info{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:30px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    text-align:center;
+}
+
+.test-info div{
+    background:#f8fafc;
+    padding:15px;
+    border-radius:10px;
+}
+
+.test-info strong{
+    display:block;
+    color:#123c69;
+    margin-bottom:5px;
+}
+
+/* QUESTION */
+
+.question-card{
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    border-left:5px solid #123c69;
+}
+
+.question-number{
+    color:#f28c00;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.question-type{
+    display:inline-block;
+    background:#eaf2f8;
+    color:#123c69;
+    padding:5px 10px;
+    border-radius:15px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+.question{
+    font-size:18px;
+    font-weight:bold;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+.option{
+    display:block;
+    background:#f8fafc;
+    border:1px solid #dce4ec;
+    padding:12px;
+    margin:8px 0;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.option:hover{
+    background:#eef4f9;
+    border-color:#123c69;
+}
+
+.option input{
+    margin-right:10px;
+}
+
+/* SUBMIT */
+
+.submit-area{
+    text-align:center;
+    margin:35px 0;
+}
+
+.submit-btn{
+    background:#123c69;
+    color:white;
+    border:none;
+    padding:14px 35px;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+    background:#f28c00;
+}
+
+/* RESULT */
+
+#result{
+    display:none;
+    background:linear-gradient(135deg,#fff8e8,#fff1c7);
+    border-radius:18px;
+    padding:30px;
+    text-align:center;
+    margin-bottom:30px;
+    border:1px solid #f3d28a;
+}
+
+#result h2{
+    color:#8a5700;
+    margin-top:0;
+}
+
+.score{
+    font-size:32px;
+    font-weight:bold;
+    color:#123c69;
+    margin:15px;
+}
+
+.result-details{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.result-box{
+    background:white;
+    padding:15px 25px;
+    border-radius:10px;
+    min-width:130px;
+}
+
+.result-box strong{
+    display:block;
+    font-size:22px;
+    color:#123c69;
+}
+
+/* EXPLANATION */
+
+.explanation{
+    display:none;
+    margin-top:15px;
+    padding:15px;
+    border-radius:10px;
+    background:#f1f7f2;
+    border-left:4px solid #2e7d32;
+}
+
+.correct{
+    border-left-color:#2e7d32;
+}
+
+.wrong{
+    border-left-color:#c62828;
+}
+
+.explanation strong{
+    color:#2e7d32;
+}
+
+.wrong .explanation strong{
+    color:#c62828;
+}
+
+/* FOOTER */
+
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    margin-top:50px;
+}
+
+footer h2{
+    margin-top:0;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+.footer-links a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .header-content{
+        flex-direction:column;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    .hero h2{
+        font-size:28px;
+    }
+
+    .test-info{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .question-card{
+        padding:20px 15px;
+    }
+
+    .question{
+        font-size:16px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="header-content">
+
+<div class="logo">
+
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+
+<div>
+<h1>GSI MANTRA</h1>
+<p>Competitive Education & NCERT Learning Platform</p>
+</div>
+
+</div>
+
+<div class="search">
+<input type="text" placeholder="Search GSI MANTRA...">
+</div>
+
+</div>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="class10.html">Class 10</a>
+<a href="class10-history.html">History</a>
+<a href="class10-history-chapter2-practice.html">Practice Sets</a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h2>Nationalism in India</h2>
+
+<p>Practice Set 1 — English Medium</p>
+
+<p>Class 10 History | Chapter 2</p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- TEST INFO -->
+
+<div class="test-info">
+
+<div>
+<strong>Class</strong>
+10
+</div>
+
+<div>
+<strong>Subject</strong>
+History
+</div>
+
+<div>
+<strong>Questions</strong>
+30
+</div>
+
+<div>
+<strong>Marks</strong>
+30
+</div>
+
+</div>
+
+
+<form id="quizForm">
+
+
+<!-- Q1 -->
+
+<div class="question-card" id="q1">
+
+<div class="question-number">Question 1</div>
+
+<div class="question-type">MCQ</div>
+
+<div class="question">
+Which of the following was a major impact of the First World War on India?
+</div>
+
+<label class="option">
+<input type="radio" name="q1" value="A">
+A. Reduction in taxes
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="B">
+B. Increase in defence expenditure and the burden of new taxes
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="C">
+C. Immediate decline in agricultural prices
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="D">
+D. Complete destruction of Indian industries
+</label>
+
+<div class="explanation">
+<strong>Correct Answer: B</strong><br>
+The First World War led to a huge increase in defence expenditure. The British government also increased taxes and imposed other economic burdens on the Indian people.
+</div>
+
+</div>
+
+
+<!-- Q2 -->
+
+<div class="question-card" id="q2">
+
+<div class="question-number">Question 2</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+During the First World War, forced recruitment of soldiers mainly affected which region?
+</div>
+
+<label class="option"><input type="radio" name="q2" value="A">A. Bengal</label>
+<label class="option"><input type="radio" name="q2" value="B">B. Punjab</label>
+<label class="option"><input type="radio" name="q2" value="C">C. Madras</label>
+<label class="option"><input type="radio" name="q2" value="D">D. Assam</label>
+
+<div class="explanation">
+<strong>Correct Answer: B</strong><br>
+Punjab was particularly affected by forced recruitment during the First World War.
+</div>
+
+</div>
+
+
+<!-- Q3 -->
+
+<div class="question-card" id="q3">
+
+<div class="question-number">Question 3</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+What was the basic idea behind Mahatma Gandhi's concept of Satyagraha?
+</div>
+
+<label class="option"><input type="radio" name="q3" value="A">A. Violent revolution to overthrow the government</label>
+<label class="option"><input type="radio" name="q3" value="B">B. Resistance to injustice through truth and non-violence</label>
+<label class="option"><input type="radio" name="q3" value="C">C. Dependence only on constitutional reforms</label>
+<label class="option"><input type="radio" name="q3" value="D">D. Complete boycott of all foreign goods</label>
+
+<div class="explanation">
+<strong>Correct Answer: B</strong><br>
+Satyagraha was based on the power of truth and non-violence. Gandhi believed that injustice could be resisted without physical violence.
+</div>
+
+</div>
+
+
+<!-- Q4 -->
+
+<div class="question-card" id="q4">
+
+<div class="question-number">Question 4</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+According to Gandhi, what was an essential quality of a Satyagrahi?
+</div>
+
+<label class="option"><input type="radio" name="q4" value="A">A. Military training</label>
+<label class="option"><input type="radio" name="q4" value="B">B. Physical strength</label>
+<label class="option"><input type="radio" name="q4" value="C">C. Faith in truth and non-violence</label>
+<label class="option"><input type="radio" name="q4" value="D">D. Administrative experience</label>
+
+<div class="explanation">
+<strong>Correct Answer: C</strong><br>
+A Satyagrahi was expected to have faith in truth and non-violence and to remain peaceful while resisting injustice.
+</div>
+
+</div>
+
+
+<!-- Q5 -->
+
+<div class="question-card" id="q5">
+
+<div class="question-number">Question 5</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+The Champaran Satyagraha was mainly related to which issue?
+</div>
+
+<label class="option"><input type="radio" name="q5" value="A">A. Low wages of workers</label>
+<label class="option"><input type="radio" name="q5" value="B">B. Indigo cultivation</label>
+<label class="option"><input type="radio" name="q5" value="C">C. Increase in land revenue</label>
+<label class="option"><input type="radio" name="q5" value="D">D. Textile mill workers' strike</label>
+
+<div class="explanation">
+<strong>Correct Answer: B</strong><br>
+The Champaran Satyagraha of 1917 was associated with the problems faced by peasants who were forced to cultivate indigo.
+</div>
+
+</div>
+
+
+<!-- Q6 -->
+
+<div class="question-card" id="q6">
+
+<div class="question-number">Question 6</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+Under which system were peasants in Champaran forced to cultivate indigo?
+</div>
+
+<label class="option"><input type="radio" name="q6" value="A">A. Ryotwari System</label>
+<label class="option"><input type="radio" name="q6" value="B">B. Tinkathia System</label>
+<label class="option"><input type="radio" name="q6" value="C">C. Mahalwari System</label>
+<label class="option"><input type="radio" name="q6" value="D">D. Permanent Settlement</label>
+
+<div class="explanation">
+<strong>Correct Answer: B</strong><br>
+Under the Tinkathia system, peasants were compelled to cultivate indigo on a portion of their land.
+</div>
+
+</div>
+
+
+<!-- Q7 -->
+
+<div class="question-card" id="q7">
+
+<div class="question-number">Question 7</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+What was the main cause of the Kheda Satyagraha?
+</div>
+
+<label class="option"><input type="radio" name="q7" value="A">A. Forced cultivation of indigo</label>
+<label class="option"><input type="radio" name="q7" value="B">B. Low wages of textile workers</label>
+<label class="option"><input type="radio" name="q7" value="C">C. Demand for land revenue despite crop failure</label>
+<label class="option"><input type="radio" name="q7" value="D">D. Introduction of the Rowlatt Act</label>
+
+<div class="explanation">
+<strong>Correct Answer: C</strong><br>
+In Kheda, crop failure and poor harvests made it difficult for peasants to pay land revenue. They demanded revenue relief.
+</div>
+
+</div>
+
+
+<!-- Q8 -->
+
+<div class="question-card" id="q8">
+
+<div class="question-number">Question 8</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+What was the principal demand of the peasants during the Kheda Satyagraha?
+</div>
+
+<label class="option"><input type="radio" name="q8" value="A">A. Abolition of indigo cultivation</label>
+<label class="option"><input type="radio" name="q8" value="B">B. Relief from revenue collection</label>
+<label class="option"><input type="radio" name="q8" value="C">C. Ban on foreign goods</label>
+<label class="option"><input type="radio" name="q8" value="D">D. Increase in workers' wages</label>
+
+<div class="explanation">
+<strong>Correct Answer: B</strong><br>
+The peasants demanded suspension or relief from land revenue collection because of crop failure.
+</div>
+
+</div>
+
+
+<!-- Q9 -->
+
+<div class="question-card" id="q9">
+
+<div class="question-number">Question 9</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+The Ahmedabad Mill Strike was mainly associated with:
+</div>
+
+<label class="option"><input type="radio" name="q9" value="A">A. A conflict between peasants and zamindars</label>
+<label class="option"><input type="radio" name="q9" value="B">B. A dispute between mill workers and mill owners over wages</label>
+<label class="option"><input type="radio" name="q9" value="C">C. A conflict between British officials and Indian traders</label>
+<label class="option"><input type="radio" name="q9" value="D">D. Opposition to indigo cultivation</label>
+
+<div class="explanation">
+<strong>Correct Answer: B</strong><br>
+The Ahmedabad Mill Strike of 1918 involved textile workers demanding better wages from mill owners.
+</div>
+
+</div>
+
+
+<!-- Q10 -->
+
+<div class="question-card" id="q10">
+
+<div class="question-number">Question 10</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+Which method did Gandhi use during the Ahmedabad Mill Strike?
+</div>
+
+<label class="option"><input type="radio" name="q10" value="A">A. Armed struggle</label>
+<label class="option"><input type="radio" name="q10" value="B">B. Hunger strike</label>
+<label class="option"><input type="radio" name="q10" value="C">C. Non-payment of land revenue</label>
+<label class="option"><input type="radio" name="q10" value="D">D. Jail Bharo movement</label>
+
+<div class="explanation">
+<strong>Correct Answer: B</strong><br>
+Gandhi undertook a hunger strike to support the demands of the Ahmedabad textile workers.
+</div>
+
+</div>
+
+
+<!-- Q11 -->
+
+<div class="question-card" id="q11">
+
+<div class="question-number">Question 11</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+What was one of the most controversial features of the Rowlatt Act?
+</div>
+
+<label class="option"><input type="radio" name="q11" value="A">A. It granted voting rights to Indians</label>
+<label class="option"><input type="radio" name="q11" value="B">B. It allowed detention without trial</label>
+<label class="option"><input type="radio" name="q11" value="C">C. It abolished land revenue</label>
+<label class="option"><input type="radio" name="q11" value="D">D. It provided complete freedom of the press</label>
+
+<div class="explanation">
+<strong>Correct Answer: B</strong><br>
+The Rowlatt Act gave the government extensive powers to repress political activities, including detention without trial.
+</div>
+
+</div>
+
+
+<!-- Q12 -->
+
+<div class="question-card" id="q12">
+
+<div class="question-number">Question 12</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+Gandhi launched which movement against the Rowlatt Act?
+</div>
+
+<label class="option"><input type="radio" name="q12" value="A">A. Non-Cooperation Movement</label>
+<label class="option"><input type="radio" name="q12" value="B">B. Rowlatt Satyagraha</label>
+<label class="option"><input type="radio" name="q12" value="C">C. Quit India Movement</label>
+<label class="option"><input type="radio" name="q12" value="D">D. Civil Disobedience Movement</label>
+
+<div class="explanation">
+<strong>Correct Answer: B</strong><br>
+Gandhi organised the Rowlatt Satyagraha in 1919 to oppose the Rowlatt Act.
+</div>
+
+</div>
+
+
+<!-- Q13 -->
+
+<div class="question-card" id="q13">
+
+<div class="question-number">Question 13</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+Which of the following statements about the Rowlatt Satyagraha is correct?
+</div>
+
+<label class="option"><input type="radio" name="q13" value="A">A. It was limited only to peasants.</label>
+<label class="option"><input type="radio" name="q13" value="B">B. It involved protest through Satyagraha and hartals.</label>
+<label class="option"><input type="radio" name="q13" value="C">C. It was led only by revolutionary groups.</label>
+<label class="option"><input type="radio" name="q13" value="D">D. Its objective was to establish the Swaraj Party.</label>
+
+<div class="explanation">
+<strong>Correct Answer: B</strong><br>
+The Rowlatt Satyagraha involved peaceful protests, hartals and demonstrations against the Rowlatt Act.
+</div>
+
+</div>
+
+
+<!-- Q14 -->
+
+<div class="question-card" id="q14">
+
+<div class="question-number">Question 14</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+The Non-Cooperation Movement was formally launched in:
+</div>
+
+<label class="option"><input type="radio" name="q14" value="A">A. 1917</label>
+<label class="option"><input type="radio" name="q14" value="B">B. 1919</label>
+<label class="option"><input type="radio" name="q14" value="C">C. 1920</label>
+<label class="option"><input type="radio" name="q14" value="D">D. 1922</label>
+
+<div class="explanation">
+<strong>Correct Answer: C</strong><br>
+The Non-Cooperation Movement was adopted by the Congress in 1920.
+</div>
+
+</div>
+
+
+<!-- Q15 -->
+
+<div class="question-card" id="q15">
+
+<div class="question-number">Question 15</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+Which of the following was a programme of the Non-Cooperation Movement?
+</div>
+
+<label class="option"><input type="radio" name="q15" value="A">A. Boycott of government schools and colleges</label>
+<label class="option"><input type="radio" name="q15" value="B">B. Encouragement of recruitment into the British army</label>
+<label class="option"><input type="radio" name="q15" value="C">C. Promotion of foreign goods</label>
+<label class="option"><input type="radio" name="q15" value="D">D. Support for higher taxes</label>
+
+<div class="explanation">
+<strong>Correct Answer: A</strong><br>
+The movement encouraged people to boycott government educational institutions, courts, councils and foreign goods.
+</div>
+
+</div>
+
+
+<!-- Q16 -->
+
+<div class="question-card" id="q16">
+
+<div class="question-number">Question 16</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+The meaning of the term 'Swaraj' was:
+</div>
+
+<label class="option"><input type="radio" name="q16" value="A">A. Exactly the same for all social groups</label>
+<label class="option"><input type="radio" name="q16" value="B">B. Different for different social groups</label>
+<label class="option"><input type="radio" name="q16" value="C">C. Limited only to political independence</label>
+<label class="option"><input type="radio" name="q16" value="D">D. Limited only to economic reforms</label>
+
+<div class="explanation">
+<strong>Correct Answer: B</strong><br>
+The idea of Swaraj could have different meanings for different social groups depending on their experiences and aspirations.
+</div>
+
+</div>
+
+
+<!-- Q17 -->
+
+<div class="question-card" id="q17">
+
+<div class="question-number">Question 17</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+What was the immediate reason for the withdrawal of the Non-Cooperation Movement?
+</div>
+
+<label class="option"><input type="radio" name="q17" value="A">A. Jallianwala Bagh massacre</label>
+<label class="option"><input type="radio" name="q17" value="B">B. Simon Commission</label>
+<label class="option"><input type="radio" name="q17" value="C">C. Chauri Chaura incident</label>
+<label class="option"><input type="radio" name="q17" value="D">D. Rowlatt Act</label>
+
+<div class="explanation">
+<strong>Correct Answer: C</strong><br>
+Gandhi withdrew the Non-Cooperation Movement in 1922 after the violent Chauri Chaura incident.
+</div>
+
+</div>
+
+
+<!-- Q18 -->
+
+<div class="question-card" id="q18">
+
+<div class="question-number">Question 18</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+Why was the Swaraj Party formed?
+</div>
+
+<label class="option"><input type="radio" name="q18" value="A">A. To launch an armed revolution</label>
+<label class="option"><input type="radio" name="q18" value="B">B. To enter legislative councils and oppose colonial rule from within</label>
+<label class="option"><input type="radio" name="q18" value="C">C. To support the British government</label>
+<label class="option"><input type="radio" name="q18" value="D">D. To establish a separate state for peasants</label>
+
+<div class="explanation">
+<strong>Correct Answer: B</strong><br>
+The Swaraj Party was formed to enter legislative councils and challenge colonial policies from within the councils.
+</div>
+
+</div>
+
+
+<!-- Q19 -->
+
+<div class="question-card" id="q19">
+
+<div class="question-number">Question 19</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+Who were among the important leaders associated with the Swaraj Party?
+</div>
+
+<label class="option"><input type="radio" name="q19" value="A">A. C. R. Das and Motilal Nehru</label>
+<label class="option"><input type="radio" name="q19" value="B">B. Bhagat Singh and Chandrashekhar Azad</label>
+<label class="option"><input type="radio" name="q19" value="C">C. Gandhi and Sardar Patel</label>
+<label class="option"><input type="radio" name="q19" value="D">D. Jawaharlal Nehru and Subhas Chandra Bose</label>
+
+<div class="explanation">
+<strong>Correct Answer: A</strong><br>
+C. R. Das and Motilal Nehru were among the principal leaders who formed the Swaraj Party.
+</div>
+
+</div>
+
+
+<!-- Q20 -->
+
+<div class="question-card" id="q20">
+
+<div class="question-number">Question 20</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+What was the main strategy of the Swarajists?
+</div>
+
+<label class="option"><input type="radio" name="q20" value="A">A. Complete boycott of legislative councils</label>
+<label class="option"><input type="radio" name="q20" value="B">B. Enter the councils and obstruct colonial government policies from within</label>
+<label class="option"><input type="radio" name="q20" value="C">C. Military cooperation with the British</label>
+<label class="option"><input type="radio" name="q20" value="D">D. Limiting political activities to rural areas</label>
+
+<div class="explanation">
+<strong>Correct Answer: B</strong><br>
+The Swarajists wanted to enter the legislative councils and use them to oppose and obstruct colonial policies.
+</div>
+
+</div>
+
+
+<!-- Q21 -->
+
+<div class="question-card" id="q21">
+
+<div class="question-number">Question 21</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+The Simon Commission came to India in:
+</div>
+
+<label class="option"><input type="radio" name="q21" value="A">A. 1919</label>
+<label class="option"><input type="radio" name="q21" value="B">B. 1920</label>
+<label class="option"><input type="radio" name="q21" value="C">C. 1927</label>
+<label class="option"><input type="radio" name="q21" value="D">D. 1928</label>
+
+<div class="explanation">
+<strong>Correct Answer: D</strong><br>
+The Simon Commission arrived in India in 1928. It had been appointed by the British government in 1927.
+</div>
+
+</div>
+
+
+<!-- Q22 -->
+
+<div class="question-card" id="q22">
+
+<div class="question-number">Question 22</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+Why was the Simon Commission widely opposed in India?
+</div>
+
+<label class="option"><input type="radio" name="q22" value="A">A. It had no Indian member.</label>
+<label class="option"><input type="radio" name="q22" value="B">B. It rejected the demand for complete independence.</label>
+<label class="option"><input type="radio" name="q22" value="C">C. It imposed a new tax on peasants.</label>
+<label class="option"><input type="radio" name="q22" value="D">D. It introduced the Rowlatt Act.</label>
+
+<div class="explanation">
+<strong>Correct Answer: A</strong><br>
+The Simon Commission was opposed because it consisted entirely of British members and had no Indian member.
+</div>
+
+</div>
+
+
+<!-- Q23 -->
+
+<div class="question-card" id="q23">
+
+<div class="question-number">Question 23</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+Which slogan became famous during the protest against the Simon Commission?
+</div>
+
+<label class="option"><input type="radio" name="q23" value="A">A. Do or Die</label>
+<label class="option"><input type="radio" name="q23" value="B">B. Simon Go Back</label>
+<label class="option"><input type="radio" name="q23" value="C">C. Vande Mataram</label>
+<label class="option"><input type="radio" name="q23" value="D">D. Jai Hind</label>
+
+<div class="explanation">
+<strong>Correct Answer: B</strong><br>
+“Simon Go Back” became a well-known slogan during protests against the Simon Commission.
+</div>
+
+</div>
+
+
+<!-- Q24 -->
+
+<div class="question-card" id="q24">
+
+<div class="question-number">Question 24</div>
+<div class="question-type">Chronological Arrangement</div>
+
+<div class="question">
+Arrange the following events in the correct chronological order:<br><br>
+1. Champaran Satyagraha<br>
+2. Kheda Satyagraha<br>
+3. Ahmedabad Mill Strike<br>
+4. Rowlatt Satyagraha
+</div>
+
+<label class="option"><input type="radio" name="q24" value="A">A. 1 → 2 → 3 → 4</label>
+<label class="option"><input type="radio" name="q24" value="B">B. 2 → 1 → 3 → 4</label>
+<label class="option"><input type="radio" name="q24" value="C">C. 3 → 1 → 2 → 4</label>
+<label class="option"><input type="radio" name="q24" value="D">D. 1 → 3 → 2 → 4</label>
+
+<div class="explanation">
+<strong>Correct Answer: D</strong><br>
+The correct order is Champaran (1917), Ahmedabad (1918), Kheda (1918), and Rowlatt Satyagraha (1919).
+</div>
+
+</div>
+
+
+<!-- Q25 -->
+
+<div class="question-card" id="q25">
+
+<div class="question-number">Question 25</div>
+<div class="question-type">MCQ</div>
+
+<div class="question">
+Which of the following pairs is correctly matched?
+</div>
+
+<label class="option"><input type="radio" name="q25" value="A">A. Champaran — Mill workers</label>
+<label class="option"><input type="radio" name="q25" value="B">B. Kheda — Revenue relief after crop failure</label>
+<label class="option"><input type="radio" name="q25" value="C">C. Ahmedabad — Indigo cultivation</label>
+<label class="option"><input type="radio" name="q25" value="D">D. Rowlatt Act — Formation of Swaraj Party</label>
+
+<div class="explanation">
+<strong>Correct Answer: B</strong><br>
+The Kheda Satyagraha was associated with the demand for revenue relief after crop failure.
+</div>
+
+</div>
+
+
+<!-- Q26 -->
+
+<div class="question-card" id="q26">
+
+<div class="question-number">Question 26</div>
+<div class="question-type">Matching</div>
+
+<div class="question">
+Match Column I with Column II:
+<br><br>
+
+A. Champaran Satyagraha<br>
+B. Kheda Satyagraha<br>
+C. Ahmedabad Mill Strike<br>
+D. Rowlatt Satyagraha
+<br><br>
+
+1. Mill workers<br>
+2. Indigo cultivation<br>
+3. Revenue relief<br>
+4. Protest against a repressive law
+</div>
+
+<label class="option"><input type="radio" name="q26" value="A">A. A-2, B-3, C-1, D-4</label>
+<label class="option"><input type="radio" name="q26" value="B">B. A-3, B-2, C-4, D-1</label>
+<label class="option"><input type="radio" name="q26" value="C">C. A-1, B-4, C-2, D-3</label>
+<label class="option"><input type="radio" name="q26" value="D">D. A-4, B-1, C-3, D-2</label>
+
+<div class="explanation">
+<strong>Correct Answer: A</strong><br>
+Champaran was related to indigo cultivation, Kheda to revenue relief, Ahmedabad to mill workers, and the Rowlatt Satyagraha to opposition to a repressive law.
+</div>
+
+</div>
+
+
+<!-- Q27 -->
+
+<div class="question-card" id="q27">
+
+<div class="question-number">Question 27</div>
+<div class="question-type">Matching</div>
+
+<div class="question">
+Match the following correctly:
+<br><br>
+
+A. Mahatma Gandhi<br>
+B. C. R. Das<br>
+C. Motilal Nehru<br>
+D. Simon Commission
+<br><br>
+
+1. Swaraj Party<br>
+2. Satyagraha<br>
+3. Swaraj Party<br>
+4. No Indian member
+</div>
+
+<label class="option"><input type="radio" name="q27" value="A">A. A-2, B-1, C-3, D-4</label>
+<label class="option"><input type="radio" name="q27" value="B">B. A-1, B-2, C-4, D-3</label>
+<label class="option"><input type="radio" name="q27" value="C">C. A-3, B-4, C-1, D-2</label>
+<label class="option"><input type="radio" name="q27" value="D">D. A-4, B-3, C-2, D-1</label>
+
+<div class="explanation">
+<strong>Correct Answer: A</strong><br>
+Mahatma Gandhi was associated with Satyagraha, while C. R. Das and Motilal Nehru were important leaders of the Swaraj Party. The Simon Commission had no Indian member.
+</div>
+
+</div>
+
+
+<!-- Q28 -->
+
+<div class="question-card" id="q28">
+
+<div class="question-number">Question 28</div>
+<div class="question-type">Chronological Arrangement</div>
+
+<div class="question">
+Arrange the following events in the correct chronological order:
+<br><br>
+
+1. Champaran Satyagraha<br>
+2. Rowlatt Satyagraha<br>
+3. Non-Cooperation Movement<br>
+4. Arrival of the Simon Commission
+</div>
+
+<label class="option"><input type="radio" name="q28" value="A">A. 1 → 2 → 3 → 4</label>
+<label class="option"><input type="radio" name="q28" value="B">B. 2 → 1 → 3 → 4</label>
+<label class="option"><input type="radio" name="q28" value="C">C. 1 → 3 → 2 → 4</label>
+<label class="option"><input type="radio" name="q28" value="D">D. 3 → 1 → 2 → 4</label>
+
+<div class="explanation">
+<strong>Correct Answer: A</strong><br>
+The correct order is Champaran Satyagraha (1917), Rowlatt Satyagraha (1919), Non-Cooperation Movement (1920), and Simon Commission arrival (1928).
+</div>
+
+</div>
+
+
+<!-- Q29 -->
+
+<div class="question-card" id="q29">
+
+<div class="question-number">Question 29</div>
+<div class="question-type">Chronological Arrangement</div>
+
+<div class="question">
+Arrange the following events chronologically:
+<br><br>
+
+1. Ahmedabad Mill Strike<br>
+2. Kheda Satyagraha<br>
+3. Champaran Satyagraha<br>
+4. Rowlatt Satyagraha
+</div>
+
+<label class="option"><input type="radio" name="q29" value="A">A. 3 → 2 → 1 → 4</label>
+<label class="option"><input type="radio" name="q29" value="B">B. 3 → 1 → 2 → 4</label>
+<label class="option"><input type="radio" name="q29" value="C">C. 2 → 3 → 1 → 4</label>
+<label class="option"><input type="radio" name="q29" value="D">D. 1 → 2 → 3 → 4</label>
+
+<div class="explanation">
+<strong>Correct Answer: B</strong><br>
+Champaran took place in 1917, followed by the Ahmedabad Mill Strike and Kheda Satyagraha in 1918, and then the Rowlatt Satyagraha in 1919.
+</div>
+
+</div>
+
+
+<!-- Q30 -->
+
+<div class="question-card" id="q30">
+
+<div class="question-number">Question 30</div>
+<div class="question-type">Chronological Arrangement</div>
+
+<div class="question">
+Arrange the following events in the correct chronological order:
+<br><br>
+
+1. End of the First World War<br>
+2. Rowlatt Act<br>
+3. Non-Cooperation Movement<br>
+4. Formation of the Swaraj Party<br>
+5. Arrival of the Simon Commission
+</div>
+
+<label class="option"><input type="radio" name="q30" value="A">A. 1 → 2 → 3 → 4 → 5</label>
+<label class="option"><input type="radio" name="q30" value="B">B. 2 → 1 → 3 → 4 → 5</label>
+<label class="option"><input type="radio" name="q30" value="C">C. 1 → 3 → 2 → 4 → 5</label>
+<label class="option"><input type="radio" name="q30" value="D">D. 1 → 2 → 4 → 3 → 5</label>
+
+<div class="explanation">
+<strong>Correct Answer: A</strong><br>
+The correct sequence is the end of the First World War (1918), Rowlatt Act (1919), Non-Cooperation Movement (1920), formation of the Swaraj Party (1923), and arrival of the Simon Commission (1928).
+</div>
+
+</div>
+
+
+<!-- SUBMIT -->
+
+<div class="submit-area">
+
+<button type="button" class="submit-btn" onclick="submitTest()">
+Submit Test
+</button>
+
+</div>
+
+</form>
+
+
+<!-- RESULT -->
+
+<div id="result">
+
+<h2>Test Result</h2>
+
+<div class="score" id="scoreText">
+0 / 30
+</div>
+
+<div class="result-details">
+
+<div class="result-box">
+<strong id="correctCount">0</strong>
+Correct
+</div>
+
+<div class="result-box">
+<strong id="wrongCount">0</strong>
+Wrong
+</div>
+
+<div class="result-box">
+<strong id="unattemptedCount">0</strong>
+Unattempted
+</div>
+
+<div class="result-box">
+<strong id="percentage">0%</strong>
+Percentage
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>GSI MANTRA</h2>
+
+<p>
+Class 10 History • Nationalism in India • Practice Set 1
+</p>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+<a href="class10.html">Class 10</a>
+<a href="class10-history.html">History</a>
+<a href="class10-history-chapter2-practice.html">Practice Sets</a>
+
+</div>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+const answers = {
+
+q1:"B",
+q2:"B",
+q3:"B",
+q4:"C",
+q5:"B",
+q6:"B",
+q7:"C",
+q8:"B",
+q9:"B",
+q10:"B",
+q11:"B",
+q12:"B",
+q13:"B",
+q14:"C",
+q15:"A",
+q16:"B",
+q17:"C",
+q18:"B",
+q19:"A",
+q20:"B",
+q21:"D",
+q22:"A",
+q23:"B",
+q24:"D",
+q25:"B",
+q26:"A",
+q27:"A",
+q28:"A",
+q29:"B",
+q30:"A"
+
+};
+
+function submitTest(){
+
+let correct = 0;
+let wrong = 0;
+let unattempted = 0;
+
+for(let i=1;i<=30;i++){
+
+let question = "q" + i;
+
+let selected = document.querySelector(
+'input[name="'+question+'"]:checked'
+);
+
+let card = document.getElementById(question);
+let explanation = card.querySelector(".explanation");
+
+card.classList.remove("correct","wrong");
+
+if(!selected){
+
+unattempted++;
+
+}else if(selected.value === answers[question]){
+
+correct++;
+card.classList.add("correct");
+
+}else{
+
+wrong++;
+card.classList.add("wrong");
+
+}
+
+explanation.style.display="block";
+
+}
+
+let percentage = ((correct/30)*100).toFixed(2);
+
+document.getElementById("scoreText").innerText =
+correct + " / 30";
+
+document.getElementById("correctCount").innerText =
+correct;
+
+document.getElementById("wrongCount").innerText =
+wrong;
+
+document.getElementById("unattemptedCount").innerText =
+unattempted;
+
+document.getElementById("percentage").innerText =
+percentage + "%";
+
+document.getElementById("result").style.display="block";
+
+window.scrollTo({
+top:document.getElementById("result").offsetTop - 20,
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>
+```
