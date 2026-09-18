@@ -1,0 +1,1166 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Practice Set 5 | Nationalism in India | GSI MANTRA</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+    position:relative;
+}
+
+/* ================= WATERMARK ================= */
+
+body::before{
+    content:"GSI MANTRA";
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-30deg);
+    font-size:85px;
+    font-weight:bold;
+    color:rgba(18,60,105,0.045);
+    white-space:nowrap;
+    pointer-events:none;
+    z-index:0;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:25px 20px;
+    position:relative;
+    z-index:1;
+}
+
+.header-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:34px;
+}
+
+.logo p{
+    margin:5px 0 0;
+    font-size:15px;
+}
+
+.search{
+    background:white;
+    padding:10px 15px;
+    border-radius:25px;
+    width:280px;
+}
+
+.search input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+}
+
+/* ================= NAV ================= */
+
+nav{
+    background:#071d33;
+    padding:14px;
+    text-align:center;
+    position:relative;
+    z-index:1;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    background:linear-gradient(135deg,#123c69,#1d5b91);
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+    position:relative;
+    z-index:1;
+}
+
+.hero h2{
+    font-size:34px;
+    margin:0 0 12px;
+}
+
+.hero p{
+    font-size:18px;
+    margin:8px auto;
+    line-height:1.7;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:35px 20px;
+    position:relative;
+    z-index:1;
+}
+
+.info{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    margin-bottom:25px;
+    text-align:center;
+}
+
+.info strong{
+    color:#123c69;
+}
+
+/* ================= SECTION ================= */
+
+.section-title{
+    background:#123c69;
+    color:white;
+    padding:14px 18px;
+    border-radius:10px;
+    margin-top:30px;
+}
+
+/* ================= QUESTION ================= */
+
+.question{
+    background:white;
+    padding:22px;
+    margin:18px 0;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+    border-left:5px solid #123c69;
+}
+
+.question h3{
+    margin-top:0;
+    color:#123c69;
+    line-height:1.5;
+}
+
+.option{
+    display:block;
+    padding:10px 12px;
+    margin:8px 0;
+    background:#f8fafc;
+    border:1px solid #dce4ec;
+    border-radius:8px;
+    cursor:pointer;
+    line-height:1.5;
+}
+
+.option:hover{
+    background:#eef5fb;
+    border-color:#123c69;
+}
+
+.option input{
+    margin-right:10px;
+}
+
+/* ================= PASSAGE ================= */
+
+.passage{
+    background:#fff8e8;
+    border-left:5px solid #f28c00;
+    padding:20px;
+    border-radius:10px;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.passage strong{
+    color:#8a5700;
+}
+
+/* ================= MATCHING ================= */
+
+.match-table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+.match-table th,
+.match-table td{
+    border:1px solid #ccd6e0;
+    padding:10px;
+    text-align:left;
+}
+
+.match-table th{
+    background:#123c69;
+    color:white;
+}
+
+/* ================= SUBMIT ================= */
+
+.submit-box{
+    text-align:center;
+    margin:40px 0;
+}
+
+.submit-btn{
+    background:#f28c00;
+    color:white;
+    border:none;
+    padding:15px 40px;
+    border-radius:9px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+    background:#d97700;
+}
+
+/* ================= RESULT ================= */
+
+#result{
+    display:none;
+    background:linear-gradient(135deg,#e8f5e9,#f4fff5);
+    border:2px solid #65a765;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+#score{
+    font-size:30px;
+    color:#123c69;
+    font-weight:bold;
+}
+
+/* ================= EXPLANATION ================= */
+
+.explanation{
+    display:none;
+    background:#f8fafc;
+    border-top:3px solid #f28c00;
+    padding:15px;
+    margin-top:15px;
+    border-radius:8px;
+}
+
+.correct{
+    color:green;
+    font-weight:bold;
+}
+
+.wrong{
+    color:#c62828;
+    font-weight:bold;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    margin-top:50px;
+    position:relative;
+    z-index:1;
+}
+
+footer h2{
+    margin-top:0;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+.footer-links a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+    .header-content{
+        flex-direction:column;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    .hero h2{
+        font-size:27px;
+    }
+
+    .container{
+        padding:25px 12px;
+    }
+
+    .question{
+        padding:17px;
+    }
+
+    .match-table{
+        font-size:14px;
+    }
+
+    body::before{
+        font-size:50px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="header-content">
+
+<div class="logo">
+
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+
+<div>
+<h1>GSI MANTRA</h1>
+<p>Competitive Education & NCERT Learning Platform</p>
+</div>
+
+</div>
+
+<div class="search">
+<input type="text" placeholder="Search GSI MANTRA...">
+</div>
+
+</div>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="class10.html">Class 10</a>
+<a href="class10-history.html">History</a>
+<a href="class10-history-chapter2-practice.html">Practice Sets</a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h2>Nationalism in India</h2>
+
+<p>Practice Set 5 — English Medium</p>
+
+<p>Class 10 History • Advanced Level</p>
+
+</section>
+
+
+<div class="container">
+
+<!-- INFO -->
+
+<div class="info">
+
+<p><strong>Class:</strong> 10</p>
+<p><strong>Subject:</strong> History</p>
+<p><strong>Chapter:</strong> Nationalism in India</p>
+<p><strong>Practice Set:</strong> 5</p>
+<p><strong>Total Questions:</strong> 30</p>
+<p><strong>Total Marks:</strong> 30</p>
+<p><strong>Level:</strong> NCERT + Board + Advanced</p>
+
+</div>
+
+
+<form id="quizForm">
+
+<!-- ================= SECTION A ================= -->
+
+<h2 class="section-title">
+Section A: Multiple Choice Questions
+</h2>
+
+
+<div class="question">
+<h3>Q1. During the Civil Disobedience Movement, which specific grievance driven by economic distress united the rich peasant communities like the Patidars of Gujarat and the Jats of Uttar Pradesh?</h3>
+
+<label class="option"><input type="radio" name="q1" value="A"> A) The demand for complete remission of agricultural rents owed to landlords.</label>
+<label class="option"><input type="radio" name="q1" value="B"> B) The refusal of the colonial government to reduce high land-revenue demands during a severe trade depression.</label>
+<label class="option"><input type="radio" name="q1" value="C"> C) The imposition of forest laws that prevented them from grazing their cattle in reserved areas.</label>
+<label class="option"><input type="radio" name="q1" value="D"> D) The lack of protective tariffs against foreign agricultural imports affecting commercial crop prices.</label>
+
+<div class="explanation" id="e1">
+<strong>Correct Answer: B</strong><br>
+Rich peasants were badly affected by falling agricultural prices and economic depression. They demanded reduction in land revenue because they found it difficult to pay the fixed revenue demands.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q2. What was the primary motivation behind Indian industrialists forming bodies like the Indian Industrial and Commercial Congress (1920) and FICCI (1927)?</h3>
+
+<label class="option"><input type="radio" name="q2" value="A"> A) To support the radical socialist agenda spreading among younger Congress members.</label>
+<label class="option"><input type="radio" name="q2" value="B"> B) To organize nationwide working-class strikes in railway networks and dockyards.</label>
+<label class="option"><input type="radio" name="q2" value="C"> C) To protect business interests against colonial policies and demand a favourable rupee-sterling exchange ratio.</label>
+<label class="option"><input type="radio" name="q2" value="D"> D) To independently fund salt manufacturing factories.</label>
+
+<div class="explanation" id="e2">
+<strong>Correct Answer: C</strong><br>
+Indian industrialists wanted protection from colonial economic policies and supported measures that would protect Indian business and industry.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q3. Which region saw significant participation from the industrial working class during the Civil Disobedience Movement?</h3>
+
+<label class="option"><input type="radio" name="q3" value="A"> A) Sholapur region</label>
+<label class="option"><input type="radio" name="q3" value="B"> B) Nagpur region</label>
+<label class="option"><input type="radio" name="q3" value="C"> C) Chotanagpur region</label>
+<label class="option"><input type="radio" name="q3" value="D"> D) Peshawar region</label>
+
+<div class="explanation" id="e3">
+<strong>Correct Answer: A</strong><br>
+The textbook specifically notes significant participation of workers in Sholapur, where workers attacked symbols of British authority.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q4. Despite large-scale participation of women in protest marches, salt manufacturing and boycotts, what was the general stance of Congress regarding their role?</h3>
+
+<label class="option"><input type="radio" name="q4" value="A"> A) Congress rapidly appointed women to top executive positions.</label>
+<label class="option"><input type="radio" name="q4" value="B"> B) Congress insisted on equal reservation in provincial councils.</label>
+<label class="option"><input type="radio" name="q4" value="C"> C) Congress was reluctant to allow women positions of authority, although their participation was encouraged.</label>
+<label class="option"><input type="radio" name="q4" value="D"> D) Congress completely barred women from urban rallies.</label>
+
+<div class="explanation" id="e4">
+<strong>Correct Answer: C</strong><br>
+Women participated actively in the movement, but the Congress was generally reluctant to give them positions of authority within the organisation.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q5. Why did the Indian National Congress ignore the grievances of the 'dalits' or untouchables for a long period?</h3>
+
+<label class="option"><input type="radio" name="q5" value="A"> A) For fear of offending conservative high-caste Hindus or Sanatanis.</label>
+<label class="option"><input type="radio" name="q5" value="B"> B) Because dalit leaders were fully aligned with the British from the start.</label>
+<label class="option"><input type="radio" name="q5" value="C"> C) Because dalits refused to adopt Swaraj.</label>
+<label class="option"><input type="radio" name="q5" value="D"> D) Because Congress focused exclusively on industrial workers.</label>
+
+<div class="explanation" id="e5">
+<strong>Correct Answer: A</strong><br>
+Congress was cautious about raising issues concerning untouchability because it feared alienating conservative high-caste Hindu groups.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q6. Who published the four-volume collection of Tamil folk tales titled <i>The Folklore of Southern India</i>?</h3>
+
+<label class="option"><input type="radio" name="q6" value="A"> A) Bankim Chandra Chattopadhyay</label>
+<label class="option"><input type="radio" name="q6" value="B"> B) Abanindranath Tagore</label>
+<label class="option"><input type="radio" name="q6" value="C"> C) Natesa Sastri</label>
+<label class="option"><input type="radio" name="q6" value="D"> D) Rabindranath Tagore</label>
+
+<div class="explanation" id="e6">
+<strong>Correct Answer: C</strong><br>
+Natesa Sastri published a massive four-volume collection of Tamil folk tales and regarded folklore as an important form of national literature.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q7. What design element distinguished the Swaraj flag designed by Mahatma Gandhi in 1921?</h3>
+
+<label class="option"><input type="radio" name="q7" value="A"> A) Eight lotuses representing the provinces</label>
+<label class="option"><input type="radio" name="q7" value="B"> B) A spinning wheel in the centre</label>
+<label class="option"><input type="radio" name="q7" value="C"> C) A crescent moon and trident</label>
+<label class="option"><input type="radio" name="q7" value="D"> D) Red, green and yellow colours</label>
+
+<div class="explanation" id="e7">
+<strong>Correct Answer: B</strong><br>
+The Swaraj flag designed by Gandhi in 1921 had a spinning wheel at the centre, symbolising self-help and the importance of khadi.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q8. At the All Parties Conference in 1928, negotiations over Hindu-Muslim representation faced strong opposition from which leader?</h3>
+
+<label class="option"><input type="radio" name="q8" value="A"> A) Muhammad Ali Jinnah</label>
+<label class="option"><input type="radio" name="q8" value="B"> B) Sir Muhammad Iqbal</label>
+<label class="option"><input type="radio" name="q8" value="C"> C) M.R. Jayakar</label>
+<label class="option"><input type="radio" name="q8" value="D"> D) Purshottamdas Thakurdas</label>
+
+<div class="explanation" id="e8">
+<strong>Correct Answer: C</strong><br>
+M.R. Jayakar of the Hindu Mahasabha strongly opposed the compromise efforts at the All Parties Conference in 1928.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q9. How is Bharat Mata portrayed in Abanindranath Tagore's famous painting?</h3>
+
+<label class="option"><input type="radio" name="q9" value="A"> A) As a fierce warrior goddess riding a lion</label>
+<label class="option"><input type="radio" name="q9" value="B"> B) As a calm, composed, divine and spiritual ascetic figure</label>
+<label class="option"><input type="radio" name="q9" value="C"> C) As a modern industrial worker</label>
+<label class="option"><input type="radio" name="q9" value="D"> D) As a rural peasant woman standing beside a spinning wheel</label>
+
+<div class="explanation" id="e9">
+<strong>Correct Answer: B</strong><br>
+Abanindranath Tagore portrayed Bharat Mata as an ascetic figure who was calm, composed, divine and spiritual.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q10. Why did rich peasant communities refuse to participate when Gandhi restarted the Civil Disobedience Movement in 1932?</h3>
+
+<label class="option"><input type="radio" name="q10" value="A"> A) They were disappointed that the movement had been called off without achieving their demand for revenue revision.</label>
+<label class="option"><input type="radio" name="q10" value="B"> B) They had negotiated a separate settlement with Lord Irwin.</label>
+<label class="option"><input type="radio" name="q10" value="C"> C) They were threatened with excommunication.</label>
+<label class="option"><input type="radio" name="q10" value="D"> D) They shifted completely to socialist factions.</label>
+
+<div class="explanation" id="e10">
+<strong>Correct Answer: A</strong><br>
+Rich peasants were disappointed because their major demand concerning revenue reduction had not been achieved before the movement was withdrawn in 1931.
+</div>
+</div>
+
+
+<!-- ================= SECTION B ================= -->
+
+<h2 class="section-title">
+Section B: Chronological & Arrangement Questions
+</h2>
+
+
+<div class="question">
+<h3>Q11. Arrange the following events in correct chronological order:</h3>
+
+<p>1. Launch of Civil Disobedience by breaking the salt law at Dandi.</p>
+<p>2. Relaunch of Civil Disobedience after Gandhi returned from London.</p>
+<p>3. Gandhi-Irwin Pact.</p>
+<p>4. Arrest of Abdul Ghaffar Khan in Peshawar.</p>
+
+<label class="option"><input type="radio" name="q11" value="A"> A) 1 — 4 — 3 — 2</label>
+<label class="option"><input type="radio" name="q11" value="B"> B) 4 — 1 — 2 — 3</label>
+<label class="option"><input type="radio" name="q11" value="C"> C) 1 — 3 — 4 — 2</label>
+<label class="option"><input type="radio" name="q11" value="D"> D) 4 — 1 — 3 — 2</label>
+
+<div class="explanation" id="e11">
+<strong>Correct Answer: A</strong><br>
+Dandi Salt March and salt law violation occurred first, followed by the arrest of Abdul Ghaffar Khan, Gandhi-Irwin Pact in March 1931, and the relaunch of the movement in 1932.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q12. Arrange the following in ascending chronological order:</h3>
+
+<p>1. Formation of FICCI</p>
+<p>2. Designing of Swaraj flag by Gandhi</p>
+<p>3. Formation of Depressed Classes Association</p>
+<p>4. Publication of The Folklore of Southern India</p>
+
+<label class="option"><input type="radio" name="q12" value="A"> A) 4 — 2 — 1 — 3</label>
+<label class="option"><input type="radio" name="q12" value="B"> B) 2 — 4 — 3 — 1</label>
+<label class="option"><input type="radio" name="q12" value="C"> C) 4 — 1 — 2 — 3</label>
+<label class="option"><input type="radio" name="q12" value="D"> D) 2 — 1 — 4 — 3</label>
+
+<div class="explanation" id="e12">
+<strong>Correct Answer: A</strong><br>
+Natesa Sastri's folklore work came first, followed by the 1921 Swaraj flag, FICCI in 1927 and the Depressed Classes Association in 1930.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q13. Identify the correct chronological sequence:</h3>
+
+<p>1. Poona Pact</p>
+<p>2. Breakdown of Hindu-Muslim representation negotiations at the All Parties Conference</p>
+<p>3. Clash between Gandhi and Ambedkar at the Second Round Table Conference</p>
+<p>4. Jinnah's proposal regarding separate electorates</p>
+
+<label class="option"><input type="radio" name="q13" value="A"> A) 4 — 2 — 3 — 1</label>
+<label class="option"><input type="radio" name="q13" value="B"> B) 2 — 4 — 1 — 3</label>
+<label class="option"><input type="radio" name="q13" value="C"> C) 4 — 3 — 2 — 1</label>
+<label class="option"><input type="radio" name="q13" value="D"> D) 2 — 1 — 4 — 3</label>
+
+<div class="explanation" id="e13">
+<strong>Correct Answer: A</strong><br>
+Jinnah's proposal came before the 1928 All Parties Conference breakdown, followed by the Second Round Table Conference in 1931 and the Poona Pact in September 1932.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q14. Arrange the following events chronologically:</h3>
+
+<p>1. Industrial workers in Sholapur attacked police posts.</p>
+<p>2. Arrest of Mahatma Gandhi.</p>
+<p>3. Violent clashes in Peshawar following Abdul Ghaffar Khan's arrest.</p>
+<p>4. Large-scale arrests by the colonial government.</p>
+
+<label class="option"><input type="radio" name="q14" value="A"> A) 3 — 2 — 1 — 4</label>
+<label class="option"><input type="radio" name="q14" value="B"> B) 2 — 3 — 1 — 4</label>
+<label class="option"><input type="radio" name="q14" value="C"> C) 3 — 1 — 2 — 4</label>
+<label class="option"><input type="radio" name="q14" value="D"> D) 1 — 2 — 3 — 4</label>
+
+<div class="explanation" id="e14">
+<strong>Correct Answer: A</strong><br>
+The Peshawar events followed Ghaffar Khan's arrest, Gandhi was arrested soon after, and Sholapur witnessed violent worker action during the same phase of repression.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q15. Arrange the following milestones from earliest to latest:</h3>
+
+<p>1. Strike by dockworkers</p>
+<p>2. Strike by railway workers</p>
+<p>3. Workers in Chotanagpur tin mines wore Gandhi caps</p>
+<p>4. Formation of Indian Industrial and Commercial Congress</p>
+
+<label class="option"><input type="radio" name="q15" value="A"> A) 4 — 2 — 3 — 1</label>
+<label class="option"><input type="radio" name="q15" value="B"> B) 4 — 3 — 2 — 1</label>
+<label class="option"><input type="radio" name="q15" value="C"> C) 2 — 4 — 1 — 3</label>
+<label class="option"><input type="radio" name="q15" value="D"> D) 2 — 1 — 4 — 3</label>
+
+<div class="explanation" id="e15">
+<strong>Correct Answer: A</strong><br>
+The Indian Industrial and Commercial Congress was formed in 1920. Railway workers and Chotanagpur workers participated in 1930, while dockworkers struck in 1932.
+</div>
+</div>
+
+
+<!-- ================= SECTION C ================= -->
+
+<h2 class="section-title">
+Section C: Matching Questions
+</h2>
+
+
+<div class="question">
+<h3>Q16. Match the social groups with their aspirations:</h3>
+
+<table class="match-table">
+<tr><th>Column I</th><th>Column II</th></tr>
+<tr><td>1. Rich Peasants</td><td>a. Wanted unpaid rent remitted</td></tr>
+<tr><td>2. Poorer Peasantry</td><td>b. Reduction of high land-revenue demands</td></tr>
+<tr><td>3. Business Classes</td><td>c. Remained largely aloof</td></tr>
+<tr><td>4. Industrial Working Class</td><td>d. Protection against foreign imports</td></tr>
+</table>
+
+<label class="option"><input type="radio" name="q16" value="A"> A) 1-b, 2-a, 3-d, 4-c</label>
+<label class="option"><input type="radio" name="q16" value="B"> B) 1-b, 2-d, 3-a, 4-c</label>
+<label class="option"><input type="radio" name="q16" value="C"> C) 1-a, 2-b, 3-c, 4-d</label>
+<label class="option"><input type="radio" name="q16" value="D"> D) 1-c, 2-a, 3-d, 4-b</label>
+
+<div class="explanation" id="e16">
+<strong>Correct Answer: A</strong><br>
+Rich peasants demanded revenue reduction, poorer peasants wanted rent relief, business classes sought protection from imports, and workers were generally less involved.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q17. Match the personalities with their roles:</h3>
+
+<table class="match-table">
+<tr><th>Personality</th><th>Role / Contribution</th></tr>
+<tr><td>1. Abdul Ghaffar Khan</td><td>a. Opposed compromise at All Parties Conference</td></tr>
+<tr><td>2. Dr. B.R. Ambedkar</td><td>b. Disciple of Gandhi whose arrest led to Peshawar protests</td></tr>
+<tr><td>3. M.R. Jayakar</td><td>c. Formed Depressed Classes Association</td></tr>
+<tr><td>4. Muhammad Ali Jinnah</td><td>d. Proposed compromise regarding reserved seats</td></tr>
+</table>
+
+<label class="option"><input type="radio" name="q17" value="A"> A) 1-b, 2-c, 3-a, 4-d</label>
+<label class="option"><input type="radio" name="q17" value="B"> B) 1-b, 2-a, 3-c, 4-d</label>
+<label class="option"><input type="radio" name="q17" value="C"> C) 1-c, 2-b, 3-d, 4-a</label>
+<label class="option"><input type="radio" name="q17" value="D"> D) 1-d, 2-c, 3-a, 4-b</label>
+
+<div class="explanation" id="e17">
+<strong>Correct Answer: A</strong><br>
+Ghaffar Khan was associated with the Peshawar movement, Ambedkar with the Depressed Classes Association, Jayakar opposed compromise, and Jinnah proposed a compromise over electorates.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q18. Match the cultural elements with their creators or context:</h3>
+
+<table class="match-table">
+<tr><th>Cultural Element</th><th>Creator / Context</th></tr>
+<tr><td>1. Bharat Mata as an ascetic</td><td>a. Bankim Chandra Chattopadhyay</td></tr>
+<tr><td>2. Vande Mataram</td><td>b. Swadeshi Movement in Bengal</td></tr>
+<tr><td>3. Flag with eight lotuses</td><td>c. Abanindranath Tagore</td></tr>
+<tr><td>4. Flag with central spinning wheel</td><td>d. Mahatma Gandhi (1921)</td></tr>
+</table>
+
+<label class="option"><input type="radio" name="q18" value="A"> A) 1-c, 2-a, 3-b, 4-d</label>
+<label class="option"><input type="radio" name="q18" value="B"> B) 1-a, 2-c, 3-b, 4-d</label>
+<label class="option"><input type="radio" name="q18" value="C"> C) 1-c, 2-b, 3-a, 4-d</label>
+<label class="option"><input type="radio" name="q18" value="D"> D) 1-d, 2-a, 3-b, 4-c</label>
+
+<div class="explanation" id="e18">
+<strong>Correct Answer: A</strong><br>
+Bharat Mata was painted by Abanindranath Tagore, Vande Mataram was written by Bankim Chandra Chattopadhyay, the eight-lotus flag was linked to the Swadeshi period, and Gandhi's 1921 flag carried the spinning wheel.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q19. Match the dates with the historical events:</h3>
+
+<table class="match-table">
+<tr><th>Date</th><th>Event</th></tr>
+<tr><td>1. April 1930</td><td>a. Gandhi-Irwin Pact</td></tr>
+<tr><td>2. March 1931</td><td>b. Abdul Ghaffar Khan arrested</td></tr>
+<tr><td>3. December 1931</td><td>c. Poona Pact</td></tr>
+<tr><td>4. September 1932</td><td>d. Second Round Table Conference period</td></tr>
+</table>
+
+<label class="option"><input type="radio" name="q19" value="A"> A) 1-b, 2-a, 3-d, 4-c</label>
+<label class="option"><input type="radio" name="q19" value="B"> B) 1-a, 2-b, 3-c, 4-d</label>
+<label class="option"><input type="radio" name="q19" value="C"> C) 1-b, 2-d, 3-a, 4-c</label>
+<label class="option"><input type="radio" name="q19" value="D"> D) 1-c, 2-a, 3-b, 4-d</label>
+
+<div class="explanation" id="e19">
+<strong>Correct Answer: A</strong><br>
+April 1930 saw the Peshawar events and arrest of Ghaffar Khan; the Gandhi-Irwin Pact was signed in March 1931; Gandhi attended the Second Round Table Conference in 1931; and the Poona Pact was signed in September 1932.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q20. Match the organisations with key figures:</h3>
+
+<table class="match-table">
+<tr><th>Organisation</th><th>Key Figure / Figures</th></tr>
+<tr><td>1. FICCI</td><td>a. Purshottamdas Thakurdas and G.D. Birla</td></tr>
+<tr><td>2. Depressed Classes Association</td><td>b. Dr. B.R. Ambedkar</td></tr>
+<tr><td>3. Muslim League</td><td>c. Muhammad Ali Jinnah and Sir Muhammad Iqbal</td></tr>
+<tr><td>4. Hindu Mahasabha</td><td>d. M.R. Jayakar</td></tr>
+</table>
+
+<label class="option"><input type="radio" name="q20" value="A"> A) 1-a, 2-b, 3-c, 4-d</label>
+<label class="option"><input type="radio" name="q20" value="B"> B) 1-b, 2-a, 3-d, 4-c</label>
+<label class="option"><input type="radio" name="q20" value="C"> C) 1-a, 2-c, 3-b, 4-d</label>
+<label class="option"><input type="radio" name="q20" value="D"> D) 1-d, 2-b, 3-c, 4-a</label>
+
+<div class="explanation" id="e20">
+<strong>Correct Answer: A</strong><br>
+FICCI was associated with Indian industrialists including Purshottamdas Thakurdas and G.D. Birla; Ambedkar formed the Depressed Classes Association; Jinnah and Iqbal were important Muslim League figures; and Jayakar was associated with the Hindu Mahasabha.
+</div>
+</div>
+
+
+<!-- ================= SECTION D ================= -->
+
+<h2 class="section-title">
+Section D: Assertion & Reason
+</h2>
+
+
+<div class="info">
+<strong>Directions:</strong><br>
+A) Both A and R are true and R is the correct explanation of A.<br>
+B) Both A and R are true but R is not the correct explanation of A.<br>
+C) A is true but R is false.<br>
+D) A is false but R is true.
+</div>
+
+
+<div class="question">
+<h3>Q21. Assertion: Congress was reluctant to support 'no rent' campaigns organized by poorer peasants.</h3>
+
+<p><strong>Reason:</strong> Congress was apprehensive of upsetting rich peasants and landlords who were important supporters.</p>
+
+<label class="option"><input type="radio" name="q21" value="A"> A) Both A and R are true and R is the correct explanation.</label>
+<label class="option"><input type="radio" name="q21" value="B"> B) Both are true but R is not the explanation.</label>
+<label class="option"><input type="radio" name="q21" value="C"> C) A is true but R is false.</label>
+<label class="option"><input type="radio" name="q21" value="D"> D) A is false but R is true.</label>
+
+<div class="explanation" id="e21">
+<strong>Correct Answer: A</strong><br>
+Congress was cautious because stronger action against landlords and revenue demands could create divisions among groups participating in the national movement.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q22. Assertion: Large sections of Muslims remained alienated from Congress during the Civil Disobedience Movement.</h3>
+
+<p><strong>Reason:</strong> From the mid-1920s, Congress became more visibly associated with Hindu religious nationalist groups such as the Hindu Mahasabha.</p>
+
+<label class="option"><input type="radio" name="q22" value="A"> A) Both A and R are true and R is the correct explanation.</label>
+<label class="option"><input type="radio" name="q22" value="B"> B) Both are true but R is not the explanation.</label>
+<label class="option"><input type="radio" name="q22" value="C"> C) A is true but R is false.</label>
+<label class="option"><input type="radio" name="q22" value="D"> D) A is false but R is true.</label>
+
+<div class="explanation" id="e22">
+<strong>Correct Answer: A</strong><br>
+The growing visibility of Hindu religious nationalist groups and disagreements over political representation contributed to Muslim political alienation from Congress.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q23. Assertion: Dr. B.R. Ambedkar ultimately accepted Gandhi's position and signed the Poona Pact in September 1932.</h3>
+
+<p><strong>Reason:</strong> Gandhi began a fast unto death because he believed separate electorates for dalits would accelerate their integration into mainstream society.</p>
+
+<label class="option"><input type="radio" name="q23" value="A"> A) Both A and R are true and R is the correct explanation.</label>
+<label class="option"><input type="radio" name="q23" value="B"> B) Both are true but R is not the explanation.</label>
+<label class="option"><input type="radio" name="q23" value="C"> C) A is true but R is false.</label>
+<label class="option"><input type="radio" name="q23" value="D"> D) A is false but R is true.</label>
+
+<div class="explanation" id="e23">
+<strong>Correct Answer: C</strong><br>
+The Assertion is true. However, Gandhi opposed separate electorates because he believed they would slow or weaken the integration of dalits within Hindu society, not accelerate it.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q24. Assertion: After the breakdown of the Round Table Conference, Gandhi immediately and successfully concluded the Civil Disobedience Movement with complete Swaraj.</h3>
+
+<p><strong>Reason:</strong> Upon returning to India, Gandhi found that the colonial government had begun a new cycle of repression, including arrests of Congress leaders.</p>
+
+<label class="option"><input type="radio" name="q24" value="A"> A) Both A and R are true and R is the correct explanation.</label>
+<label class="option"><input type="radio" name="q24" value="B"> B) Both are true but R is not the explanation.</label>
+<label class="option"><input type="radio" name="q24" value="C"> C) A is true but R is false.</label>
+<label class="option"><input type="radio" name="q24" value="D"> D) A is false but R is true.</label>
+
+<div class="explanation" id="e24">
+<strong>Correct Answer: D</strong><br>
+The Assertion is false. The movement was not immediately concluded with complete Swaraj. The Reason is true because the colonial government responded with renewed repression and arrests.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q25. Assertion: Nationalist leaders focused heavily on reinterpretation of history to create a sense of national pride.</h3>
+
+<p><strong>Reason:</strong> British writers had portrayed Indians as advanced, self-governing and highly capable without Western intervention.</p>
+
+<label class="option"><input type="radio" name="q25" value="A"> A) Both A and R are true and R is the correct explanation.</label>
+<label class="option"><input type="radio" name="q25" value="B"> B) Both are true but R is not the explanation.</label>
+<label class="option"><input type="radio" name="q25" value="C"> C) A is true but R is false.</label>
+<label class="option"><input type="radio" name="q25" value="D"> D) A is false but R is true.</label>
+
+<div class="explanation" id="e25">
+<strong>Correct Answer: C</strong><br>
+Nationalists did reinterpret Indian history to develop pride and confidence. The Reason is false because colonial writers generally portrayed Indians as backward and incapable of self-government.
+</div>
+</div>
+
+
+<!-- ================= SECTION E ================= -->
+
+<h2 class="section-title">
+Section E: Passage-Based Questions
+</h2>
+
+
+<div class="passage">
+
+<strong>Read the passage carefully:</strong><br><br>
+
+"As the industrialist came closer to the Congress, workers stayed aloof.
+But in spite of that, some workers did participate in the Civil Disobedience
+Movement, selectively adopting some of the ideas of the Gandhian programme,
+like boycott of foreign goods, as part of their own movements against low
+wages and poor working conditions. There were strikes by railway workers in
+1930 and dockworkers in 1932. In 1930 thousands of workers in Chotanagpur
+tin mines wore Gandhi caps and participated in protest rallies and boycott
+campaigns. But the Congress was reluctant to include workers' demands as
+part of its programme of struggle. It felt that this would alienate
+industrialists and divide the anti-imperial forces."
+
+</div>
+
+
+<div class="question">
+<h3>Q26. Based on the passage, what was the primary reason for the general aloofness of industrial workers?</h3>
+
+<label class="option"><input type="radio" name="q26" value="A"> A) They did not believe in non-violent satyagraha.</label>
+<label class="option"><input type="radio" name="q26" value="B"> B) They felt alienated because Congress was moving closer to industrialists.</label>
+<label class="option"><input type="radio" name="q26" value="C"> C) They were satisfied with wages and working conditions.</label>
+<label class="option"><input type="radio" name="q26" value="D"> D) They were prohibited from wearing Gandhi caps.</label>
+
+<div class="explanation" id="e26">
+<strong>Correct Answer: B</strong><br>
+The passage directly states that as industrialists came closer to Congress, workers stayed aloof.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q27. How did participating working-class groups modify the Gandhian programme?</h3>
+
+<label class="option"><input type="radio" name="q27" value="A"> A) They completely rejected boycott of foreign goods.</label>
+<label class="option"><input type="radio" name="q27" value="B"> B) They combined Gandhian methods with their own agitations against low wages and poor working conditions.</label>
+<label class="option"><input type="radio" name="q27" value="C"> C) They demanded a ban on Indian industrial ownership.</label>
+<label class="option"><input type="radio" name="q27" value="D"> D) They avoided strikes completely.</label>
+
+<div class="explanation" id="e27">
+<strong>Correct Answer: B</strong><br>
+Workers selectively adopted Gandhian methods such as boycotts while continuing to raise their own workplace demands.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q28. Which pair correctly identifies the large-scale sector strikes mentioned in the passage?</h3>
+
+<label class="option"><input type="radio" name="q28" value="A"> A) Chotanagpur mine strikes in 1930 and railway strikes in 1932</label>
+<label class="option"><input type="radio" name="q28" value="B"> B) Railway workers' strike in 1930 and dockworkers' strike in 1932</label>
+<label class="option"><input type="radio" name="q28" value="C"> C) Dockworkers' strike in 1930 and textile workers' strike in 1932</label>
+<label class="option"><input type="radio" name="q28" value="D"> D) Nagpur industrial strike in 1930 and Sholapur mine strikes in 1932</label>
+
+<div class="explanation" id="e28">
+<strong>Correct Answer: B</strong><br>
+The passage specifically mentions railway workers' strikes in 1930 and dockworkers' strikes in 1932.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q29. What strategic dilemma did Congress face regarding working-class demands?</h3>
+
+<label class="option"><input type="radio" name="q29" value="A"> A) It feared that workers' demands would merge the movement with British policies.</label>
+<label class="option"><input type="radio" name="q29" value="B"> B) It feared that addressing workers' issues would alienate industrialists and divide the anti-imperial movement.</label>
+<label class="option"><input type="radio" name="q29" value="C"> C) It believed workers' demands were too spiritual.</label>
+<label class="option"><input type="radio" name="q29" value="D"> D) It worried that peasants would protest against workers.</label>
+
+<div class="explanation" id="e29">
+<strong>Correct Answer: B</strong><br>
+Congress feared that strong support for workers' demands could alienate industrialists and weaken unity against colonial rule.
+</div>
+</div>
+
+
+<div class="question">
+<h3>Q30. Workers of which region wore Gandhi caps during their participation in 1930?</h3>
+
+<label class="option"><input type="radio" name="q30" value="A"> A) Nagpur industrial zone</label>
+<label class="option"><input type="radio" name="q30" value="B"> B) Sholapur municipal area</label>
+<label class="option"><input type="radio" name="q30" value="C"> C) Chotanagpur tin mines</label>
+<label class="option"><input type="radio" name="q30" value="D"> D) Peshawar frontier province</label>
+
+<div class="explanation" id="e30">
+<strong>Correct Answer: C</strong><br>
+The passage specifically states that thousands of workers in the Chotanagpur tin mines wore Gandhi caps and participated in protest rallies and boycott campaigns.
+</div>
+</div>
+
+
+<!-- ================= SUBMIT ================= -->
+
+<div class="submit-box">
+
+<button type="button" class="submit-btn" onclick="submitQuiz()">
+Submit Test
+</button>
+
+</div>
+
+</form>
+
+
+<!-- ================= RESULT ================= -->
+
+<div id="result">
+
+<h2>🎯 Test Result</h2>
+
+<p id="score"></p>
+
+<p id="message"></p>
+
+</div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h2>GSI MANTRA</h2>
+
+<p>
+Class 10 History • Nationalism in India • Practice Set 5
+</p>
+
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="class10.html">Class 10</a>
+<a href="class10-history.html">History</a>
+<a href="class10-history-chapter2-practice.html">Practice Sets</a>
+</div>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+function submitQuiz(){
+
+const answers = {
+
+q1:"B",
+q2:"C",
+q3:"A",
+q4:"C",
+q5:"A",
+q6:"C",
+q7:"B",
+q8:"C",
+q9:"B",
+q10:"A",
+
+q11:"A",
+q12:"A",
+q13:"A",
+q14:"A",
+q15:"A",
+
+q16:"A",
+q17:"A",
+q18:"A",
+q19:"A",
+q20:"A",
+
+q21:"A",
+q22:"A",
+q23:"C",
+q24:"D",
+q25:"C",
+
+q26:"B",
+q27:"B",
+q28:"B",
+q29:"B",
+q30:"C"
+
+};
+
+let score = 0;
+let attempted = 0;
+
+for(let i=1;i<=30;i++){
+
+let selected = document.querySelector(
+'input[name="q'+i+'"]:checked'
+);
+
+if(selected){
+attempted++;
+
+if(selected.value === answers["q"+i]){
+score++;
+}
+}
+
+}
+
+document.getElementById("result").style.display="block";
+
+document.getElementById("score").innerHTML =
+"Your Score: " + score + " / 30";
+
+document.getElementById("message").innerHTML =
+"Attempted: " + attempted + " / 30";
+
+for(let i=1;i<=30;i++){
+
+document.getElementById("e"+i).style.display="block";
+
+}
+
+window.scrollTo({
+top:document.getElementById("result").offsetTop - 20,
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>
+```
