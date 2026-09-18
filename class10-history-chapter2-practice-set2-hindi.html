@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Practice Set 2 | Nationalism in India | GSI MANTRA</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, "Noto Sans Devanagari", sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+/* WATERMARK */
+
+body::before{
+    content:"GSI MANTRA";
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-30deg);
+    font-size:75px;
+    font-weight:bold;
+    color:rgba(18,60,105,0.045);
+    white-space:nowrap;
+    pointer-events:none;
+    z-index:0;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:22px 20px;
+    position:relative;
+    z-index:1;
+}
+
+.header-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:65px;
+    height:65px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:32px;
+}
+
+.logo p{
+    margin:5px 0 0;
+    font-size:14px;
+}
+
+.search{
+    background:white;
+    padding:10px 15px;
+    border-radius:25px;
+    width:280px;
+}
+
+.search input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+}
+
+/* NAV */
+
+nav{
+    background:#071d33;
+    padding:14px;
+    text-align:center;
+    position:relative;
+    z-index:1;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#123c69,#1d5b91);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+    position:relative;
+    z-index:1;
+}
+
+.hero h2{
+    font-size:34px;
+    margin:0 0 12px;
+}
+
+.hero p{
+    font-size:18px;
+    margin:8px auto;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:35px 20px;
+    position:relative;
+    z-index:1;
+}
+
+/* TEST INFO */
+
+.test-info{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:25px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    text-align:center;
+}
+
+.test-info div{
+    padding:12px;
+    border-right:1px solid #ddd;
+}
+
+.test-info div:last-child{
+    border-right:none;
+}
+
+.test-info strong{
+    display:block;
+    color:#123c69;
+    margin-bottom:5px;
+}
+
+/* SECTION */
+
+.section-title{
+    background:#123c69;
+    color:white;
+    padding:14px 18px;
+    border-radius:10px;
+    margin-top:30px;
+}
+
+/* QUESTION */
+
+.question{
+    background:white;
+    padding:22px;
+    margin:18px 0;
+    border-radius:14px;
+    box-shadow:0 4px 14px rgba(0,0,0,.07);
+    border-left:5px solid #123c69;
+}
+
+.question h3{
+    margin-top:0;
+    color:#123c69;
+    font-size:18px;
+    line-height:1.6;
+}
+
+.options label{
+    display:block;
+    padding:10px;
+    margin:7px 0;
+    background:#f7f9fc;
+    border:1px solid #e0e6ed;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.options label:hover{
+    background:#eef5ff;
+    border-color:#123c69;
+}
+
+.options input{
+    margin-right:8px;
+}
+
+/* PASSAGE */
+
+.passage{
+    background:#fff8e8;
+    border-left:5px solid #f28c00;
+    padding:18px;
+    border-radius:10px;
+    line-height:1.8;
+    margin-bottom:18px;
+}
+
+/* SUBMIT */
+
+.submit-area{
+    text-align:center;
+    margin:40px 0;
+}
+
+button{
+    background:#123c69;
+    color:white;
+    border:none;
+    padding:14px 35px;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#f28c00;
+}
+
+/* RESULT */
+
+#result{
+    display:none;
+    background:#eaf6ff;
+    border:2px solid #123c69;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    margin:30px 0;
+}
+
+#score{
+    font-size:28px;
+    font-weight:bold;
+    color:#123c69;
+}
+
+/* EXPLANATION */
+
+.explanation{
+    display:none;
+    background:#f8fafc;
+    border-left:4px solid #f28c00;
+    padding:14px;
+    margin-top:12px;
+    border-radius:8px;
+    line-height:1.7;
+}
+
+.correct{
+    color:green;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:50px;
+    position:relative;
+    z-index:1;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+.footer-links a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .header-content{
+        flex-direction:column;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    .hero h2{
+        font-size:27px;
+    }
+
+    .test-info{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .test-info div{
+        border-right:none;
+        border-bottom:1px solid #ddd;
+    }
+
+    .question{
+        padding:17px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="header-content">
+
+<div class="logo">
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+
+<div>
+<h1>GSI MANTRA</h1>
+<p>Competitive Education & NCERT Learning Platform</p>
+</div>
+</div>
+
+<div class="search">
+<input type="text" placeholder="Search GSI MANTRA...">
+</div>
+
+</div>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="class10.html">Class 10</a>
+<a href="class10-history.html">History</a>
+<a href="class10-history-chapter2-practice.html">Practice Sets</a>
+</nav>
+
+<section class="hero">
+<h2>राष्ट्रीयता भारत में — Practice Set 2</h2>
+<p>कक्षा 10 इतिहास | अध्याय 2 | हिंदी माध्यम</p>
+<p>NCERT + Board + Competitive Level</p>
+</section>
+
+<div class="container">
+
+<div class="test-info">
+<div>
+<strong>Class</strong>
+10
+</div>
+
+<div>
+<strong>Subject</strong>
+History
+</div>
+
+<div>
+<strong>Questions</strong>
+30
+</div>
+
+<div>
+<strong>Marks</strong>
+30
+</div>
+</div>
+
+<h2 class="section-title">भाग A — बहुविकल्पीय प्रश्न (MCQs)</h2>
+
+<!-- Q1 -->
+
+<div class="question">
+<h3>1. प्रथम विश्व युद्ध के दौरान भारत में महँगाई बढ़ने का प्रमुख कारण क्या था?</h3>
+
+<div class="options">
+<label><input type="radio" name="q1" value="A"> A. करों में भारी कमी</label>
+<label><input type="radio" name="q1" value="B"> B. युद्ध संबंधी खर्च और आवश्यक वस्तुओं की कीमतों में वृद्धि</label>
+<label><input type="radio" name="q1" value="C"> C. विदेशी व्यापार का पूर्ण समाप्त होना</label>
+<label><input type="radio" name="q1" value="D"> D. कृषि उत्पादन में अत्यधिक वृद्धि</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: B</strong><br>
+प्रथम विश्व युद्ध के दौरान युद्ध संबंधी खर्च बढ़ा और आवश्यक वस्तुओं की कीमतों में वृद्धि हुई। इससे सामान्य जनता पर आर्थिक बोझ बढ़ गया।
+</div>
+</div>
+
+<!-- Q2 -->
+
+<div class="question">
+<h3>2. महात्मा गांधी ने भारत में सत्याग्रह की पहली प्रमुख प्रयोगात्मक सफलता किस स्थान पर प्राप्त की?</h3>
+
+<div class="options">
+<label><input type="radio" name="q2" value="A"> A. चंपारण</label>
+<label><input type="radio" name="q2" value="B"> B. खेड़ा</label>
+<label><input type="radio" name="q2" value="C"> C. अहमदाबाद</label>
+<label><input type="radio" name="q2" value="D"> D. बारडोली</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: A</strong><br>
+1917 में चंपारण सत्याग्रह किसानों की समस्याओं से जुड़ा गांधीजी का भारत में पहला प्रमुख सत्याग्रह था।
+</div>
+</div>
+
+<!-- Q3 -->
+
+<div class="question">
+<h3>3. चंपारण के किसानों को किस फसल की खेती के लिए मजबूर किया जाता था?</h3>
+
+<div class="options">
+<label><input type="radio" name="q3" value="A"> A. कपास</label>
+<label><input type="radio" name="q3" value="B"> B. नील</label>
+<label><input type="radio" name="q3" value="C"> C. गेहूँ</label>
+<label><input type="radio" name="q3" value="D"> D. चाय</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: B</strong><br>
+चंपारण में किसानों को नील की खेती के लिए मजबूर किया जाता था। यह व्यवस्था टिनकठिया व्यवस्था से जुड़ी थी।
+</div>
+</div>
+
+<!-- Q4 -->
+
+<div class="question">
+<h3>4. खेड़ा सत्याग्रह मुख्य रूप से किस समस्या से संबंधित था?</h3>
+
+<div class="options">
+<label><input type="radio" name="q4" value="A"> A. नील की खेती</label>
+<label><input type="radio" name="q4" value="B"> B. मजदूरों की मजदूरी</label>
+<label><input type="radio" name="q4" value="C"> C. फसल खराब होने के बावजूद लगान की माँग</label>
+<label><input type="radio" name="q4" value="D"> D. नमक कर</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: C</strong><br>
+फसल खराब होने के कारण किसान लगान देने की स्थिति में नहीं थे, फिर भी सरकार लगान वसूलना चाहती थी।
+</div>
+</div>
+
+<!-- Q5 -->
+
+<div class="question">
+<h3>5. अहमदाबाद मिल हड़ताल में गांधीजी ने किस साधन का प्रयोग किया?</h3>
+
+<div class="options">
+<label><input type="radio" name="q5" value="A"> A. सशस्त्र संघर्ष</label>
+<label><input type="radio" name="q5" value="B"> B. भूख हड़ताल</label>
+<label><input type="radio" name="q5" value="C"> C. कर न देना</label>
+<label><input type="radio" name="q5" value="D"> D. विदेशी वस्तुओं का बहिष्कार</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: B</strong><br>
+अहमदाबाद मिल हड़ताल में मजदूरों के समर्थन में गांधीजी ने भूख हड़ताल की।
+</div>
+</div>
+
+<!-- Q6 -->
+
+<div class="question">
+<h3>6. रॉलेट एक्ट की सबसे विवादास्पद विशेषता क्या थी?</h3>
+
+<div class="options">
+<label><input type="radio" name="q6" value="A"> A. भारतीयों को मतदान का अधिकार</label>
+<label><input type="radio" name="q6" value="B"> B. बिना मुकदमे के गिरफ्तारी और नजरबंदी</label>
+<label><input type="radio" name="q6" value="C"> C. किसानों को कर में छूट</label>
+<label><input type="radio" name="q6" value="D"> D. प्रेस की स्वतंत्रता</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: B</strong><br>
+रॉलेट एक्ट के अंतर्गत राजनीतिक गतिविधियों पर संदेह होने पर लोगों को बिना मुकदमे के गिरफ्तार और नजरबंद किया जा सकता था।
+</div>
+</div>
+
+<!-- Q7 -->
+
+<div class="question">
+<h3>7. असहयोग आंदोलन औपचारिक रूप से किस वर्ष शुरू हुआ?</h3>
+
+<div class="options">
+<label><input type="radio" name="q7" value="A"> A. 1917</label>
+<label><input type="radio" name="q7" value="B"> B. 1919</label>
+<label><input type="radio" name="q7" value="C"> C. 1920</label>
+<label><input type="radio" name="q7" value="D"> D. 1922</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: C</strong><br>
+1920 में असहयोग-खिलाफत आंदोलन को व्यापक रूप से शुरू किया गया।
+</div>
+</div>
+
+<!-- Q8 -->
+
+<div class="question">
+<h3>8. अवध में किसान आंदोलन का नेतृत्व किसने किया?</h3>
+
+<div class="options">
+<label><input type="radio" name="q8" value="A"> A. बाबा रामचंद्र</label>
+<label><input type="radio" name="q8" value="B"> B. सुभाष चंद्र बोस</label>
+<label><input type="radio" name="q8" value="C"> C. सरदार पटेल</label>
+<label><input type="radio" name="q8" value="D"> D. सी. आर. दास</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: A</strong><br>
+बाबा रामचंद्र ने अवध के किसानों को संगठित किया और ऊँचे लगान तथा बेगार जैसी समस्याओं के विरुद्ध आवाज उठाई।
+</div>
+</div>
+
+<!-- Q9 -->
+
+<div class="question">
+<h3>9. गुडेम पहाड़ियों में आदिवासी आंदोलन का नेतृत्व किसने किया?</h3>
+
+<div class="options">
+<label><input type="radio" name="q9" value="A"> A. बाबा रामचंद्र</label>
+<label><input type="radio" name="q9" value="B"> B. अल्लूरी सीताराम राजू</label>
+<label><input type="radio" name="q9" value="C"> C. जवाहरलाल नेहरू</label>
+<label><input type="radio" name="q9" value="D"> D. सी. आर. दास</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: B</strong><br>
+आंध्र प्रदेश की गुडेम पहाड़ियों में अल्लूरी सीताराम राजू के नेतृत्व में आदिवासियों ने औपनिवेशिक वन नीतियों का विरोध किया।
+</div>
+</div>
+
+<!-- Q10 -->
+
+<div class="question">
+<h3>10. अल्लूरी सीताराम राजू गांधीजी के किस विचार से प्रभावित थे?</h3>
+
+<div class="options">
+<label><input type="radio" name="q10" value="A"> A. केवल संवैधानिक सुधार</label>
+<label><input type="radio" name="q10" value="B"> B. स्वराज और खादी के विचार</label>
+<label><input type="radio" name="q10" value="C"> C. ब्रिटिश शासन का समर्थन</label>
+<label><input type="radio" name="q10" value="D"> D. औद्योगिक पूँजीवाद</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: B</strong><br>
+राजू गांधीजी से प्रभावित थे, खादी पहनते थे और शराब छोड़ने की वकालत करते थे, लेकिन उन्होंने सशस्त्र संघर्ष को भी उचित माना।
+</div>
+</div>
+
+<h2 class="section-title">भाग B — कालानुक्रमिक क्रम</h2>
+
+<!-- Q11 -->
+
+<div class="question">
+<h3>11. निम्न घटनाओं को सही कालानुक्रमिक क्रम में लगाइए:</h3>
+<p>1. चंपारण सत्याग्रह<br>
+2. खेड़ा सत्याग्रह<br>
+3. अहमदाबाद मिल हड़ताल<br>
+4. रॉलेट सत्याग्रह</p>
+
+<div class="options">
+<label><input type="radio" name="q11" value="A"> A. 1 → 2 → 3 → 4</label>
+<label><input type="radio" name="q11" value="B"> B. 2 → 1 → 3 → 4</label>
+<label><input type="radio" name="q11" value="C"> C. 3 → 1 → 2 → 4</label>
+<label><input type="radio" name="q11" value="D"> D. 1 → 3 → 2 → 4</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: A</strong><br>
+चंपारण 1917 → अहमदाबाद 1918 → खेड़ा 1918 → रॉलेट सत्याग्रह 1919।
+</div>
+</div>
+
+<!-- Q12 -->
+
+<div class="question">
+<h3>12. सही क्रम चुनिए:</h3>
+<p>1. रॉलेट एक्ट<br>
+2. असहयोग आंदोलन<br>
+3. चौरी-चौरा घटना<br>
+4. स्वराज पार्टी का गठन</p>
+
+<div class="options">
+<label><input type="radio" name="q12" value="A"> A. 1 → 2 → 3 → 4</label>
+<label><input type="radio" name="q12" value="B"> B. 2 → 1 → 3 → 4</label>
+<label><input type="radio" name="q12" value="C"> C. 1 → 3 → 2 → 4</label>
+<label><input type="radio" name="q12" value="D"> D. 4 → 3 → 2 → 1</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: A</strong><br>
+रॉलेट एक्ट 1919 → असहयोग आंदोलन 1920 → चौरी-चौरा 1922 → स्वराज पार्टी 1923।
+</div>
+</div>
+
+<!-- Q13 -->
+
+<div class="question">
+<h3>13. निम्न घटनाओं का सही क्रम कौन-सा है?</h3>
+<p>1. साइमन कमीशन का आगमन<br>
+2. लाहौर कांग्रेस<br>
+3. दांडी मार्च<br>
+4. गांधी-इरविन समझौता</p>
+
+<div class="options">
+<label><input type="radio" name="q13" value="A"> A. 1 → 2 → 3 → 4</label>
+<label><input type="radio" name="q13" value="B"> B. 2 → 1 → 3 → 4</label>
+<label><input type="radio" name="q13" value="C"> C. 1 → 3 → 2 → 4</label>
+<label><input type="radio" name="q13" value="D"> D. 2 → 3 → 1 → 4</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: A</strong><br>
+साइमन कमीशन 1928 → लाहौर कांग्रेस 1929 → दांडी मार्च 1930 → गांधी-इरविन समझौता 1931।
+</div>
+</div>
+
+<h2 class="section-title">भाग C — मिलान कीजिए</h2>
+
+<!-- Q14 -->
+
+<div class="question">
+<h3>14. सही मिलान कीजिए:</h3>
+
+<p>
+A. चंपारण — 1. लगान में राहत<br>
+B. खेड़ा — 2. नील की खेती<br>
+C. अहमदाबाद — 3. मजदूरों का वेतन<br>
+D. गुडेम — 4. वन अधिकार
+</p>
+
+<div class="options">
+<label><input type="radio" name="q14" value="A"> A. A-2, B-1, C-3, D-4</label>
+<label><input type="radio" name="q14" value="B"> B. A-1, B-2, C-4, D-3</label>
+<label><input type="radio" name="q14" value="C"> C. A-3, B-1, C-2, D-4</label>
+<label><input type="radio" name="q14" value="D"> D. A-4, B-3, C-1, D-2</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: A</strong><br>
+चंपारण—नील, खेड़ा—लगान राहत, अहमदाबाद—मजदूरी, गुडेम—वन अधिकार।
+</div>
+</div>
+
+<!-- Q15 -->
+
+<div class="question">
+<h3>15. नेताओं का उनके आंदोलन से सही मिलान कीजिए:</h3>
+
+<p>
+A. बाबा रामचंद्र — 1. गुडेम आंदोलन<br>
+B. अल्लूरी सीताराम राजू — 2. अवध किसान आंदोलन<br>
+C. सी. आर. दास — 3. स्वराज पार्टी<br>
+D. गांधीजी — 4. सत्याग्रह
+</p>
+
+<div class="options">
+<label><input type="radio" name="q15" value="A"> A. A-2, B-1, C-3, D-4</label>
+<label><input type="radio" name="q15" value="B"> B. A-1, B-2, C-4, D-3</label>
+<label><input type="radio" name="q15" value="C"> C. A-3, B-1, C-2, D-4</label>
+<label><input type="radio" name="q15" value="D"> D. A-4, B-3, C-1, D-2</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: A</strong><br>
+बाबा रामचंद्र—अवध, अल्लूरी—गुडेम, सी. आर. दास—स्वराज पार्टी और गांधीजी—सत्याग्रह से संबंधित हैं।
+</div>
+</div>
+
+<h2 class="section-title">भाग D — Assertion & Reason</h2>
+
+<p><strong>निर्देश:</strong> सही विकल्प चुनिए:</p>
+<p>
+A) कथन और कारण दोनों सही हैं तथा कारण कथन की सही व्याख्या है।<br>
+B) दोनों सही हैं लेकिन कारण सही व्याख्या नहीं है।<br>
+C) कथन सही है लेकिन कारण गलत है।<br>
+D) कथन गलत है लेकिन कारण सही है।
+</p>
+
+<!-- Q16 -->
+
+<div class="question">
+<h3>16. कथन (A): असहयोग आंदोलन को शहरों में लंबे समय तक बनाए रखना कठिन था।</h3>
+
+<p><strong>कारण (R):</strong> वैकल्पिक भारतीय संस्थाएँ धीरे-धीरे विकसित हो रही थीं और खादी गरीबों के लिए महँगी पड़ सकती थी।</p>
+
+<div class="options">
+<label><input type="radio" name="q16" value="A"> A</label>
+<label><input type="radio" name="q16" value="B"> B</label>
+<label><input type="radio" name="q16" value="C"> C</label>
+<label><input type="radio" name="q16" value="D"> D</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: A</strong><br>
+शहरों में वैकल्पिक संस्थाओं की कमी और खादी की लागत जैसी समस्याओं के कारण आंदोलन की गति धीरे-धीरे कम हुई।
+</div>
+</div>
+
+<!-- Q17 -->
+
+<div class="question">
+<h3>17. कथन (A): अवध के किसानों ने ऊँचे लगान और बेगार का विरोध किया।</h3>
+
+<p><strong>कारण (R):</strong> किसानों पर तालुकदारों द्वारा अनेक प्रकार के आर्थिक दबाव डाले जाते थे।</p>
+
+<div class="options">
+<label><input type="radio" name="q17" value="A"> A</label>
+<label><input type="radio" name="q17" value="B"> B</label>
+<label><input type="radio" name="q17" value="C"> C</label>
+<label><input type="radio" name="q17" value="D"> D</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: A</strong><br>
+अवध के किसानों की प्रमुख समस्याओं में ऊँचा लगान, बेगार और अन्य आर्थिक दबाव शामिल थे।
+</div>
+</div>
+
+<!-- Q18 -->
+
+<div class="question">
+<h3>18. कथन (A): अल्लूरी सीताराम राजू ने अहिंसा के स्थान पर सशस्त्र संघर्ष को उचित माना।</h3>
+
+<p><strong>कारण (R):</strong> वे मानते थे कि आदिवासियों की मुक्ति के लिए बल का प्रयोग आवश्यक हो सकता है।</p>
+
+<div class="options">
+<label><input type="radio" name="q18" value="A"> A</label>
+<label><input type="radio" name="q18" value="B"> B</label>
+<label><input type="radio" name="q18" value="C"> C</label>
+<label><input type="radio" name="q18" value="D"> D</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: A</strong><br>
+राजू गांधीजी से प्रभावित थे, लेकिन अहिंसा की जगह सशस्त्र संघर्ष को भी स्वतंत्रता प्राप्ति का साधन मानते थे।
+</div>
+</div>
+
+<!-- Q19 -->
+
+<div class="question">
+<h3>19. कथन (A): साइमन कमीशन का भारत में व्यापक विरोध हुआ।</h3>
+
+<p><strong>कारण (R):</strong> आयोग में एक भी भारतीय सदस्य नहीं था।</p>
+
+<div class="options">
+<label><input type="radio" name="q19" value="A"> A</label>
+<label><input type="radio" name="q19" value="B"> B</label>
+<label><input type="radio" name="q19" value="C"> C</label>
+<label><input type="radio" name="q19" value="D"> D</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: A</strong><br>
+साइमन कमीशन में भारतीय प्रतिनिधित्व नहीं था, इसलिए भारत में इसका व्यापक विरोध हुआ और "Simon Go Back" का नारा प्रसिद्ध हुआ।
+</div>
+</div>
+
+<!-- Q20 -->
+
+<div class="question">
+<h3>20. कथन (A): गांधीजी ने नमक को सविनय अवज्ञा आंदोलन का महत्वपूर्ण प्रतीक बनाया।</h3>
+
+<p><strong>कारण (R):</strong> नमक अमीर और गरीब दोनों की आवश्यकता थी।</p>
+
+<div class="options">
+<label><input type="radio" name="q20" value="A"> A</label>
+<label><input type="radio" name="q20" value="B"> B</label>
+<label><input type="radio" name="q20" value="C"> C</label>
+<label><input type="radio" name="q20" value="D"> D</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: A</strong><br>
+नमक सभी वर्गों की दैनिक आवश्यकता था। इसलिए नमक कानून का विरोध राष्ट्रीय एकता का प्रभावी प्रतीक बन गया।
+</div>
+</div>
+
+<h2 class="section-title">भाग E — Passage Based Questions</h2>
+
+<div class="passage">
+<strong>पैसेज 1:</strong><br><br>
+अवध के किसानों की स्थिति अत्यंत कठिन थी। तालुकदार और जमींदार किसानों से बहुत अधिक लगान और अन्य प्रकार के कर वसूलते थे। किसानों को बिना भुगतान के बेगार भी करनी पड़ती थी। बाबा रामचंद्र ने किसानों को संगठित किया और उनके अधिकारों के लिए आंदोलन चलाया। बाद में जवाहरलाल नेहरू तथा अन्य नेताओं के सहयोग से अक्टूबर 1920 में अवध किसान सभा का गठन किया गया।
+</div>
+
+<!-- Q21 -->
+
+<div class="question">
+<h3>21. अवध के किसानों की प्रमुख आर्थिक समस्या क्या थी?</h3>
+
+<div class="options">
+<label><input type="radio" name="q21" value="A"> A. बहुत कम लगान</label>
+<label><input type="radio" name="q21" value="B"> B. ऊँचा लगान और अन्य आर्थिक दबाव</label>
+<label><input type="radio" name="q21" value="C"> C. विदेशी वस्तुओं का अभाव</label>
+<label><input type="radio" name="q21" value="D"> D. नमक की कमी</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: B</strong><br>
+अवध के किसान ऊँचे लगान, करों और बेगार जैसी समस्याओं से परेशान थे।
+</div>
+</div>
+
+<!-- Q22 -->
+
+<div class="question">
+<h3>22. 'बेगार' का अर्थ क्या था?</h3>
+
+<div class="options">
+<label><input type="radio" name="q22" value="A"> A. बिना भुगतान के जबरन श्रम</label>
+<label><input type="radio" name="q22" value="B"> B. मुफ्त शिक्षा</label>
+<label><input type="radio" name="q22" value="C"> C. कृषि ऋण</label>
+<label><input type="radio" name="q22" value="D"> D. लगान में छूट</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: A</strong><br>
+बेगार का अर्थ था बिना मजदूरी या भुगतान के जबरन काम करवाना।
+</div>
+</div>
+
+<!-- Q23 -->
+
+<div class="question">
+<h3>23. अवध किसान सभा का गठन कब हुआ?</h3>
+
+<div class="options">
+<label><input type="radio" name="q23" value="A"> A. जनवरी 1919</label>
+<label><input type="radio" name="q23" value="B"> B. अक्टूबर 1920</label>
+<label><input type="radio" name="q23" value="C"> C. फरवरी 1922</label>
+<label><input type="radio" name="q23" value="D"> D. दिसंबर 1929</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: B</strong><br>
+अवध किसान सभा का गठन अक्टूबर 1920 में किया गया।
+</div>
+</div>
+
+<div class="passage">
+<strong>पैसेज 2:</strong><br><br>
+गांधीजी ने नमक को औपनिवेशिक शासन के विरुद्ध संघर्ष का एक शक्तिशाली प्रतीक माना। नमक अमीर और गरीब दोनों के लिए आवश्यक था। 31 जनवरी 1930 को गांधीजी ने वायसराय इरविन को एक पत्र भेजकर ग्यारह माँगें रखीं। इनमें नमक कर समाप्त करने की माँग विशेष रूप से महत्वपूर्ण थी। जब सरकार ने इन माँगों पर सकारात्मक प्रतिक्रिया नहीं दी, तो गांधीजी ने साबरमती आश्रम से दांडी तक मार्च किया और 6 अप्रैल 1930 को नमक कानून तोड़ा।
+</div>
+
+<!-- Q24 -->
+
+<div class="question">
+<h3>24. गांधीजी ने नमक को आंदोलन का प्रतीक क्यों बनाया?</h3>
+
+<div class="options">
+<label><input type="radio" name="q24" value="A"> A. केवल अमीर लोग नमक का प्रयोग करते थे</label>
+<label><input type="radio" name="q24" value="B"> B. नमक सभी वर्गों की आवश्यक वस्तु थी</label>
+<label><input type="radio" name="q24" value="C"> C. नमक केवल किसानों से जुड़ा था</label>
+<label><input type="radio" name="q24" value="D"> D. नमक का उपयोग केवल समुद्र तट पर होता था</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: B</strong><br>
+नमक अमीर और गरीब दोनों की दैनिक आवश्यकता था, इसलिए यह व्यापक जनभागीदारी का प्रतीक बन सकता था।
+</div>
+</div>
+
+<!-- Q25 -->
+
+<div class="question">
+<h3>25. गांधीजी ने वायसराय इरविन को पत्र कब भेजा?</h3>
+
+<div class="options">
+<label><input type="radio" name="q25" value="A"> A. 26 जनवरी 1930</label>
+<label><input type="radio" name="q25" value="B"> B. 31 जनवरी 1930</label>
+<label><input type="radio" name="q25" value="C"> C. 6 अप्रैल 1930</label>
+<label><input type="radio" name="q25" value="D"> D. मार्च 1931</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: B</strong><br>
+गांधीजी ने 31 जनवरी 1930 को वायसराय इरविन को पत्र भेजकर ग्यारह माँगें रखीं।
+</div>
+</div>
+
+<!-- Q26 -->
+
+<div class="question">
+<h3>26. गांधीजी ने दांडी में कौन-सा कानून तोड़ा?</h3>
+
+<div class="options">
+<label><input type="radio" name="q26" value="A"> A. वन कानून</label>
+<label><input type="radio" name="q26" value="B"> B. नमक कानून</label>
+<label><input type="radio" name="q26" value="C"> C. रॉलेट एक्ट</label>
+<label><input type="radio" name="q26" value="D"> D. प्रेस कानून</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: B</strong><br>
+6 अप्रैल 1930 को दांडी पहुँचकर गांधीजी ने नमक बनाकर नमक कानून का उल्लंघन किया।
+</div>
+</div>
+
+<!-- Q27 -->
+
+<div class="question">
+<h3>27. दांडी मार्च किस आंदोलन की शुरुआत से सीधे जुड़ा था?</h3>
+
+<div class="options">
+<label><input type="radio" name="q27" value="A"> A. असहयोग आंदोलन</label>
+<label><input type="radio" name="q27" value="B"> B. खिलाफत आंदोलन</label>
+<label><input type="radio" name="q27" value="C"> C. सविनय अवज्ञा आंदोलन</label>
+<label><input type="radio" name="q27" value="D"> D. भारत छोड़ो आंदोलन</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: C</strong><br>
+दांडी मार्च ने 1930 के सविनय अवज्ञा आंदोलन को व्यापक रूप से प्रारंभ करने में महत्वपूर्ण भूमिका निभाई।
+</div>
+</div>
+
+<h2 class="section-title">भाग F — उन्नत प्रश्न</h2>
+
+<!-- Q28 -->
+
+<div class="question">
+<h3>28. असहयोग आंदोलन में विभिन्न सामाजिक समूहों के लिए 'स्वराज' का अर्थ अलग-अलग क्यों था?</h3>
+
+<div class="options">
+<label><input type="radio" name="q28" value="A"> A. सभी समूहों की आर्थिक और सामाजिक समस्याएँ अलग थीं</label>
+<label><input type="radio" name="q28" value="B"> B. किसी भी समूह को स्वतंत्रता नहीं चाहिए थी</label>
+<label><input type="radio" name="q28" value="C"> C. केवल शहरों में आंदोलन हुआ था</label>
+<label><input type="radio" name="q28" value="D"> D. केवल कांग्रेस ने स्वराज की व्याख्या की थी</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: A</strong><br>
+किसानों, आदिवासियों, मजदूरों और व्यापारियों की अपनी अलग समस्याएँ थीं। इसलिए उनके लिए स्वराज का अर्थ भी अलग-अलग रूप में सामने आया।
+</div>
+</div>
+
+<!-- Q29 -->
+
+<div class="question">
+<h3>29. निम्न में से कौन-सा कथन सविनय अवज्ञा आंदोलन की विशेषता को सबसे अच्छी तरह दर्शाता है?</h3>
+
+<div class="options">
+<label><input type="radio" name="q29" value="A"> A. केवल सरकारी चुनावों में भाग लेना</label>
+<label><input type="radio" name="q29" value="B"> B. अन्यायपूर्ण कानूनों का अहिंसक ढंग से उल्लंघन करना</label>
+<label><input type="radio" name="q29" value="C"> C. ब्रिटिश सरकार को सैन्य सहायता देना</label>
+<label><input type="radio" name="q29" value="D"> D. केवल विदेशी वस्तुओं की खरीद बढ़ाना</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: B</strong><br>
+सविनय अवज्ञा आंदोलन में अन्यायपूर्ण औपनिवेशिक कानूनों का अहिंसक तरीके से उल्लंघन किया गया।
+</div>
+</div>
+
+<!-- Q30 -->
+
+<div class="question">
+<h3>30. निम्न में से कौन-सा घटनाक्रम भारत में राष्ट्रीय आंदोलन के विकास का सही क्रम दर्शाता है?</h3>
+
+<div class="options">
+<label><input type="radio" name="q30" value="A"> A. चंपारण → खेड़ा → रॉलेट सत्याग्रह → असहयोग आंदोलन → सविनय अवज्ञा</label>
+<label><input type="radio" name="q30" value="B"> B. खेड़ा → चंपारण → असहयोग → रॉलेट सत्याग्रह → सविनय अवज्ञा</label>
+<label><input type="radio" name="q30" value="C"> C. रॉलेट सत्याग्रह → चंपारण → खेड़ा → सविनय अवज्ञा → असहयोग</label>
+<label><input type="radio" name="q30" value="D"> D. असहयोग → चंपारण → रॉलेट सत्याग्रह → खेड़ा → सविनय अवज्ञा</label>
+</div>
+
+<div class="explanation">
+<strong>सही उत्तर: A</strong><br>
+चंपारण 1917 → खेड़ा 1918 → रॉलेट सत्याग्रह 1919 → असहयोग आंदोलन 1920 → सविनय अवज्ञा आंदोलन 1930।
+</div>
+</div>
+
+<div class="submit-area">
+<button onclick="submitTest()">📝 Submit Test</button>
+</div>
+
+<div id="result">
+<h2>🎯 आपका परिणाम</h2>
+<div id="score"></div>
+<p id="message"></p>
+</div>
+
+</div>
+
+<footer>
+
+<h2>GSI MANTRA</h2>
+
+<p>
+Class 10 History • Chapter 2 • Nationalism in India
+</p>
+
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="class10.html">Class 10</a>
+<a href="class10-history.html">History</a>
+</div>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
+</footer>
+
+<script>
+
+function submitTest(){
+
+const answers = {
+q1:"B",
+q2:"A",
+q3:"B",
+q4:"C",
+q5:"B",
+q6:"B",
+q7:"C",
+q8:"A",
+q9:"B",
+q10:"B",
+q11:"A",
+q12:"A",
+q13:"A",
+q14:"A",
+q15:"A",
+q16:"A",
+q17:"A",
+q18:"A",
+q19:"A",
+q20:"A",
+q21:"B",
+q22:"A",
+q23:"B",
+q24:"B",
+q25:"B",
+q26:"B",
+q27:"C",
+q28:"A",
+q29:"B",
+q30:"A"
+};
+
+let score = 0;
+let attempted = 0;
+
+for(let q in answers){
+
+const selected =
+document.querySelector('input[name="'+q+'"]:checked');
+
+if(selected){
+
+attempted++;
+
+if(selected.value === answers[q]){
+score++;
+}
+
+}
+
+}
+
+document.getElementById("result").style.display="block";
+
+document.getElementById("score").innerHTML =
+"Score: " + score + " / 30";
+
+let percentage = Math.round((score/30)*100);
+
+document.getElementById("message").innerHTML =
+"आपने " + attempted + " प्रश्न attempt किए।<br>" +
+"Percentage: " + percentage + "%";
+
+document.querySelectorAll(".explanation").forEach(function(el){
+el.style.display="block";
+});
+
+window.scrollTo({
+top:document.getElementById("result").offsetTop-30,
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>
