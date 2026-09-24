@@ -1,0 +1,981 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Practice Set 1 | The Making of a Global World | GSI MANTRA</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+/* WATERMARK */
+body::before{
+    content:"GSI MANTRA";
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-25deg);
+    font-size:70px;
+    font-weight:bold;
+    color:rgba(18,60,105,0.055);
+    pointer-events:none;
+    z-index:0;
+    white-space:nowrap;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:22px 20px;
+    position:relative;
+    z-index:2;
+}
+
+.header-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:32px;
+}
+
+.logo p{
+    margin:5px 0 0;
+    font-size:14px;
+}
+
+.search{
+    background:white;
+    padding:10px 15px;
+    border-radius:25px;
+    width:280px;
+}
+
+.search input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+}
+
+/* NAV */
+nav{
+    background:#071d33;
+    padding:13px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#123c69,#1d5b91);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+    position:relative;
+    z-index:1;
+}
+
+.hero h2{
+    margin:0 0 10px;
+    font-size:32px;
+}
+
+.hero p{
+    margin:8px auto;
+    font-size:17px;
+    line-height:1.6;
+}
+
+/* INFO */
+.test-info{
+    max-width:1100px;
+    margin:25px auto;
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    position:relative;
+    z-index:1;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    text-align:center;
+}
+
+.info-item{
+    background:#f8fafc;
+    padding:14px;
+    border-radius:10px;
+}
+
+.info-item strong{
+    display:block;
+    color:#123c69;
+    margin-bottom:5px;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:10px 20px 50px;
+    position:relative;
+    z-index:1;
+}
+
+.section-heading{
+    background:#123c69;
+    color:white;
+    padding:13px 18px;
+    border-radius:10px;
+    margin:25px 0 15px;
+}
+
+/* QUESTION CARD */
+.question{
+    background:white;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:13px;
+    box-shadow:0 4px 14px rgba(0,0,0,.07);
+}
+
+.question h3{
+    color:#123c69;
+    margin-top:0;
+    font-size:18px;
+    line-height:1.5;
+}
+
+.option{
+    display:block;
+    padding:10px 12px;
+    margin:8px 0;
+    border:1px solid #dce4ec;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.option:hover{
+    background:#f1f6fb;
+}
+
+.option input{
+    margin-right:8px;
+}
+
+/* PASSAGE */
+.passage{
+    background:#fff8e8;
+    border-left:5px solid #f28c00;
+    padding:18px;
+    line-height:1.7;
+    margin-bottom:18px;
+    border-radius:8px;
+}
+
+/* SUBMIT */
+.submit-box{
+    text-align:center;
+    margin:35px 0;
+}
+
+button{
+    background:#123c69;
+    color:white;
+    border:none;
+    padding:14px 35px;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#f28c00;
+}
+
+/* RESULT */
+#result{
+    display:none;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.10);
+    margin-top:25px;
+}
+
+#score{
+    color:#123c69;
+    font-size:30px;
+    font-weight:bold;
+}
+
+/* EXPLANATIONS */
+#explanations{
+    display:none;
+}
+
+.explanation{
+    background:#f0fdf4;
+    border-left:5px solid #159447;
+    padding:17px;
+    margin:14px 0;
+    border-radius:8px;
+    line-height:1.6;
+}
+
+.correct{
+    color:#159447;
+    font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    position:relative;
+    z-index:2;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    .header-content{
+        flex-direction:column;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    .info-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero h2{
+        font-size:26px;
+    }
+
+    .question{
+        padding:17px;
+    }
+
+    body::before{
+        font-size:40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="header-content">
+
+<div class="logo">
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+
+<div>
+<h1>GSI MANTRA</h1>
+<p>Competitive Education & NCERT Learning Platform</p>
+</div>
+</div>
+
+<div class="search">
+<input type="text" placeholder="Search GSI MANTRA...">
+</div>
+
+</div>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="class10.html">Class 10</a>
+<a href="class10-history.html">History</a>
+<a href="class10-history-chapter3-practice.html">Chapter 3</a>
+</nav>
+
+<section class="hero">
+<h2>Practice Set 1 — The Making of a Global World</h2>
+<p>Class 10 History • English Medium</p>
+<p>NCERT + Board + Competitive Level</p>
+</section>
+
+<div class="test-info">
+<div class="info-grid">
+
+<div class="info-item">
+<strong>Class</strong>
+10
+</div>
+
+<div class="info-item">
+<strong>Subject</strong>
+History
+</div>
+
+<div class="info-item">
+<strong>Total Questions</strong>
+30
+</div>
+
+<div class="info-item">
+<strong>Marks</strong>
+30
+</div>
+
+</div>
+</div>
+
+<div class="container">
+
+<form id="testForm">
+
+<div class="section-heading">
+Part A — Multiple Choice Questions
+</div>
+
+<div class="question">
+<h3>Q1. Which of the following best describes the meaning of a global world in the context of modern history?</h3>
+
+<label class="option"><input type="radio" name="q1" value="A"> A. A world completely controlled by one empire</label>
+<label class="option"><input type="radio" name="q1" value="B"> B. A world increasingly connected through trade, migration, technology and cultural exchange</label>
+<label class="option"><input type="radio" name="q1" value="C"> C. A world where countries stopped trading with each other</label>
+<label class="option"><input type="radio" name="q1" value="D"> D. A world limited only to European countries</label>
+</div>
+
+<div class="question">
+<h3>Q2. Which food item travelled to Europe from the Americas and became an important part of the European diet?</h3>
+
+<label class="option"><input type="radio" name="q2" value="A"> A. Potato</label>
+<label class="option"><input type="radio" name="q2" value="B"> B. Tea</label>
+<label class="option"><input type="radio" name="q2" value="C"> C. Coffee</label>
+<label class="option"><input type="radio" name="q2" value="D"> D. Wheat</label>
+</div>
+
+<div class="question">
+<h3>Q3. Why did many Europeans migrate to America and Australia during the nineteenth century?</h3>
+
+<label class="option"><input type="radio" name="q3" value="A"> A. Because Europe had no agriculture</label>
+<label class="option"><input type="radio" name="q3" value="B"> B. Due to poverty, unemployment, food shortages and the search for better opportunities</label>
+<label class="option"><input type="radio" name="q3" value="C"> C. Because governments forced every citizen to migrate</label>
+<label class="option"><input type="radio" name="q3" value="D"> D. Because overseas countries banned European trade</label>
+</div>
+
+<div class="question">
+<h3>Q4. What was the Corn Laws system in Britain?</h3>
+
+<label class="option"><input type="radio" name="q4" value="A"> A. Laws restricting the import of agricultural products</label>
+<label class="option"><input type="radio" name="q4" value="B"> B. Laws encouraging free import of food grains</label>
+<label class="option"><input type="radio" name="q4" value="C"> C. Laws regulating cotton production</label>
+<label class="option"><input type="radio" name="q4" value="D"> D. Laws controlling overseas migration</label>
+</div>
+
+<div class="question">
+<h3>Q5. What happened after the Corn Laws were abolished in Britain?</h3>
+
+<label class="option"><input type="radio" name="q5" value="A"> A. Food prices increased sharply everywhere</label>
+<label class="option"><input type="radio" name="q5" value="B"> B. Britain stopped importing food</label>
+<label class="option"><input type="radio" name="q5" value="C"> C. Food could be imported more cheaply, encouraging wider global trade</label>
+<label class="option"><input type="radio" name="q5" value="D"> D. European migration immediately stopped</label>
+</div>
+
+<div class="question">
+<h3>Q6. Which technological development greatly reduced the time and cost of transporting goods during the nineteenth century?</h3>
+
+<label class="option"><input type="radio" name="q6" value="A"> A. Steamships and railways</label>
+<label class="option"><input type="radio" name="q6" value="B"> B. Printing press alone</label>
+<label class="option"><input type="radio" name="q6" value="C"> C. Telegraph alone</label>
+<label class="option"><input type="radio" name="q6" value="D"> D. Handicraft tools</label>
+</div>
+
+<div class="question">
+<h3>Q7. What was the importance of the invention of refrigerated ships?</h3>
+
+<label class="option"><input type="radio" name="q7" value="A"> A. They allowed frozen meat to be transported over long distances</label>
+<label class="option"><input type="radio" name="q7" value="B"> B. They stopped international migration</label>
+<label class="option"><input type="radio" name="q7" value="C"> C. They replaced all railways</label>
+<label class="option"><input type="radio" name="q7" value="D"> D. They were used only for carrying coal</label>
+</div>
+
+<div class="question">
+<h3>Q8. What was indentured labour?</h3>
+
+<label class="option"><input type="radio" name="q8" value="A"> A. A system under which workers agreed to work for a fixed period under a contract</label>
+<label class="option"><input type="radio" name="q8" value="B"> B. Voluntary military service</label>
+<label class="option"><input type="radio" name="q8" value="C"> C. Permanent slavery legally recognized everywhere</label>
+<label class="option"><input type="radio" name="q8" value="D"> D. A system of free agricultural labour</label>
+</div>
+
+<div class="question">
+<h3>Q9. Which region became an important destination for Indian indentured labourers?</h3>
+
+<label class="option"><input type="radio" name="q9" value="A"> A. Caribbean islands</label>
+<label class="option"><input type="radio" name="q9" value="B"> B. Scandinavia</label>
+<label class="option"><input type="radio" name="q9" value="C"> C. Japan only</label>
+<label class="option"><input type="radio" name="q9" value="D"> D. Russia</label>
+</div>
+
+<div class="question">
+<h3>Q10. Which of the following was a major destination of Indian indentured labourers?</h3>
+
+<label class="option"><input type="radio" name="q10" value="A"> A. Fiji</label>
+<label class="option"><input type="radio" name="q10" value="B"> B. Norway</label>
+<label class="option"><input type="radio" name="q10" value="C"> C. Switzerland</label>
+<label class="option"><input type="radio" name="q10" value="D"> D. Canada only</label>
+</div>
+
+<div class="section-heading">
+Part B — Chronological Arrangement
+</div>
+
+<div class="question">
+<h3>Q11. Arrange the following developments in chronological order:</h3>
+<p>1. Abolition of Corn Laws<br>
+2. First World War<br>
+3. Great Depression<br>
+4. Second World War</p>
+
+<label class="option"><input type="radio" name="q11" value="A"> A. 1 → 2 → 3 → 4</label>
+<label class="option"><input type="radio" name="q11" value="B"> B. 2 → 1 → 3 → 4</label>
+<label class="option"><input type="radio" name="q11" value="C"> C. 3 → 1 → 2 → 4</label>
+<label class="option"><input type="radio" name="q11" value="D"> D. 1 → 3 → 2 → 4</label>
+</div>
+
+<div class="question">
+<h3>Q12. Arrange the following events in correct chronological order:</h3>
+<p>1. First World War<br>
+2. Great Depression<br>
+3. Second World War<br>
+4. Beginning of the nineteenth-century global economy</p>
+
+<label class="option"><input type="radio" name="q12" value="A"> A. 4 → 1 → 2 → 3</label>
+<label class="option"><input type="radio" name="q12" value="B"> B. 1 → 4 → 2 → 3</label>
+<label class="option"><input type="radio" name="q12" value="C"> C. 2 → 1 → 4 → 3</label>
+<label class="option"><input type="radio" name="q12" value="D"> D. 4 → 2 → 1 → 3</label>
+</div>
+
+<div class="section-heading">
+Part C — Matching
+</div>
+
+<div class="question">
+<h3>Q13. Match the following:</h3>
+<p><b>Column I</b></p>
+<p>1. Corn Laws<br>
+2. Indentured labour<br>
+3. Refrigerated ships<br>
+4. Silk Routes</p>
+
+<p><b>Column II</b></p>
+<p>a. Long-distance cultural and trade connections<br>
+b. Contract labour system<br>
+c. Transportation of perishable food<br>
+d. Restrictions on food imports</p>
+
+<label class="option"><input type="radio" name="q13" value="A"> A. 1-d, 2-b, 3-c, 4-a</label>
+<label class="option"><input type="radio" name="q13" value="B"> B. 1-a, 2-c, 3-b, 4-d</label>
+<label class="option"><input type="radio" name="q13" value="C"> C. 1-c, 2-d, 3-a, 4-b</label>
+<label class="option"><input type="radio" name="q13" value="D"> D. 1-b, 2-a, 3-d, 4-c</label>
+</div>
+
+<div class="question">
+<h3>Q14. Match the following regions with the associated migration or economic activity:</h3>
+<p>1. India<br>
+2. Caribbean<br>
+3. Europe<br>
+4. America</p>
+
+<p>a. Large-scale European migration<br>
+b. Source of indentured labour<br>
+c. Destination of indentured workers<br>
+d. Destination for European migrants</p>
+
+<label class="option"><input type="radio" name="q14" value="A"> A. 1-b, 2-c, 3-a, 4-d</label>
+<label class="option"><input type="radio" name="q14" value="B"> B. 1-c, 2-b, 3-d, 4-a</label>
+<label class="option"><input type="radio" name="q14" value="C"> C. 1-d, 2-a, 3-c, 4-b</label>
+<label class="option"><input type="radio" name="q14" value="D"> D. 1-a, 2-d, 3-b, 4-c</label>
+</div>
+
+<div class="section-heading">
+Part D — Assertion & Reason
+</div>
+
+<div class="question">
+<h3>Q15. Assertion (A): The nineteenth century witnessed the emergence of a closely interconnected world economy.</h3>
+<p><b>Reason (R):</b> New transport technologies, migration and expansion of trade connected different regions.</p>
+
+<label class="option"><input type="radio" name="q15" value="A"> A. Both A and R are true, and R is the correct explanation of A.</label>
+<label class="option"><input type="radio" name="q15" value="B"> B. Both A and R are true, but R is not the correct explanation of A.</label>
+<label class="option"><input type="radio" name="q15" value="C"> C. A is true, but R is false.</label>
+<label class="option"><input type="radio" name="q15" value="D"> D. A is false, but R is true.</label>
+</div>
+
+<div class="question">
+<h3>Q16. Assertion (A): The abolition of Corn Laws encouraged Britain to import food from other countries.</h3>
+<p><b>Reason (R):</b> Britain could obtain food more cheaply from countries where land and agricultural production were relatively inexpensive.</p>
+
+<label class="option"><input type="radio" name="q16" value="A"> A. Both A and R are true, and R is the correct explanation of A.</label>
+<label class="option"><input type="radio" name="q16" value="B"> B. Both A and R are true, but R is not the correct explanation of A.</label>
+<label class="option"><input type="radio" name="q16" value="C"> C. A is true, but R is false.</label>
+<label class="option"><input type="radio" name="q16" value="D"> D. A is false, but R is true.</label>
+</div>
+
+<div class="question">
+<h3>Q17. Assertion (A): Indian indentured labour migration was completely voluntary and free from exploitation.</h3>
+<p><b>Reason (R):</b> Many indentured workers faced difficult working conditions and restrictions under their contracts.</p>
+
+<label class="option"><input type="radio" name="q17" value="A"> A. Both A and R are true, and R is the correct explanation of A.</label>
+<label class="option"><input type="radio" name="q17" value="B"> B. Both A and R are true, but R is not the correct explanation of A.</label>
+<label class="option"><input type="radio" name="q17" value="C"> C. A is true, but R is false.</label>
+<label class="option"><input type="radio" name="q17" value="D"> D. A is false, but R is true.</label>
+</div>
+
+<div class="question">
+<h3>Q18. Assertion (A): Technological improvements contributed to the expansion of world trade.</h3>
+<p><b>Reason (R):</b> Railways and steamships reduced transportation time and costs.</p>
+
+<label class="option"><input type="radio" name="q18" value="A"> A. Both A and R are true, and R is the correct explanation of A.</label>
+<label class="option"><input type="radio" name="q18" value="B"> B. Both A and R are true, but R is not the correct explanation of A.</label>
+<label class="option"><input type="radio" name="q18" value="C"> C. A is true, but R is false.</label>
+<label class="option"><input type="radio" name="q18" value="D"> D. A is false, but R is true.</label>
+</div>
+
+<div class="section-heading">
+Part E — Conceptual & Analytical Questions
+</div>
+
+<div class="question">
+<h3>Q19. Which factor made the nineteenth-century global economy possible?</h3>
+
+<label class="option"><input type="radio" name="q19" value="A"> A. Complete isolation of national economies</label>
+<label class="option"><input type="radio" name="q19" value="B"> B. Expansion of trade, migration, capital flows and technological change</label>
+<label class="option"><input type="radio" name="q19" value="C"> C. End of international transportation</label>
+<label class="option"><input type="radio" name="q19" value="D"> D. Decline of European overseas trade</label>
+</div>
+
+<div class="question">
+<h3>Q20. Why did European governments encourage migration to overseas territories during the nineteenth century?</h3>
+
+<label class="option"><input type="radio" name="q20" value="A"> A. To reduce population pressure and provide labour for expanding economies</label>
+<label class="option"><input type="radio" name="q20" value="B"> B. To stop industrialisation</label>
+<label class="option"><input type="radio" name="q20" value="C"> C. To end agricultural production</label>
+<label class="option"><input type="radio" name="q20" value="D"> D. To eliminate international trade</label>
+</div>
+
+<div class="question">
+<h3>Q21. Which statement best explains the relationship between technology and food availability?</h3>
+
+<label class="option"><input type="radio" name="q21" value="A"> A. Refrigerated ships made it possible to transport meat over long distances.</label>
+<label class="option"><input type="radio" name="q21" value="B"> B. Technology completely ended food shortages.</label>
+<label class="option"><input type="radio" name="q21" value="C"> C. Railways prevented agricultural trade.</label>
+<label class="option"><input type="radio" name="q21" value="D"> D. Steamships were used only for passengers.</label>
+</div>
+
+<div class="question">
+<h3>Q22. Why did many Indian peasants agree to become indentured labourers?</h3>
+
+<label class="option"><input type="radio" name="q22" value="A"> A. They always received high wages and complete freedom.</label>
+<label class="option"><input type="radio" name="q22" value="B"> B. Poverty, indebtedness, loss of land and the promise of overseas employment pushed many into the system.</label>
+<label class="option"><input type="radio" name="q22" value="C"> C. They wanted to join European armies.</label>
+<label class="option"><input type="radio" name="q22" value="D"> D. They were forced by Indian nationalists.</label>
+</div>
+
+<div class="question">
+<h3>Q23. What was one major consequence of the expansion of global trade for colonial economies?</h3>
+
+<label class="option"><input type="radio" name="q23" value="A"> A. Colonies were increasingly integrated into global markets and production systems.</label>
+<label class="option"><input type="radio" name="q23" value="B"> B. Colonies became completely independent of Europe.</label>
+<label class="option"><input type="radio" name="q23" value="C"> C. Overseas trade disappeared.</label>
+<label class="option"><input type="radio" name="q23" value="D"> D. Colonial agriculture ended.</label>
+</div>
+
+<div class="section-heading">
+Part F — Passage-Based Questions
+</div>
+
+<div class="passage">
+<b>Read the passage carefully:</b><br><br>
+During the nineteenth century, improvements in transport and communication transformed the world economy. Railways connected agricultural regions with ports, while steamships carried goods across oceans more quickly. The development of refrigerated ships made it possible to transport perishable foods such as meat over long distances. These changes reduced transportation costs and helped connect producers and consumers in distant parts of the world. As a result, food and raw materials could increasingly be traded on a global scale.
+</div>
+
+<div class="question">
+<h3>Q24. What was one major effect of railway expansion?</h3>
+
+<label class="option"><input type="radio" name="q24" value="A"> A. It isolated agricultural regions.</label>
+<label class="option"><input type="radio" name="q24" value="B"> B. It connected agricultural regions with ports and markets.</label>
+<label class="option"><input type="radio" name="q24" value="C"> C. It stopped overseas trade.</label>
+<label class="option"><input type="radio" name="q24" value="D"> D. It reduced agricultural production everywhere.</label>
+</div>
+
+<div class="question">
+<h3>Q25. Why were refrigerated ships historically important?</h3>
+
+<label class="option"><input type="radio" name="q25" value="A"> A. They allowed perishable food to be transported over long distances.</label>
+<label class="option"><input type="radio" name="q25" value="B"> B. They were used to transport only passengers.</label>
+<label class="option"><input type="radio" name="q25" value="C"> C. They prevented international trade.</label>
+<label class="option"><input type="radio" name="q25" value="D"> D. They replaced agricultural labour.</label>
+</div>
+
+<div class="question">
+<h3>Q26. What broader process is described in the passage?</h3>
+
+<label class="option"><input type="radio" name="q26" value="A"> A. De-globalisation</label>
+<label class="option"><input type="radio" name="q26" value="B"> B. Increasing integration of the world economy</label>
+<label class="option"><input type="radio" name="q26" value="C"> C. Complete decline of transportation</label>
+<label class="option"><input type="radio" name="q26" value="D"> D. End of agricultural trade</label>
+</div>
+
+<div class="passage">
+<b>Read the passage carefully:</b><br><br>
+Indentured labour migration was an important part of the nineteenth-century global economy. Workers from India and other parts of Asia were taken to plantations, mines and construction projects in different colonies. They signed contracts promising to work for a fixed period. Although the system was legally different from slavery, workers often experienced harsh conditions, low wages and restrictions on their freedom. Over time, indentured workers contributed to the cultural and social development of the societies in which they settled.
+</div>
+
+<div class="question">
+<h3>Q27. What was the basic feature of indentured labour?</h3>
+
+<label class="option"><input type="radio" name="q27" value="A"> A. Workers were contracted for a fixed period.</label>
+<label class="option"><input type="radio" name="q27" value="B"> B. Workers were guaranteed political power.</label>
+<label class="option"><input type="radio" name="q27" value="C"> C. Workers were never required to work.</label>
+<label class="option"><input type="radio" name="q27" value="D"> D. Workers were always paid European wages.</label>
+</div>
+
+<div class="question">
+<h3>Q28. Why can indentured labour not simply be described as free migration?</h3>
+
+<label class="option"><input type="radio" name="q28" value="A"> A. Workers operated under contracts and could face harsh working conditions and restrictions.</label>
+<label class="option"><input type="radio" name="q28" value="B"> B. Workers never travelled outside India.</label>
+<label class="option"><input type="radio" name="q28" value="C"> C. Workers were all wealthy merchants.</label>
+<label class="option"><input type="radio" name="q28" value="D"> D. Workers were employed only in offices.</label>
+</div>
+
+<div class="question">
+<h3>Q29. Which of the following was a long-term social consequence of indentured migration?</h3>
+
+<label class="option"><input type="radio" name="q29" value="A"> A. Indian cultural traditions spread to several parts of the world.</label>
+<label class="option"><input type="radio" name="q29" value="B"> B. All Indian traditions disappeared.</label>
+<label class="option"><input type="radio" name="q29" value="C"> C. Overseas Indian communities completely rejected their culture.</label>
+<label class="option"><input type="radio" name="q29" value="D"> D. Migration permanently ended cultural exchange.</label>
+</div>
+
+<div class="question">
+<h3>Q30. Which conclusion can be drawn from the chapter about the making of the global world?</h3>
+
+<label class="option"><input type="radio" name="q30" value="A"> A. Globalisation was created by one single event.</label>
+<label class="option"><input type="radio" name="q30" value="B"> B. The global world developed through interconnected processes of trade, migration, technology and economic change.</label>
+<label class="option"><input type="radio" name="q30" value="C"> C. Global connections began only after the Second World War.</label>
+<label class="option"><input type="radio" name="q30" value="D"> D. Globalisation affected only European countries.</label>
+</div>
+
+<div class="submit-box">
+<button type="button" onclick="submitTest()">Submit Test</button>
+</div>
+
+</form>
+
+<div id="result">
+<h2>Test Result</h2>
+<div id="score"></div>
+<p id="resultMessage"></p>
+</div>
+
+<div id="explanations">
+
+<div class="section-heading">
+Answer Key & Detailed Explanations
+</div>
+
+<div class="explanation">
+<b>Q1. Correct Answer: B</b><br>
+The global world refers to increasing connections between different regions through trade, migration, technology, investment and cultural exchange.
+</div>
+
+<div class="explanation">
+<b>Q2. Correct Answer: A</b><br>
+The potato was brought from the Americas to Europe and became an important food crop, particularly for poorer Europeans.
+</div>
+
+<div class="explanation">
+<b>Q3. Correct Answer: B</b><br>
+Poverty, unemployment, population growth and food shortages encouraged many Europeans to migrate overseas in search of better opportunities.
+</div>
+
+<div class="explanation">
+<b>Q4. Correct Answer: A</b><br>
+The Corn Laws imposed restrictions on the import of food grains into Britain. Their abolition helped open Britain to cheaper food imports.
+</div>
+
+<div class="explanation">
+<b>Q5. Correct Answer: C</b><br>
+After the Corn Laws were abolished, Britain could import food more cheaply. This encouraged global agricultural trade.
+</div>
+
+<div class="explanation">
+<b>Q6. Correct Answer: A</b><br>
+Railways and steamships greatly reduced transportation time and costs and connected producers with distant markets.
+</div>
+
+<div class="explanation">
+<b>Q7. Correct Answer: A</b><br>
+Refrigerated ships made it possible to carry perishable foods such as meat over long distances without rapid spoilage.
+</div>
+
+<div class="explanation">
+<b>Q8. Correct Answer: A</b><br>
+Indentured labour involved workers signing contracts to work for a specified period, often under difficult conditions.
+</div>
+
+<div class="explanation">
+<b>Q9. Correct Answer: A</b><br>
+Caribbean colonies were among the important destinations for Indian indentured workers employed mainly on plantations.
+</div>
+
+<div class="explanation">
+<b>Q10. Correct Answer: A</b><br>
+Fiji was one of the important destinations for Indian indentured labourers.
+</div>
+
+<div class="explanation">
+<b>Q11. Correct Answer: A</b><br>
+The abolition of the Corn Laws came before the First World War, followed by the Great Depression and then the Second World War.
+</div>
+
+<div class="explanation">
+<b>Q12. Correct Answer: A</b><br>
+The nineteenth-century global economy developed before the First World War, followed by the Great Depression and the Second World War.
+</div>
+
+<div class="explanation">
+<b>Q13. Correct Answer: A</b><br>
+Corn Laws = restrictions on food imports; indentured labour = contract labour; refrigerated ships = perishable food transport; Silk Routes = long-distance trade and cultural connections.
+</div>
+
+<div class="explanation">
+<b>Q14. Correct Answer: A</b><br>
+India supplied indentured labour, Caribbean colonies received many workers, Europe experienced large migration and America became a major destination for European migrants.
+</div>
+
+<div class="explanation">
+<b>Q15. Correct Answer: A</b><br>
+Trade, migration and technological improvements helped connect different parts of the world and created a more integrated world economy.
+</div>
+
+<div class="explanation">
+<b>Q16. Correct Answer: A</b><br>
+After the Corn Laws were abolished, Britain could import cheaper food from countries with abundant land and agricultural production.
+</div>
+
+<div class="explanation">
+<b>Q17. Correct Answer: D</b><br>
+The assertion is false. Indentured labour was not completely free from exploitation. The reason is true because workers could face harsh conditions and restrictions.
+</div>
+
+<div class="explanation">
+<b>Q18. Correct Answer: A</b><br>
+Railways and steamships reduced transportation time and costs, directly contributing to the expansion of international trade.
+</div>
+
+<div class="explanation">
+<b>Q19. Correct Answer: B</b><br>
+The global economy developed through several interconnected processes, including trade, migration, capital flows and technological change.
+</div>
+
+<div class="explanation">
+<b>Q20. Correct Answer: A</b><br>
+Migration helped relieve population pressure in some European countries and supplied labour to developing economies overseas.
+</div>
+
+<div class="explanation">
+<b>Q21. Correct Answer: A</b><br>
+Refrigerated ships were especially important because they enabled perishable food such as meat to be transported across oceans.
+</div>
+
+<div class="explanation">
+<b>Q22. Correct Answer: B</b><br>
+Poverty, indebtedness, loss of land and the promise of employment encouraged many Indians to enter the indentured labour system.
+</div>
+
+<div class="explanation">
+<b>Q23. Correct Answer: A</b><br>
+Colonial economies became increasingly connected to international markets and were often reorganised to supply raw materials and agricultural products.
+</div>
+
+<div class="explanation">
+<b>Q24. Correct Answer: B</b><br>
+Railways connected inland agricultural areas with ports and markets, making the movement of agricultural goods easier.
+</div>
+
+<div class="explanation">
+<b>Q25. Correct Answer: A</b><br>
+Refrigerated ships allowed meat and other perishable foods to travel long distances without spoiling quickly.
+</div>
+
+<div class="explanation">
+<b>Q26. Correct Answer: B</b><br>
+The passage describes how transportation technology helped integrate distant producers and consumers into a global economy.
+</div>
+
+<div class="explanation">
+<b>Q27. Correct Answer: A</b><br>
+Indentured workers signed contracts that generally required them to work for a fixed period.
+</div>
+
+<div class="explanation">
+<b>Q28. Correct Answer: A</b><br>
+Indentured migration involved contractual obligations and could involve harsh conditions and restrictions on workers' freedom.
+</div>
+
+<div class="explanation">
+<b>Q29. Correct Answer: A</b><br>
+Indian migrants carried languages, religions, food, customs and traditions to different parts of the world, contributing to new multicultural societies.
+</div>
+
+<div class="explanation">
+<b>Q30. Correct Answer: B</b><br>
+The making of the global world was a long historical process shaped by trade, migration, technology, capital and changing economic relationships.
+</div>
+
+</div>
+
+</div>
+
+<footer>
+<h2>GSI MANTRA</h2>
+<p>Class 10 History • Chapter 3 • The Making of a Global World</p>
+<p>© 2026 GSI MANTRA. All Rights Reserved.</p>
+</footer>
+
+<script>
+
+const answers = {
+q1:"B",
+q2:"A",
+q3:"B",
+q4:"A",
+q5:"C",
+q6:"A",
+q7:"A",
+q8:"A",
+q9:"A",
+q10:"A",
+q11:"A",
+q12:"A",
+q13:"A",
+q14:"A",
+q15:"A",
+q16:"A",
+q17:"D",
+q18:"A",
+q19:"B",
+q20:"A",
+q21:"A",
+q22:"B",
+q23:"A",
+q24:"B",
+q25:"A",
+q26:"B",
+q27:"A",
+q28:"A",
+q29:"A",
+q30:"B"
+};
+
+function submitTest(){
+
+    let score = 0;
+    let answered = 0;
+
+    for(let i=1;i<=30;i++){
+
+        const selected =
+            document.querySelector('input[name="q'+i+'"]:checked');
+
+        if(selected){
+            answered++;
+
+            if(selected.value === answers["q"+i]){
+                score++;
+            }
+        }
+    }
+
+    const percentage = Math.round((score/30)*100);
+
+    document.getElementById("score").innerHTML =
+        score + " / 30 (" + percentage + "%)";
+
+    document.getElementById("resultMessage").innerHTML =
+        "You answered " + answered + " out of 30 questions. " +
+        "Read the detailed explanations below to improve your preparation.";
+
+    document.getElementById("result").style.display="block";
+    document.getElementById("explanations").style.display="block";
+
+    window.scrollTo({
+        top:document.getElementById("result").offsetTop - 20,
+        behavior:"smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
+```
