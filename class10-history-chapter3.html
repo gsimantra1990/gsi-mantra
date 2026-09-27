@@ -1,0 +1,690 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GSI MANTRA | Class 10 History Chapter 3</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+/* WATERMARK */
+body::before{
+    content:"GSI MANTRA";
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-25deg);
+    font-size:70px;
+    font-weight:bold;
+    color:rgba(18,60,105,0.055);
+    pointer-events:none;
+    z-index:0;
+    white-space:nowrap;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:22px 20px;
+    position:relative;
+    z-index:2;
+}
+
+.header-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:32px;
+}
+
+.logo p{
+    margin:5px 0 0;
+    font-size:14px;
+}
+
+/* SEARCH */
+.search{
+    background:white;
+    padding:10px 15px;
+    border-radius:25px;
+    width:280px;
+}
+
+.search input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+}
+
+/* NAVIGATION */
+nav{
+    background:#071d33;
+    padding:13px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#123c69,#1d5b91);
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+    position:relative;
+    z-index:1;
+}
+
+.hero h2{
+    margin:0 0 12px;
+    font-size:32px;
+}
+
+.hero p{
+    margin:8px auto;
+    font-size:17px;
+    line-height:1.6;
+}
+
+/* MAIN CONTAINER */
+.container{
+    max-width:1100px;
+    margin:30px auto;
+    padding:0 20px 50px;
+    position:relative;
+    z-index:1;
+}
+
+/* CHAPTER INFO */
+.chapter-info{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    margin-bottom:25px;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.info-item{
+    background:#f8fafc;
+    padding:16px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.info-item strong{
+    display:block;
+    color:#123c69;
+    margin-bottom:6px;
+}
+
+/* CONTENT CARD */
+.card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.card h3{
+    color:#123c69;
+    margin-top:0;
+    font-size:23px;
+}
+
+.card p{
+    line-height:1.7;
+    color:#444;
+}
+
+/* TOPICS */
+.topics{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.topic{
+    background:#f8fafc;
+    border-left:5px solid #f28c00;
+    padding:15px;
+    border-radius:8px;
+}
+
+.topic strong{
+    color:#123c69;
+}
+
+.topic p{
+    margin:7px 0 0;
+    font-size:14px;
+}
+
+/* BUTTON AREA */
+.button-area{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:20px;
+}
+
+.study-button{
+    display:block;
+    color:white;
+    text-decoration:none;
+    text-align:center;
+    padding:16px 12px;
+    border-radius:9px;
+    font-weight:bold;
+    font-size:16px;
+    transition:.25s;
+}
+
+.study-button:hover{
+    transform:translateY(-3px);
+    opacity:.9;
+}
+
+.notes{
+    background:#0b6e4f;
+}
+
+.practice{
+    background:#f28c00;
+}
+
+.video{
+    background:#c62828;
+}
+
+/* EXAM FOCUS */
+.exam-list{
+    line-height:1.9;
+    color:#444;
+}
+
+/* FOOTER */
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    position:relative;
+    z-index:2;
+}
+
+footer h2{
+    margin-top:0;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    .header-content{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    .info-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .topics{
+        grid-template-columns:1fr;
+    }
+
+    .button-area{
+        grid-template-columns:1fr;
+    }
+
+    .hero h2{
+        font-size:26px;
+    }
+
+    .logo{
+        justify-content:center;
+    }
+
+    body::before{
+        font-size:40px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+<header>
+
+<div class="header-content">
+
+<div class="logo">
+
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+
+<div>
+
+<h1>GSI MANTRA</h1>
+
+<p>
+Competitive Education & NCERT Learning Platform
+</p>
+
+</div>
+
+</div>
+
+
+<div class="search">
+
+<input
+type="text"
+placeholder="Search GSI MANTRA..."
+aria-label="Search GSI MANTRA">
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- NAVIGATION -->
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="class10.html">Class 10</a>
+
+<a href="class10-history.html">History</a>
+
+</nav>
+
+
+<!-- HERO -->
+<section class="hero">
+
+<h2>
+Chapter 3 – The Making of a Global World
+</h2>
+
+<p>
+Class 10 History
+</p>
+
+<p>
+NCERT + CBSE Board + Competitive Level
+</p>
+
+</section>
+
+
+<!-- MAIN -->
+<div class="container">
+
+
+<!-- CHAPTER INFORMATION -->
+<div class="chapter-info">
+
+<div class="info-grid">
+
+<div class="info-item">
+<strong>Class</strong>
+10th
+</div>
+
+<div class="info-item">
+<strong>Subject</strong>
+History
+</div>
+
+<div class="info-item">
+<strong>Chapter</strong>
+3
+</div>
+
+<div class="info-item">
+<strong>Level</strong>
+NCERT + Board + Competitive
+</div>
+
+</div>
+
+</div>
+
+
+<!-- OVERVIEW -->
+<div class="card">
+
+<h3>
+📖 Chapter Overview
+</h3>
+
+<p>
+The Making of a Global World explains the historical process
+through which different parts of the world became increasingly
+connected through trade, migration, technology and the movement
+of capital.
+</p>
+
+<p>
+The chapter covers the pre-modern world, the nineteenth-century
+global economy, migration, indentured labour, technological
+developments, the Great Depression, the two World Wars and the
+post-war international economic system.
+</p>
+
+</div>
+
+
+<!-- IMPORTANT TOPICS -->
+<div class="card">
+
+<h3>
+📚 Important Topics
+</h3>
+
+<div class="topics">
+
+
+<div class="topic">
+
+<strong>1. The Pre-modern World</strong>
+
+<p>
+Early trade, travel, migration and cultural connections between
+different parts of the world.
+</p>
+
+</div>
+
+
+<div class="topic">
+
+<strong>2. Silk Routes Link the World</strong>
+
+<p>
+Historical trade routes that connected Asia, Europe and other
+regions through trade and cultural exchange.
+</p>
+
+</div>
+
+
+<div class="topic">
+
+<strong>3. Food Travels</strong>
+
+<p>
+The movement of food crops across continents and their impact
+on societies.
+</p>
+
+</div>
+
+
+<div class="topic">
+
+<strong>4. Conquest, Disease and Trade</strong>
+
+<p>
+European expansion and its impact on societies and economies.
+</p>
+
+</div>
+
+
+<div class="topic">
+
+<strong>5. Nineteenth-Century Global Economy</strong>
+
+<p>
+Trade, migration, labour and capital flows during the
+nineteenth century.
+</p>
+
+</div>
+
+
+<div class="topic">
+
+<strong>6. Corn Laws</strong>
+
+<p>
+The Corn Laws and their abolition helped change Britain's
+food trade and the global economy.
+</p>
+
+</div>
+
+
+<div class="topic">
+
+<strong>7. Indentured Labour</strong>
+
+<p>
+The migration of workers under fixed-term contracts to
+different colonies.
+</p>
+
+</div>
+
+
+<div class="topic">
+
+<strong>8. Technology and Globalisation</strong>
+
+<p>
+Railways, steamships, canals and communication technologies
+transformed global connections.
+</p>
+
+</div>
+
+
+<div class="topic">
+
+<strong>9. The Great Depression</strong>
+
+<p>
+The economic crisis of the 1930s and its impact on trade,
+agriculture and employment.
+</p>
+
+</div>
+
+
+<div class="topic">
+
+<strong>10. Post-war Reconstruction</strong>
+
+<p>
+Bretton Woods institutions and the emergence of a new
+international economic system.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- STUDY MATERIAL -->
+<div class="card">
+
+<h3>
+🎯 Chapter 3 Study Material
+</h3>
+
+<p>
+Choose the section you want to study:
+</p>
+
+
+<div class="button-area">
+
+
+<a
+class="study-button notes"
+href="class10-history-chapter3-notes.html">
+
+📘 Notes
+
+</a>
+
+
+<a
+class="study-button practice"
+href="class10-history-chapter3-practice.html">
+
+📝 Practice
+
+</a>
+
+
+<a
+class="study-button video"
+href="class10-history-chapter3-video.html">
+
+▶ Video
+
+</a>
+
+
+</div>
+
+</div>
+
+
+<!-- EXAM FOCUS -->
+<div class="card">
+
+<h3>
+⭐ Exam Focus
+</h3>
+
+<p>
+Chapter 3 की तैयारी करते समय इन topics पर विशेष ध्यान दें:
+</p>
+
+<ul class="exam-list">
+
+<li>Silk Routes</li>
+
+<li>Food and Global Connections</li>
+
+<li>Corn Laws</li>
+
+<li>Indentured Labour</li>
+
+<li>Indian Indentured Workers</li>
+
+<li>Technology and Globalisation</li>
+
+<li>The Great Depression</li>
+
+<li>Impact of the First World War</li>
+
+<li>Bretton Woods Institutions</li>
+
+<li>Post-war International Economic System</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+<h2>GSI MANTRA</h2>
+
+<p>
+Class 10 History • Chapter 3
+</p>
+
+<p>
+The Making of a Global World
+</p>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
+</footer>
+
+
+</body>
+</html>
+```
