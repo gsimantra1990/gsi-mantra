@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Practice Set 3 | The Making of a Global World | GSI MANTRA</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+body::before{
+    content:"GSI MANTRA";
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-25deg);
+    font-size:70px;
+    font-weight:bold;
+    color:rgba(18,60,105,0.055);
+    pointer-events:none;
+    z-index:0;
+    white-space:nowrap;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:22px 20px;
+    position:relative;
+    z-index:2;
+}
+
+.header-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:32px;
+}
+
+.logo p{
+    margin:5px 0 0;
+    font-size:14px;
+}
+
+.search{
+    background:white;
+    padding:10px 15px;
+    border-radius:25px;
+    width:280px;
+}
+
+.search input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+}
+
+/* NAV */
+nav{
+    background:#071d33;
+    padding:13px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#123c69,#1d5b91);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+    position:relative;
+    z-index:1;
+}
+
+.hero h2{
+    margin:0 0 10px;
+    font-size:32px;
+}
+
+.hero p{
+    margin:8px auto;
+    font-size:17px;
+    line-height:1.6;
+}
+
+/* INFO */
+.test-info{
+    max-width:1100px;
+    margin:25px auto;
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    position:relative;
+    z-index:1;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    text-align:center;
+}
+
+.info-item{
+    background:#f8fafc;
+    padding:14px;
+    border-radius:10px;
+}
+
+.info-item strong{
+    display:block;
+    color:#123c69;
+    margin-bottom:5px;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:10px 20px 50px;
+    position:relative;
+    z-index:1;
+}
+
+.section-heading{
+    background:#123c69;
+    color:white;
+    padding:13px 18px;
+    border-radius:10px;
+    margin:25px 0 15px;
+}
+
+/* QUESTION */
+.question{
+    background:white;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:13px;
+    box-shadow:0 4px 14px rgba(0,0,0,.07);
+}
+
+.question h3{
+    color:#123c69;
+    margin-top:0;
+    font-size:18px;
+    line-height:1.5;
+}
+
+.option{
+    display:block;
+    padding:10px 12px;
+    margin:8px 0;
+    border:1px solid #dce4ec;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.option:hover{
+    background:#f1f6fb;
+}
+
+.option input{
+    margin-right:8px;
+}
+
+/* PASSAGE */
+.passage{
+    background:#fff8e8;
+    border-left:5px solid #f28c00;
+    padding:18px;
+    line-height:1.7;
+    margin-bottom:18px;
+    border-radius:8px;
+}
+
+/* SUBMIT */
+.submit-box{
+    text-align:center;
+    margin:35px 0;
+}
+
+button{
+    background:#123c69;
+    color:white;
+    border:none;
+    padding:14px 35px;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#f28c00;
+}
+
+/* RESULT */
+#result{
+    display:none;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.10);
+    margin-top:25px;
+}
+
+#score{
+    color:#123c69;
+    font-size:30px;
+    font-weight:bold;
+}
+
+/* EXPLANATION */
+#explanations{
+    display:none;
+}
+
+.explanation{
+    background:#f0fdf4;
+    border-left:5px solid #159447;
+    padding:17px;
+    margin:14px 0;
+    border-radius:8px;
+    line-height:1.6;
+}
+
+/* FOOTER */
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    position:relative;
+    z-index:2;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    .header-content{
+        flex-direction:column;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    .info-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero h2{
+        font-size:26px;
+    }
+
+    .question{
+        padding:17px;
+    }
+
+    body::before{
+        font-size:40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="header-content">
+
+<div class="logo">
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+
+<div>
+<h1>GSI MANTRA</h1>
+<p>Competitive Education & NCERT Learning Platform</p>
+</div>
+
+</div>
+
+<div class="search">
+<input type="text" placeholder="Search GSI MANTRA...">
+</div>
+
+</div>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="class10.html">Class 10</a>
+<a href="class10-history.html">History</a>
+<a href="class10-history-chapter3-practice.html">Chapter 3</a>
+</nav>
+
+<section class="hero">
+<h2>Practice Set 3 — The Making of a Global World</h2>
+<p>Class 10 History • English Medium</p>
+<p>NCERT + Board + Competitive Level</p>
+</section>
+
+<div class="test-info">
+
+<div class="info-grid">
+
+<div class="info-item">
+<strong>Class</strong>
+10
+</div>
+
+<div class="info-item">
+<strong>Subject</strong>
+History
+</div>
+
+<div class="info-item">
+<strong>Total Questions</strong>
+30
+</div>
+
+<div class="info-item">
+<strong>Marks</strong>
+30
+</div>
+
+</div>
+
+</div>
+
+<div class="container">
+
+<form id="testForm">
+
+<!-- PART A -->
+
+<div class="section-heading">
+Part A — Multiple Choice Questions
+</div>
+
+<div class="question">
+<h3>Q1. Which ancient trade network linked Asia with Europe and helped exchange goods and ideas?</h3>
+
+<label class="option">
+<input type="radio" name="q1" value="A">
+A. Silk Routes
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="B">
+B. Atlantic Routes
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="C">
+C. Arctic Routes
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="D">
+D. Pacific Routes
+</label>
+</div>
+
+<div class="question">
+<h3>Q2. Which disease spread to Europe after contact with the Americas?</h3>
+
+<label class="option">
+<input type="radio" name="q2" value="A">
+A. Smallpox
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="B">
+B. Malaria
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="C">
+C. Cholera
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="D">
+D. Plague
+</label>
+</div>
+
+<div class="question">
+<h3>Q3. What was one important effect of the discovery of the Americas?</h3>
+
+<label class="option">
+<input type="radio" name="q3" value="A">
+A. It ended world trade
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="B">
+B. It created new trade routes and connected distant economies
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="C">
+C. It stopped migration
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="D">
+D. It isolated Europe
+</label>
+</div>
+
+<div class="question">
+<h3>Q4. Which food became an important source of nutrition for poor Europeans after its arrival from the Americas?</h3>
+
+<label class="option">
+<input type="radio" name="q4" value="A">
+A. Potato
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="B">
+B. Rice
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="C">
+C. Wheat
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="D">
+D. Barley
+</label>
+</div>
+
+<div class="question">
+<h3>Q5. Why was the abolition of the Corn Laws important for Britain?</h3>
+
+<label class="option">
+<input type="radio" name="q5" value="A">
+A. It prevented food imports
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="B">
+B. It allowed cheaper food imports
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="C">
+C. It ended British industrialisation
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="D">
+D. It stopped migration
+</label>
+</div>
+
+<div class="question">
+<h3>Q6. Which development reduced the cost of transporting goods across oceans?</h3>
+
+<label class="option">
+<input type="radio" name="q6" value="A">
+A. Steamships
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="B">
+B. Bullock carts
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="C">
+C. Sailing boats only
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="D">
+D. Hand tools
+</label>
+</div>
+
+<div class="question">
+<h3>Q7. What was the main purpose of refrigerated ships?</h3>
+
+<label class="option">
+<input type="radio" name="q7" value="A">
+A. To transport perishable food
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="B">
+B. To transport only soldiers
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="C">
+C. To transport books
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="D">
+D. To stop overseas trade
+</label>
+</div>
+
+<div class="question">
+<h3>Q8. Which of the following was a major destination of Indian indentured labourers?</h3>
+
+<label class="option">
+<input type="radio" name="q8" value="A">
+A. Fiji
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="B">
+B. Sweden
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="C">
+C. Switzerland
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="D">
+D. Denmark
+</label>
+</div>
+
+<div class="question">
+<h3>Q9. Which group formed a large part of Indian indentured labour migration?</h3>
+
+<label class="option">
+<input type="radio" name="q9" value="A">
+A. Poor peasants and workers
+</label>
+
+<label class="option">
+<input type="radio" name="q9" value="B">
+B. European kings
+</label>
+
+<label class="option">
+<input type="radio" name="q9" value="C">
+C. Industrialists only
+</label>
+
+<label class="option">
+<input type="radio" name="q9" value="D">
+D. Military generals
+</label>
+</div>
+
+<div class="question">
+<h3>Q10. Which factor encouraged many Indians to enter the indentured labour system?</h3>
+
+<label class="option">
+<input type="radio" name="q10" value="A">
+A. Poverty and indebtedness
+</label>
+
+<label class="option">
+<input type="radio" name="q10" value="B">
+A. Complete economic prosperity
+</label>
+
+<label class="option">
+<input type="radio" name="q10" value="C">
+C. Lack of overseas opportunities
+</label>
+
+<label class="option">
+<input type="radio" name="q10" value="D">
+D. End of agriculture
+</label>
+</div>
+
+<!-- PART B -->
+
+<div class="section-heading">
+Part B — Chronological Arrangement
+</div>
+
+<div class="question">
+<h3>Q11. Arrange the following events in chronological order:</h3>
+
+<p>
+1. First World War<br>
+2. Great Depression<br>
+3. Second World War<br>
+4. Abolition of Corn Laws
+</p>
+
+<label class="option">
+<input type="radio" name="q11" value="A">
+A. 4 → 1 → 2 → 3
+</label>
+
+<label class="option">
+<input type="radio" name="q11" value="B">
+B. 1 → 4 → 2 → 3
+</label>
+
+<label class="option">
+<input type="radio" name="q11" value="C">
+C. 2 → 1 → 4 → 3
+</label>
+
+<label class="option">
+<input type="radio" name="q11" value="D">
+D. 4 → 2 → 1 → 3
+</label>
+</div>
+
+<div class="question">
+<h3>Q12. Which is the correct sequence of the major economic developments?</h3>
+
+<p>
+1. Industrialisation<br>
+2. Expansion of world trade<br>
+3. First World War<br>
+4. Great Depression
+</p>
+
+<label class="option">
+<input type="radio" name="q12" value="A">
+A. 1 → 2 → 3 → 4
+</label>
+
+<label class="option">
+<input type="radio" name="q12" value="B">
+B. 2 → 1 → 4 → 3
+</label>
+
+<label class="option">
+<input type="radio" name="q12" value="C">
+C. 3 → 2 → 1 → 4
+</label>
+
+<label class="option">
+<input type="radio" name="q12" value="D">
+D. 4 → 3 → 2 → 1
+</label>
+</div>
+
+<!-- PART C -->
+
+<div class="section-heading">
+Part C — Matching
+</div>
+
+<div class="question">
+<h3>Q13. Match the following:</h3>
+
+<p>
+1. Silk Routes<br>
+2. Potato<br>
+3. Corn Laws<br>
+4. Refrigerated ships
+</p>
+
+<p>
+a. Food from the Americas<br>
+b. Restrictions on food imports<br>
+c. Ancient trade connections<br>
+d. Transport of perishable food
+</p>
+
+<label class="option">
+<input type="radio" name="q13" value="A">
+A. 1-c, 2-a, 3-b, 4-d
+</label>
+
+<label class="option">
+<input type="radio" name="q13" value="B">
+B. 1-a, 2-c, 3-d, 4-b
+</label>
+
+<label class="option">
+<input type="radio" name="q13" value="C">
+C. 1-d, 2-b, 3-a, 4-c
+</label>
+
+<label class="option">
+<input type="radio" name="q13" value="D">
+D. 1-b, 2-d, 3-c, 4-a
+</label>
+</div>
+
+<div class="question">
+<h3>Q14. Match the following places with their historical significance:</h3>
+
+<p>
+1. India<br>
+2. Caribbean<br>
+3. Fiji<br>
+4. America
+</p>
+
+<p>
+a. Destination of Indian indentured workers<br>
+b. Source of indentured labour<br>
+c. Destination of European migrants<br>
+d. Plantation economies
+</p>
+
+<label class="option">
+<input type="radio" name="q14" value="A">
+A. 1-b, 2-d, 3-a, 4-c
+</label>
+
+<label class="option">
+<input type="radio" name="q14" value="B">
+B. 1-c, 2-a, 3-d, 4-b
+</label>
+
+<label class="option">
+<input type="radio" name="q14" value="C">
+C. 1-d, 2-b, 3-c, 4-a
+</label>
+
+<label class="option">
+<input type="radio" name="q14" value="D">
+D. 1-a, 2-c, 3-b, 4-d
+</label>
+</div>
+
+<!-- PART D -->
+
+<div class="section-heading">
+Part D — Assertion & Reason
+</div>
+
+<div class="question">
+<h3>Q15. Assertion (A): The Silk Routes were important for more than trade.</h3>
+
+<p>
+<b>Reason (R):</b> They also enabled the movement of ideas, religions and cultures.
+</p>
+
+<label class="option">
+<input type="radio" name="q15" value="A">
+A. Both A and R are true, and R is the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q15" value="B">
+B. Both A and R are true, but R is not the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q15" value="C">
+C. A is true, but R is false.
+</label>
+
+<label class="option">
+<input type="radio" name="q15" value="D">
+D. A is false, but R is true.
+</label>
+</div>
+
+<div class="question">
+<h3>Q16. Assertion (A): Technology played an important role in the making of a global world.</h3>
+
+<p>
+<b>Reason (R):</b> Railways and steamships made the movement of goods faster and cheaper.
+</p>
+
+<label class="option">
+<input type="radio" name="q16" value="A">
+A. Both A and R are true, and R is the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q16" value="B">
+B. Both A and R are true, but R is not the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q16" value="C">
+C. A is true, but R is false.
+</label>
+
+<label class="option">
+<input type="radio" name="q16" value="D">
+D. A is false, but R is true.
+</label>
+</div>
+
+<div class="question">
+<h3>Q17. Assertion (A): Indentured labour was exactly the same as slavery.</h3>
+
+<p>
+<b>Reason (R):</b> Indentured workers worked under contracts for a fixed period.
+</p>
+
+<label class="option">
+<input type="radio" name="q17" value="A">
+A. Both A and R are true, and R is the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q17" value="B">
+B. Both A and R are true, but R is not the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q17" value="C">
+C. A is true, but R is false.
+</label>
+
+<label class="option">
+<input type="radio" name="q17" value="D">
+D. A is false, but R is true.
+</label>
+</div>
+
+<div class="question">
+<h3>Q18. Assertion (A): Globalisation affected the lives of ordinary people.</h3>
+
+<p>
+<b>Reason (R):</b> Changes in food, migration, employment and trade influenced people's lives.
+</p>
+
+<label class="option">
+<input type="radio" name="q18" value="A">
+A. Both A and R are true, and R is the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q18" value="B">
+B. Both A and R are true, but R is not the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q18" value="C">
+C. A is true, but R is false.
+</label>
+
+<label class="option">
+<input type="radio" name="q18" value="D">
+D. A is false, but R is true.
+</label>
+</div>
+
+<!-- PART E -->
+
+<div class="section-heading">
+Part E — Conceptual & Analytical Questions
+</div>
+
+<div class="question">
+<h3>Q19. Why were the Silk Routes historically significant?</h3>
+
+<label class="option">
+<input type="radio" name="q19" value="A">
+A. They connected different parts of the world through trade and cultural exchange.
+</label>
+
+<label class="option">
+<input type="radio" name="q19" value="B">
+B. They completely isolated Asia.
+</label>
+
+<label class="option">
+<input type="radio" name="q19" value="C">
+C. They were used only for military purposes.
+</label>
+
+<label class="option">
+<input type="radio" name="q19" value="D">
+D. They ended cultural exchange.
+</label>
+</div>
+
+<div class="question">
+<h3>Q20. How did the potato influence European society?</h3>
+
+<label class="option">
+<input type="radio" name="q20" value="A">
+A. It became an important source of food, especially for poorer people.
+</label>
+
+<label class="option">
+<input type="radio" name="q20" value="B">
+B. It ended European agriculture.
+</label>
+
+<label class="option">
+<input type="radio" name="q20" value="C">
+C. It stopped migration.
+</label>
+
+<label class="option">
+<input type="radio" name="q20" value="D">
+D. It reduced food production.
+</label>
+</div>
+
+<div class="question">
+<h3>Q21. Which factor contributed to the growth of nineteenth-century international trade?</h3>
+
+<label class="option">
+<input type="radio" name="q21" value="A">
+A. Improved transport and communication
+</label>
+
+<label class="option">
+<input type="radio" name="q21" value="B">
+B. Complete closure of ports
+</label>
+
+<label class="option">
+<input type="radio" name="q21" value="C">
+C. End of industrial production
+</label>
+
+<label class="option">
+<input type="radio" name="q21" value="D">
+D. Decline of shipping
+</label>
+</div>
+
+<div class="question">
+<h3>Q22. Why did European migrants move to America and Australia?</h3>
+
+<label class="option">
+<input type="radio" name="q22" value="A">
+A. They were looking for work, land and better economic opportunities.
+</label>
+
+<label class="option">
+<input type="radio" name="q22" value="B">
+B. They wanted to stop agriculture.
+</label>
+
+<label class="option">
+<input type="radio" name="q22" value="C">
+C. They were prohibited from working in Europe.
+</label>
+
+<label class="option">
+<input type="radio" name="q22" value="D">
+D. They wanted to end global trade.
+</label>
+</div>
+
+<div class="question">
+<h3>Q23. What was one effect of the abolition of Corn Laws?</h3>
+
+<label class="option">
+<input type="radio" name="q23" value="A">
+A. Britain began importing cheaper food.
+</label>
+
+<label class="option">
+<input type="radio" name="q23" value="B">
+B. Britain stopped importing food.
+</label>
+
+<label class="option">
+<input type="radio" name="q23" value="C">
+C. Britain banned migration.
+</label>
+
+<label class="option">
+<input type="radio" name="q23" value="D">
+D. British industries completely disappeared.
+</label>
+</div>
+
+<!-- PART F -->
+
+<div class="section-heading">
+Part F — Passage-Based Questions
+</div>
+
+<div class="passage">
+<b>Read the passage carefully:</b><br><br>
+
+Before the nineteenth century, long-distance trade and cultural exchange had already connected different regions of the world. The Silk Routes were important examples of these connections. Traders carried silk, textiles, spices and other goods across long distances. Along with goods, travellers and merchants also carried ideas, religions and cultural practices. These networks show that global connections existed long before the modern period.
+</div>
+
+<div class="question">
+<h3>Q24. What did the Silk Routes mainly connect?</h3>
+
+<label class="option">
+<input type="radio" name="q24" value="A">
+A. Different regions through trade and cultural exchange
+</label>
+
+<label class="option">
+<input type="radio" name="q24" value="B">
+B. Only European villages
+</label>
+
+<label class="option">
+<input type="radio" name="q24" value="C">
+C. Only military camps
+</label>
+
+<label class="option">
+<input type="radio" name="q24" value="D">
+D. Only agricultural fields
+</label>
+</div>
+
+<div class="question">
+<h3>Q25. Which of the following was traded along the Silk Routes?</h3>
+
+<label class="option">
+<input type="radio" name="q25" value="A">
+A. Silk and spices
+</label>
+
+<label class="option">
+<input type="radio" name="q25" value="B">
+B. Only coal
+</label>
+
+<label class="option">
+<input type="radio" name="q25" value="C">
+C. Only machines
+</label>
+
+<label class="option">
+<input type="radio" name="q25" value="D">
+D. Only weapons
+</label>
+</div>
+
+<div class="question">
+<h3>Q26. What else travelled along with goods?</h3>
+
+<label class="option">
+<input type="radio" name="q26" value="A">
+A. Ideas, religions and cultural practices
+</label>
+
+<label class="option">
+<input type="radio" name="q26" value="B">
+A. Only soldiers
+</label>
+
+<label class="option">
+<input type="radio" name="q26" value="C">
+C. Only agricultural products
+</label>
+
+<label class="option">
+<input type="radio" name="q26" value="D">
+D. Only machinery
+</label>
+</div>
+
+<div class="passage">
+<b>Read the passage carefully:</b><br><br>
+
+The nineteenth-century global economy was closely connected with migration. Millions of Europeans migrated to different parts of the world. Many moved to America and Australia in search of land, employment and better economic opportunities. At the same time, large numbers of Indian and Chinese workers migrated as indentured labourers. These movements of people helped shape the economic and social life of many societies.
+</div>
+
+<div class="question">
+<h3>Q27. Why did many Europeans migrate overseas?</h3>
+
+<label class="option">
+<input type="radio" name="q27" value="A">
+A. In search of land and employment
+</label>
+
+<label class="option">
+<input type="radio" name="q27" value="B">
+B. To stop economic development
+</label>
+
+<label class="option">
+<input type="radio" name="q27" value="C">
+C. To end international trade
+</label>
+
+<label class="option">
+<input type="radio" name="q27" value="D">
+D. To avoid all agricultural work
+</label>
+</div>
+
+<div class="question">
+<h3>Q28. Which two groups are mentioned as indentured labourers?</h3>
+
+<label class="option">
+<input type="radio" name="q28" value="A">
+A. Indians and Chinese
+</label>
+
+<label class="option">
+<input type="radio" name="q28" value="B">
+B. Europeans and Americans
+</label>
+
+<label class="option">
+<input type="radio" name="q28" value="C">
+C. Japanese and Russians
+</label>
+
+<label class="option">
+<input type="radio" name="q28" value="D">
+D. Australians and Africans
+</label>
+</div>
+
+<div class="question">
+<h3>Q29. What was one important consequence of migration?</h3>
+
+<label class="option">
+<input type="radio" name="q29" value="A">
+A. It influenced the economic and social life of different societies.
+</label>
+
+<label class="option">
+<input type="radio" name="q29" value="B">
+B. It ended cultural exchange.
+</label>
+
+<label class="option">
+<input type="radio" name="q29" value="C">
+C. It stopped international trade.
+</label>
+
+<label class="option">
+<input type="radio" name="q29" value="D">
+D. It isolated communities completely.
+</label>
+</div>
+
+<div class="question">
+<h3>Q30. Which statement best summarises the making of a global world?</h3>
+
+<label class="option">
+<input type="radio" name="q30" value="A">
+A. It was a long process involving trade, migration, technology and cultural exchange.
+</label>
+
+<label class="option">
+<input type="radio" name="q30" value="B">
+B. It happened because of only one event.
+</label>
+
+<label class="option">
+<input type="radio" name="q30" value="C">
+C. It affected only Europe.
+</label>
+
+<label class="option">
+<input type="radio" name="q30" value="D">
+D. It began only after 1945.
+</label>
+</div>
+
+<div class="submit-box">
+<button type="button" onclick="submitTest()">Submit Test</button>
+</div>
+
+</form>
+
+<!-- RESULT -->
+
+<div id="result">
+
+<h2>Test Result</h2>
+
+<div id="score"></div>
+
+<p id="resultMessage"></p>
+
+</div>
+
+<!-- EXPLANATIONS -->
+
+<div id="explanations">
+
+<div class="section-heading">
+Answer Key & Detailed Explanations
+</div>
+
+<div class="explanation">
+<b>Q1. Correct Answer: A</b><br>
+The Silk Routes connected Asia with Europe and other regions through trade and cultural exchange.
+</div>
+
+<div class="explanation">
+<b>Q2. Correct Answer: A</b><br>
+Smallpox was among the diseases that spread to indigenous populations in the Americas after European contact, causing devastating effects.
+</div>
+
+<div class="explanation">
+<b>Q3. Correct Answer: B</b><br>
+The discovery and colonisation of the Americas created new trade routes and connected distant economies.
+</div>
+
+<div class="explanation">
+<b>Q4. Correct Answer: A</b><br>
+The potato came from the Americas and became an important food for many Europeans, particularly the poor.
+</div>
+
+<div class="explanation">
+<b>Q5. Correct Answer: B</b><br>
+The abolition of the Corn Laws allowed Britain to import food grains more freely and cheaply.
+</div>
+
+<div class="explanation">
+<b>Q6. Correct Answer: A</b><br>
+Steamships reduced the time and cost required to transport goods across oceans.
+</div>
+
+<div class="explanation">
+<b>Q7. Correct Answer: A</b><br>
+Refrigerated ships allowed perishable foods such as meat to be transported over long distances.
+</div>
+
+<div class="explanation">
+<b>Q8. Correct Answer: A</b><br>
+Fiji was one of the destinations where Indian indentured labourers were employed.
+</div>
+
+<div class="explanation">
+<b>Q9. Correct Answer: A</b><br>
+Many indentured workers came from poor peasant and working communities.
+</div>
+
+<div class="explanation">
+<b>Q10. Correct Answer: A</b><br>
+Poverty, indebtedness and the search for employment encouraged many Indians to enter the indentured labour system.
+</div>
+
+<div class="explanation">
+<b>Q11. Correct Answer: A</b><br>
+The Corn Laws were abolished before the First World War, followed by the Great Depression and then the Second World War.
+</div>
+
+<div class="explanation">
+<b>Q12. Correct Answer: A</b><br>
+Industrialisation helped expand world trade, while the First World War and Great Depression came later.
+</div>
+
+<div class="explanation">
+<b>Q13. Correct Answer: A</b><br>
+Silk Routes = ancient trade connections; potato = food from the Americas; Corn Laws = restrictions on food imports; refrigerated ships = transport of perishable food.
+</div>
+
+<div class="explanation">
+<b>Q14. Correct Answer: A</b><br>
+India was a source of indentured labour, Caribbean economies relied heavily on plantation labour, Fiji received Indian workers and America attracted European migrants.
+</div>
+
+<div class="explanation">
+<b>Q15. Correct Answer: A</b><br>
+The Silk Routes carried both goods and ideas, religions and cultural practices.
+</div>
+
+<div class="explanation">
+<b>Q16. Correct Answer: A</b><br>
+Improved transport technologies such as railways and steamships directly helped expand world trade.
+</div>
+
+<div class="explanation">
+<b>Q17. Correct Answer: D</b><br>
+The assertion is false because indentured labour was not exactly the same as slavery. The reason is true because workers were bound by contracts for a fixed period.
+</div>
+
+<div class="explanation">
+<b>Q18. Correct Answer: A</b><br>
+Global economic changes affected ordinary people through migration, employment, food and trade.
+</div>
+
+<div class="explanation">
+<b>Q19. Correct Answer: A</b><br>
+The Silk Routes connected different regions through both economic and cultural exchange.
+</div>
+
+<div class="explanation">
+<b>Q20. Correct Answer: A</b><br>
+The potato became an important food crop and helped improve food availability for many Europeans.
+</div>
+
+<div class="explanation">
+<b>Q21. Correct Answer: A</b><br>
+Improved transportation and communication made international trade faster and more efficient.
+</div>
+
+<div class="explanation">
+<b>Q22. Correct Answer: A</b><br>
+Many Europeans migrated overseas because they wanted land, employment and better economic opportunities.
+</div>
+
+<div class="explanation">
+<b>Q23. Correct Answer: A</b><br>
+The abolition of the Corn Laws enabled Britain to obtain food from overseas at lower prices.
+</div>
+
+<div class="explanation">
+<b>Q24. Correct Answer: A</b><br>
+The Silk Routes connected different regions through long-distance trade and cultural interaction.
+</div>
+
+<div class="explanation">
+<b>Q25. Correct Answer: A</b><br>
+Silk, textiles, spices and other goods were traded through the networks known as the Silk Routes.
+</div>
+
+<div class="explanation">
+<b>Q26. Correct Answer: A</b><br>
+Ideas, religions and cultural practices travelled along with traders and goods.
+</div>
+
+<div class="explanation">
+<b>Q27. Correct Answer: A</b><br>
+Many European migrants went overseas in search of land, employment and better economic opportunities.
+</div>
+
+<div class="explanation">
+<b>Q28. Correct Answer: A</b><br>
+Indian and Chinese workers formed major groups involved in indentured labour migration.
+</div>
+
+<div class="explanation">
+<b>Q29. Correct Answer: A</b><br>
+Migration influenced the economic, social and cultural development of societies around the world.
+</div>
+
+<div class="explanation">
+<b>Q30. Correct Answer: A</b><br>
+The making of the global world was a long historical process involving trade, migration, technological change and cultural exchange.
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<h2>GSI MANTRA</h2>
+
+<p>
+Class 10 History • Chapter 3 • The Making of a Global World
+</p>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
+</footer>
+
+<script>
+
+const answers = {
+
+q1:"A",
+q2:"A",
+q3:"B",
+q4:"A",
+q5:"B",
+q6:"A",
+q7:"A",
+q8:"A",
+q9:"A",
+q10:"A",
+q11:"A",
+q12:"A",
+q13:"A",
+q14:"A",
+q15:"A",
+q16:"A",
+q17:"D",
+q18:"A",
+q19:"A",
+q20:"A",
+q21:"A",
+q22:"A",
+q23:"A",
+q24:"A",
+q25:"A",
+q26:"A",
+q27:"A",
+q28:"A",
+q29:"A",
+q30:"A"
+
+};
+
+function submitTest(){
+
+    let score = 0;
+    let answered = 0;
+
+    for(let i=1;i<=30;i++){
+
+        const selected =
+        document.querySelector(
+        'input[name="q'+i+'"]:checked'
+        );
+
+        if(selected){
+
+            answered++;
+
+            if(selected.value === answers["q"+i]){
+                score++;
+            }
+
+        }
+
+    }
+
+    const percentage =
+    Math.round((score/30)*100);
+
+    document.getElementById("score").innerHTML =
+    score + " / 30 (" + percentage + "%)";
+
+    document.getElementById("resultMessage").innerHTML =
+    "You answered " + answered +
+    " out of 30 questions. Read the detailed explanations below.";
+
+    document.getElementById("result").style.display="block";
+
+    document.getElementById("explanations").style.display="block";
+
+    window.scrollTo({
+
+        top:
+        document.getElementById("result").offsetTop - 20,
+
+        behavior:"smooth"
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
