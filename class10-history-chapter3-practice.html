@@ -2,10 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Chapter 3 Practice Sets | The Making of a Global World | GSI MANTRA</title>
+<title>Practice Sets | The Making of a Global World | GSI MANTRA</title>
 
 <style>
 
@@ -20,148 +21,210 @@ body{
     color:#222;
 }
 
+/* WATERMARK */
+body::before{
+    content:"GSI MANTRA";
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-25deg);
+    font-size:70px;
+    font-weight:bold;
+    color:rgba(18,60,105,0.055);
+    pointer-events:none;
+    z-index:0;
+    white-space:nowrap;
+}
+
 /* HEADER */
 header{
     background:linear-gradient(135deg,#0b2948,#123c69);
     color:white;
-    text-align:center;
-    padding:25px 15px;
+    padding:22px 20px;
+    position:relative;
+    z-index:2;
 }
 
-header img{
-    width:90px;
-    height:auto;
-    margin-bottom:8px;
+.header-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
 }
 
-header h1{
-    margin:5px 0;
-    font-size:30px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-header p{
-    margin:8px 0 0;
-    font-size:16px;
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
 }
 
-/* NAVIGATION */
+.logo h1{
+    margin:0;
+    font-size:32px;
+}
+
+.logo p{
+    margin:5px 0 0;
+    font-size:14px;
+}
+
+/* SEARCH */
+.search{
+    background:white;
+    padding:10px 15px;
+    border-radius:25px;
+    width:280px;
+}
+
+.search input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+}
+
+/* NAV */
 nav{
     background:#071d33;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:8px;
-    padding:10px;
+    padding:13px;
+    text-align:center;
+    position:relative;
+    z-index:2;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    padding:10px 16px;
-    border-radius:6px;
-    font-size:15px;
+    margin:0 12px;
+    font-weight:bold;
 }
 
 nav a:hover{
-    background:#f28c00;
+    color:#ffb703;
 }
 
 /* HERO */
 .hero{
-    max-width:1100px;
-    margin:30px auto 20px;
-    padding:30px 20px;
-    background:white;
-    border-radius:12px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    background:linear-gradient(135deg,#123c69,#1d5b91);
+    color:white;
     text-align:center;
+    padding:45px 20px;
+    position:relative;
+    z-index:1;
 }
 
 .hero h2{
-    color:#0b2948;
     margin:0 0 10px;
-    font-size:28px;
+    font-size:32px;
 }
 
 .hero p{
-    color:#555;
-    font-size:16px;
+    margin:8px auto;
+    font-size:17px;
     line-height:1.6;
 }
 
 /* INFO */
-.info{
-    max-width:1000px;
-    margin:20px auto;
-    padding:0 15px;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-}
-
-.info-box{
+.test-info{
+    max-width:1100px;
+    margin:25px auto;
     background:white;
-    padding:15px 25px;
-    border-radius:8px;
-    text-align:center;
-    min-width:180px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.07);
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    position:relative;
+    z-index:1;
 }
 
-.info-box strong{
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    text-align:center;
+}
+
+.info-item{
+    background:#f8fafc;
+    padding:14px;
+    border-radius:10px;
+}
+
+.info-item strong{
     display:block;
-    color:#0b2948;
+    color:#123c69;
     margin-bottom:5px;
 }
 
-/* MAIN CONTAINER */
+/* CONTAINER */
 .container{
     max-width:1100px;
-    margin:25px auto;
-    padding:0 15px;
+    margin:auto;
+    padding:10px 20px 50px;
+    position:relative;
+    z-index:1;
 }
 
-/* PRACTICE CARD */
+/* HEADING */
+.section-heading{
+    background:#123c69;
+    color:white;
+    padding:14px 18px;
+    border-radius:10px;
+    margin:25px 0 18px;
+}
+
+/* SET CARD */
 .practice-card{
     background:white;
-    border-radius:12px;
     padding:25px;
-    margin-bottom:18px;
-    box-shadow:0 4px 14px rgba(0,0,0,0.08);
-    text-align:center;
+    margin-bottom:20px;
+    border-radius:14px;
+    box-shadow:0 4px 14px rgba(0,0,0,.07);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
 }
 
-.practice-card h3{
-    margin-top:0;
-    color:#0b2948;
+.set-content h3{
+    margin:0 0 8px;
+    color:#123c69;
     font-size:22px;
 }
 
-.practice-card p{
+.set-content p{
+    margin:0;
     color:#555;
-    line-height:1.6;
+    line-height:1.5;
 }
 
-/* PRACTICE BUTTON */
+/* BUTTON */
 .practice-button{
     display:inline-block;
-    background:#f28c00;
     color:white;
     text-decoration:none;
-    padding:13px 24px;
-    border-radius:7px;
+    padding:13px 22px;
+    border-radius:8px;
     font-weight:bold;
-    margin-top:8px;
-    transition:0.3s;
+    white-space:nowrap;
+    transition:.25s;
 }
 
 .practice-button:hover{
-    background:#d97800;
     transform:translateY(-2px);
+    opacity:.9;
 }
 
-/* DIFFERENT SET BUTTONS */
 .set1{
     background:#0b6e4f;
 }
@@ -184,15 +247,15 @@ nav a:hover{
 
 /* INSTRUCTIONS */
 .instructions{
-    background:#fff;
-    border-radius:12px;
+    background:white;
     padding:25px;
-    margin-bottom:20px;
-    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+    border-radius:14px;
+    box-shadow:0 4px 14px rgba(0,0,0,.07);
+    margin-bottom:25px;
 }
 
 .instructions h3{
-    color:#0b2948;
+    color:#123c69;
     margin-top:0;
 }
 
@@ -206,28 +269,38 @@ footer{
     background:#071d33;
     color:white;
     text-align:center;
-    padding:25px 15px;
-    margin-top:40px;
+    padding:30px 20px;
+    position:relative;
+    z-index:2;
+}
+
+footer h2{
+    margin-top:0;
 }
 
 footer p{
-    margin:6px 0;
-    font-size:14px;
+    color:#cbd5e1;
 }
 
 /* MOBILE */
-@media(max-width:600px){
+@media(max-width:700px){
 
-    header h1{
-        font-size:24px;
+    .header-content{
+        flex-direction:column;
     }
 
-    .hero h2{
-        font-size:23px;
+    .search{
+        width:100%;
+    }
+
+    .info-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
     .practice-card{
-        padding:22px 15px;
+        flex-direction:column;
+        align-items:stretch;
+        text-align:center;
     }
 
     .practice-button{
@@ -235,9 +308,18 @@ footer p{
         text-align:center;
     }
 
+    .hero h2{
+        font-size:26px;
+    }
+
+    body::before{
+        font-size:40px;
+    }
+
 }
 
 </style>
+
 </head>
 
 <body>
@@ -246,13 +328,35 @@ footer p{
 <!-- HEADER -->
 <header>
 
-    <img src="gsi-logo.png" alt="GSI MANTRA Logo">
+<div class="header-content">
 
-    <h1>GSI MANTRA</h1>
+<div class="logo">
 
-    <p>
-        Competitive Education & NCERT Learning Platform
-    </p>
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+
+<div>
+
+<h1>GSI MANTRA</h1>
+
+<p>
+Competitive Education & NCERT Learning Platform
+</p>
+
+</div>
+
+</div>
+
+
+<div class="search">
+
+<input
+type="text"
+placeholder="Search GSI MANTRA..."
+aria-label="Search GSI MANTRA">
+
+</div>
+
+</div>
 
 </header>
 
@@ -260,13 +364,13 @@ footer p{
 <!-- NAVIGATION -->
 <nav>
 
-    <a href="index.html">🏠 Home</a>
+<a href="index.html">Home</a>
 
-    <a href="class10.html">📚 Class 10</a>
+<a href="class10.html">Class 10</a>
 
-    <a href="class10-history.html">📖 History</a>
+<a href="class10-history.html">History</a>
 
-    <a href="class10-history-chapter3.html">📘 Chapter 3</a>
+<a href="class10-history-chapter3.html">Chapter 3</a>
 
 </nav>
 
@@ -274,191 +378,247 @@ footer p{
 <!-- HERO -->
 <section class="hero">
 
-    <h2>
-        Chapter 3 – The Making of a Global World
-    </h2>
+<h2>
+Practice Sets
+</h2>
 
-    <p>
-        Practice Sets
-    </p>
+<p>
+Chapter 3 – The Making of a Global World
+</p>
 
-    <p>
-        Class 10 | History | NCERT + CBSE Board + Competitive
-    </p>
+<p>
+Class 10 History • NCERT + Board + Competitive Level
+</p>
 
 </section>
 
 
 <!-- INFORMATION -->
-<section class="info">
+<div class="test-info">
 
-    <div class="info-box">
-        <strong>Class</strong>
-        10th
-    </div>
+<div class="info-grid">
 
-    <div class="info-box">
-        <strong>Subject</strong>
-        History
-    </div>
+<div class="info-item">
 
-    <div class="info-box">
-        <strong>Chapter</strong>
-        3
-    </div>
+<strong>Class</strong>
 
-    <div class="info-box">
-        <strong>Practice Sets</strong>
-        5
-    </div>
+10
 
-</section>
+</div>
 
 
-<!-- MAIN CONTENT -->
+<div class="info-item">
+
+<strong>Subject</strong>
+
+History
+
+</div>
+
+
+<div class="info-item">
+
+<strong>Chapter</strong>
+
+3
+
+</div>
+
+
+<div class="info-item">
+
+<strong>Total Sets</strong>
+
+5
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MAIN -->
 <div class="container">
 
 
-    <!-- INSTRUCTIONS -->
-    <div class="instructions">
+<!-- INSTRUCTIONS -->
+<div class="instructions">
 
-        <h3>📋 Practice Instructions</h3>
+<h3>
+📋 Practice Instructions
+</h3>
 
-        <ul>
+<ul>
 
-            <li>
-                Chapter 3 के लिए Practice Set 1 से Practice Set 5 तक उपलब्ध हैं।
-            </li>
+<li>
+Chapter 3 के लिए Practice Set 1 से Practice Set 5 तक उपलब्ध हैं।
+</li>
 
-            <li>
-                प्रत्येक Practice Set में chapter-based questions दिए जाएंगे।
-            </li>
+<li>
+हर Practice Set में 30 questions होंगे।
+</li>
 
-            <li>
-                सभी questions में multiple-choice options होंगे।
-            </li>
+<li>
+प्रत्येक question में चार options दिए जाएंगे।
+</li>
 
-            <li>
-                प्रत्येक Set के अंत में Submit और Answer Explanation की सुविधा होगी।
-            </li>
+<li>
+Questions में MCQ, Matching, Arrangement, Assertion-Reason और Passage Based questions शामिल किए जा सकते हैं।
+</li>
 
-            <li>
-                NCERT, CBSE Board और Competitive Examination को ध्यान में रखकर questions तैयार किए जाएंगे।
-            </li>
+<li>
+Test submit करने के बाद score और explanations दिखाई जाएँगी।
+</li>
 
-        </ul>
+</ul>
 
-    </div>
-
-
-    <!-- PRACTICE SET 1 -->
-    <div class="practice-card">
-
-        <h3>
-            📝 Practice Set 1
-        </h3>
-
-        <p>
-            The Making of a Global World
-            <br>
-            Practice Set 1
-        </p>
-
-        <a
-            class="practice-button set1"
-            href="class10-history-chapter3-practice-set1.html">
-            ▶ Start Practice Set 1
-        </a>
-
-    </div>
+</div>
 
 
-    <!-- PRACTICE SET 2 -->
-    <div class="practice-card">
+<!-- HEADING -->
+<div class="section-heading">
 
-        <h3>
-            📝 Practice Set 2
-        </h3>
+<h3 style="margin:0;">
+📝 Select Your Practice Set
+</h3>
 
-        <p>
-            The Making of a Global World
-            <br>
-            Practice Set 2
-        </p>
-
-        <a
-            class="practice-button set2"
-            href="class10-history-chapter3-practice-set2.html">
-            ▶ Start Practice Set 2
-        </a>
-
-    </div>
+</div>
 
 
-    <!-- PRACTICE SET 3 -->
-    <div class="practice-card">
+<!-- SET 1 -->
+<div class="practice-card">
 
-        <h3>
-            📝 Practice Set 3
-        </h3>
+<div class="set-content">
 
-        <p>
-            The Making of a Global World
-            <br>
-            Practice Set 3
-        </p>
+<h3>
+Practice Set 1
+</h3>
 
-        <a
-            class="practice-button set3"
-            href="class10-history-chapter3-practice-set3.html">
-            ▶ Start Practice Set 3
-        </a>
+<p>
+The Making of a Global World – Practice Set 1
+</p>
 
-    </div>
+</div>
 
 
-    <!-- PRACTICE SET 4 -->
-    <div class="practice-card">
+<a
+class="practice-button set1"
+href="class10-history-chapter3-practice-set1.html">
 
-        <h3>
-            📝 Practice Set 4
-        </h3>
+▶ Start Practice Set 1
 
-        <p>
-            The Making of a Global World
-            <br>
-            Practice Set 4
-        </p>
+</a>
 
-        <a
-            class="practice-button set4"
-            href="class10-history-chapter3-practice-set4.html">
-            ▶ Start Practice Set 4
-        </a>
-
-    </div>
+</div>
 
 
-    <!-- PRACTICE SET 5 -->
-    <div class="practice-card">
+<!-- SET 2 -->
+<div class="practice-card">
 
-        <h3>
-            📝 Practice Set 5
-        </h3>
+<div class="set-content">
 
-        <p>
-            The Making of a Global World
-            <br>
-            Practice Set 5
-        </p>
+<h3>
+Practice Set 2
+</h3>
 
-        <a
-            class="practice-button set5"
-            href="class10-history-chapter3-practice-set5.html">
-            ▶ Start Practice Set 5
-        </a>
+<p>
+The Making of a Global World – Practice Set 2
+</p>
 
-    </div>
+</div>
+
+
+<a
+class="practice-button set2"
+href="class10-history-chapter3-practice-set2.html">
+
+▶ Start Practice Set 2
+
+</a>
+
+</div>
+
+
+<!-- SET 3 -->
+<div class="practice-card">
+
+<div class="set-content">
+
+<h3>
+Practice Set 3
+</h3>
+
+<p>
+The Making of a Global World – Practice Set 3
+</p>
+
+</div>
+
+
+<a
+class="practice-button set3"
+href="class10-history-chapter3-practice-set3.html">
+
+▶ Start Practice Set 3
+
+</a>
+
+</div>
+
+
+<!-- SET 4 -->
+<div class="practice-card">
+
+<div class="set-content">
+
+<h3>
+Practice Set 4
+</h3>
+
+<p>
+The Making of a Global World – Practice Set 4
+</p>
+
+</div>
+
+
+<a
+class="practice-button set4"
+href="class10-history-chapter3-practice-set4.html">
+
+▶ Start Practice Set 4
+
+</a>
+
+</div>
+
+
+<!-- SET 5 -->
+<div class="practice-card">
+
+<div class="set-content">
+
+<h3>
+Practice Set 5
+</h3>
+
+<p>
+The Making of a Global World – Practice Set 5
+</p>
+
+</div>
+
+
+<a
+class="practice-button set5"
+href="class10-history-chapter3-practice-set5.html">
+
+▶ Start Practice Set 5
+
+</a>
+
+</div>
 
 
 </div>
@@ -467,13 +627,21 @@ footer p{
 <!-- FOOTER -->
 <footer>
 
-    <p>
-        © 2026 GSI MANTRA
-    </p>
+<h2>
+GSI MANTRA
+</h2>
 
-    <p>
-        Competitive Education & NCERT Learning Platform
-    </p>
+<p>
+Class 10 History • Chapter 3
+</p>
+
+<p>
+The Making of a Global World
+</p>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
 
 </footer>
 
