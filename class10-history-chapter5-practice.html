@@ -1,0 +1,607 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chapter 5 Practice | Print Culture and the Modern World | GSI MANTRA</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+/* WATERMARK */
+
+body::before{
+    content:"GSI MANTRA";
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-25deg);
+    font-size:70px;
+    font-weight:bold;
+    color:rgba(18,60,105,0.055);
+    pointer-events:none;
+    z-index:0;
+    white-space:nowrap;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:22px 20px;
+    position:relative;
+    z-index:2;
+}
+
+.header-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:32px;
+}
+
+.logo p{
+    margin:5px 0 0;
+    font-size:14px;
+}
+
+.search{
+    background:white;
+    padding:10px 15px;
+    border-radius:25px;
+    width:280px;
+}
+
+.search input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+}
+
+/* NAV */
+
+nav{
+    background:#071d33;
+    padding:13px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#123c69,#1d5b91);
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+    position:relative;
+    z-index:1;
+}
+
+.hero h2{
+    margin:0 0 12px;
+    font-size:32px;
+}
+
+.hero p{
+    margin:8px auto;
+    font-size:17px;
+    line-height:1.6;
+}
+
+/* INFO */
+
+.chapter-info{
+    max-width:1100px;
+    margin:25px auto;
+    background:white;
+    border-radius:15px;
+    padding:22px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    position:relative;
+    z-index:1;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    text-align:center;
+}
+
+.info-item{
+    background:#f8fafc;
+    padding:15px;
+    border-radius:10px;
+}
+
+.info-item strong{
+    display:block;
+    color:#123c69;
+    margin-bottom:6px;
+}
+
+/* MAIN CONTAINER */
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:10px 20px 60px;
+    position:relative;
+    z-index:1;
+}
+
+/* SECTION TITLE */
+
+.section-heading{
+    background:#123c69;
+    color:white;
+    padding:14px 18px;
+    border-radius:10px;
+    margin:25px 0 18px;
+    font-size:20px;
+}
+
+/* PRACTICE SETS */
+
+.practice-wrapper{
+    background:white;
+    padding:28px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.practice-wrapper h2{
+    color:#123c69;
+    text-align:center;
+    margin-top:0;
+}
+
+.practice-wrapper p{
+    text-align:center;
+    line-height:1.7;
+}
+
+/* BUTTON ROW */
+
+.set-buttons{
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content:center;
+    gap:12px;
+    margin-top:28px;
+    overflow-x:auto;
+    padding:5px;
+}
+
+.set-button{
+    flex:0 0 auto;
+    min-width:145px;
+    background:#123c69;
+    color:white;
+    text-decoration:none;
+    padding:14px 18px;
+    border-radius:9px;
+    text-align:center;
+    font-weight:bold;
+    transition:.25s;
+    box-shadow:0 4px 10px rgba(0,0,0,.12);
+}
+
+.set-button:hover{
+    background:#f28c00;
+    transform:translateY(-2px);
+}
+
+/* LEVEL BOX */
+
+.level-box{
+    margin-top:30px;
+    background:#fff8e8;
+    border-left:5px solid #f28c00;
+    padding:20px;
+    border-radius:8px;
+    line-height:1.7;
+}
+
+.level-box strong{
+    color:#123c69;
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-top:20px;
+}
+
+.feature{
+    background:#f8fafc;
+    padding:18px;
+    border-radius:10px;
+    border:1px solid #e2e8f0;
+}
+
+.feature h3{
+    margin-top:0;
+    color:#123c69;
+}
+
+.feature p{
+    text-align:left;
+    margin-bottom:0;
+}
+
+/* BACK BUTTON */
+
+.back-box{
+    text-align:center;
+    margin-top:30px;
+}
+
+.back-button{
+    display:inline-block;
+    background:#071d33;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.back-button:hover{
+    background:#f28c00;
+}
+
+/* FOOTER */
+
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    position:relative;
+    z-index:2;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .header-content{
+        flex-direction:column;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    .info-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero h2{
+        font-size:26px;
+    }
+
+    .practice-wrapper{
+        padding:20px 15px;
+    }
+
+    .set-buttons{
+        justify-content:flex-start;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    body::before{
+        font-size:40px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="header-content">
+
+<div class="logo">
+
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+
+<div>
+<h1>GSI MANTRA</h1>
+<p>Competitive Education & NCERT Learning Platform</p>
+</div>
+
+</div>
+
+<div class="search">
+<input type="text" placeholder="Search GSI MANTRA...">
+</div>
+
+</div>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="class10.html">Class 10</a>
+
+<a href="class10-history.html">History</a>
+
+<a href="class10-history-chapter5-practice.html">Chapter 5</a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h2>Chapter 5 — Print Culture and the Modern World</h2>
+
+<p>Class 10 History • Practice Section</p>
+
+<p>NCERT + CBSE Board + Competitive • Advanced Level</p>
+
+</section>
+
+
+<!-- INFORMATION -->
+
+<div class="chapter-info">
+
+<div class="info-grid">
+
+<div class="info-item">
+<strong>Class</strong>
+10
+</div>
+
+<div class="info-item">
+<strong>Subject</strong>
+History
+</div>
+
+<div class="info-item">
+<strong>Chapter</strong>
+Chapter 5
+</div>
+
+<div class="info-item">
+<strong>Practice Sets</strong>
+5 Sets
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MAIN -->
+
+<div class="container">
+
+<div class="section-heading">
+Practice Sets
+</div>
+
+
+<div class="practice-wrapper">
+
+<h2>Print Culture and the Modern World</h2>
+
+<p>
+Test your understanding of Chapter 5 through advanced-level
+NCERT-based questions, analytical questions, source-based questions
+and competitive-level concepts.
+</p>
+
+
+<!-- PRACTICE SET BUTTONS -->
+
+<div class="set-buttons">
+
+<a class="set-button"
+href="class10-history-chapter5-practice-set1.html">
+📝 Practice Set 1
+</a>
+
+<a class="set-button"
+href="class10-history-chapter5-practice-set2.html">
+📝 Practice Set 2
+</a>
+
+<a class="set-button"
+href="class10-history-chapter5-practice-set3.html">
+📝 Practice Set 3
+</a>
+
+<a class="set-button"
+href="class10-history-chapter5-practice-set4.html">
+📝 Practice Set 4
+</a>
+
+<a class="set-button"
+href="class10-history-chapter5-practice-set5.html">
+📝 Practice Set 5
+</a>
+
+</div>
+
+
+<!-- LEVEL -->
+
+<div class="level-box">
+
+<strong>📚 Question Level:</strong><br>
+
+All five practice sets will contain advanced-level questions
+based on NCERT concepts, CBSE Board patterns and competitive
+examination-style analytical thinking.
+
+<br><br>
+
+<strong>Important:</strong>
+
+Every practice set will contain completely different questions.
+Questions from one set will not be repeated in the other sets.
+
+</div>
+
+
+<!-- FEATURES -->
+
+<div class="features">
+
+<div class="feature">
+
+<h3>🎯 Advanced MCQs</h3>
+
+<p>
+Concept-based and application-oriented MCQs designed to test
+deep understanding rather than simple memorisation.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>🔎 Assertion & Reason</h3>
+
+<p>
+Higher-order Assertion–Reason questions based on important
+historical developments and concepts.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>📜 Source & Passage Based</h3>
+
+<p>
+Questions based on historical sources, passages and interpretations
+related to print culture.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>🧠 Analytical Questions</h3>
+
+<p>
+Questions connecting events, causes, consequences, chronology
+and historical developments.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- BACK -->
+
+<div class="back-box">
+
+<a class="back-button" href="class10-history.html">
+← Back to History Chapters
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>GSI MANTRA</h2>
+
+<p>
+Class 10 History • Chapter 5 • Print Culture and the Modern World
+</p>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
+```
