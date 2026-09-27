@@ -1,0 +1,889 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Practice Set 2 | Print Culture and the Modern World | GSI MANTRA</title>
+
+<style>
+*{box-sizing:border-box;}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+body::before{
+    content:"GSI MANTRA";
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-25deg);
+    font-size:70px;
+    font-weight:bold;
+    color:rgba(18,60,105,0.055);
+    pointer-events:none;
+    z-index:0;
+    white-space:nowrap;
+}
+
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:22px 20px;
+    position:relative;
+    z-index:2;
+}
+
+.header-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:32px;
+}
+
+.logo p{
+    margin:5px 0 0;
+    font-size:14px;
+}
+
+.search{
+    background:white;
+    padding:10px 15px;
+    border-radius:25px;
+    width:280px;
+}
+
+.search input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+}
+
+nav{
+    background:#071d33;
+    padding:13px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+.hero{
+    background:linear-gradient(135deg,#123c69,#1d5b91);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+    position:relative;
+    z-index:1;
+}
+
+.hero h2{
+    margin:0 0 10px;
+    font-size:32px;
+}
+
+.hero p{
+    margin:8px auto;
+    font-size:17px;
+    line-height:1.6;
+}
+
+.test-info{
+    max-width:1100px;
+    margin:25px auto;
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    position:relative;
+    z-index:1;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    text-align:center;
+}
+
+.info-item{
+    background:#f8fafc;
+    padding:14px;
+    border-radius:10px;
+}
+
+.info-item strong{
+    display:block;
+    color:#123c69;
+    margin-bottom:5px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:10px 20px 50px;
+    position:relative;
+    z-index:1;
+}
+
+.section-heading{
+    background:#123c69;
+    color:white;
+    padding:13px 18px;
+    border-radius:10px;
+    margin:25px 0 15px;
+}
+
+.question{
+    background:white;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:13px;
+    box-shadow:0 4px 14px rgba(0,0,0,.07);
+}
+
+.question h3{
+    color:#123c69;
+    margin-top:0;
+    font-size:18px;
+    line-height:1.5;
+}
+
+.option{
+    display:block;
+    padding:10px 12px;
+    margin:8px 0;
+    border:1px solid #dce4ec;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.option:hover{
+    background:#f1f6fb;
+}
+
+.option input{
+    margin-right:8px;
+}
+
+.passage{
+    background:#fff8e8;
+    border-left:5px solid #f28c00;
+    padding:18px;
+    line-height:1.7;
+    margin-bottom:18px;
+    border-radius:8px;
+}
+
+.submit-box{
+    text-align:center;
+    margin:35px 0;
+}
+
+button{
+    background:#123c69;
+    color:white;
+    border:none;
+    padding:14px 35px;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#f28c00;
+}
+
+#result{
+    display:none;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.10);
+    margin-top:25px;
+}
+
+#score{
+    color:#123c69;
+    font-size:30px;
+    font-weight:bold;
+}
+
+#explanations{
+    display:none;
+}
+
+.explanation{
+    background:#f0fdf4;
+    border-left:5px solid #159447;
+    padding:17px;
+    margin:14px 0;
+    border-radius:8px;
+    line-height:1.6;
+}
+
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    position:relative;
+    z-index:2;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+@media(max-width:700px){
+    .header-content{
+        flex-direction:column;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    .info-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero h2{
+        font-size:26px;
+    }
+
+    .question{
+        padding:17px;
+    }
+
+    body::before{
+        font-size:40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="header-content">
+
+<div class="logo">
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+
+<div>
+<h1>GSI MANTRA</h1>
+<p>Competitive Education & NCERT Learning Platform</p>
+</div>
+</div>
+
+<div class="search">
+<input type="text" placeholder="Search GSI MANTRA...">
+</div>
+
+</div>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="class10.html">Class 10</a>
+<a href="class10-history.html">History</a>
+<a href="class10-history-chapter5-practice.html">Chapter 5</a>
+</nav>
+
+<section class="hero">
+<h2>Practice Set 2 — Print Culture and the Modern World</h2>
+<p>Class 10 History • English Medium</p>
+<p>Advanced Level • NCERT + Board + Competitive</p>
+</section>
+
+<div class="test-info">
+<div class="info-grid">
+
+<div class="info-item">
+<strong>Class</strong>
+10
+</div>
+
+<div class="info-item">
+<strong>Subject</strong>
+History
+</div>
+
+<div class="info-item">
+<strong>Total Questions</strong>
+30
+</div>
+
+<div class="info-item">
+<strong>Marks</strong>
+30
+</div>
+
+</div>
+</div>
+
+<div class="container">
+
+<form id="testForm">
+
+<div class="section-heading">
+Part A — Advanced MCQs
+</div>
+
+<div class="question">
+<h3>Q1. Which development most directly explains why print created a new reading public in early modern Europe?</h3>
+
+<label class="option"><input type="radio" name="q1" value="A"> A. Books became cheaper and could be produced in larger quantities.</label>
+<label class="option"><input type="radio" name="q1" value="B"> B. All Europeans became literate at the same time.</label>
+<label class="option"><input type="radio" name="q1" value="C"> C. Handwritten manuscripts completely disappeared immediately.</label>
+<label class="option"><input type="radio" name="q1" value="D"> D. Governments made book ownership compulsory.</label>
+</div>
+
+<div class="question">
+<h3>Q2. Why was the spread of print initially viewed with suspicion by some religious authorities?</h3>
+
+<label class="option"><input type="radio" name="q2" value="A"> A. Printed books could circulate ideas that challenged established religious authority.</label>
+<label class="option"><input type="radio" name="q2" value="B"> B. Printing could produce only religious texts.</label>
+<label class="option"><input type="radio" name="q2" value="C"> C. Printed books were always written in Latin.</label>
+<label class="option"><input type="radio" name="q2" value="D"> D. Printing reduced the number of universities.</label>
+</div>
+
+<div class="question">
+<h3>Q3. Which statement best captures the historical importance of Gutenberg's printing press?</h3>
+
+<label class="option"><input type="radio" name="q3" value="A"> A. It mechanised the reproduction of texts using movable metal type.</label>
+<label class="option"><input type="radio" name="q3" value="B"> B. It invented paper for the first time.</label>
+<label class="option"><input type="radio" name="q3" value="C"> C. It immediately ended censorship throughout Europe.</label>
+<label class="option"><input type="radio" name="q3" value="D"> D. It made manuscripts unnecessary overnight.</label>
+</div>
+
+<div class="question">
+<h3>Q4. Why did Martin Luther's writings acquire such wide influence after the development of print?</h3>
+
+<label class="option"><input type="radio" name="q4" value="A"> A. His ideas could be reproduced rapidly and circulated among a wider audience.</label>
+<label class="option"><input type="radio" name="q4" value="B"> B. The Church officially printed all his criticisms.</label>
+<label class="option"><input type="radio" name="q4" value="C"> C. His writings were available only to kings.</label>
+<label class="option"><input type="radio" name="q4" value="D"> D. Printing had no role in the spread of his ideas.</label>
+</div>
+
+<div class="question">
+<h3>Q5. Which of the following best explains the concept of 'print revolution'?</h3>
+
+<label class="option"><input type="radio" name="q5" value="A"> A. A transformation in the production, circulation and consumption of printed texts.</label>
+<label class="option"><input type="radio" name="q5" value="B"> B. A political revolution caused only by newspapers.</label>
+<label class="option"><input type="radio" name="q5" value="C"> C. The complete replacement of oral culture.</label>
+<label class="option"><input type="radio" name="q5" value="D"> D. A ban on handwritten texts.</label>
+</div>
+
+<div class="question">
+<h3>Q6. Which factor helped newspapers become important in nineteenth-century society?</h3>
+
+<label class="option"><input type="radio" name="q6" value="A"> A. Improvements in printing technology and growing literacy.</label>
+<label class="option"><input type="radio" name="q6" value="B"> B. The decline of urban populations.</label>
+<label class="option"><input type="radio" name="q6" value="C"> C. The disappearance of political debates.</label>
+<label class="option"><input type="radio" name="q6" value="D"> D. Restrictions on all forms of public communication.</label>
+</div>
+
+<div class="question">
+<h3>Q7. Why did some authorities attempt to regulate printed material?</h3>
+
+<label class="option"><input type="radio" name="q7" value="A"> A. Printed material could spread criticism, dissent and alternative political ideas.</label>
+<label class="option"><input type="radio" name="q7" value="B"> B. Printed material was too expensive to read.</label>
+<label class="option"><input type="radio" name="q7" value="C"> C. Newspapers contained no political information.</label>
+<label class="option"><input type="radio" name="q7" value="D"> D. Printing was restricted only because paper was unavailable.</label>
+</div>
+
+<div class="question">
+<h3>Q8. Which change was particularly significant for the spread of print culture in India?</h3>
+
+<label class="option"><input type="radio" name="q8" value="A"> A. The expansion of printing in Indian languages and the growth of vernacular publications.</label>
+<label class="option"><input type="radio" name="q8" value="B"> B. The disappearance of Indian-language literature.</label>
+<label class="option"><input type="radio" name="q8" value="C"> C. The restriction of all publications to English.</label>
+<label class="option"><input type="radio" name="q8" value="D"> D. The complete end of oral traditions.</label>
+</div>
+
+<div class="question">
+<h3>Q9. Why did reformers use print extensively in nineteenth-century India?</h3>
+
+<label class="option"><input type="radio" name="q9" value="A"> A. To debate social and religious practices and reach a wider public.</label>
+<label class="option"><input type="radio" name="q9" value="B"> B. To prevent people from discussing social issues.</label>
+<label class="option"><input type="radio" name="q9" value="C"> C. To replace all educational institutions.</label>
+<label class="option"><input type="radio" name="q9" value="D"> D. To stop the use of vernacular languages.</label>
+</div>
+
+<div class="question">
+<h3>Q10. Which statement best describes the relationship between print and oral culture?</h3>
+
+<label class="option"><input type="radio" name="q10" value="A"> A. Print often interacted with and reshaped existing oral traditions rather than simply eliminating them.</label>
+<label class="option"><input type="radio" name="q10" value="B"> B. Print immediately destroyed all oral traditions.</label>
+<label class="option"><input type="radio" name="q10" value="C"> C. Oral culture had no influence on printed material.</label>
+<label class="option"><input type="radio" name="q10" value="D"> D. Printed books could never be read aloud.</label>
+</div>
+
+<div class="section-heading">
+Part B — Chronology & Historical Reasoning
+</div>
+
+<div class="question">
+<h3>Q11. Arrange the following developments in the correct chronological order:</h3>
+<p>1. Gutenberg's printing press<br>
+2. Martin Luther's writings circulated widely<br>
+3. Growth of print culture in nineteenth-century India<br>
+4. Expansion of newspapers and journals</p>
+
+<label class="option"><input type="radio" name="q11" value="A"> A. 1 → 2 → 3 → 4</label>
+<label class="option"><input type="radio" name="q11" value="B"> B. 2 → 1 → 3 → 4</label>
+<label class="option"><input type="radio" name="q11" value="C"> C. 1 → 3 → 2 → 4</label>
+<label class="option"><input type="radio" name="q11" value="D"> D. 3 → 1 → 2 → 4</label>
+</div>
+
+<div class="question">
+<h3>Q12. Which sequence correctly represents the broad development of print culture?</h3>
+
+<label class="option"><input type="radio" name="q12" value="A"> A. Manuscript culture → printing press → wider circulation → expanding reading public</label>
+<label class="option"><input type="radio" name="q12" value="B"> B. Printing press → manuscript culture → decline of literacy → newspapers</label>
+<label class="option"><input type="radio" name="q12" value="C"> C. Newspapers → printing press → manuscripts → oral traditions</label>
+<label class="option"><input type="radio" name="q12" value="D"> D. Literacy → disappearance of books → printing press → manuscripts</label>
+</div>
+
+<div class="question">
+<h3>Q13. Which development occurred earliest?</h3>
+
+<label class="option"><input type="radio" name="q13" value="A"> A. Gutenberg's printing press in Europe</label>
+<label class="option"><input type="radio" name="q13" value="B"> B. Expansion of Indian vernacular newspapers in the nineteenth century</label>
+<label class="option"><input type="radio" name="q13" value="C"> C. Rise of cheap printed literature in nineteenth-century India</label>
+<label class="option"><input type="radio" name="q13" value="D"> D. Widespread nationalist newspapers in colonial India</label>
+</div>
+
+<div class="section-heading">
+Part C — Assertion & Reason
+</div>
+
+<div class="question">
+<h3>Q14. Assertion (A): Print enabled ideas to reach people who were geographically distant from the original writer.</h3>
+<p><b>Reason (R):</b> Multiple copies of a text could be produced and distributed across different places.</p>
+
+<label class="option"><input type="radio" name="q14" value="A"> A. Both A and R are true, and R is the correct explanation of A.</label>
+<label class="option"><input type="radio" name="q14" value="B"> B. Both A and R are true, but R is not the correct explanation of A.</label>
+<label class="option"><input type="radio" name="q14" value="C"> C. A is true, but R is false.</label>
+<label class="option"><input type="radio" name="q14" value="D"> D. A is false, but R is true.</label>
+</div>
+
+<div class="question">
+<h3>Q15. Assertion (A): Print could become an instrument of social reform.</h3>
+<p><b>Reason (R):</b> Printed texts created opportunities to discuss social practices and religious beliefs before a wider audience.</p>
+
+<label class="option"><input type="radio" name="q15" value="A"> A. Both A and R are true, and R is the correct explanation of A.</label>
+<label class="option"><input type="radio" name="q15" value="B"> B. Both A and R are true, but R is not the correct explanation of A.</label>
+<label class="option"><input type="radio" name="q15" value="C"> C. A is true, but R is false.</label>
+<label class="option"><input type="radio" name="q15" value="D"> D. A is false, but R is true.</label>
+</div>
+
+<div class="question">
+<h3>Q16. Assertion (A): Print culture always produced agreement among readers.</h3>
+<p><b>Reason (R):</b> Printed texts could generate debate and disagreement among different groups.</p>
+
+<label class="option"><input type="radio" name="q16" value="A"> A. Both A and R are true, and R is the correct explanation of A.</label>
+<label class="option"><input type="radio" name="q16" value="B"> B. Both A and R are true, but R is not the correct explanation of A.</label>
+<label class="option"><input type="radio" name="q16" value="C"> C. A is true, but R is false.</label>
+<label class="option"><input type="radio" name="q16" value="D"> D. A is false, but R is true.</label>
+</div>
+
+<div class="question">
+<h3>Q17. Assertion (A): Colonial authorities sometimes imposed restrictions on the press.</h3>
+<p><b>Reason (R):</b> Printed publications could criticise government policies and circulate political ideas.</p>
+
+<label class="option"><input type="radio" name="q17" value="A"> A. Both A and R are true, and R is the correct explanation of A.</label>
+<label class="option"><input type="radio" name="q17" value="B"> B. Both A and R are true, but R is not the correct explanation of A.</label>
+<label class="option"><input type="radio" name="q17" value="C"> C. A is true, but R is false.</label>
+<label class="option"><input type="radio" name="q17" value="D"> D. A is false, but R is true.</label>
+</div>
+
+<div class="section-heading">
+Part D — Matching & Conceptual Analysis
+</div>
+
+<div class="question">
+<h3>Q18. Match the following:</h3>
+<p>
+1. Gutenberg<br>
+2. Martin Luther<br>
+3. Vernacular press<br>
+4. Censorship
+</p>
+
+<p>
+a. Control or restriction of published material<br>
+b. Printing press in Europe<br>
+c. Publications in local languages<br>
+d. Reformation writings
+</p>
+
+<label class="option"><input type="radio" name="q18" value="A"> A. 1-b, 2-d, 3-c, 4-a</label>
+<label class="option"><input type="radio" name="q18" value="B"> B. 1-d, 2-b, 3-a, 4-c</label>
+<label class="option"><input type="radio" name="q18" value="C"> C. 1-c, 2-a, 3-d, 4-b</label>
+<label class="option"><input type="radio" name="q18" value="D"> D. 1-a, 2-c, 3-b, 4-d</label>
+</div>
+
+<div class="question">
+<h3>Q19. Which combination correctly identifies major effects of print culture?</h3>
+
+<label class="option"><input type="radio" name="q19" value="A"> A. Wider circulation of ideas, growth of reading publics and increased debate</label>
+<label class="option"><input type="radio" name="q19" value="B"> B. Decline of literacy and disappearance of public debate</label>
+<label class="option"><input type="radio" name="q19" value="C"> C. Complete elimination of censorship</label>
+<label class="option"><input type="radio" name="q19" value="D"> D. End of political communication</label>
+</div>
+
+<div class="question">
+<h3>Q20. Why was the availability of printed material in vernacular languages historically significant?</h3>
+
+<label class="option"><input type="radio" name="q20" value="A"> A. It allowed ideas to reach readers who did not read elite languages.</label>
+<label class="option"><input type="radio" name="q20" value="B"> B. It restricted reading to European elites.</label>
+<label class="option"><input type="radio" name="q20" value="C"> C. It prevented regional literary development.</label>
+<label class="option"><input type="radio" name="q20" value="D"> D. It ended all forms of oral communication.</label>
+</div>
+
+<div class="question">
+<h3>Q21. Which statement best explains why print was important to the growth of nationalism?</h3>
+
+<label class="option"><input type="radio" name="q21" value="A"> A. Newspapers and other publications could create shared political discussions across wider communities.</label>
+<label class="option"><input type="radio" name="q21" value="B"> B. Print prevented people from discussing political issues.</label>
+<label class="option"><input type="radio" name="q21" value="C"> C. Print was used only for religious texts.</label>
+<label class="option"><input type="radio" name="q21" value="D"> D. Print isolated communities from one another.</label>
+</div>
+
+<div class="question">
+<h3>Q22. Which of the following is the most accurate interpretation of censorship?</h3>
+
+<label class="option"><input type="radio" name="q22" value="A"> A. A mechanism through which authorities attempt to control the circulation of information or opinions.</label>
+<label class="option"><input type="radio" name="q22" value="B"> B. A system that guarantees complete freedom of publication.</label>
+<label class="option"><input type="radio" name="q22" value="C"> C. A method of increasing the number of independent newspapers.</label>
+<label class="option"><input type="radio" name="q22" value="D"> D. A form of oral storytelling.</label>
+</div>
+
+<div class="section-heading">
+Part E — Passage-Based Advanced Questions
+</div>
+
+<div class="passage">
+<b>Read the passage carefully:</b><br><br>
+The coming of print changed the circulation of knowledge. Earlier, manuscripts were expensive and were often produced by skilled scribes. Printing allowed texts to be reproduced in large numbers and made many forms of literature more accessible. However, access to print did not automatically mean that everyone became literate. Different groups encountered printed material through different forms, including public readings, cheap books, newspapers and religious publications.
+</div>
+
+<div class="question">
+<h3>Q23. Which inference can be drawn from the passage?</h3>
+
+<label class="option"><input type="radio" name="q23" value="A"> A. Print expanded access to texts without making literacy universal.</label>
+<label class="option"><input type="radio" name="q23" value="B"> B. Print made everyone literate immediately.</label>
+<label class="option"><input type="radio" name="q23" value="C"> C. Manuscripts became completely unavailable.</label>
+<label class="option"><input type="radio" name="q23" value="D"> D. Only educated elites could interact with print.</label>
+</div>
+
+<div class="question">
+<h3>Q24. Which mechanism allowed people who could not read to encounter printed ideas?</h3>
+
+<label class="option"><input type="radio" name="q24" value="A"> A. Public readings and oral circulation of printed material</label>
+<label class="option"><input type="radio" name="q24" value="B"> B. Complete isolation from books</label>
+<label class="option"><input type="radio" name="q24" value="C"> C. Government prohibition of newspapers</label>
+<label class="option"><input type="radio" name="q24" value="D"> D. Destruction of manuscripts</label>
+</div>
+
+<div class="question">
+<h3>Q25. Why is it historically incorrect to equate the spread of print with universal literacy?</h3>
+
+<label class="option"><input type="radio" name="q25" value="A"> A. Print could circulate among people through reading aloud and other shared practices even when literacy levels differed.</label>
+<label class="option"><input type="radio" name="q25" value="B"> B. Printed texts could never be read aloud.</label>
+<label class="option"><input type="radio" name="q25" value="C"> C. Print was restricted to handwritten manuscripts.</label>
+<label class="option"><input type="radio" name="q25" value="D"> D. Literacy disappeared after printing.</label>
+</div>
+
+<div class="passage">
+<b>Read the passage carefully:</b><br><br>
+In colonial India, newspapers, journals, pamphlets and books became important means of discussing social reform and political questions. Publications in Indian languages helped reach new groups of readers. At the same time, colonial authorities watched the press carefully and introduced measures to control publications considered politically threatening. Thus, print became both a means of public discussion and an area of political conflict.
+</div>
+
+<div class="question">
+<h3>Q26. What dual role of print is highlighted in the passage?</h3>
+
+<label class="option"><input type="radio" name="q26" value="A"> A. It promoted public discussion while also becoming subject to political control.</label>
+<label class="option"><input type="radio" name="q26" value="B"> B. It was used only for entertainment.</label>
+<label class="option"><input type="radio" name="q26" value="C"> C. It had no connection with political questions.</label>
+<label class="option"><input type="radio" name="q26" value="D"> D. It was controlled entirely by reformers.</label>
+</div>
+
+<div class="question">
+<h3>Q27. Why were publications in Indian languages significant?</h3>
+
+<label class="option"><input type="radio" name="q27" value="A"> A. They helped extend discussions beyond audiences familiar with English.</label>
+<label class="option"><input type="radio" name="q27" value="B"> B. They prevented political communication.</label>
+<label class="option"><input type="radio" name="q27" value="C"> C. They were intended only for European officials.</label>
+<label class="option"><input type="radio" name="q27" value="D"> D. They eliminated all social differences.</label>
+</div>
+
+<div class="question">
+<h3>Q28. What does the monitoring of the press by colonial authorities suggest?</h3>
+
+<label class="option"><input type="radio" name="q28" value="A"> A. Authorities recognised that print could influence public opinion and political debate.</label>
+<label class="option"><input type="radio" name="q28" value="B"> B. Authorities considered newspapers historically irrelevant.</label>
+<label class="option"><input type="radio" name="q28" value="C"> C. Print had completely disappeared.</label>
+<label class="option"><input type="radio" name="q28" value="D"> D. Newspapers were used only for commercial advertisements.</label>
+</div>
+
+<div class="section-heading">
+Part F — Higher Order Thinking
+</div>
+
+<div class="question">
+<h3>Q29. Which situation best demonstrates the political power of print culture?</h3>
+
+<label class="option"><input type="radio" name="q29" value="A"> A. A newspaper publishes criticism of a government policy and the discussion spreads among readers.</label>
+<label class="option"><input type="radio" name="q29" value="B"> B. A handwritten diary remains unread in a private room.</label>
+<label class="option"><input type="radio" name="q29" value="C"> C. A book is kept permanently in a locked cabinet.</label>
+<label class="option"><input type="radio" name="q29" value="D"> D. A manuscript is copied only once for personal use.</label>
+</div>
+
+<div class="question">
+<h3>Q30. Which conclusion most accurately reflects the historical significance of print culture?</h3>
+
+<label class="option"><input type="radio" name="q30" value="A"> A. Print transformed how knowledge, religious ideas, social debates and political arguments could circulate.</label>
+<label class="option"><input type="radio" name="q30" value="B"> B. Print affected only European religious institutions.</label>
+<label class="option"><input type="radio" name="q30" value="C"> C. Print had no relationship with social or political change.</label>
+<label class="option"><input type="radio" name="q30" value="D"> D. Print completely replaced oral culture everywhere.</label>
+</div>
+
+<div class="submit-box">
+<button type="button" onclick="submitTest()">Submit Test</button>
+</div>
+
+</form>
+
+<div id="result">
+<h2>Test Result</h2>
+<div id="score"></div>
+<p id="resultMessage"></p>
+</div>
+
+<div id="explanations">
+
+<div class="section-heading">
+Answer Key & Detailed Explanations
+</div>
+
+<div class="explanation"><b>Q1. Correct Answer: A</b><br>
+Printing allowed texts to be reproduced in much larger numbers and at lower cost than many manuscripts, contributing to the growth of a reading public.</div>
+
+<div class="explanation"><b>Q2. Correct Answer: A</b><br>
+Print made it easier for alternative interpretations and criticisms of established religious authority to circulate among a wider audience.</div>
+
+<div class="explanation"><b>Q3. Correct Answer: A</b><br>
+Gutenberg's innovation involved movable metal type and a printing system that made the reproduction of texts much faster and more efficient.</div>
+
+<div class="explanation"><b>Q4. Correct Answer: A</b><br>
+Printing enabled Luther's writings to be reproduced and distributed rapidly, helping his ideas reach readers across different regions.</div>
+
+<div class="explanation"><b>Q5. Correct Answer: A</b><br>
+The print revolution refers broadly to changes in production, circulation and consumption of texts rather than simply the invention of a machine.</div>
+
+<div class="explanation"><b>Q6. Correct Answer: A</b><br>
+Technological improvements combined with increasing literacy created favourable conditions for the growth of newspapers and journals.</div>
+
+<div class="explanation"><b>Q7. Correct Answer: A</b><br>
+Authorities could view printed criticism and political arguments as capable of influencing public opinion, which encouraged attempts at regulation.</div>
+
+<div class="explanation"><b>Q8. Correct Answer: A</b><br>
+The growth of vernacular printing expanded access to ideas among readers who were more familiar with Indian languages than English.</div>
+
+<div class="explanation"><b>Q9. Correct Answer: A</b><br>
+Reformers used newspapers, pamphlets and books to debate social practices, religious questions and reform ideas before wider audiences.</div>
+
+<div class="explanation"><b>Q10. Correct Answer: A</b><br>
+Print did not simply destroy oral culture. Printed material could itself be read aloud and could interact with existing oral practices.</div>
+
+<div class="explanation"><b>Q11. Correct Answer: A</b><br>
+The printing press developed in Europe before the Reformation's print expansion, while the major expansion of Indian print culture occurred later.</div>
+
+<div class="explanation"><b>Q12. Correct Answer: A</b><br>
+The broad historical process moved from manuscript traditions to mechanical printing, followed by wider circulation and expanding reading publics.</div>
+
+<div class="explanation"><b>Q13. Correct Answer: A</b><br>
+Gutenberg's printing press in Europe belongs to the fifteenth century, earlier than the nineteenth-century developments listed in the other options.</div>
+
+<div class="explanation"><b>Q14. Correct Answer: A</b><br>
+Multiple copies made it possible for a writer's ideas to travel beyond the immediate geographical location of the writer.</div>
+
+<div class="explanation"><b>Q15. Correct Answer: A</b><br>
+Print provided a platform through which reformers could present arguments and encourage public discussion about social and religious practices.</div>
+
+<div class="explanation"><b>Q16. Correct Answer: D</b><br>
+The assertion is false. Print did not always create agreement; different printed texts could encourage disagreement and debate. The reason is true.</div>
+
+<div class="explanation"><b>Q17. Correct Answer: A</b><br>
+Colonial authorities sometimes restricted publications because printed criticism and political arguments could influence public opinion.</div>
+
+<div class="explanation"><b>Q18. Correct Answer: A</b><br>
+Gutenberg is associated with European printing technology, Luther with Reformation writings, vernacular press with local languages, and censorship with control of publications.</div>
+
+<div class="explanation"><b>Q19. Correct Answer: A</b><br>
+Print expanded the circulation of ideas, helped create reading publics and provided a medium for discussion and debate.</div>
+
+<div class="explanation"><b>Q20. Correct Answer: A</b><br>
+Vernacular publications made printed ideas more accessible to readers who did not use elite or colonial languages.</div>
+
+<div class="explanation"><b>Q21. Correct Answer: A</b><br>
+Newspapers and publications could connect readers around common political questions and help create broader communities of discussion.</div>
+
+<div class="explanation"><b>Q22. Correct Answer: A</b><br>
+Censorship refers to attempts by authorities or institutions to restrict, control or suppress the circulation of particular information or opinions.</div>
+
+<div class="explanation"><b>Q23. Correct Answer: A</b><br>
+The passage makes an important distinction: print expanded access to texts, but this did not mean that literacy instantly became universal.</div>
+
+<div class="explanation"><b>Q24. Correct Answer: A</b><br>
+People who could not read themselves could encounter printed ideas when texts were read aloud in public or shared settings.</div>
+
+<div class="explanation"><b>Q25. Correct Answer: A</b><br>
+Print could reach non-literate audiences through oral reading and other shared practices, so the spread of print and literacy were related but not identical.</div>
+
+<div class="explanation"><b>Q26. Correct Answer: A</b><br>
+The passage presents print as both a platform for public debate and a subject of colonial regulation.</div>
+
+<div class="explanation"><b>Q27. Correct Answer: A</b><br>
+Indian-language publications helped extend social and political discussions to readers who were not primarily English readers.</div>
+
+<div class="explanation"><b>Q28. Correct Answer: A</b><br>
+Attempts to monitor publications indicate that authorities considered printed communication capable of affecting political discussion and public opinion.</div>
+
+<div class="explanation"><b>Q29. Correct Answer: A</b><br>
+A newspaper spreading criticism and generating wider discussion demonstrates how print could influence public debate.</div>
+
+<div class="explanation"><b>Q30. Correct Answer: A</b><br>
+Print had wide historical consequences because it transformed the circulation of knowledge, religious arguments, social reform ideas and political discussions.</div>
+
+</div>
+
+</div>
+
+<footer>
+<h2>GSI MANTRA</h2>
+<p>Class 10 History • Chapter 5 • Print Culture and the Modern World</p>
+<p>© 2026 GSI MANTRA. All Rights Reserved.</p>
+</footer>
+
+<script>
+
+const answers = {
+q1:"A",
+q2:"A",
+q3:"A",
+q4:"A",
+q5:"A",
+q6:"A",
+q7:"A",
+q8:"A",
+q9:"A",
+q10:"A",
+q11:"A",
+q12:"A",
+q13:"A",
+q14:"A",
+q15:"A",
+q16:"D",
+q17:"A",
+q18:"A",
+q19:"A",
+q20:"A",
+q21:"A",
+q22:"A",
+q23:"A",
+q24:"A",
+q25:"A",
+q26:"A",
+q27:"A",
+q28:"A",
+q29:"A",
+q30:"A"
+};
+
+function submitTest(){
+
+    let score = 0;
+    let answered = 0;
+
+    for(let i=1;i<=30;i++){
+
+        const selected =
+            document.querySelector('input[name="q'+i+'"]:checked');
+
+        if(selected){
+            answered++;
+
+            if(selected.value === answers["q"+i]){
+                score++;
+            }
+        }
+    }
+
+    const percentage = Math.round((score/30)*100);
+
+    document.getElementById("score").innerHTML =
+        score + " / 30 (" + percentage + "%)";
+
+    document.getElementById("resultMessage").innerHTML =
+        "You answered " + answered +
+        " out of 30 questions. Read the detailed explanations below.";
+
+    document.getElementById("result").style.display="block";
+    document.getElementById("explanations").style.display="block";
+
+    window.scrollTo({
+        top:document.getElementById("result").offsetTop - 20,
+        behavior:"smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
+```
