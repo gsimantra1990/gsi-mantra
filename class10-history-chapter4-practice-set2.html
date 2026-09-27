@@ -1,0 +1,1669 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Practice Set 2 | The Age of Industrialisation | GSI MANTRA</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+/* WATERMARK */
+body::before{
+    content:"GSI MANTRA";
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-25deg);
+    font-size:70px;
+    font-weight:bold;
+    color:rgba(18,60,105,0.055);
+    pointer-events:none;
+    z-index:0;
+    white-space:nowrap;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:22px 20px;
+    position:relative;
+    z-index:2;
+}
+
+.header-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:32px;
+}
+
+.logo p{
+    margin:5px 0 0;
+    font-size:14px;
+}
+
+.search{
+    background:white;
+    padding:10px 15px;
+    border-radius:25px;
+    width:280px;
+}
+
+.search input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+}
+
+/* NAV */
+nav{
+    background:#071d33;
+    padding:13px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#123c69,#1d5b91);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+    position:relative;
+    z-index:1;
+}
+
+.hero h2{
+    margin:0 0 10px;
+    font-size:32px;
+}
+
+.hero p{
+    margin:8px auto;
+    font-size:17px;
+    line-height:1.6;
+}
+
+/* INFO */
+.test-info{
+    max-width:1100px;
+    margin:25px auto;
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    position:relative;
+    z-index:1;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    text-align:center;
+}
+
+.info-item{
+    background:#f8fafc;
+    padding:14px;
+    border-radius:10px;
+}
+
+.info-item strong{
+    display:block;
+    color:#123c69;
+    margin-bottom:5px;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:10px 20px 50px;
+    position:relative;
+    z-index:1;
+}
+
+.section-heading{
+    background:#123c69;
+    color:white;
+    padding:13px 18px;
+    border-radius:10px;
+    margin:25px 0 15px;
+}
+
+/* QUESTION */
+.question{
+    background:white;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:13px;
+    box-shadow:0 4px 14px rgba(0,0,0,.07);
+}
+
+.question h3{
+    color:#123c69;
+    margin-top:0;
+    font-size:18px;
+    line-height:1.5;
+}
+
+.option{
+    display:block;
+    padding:10px 12px;
+    margin:8px 0;
+    border:1px solid #dce4ec;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.option:hover{
+    background:#f1f6fb;
+}
+
+.option input{
+    margin-right:8px;
+}
+
+/* PASSAGE */
+.passage{
+    background:#fff8e8;
+    border-left:5px solid #f28c00;
+    padding:18px;
+    line-height:1.7;
+    margin-bottom:18px;
+    border-radius:8px;
+}
+
+/* SUBMIT */
+.submit-box{
+    text-align:center;
+    margin:35px 0;
+}
+
+button{
+    background:#123c69;
+    color:white;
+    border:none;
+    padding:14px 35px;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#f28c00;
+}
+
+/* RESULT */
+#result{
+    display:none;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.10);
+    margin-top:25px;
+}
+
+#score{
+    color:#123c69;
+    font-size:30px;
+    font-weight:bold;
+}
+
+/* EXPLANATIONS */
+#explanations{
+    display:none;
+}
+
+.explanation{
+    background:#f0fdf4;
+    border-left:5px solid #159447;
+    padding:17px;
+    margin:14px 0;
+    border-radius:8px;
+    line-height:1.6;
+}
+
+/* FOOTER */
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    position:relative;
+    z-index:2;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    .header-content{
+        flex-direction:column;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    .info-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero h2{
+        font-size:26px;
+    }
+
+    .question{
+        padding:17px;
+    }
+
+    body::before{
+        font-size:40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="header-content">
+
+<div class="logo">
+
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+
+<div>
+<h1>GSI MANTRA</h1>
+<p>Competitive Education & NCERT Learning Platform</p>
+</div>
+
+</div>
+
+<div class="search">
+<input type="text" placeholder="Search GSI MANTRA...">
+</div>
+
+</div>
+
+</header>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="class10.html">Class 10</a>
+
+<a href="class10-history.html">History</a>
+
+<a href="class10-history-chapter4-practice.html">Chapter 4</a>
+
+</nav>
+
+
+<section class="hero">
+
+<h2>Practice Set 2 — The Age of Industrialisation</h2>
+
+<p>Class 10 History • English Medium</p>
+
+<p>NCERT + Board + Competitive Level</p>
+
+</section>
+
+
+<div class="test-info">
+
+<div class="info-grid">
+
+<div class="info-item">
+<strong>Class</strong>
+10
+</div>
+
+<div class="info-item">
+<strong>Subject</strong>
+History
+</div>
+
+<div class="info-item">
+<strong>Chapter</strong>
+Industrialisation
+</div>
+
+<div class="info-item">
+<strong>Total Questions</strong>
+30
+</div>
+
+</div>
+
+</div>
+
+
+<div class="container">
+
+<form id="testForm">
+
+
+<!-- PART A -->
+
+<div class="section-heading">
+Part A — Multiple Choice Questions
+</div>
+
+
+<div class="question">
+
+<h3>Q1. What was the main feature of proto-industrialisation?</h3>
+
+<label class="option">
+<input type="radio" name="q1" value="A">
+A. Production was carried out only in large factories
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="B">
+B. Production was organised in rural households and workshops for wider markets
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="C">
+C. Production was completely controlled by governments
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="D">
+D. Production was limited to agriculture
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q2. Why did merchants move into the countryside in Europe before factories became common?</h3>
+
+<label class="option">
+<input type="radio" name="q2" value="A">
+A. Urban guilds often restricted their activities
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="B">
+B. Villages had no workers
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="C">
+C. Governments prohibited rural production
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="D">
+D. They wanted to stop exports
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q3. What did merchants provide to rural producers?</h3>
+
+<label class="option">
+<input type="radio" name="q3" value="A">
+A. Raw materials and instructions
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="B">
+B. Agricultural land only
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="C">
+C. Military training
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="D">
+D. Government jobs
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q4. Which industry became one of the leading industries of Britain during the Industrial Revolution?</h3>
+
+<label class="option">
+<input type="radio" name="q4" value="A">
+A. Cotton textile industry
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="B">
+B. Shipbuilding only
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="C">
+C. Food processing only
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="D">
+D. Paper industry only
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q5. Who invented the Spinning Jenny?</h3>
+
+<label class="option">
+<input type="radio" name="q5" value="A">
+A. James Hargreaves
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="B">
+B. Richard Arkwright
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="C">
+C. James Watt
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="D">
+D. Henry Ford
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q6. What was an important advantage of the Spinning Jenny?</h3>
+
+<label class="option">
+<input type="radio" name="q6" value="A">
+A. It allowed one worker to operate several spindles
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="B">
+B. It replaced steam engines
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="C">
+C. It produced iron
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="D">
+D. It was used for railway construction
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q7. What was the role of the steam engine in industrialisation?</h3>
+
+<label class="option">
+<input type="radio" name="q7" value="A">
+A. It provided a powerful source of mechanical energy
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="B">
+B. It stopped the use of coal
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="C">
+C. It was used only for farming
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="D">
+D. It ended factory production
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q8. Who improved the steam engine and made it more efficient for industrial use?</h3>
+
+<label class="option">
+<input type="radio" name="q8" value="A">
+A. James Watt
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="B">
+B. James Hargreaves
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="C">
+C. Samuel Crompton
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="D">
+D. Henry Patullo
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q9. What was the significance of the cotton gin?</h3>
+
+<label class="option">
+<input type="radio" name="q9" value="A">
+A. It helped separate cotton fibres from seeds
+</label>
+
+<label class="option">
+<input type="radio" name="q9" value="B">
+B. It produced steam power
+</label>
+
+<label class="option">
+<input type="radio" name="q9" value="C">
+C. It manufactured iron
+</label>
+
+<label class="option">
+<input type="radio" name="q9" value="D">
+D. It transported cotton by railway
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q10. Which raw material became closely associated with the British textile industry?</h3>
+
+<label class="option">
+<input type="radio" name="q10" value="A">
+A. Cotton
+</label>
+
+<label class="option">
+<input type="radio" name="q10" value="B">
+B. Rubber
+</label>
+
+<label class="option">
+<input type="radio" name="q10" value="C">
+C. Petroleum
+</label>
+
+<label class="option">
+<input type="radio" name="q10" value="D">
+D. Aluminium
+</label>
+
+</div>
+
+
+<!-- PART B -->
+
+<div class="section-heading">
+Part B — Industrialisation in India
+</div>
+
+
+<div class="question">
+
+<h3>Q11. What were the traditional Indian textile centres famous for?</h3>
+
+<label class="option">
+<input type="radio" name="q11" value="A">
+A. High-quality handwoven textiles
+</label>
+
+<label class="option">
+<input type="radio" name="q11" value="B">
+B. Automobile production
+</label>
+
+<label class="option">
+<input type="radio" name="q11" value="C">
+C. Steel factories
+</label>
+
+<label class="option">
+<input type="radio" name="q11" value="D">
+D. Aircraft manufacturing
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q12. Why did Indian textile exports decline during the nineteenth century?</h3>
+
+<label class="option">
+<input type="radio" name="q12" value="A">
+A. British manufacturers captured important markets
+</label>
+
+<label class="option">
+<input type="radio" name="q12" value="B">
+B. India stopped producing cotton
+</label>
+
+<label class="option">
+<input type="radio" name="q12" value="C">
+C. Indian weavers refused to work
+</label>
+
+<label class="option">
+<input type="radio" name="q12" value="D">
+D. Railways completely disappeared
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q13. What did the British government impose on Indian textile exports to Britain?</h3>
+
+<label class="option">
+<input type="radio" name="q13" value="A">
+A. Restrictions and duties
+</label>
+
+<label class="option">
+<input type="radio" name="q13" value="B">
+B. Complete tax exemption
+</label>
+
+<label class="option">
+<input type="radio" name="q13" value="C">
+C. Free government subsidies
+</label>
+
+<label class="option">
+<input type="radio" name="q13" value="D">
+D. Export rewards
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q14. Who were the gomasthas?</h3>
+
+<label class="option">
+<input type="radio" name="q14" value="A">
+A. Paid servants of the East India Company who supervised weavers
+</label>
+
+<label class="option">
+<input type="radio" name="q14" value="B">
+B. Indian industrialists
+</label>
+
+<label class="option">
+<input type="radio" name="q14" value="C">
+C. European factory owners
+</label>
+
+<label class="option">
+<input type="radio" name="q14" value="D">
+D. Railway engineers
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q15. What problem did many Indian weavers face under the East India Company's system?</h3>
+
+<label class="option">
+<input type="radio" name="q15" value="A">
+A. They were forced to sell cloth at prices controlled by the Company
+</label>
+
+<label class="option">
+<input type="radio" name="q15" value="B">
+A. They received unlimited profits
+</label>
+
+<label class="option">
+<input type="radio" name="q15" value="C">
+C. They received free machinery
+</label>
+
+<label class="option">
+<input type="radio" name="q15" value="D">
+D. They were given government ownership
+</label>
+
+</div>
+
+
+<!-- PART C -->
+
+<div class="section-heading">
+Part C — Match the Following
+</div>
+
+
+<div class="question">
+
+<h3>Q16. Match the following inventors with their inventions:</h3>
+
+<p>
+1. James Hargreaves<br>
+2. James Watt<br>
+3. Richard Arkwright<br>
+4. Samuel Crompton
+</p>
+
+<p>
+a. Improved steam engine<br>
+b. Spinning Jenny<br>
+c. Water Frame<br>
+d. Spinning Mule
+</p>
+
+<label class="option">
+<input type="radio" name="q16" value="A">
+A. 1-b, 2-a, 3-c, 4-d
+</label>
+
+<label class="option">
+<input type="radio" name="q16" value="B">
+B. 1-a, 2-b, 3-d, 4-c
+</label>
+
+<label class="option">
+<input type="radio" name="q16" value="C">
+C. 1-c, 2-d, 3-a, 4-b
+</label>
+
+<label class="option">
+<input type="radio" name="q16" value="D">
+D. 1-d, 2-c, 3-b, 4-a
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q17. Match the following:</h3>
+
+<p>
+1. Spinning Jenny<br>
+2. Steam engine<br>
+3. Gomasthas<br>
+4. Industrialists
+</p>
+
+<p>
+a. Supervised weavers<br>
+b. Factory owners<br>
+c. Mechanical power<br>
+d. Spinning machine
+</p>
+
+<label class="option">
+<input type="radio" name="q17" value="A">
+A. 1-d, 2-c, 3-a, 4-b
+</label>
+
+<label class="option">
+<input type="radio" name="q17" value="B">
+B. 1-c, 2-d, 3-b, 4-a
+</label>
+
+<label class="option">
+<input type="radio" name="q17" value="C">
+C. 1-a, 2-b, 3-c, 4-d
+</label>
+
+<label class="option">
+<input type="radio" name="q17" value="D">
+D. 1-b, 2-a, 3-d, 4-c
+</label>
+
+</div>
+
+
+<!-- PART D -->
+
+<div class="section-heading">
+Part D — Assertion & Reason
+</div>
+
+
+<div class="question">
+
+<h3>Q18. Assertion (A): Factories did not immediately replace hand production.</h3>
+
+<p>
+<b>Reason (R):</b> Many goods continued to be produced by hand because machines could not easily produce certain specialised products.
+</p>
+
+<label class="option">
+<input type="radio" name="q18" value="A">
+A. Both A and R are true, and R is the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q18" value="B">
+B. Both A and R are true, but R is not the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q18" value="C">
+C. A is true, but R is false.
+</label>
+
+<label class="option">
+<input type="radio" name="q18" value="D">
+D. A is false, but R is true.
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q19. Assertion (A): Industrialisation created new forms of employment.</h3>
+
+<p>
+<b>Reason (R):</b> Factories required workers to operate machines and perform different industrial tasks.
+</p>
+
+<label class="option">
+<input type="radio" name="q19" value="A">
+A. Both A and R are true, and R is the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q19" value="B">
+B. Both A and R are true, but R is not the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q19" value="C">
+C. A is true, but R is false.
+</label>
+
+<label class="option">
+<input type="radio" name="q19" value="D">
+D. A is false, but R is true.
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q20. Assertion (A): Indian weavers faced difficulties under colonial rule.</h3>
+
+<p>
+<b>Reason (R):</b> The East India Company controlled supplies of raw materials and the sale of finished cloth in many areas.
+</p>
+
+<label class="option">
+<input type="radio" name="q20" value="A">
+A. Both A and R are true, and R is the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q20" value="B">
+B. Both A and R are true, but R is not the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q20" value="C">
+C. A is true, but R is false.
+</label>
+
+<label class="option">
+<input type="radio" name="q20" value="D">
+D. A is false, but R is true.
+</label>
+
+</div>
+
+
+<!-- PART E -->
+
+<div class="section-heading">
+Part E — Analytical Questions
+</div>
+
+
+<div class="question">
+
+<h3>Q21. Why were some merchants interested in controlling production?</h3>
+
+<label class="option">
+<input type="radio" name="q21" value="A">
+A. To ensure regular supplies and control quality and prices
+</label>
+
+<label class="option">
+<input type="radio" name="q21" value="B">
+B. To stop production completely
+</label>
+
+<label class="option">
+<input type="radio" name="q21" value="C">
+C. To end international trade
+</label>
+
+<label class="option">
+<input type="radio" name="q21" value="D">
+D. To promote only agriculture
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q22. Why did industrialists often prefer hand labour for some products?</h3>
+
+<label class="option">
+<input type="radio" name="q22" value="A">
+A. Hand labour could produce specialised goods and could be adjusted according to demand
+</label>
+
+<label class="option">
+<input type="radio" name="q22" value="B">
+B. Machines were illegal everywhere
+</label>
+
+<label class="option">
+<input type="radio" name="q22" value="C">
+C. Workers refused all machines
+</label>
+
+<label class="option">
+<input type="radio" name="q22" value="D">
+D. Hand production was always faster
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q23. How did industrialisation affect workers' lives?</h3>
+
+<label class="option">
+<input type="radio" name="q23" value="A">
+A. It created wage employment but often involved long hours and difficult working conditions
+</label>
+
+<label class="option">
+<input type="radio" name="q23" value="B">
+B. It ended all unemployment immediately
+</label>
+
+<label class="option">
+<input type="radio" name="q23" value="C">
+C. It gave every worker ownership of factories
+</label>
+
+<label class="option">
+<input type="radio" name="q23" value="D">
+D. It eliminated wage labour
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q24. Why were advertisements important for industrial products?</h3>
+
+<label class="option">
+<input type="radio" name="q24" value="A">
+A. They helped create demand and build a distinct identity for products
+</label>
+
+<label class="option">
+<input type="radio" name="q24" value="B">
+B. They reduced all production costs to zero
+</label>
+
+<label class="option">
+<input type="radio" name="q24" value="C">
+C. They stopped competition
+</label>
+
+<label class="option">
+<input type="radio" name="q24" value="D">
+D. They replaced factories
+</label>
+
+</div>
+
+
+<!-- PASSAGE -->
+
+<div class="section-heading">
+Part F — Passage-Based Questions
+</div>
+
+
+<div class="passage">
+
+<b>Read the passage carefully:</b>
+
+<br><br>
+
+Before factories became an important part of industrial production,
+many merchants organised production through rural households.
+They supplied raw materials to peasants and artisans and collected
+the finished goods. This system allowed merchants to produce goods
+for wider markets while avoiding some restrictions imposed by urban
+guilds. It is often described as proto-industrialisation.
+
+</div>
+
+
+<div class="question">
+
+<h3>Q25. Where was much of the production carried out in the proto-industrial system?</h3>
+
+<label class="option">
+<input type="radio" name="q25" value="A">
+A. Rural households and workshops
+</label>
+
+<label class="option">
+<input type="radio" name="q25" value="B">
+B. Only royal palaces
+</label>
+
+<label class="option">
+<input type="radio" name="q25" value="C">
+C. Only railway stations
+</label>
+
+<label class="option">
+<input type="radio" name="q25" value="D">
+D. Only government offices
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q26. Why did merchants use rural areas?</h3>
+
+<label class="option">
+<input type="radio" name="q26" value="A">
+A. They could organise production outside restrictive urban guild systems
+</label>
+
+<label class="option">
+<input type="radio" name="q26" value="B">
+A. Rural workers had no skills
+</label>
+
+<label class="option">
+<input type="radio" name="q26" value="C">
+C. Governments banned rural production
+</label>
+
+<label class="option">
+<input type="radio" name="q26" value="D">
+D. Rural areas had no access to markets
+</label>
+
+</div>
+
+
+<div class="passage">
+
+<b>Read the passage carefully:</b>
+
+<br><br>
+
+Indian textiles were famous in international markets for their quality
+and variety. However, during the nineteenth century, British machine-made
+cotton goods increasingly entered Indian markets. At the same time,
+Indian textile producers faced restrictions in important foreign markets.
+Many weavers experienced declining demand and increasing difficulties
+in maintaining their traditional livelihoods.
+
+</div>
+
+
+<div class="question">
+
+<h3>Q27. What happened to the Indian textile market because of British machine-made goods?</h3>
+
+<label class="option">
+<input type="radio" name="q27" value="A">
+A. Indian producers faced increasing competition
+</label>
+
+<label class="option">
+<input type="radio" name="q27" value="B">
+B. Indian textiles became the only goods sold in Britain
+</label>
+
+<label class="option">
+<input type="radio" name="q27" value="C">
+C. British textiles disappeared
+</label>
+
+<label class="option">
+<input type="radio" name="q27" value="D">
+D. Handloom production immediately doubled everywhere
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q28. What was one effect of the decline in textile demand on Indian weavers?</h3>
+
+<label class="option">
+<input type="radio" name="q28" value="A">
+A. Many faced loss of income and livelihood
+</label>
+
+<label class="option">
+<input type="radio" name="q28" value="B">
+B. All became factory owners
+</label>
+
+<label class="option">
+<input type="radio" name="q28" value="C">
+C. All received higher wages
+</label>
+
+<label class="option">
+<input type="radio" name="q28" value="D">
+D. They stopped producing any goods immediately
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q29. Which statement best explains the relationship between industrialisation and hand production?</h3>
+
+<label class="option">
+<input type="radio" name="q29" value="A">
+A. Industrialisation did not eliminate hand production immediately
+</label>
+
+<label class="option">
+<input type="radio" name="q29" value="B">
+B. Hand production ended everywhere at the beginning of industrialisation
+</label>
+
+<label class="option">
+<input type="radio" name="q29" value="C">
+C. Machines were never used
+</label>
+
+<label class="option">
+<input type="radio" name="q29" value="D">
+D. Factories had no connection with industrialisation
+</label>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q30. Which statement best summarises the process of industrialisation?</h3>
+
+<label class="option">
+<input type="radio" name="q30" value="A">
+A. It involved technological change, new production systems, markets and changes in labour
+</label>
+
+<label class="option">
+<input type="radio" name="q30" value="B">
+B. It was limited only to agriculture
+</label>
+
+<label class="option">
+<input type="radio" name="q30" value="C">
+C. It completely ended handicraft production
+</label>
+
+<label class="option">
+<input type="radio" name="q30" value="D">
+C. It affected only Britain and no other region
+</label>
+
+</div>
+
+
+<!-- SUBMIT -->
+
+<div class="submit-box">
+
+<button type="button" onclick="submitTest()">
+Submit Test
+</button>
+
+</div>
+
+</form>
+
+
+<!-- RESULT -->
+
+<div id="result">
+
+<h2>Test Result</h2>
+
+<div id="score"></div>
+
+<p id="resultMessage"></p>
+
+</div>
+
+
+<!-- EXPLANATIONS -->
+
+<div id="explanations">
+
+<div class="section-heading">
+Answer Key & Detailed Explanations
+</div>
+
+
+<div class="explanation">
+<b>Q1. Correct Answer: B</b><br>
+Proto-industrialisation involved production organised by merchants through rural households and small workshops before the widespread growth of factories.
+</div>
+
+
+<div class="explanation">
+<b>Q2. Correct Answer: A</b><br>
+Urban guilds controlled entry into trades and production in many towns. Merchants therefore increasingly turned to the countryside.
+</div>
+
+
+<div class="explanation">
+<b>Q3. Correct Answer: A</b><br>
+Merchants supplied raw materials to rural producers and collected the finished products for sale in wider markets.
+</div>
+
+
+<div class="explanation">
+<b>Q4. Correct Answer: A</b><br>
+Cotton textiles became one of the major industries of industrial Britain and played a central role in industrialisation.
+</div>
+
+
+<div class="explanation">
+<b>Q5. Correct Answer: A</b><br>
+James Hargreaves invented the Spinning Jenny, an important machine in the history of textile production.
+</div>
+
+
+<div class="explanation">
+<b>Q6. Correct Answer: A</b><br>
+The Spinning Jenny enabled a worker to operate several spindles at the same time, increasing productivity.
+</div>
+
+
+<div class="explanation">
+<b>Q7. Correct Answer: A</b><br>
+The steam engine provided mechanical power and became important in factories, transport and other industrial activities.
+</div>
+
+
+<div class="explanation">
+<b>Q8. Correct Answer: A</b><br>
+James Watt improved the steam engine and made it much more useful for industrial purposes.
+</div>
+
+
+<div class="explanation">
+<b>Q9. Correct Answer: A</b><br>
+The cotton gin helped separate cotton fibres from seeds, making cotton processing more efficient.
+</div>
+
+
+<div class="explanation">
+<b>Q10. Correct Answer: A</b><br>
+Cotton was a crucial raw material for the expanding British textile industry.
+</div>
+
+
+<div class="explanation">
+<b>Q11. Correct Answer: A</b><br>
+Indian textile centres were well known for high-quality handwoven and hand-printed textiles.
+</div>
+
+
+<div class="explanation">
+<b>Q12. Correct Answer: A</b><br>
+British machine-made textiles competed with Indian products, while colonial trade policies restricted Indian access to important foreign markets.
+</div>
+
+
+<div class="explanation">
+<b>Q13. Correct Answer: A</b><br>
+Indian textile exports to Britain faced duties and restrictions that made it difficult for Indian producers to compete.
+</div>
+
+
+<div class="explanation">
+<b>Q14. Correct Answer: A</b><br>
+Gomasthas were paid servants appointed by the East India Company to supervise weavers and collect supplies.
+</div>
+
+
+<div class="explanation">
+<b>Q15. Correct Answer: A</b><br>
+The Company system often restricted weavers' freedom and required them to sell cloth under conditions controlled by Company officials.
+</div>
+
+
+<div class="explanation">
+<b>Q16. Correct Answer: A</b><br>
+James Hargreaves — Spinning Jenny; James Watt — improved steam engine; Richard Arkwright — Water Frame; Samuel Crompton — Spinning Mule.
+</div>
+
+
+<div class="explanation">
+<b>Q17. Correct Answer: A</b><br>
+Spinning Jenny was a spinning machine; the steam engine provided mechanical power; gomasthas supervised weavers; industrialists owned or managed industrial enterprises.
+</div>
+
+
+<div class="explanation">
+<b>Q18. Correct Answer: A</b><br>
+Factories did not immediately eliminate hand production because many specialised goods still required skilled manual work.
+</div>
+
+
+<div class="explanation">
+<b>Q19. Correct Answer: A</b><br>
+The growth of factories created new wage-based employment because workers were needed to operate machines and perform industrial tasks.
+</div>
+
+
+<div class="explanation">
+<b>Q20. Correct Answer: A</b><br>
+Company control over supplies and sales placed many Indian weavers in a difficult economic position.
+</div>
+
+
+<div class="explanation">
+<b>Q21. Correct Answer: A</b><br>
+Merchants wanted greater control over production so that they could maintain regular supplies, manage quality and respond to market demand.
+</div>
+
+
+<div class="explanation">
+<b>Q22. Correct Answer: A</b><br>
+Hand labour remained useful for specialised products and for work requiring flexibility or detailed craftsmanship.
+</div>
+
+
+<div class="explanation">
+<b>Q23. Correct Answer: A</b><br>
+Industrialisation created wage employment, but factory workers often faced long working hours and difficult conditions.
+</div>
+
+
+<div class="explanation">
+<b>Q24. Correct Answer: A</b><br>
+Advertisements helped manufacturers attract consumers, create demand and give products a distinctive identity.
+</div>
+
+
+<div class="explanation">
+<b>Q25. Correct Answer: A</b><br>
+Proto-industrial production was largely carried out in rural households and small workshops.
+</div>
+
+
+<div class="explanation">
+<b>Q26. Correct Answer: A</b><br>
+Merchants could avoid some of the restrictions imposed by urban guilds by organising production in rural areas.
+</div>
+
+
+<div class="explanation">
+<b>Q27. Correct Answer: A</b><br>
+British machine-made cotton goods increased competition for Indian textile producers in Indian markets.
+</div>
+
+
+<div class="explanation">
+<b>Q28. Correct Answer: A</b><br>
+Declining demand and increasing competition reduced the income opportunities of many traditional Indian weavers.
+</div>
+
+
+<div class="explanation">
+<b>Q29. Correct Answer: A</b><br>
+Industrialisation did not immediately destroy hand production. Hand production continued alongside factories, especially for specialised and labour-intensive goods.
+</div>
+
+
+<div class="explanation">
+<b>Q30. Correct Answer: A</b><br>
+Industrialisation was a broad process involving machines, new production systems, expanding markets and major changes in labour.
+</div>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<h2>GSI MANTRA</h2>
+
+<p>
+Class 10 History • Chapter 4 • The Age of Industrialisation
+</p>
+
+<p>
+Practice Set 2 • 30 Questions
+</p>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+const answers = {
+
+q1:"B",
+q2:"A",
+q3:"A",
+q4:"A",
+q5:"A",
+q6:"A",
+q7:"A",
+q8:"A",
+q9:"A",
+q10:"A",
+
+q11:"A",
+q12:"A",
+q13:"A",
+q14:"A",
+q15:"A",
+
+q16:"A",
+q17:"A",
+
+q18:"A",
+q19:"A",
+q20:"A",
+
+q21:"A",
+q22:"A",
+q23:"A",
+q24:"A",
+
+q25:"A",
+q26:"A",
+q27:"A",
+q28:"A",
+q29:"A",
+q30:"A"
+
+};
+
+
+function submitTest(){
+
+    let score = 0;
+    let answered = 0;
+
+    for(let i=1; i<=30; i++){
+
+        const selected =
+        document.querySelector(
+        'input[name="q'+i+'"]:checked'
+        );
+
+        if(selected){
+
+            answered++;
+
+            if(selected.value === answers["q"+i]){
+                score++;
+            }
+
+        }
+
+    }
+
+
+    const percentage =
+    Math.round((score/30)*100);
+
+
+    document.getElementById("score").innerHTML =
+    score + " / 30 (" + percentage + "%)";
+
+
+    document.getElementById("resultMessage").innerHTML =
+    "You answered " + answered +
+    " out of 30 questions. Read the detailed explanations below to improve your preparation.";
+
+
+    document.getElementById("result").style.display="block";
+
+    document.getElementById("explanations").style.display="block";
+
+
+    window.scrollTo({
+
+        top:
+        document.getElementById("result").offsetTop - 20,
+
+        behavior:"smooth"
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
+```
