@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Practice Set 4 | The Making of a Global World | GSI MANTRA</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    color:#222;
+}
+
+/* WATERMARK */
+body::before{
+    content:"GSI MANTRA";
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-25deg);
+    font-size:70px;
+    font-weight:bold;
+    color:rgba(18,60,105,0.055);
+    pointer-events:none;
+    z-index:0;
+    white-space:nowrap;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#0b2948,#123c69);
+    color:white;
+    padding:22px 20px;
+    position:relative;
+    z-index:2;
+}
+
+.header-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    background:white;
+    border-radius:8px;
+}
+
+.logo h1{
+    margin:0;
+    font-size:32px;
+}
+
+.logo p{
+    margin:5px 0 0;
+    font-size:14px;
+}
+
+.search{
+    background:white;
+    padding:10px 15px;
+    border-radius:25px;
+    width:280px;
+}
+
+.search input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+}
+
+/* NAV */
+nav{
+    background:#071d33;
+    padding:13px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb703;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#123c69,#1d5b91);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+    position:relative;
+    z-index:1;
+}
+
+.hero h2{
+    margin:0 0 10px;
+    font-size:32px;
+}
+
+.hero p{
+    margin:8px auto;
+    font-size:17px;
+    line-height:1.6;
+}
+
+/* INFO */
+.test-info{
+    max-width:1100px;
+    margin:25px auto;
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    position:relative;
+    z-index:1;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    text-align:center;
+}
+
+.info-item{
+    background:#f8fafc;
+    padding:14px;
+    border-radius:10px;
+}
+
+.info-item strong{
+    display:block;
+    color:#123c69;
+    margin-bottom:5px;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:10px 20px 50px;
+    position:relative;
+    z-index:1;
+}
+
+.section-heading{
+    background:#123c69;
+    color:white;
+    padding:13px 18px;
+    border-radius:10px;
+    margin:25px 0 15px;
+}
+
+/* QUESTION */
+.question{
+    background:white;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:13px;
+    box-shadow:0 4px 14px rgba(0,0,0,.07);
+}
+
+.question h3{
+    color:#123c69;
+    margin-top:0;
+    font-size:18px;
+    line-height:1.5;
+}
+
+.option{
+    display:block;
+    padding:10px 12px;
+    margin:8px 0;
+    border:1px solid #dce4ec;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.option:hover{
+    background:#f1f6fb;
+}
+
+.option input{
+    margin-right:8px;
+}
+
+/* PASSAGE */
+.passage{
+    background:#fff8e8;
+    border-left:5px solid #f28c00;
+    padding:18px;
+    line-height:1.7;
+    margin-bottom:18px;
+    border-radius:8px;
+}
+
+/* SUBMIT */
+.submit-box{
+    text-align:center;
+    margin:35px 0;
+}
+
+button{
+    background:#123c69;
+    color:white;
+    border:none;
+    padding:14px 35px;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#f28c00;
+}
+
+/* RESULT */
+#result{
+    display:none;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.10);
+    margin-top:25px;
+}
+
+#score{
+    color:#123c69;
+    font-size:30px;
+    font-weight:bold;
+}
+
+/* EXPLANATIONS */
+#explanations{
+    display:none;
+}
+
+.explanation{
+    background:#f0fdf4;
+    border-left:5px solid #159447;
+    padding:17px;
+    margin:14px 0;
+    border-radius:8px;
+    line-height:1.6;
+}
+
+/* FOOTER */
+footer{
+    background:#071d33;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    position:relative;
+    z-index:2;
+}
+
+footer p{
+    color:#cbd5e1;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    .header-content{
+        flex-direction:column;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    .info-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero h2{
+        font-size:26px;
+    }
+
+    .question{
+        padding:17px;
+    }
+
+    body::before{
+        font-size:40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="header-content">
+
+<div class="logo">
+
+<img src="gsi-logo.png" alt="GSI MANTRA Logo">
+
+<div>
+<h1>GSI MANTRA</h1>
+<p>Competitive Education & NCERT Learning Platform</p>
+</div>
+
+</div>
+
+<div class="search">
+<input type="text" placeholder="Search GSI MANTRA...">
+</div>
+
+</div>
+
+</header>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="class10.html">Class 10</a>
+
+<a href="class10-history.html">History</a>
+
+<a href="class10-history-chapter3-practice.html">Chapter 3</a>
+
+</nav>
+
+
+<section class="hero">
+
+<h2>Practice Set 4 — The Making of a Global World</h2>
+
+<p>Class 10 History • English Medium</p>
+
+<p>NCERT + Board + Competitive Level</p>
+
+</section>
+
+
+<div class="test-info">
+
+<div class="info-grid">
+
+<div class="info-item">
+<strong>Class</strong>
+10
+</div>
+
+<div class="info-item">
+<strong>Subject</strong>
+History
+</div>
+
+<div class="info-item">
+<strong>Total Questions</strong>
+30
+</div>
+
+<div class="info-item">
+<strong>Marks</strong>
+30
+</div>
+
+</div>
+
+</div>
+
+
+<div class="container">
+
+<form id="testForm">
+
+
+<div class="section-heading">
+Part A — Multiple Choice Questions
+</div>
+
+
+<!-- Q1 -->
+
+<div class="question">
+
+<h3>Q1. Which of the following was one of the earliest forms of long-distance trade and cultural exchange?</h3>
+
+<label class="option">
+<input type="radio" name="q1" value="A">
+A. Silk Routes
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="B">
+B. Atlantic Treaty
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="C">
+C. Industrial Charter
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="D">
+D. Corn Laws
+</label>
+
+</div>
+
+
+<!-- Q2 -->
+
+<div class="question">
+
+<h3>Q2. Which statement about the Silk Routes is correct?</h3>
+
+<label class="option">
+<input type="radio" name="q2" value="A">
+A. They connected only European countries.
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="B">
+B. They linked different parts of Asia with Europe and North Africa.
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="C">
+C. They were used only for military purposes.
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="D">
+D. They developed after the Second World War.
+</label>
+
+</div>
+
+
+<!-- Q3 -->
+
+<div class="question">
+
+<h3>Q3. Which crop from the Americas became an important food source for poor Europeans?</h3>
+
+<label class="option">
+<input type="radio" name="q3" value="A">
+A. Potato
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="B">
+B. Rice
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="C">
+C. Wheat
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="D">
+D. Barley
+</label>
+
+</div>
+
+
+<!-- Q4 -->
+
+<div class="question">
+
+<h3>Q4. What was a major reason for the abolition of the Corn Laws in Britain?</h3>
+
+<label class="option">
+<input type="radio" name="q4" value="A">
+A. Industrialists and urban groups wanted cheaper food.
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="B">
+B. Farmers demanded higher import duties.
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="C">
+C. Britain wanted to stop overseas trade.
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="D">
+D. Britain wanted to ban wheat imports.
+</label>
+
+</div>
+
+
+<!-- Q5 -->
+
+<div class="question">
+
+<h3>Q5. Which development helped make long-distance transport of meat possible?</h3>
+
+<label class="option">
+<input type="radio" name="q5" value="A">
+A. Telegraph
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="B">
+B. Refrigerated ships
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="C">
+C. Printing press
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="D">
+D. Cotton mills
+</label>
+
+</div>
+
+
+<!-- Q6 -->
+
+<div class="question">
+
+<h3>Q6. What happened to the price of food in Britain after the import of cheap food increased?</h3>
+
+<label class="option">
+<input type="radio" name="q6" value="A">
+A. It generally became cheaper.
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="B">
+B. It became permanently unavailable.
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="C">
+C. It doubled immediately everywhere.
+</label>
+
+<label class="option">
+<input type="radio" name="q6" value="D">
+D. It had no connection with global trade.
+</label>
+
+</div>
+
+
+<!-- Q7 -->
+
+<div class="question">
+
+<h3>Q7. Which factor encouraged European migration to America during the nineteenth century?</h3>
+
+<label class="option">
+<input type="radio" name="q7" value="A">
+A. Lack of employment and poverty
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="B">
+B. Complete absence of population growth
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="C">
+C. Ban on migration
+</label>
+
+<label class="option">
+<input type="radio" name="q7" value="D">
+D. Decline of industrialisation
+</label>
+
+</div>
+
+
+<!-- Q8 -->
+
+<div class="question">
+
+<h3>Q8. What did the movement of capital across countries contribute to?</h3>
+
+<label class="option">
+<input type="radio" name="q8" value="A">
+A. Investment in infrastructure and economic activities
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="B">
+B. End of railway construction
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="C">
+C. Decline of international trade
+</label>
+
+<label class="option">
+<input type="radio" name="q8" value="D">
+D. Complete isolation of economies
+</label>
+
+</div>
+
+
+<!-- Q9 -->
+
+<div class="question">
+
+<h3>Q9. Which group played an important role in the nineteenth-century movement of indentured labour?</h3>
+
+<label class="option">
+<input type="radio" name="q9" value="A">
+A. Indian workers
+</label>
+
+<label class="option">
+<input type="radio" name="q9" value="B">
+B. European kings only
+</label>
+
+<label class="option">
+<input type="radio" name="q9" value="C">
+C. American industrialists only
+</label>
+
+<label class="option">
+<input type="radio" name="q9" value="D">
+D. Japanese soldiers
+</label>
+
+</div>
+
+
+<!-- Q10 -->
+
+<div class="question">
+
+<h3>Q10. Indian indentured labourers were mainly employed in which type of work?</h3>
+
+<label class="option">
+<input type="radio" name="q10" value="A">
+A. Plantation and construction work
+</label>
+
+<label class="option">
+<input type="radio" name="q10" value="B">
+B. Government administration only
+</label>
+
+<label class="option">
+<input type="radio" name="q10" value="C">
+C. Banking only
+</label>
+
+<label class="option">
+<input type="radio" name="q10" value="D">
+D. Teaching only
+</label>
+
+</div>
+
+
+<div class="section-heading">
+Part B — Chronological Arrangement
+</div>
+
+
+<!-- Q11 -->
+
+<div class="question">
+
+<h3>Q11. Arrange the following events chronologically:</h3>
+
+<p>
+1. Abolition of Corn Laws<br>
+2. First World War<br>
+3. Great Depression<br>
+4. Second World War
+</p>
+
+<label class="option">
+<input type="radio" name="q11" value="A">
+A. 1 → 2 → 3 → 4
+</label>
+
+<label class="option">
+<input type="radio" name="q11" value="B">
+B. 2 → 1 → 3 → 4
+</label>
+
+<label class="option">
+<input type="radio" name="q11" value="C">
+C. 3 → 2 → 1 → 4
+</label>
+
+<label class="option">
+<input type="radio" name="q11" value="D">
+D. 4 → 3 → 2 → 1
+</label>
+
+</div>
+
+
+<!-- Q12 -->
+
+<div class="question">
+
+<h3>Q12. Arrange the following developments in the correct sequence:</h3>
+
+<p>
+1. Industrialisation<br>
+2. Expansion of railways<br>
+3. Growth of global trade<br>
+4. Increased movement of goods
+</p>
+
+<label class="option">
+<input type="radio" name="q12" value="A">
+A. 1 → 2 → 4 → 3
+</label>
+
+<label class="option">
+<input type="radio" name="q12" value="B">
+B. 4 → 2 → 1 → 3
+</label>
+
+<label class="option">
+<input type="radio" name="q12" value="C">
+C. 3 → 1 → 2 → 4
+</label>
+
+<label class="option">
+<input type="radio" name="q12" value="D">
+D. 2 → 3 → 1 → 4
+</label>
+
+</div>
+
+
+<div class="section-heading">
+Part C — Matching
+</div>
+
+
+<!-- Q13 -->
+
+<div class="question">
+
+<h3>Q13. Match the following:</h3>
+
+<p>
+1. Silk Routes<br>
+2. Corn Laws<br>
+3. Refrigerated ships<br>
+4. Indentured labour
+</p>
+
+<p>
+a. Contract labour<br>
+b. Restrictions on food imports<br>
+c. Long-distance trade and cultural links<br>
+d. Transport of perishable food
+</p>
+
+<label class="option">
+<input type="radio" name="q13" value="A">
+A. 1-c, 2-b, 3-d, 4-a
+</label>
+
+<label class="option">
+<input type="radio" name="q13" value="B">
+B. 1-a, 2-c, 3-b, 4-d
+</label>
+
+<label class="option">
+<input type="radio" name="q13" value="C">
+C. 1-d, 2-a, 3-c, 4-b
+</label>
+
+<label class="option">
+<input type="radio" name="q13" value="D">
+D. 1-b, 2-d, 3-a, 4-c
+</label>
+
+</div>
+
+
+<!-- Q14 -->
+
+<div class="question">
+
+<h3>Q14. Match the following places with their historical association:</h3>
+
+<p>
+1. India<br>
+2. Britain<br>
+3. Fiji<br>
+4. America
+</p>
+
+<p>
+a. Destination of Indian indentured workers<br>
+b. Major European migration destination<br>
+c. Source of indentured labour<br>
+d. Abolition of Corn Laws
+</p>
+
+<label class="option">
+<input type="radio" name="q14" value="A">
+A. 1-c, 2-d, 3-a, 4-b
+</label>
+
+<label class="option">
+<input type="radio" name="q14" value="B">
+B. 1-d, 2-c, 3-b, 4-a
+</label>
+
+<label class="option">
+<input type="radio" name="q14" value="C">
+C. 1-a, 2-b, 3-d, 4-c
+</label>
+
+<label class="option">
+<input type="radio" name="q14" value="D">
+D. 1-b, 2-a, 3-c, 4-d
+</label>
+
+</div>
+
+
+<div class="section-heading">
+Part D — Assertion & Reason
+</div>
+
+
+<!-- Q15 -->
+
+<div class="question">
+
+<h3>
+Q15. Assertion (A): The nineteenth century saw increased global economic integration.
+</h3>
+
+<p>
+<b>Reason (R):</b> Trade, migration and technological developments connected different regions.
+</p>
+
+<label class="option">
+<input type="radio" name="q15" value="A">
+A. Both A and R are true, and R is the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q15" value="B">
+B. Both A and R are true, but R is not the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q15" value="C">
+C. A is true, but R is false.
+</label>
+
+<label class="option">
+<input type="radio" name="q15" value="D">
+D. A is false, but R is true.
+</label>
+
+</div>
+
+
+<!-- Q16 -->
+
+<div class="question">
+
+<h3>
+Q16. Assertion (A): Technology helped reduce the cost of transporting goods.
+</h3>
+
+<p>
+<b>Reason (R):</b> Railways and steamships improved the speed and efficiency of transportation.
+</p>
+
+<label class="option">
+<input type="radio" name="q16" value="A">
+A. Both A and R are true, and R is the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q16" value="B">
+B. Both A and R are true, but R is not the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q16" value="C">
+C. A is true, but R is false.
+</label>
+
+<label class="option">
+<input type="radio" name="q16" value="D">
+D. A is false, but R is true.
+</label>
+
+</div>
+
+
+<!-- Q17 -->
+
+<div class="question">
+
+<h3>
+Q17. Assertion (A): Indentured labour was exactly the same as slavery.
+</h3>
+
+<p>
+<b>Reason (R):</b> Indentured workers signed contracts for a fixed period, although they could face exploitation.
+</p>
+
+<label class="option">
+<input type="radio" name="q17" value="A">
+A. Both A and R are true, and R is the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q17" value="B">
+B. Both A and R are true, but R is not the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q17" value="C">
+C. A is true, but R is false.
+</label>
+
+<label class="option">
+<input type="radio" name="q17" value="D">
+D. A is false, but R is true.
+</label>
+
+</div>
+
+
+<!-- Q18 -->
+
+<div class="question">
+
+<h3>
+Q18. Assertion (A): The abolition of Corn Laws encouraged food imports into Britain.
+</h3>
+
+<p>
+<b>Reason (R):</b> Britain could obtain food from overseas producers at relatively lower prices.
+</p>
+
+<label class="option">
+<input type="radio" name="q18" value="A">
+A. Both A and R are true, and R is the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q18" value="B">
+B. Both A and R are true, but R is not the correct explanation of A.
+</label>
+
+<label class="option">
+<input type="radio" name="q18" value="C">
+C. A is true, but R is false.
+</label>
+
+<label class="option">
+<input type="radio" name="q18" value="D">
+D. A is false, but R is true.
+</label>
+
+</div>
+
+
+<div class="section-heading">
+Part E — Conceptual & Analytical Questions
+</div>
+
+
+<!-- Q19 -->
+
+<div class="question">
+
+<h3>Q19. Why were railways important to the global economy?</h3>
+
+<label class="option">
+<input type="radio" name="q19" value="A">
+A. They connected inland production areas with ports and markets.
+</label>
+
+<label class="option">
+<input type="radio" name="q19" value="B">
+B. They stopped the movement of agricultural goods.
+</label>
+
+<label class="option">
+<input type="radio" name="q19" value="C">
+C. They ended international migration.
+</label>
+
+<label class="option">
+<input type="radio" name="q19" value="D">
+D. They were used only for military purposes.
+</label>
+
+</div>
+
+
+<!-- Q20 -->
+
+<div class="question">
+
+<h3>Q20. Which statement best explains the role of migration in the making of the global world?</h3>
+
+<label class="option">
+<input type="radio" name="q20" value="A">
+A. Migration moved labour and people between different regions.
+</label>
+
+<label class="option">
+<input type="radio" name="q20" value="B">
+B. Migration completely isolated societies.
+</label>
+
+<label class="option">
+<input type="radio" name="q20" value="C">
+C. Migration ended cultural exchange.
+</label>
+
+<label class="option">
+<input type="radio" name="q20" value="D">
+D. Migration affected only Europe.
+</label>
+
+</div>
+
+
+<!-- Q21 -->
+
+<div class="question">
+
+<h3>Q21. What was one effect of the Great Depression on agricultural economies?</h3>
+
+<label class="option">
+<input type="radio" name="q21" value="A">
+A. Agricultural prices declined sharply.
+</label>
+
+<label class="option">
+<input type="radio" name="q21" value="B">
+B. Agricultural prices always increased.
+</label>
+
+<label class="option">
+<input type="radio" name="q21" value="C">
+C. Agricultural production stopped worldwide.
+</label>
+
+<label class="option">
+<input type="radio" name="q21" value="D">
+D. Farmers became completely independent of markets.
+</label>
+
+</div>
+
+
+<!-- Q22 -->
+
+<div class="question">
+
+<h3>Q22. How did the Great Depression affect Indian peasants?</h3>
+
+<label class="option">
+<input type="radio" name="q22" value="A">
+A. Falling agricultural prices reduced their income and increased economic difficulties.
+</label>
+
+<label class="option">
+<input type="radio" name="q22" value="B">
+B. Their agricultural income doubled.
+</label>
+
+<label class="option">
+<input type="radio" name="q22" value="C">
+C. They stopped producing all crops.
+</label>
+
+<label class="option">
+<input type="radio" name="q22" value="D">
+D. They were completely protected from global markets.
+</label>
+
+</div>
+
+
+<!-- Q23 -->
+
+<div class="question">
+
+<h3>Q23. Which statement best describes the relationship between colonialism and the global economy?</h3>
+
+<label class="option">
+<input type="radio" name="q23" value="A">
+A. Colonies were often integrated into global markets as suppliers of raw materials and agricultural products.
+</label>
+
+<label class="option">
+<input type="radio" name="q23" value="B">
+B. Colonies were completely excluded from world trade.
+</label>
+
+<label class="option">
+<input type="radio" name="q23" value="C">
+C. Colonial economies had no connection with Europe.
+</label>
+
+<label class="option">
+<input type="radio" name="q23" value="D">
+D. Colonialism ended all international migration.
+</label>
+
+</div>
+
+
+<div class="section-heading">
+Part F — Passage-Based Questions
+</div>
+
+
+<div class="passage">
+
+<b>Read the passage carefully:</b>
+
+<br><br>
+
+The nineteenth century witnessed major changes in the global economy. The expansion of railways, ports and steamships made the movement of goods faster and cheaper. Agricultural products from distant regions could reach European markets. At the same time, large numbers of people migrated in search of work and better opportunities. Capital also moved across borders for investment in railways, mines, plantations and other economic activities. These developments connected different regions more closely than before.
+
+</div>
+
+
+<!-- Q24 -->
+
+<div class="question">
+
+<h3>Q24. What helped make the movement of goods faster and cheaper?</h3>
+
+<label class="option">
+<input type="radio" name="q24" value="A">
+A. Railways, ports and steamships
+</label>
+
+<label class="option">
+<input type="radio" name="q24" value="B">
+B. Decline of transportation
+</label>
+
+<label class="option">
+<input type="radio" name="q24" value="C">
+C. Ban on international trade
+</label>
+
+<label class="option">
+<input type="radio" name="q24" value="D">
+D. Reduction of ports
+</label>
+
+</div>
+
+
+<!-- Q25 -->
+
+<div class="question">
+
+<h3>Q25. Why did people migrate during this period?</h3>
+
+<label class="option">
+<input type="radio" name="q25" value="A">
+A. In search of work and better opportunities
+</label>
+
+<label class="option">
+<input type="radio" name="q25" value="B">
+B. To avoid all economic activity
+</label>
+
+<label class="option">
+<input type="radio" name="q25" value="C">
+C. Because international travel was banned
+</label>
+
+<label class="option">
+<input type="radio" name="q25" value="D">
+D. To stop global trade
+</label>
+
+</div>
+
+
+<!-- Q26 -->
+
+<div class="question">
+
+<h3>Q26. Where was capital invested according to the passage?</h3>
+
+<label class="option">
+<input type="radio" name="q26" value="A">
+A. Railways, mines and plantations
+</label>
+
+<label class="option">
+<input type="radio" name="q26" value="B">
+B. Only schools
+</label>
+
+<label class="option">
+<input type="radio" name="q26" value="C">
+C. Only military camps
+</label>
+
+<label class="option">
+<input type="radio" name="q26" value="D">
+D. Only religious buildings
+</label>
+
+</div>
+
+
+<div class="passage">
+
+<b>Read the passage carefully:</b>
+
+<br><br>
+
+The Great Depression began around 1929 and had a major impact on the world economy. Agricultural prices fell sharply because demand declined and large quantities of agricultural goods were available in international markets. Farmers and producers in many countries faced falling incomes. In India, the decline in agricultural prices affected peasants and created serious economic difficulties. The depression showed how closely different economies had become connected through trade and markets.
+
+</div>
+
+
+<!-- Q27 -->
+
+<div class="question">
+
+<h3>Q27. When did the Great Depression begin?</h3>
+
+<label class="option">
+<input type="radio" name="q27" value="A">
+A. Around 1929
+</label>
+
+<label class="option">
+<input type="radio" name="q27" value="B">
+B. Around 1857
+</label>
+
+<label class="option">
+<input type="radio" name="q27" value="C">
+C. Around 1947
+</label>
+
+<label class="option">
+<input type="radio" name="q27" value="D">
+D. Around 1914
+</label>
+
+</div>
+
+
+<!-- Q28 -->
+
+<div class="question">
+
+<h3>Q28. What happened to agricultural prices during the Great Depression?</h3>
+
+<label class="option">
+<input type="radio" name="q28" value="A">
+A. They fell sharply.
+</label>
+
+<label class="option">
+<input type="radio" name="q28" value="B">
+B. They increased everywhere.
+</label>
+
+<label class="option">
+<input type="radio" name="q28" value="C">
+C. They remained permanently unchanged.
+</label>
+
+<label class="option">
+<input type="radio" name="q28" value="D">
+D. They became unrelated to markets.
+</label>
+
+</div>
+
+
+<!-- Q29 -->
+
+<div class="question">
+
+<h3>Q29. What was one effect of the Great Depression on Indian peasants?</h3>
+
+<label class="option">
+<input type="radio" name="q29" value="A">
+A. Falling agricultural prices reduced their income.
+</label>
+
+<label class="option">
+<input type="radio" name="q29" value="B">
+B. Their income increased dramatically.
+</label>
+
+<label class="option">
+<input type="radio" name="q29" value="C">
+C. They became completely free from debt.
+</label>
+
+<label class="option">
+<input type="radio" name="q29" value="D">
+D. They stopped participating in markets permanently.
+</label>
+
+</div>
+
+
+<!-- Q30 -->
+
+<div class="question">
+
+<h3>Q30. What does the Great Depression reveal about the global economy?</h3>
+
+<label class="option">
+<input type="radio" name="q30" value="A">
+A. Economies were interconnected through trade and markets.
+</label>
+
+<label class="option">
+<input type="radio" name="q30" value="B">
+B. Countries were completely isolated.
+</label>
+
+<label class="option">
+<input type="radio" name="q30" value="C">
+C. Global trade had no effect on local producers.
+</label>
+
+<label class="option">
+<input type="radio" name="q30" value="D">
+D. Agriculture was unrelated to international markets.
+</label>
+
+</div>
+
+
+<div class="submit-box">
+
+<button type="button" onclick="submitTest()">
+Submit Test
+</button>
+
+</div>
+
+</form>
+
+
+<div id="result">
+
+<h2>Test Result</h2>
+
+<div id="score"></div>
+
+<p id="resultMessage"></p>
+
+</div>
+
+
+<div id="explanations">
+
+<div class="section-heading">
+Answer Key & Detailed Explanations
+</div>
+
+
+<div class="explanation">
+<b>Q1. Correct Answer: A</b><br>
+The Silk Routes were ancient networks of trade routes that connected different regions and also enabled cultural exchange.
+</div>
+
+
+<div class="explanation">
+<b>Q2. Correct Answer: B</b><br>
+The Silk Routes connected different parts of Asia with Europe and North Africa and carried goods, ideas and cultural influences.
+</div>
+
+
+<div class="explanation">
+<b>Q3. Correct Answer: A</b><br>
+The potato came from the Americas and became an important food crop in Europe, especially for poorer people.
+</div>
+
+
+<div class="explanation">
+<b>Q4. Correct Answer: A</b><br>
+The abolition of the Corn Laws was associated with demands for cheaper food, particularly from industrial and urban groups.
+</div>
+
+
+<div class="explanation">
+<b>Q5. Correct Answer: B</b><br>
+Refrigerated ships made it possible to transport perishable food such as meat over long distances.
+</div>
+
+
+<div class="explanation">
+<b>Q6. Correct Answer: A</b><br>
+The availability of cheaper imported food contributed to lower food prices in Britain.
+</div>
+
+
+<div class="explanation">
+<b>Q7. Correct Answer: A</b><br>
+Poverty, unemployment and difficult economic conditions encouraged many Europeans to migrate to overseas destinations.
+</div>
+
+
+<div class="explanation">
+<b>Q8. Correct Answer: A</b><br>
+Capital moved across countries and was invested in infrastructure and economic activities such as railways and plantations.
+</div>
+
+
+<div class="explanation">
+<b>Q9. Correct Answer: A</b><br>
+Indian workers formed a major part of the indentured labour migration system during the nineteenth century.
+</div>
+
+
+<div class="explanation">
+<b>Q10. Correct Answer: A</b><br>
+Indentured workers were employed in plantations, mines and construction projects in different colonies.
+</div>
+
+
+<div class="explanation">
+<b>Q11. Correct Answer: A</b><br>
+The abolition of the Corn Laws occurred before the First World War, followed by the Great Depression and then the Second World War.
+</div>
+
+
+<div class="explanation">
+<b>Q12. Correct Answer: A</b><br>
+Industrialisation encouraged railway development, which increased the movement of goods and contributed to expanding global trade.
+</div>
+
+
+<div class="explanation">
+<b>Q13. Correct Answer: A</b><br>
+Silk Routes were associated with long-distance trade; Corn Laws with food-import restrictions; refrigerated ships with perishable food; and indentured labour with contract labour.
+</div>
+
+
+<div class="explanation">
+<b>Q14. Correct Answer: A</b><br>
+India was an important source of indentured labour, Britain abolished the Corn Laws, Fiji received Indian indentured workers and America became a major destination for European migrants.
+</div>
+
+
+<div class="explanation">
+<b>Q15. Correct Answer: A</b><br>
+Trade, migration and technological developments all contributed to increasing connections between different regions.
+</div>
+
+
+<div class="explanation">
+<b>Q16. Correct Answer: A</b><br>
+Railways and steamships improved transportation speed and efficiency, helping reduce the cost of moving goods.
+</div>
+
+
+<div class="explanation">
+<b>Q17. Correct Answer: D</b><br>
+The assertion is false because indentured labour was legally different from slavery. The reason is true because workers worked under contracts and could face exploitation.
+</div>
+
+
+<div class="explanation">
+<b>Q18. Correct Answer: A</b><br>
+The abolition of the Corn Laws made it easier for Britain to import cheaper food from overseas.
+</div>
+
+
+<div class="explanation">
+<b>Q19. Correct Answer: A</b><br>
+Railways connected inland agricultural regions with ports and markets and made transportation of goods easier.
+</div>
+
+
+<div class="explanation">
+<b>Q20. Correct Answer: A</b><br>
+Migration moved people and labour between regions and contributed to the formation of a more interconnected global economy.
+</div>
+
+
+<div class="explanation">
+<b>Q21. Correct Answer: A</b><br>
+During the Great Depression, demand declined and agricultural prices fell sharply, creating difficulties for farmers.
+</div>
+
+
+<div class="explanation">
+<b>Q22. Correct Answer: A</b><br>
+Indian peasants were affected by falling agricultural prices, which reduced their incomes and increased their economic difficulties.
+</div>
+
+
+<div class="explanation">
+<b>Q23. Correct Answer: A</b><br>
+Colonial economies were often integrated into global markets as suppliers of raw materials and agricultural products.
+</div>
+
+
+<div class="explanation">
+<b>Q24. Correct Answer: A</b><br>
+Railways, ports and steamships improved the speed and efficiency of transporting goods.
+</div>
+
+
+<div class="explanation">
+<b>Q25. Correct Answer: A</b><br>
+People migrated in search of employment, better economic opportunities and improved living conditions.
+</div>
+
+
+<div class="explanation">
+<b>Q26. Correct Answer: A</b><br>
+Capital was invested in infrastructure and economic activities such as railways, mines and plantations.
+</div>
+
+
+<div class="explanation">
+<b>Q27. Correct Answer: A</b><br>
+The Great Depression began around 1929 and subsequently affected economies across the world.
+</div>
+
+
+<div class="explanation">
+<b>Q28. Correct Answer: A</b><br>
+Agricultural prices fell sharply during the Great Depression because demand declined while large quantities of agricultural goods remained available.
+</div>
+
+
+<div class="explanation">
+<b>Q29. Correct Answer: A</b><br>
+Falling agricultural prices reduced the incomes of Indian peasants and created serious economic difficulties.
+</div>
+
+
+<div class="explanation">
+<b>Q30. Correct Answer: A</b><br>
+The Great Depression demonstrated how closely economies had become connected through international trade and markets.
+</div>
+
+
+</div>
+
+</div>
+
+
+<footer>
+
+<h2>GSI MANTRA</h2>
+
+<p>
+Class 10 History • Chapter 3 • The Making of a Global World
+</p>
+
+<p>
+© 2026 GSI MANTRA. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+const answers = {
+
+q1:"A",
+q2:"B",
+q3:"A",
+q4:"A",
+q5:"B",
+q6:"A",
+q7:"A",
+q8:"A",
+q9:"A",
+q10:"A",
+
+q11:"A",
+q12:"A",
+
+q13:"A",
+q14:"A",
+
+q15:"A",
+q16:"A",
+q17:"D",
+q18:"A",
+
+q19:"A",
+q20:"A",
+q21:"A",
+q22:"A",
+q23:"A",
+
+q24:"A",
+q25:"A",
+q26:"A",
+q27:"A",
+q28:"A",
+q29:"A",
+q30:"A"
+
+};
+
+
+function submitTest(){
+
+let score = 0;
+let answered = 0;
+
+for(let i=1;i<=30;i++){
+
+const selected =
+document.querySelector(
+'input[name="q'+i+'"]:checked'
+);
+
+if(selected){
+
+answered++;
+
+if(selected.value === answers["q"+i]){
+score++;
+}
+
+}
+
+}
+
+
+const percentage =
+Math.round((score/30)*100);
+
+
+document.getElementById("score").innerHTML =
+score + " / 30 (" + percentage + "%)";
+
+
+document.getElementById("resultMessage").innerHTML =
+"You answered " +
+answered +
+" out of 30 questions. " +
+"Read the detailed explanations below to improve your preparation.";
+
+
+document.getElementById("result").style.display =
+"block";
+
+
+document.getElementById("explanations").style.display =
+"block";
+
+
+window.scrollTo({
+
+top:
+document.getElementById("result").offsetTop - 20,
+
+behavior:"smooth"
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
